@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Material Design for Bootstrap</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../../css/mdb.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                
+                <div class="chip">
+                    <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-6.jpg" alt="Contact Person"> Jane Doe
+                </div>
+
+
+                <div class="chip">
+                    Tag 1
+                    <i class="close fa fa-times"></i>
+                </div>
+
+                <div class="chips chips-initial"></div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="../../js/popper.min.js"></script>
+    <script src="../../js/bootstrap.js"></script>
+    <script src="../../js/modules/chips.js"></script>
+    <script>    
+
+        var chip4 = {
+            tag: "Piotr Bender",
+            image: "https://mdbootstrap.com/img/Photos/Avatars/avatar-6.jpg",
+            id: "chip4"
+        }
+        $('.chips-initial').material_chip({
+            data: [{ tag: 'Michał Krawczyk' }, { tag: 'Jan Matejko' }, chip4],
+        });
+    </script>
+</body>
+</html>

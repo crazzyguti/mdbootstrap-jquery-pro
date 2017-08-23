@@ -1,0 +1,143 @@
+<!--Section: Tutorial content-->
+<section>
+
+    <p>In this lesson, we are going to focus on the creating carousel. That's why we will copy-paste the rest of the code into
+        our project without detailed explanation. If you don't understand some part of the current tutorial, read the <strong><a href="https://mdbootstrap.com/bootstrap-tutorial/">previous tutorials</a> </strong>first.</p>
+
+
+    <div class="text-center">
+        <a class="btn btn-primary" href="" role="button">Final Result preview <i class="fa fa-eye ml-1"></i></a>
+    </div>
+
+    <hr>
+
+    <p class="h5 mt-4">Step 1</p>
+
+    <p><strong>Paste the following code to your index.html file, immediate below tag opening <code>&lt;body&gt;</code> tag:</strong></p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;!--Main Navigation--&gt;&#13;&#10;&lt;header&gt;&#13;&#10;&#13;&#10;    &lt;!--Navbar--&gt;&#13;&#10;    &lt;nav class=&quot;navbar navbar-expand-lg navbar-dark fixed-top deep-purple&quot;&gt;&#13;&#10;        &lt;div class=&quot;container&quot;&gt;&#13;&#10;            &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;Navbar&lt;/a&gt;&#13;&#10;            &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#navbarSupportedContent&quot; aria-controls=&quot;navbarSupportedContent&quot;&#13;&#10;                aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;&#13;&#10;                &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;&#13;&#10;            &lt;/button&gt;&#13;&#10;            &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarSupportedContent&quot;&gt;&#13;&#10;                &lt;ul class=&quot;navbar-nav mr-auto&quot;&gt;&#13;&#10;                    &lt;li class=&quot;nav-item active&quot;&gt;&#13;&#10;                        &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Home &lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/a&gt;&#13;&#10;                    &lt;/li&gt;&#13;&#10;                    &lt;li class=&quot;nav-item&quot;&gt;&#13;&#10;                        &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Features&lt;/a&gt;&#13;&#10;                    &lt;/li&gt;&#13;&#10;                    &lt;li class=&quot;nav-item&quot;&gt;&#13;&#10;                        &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Pricing&lt;/a&gt;&#13;&#10;                    &lt;/li&gt;&#13;&#10;                    &lt;li class=&quot;nav-item dropdown&quot;&gt;&#13;&#10;                        &lt;a class=&quot;nav-link dropdown-toggle&quot; id=&quot;navbarDropdownMenuLink&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Dropdown &#13;&#10;                        &lt;/a&gt;&#13;&#10;                        &lt;div class=&quot;dropdown-menu dropdown-primary&quot; aria-labelledby=&quot;navbarDropdownMenuLink&quot;&gt;&#13;&#10;                            &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action&lt;/a&gt;&#13;&#10;                            &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Another action&lt;/a&gt;&#13;&#10;                            &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&#13;&#10;                        &lt;/div&gt;&#13;&#10;                    &lt;/li&gt;&#13;&#10;                &lt;/ul&gt;&#13;&#10;                &lt;form class=&quot;form-inline&quot;&gt;&#13;&#10;                    &lt;input class=&quot;form-control mr-sm-2&quot; type=&quot;text&quot; placeholder=&quot;Search&quot; aria-label=&quot;Search&quot;&gt;&#13;&#10;                &lt;/form&gt;&#13;&#10;            &lt;/div&gt;&#13;&#10;        &lt;/div&gt;&#13;&#10;    &lt;/nav&gt;&#13;&#10;    &lt;!--/.Navbar--&gt;&#13;&#10;&#13;&#10;    &lt;!--Carousel Wrapper--&gt;&#13;&#10;&#13;&#10;    &lt;!--Carousel Wrapper--&gt;&#13;&#10;&#13;&#10;&lt;/header&gt;&#13;&#10;&lt;!--Main Navigation--&gt;&#13;&#10;&#13;&#10;&lt;!--Main layout--&gt;&#13;&#10;&lt;main&gt;&#13;&#10;    &lt;div class=&quot;container-fluid&quot;&gt;&#13;&#10;&#13;&#10;        &lt;!--Your content goes here--&gt;&#13;&#10;&#13;&#10;        &lt;!--Your content goes here--&gt;&#13;&#10;&#13;&#10;    &lt;/div&gt;&#13;&#10;&lt;/main&gt;&#13;&#10;&lt;!--Main layout--&gt;&#13;&#10;&#13;&#10;&lt;!--Footer--&gt;&#13;&#10;&lt;footer class=&quot;page-footer center-on-small-only deep-purple&quot;&gt;&#13;&#10;&#13;&#10;    &lt;!--Footer Links--&gt;&#13;&#10;    &lt;div class=&quot;container-fluid&quot;&gt;&#13;&#10;        &lt;div class=&quot;row&quot;&gt;&#13;&#10;&#13;&#10;            &lt;!--First column--&gt;&#13;&#10;            &lt;div class=&quot;col-md-3 offset-lg-1 hidden-lg-down&quot;&gt;&#13;&#10;                &lt;h5 class=&quot;title&quot;&gt;ABOUT MATERIAL DESIGN&lt;/h5&gt;&#13;&#10;                &lt;p&gt;Material Design (codenamed Quantum Paper) is a design language developed by Google. &lt;/p&gt;&#13;&#10;&#13;&#10;                &lt;p&gt;Material Design for Bootstrap (MDB) is a powerful Material Design UI KIT for most popular HTML, CSS,&#13;&#10;                    and JS framework - Bootstrap.&lt;/p&gt;&#13;&#10;            &lt;/div&gt;&#13;&#10;            &lt;!--/.First column--&gt;&#13;&#10;&#13;&#10;            &lt;hr class=&quot;hidden-md-up&quot;&gt;&#13;&#10;&#13;&#10;            &lt;!--Second column--&gt;&#13;&#10;            &lt;div class=&quot;col-lg-2 col-md-4 offset-lg-1&quot;&gt;&#13;&#10;                &lt;h5 class=&quot;title&quot;&gt;First column&lt;/h5&gt;&#13;&#10;                &lt;ul&gt;&#13;&#10;                    &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;Link 1&lt;/a&gt;&lt;/li&gt;&#13;&#10;                    &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;Link 2&lt;/a&gt;&lt;/li&gt;&#13;&#10;                    &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;Link 3&lt;/a&gt;&lt;/li&gt;&#13;&#10;                    &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;Link 4&lt;/a&gt;&lt;/li&gt;&#13;&#10;                &lt;/ul&gt;&#13;&#10;            &lt;/div&gt;&#13;&#10;            &lt;!--/.Second column--&gt;&#13;&#10;&#13;&#10;            &lt;hr class=&quot;hidden-md-up&quot;&gt;&#13;&#10;&#13;&#10;            &lt;!--Third column--&gt;&#13;&#10;            &lt;div class=&quot;col-lg-2 col-md-4&quot;&gt;&#13;&#10;                &lt;h5 class=&quot;title&quot;&gt;Second column&lt;/h5&gt;&#13;&#10;                &lt;ul&gt;&#13;&#10;                    &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;Link 1&lt;/a&gt;&lt;/li&gt;&#13;&#10;                    &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;Link 2&lt;/a&gt;&lt;/li&gt;&#13;&#10;                    &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;Link 3&lt;/a&gt;&lt;/li&gt;&#13;&#10;                    &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;Link 4&lt;/a&gt;&lt;/li&gt;&#13;&#10;                &lt;/ul&gt;&#13;&#10;            &lt;/div&gt;&#13;&#10;            &lt;!--/.Third column--&gt;&#13;&#10;&#13;&#10;            &lt;hr class=&quot;hidden-md-up&quot;&gt;&#13;&#10;&#13;&#10;            &lt;!--Fourth column--&gt;&#13;&#10;            &lt;div class=&quot;col-lg-2 col-md-4&quot;&gt;&#13;&#10;                &lt;h5 class=&quot;title&quot;&gt;Third column&lt;/h5&gt;&#13;&#10;                &lt;ul&gt;&#13;&#10;                    &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;Link 1&lt;/a&gt;&lt;/li&gt;&#13;&#10;                    &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;Link 2&lt;/a&gt;&lt;/li&gt;&#13;&#10;                    &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;Link 3&lt;/a&gt;&lt;/li&gt;&#13;&#10;                    &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;Link 4&lt;/a&gt;&lt;/li&gt;&#13;&#10;                &lt;/ul&gt;&#13;&#10;            &lt;/div&gt;&#13;&#10;            &lt;!--/.Fourth column--&gt;&#13;&#10;&#13;&#10;        &lt;/div&gt;&#13;&#10;    &lt;/div&gt;&#13;&#10;    &lt;!--/.Footer Links--&gt;&#13;&#10;&#13;&#10;    &lt;hr&gt;&#13;&#10;&#13;&#10;    &lt;!--Call to action--&gt;&#13;&#10;    &lt;div class=&quot;call-to-action&quot;&gt;&#13;&#10;        &lt;h4&gt;Material Design for Bootstrap&lt;/h4&gt;&#13;&#10;        &lt;ul&gt;&#13;&#10;            &lt;li&gt;&#13;&#10;                &lt;h5&gt;Get our UI KIT for free&lt;/h5&gt;&#13;&#10;            &lt;/li&gt;&#13;&#10;            &lt;li&gt;&lt;a target=&quot;_blank&quot; href=&quot;http://mdbootstrap.com/getting-started/&quot; class=&quot;btn btn-danger&quot; rel=&quot;nofollow&quot;&gt;Sign up!&lt;/a&gt;&lt;/li&gt;&#13;&#10;            &lt;li&gt;&lt;a target=&quot;_blank&quot; href=&quot;http://mdbootstrap.com/material-design-for-bootstrap/&quot; class=&quot;btn btn-default&quot; rel=&quot;nofollow&quot;&gt;Learn more&lt;/a&gt;&lt;/li&gt;&#13;&#10;        &lt;/ul&gt;&#13;&#10;    &lt;/div&gt;&#13;&#10;    &lt;!--/.Call to action--&gt;&#13;&#10;&#13;&#10;    &lt;!--Copyright--&gt;&#13;&#10;    &lt;div class=&quot;footer-copyright&quot;&gt;&#13;&#10;        &lt;div class=&quot;container-fluid&quot;&gt;&#13;&#10;            &copy; 2015 Copyright: &lt;a href=&quot;http://www.MDBootstrap.com&quot;&gt; MDBootstrap.com &lt;/a&gt;&#13;&#10;&#13;&#10;        &lt;/div&gt;&#13;&#10;    &lt;/div&gt;&#13;&#10;    &lt;!--/.Copyright--&gt;&#13;&#10;&#13;&#10;&lt;/footer&gt;&#13;&#10;&lt;!--/.Footer--&gt;
+            </code></pre>
+
+    <p>The code above creates a basic structure for our website. <strong>Now we can focus on the carousel.</strong></p>
+
+    <p class="h5 mt-4">Step 2</p>
+
+    <p><strong>Go to <a href="https://mdbootstrap.com/javascript/carousel/#caption">CAROUSEL DOCUMENTATION</a> and grab the code of Carousel with Caption. Place it between the comments <code>&lt;!--Carousel Wrapper--&gt;</code> in the <code>&lt;header&gt;</code> section</strong></p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;!--Carousel Wrapper--&gt;&#13;&#10;&lt;div id=&quot;carousel-example-2&quot; class=&quot;carousel slide carousel-fade&quot; data-ride=&quot;carousel&quot;&gt;&#13;&#10;    &lt;!--Indicators--&gt;&#13;&#10;    &lt;ol class=&quot;carousel-indicators&quot;&gt;&#13;&#10;        &lt;li data-target=&quot;#carousel-example-2&quot; data-slide-to=&quot;0&quot; class=&quot;active&quot;&gt;&lt;/li&gt;&#13;&#10;        &lt;li data-target=&quot;#carousel-example-2&quot; data-slide-to=&quot;1&quot;&gt;&lt;/li&gt;&#13;&#10;        &lt;li data-target=&quot;#carousel-example-2&quot; data-slide-to=&quot;2&quot;&gt;&lt;/li&gt;&#13;&#10;    &lt;/ol&gt;&#13;&#10;    &lt;!--/.Indicators--&gt;&#13;&#10;    &lt;!--Slides--&gt;&#13;&#10;    &lt;div class=&quot;carousel-inner&quot; role=&quot;listbox&quot;&gt;&#13;&#10;        &lt;div class=&quot;carousel-item active&quot;&gt;&#13;&#10;            &lt;div class=&quot;view hm-black-light&quot;&gt;&#13;&#10;                &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Slides/img%20(22).jpg&quot; alt=&quot;First slide&quot;&gt;&#13;&#10;            &lt;/div&gt;&#13;&#10;            &lt;div class=&quot;carousel-caption&quot;&gt;&#13;&#10;                &lt;h3 class=&quot;h3-responsive&quot;&gt;Light mask&lt;/h3&gt;&#13;&#10;                &lt;p&gt;First text&lt;/p&gt;&#13;&#10;            &lt;/div&gt;&#13;&#10;        &lt;/div&gt;&#13;&#10;        &lt;div class=&quot;carousel-item&quot;&gt;&#13;&#10;            &lt;!--Mask color--&gt;&#13;&#10;            &lt;div class=&quot;view hm-black-strong&quot;&gt;&#13;&#10;                &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Slides/img%20(23).jpg&quot; alt=&quot;Second slide&quot;&gt;&#13;&#10;            &lt;/div&gt;&#13;&#10;            &lt;div class=&quot;carousel-caption&quot;&gt;&#13;&#10;                &lt;h3 class=&quot;h3-responsive&quot;&gt;Strong mask&lt;/h3&gt;&#13;&#10;                &lt;p&gt;Secondary text&lt;/p&gt;&#13;&#10;            &lt;/div&gt;&#13;&#10;        &lt;/div&gt;&#13;&#10;        &lt;div class=&quot;carousel-item&quot;&gt;&#13;&#10;            &lt;!--Mask color--&gt;&#13;&#10;            &lt;div class=&quot;view hm-black-slight&quot;&gt;&#13;&#10;                &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Slides/img%20(24).jpg&quot; alt=&quot;Third slide&quot;&gt;&#13;&#10;            &lt;/div&gt;&#13;&#10;            &lt;div class=&quot;carousel-caption&quot;&gt;&#13;&#10;                &lt;h3 class=&quot;h3-responsive&quot;&gt;Slight mask&lt;/h3&gt;&#13;&#10;                &lt;p&gt;Third text&lt;/p&gt;&#13;&#10;            &lt;/div&gt;&#13;&#10;        &lt;/div&gt;&#13;&#10;    &lt;/div&gt;&#13;&#10;    &lt;!--/.Slides--&gt;&#13;&#10;    &lt;!--Controls--&gt;&#13;&#10;    &lt;a class=&quot;carousel-control-prev&quot; href=&quot;#carousel-example-2&quot; role=&quot;button&quot; data-slide=&quot;prev&quot;&gt;&#13;&#10;&lt;span class=&quot;carousel-control-prev-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&#13;&#10;&lt;span class=&quot;sr-only&quot;&gt;Previous&lt;/span&gt;&#13;&#10;&lt;/a&gt;&#13;&#10;    &lt;a class=&quot;carousel-control-next&quot; href=&quot;#carousel-example-2&quot; role=&quot;button&quot; data-slide=&quot;next&quot;&gt;&#13;&#10;&lt;span class=&quot;carousel-control-next-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&#13;&#10;&lt;span class=&quot;sr-only&quot;&gt;Next&lt;/span&gt;&#13;&#10;&lt;/a&gt;&#13;&#10;    &lt;!--/.Controls--&gt;&#13;&#10;&lt;/div&gt;&#13;&#10;&lt;!--/.Carousel Wrapper--&gt;
+</code></pre>
+
+    <p>Save the file and refresh the browser. Our carousel is workink but...well, it looks just awful.</p>
+
+    <p><strong>1.</strong> The height of the carousel depends on the height of the image. Right now all of the pictures are
+        the same height, but what will happen if you put the image with a different size?</p>
+
+    <p>Try it. Change the URL of the first image to:</p>
+    <p>https://mdbootstrap.com/images/regular/nature/img%20(1).jpg</p>
+
+    <p>Now you can see that our carousel is "jumping" from one size to another during the slide.</p>
+
+    <p><strong>2.</strong> Our carousel doesn't fill the 100% of available space. Depending on the size of image and screen
+        of the device we use, it's more or less than 100%. And we want it to be always equal.</p>
+
+    <p><strong>3.</strong> The caption (carousel text or other content) and arrows aren't exactly in the middle.</p>
+
+    <br>
+
+    <p>To solve these problems we need to make a few modifications in our carousel.</p>
+
+    <p><strong>Replace the code of the current carousel with the code below:</strong></p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;!--Carousel Wrapper--&gt;&#13;&#10;&lt;div id=&quot;carousel-example-3&quot; class=&quot;carousel slide carousel-fade white-text&quot; data-ride=&quot;carousel&quot; data-interval=&quot;false&quot;&gt;&#13;&#10;    &lt;!--Indicators--&gt;&#13;&#10;    &lt;ol class=&quot;carousel-indicators&quot;&gt;&#13;&#10;        &lt;li data-target=&quot;#carousel-example-3&quot; data-slide-to=&quot;0&quot; class=&quot;active&quot;&gt;&lt;/li&gt;&#13;&#10;        &lt;li data-target=&quot;#carousel-example-3&quot; data-slide-to=&quot;1&quot;&gt;&lt;/li&gt;&#13;&#10;        &lt;li data-target=&quot;#carousel-example-3&quot; data-slide-to=&quot;2&quot;&gt;&lt;/li&gt;&#13;&#10;    &lt;/ol&gt;&#13;&#10;    &lt;!--/.Indicators--&gt;&#13;&#10;&#13;&#10;    &lt;!--Slides--&gt;&#13;&#10;    &lt;div class=&quot;carousel-inner&quot; role=&quot;listbox&quot;&gt;&#13;&#10;&#13;&#10;        &lt;!-- First slide --&gt;&#13;&#10;        &lt;div class=&quot;carousel-item active view hm-black-light&quot;&gt;&#13;&#10;&#13;&#10;            &lt;!-- Caption --&gt;&#13;&#10;            &lt;div class=&quot;full-bg-img flex-center white-text&quot;&gt;&#13;&#10;                &lt;ul class=&quot;animated fadeInUp col-md-12&quot;&gt;&#13;&#10;                    &lt;li&gt;&#13;&#10;                        &lt;h1 class=&quot;h1-responsive flex-item&quot;&gt;Material Design for Bootstrap 4&lt;/h1&gt;&#13;&#10;                        &lt;li&gt;&#13;&#10;                            &lt;p class=&quot;flex-item&quot;&gt;The most powerful and free UI KIT for Bootstrap&lt;/p&gt;&#13;&#10;                        &lt;/li&gt;&#13;&#10;                        &lt;li&gt;&#13;&#10;                            &lt;a target=&quot;_blank&quot; href=&quot;http://mdbootstrap.com/getting-started/&quot; class=&quot;btn btn-primary btn-lg flex-item&quot; rel=&quot;nofollow&quot;&gt;Sign up!&lt;/a&gt;&#13;&#10;                        &lt;/li&gt;&#13;&#10;                        &lt;li&gt;&#13;&#10;                            &lt;a target=&quot;_blank&quot; href=&quot;http://mdbootstrap.com/material-design-for-bootstrap/&quot; class=&quot;btn btn-default btn-lg flex-item&quot;&#13;&#10;                                rel=&quot;nofollow&quot;&gt;Learn more&lt;/a&gt;&#13;&#10;                        &lt;/li&gt;&#13;&#10;                &lt;/ul&gt;&#13;&#10;            &lt;/div&gt;&#13;&#10;            &lt;!-- /.Caption --&gt;&#13;&#10;&#13;&#10;        &lt;/div&gt;&#13;&#10;        &lt;!-- /.First slide --&gt;&#13;&#10;&#13;&#10;        &lt;!-- Second slide --&gt;&#13;&#10;        &lt;div class=&quot;carousel-item view hm-black-light&quot;&gt;&#13;&#10;&#13;&#10;            &lt;!-- Caption --&gt;&#13;&#10;            &lt;div class=&quot;full-bg-img flex-center white-text&quot;&gt;&#13;&#10;                &lt;ul class=&quot;animated fadeInUp col-md-12&quot;&gt;&#13;&#10;                    &lt;li&gt;&#13;&#10;                        &lt;h1 class=&quot;h1-responsive&quot;&gt;Lots of tutorials at your disposal&lt;/h1&gt;&#13;&#10;                    &lt;/li&gt;&#13;&#10;                    &lt;li&gt;&#13;&#10;                        &lt;p&gt;And all of them are FREE!&lt;/p&gt;&#13;&#10;                    &lt;/li&gt;&#13;&#10;                    &lt;li&gt;&#13;&#10;                        &lt;a target=&quot;_blank&quot; href=&quot;http://mdbootstrap.com/bootstrap-tutorial/&quot; class=&quot;btn btn-primary btn-lg&quot; rel=&quot;nofollow&quot;&gt;Start learning&lt;/a&gt;&#13;&#10;                    &lt;/li&gt;&#13;&#10;                &lt;/ul&gt;&#13;&#10;            &lt;/div&gt;&#13;&#10;            &lt;!-- /.Caption --&gt;&#13;&#10;&#13;&#10;        &lt;/div&gt;&#13;&#10;        &lt;!-- /.Second slide --&gt;&#13;&#10;&#13;&#10;        &lt;!-- Third slide --&gt;&#13;&#10;        &lt;div class=&quot;carousel-item view hm-black-light&quot;&gt;&#13;&#10;&#13;&#10;            &lt;!-- Caption --&gt;&#13;&#10;            &lt;div class=&quot;full-bg-img flex-center white-text&quot;&gt;&#13;&#10;                &lt;ul class=&quot;animated fadeInUp col-md-12&quot;&gt;&#13;&#10;                    &lt;li&gt;&#13;&#10;                        &lt;h1 class=&quot;h1-responsive&quot;&gt;Visit our support forum&lt;/h1&gt;&#13;&#10;                    &lt;/li&gt;&#13;&#10;                    &lt;li&gt;&#13;&#10;                        &lt;p&gt;Our community can help you with any question&lt;/p&gt;&#13;&#10;                    &lt;/li&gt;&#13;&#10;                    &lt;li&gt;&#13;&#10;                        &lt;a target=&quot;_blank&quot; href=&quot;http://mdbootstrap.com/forums/forum/support/&quot; class=&quot;btn btn-default btn-lg&quot; rel=&quot;nofollow&quot;&gt;Support forum&lt;/a&gt;&#13;&#10;                    &lt;/li&gt;&#13;&#10;                &lt;/ul&gt;&#13;&#10;            &lt;/div&gt;&#13;&#10;            &lt;!-- /.Caption --&gt;&#13;&#10;&#13;&#10;        &lt;/div&gt;&#13;&#10;        &lt;!-- /.Third slide --&gt;&#13;&#10;&#13;&#10;    &lt;/div&gt;&#13;&#10;    &lt;!--/.Slides--&gt;&#13;&#10;&#13;&#10;    &lt;!--Controls--&gt;&#13;&#10;    &lt;a class=&quot;carousel-control-prev&quot; href=&quot;#carousel-example-3&quot; role=&quot;button&quot; data-slide=&quot;prev&quot;&gt;&#13;&#10;    &lt;span class=&quot;carousel-control-prev-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&#13;&#10;    &lt;span class=&quot;sr-only&quot;&gt;Previous&lt;/span&gt;&#13;&#10;&lt;/a&gt;&#13;&#10;    &lt;a class=&quot;carousel-control-next&quot; href=&quot;#carousel-example-3&quot; role=&quot;button&quot; data-slide=&quot;next&quot;&gt;&#13;&#10;    &lt;span class=&quot;carousel-control-next-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&#13;&#10;    &lt;span class=&quot;sr-only&quot;&gt;Next&lt;/span&gt;&#13;&#10;&lt;/a&gt;&#13;&#10;    &lt;!--/.Controls--&gt;&#13;&#10;&lt;/div&gt;&#13;&#10;&lt;!--/.Carousel Wrapper--&gt;
+             </code></pre>
+
+    <p>When you save the file and refresh webpage you'll see that carousel has disappeared.</p>
+
+    <p><strong>Don't worry</strong>, this is what we wanted to achieve. Now it's time for a little CSS magic.</p>
+
+    <p><strong>Go to your style.css file and paste the following code:</strong></p>
+
+    <pre class="code-toolbar"><code class="language-css">
+html,
+body,
+header,
+.view,
+.carousel,
+.carousel-item,
+.active,
+.carousel-inner {
+    height: 100%;
+}
+
+.carousel-item:nth-child(1) {
+    background-image: url("http://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img%20(1).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carousel-item:nth-child(2) {
+    background-image: url("http://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img%20(2).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carousel-item:nth-child(3) {
+    background-image: url("http://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img%20(3).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+            </code></pre>
+
+    <p>Save the file and take a look at your browser. <strong>Boom!</strong> Our carousel is ready. It fills all available space
+        and the images fit perfectly.</p>
+
+    <p><strong>Try to resize your browser.</strong> You will see that images in the carousel automatically adjusts to the screen.
+        Also, the caption (we've added buttons) and arrows are exactly in the middle (although we have to improve a few things).
+        </p>
+
+    <p>We've achieved all we wanted.</p>
+
+    <p><strong>But how does it work? Let me explain in few points:</strong></p>
+
+    <p><strong>1. </strong>The answer is easy -<strong> we've removed images from index.html and put it as a background of <code>.carousel-item</code> elements by using CSS.</strong>        Because we've set a height of .item to be a 100% of available space, images will adjust to it (no matter what is
+        the size of the image, it will always fit).</p>
+
+    <p><strong>2. </strong><code>nth-child(1)</code>, <code>nth-child(2)</code>, <code>nth-child(3)</code> refers to the slides
+        numbers.</p>
+
+    <p><strong>3. </strong>We also have to set a <code>height: 100%</code> to each parent element of the carousel (<code>html</code>,
+        <code>body</code> <code>header</code> <code>.view</code> and <code>.carousel</code> itself). </p>
+
+    <p><strong>4. </strong>In the html code of our Carousel, we use a Mask - we learned about this construction in the previous
+        tutorial. Thanks to that we can adjust a darkness of our image to make the Caption (text and buttons) more visible.</p>
+
+    <p><strong>5. </strong>We also use a class <code>.flex-center</code> to align the caption exactly in the middle of the screen.
+        We are using a <strong>Flex Box</strong>. You will learn more about it in the next lessons.</p>
+
+    <p><strong>6. </strong>If you look closer at our current carousel code, you will notice we've also used a class
+        <code>.animated</code> together with the animation class. That gives a nice animation to our caption when switching
+        slides. If you didn't read a previous tutorial about animations, you can learn more about it in the <a href="https://mdbootstrap.com/css/animations/">ANIMATIONS DOCUMENTATION</a>.</p>
+
+    <p>Here is one more thing to improve. <strong>Paste the code below to style.css</strong> :</p>
+
+    <pre class="code-toolbar"><code class="language-css">
+@media (min-width: 776px) {&#13;&#10;    .carousel .view ul li {&#13;&#10;        display: inline;&#13;&#10;    }&#13;&#10;    .carousel .view .full-bg-img ul li .flex-item {&#13;&#10;        margin-bottom: 1.5rem;&#13;&#10;    }&#13;&#10;}
+</code></pre>
+
+    <p>That will keep our buttons look good on devices smaller than 776px (on desktops they are displayed horizontally, on mobile
+        devices vertically.</p>
+
+    <p>The last fix we have to do is to remove a white space between carousel and footer.</p>
+
+    <p>If you inspect that space you will notice it's a top margin of the <code>footer</code>. We can easily remove it by adding
+        spacing class <code>.mt-0</code> to the <code>footer</code>.</p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;!--Footer--&gt;&#13;&#10;&lt;footer class=&quot;page-footer center-on-small-only deep-purple mt-0&quot;&gt;
+            </code></pre>
+
+</section>
+<!--Section: Tutorial content-->

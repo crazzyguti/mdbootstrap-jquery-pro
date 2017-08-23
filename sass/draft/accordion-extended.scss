@@ -1,0 +1,15 @@
+// Accordion Extended
+.accordion.accordion-1 {
+	p {
+		font-size: 1rem;
+	}
+	.card {
+		border: 0;
+		.card-header {
+			border: 0;
+		}
+		.card-body {
+			line-height: 1.4;
+		}
+	}
+}

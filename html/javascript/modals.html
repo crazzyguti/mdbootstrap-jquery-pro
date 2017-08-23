@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Material Design for Bootstrap</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../../css/mdb.css">
+</head>
+<body>
+
+	<!-- Button trigger modal -->
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+	  Launch demo modal
+	</button>
+
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#centralModalSuccess">
+	  Launch demo modal
+	</button>
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalContactForm">
+      Launch demo modal
+    </button>
+
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        ...
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Save changes</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- Central Modal Medium Success -->
+	<div class="modal fade" id="centralModalSuccess" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	    <div class="modal-dialog modal-notify modal-success" role="document">
+	        <!--Content-->
+	        <div class="modal-content">
+	            <!--Header-->
+	            <div class="modal-header">
+	                <p class="heading lead">Modal Success</p>
+
+	                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	                    <span aria-hidden="true" class="white-text">&times;</span>
+	                </button>
+	            </div>
+
+	            <!--Body-->
+	            <div class="modal-body">
+	                <div class="text-center">
+	                    <i class="fa fa-check fa-4x mb-1 animated rotateIn"></i>
+	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit iusto nulla aperiam blanditiis ad consequatur in dolores culpa, dignissimos, eius non possimus fugiat. Esse ratione fuga, enim,
+	                        ab officiis totam.</p>
+	                </div>
+	            </div>
+
+	            <!--Footer-->
+	            <div class="modal-footer justify-content-center">
+	                <a type="button" class="btn btn-primary-modal">Get it now <i class="fa fa-diamond ml-1"></i></a>
+	                <a type="button" class="btn btn-outline-secondary-modal waves-effect" data-dismiss="modal">No, thanks</a>
+	            </div>
+	        </div>
+	        <!--/.Content-->
+	    </div>
+	</div>
+	<!-- Central Modal Medium Success-->
+
+
+
+<!--Modal: Contact form-->
+<div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog cascading-modal" role="document">
+        <!--Content-->
+        <div class="modal-content">
+
+            <!--Header-->
+            <div class="modal-header light-blue darken-3 white-text">
+                <h4 class="title"><i class="fa fa-pencil"></i> Contact form</h4>
+                <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+                    <span class="white-text" aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <!--Body-->
+            <div class="modal-body mb-0">
+                <div class="md-form form-sm">
+                    <i class="fa fa-envelope prefix"></i>
+                    <input type="text" id="form19" class="form-control">
+                    <label for="form19">Your name</label>
+                </div>
+
+                <div class="md-form form-sm">
+                    <i class="fa fa-lock prefix"></i>
+                    <input type="password" id="form20" class="form-control">
+                    <label for="form20">Your email</label>
+                </div>
+
+                <div class="md-form form-sm">
+                    <i class="fa fa-tag prefix"></i>
+                    <input type="text" id="form21" class="form-control">
+                    <label for="form21">Subject</label>
+                </div>
+
+                <div class="md-form form-sm">
+                    <i class="fa fa-pencil prefix"></i>
+                    <textarea type="text" id="form8" class="md-textarea mb-0"></textarea>
+                    <label for="form8">Your message</label>
+                </div>
+
+                <div class="text-center mt-1-half">
+                    <button class="btn btn-info mb-2">Send <i class="fa fa-send ml-1"></i></button>
+                </div>
+
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+<!--Modal: Contact form-->
+
+                                            
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.9.9/umd/popper.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="../../js/bootstrap.js"></script>
+
+</body>
+</html>

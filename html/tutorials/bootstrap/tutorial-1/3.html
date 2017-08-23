@@ -1,0 +1,106 @@
+<!--Section: Tutorial content-->
+<section>
+
+    <p class="h5">Step 1</p>
+
+    <p>Take a look at footer's code. You will see that it contains class <code>.container-fluid</code>. If you have read the
+        previous lesson you know, that using <code>.container-fluid</code> will stretch the content to full available width.</p>
+
+    <p>In some cases it's desirable, but in our current project it doesn't look very well. Let's change <code>.container-fluid</code>        to <code>.container</code> within our footer.</p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+ &lt;!--Footer Links--&gt;&#13;&#10;&lt;div class=&quot;container&quot;&gt;
+            </code></pre>
+
+    <p class="h5 mt-4">Step 2</p>
+
+    <p>Now we'll do the same for Navbars links. In this case, we need to add a new <code>container</code> and place all the
+        Navbars elements inside it.</p>
+
+    <p>Finally you Navbar should look like that:</p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;nav class=&quot;navbar navbar-expand-lg navbar-dark bg-primary&quot;&gt;&#13;&#10;    &lt;div class=&quot;container&quot;&gt;&#13;&#10;        &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;Navbar&lt;/a&gt;&#13;&#10;        &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#navbarSupportedContent&quot; aria-controls=&quot;navbarSupportedContent&quot;&#13;&#10;            aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;&lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;&lt;/button&gt;&#13;&#10;        &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarSupportedContent&quot;&gt;&#13;&#10;            &lt;ul class=&quot;navbar-nav mr-auto&quot;&gt;&#13;&#10;                &lt;li class=&quot;nav-item active&quot;&gt;&#13;&#10;                    &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Home &lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/a&gt;&#13;&#10;                &lt;/li&gt;&#13;&#10;                &lt;li class=&quot;nav-item&quot;&gt;&#13;&#10;                    &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Features&lt;/a&gt;&#13;&#10;                &lt;/li&gt;&#13;&#10;                &lt;li class=&quot;nav-item&quot;&gt;&#13;&#10;                    &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Pricing&lt;/a&gt;&#13;&#10;                &lt;/li&gt;&#13;&#10;                &lt;li class=&quot;nav-item dropdown&quot;&gt;&#13;&#10;                    &lt;a class=&quot;nav-link dropdown-toggle&quot; id=&quot;navbarDropdownMenuLink&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Dropdown &#13;&#10;        &lt;/a&gt;&#13;&#10;                    &lt;div class=&quot;dropdown-menu dropdown-primary&quot; aria-labelledby=&quot;navbarDropdownMenuLink&quot;&gt;&#13;&#10;                        &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action&lt;/a&gt;&#13;&#10;                        &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Another action&lt;/a&gt;&#13;&#10;                        &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&#13;&#10;                    &lt;/div&gt;&#13;&#10;                &lt;/li&gt;&#13;&#10;            &lt;/ul&gt;&#13;&#10;            &lt;form class=&quot;form-inline&quot;&gt;&#13;&#10;                &lt;input class=&quot;form-control mr-sm-2&quot; type=&quot;text&quot; placeholder=&quot;Search&quot; aria-label=&quot;Search&quot;&gt;&#13;&#10;            &lt;/form&gt;&#13;&#10;        &lt;/div&gt;&#13;&#10;    &lt;/div&gt;&#13;&#10;&lt;/nav&gt;
+</code></pre>
+
+    <p>Save the file and open it in the browser. Now layout is equal and looks more consistent. </p>
+
+    <p class="h5 mt-4">Step 3</p>
+
+    <p>It's time to have a little fun with colors.</p>
+    <p>Our navbar is indigo and looks pretty nice. Our footer is blue and looks good as well. But they don't create a consistent
+        composition together. Let's fix it.</p>
+
+    <p>Go to the <strong><a href="https://mdbootstrap.com/css/colors/">COLORS DOCUMENTATION</a> </strong>.You will find it more
+        the 300 defined color classes which can be used in our project just by adding a color name to our document.</p>
+
+    <p>We are going to use <code>.indigo</code> color.</p>
+
+    <p>Add a class <code>.indigo</code> and remove old <code>.blue</code> from the footer.</p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;!--Footer--&gt;
+&lt;footer class=&quot;page-footer primary-color-dark center-on-small-only&quot;&gt;
+</code></pre>
+
+    <p>You can use any color you like and add it to each MDB element. Manipulating colors with MDB is incredibly easy and fast.</p>
+
+    <p class="h5 mt-4">Step 4</p>
+
+    <p>To fix our layout we'll use spacing utilities. Here is an example how does it work:</p>
+
+    <p><strong>Note: </strong>In MDB <code>1 rem</code> = <code>16 px</code> </p>
+
+    <p><strong>1. </strong> If you add class <code>.mr-4</code> to given element it will get <strong>1.5 rem right margin</strong>.</p>
+    <p><strong>2. </strong> If you add class <code>.pt-2</code> to given element it will get <strong>0.5 rem top padding</strong>.</p>
+    <p><strong>3. </strong> If you add class <code>.mx-1</code> to given element it will get <strong>0.25 rem right and left margins</strong>.</p>
+    <p><strong>4. </strong> If you add class <code>.py-5</code> to given element it will get <strong>3 rem top and bottom paddings</strong>.</p>
+    <p><strong>5. </strong> If you add class <code>.m-5</code> to given element it will get <strong>3 rem top, right, bottom and left margins</strong>.</p>
+
+    <p>To learn more about spacing utilities take a look at <a href="https://test.mdbootstrap.com/utilities/bootstrap-spacing/">SPACING DOCUMENTATION</a>.</p>
+
+    <p><strong>Now add class <code>.mt-5</code> to the <code>&lt;main&gt;</code> element.</strong></p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;!--Main layout--&gt;&#13;&#10;&lt;main class=&quot;mt-5&quot;&gt;
+              </code></pre>
+
+    <p>Save the file and refresh your browser. Our top layout is fixed.</p>
+
+    <p class="h5 mt-4">Step 5</p>
+
+    <p>Add class <code>.mb-4</code> to the <code>.view</code> element of featured image.</p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;!--Featured image --&gt;&#13;&#10;&lt;div class=&quot;view overlay hm-white-light z-depth-1-half mb-4&quot;&gt;
+              </code></pre>
+
+    <p class="h5 mt-4">Step 6</p>
+
+    <p>Wrap content of the second column of the first row in a new <code>&lt;div&gt;</code> and add that div <code>.mb-4</code>        class.</p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;!--Grid column--&gt;&#13;&#10;&lt;div class=&quot;col-md-5&quot;&gt;&#13;&#10;&#13;&#10;    &lt;div class=&quot;mb-4&quot;&gt;&#13;&#10;        &lt;h2&gt;Some awesome heading&lt;/h2&gt;&#13;&#10;        &lt;hr&gt;&#13;&#10;        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis pariatur quod ipsum atque quam&#13;&#10;            dolorem voluptate officia sunt placeat consectetur alias fugit cum praesentium ratione sint mollitia,&#13;&#10;            perferendis natus quaerat!&lt;/p&gt;&#13;&#10;        &lt;a href=&quot;https://mdbootstrap.com/&quot; class=&quot;btn btn-primary&quot;&gt;Get it now!&lt;/a&gt;&#13;&#10;    &lt;/div&gt;&#13;&#10;&#13;&#10;&lt;/div&gt;&#13;&#10;&lt;!--Grid column--&gt;
+              </code></pre>
+
+    <p class="h5 mt-4">Step 7</p>
+
+    <p>Add class <code>.mb-4</code> to each card within second row.</p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;!--Card--&gt;&#13;&#10;&lt;div class=&quot;card mb-4&quot;&gt;
+              </code></pre>
+
+    <p>After saving and refreshing the browser you will notice that everything looks great - both on desktop and mobile screen.</p>
+
+    <p><strong>Congratulation! You have finished first MDB Tutorial.</strong></p>
+
+    <p>Now, when you know basics of MDB you can improve the website on your own. Change texts, images and links. Use our documentation
+        to add new components. Add more content. Change the screen size and see how nice your website looks on mobile.</p>
+
+    <p>Now everything depends on you.</p>
+
+    <p>In the next tutorials you will learn more advanced techniques which will let you create really stunning projects.</p>
+
+</section>
+<!--Section: Tutorial content-->

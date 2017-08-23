@@ -1,0 +1,106 @@
+<!--Section: Tutorial content-->
+<section>
+
+    <p>In this lesson we are going to play with the carousel, we've built in the previous tutorial. Firstly, we'll change the
+        image carousel to video carousel.</p>
+
+    <p class="h5 mt-4">Step 1</p>
+
+    <p><strong>Remove the following lines of code from your style.css:</strong></p>
+
+    <pre class="code-toolbar"><code class="language-css">
+.carousel-item:nth-child(1) {&#13;&#10;    background-image: url(&quot;http://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img%20(1).jpg&quot;);&#13;&#10;    background-repeat: no-repeat;&#13;&#10;    background-size: cover;&#13;&#10;}&#13;&#10;&#13;&#10;.carousel-item:nth-child(2) {&#13;&#10;    background-image: url(&quot;http://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img%20(2).jpg&quot;);&#13;&#10;    background-repeat: no-repeat;&#13;&#10;    background-size: cover;&#13;&#10;}&#13;&#10;&#13;&#10;.carousel-item:nth-child(3) {&#13;&#10;    background-image: url(&quot;http://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img%20(3).jpg&quot;);&#13;&#10;    background-repeat: no-repeat;&#13;&#10;    background-size: cover;&#13;&#10;}
+            </code></pre>
+
+    <p class="h5 mt-4">Step 2</p>
+
+    <p>Go to the <a href="https://mdbootstrap.com/javascript/carousel/#video">CAROUSEL</a> section and grab the code of the
+        Video Carousel with the Caption. <strong>Then replace existing carousel with images with the video carousel you have copied.</strong></strong>
+    </p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;!--Carousel Wrapper--&gt;&#13;&#10;&lt;div id=&quot;video-carousel-example&quot; class=&quot;carousel slide carousel-fade&quot; data-ride=&quot;carousel&quot;&gt;&#13;&#10;    &lt;!--Indicators--&gt;&#13;&#10;    &lt;ol class=&quot;carousel-indicators&quot;&gt;&#13;&#10;        &lt;li data-target=&quot;#video-carousel-example&quot; data-slide-to=&quot;0&quot; class=&quot;active&quot;&gt;&lt;/li&gt;&#13;&#10;        &lt;li data-target=&quot;#video-carousel-example&quot; data-slide-to=&quot;1&quot;&gt;&lt;/li&gt;&#13;&#10;        &lt;li data-target=&quot;#video-carousel-example&quot; data-slide-to=&quot;2&quot;&gt;&lt;/li&gt;&#13;&#10;    &lt;/ol&gt;&#13;&#10;    &lt;!--/.Indicators--&gt;&#13;&#10;    &lt;!--Slides--&gt;&#13;&#10;    &lt;div class=&quot;carousel-inner&quot; role=&quot;listbox&quot;&gt;&#13;&#10;        &lt;!-- First slide --&gt;&#13;&#10;        &lt;div class=&quot;carousel-item active&quot;&gt;&#13;&#10;            &lt;!--Mask color--&gt;&#13;&#10;            &lt;div class=&quot;view hm-indigo-light&quot;&gt;&#13;&#10;                &lt;!--Video source--&gt;&#13;&#10;                &lt;video class=&quot;video-fluid&quot; autoplay loop&gt;&#13;&#10;                    &lt;source src=&quot;https://mdbootstrap.com/img/video/Lines.mp4&quot; type=&quot;video/mp4&quot; /&gt;&#13;&#10;                &lt;/video&gt;&#13;&#10;                &lt;div class=&quot;full-bg-img&quot;&gt;&lt;/div&gt;&#13;&#10;            &lt;/div&gt;&#13;&#10;&#13;&#10;            &lt;!--Caption--&gt;&#13;&#10;            &lt;div class=&quot;carousel-caption&quot;&gt;&#13;&#10;                &lt;div class=&quot;animated fadeInDown&quot;&gt;&#13;&#10;                    &lt;h3 class=&quot;h3-responsive&quot;&gt;Light mask&lt;/h3&gt;&#13;&#10;                    &lt;p&gt;First text&lt;/p&gt;&#13;&#10;                &lt;/div&gt;&#13;&#10;            &lt;/div&gt;&#13;&#10;            &lt;!--Caption--&gt;&#13;&#10;        &lt;/div&gt;&#13;&#10;        &lt;!-- /.First slide --&gt;&#13;&#10;&#13;&#10;        &lt;!-- Second slide --&gt;&#13;&#10;        &lt;div class=&quot;carousel-item&quot;&gt;&#13;&#10;            &lt;!--Mask color--&gt;&#13;&#10;            &lt;div class=&quot;view hm-purple-slight&quot;&gt;&#13;&#10;                &lt;!--Video source--&gt;&#13;&#10;                &lt;video class=&quot;video-fluid&quot; autoplay loop&gt;&#13;&#10;                    &lt;source src=&quot;https://mdbootstrap.com/img/video/animation-intro.mp4&quot; type=&quot;video/mp4&quot; /&gt;&#13;&#10;                &lt;/video&gt;&#13;&#10;                &lt;div class=&quot;mask&quot;&gt;&lt;/div&gt;&#13;&#10;            &lt;/div&gt;&#13;&#10;&#13;&#10;            &lt;!--Caption--&gt;&#13;&#10;            &lt;div class=&quot;carousel-caption&quot;&gt;&#13;&#10;                &lt;div class=&quot;animated fadeInDown&quot;&gt;&#13;&#10;                    &lt;h3 class=&quot;h3-responsive&quot;&gt;Super light mask&lt;/h3&gt;&#13;&#10;                    &lt;p&gt;Secondary text&lt;/p&gt;&#13;&#10;                &lt;/div&gt;&#13;&#10;            &lt;/div&gt;&#13;&#10;            &lt;!--Caption--&gt;&#13;&#10;        &lt;/div&gt;&#13;&#10;        &lt;!-- /.Second slide --&gt;&#13;&#10;&#13;&#10;        &lt;!-- Third slide --&gt;&#13;&#10;        &lt;div class=&quot;carousel-item&quot;&gt;&#13;&#10;            &lt;!--Mask color--&gt;&#13;&#10;            &lt;div class=&quot;view hm-black-strong&quot;&gt;&#13;&#10;                &lt;!--Video source--&gt;&#13;&#10;                &lt;video class=&quot;video-fluid&quot; autoplay loop&gt;&#13;&#10;                    &lt;source src=&quot;https://mdbootstrap.com/img/video/forest.mp4&quot; type=&quot;video/mp4&quot; /&gt;&#13;&#10;                &lt;/video&gt;&#13;&#10;                &lt;div class=&quot;mask&quot;&gt;&lt;/div&gt;&#13;&#10;            &lt;/div&gt;&#13;&#10;&#13;&#10;            &lt;!--Caption--&gt;&#13;&#10;            &lt;div class=&quot;carousel-caption&quot;&gt;&#13;&#10;                &lt;div class=&quot;animated fadeInDown&quot;&gt;&#13;&#10;                    &lt;h3 class=&quot;h3-responsive&quot;&gt;Strong mask&lt;/h3&gt;&#13;&#10;                    &lt;p&gt;Third text&lt;/p&gt;&#13;&#10;                &lt;/div&gt;&#13;&#10;            &lt;/div&gt;&#13;&#10;            &lt;!--Caption--&gt;&#13;&#10;        &lt;/div&gt;&#13;&#10;        &lt;!-- /.Third slide --&gt;&#13;&#10;    &lt;/div&gt;&#13;&#10;    &lt;!--/.Slides--&gt;&#13;&#10;    &lt;!--Controls--&gt;&#13;&#10;    &lt;a class=&quot;carousel-control-prev&quot; href=&quot;#video-carousel-example&quot; role=&quot;button&quot; data-slide=&quot;prev&quot;&gt;&#13;&#10;&lt;span class=&quot;carousel-control-prev-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&#13;&#10;&lt;span class=&quot;sr-only&quot;&gt;Previous&lt;/span&gt;&#13;&#10;&lt;/a&gt;&#13;&#10;    &lt;a class=&quot;carousel-control-next&quot; href=&quot;#video-carousel-example&quot; role=&quot;button&quot; data-slide=&quot;next&quot;&gt;&#13;&#10;&lt;span class=&quot;carousel-control-next-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&#13;&#10;&lt;span class=&quot;sr-only&quot;&gt;Next&lt;/span&gt;&#13;&#10;&lt;/a&gt;&#13;&#10;    &lt;!--/.Controls--&gt;&#13;&#10;&lt;/div&gt;&#13;&#10;&lt;!--/.Carousel Wrapper--&gt;
+            </code></pre>
+
+    <p>We've removed images from style.css and place videos in index.html.</p>
+
+    <p>Save the file and refresh the browser. Now you can admire your new video carousel. That was easy, wasn't it?</p>
+
+    <p class="h5 mt-4">Step 3</p>
+
+    <p>Our video carousel is working, but if you resize the screen you will notice that the video doesn't scale.</p>
+
+    <p>To fix it we have to change class <code>.video-fluid</code>(which sets a video 100% width)to <code>.video-full</code>        (which sets also 100% height) in each slide.</p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;!--Video source--&gt;&#13;&#10;&lt;video class=&quot;video-full&quot; autoplay loop&gt;&#13;&#10;    &lt;source src=&quot;https://mdbootstrap.com/img/video/Lines.mp4&quot; type=&quot;video/mp4&quot; /&gt;&#13;&#10;&lt;/video&gt;&#13;&#10;&lt;div class=&quot;full-bg-img&quot;&gt;&lt;/div&gt;
+            </code></pre>
+
+    <p>Alright, now it scales fine.</p>
+
+    <p>If you want to change a displaying video you do it by modifying URL path in index.html:</p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;video class=&quot;video-fluid&quot; autoplay loop&gt;
+    &lt;source src=&quot;https://mdbootstrap.com/images/video/Strum-Away.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+&lt;/video&gt;
+</code></pre>
+
+    <p>There is still one thing which we should fix - our Caption is too small and isnt't placed exactly in the middle of the
+        screen. That brings us to the <strong>step 4</strong></p>
+
+    <p class="h5 mt-4">Step 4</p>
+
+    <p><strong> Replace the code of Caption in each slide as per following example:</strong></p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;!--Caption--&gt;
+&lt;div class=&quot;carousel-caption&quot;&gt;
+    &lt;div class=&quot;flex-center animated fadeInDown&quot;&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;h1 class=&quot;h1-responsive&quot;&gt;Material Design for Bootstrap 4&lt;/h1&gt;&lt;/li&gt;
+            &lt;li&gt;
+                &lt;p&gt;The most powerful and free UI KIT for Bootstrap&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a target=&quot;_blank&quot; href=&quot;https://mdbootstrap.com/getting-started/&quot; class=&quot;btn btn-primary btn-lg&quot;&gt;Sign up!&lt;/a&gt;
+                &lt;a target=&quot;_blank&quot; href=&quot;https://mdbootstrap.com/material-design-for-bootstrap/&quot; class=&quot;btn btn-default btn-lg&quot;&gt;Learn more&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!--Caption--&gt;
+</code></pre>
+
+    <p class="h5 mt-4">Step 5</p>
+
+    <p><strong>Add a following code to the style.css:</strong></p>
+
+    <pre class="code-toolbar"><code class="language-css">
+.carousel-caption {
+    height: 100%;
+    padding-top: 7rem;
+}
+</code></pre>
+
+    <p>As you can see, we use class <code>.flex-center</code> (similar to the carousel in the previous tutorial) to center the
+        content. But this time it's not enough and without additional CSS code it aligns the content only horizontally (but
+        not vertically). </p>
+
+    <p>That's because the parent of the <code>.flex-center</code> div doesn't have a value <code>height: 100%</code>.
+    </p>
+
+    <p>If you remember, in the previous lesson we had to set the height of each parent equal to 100%. This time we have one
+        parent more (<code>.carousel-caption</code>). When we set its <code>height</code> to 100% everything is fine.
+    </p>
+
+    <p>Small <code>padding-top: 7rem;</code> just makes it looks better on smaller screens.</p>
+
+    <p><strong>Note:</strong> Because we use a Mask in our Carousel, you can easily manipulate the color and intensity of the
+        video, to make your caption more or less visible.</p>
+
+    <p>To learn more about Mask take a look at <a href="https://mdbootstrap.com/css/masks/#colors-intensity">MASKS DOCUMENTATION</a>.</p>
+
+</section>
+<!--Section: Tutorial content-->

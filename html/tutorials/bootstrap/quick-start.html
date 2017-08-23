@@ -1,0 +1,54 @@
+<!--Section: Tutorial content-->
+<section>
+
+    <p class="h5">Step 1</p>
+
+    <p>If you haven't downloaded MDB package yet, go to <a href="https://mdbootstrap.com/getting-started/"><strong>Getting Started</strong></a>        page and download it now.</p>
+
+    <p class="h5 mt-4">Step 2</p>
+
+    <p>Unzip downloaded package and open <strong>index.html</strong> file using your favorite text editor</p>
+
+    <p>PS: Many people ask us what program do we recommend to write code. Well, it doesn't matter that much, but personally,
+        we love <a href="https://code.visualstudio.com/">Visual Studio Code</a> and <a href="https://www.sublimetext.com/3">Sublime Text</a>        :)</p>
+
+    <img class="mb-3" src="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/Tutorials/bootstrap/_img/quick-start/extract.gif"
+        alt="">
+
+    <p>You should see the following code:</p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;!DOCTYPE html&gt;&#13;&#10;&lt;html lang=&quot;en&quot;&gt;&#13;&#10;&#13;&#10;&lt;head&gt;&#13;&#10;    &lt;meta charset=&quot;utf-8&quot;&gt;&#13;&#10;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt;&#13;&#10;    &lt;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;ie=edge&quot;&gt;&#13;&#10;    &lt;title&gt;Material Design Bootstrap&lt;/title&gt;&#13;&#10;    &lt;!-- Font Awesome --&gt;&#13;&#10;    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css&quot;&gt;&#13;&#10;    &lt;!-- Bootstrap core CSS --&gt;&#13;&#10;    &lt;link href=&quot;css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;&#13;&#10;    &lt;!-- Material Design Bootstrap --&gt;&#13;&#10;    &lt;link href=&quot;css/mdb.min.css&quot; rel=&quot;stylesheet&quot;&gt;&#13;&#10;    &lt;!-- Your custom styles (optional) --&gt;&#13;&#10;    &lt;link href=&quot;css/style.css&quot; rel=&quot;stylesheet&quot;&gt;&#13;&#10;&lt;/head&gt;&#13;&#10;&#13;&#10;&lt;body&gt;&#13;&#10;&#13;&#10;    &lt;!-- Start your project here--&gt;&#13;&#10;    &lt;div style=&quot;height: 100vh&quot;&gt;&#13;&#10;        &lt;div class=&quot;flex-center flex-column&quot;&gt;&#13;&#10;            &lt;h1 class=&quot;animated fadeIn mb-2&quot;&gt;Material Design for Bootstrap&lt;/h1&gt;&#13;&#10;&#13;&#10;            &lt;h5 class=&quot;animated fadeIn mb-1&quot;&gt;Thank you for using our product. We&apos;re glad you&apos;re with us.&lt;/h5&gt;&#13;&#10;&#13;&#10;            &lt;p class=&quot;animated fadeIn text-muted&quot;&gt;MDB Team&lt;/p&gt;&#13;&#10;        &lt;/div&gt;&#13;&#10;    &lt;/div&gt;&#13;&#10;    &lt;!-- /Start your project here--&gt;&#13;&#10;&#13;&#10;    &lt;!-- SCRIPTS --&gt;&#13;&#10;    &lt;!-- JQuery --&gt;&#13;&#10;    &lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery-3.1.1.min.js&quot;&gt;&lt;/script&gt;&#13;&#10;    &lt;!-- Bootstrap tooltips --&gt;&#13;&#10;    &lt;script type=&quot;text/javascript&quot; src=&quot;js/tether.min.js&quot;&gt;&lt;/script&gt;&#13;&#10;    &lt;!-- Bootstrap core JavaScript --&gt;&#13;&#10;    &lt;script type=&quot;text/javascript&quot; src=&quot;js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&#13;&#10;    &lt;!-- MDB core JavaScript --&gt;&#13;&#10;    &lt;script type=&quot;text/javascript&quot; src=&quot;js/mdb.min.js&quot;&gt;&lt;/script&gt;&#13;&#10;&lt;/body&gt;&#13;&#10;&#13;&#10;&lt;/html&gt;
+            </code></pre>
+
+    <p>All necessary files are already linked, so everything is ready to start. If you read comments carefully, you will easily
+        figure our what is the responsibility of all imported files.</p>
+
+    <p>Let's add the first MDB component to our index.html file.</p>
+
+    <p class="h5 mt-4">Step 3</p>
+
+    <p>Between the comments <code>&lt;!--Start your project here--&gt;</code> you will find a sample code. Remove it.
+    </p>
+
+    <p class="h5 mt-4">Step 4</p>
+
+    <p>Copy and paste the following code just below <code>&lt;body&gt;</code> tag, between the comments <code>&lt;!--Start your project here--&gt;</code></p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;!--Card--&gt;&#13;&#10;&lt;div class=&quot;card m-5&quot; style=&quot;width: 22rem;&quot;&gt;&#13;&#10;&#13;&#10;  &lt;!--Card image--&gt;&#13;&#10;  &lt;div class=&quot;view overlay hm-white-slight&quot;&gt;&#13;&#10;    &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%287%29.jpg&quot; class=&quot;img-fluid&quot; alt=&quot;&quot;&gt;&#13;&#10;    &lt;a href=&quot;#&quot;&gt;&#13;&#10;      &lt;div class=&quot;mask&quot;&gt;&lt;/div&gt;&#13;&#10;    &lt;/a&gt;&#13;&#10;  &lt;/div&gt;&#13;&#10;&#13;&#10;  &lt;!--Card content--&gt;&#13;&#10;  &lt;div class=&quot;card-body&quot;&gt;&#13;&#10;    &lt;!--Title--&gt;&#13;&#10;    &lt;h4 class=&quot;card-title&quot;&gt;Card title&lt;/h4&gt;&#13;&#10;    &lt;!--Text--&gt;&#13;&#10;    &lt;p class=&quot;card-text&quot;&gt;Some quick example text to build on the card title and make up the bulk of the card&apos;s content.&lt;/p&gt;&#13;&#10;    &lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&gt;Button&lt;/a&gt;&#13;&#10;  &lt;/div&gt;&#13;&#10;&#13;&#10;&lt;/div&gt;&#13;&#10;&lt;!--/.Card--&gt;
+            </code></pre>
+
+    <p class="h5 mt-4">Step 5</p>
+
+    <p>Save the file and open it in you browser. You will see a gorgeus, responsive and interactive card.</p>
+
+    <p class="h5 mt-4">Step 6</p>
+
+    <p>Explore our documentation (menu on the left). Choose components you like, copy it to your project and compose your website.
+        And yes, it's that simple!</p>
+
+    <img src="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/Tutorials/bootstrap/_img/quick-start/copy-paste.gif" class="img-fluid">
+
+</section>
+<!--Section: Tutorial content-->

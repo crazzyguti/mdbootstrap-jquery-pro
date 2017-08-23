@@ -1,0 +1,128 @@
+<!--Section: Tutorial content-->
+<section>
+
+    <p>Our intro looks nice, but heading in the middle barely visible. That can decrease user experience, so we have to do something
+        with that.</p>
+
+    <p>This is a perfect occasion to use the mask.</p>
+
+    <p class="h5 mt-4">Step 1</p>
+
+    <p>Firstly, we will change the color of the text to white. <strong>Put the following code into style.css file:</strong></p>
+
+    <pre class="code-toolbar"><code class="language-css">
+.flex-center {
+    color: #fff;
+}
+          </code></pre>
+
+    <p>Now it looks even worst. We definitely need to make the background darker.</p>
+
+    <p><strong>Add a class <code>.hm-black-strong</code> to the <code>.view</code> div.</strong></p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+    &lt;!--Mask--&gt;
+    &lt;div class=&quot;view hm-black-strong&quot;&gt;
+</code></pre>
+
+    <p>Alright, now it's fine.</p>
+
+    <p>You can modify the color intensity by changing class <code>.light</code> to <code>.strong</code> or <code>.slight</code>.
+        You can also change the color itself. <strong>Try it:</strong></p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+    &lt;!--Mask--&gt;
+    &lt;div class=&quot;view hm-blue-strong&quot;&gt;
+</code></pre>
+
+    <p>All color references you can find in our <a href="https://mdbootstrap.com/css/masks/#colors-intensity">COLORS DOCUMENTATION</a>.
+        To learn more about masks have a look at our <a href="https://mdbootstrap.com/css/masks/">MASKS DOCUMENTATION</a>.</p>
+
+    <p>After you finish playing with the colors, change back mask to <code>.hm-black-strong</code>.</p>
+
+    <p class="h5 mt-4">Step 2</p>
+
+    <p>Let's create a basic structure for our Landing Page. </p>
+
+    <p>At the beginning place a container between <code>&lt;main&gt;</code> tags. That will center our content and set up a
+        proper side margins.</p>
+
+    <p>We'll also add class <code>.text-center</code> to <code>&lt;main&gt;</code> section to center all the text we'll place
+        in the sections within.</p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;!--Main layout--&gt;&#13;&#10;&lt;main class=&quot;text-center&quot;&gt;&#13;&#10;    &lt;div class=&quot;container&quot;&gt;&#13;&#10;        &#13;&#10;    &lt;/div&gt;&#13;&#10;&lt;/main&gt;&#13;&#10;&lt;!--Main layout--&gt;
+          </code></pre>
+
+    <p class="h5 mt-4">Step 3</p>
+
+    <p>Now let's divide our <code>&lt;main&gt;</code> into 3 smaller sections and set up a grid layout within.</p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;!--Main layout--&gt;&#13;&#10;&lt;main class=&quot;text-center&quot;&gt;&#13;&#10;    &lt;div class=&quot;container&quot;&gt;&#13;&#10;&#13;&#10;        &lt;h2 class=&quot;h2-responsive my-5&quot;&gt;About us&lt;/h2&gt;&#13;&#10;&#13;&#10;        &lt;!--Section: About--&gt;&#13;&#10;        &lt;section id=&quot;about&quot; class=&quot;text-center&quot;&gt;&#13;&#10;&#13;&#10;        &lt;/section&gt;&#13;&#10;        &lt;!--Section: About--&gt;&#13;&#10;&#13;&#10;        &lt;h2 class=&quot;h2-responsive my-5&quot;&gt;Best features&lt;/h2&gt;&#13;&#10;&#13;&#10;        &lt;!--Section: Best features--&gt;&#13;&#10;        &lt;section id=&quot;best-features&quot;&gt;&#13;&#10;&#13;&#10;            &lt;div class=&quot;row&quot;&gt;&#13;&#10;&#13;&#10;                &lt;!--First columnn--&gt;&#13;&#10;                &lt;div class=&quot;col-md-3&quot;&gt;&#13;&#10;&#13;&#10;                &lt;/div&gt;&#13;&#10;                &lt;!--First columnn--&gt;&#13;&#10;&#13;&#10;                &lt;!--Second columnn--&gt;&#13;&#10;                &lt;div class=&quot;col-md-3&quot;&gt;&#13;&#10;&#13;&#10;                &lt;/div&gt;&#13;&#10;                &lt;!--Second columnn--&gt;&#13;&#10;&#13;&#10;                &lt;!--Third columnn--&gt;&#13;&#10;                &lt;div class=&quot;col-md-3&quot;&gt;&#13;&#10;&#13;&#10;                &lt;/div&gt;&#13;&#10;                &lt;!--Third columnn--&gt;&#13;&#10;&#13;&#10;                &lt;!--Fourth columnn--&gt;&#13;&#10;                &lt;div class=&quot;col-md-3&quot;&gt;&#13;&#10;&#13;&#10;                &lt;/div&gt;&#13;&#10;                &lt;!--Fourth columnn--&gt;&#13;&#10;            &lt;/div&gt;&#13;&#10;&#13;&#10;        &lt;/section&gt;&#13;&#10;        &lt;!--/Section: Best features--&gt;&#13;&#10;&#13;&#10;        &lt;h2 class=&quot;h2-responsive my-5&quot;&gt;Contact us&lt;/h2&gt;&#13;&#10;&#13;&#10;        &lt;!--Section: Contact--&gt;&#13;&#10;        &lt;section id=&quot;contact&quot;&gt;&#13;&#10;            &lt;div class=&quot;row&quot;&gt;&#13;&#10;                &lt;!--First column--&gt;&#13;&#10;                &lt;div class=&quot;col-md-8&quot;&gt;&#13;&#10;&#13;&#10;                &lt;/div&gt;&#13;&#10;                &lt;!--/First column--&gt;&#13;&#10;&#13;&#10;                &lt;!--Second column--&gt;&#13;&#10;                &lt;div class=&quot;col-md-4&quot;&gt;&#13;&#10;&#13;&#10;                &lt;/div&gt;&#13;&#10;                &lt;!--/Second column--&gt;&#13;&#10;            &lt;/div&gt;&#13;&#10;        &lt;/section&gt;&#13;&#10;        &lt;!--Section: Contact--&gt;&#13;&#10;&#13;&#10;    &lt;/div&gt;&#13;&#10;&lt;/main&gt;&#13;&#10;&lt;!--Main layout--&gt;
+</code></pre>
+
+    <p>As you can see we've created 3 sections: "About", "Best Features" and "Contact". These will provide a bunch of useful
+        information to visitors of our website.</p>
+
+    <p>Each section contains <code>.row</code> to provide a necessary structure for content's <code>.column</code>s which are
+        placed inside. All of them are a part of Bootstrap Grid System. If you are not sure what we are talking about you
+        can read more about it in our previous tutorials or our <a href="https://mdbootstrap.com/css/layout-grid/">GRID DOCUMENTATION</a>.</p>
+
+    <p>In this case, we use <code>.col-md-3</code> 4 times, because we need 4 columns for 4 cards.</p>
+
+    <p>Each section has own <code>ID</code>. We'll refer to it later in our navigation.</p>
+
+    <p>We've also added title above the sections. </p>
+
+    <p class="h5 mt-4">Step 4</p>
+
+    <p>Firstly we'll fill up <strong>About Section.</strong></p>
+
+    <p><strong>Put some dummy text inside "About" section.</strong></p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;!--Section: About--&gt;&#13;&#10;&lt;section id=&quot;about&quot; class=&quot;text-center&quot;&gt;&#13;&#10;&#13;&#10;    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed eaque ipsum totam quisquam eum tenetur perferendis rem incidunt sapiente perspiciatis tempora, aliquam, eius autem nisi quas, cumque distinctio saepe ab.&lt;/p&gt;&#13;&#10;    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed eaque ipsum totam quisquam eum tenetur perferendis rem incidunt sapiente perspiciatis tempora, aliquam, eius autem nisi quas, cumque distinctio saepe ab. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed eaque ipsum totam quisquam eum tenetur perferendis rem incidunt sapiente perspiciatis tempora, aliquam, eius autem nisi quas, cumque distinctio saepe ab.&lt;/p&gt;&#13;&#10;&#13;&#10;&lt;/section&gt;&#13;&#10;&lt;!--Section: About--&gt;
+          </code></pre>
+
+    <p class="h5 mt-4">Step 5</p>
+
+    <p>Now we'll take care about "Best Features" section.</p>
+
+    <p>Now go to the <a href="https://mdbootstrap.com/components/cards/#waves-effect">CARDS DOCUMENTATION</a> and grab the code
+        of the Card with waves effect. Then paste it into the each column (<code>.col-md-3</code>) of the
+        <code>.row</code> inside the "best features" section.</p>
+
+    <br>
+
+    <p>We'll make 2 small modification of the card:</p>
+    <p>- Remove the buttons, because we don't need them</p>
+    <p>- Add a divider <code>&lt;hr&gt;</code> below each <code>.card-title</code> heading.</p>
+
+    <br>
+
+    <strong><p>After all your "Best Features" section should look like that:</p></strong>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;!--Section: Best features--&gt;&#13;&#10;&lt;section id=&quot;best-features&quot;&gt;&#13;&#10;&#13;&#10;    &lt;div class=&quot;row&quot;&gt;&#13;&#10;&#13;&#10;        &lt;!--First columnn--&gt;&#13;&#10;        &lt;div class=&quot;col-md-3&quot;&gt;&#13;&#10;&#13;&#10;            &lt;!--Card--&gt;&#13;&#10;            &lt;div class=&quot;card&quot;&gt;&#13;&#10;&#13;&#10;                &lt;!--Card image--&gt;&#13;&#10;                &lt;div class=&quot;view overlay hm-white-slight&quot;&gt;&#13;&#10;                    &lt;img src=&quot;https://mdbootstrap.com/images/regular/city/img%20(2).jpg&quot; class=&quot;img-fluid&quot; alt=&quot;&quot;&gt;&#13;&#10;                    &lt;a&gt;&#13;&#10;                        &lt;div class=&quot;mask&quot;&gt;&lt;/div&gt;&#13;&#10;                    &lt;/a&gt;&#13;&#10;                &lt;/div&gt;&#13;&#10;                &lt;!--/.Card image--&gt;&#13;&#10;&#13;&#10;                &lt;!--Card content--&gt;&#13;&#10;                &lt;div class=&quot;card-body&quot;&gt;&#13;&#10;                    &lt;!--Title--&gt;&#13;&#10;                    &lt;h4 class=&quot;card-title&quot;&gt;Card title&lt;/h4&gt;&#13;&#10;                    &lt;hr&gt;&#13;&#10;                    &lt;!--Text--&gt;&#13;&#10;                    &lt;p class=&quot;card-text&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident fuga animi architecto&#13;&#10;                        dolores dicta cum quo velit.&lt;/p&gt;&#13;&#10;                &lt;/div&gt;&#13;&#10;                &lt;!--/.Card content--&gt;&#13;&#10;&#13;&#10;            &lt;/div&gt;&#13;&#10;            &lt;!--/.Card--&gt;&#13;&#10;&#13;&#10;        &lt;/div&gt;&#13;&#10;        &lt;!--First columnn--&gt;&#13;&#10;&#13;&#10;        &lt;!--Second columnn--&gt;&#13;&#10;        &lt;div class=&quot;col-md-3&quot;&gt;&#13;&#10;&#13;&#10;            &lt;!--Card--&gt;&#13;&#10;            &lt;div class=&quot;card&quot;&gt;&#13;&#10;&#13;&#10;                &lt;!--Card image--&gt;&#13;&#10;                &lt;div class=&quot;view overlay hm-white-slight&quot;&gt;&#13;&#10;                    &lt;img src=&quot;https://mdbootstrap.com/images/regular/city/img%20(3).jpg&quot; class=&quot;img-fluid&quot; alt=&quot;&quot;&gt;&#13;&#10;                    &lt;a&gt;&#13;&#10;                        &lt;div class=&quot;mask&quot;&gt;&lt;/div&gt;&#13;&#10;                    &lt;/a&gt;&#13;&#10;                &lt;/div&gt;&#13;&#10;                &lt;!--/.Card image--&gt;&#13;&#10;&#13;&#10;                &lt;!--Card content--&gt;&#13;&#10;                &lt;div class=&quot;card-body&quot;&gt;&#13;&#10;                    &lt;!--Title--&gt;&#13;&#10;                    &lt;h4 class=&quot;card-title&quot;&gt;Card title&lt;/h4&gt;&#13;&#10;                    &lt;hr&gt;&#13;&#10;                    &lt;!--Text--&gt;&#13;&#10;                    &lt;p class=&quot;card-text&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident fuga animi architecto&#13;&#10;                        dolores dicta cum quo velit.&lt;/p&gt;&#13;&#10;                &lt;/div&gt;&#13;&#10;                &lt;!--/.Card content--&gt;&#13;&#10;&#13;&#10;            &lt;/div&gt;&#13;&#10;            &lt;!--/.Card--&gt;&#13;&#10;&#13;&#10;        &lt;/div&gt;&#13;&#10;        &lt;!--Second columnn--&gt;&#13;&#10;&#13;&#10;        &lt;!--Third columnn--&gt;&#13;&#10;        &lt;div class=&quot;col-md-3&quot;&gt;&#13;&#10;&#13;&#10;            &lt;!--Card--&gt;&#13;&#10;            &lt;div class=&quot;card&quot;&gt;&#13;&#10;&#13;&#10;                &lt;!--Card image--&gt;&#13;&#10;                &lt;div class=&quot;view overlay hm-white-slight&quot;&gt;&#13;&#10;                    &lt;img src=&quot;https://mdbootstrap.com/images/regular/city/img%20(4).jpg&quot; class=&quot;img-fluid&quot; alt=&quot;&quot;&gt;&#13;&#10;                    &lt;a&gt;&#13;&#10;                        &lt;div class=&quot;mask&quot;&gt;&lt;/div&gt;&#13;&#10;                    &lt;/a&gt;&#13;&#10;                &lt;/div&gt;&#13;&#10;                &lt;!--/.Card image--&gt;&#13;&#10;&#13;&#10;                &lt;!--Card content--&gt;&#13;&#10;                &lt;div class=&quot;card-body&quot;&gt;&#13;&#10;                    &lt;!--Title--&gt;&#13;&#10;                    &lt;h4 class=&quot;card-title&quot;&gt;Card title&lt;/h4&gt;&#13;&#10;                    &lt;hr&gt;&#13;&#10;                    &lt;!--Text--&gt;&#13;&#10;                    &lt;p class=&quot;card-text&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident fuga animi architecto&#13;&#10;                        dolores dicta cum quo velit.&lt;/p&gt;&#13;&#10;                &lt;/div&gt;&#13;&#10;                &lt;!--/.Card content--&gt;&#13;&#10;&#13;&#10;            &lt;/div&gt;&#13;&#10;            &lt;!--/.Card--&gt;&#13;&#10;&#13;&#10;        &lt;/div&gt;&#13;&#10;        &lt;!--Third columnn--&gt;&#13;&#10;&#13;&#10;        &lt;!--Fourth columnn--&gt;&#13;&#10;        &lt;div class=&quot;col-md-3&quot;&gt;&#13;&#10;&#13;&#10;            &lt;!--Card--&gt;&#13;&#10;            &lt;div class=&quot;card&quot;&gt;&#13;&#10;&#13;&#10;                &lt;!--Card image--&gt;&#13;&#10;                &lt;div class=&quot;view overlay hm-white-slight&quot;&gt;&#13;&#10;                    &lt;img src=&quot;https://mdbootstrap.com/images/regular/city/img%20(5).jpg&quot; class=&quot;img-fluid&quot; alt=&quot;&quot;&gt;&#13;&#10;                    &lt;a&gt;&#13;&#10;                        &lt;div class=&quot;mask&quot;&gt;&lt;/div&gt;&#13;&#10;                    &lt;/a&gt;&#13;&#10;                &lt;/div&gt;&#13;&#10;                &lt;!--/.Card image--&gt;&#13;&#10;&#13;&#10;                &lt;!--Card content--&gt;&#13;&#10;                &lt;div class=&quot;card-body&quot;&gt;&#13;&#10;                    &lt;!--Title--&gt;&#13;&#10;                    &lt;h4 class=&quot;card-title&quot;&gt;Card title&lt;/h4&gt;&#13;&#10;                    &lt;hr&gt;&#13;&#10;                    &lt;!--Text--&gt;&#13;&#10;                    &lt;p class=&quot;card-text&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident fuga animi architecto&#13;&#10;                        dolores dicta cum quo velit.&lt;/p&gt;&#13;&#10;                &lt;/div&gt;&#13;&#10;                &lt;!--/.Card content--&gt;&#13;&#10;&#13;&#10;            &lt;/div&gt;&#13;&#10;            &lt;!--/.Card--&gt;&#13;&#10;&#13;&#10;        &lt;/div&gt;&#13;&#10;        &lt;!--Fourth columnn--&gt;&#13;&#10;    &lt;/div&gt;&#13;&#10;&#13;&#10;&lt;/section&gt;&#13;&#10;&lt;!--/Section: Best features--&gt;
+            </code></pre>
+
+    <p><strong>Small tip:</strong> add a class <code>.hoverable</code> to the card's div. That provides a nice hover effect.
+        Move your cursor over the card to watch the effect.</p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;!--Card--&gt;
+&lt;div class=&quot;card hoverable&quot;&gt;
+</code></pre>
+
+    <p>You can add "hoverable" class to any HTML element to achieve same hover effect as we used for card. </p>
+
+    <br>
+
+    <p>Save the file and refresh your browser. </p>
+
+    <p>Our website looks better with every minute. We still have a lot of things to do but we'll take care of it in the next
+        lesson.</p>
+
+</section>
+<!--Section: Tutorial content-->

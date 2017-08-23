@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design for Bootstrap</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../../css/mdb.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h4 class="my-2">Checkbox</h4>
+    
+    <!--Grid row-->
+    <div class="row">
+        
+        <!--Grid column-->
+        <form class="col-md-6">
+            
+            <legend>Basic</legend>
+            <fieldset class="form-group">
+                <input type="checkbox" id="checkbox1">
+                <label for="checkbox1">Checkbox</label>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <input type="checkbox" id="checkbox2" disabled checked>
+                <label for="checkbox2">Checkbox disabled checked</label>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <input type="checkbox" id="checkbox10" disabled>
+                <label for="checkbox10">Checkbox disabled not checked</label>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <input type="checkbox" id="checkbox3">
+                <label for="checkbox3">Checkbox indeterminate</label>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <input type="checkbox" id="checkbox4" disabled>
+                <label for="checkbox4">Checkbox indeterminate disabled</label>
+            </fieldset>
+
+        </form>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <form class="col-md-6">
+
+            <legend>Filled in</legend>
+            <fieldset class="form-group">
+                <input type="checkbox" class="filled-in" id="checkbox5">
+                <label for="checkbox5">Filled-in checkbox</label>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <input type="checkbox" class="filled-in-danger" id="checkbox6" checked>
+                <label for="checkbox6">Filled-in-danger checkbox</label>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <input type="checkbox" class="filled-in" id="checkbox7" disabled checked>
+                <label for="checkbox7">Filled-in checkbox disabled checked</label>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <input type="checkbox" class="filled-in" id="checkbox11" disabled>
+                <label for="checkbox11">Filled-in checkbox disabled not checked</label>
+            </fieldset>
+
+            <!-- 
+            <fieldset class="form-group">
+                <input type="checkbox" class="filled-in" id="checkbox8">
+                <label for="checkbox8">Filled-in checkbox indeterminate</label>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <input type="checkbox" class="filled-in" id="checkbox9">
+                <label for="checkbox9">Filled-in checkbox indeterminate disabled</label>
+            </fieldset> 
+            -->
+                
+        </form>
+        <!--Grid column-->
+    
+    </div>
+    <!--Grid row-->
+
+    <h4 class="my-2">Radio</h4>
+    <!--Grid row-->
+    <div class="row">
+        
+        <!--Grid column-->
+        <form class="col-md-6">
+            <legend>Basic</legend>
+            <fieldset class="form-group">
+                <input type="radio" id="radio-checked" name="radiot-test" checked>
+                <label for="radio-checked">Checked</label>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <input type="radio" id="radio-not-checked" name="radiot-test">
+                <label for="radio-not-checked">Not checked</label>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <input type="radio" id="radio-disabled-checked" name="radio1" disabled checked>
+                <label for="radio-disabled-checked">Disabled checked</label>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <input type="radio" id="radio-disabled-not-checked" name="radio1" disabled>
+                <label for="radio-disabled-not-checked">Disabled not checked</label>
+            </fieldset>
+
+        </form>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <form class="col-md-6">
+            <legend>With gap</legend>
+            <fieldset class="form-group">
+                <input type="radio" id="radio-with-gap-checked" class="with-gap" name="radiot-test" checked>
+                <label for="radio-with-gap-checked">Checked</label>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <input type="radio" id="radio-with-gap-not-checked" class="with-gap" name="radiot-test">
+                <label for="radio-with-gap-not-checked">Not checked</label>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <input type="radio" id="radio-with-gap-disabled-checked" class="with-gap" name="radio1" disabled checked>
+                <label for="radio-with-gap-disabled-checked">Disabled checked</label>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <input type="radio" id="radio-with-gap-disabled-not-checked" class="with-gap" name="radio1" disabled>
+                <label for="radio-with-gap-disabled-not-checked">Disabled not checked</label>
+            </fieldset>
+                
+        </form>
+        <!--Grid column-->
+    
+    </div>
+    <!--Grid row-->
+
+    <h4 class="my-2">Selects</h4>
+    <!--Grid row-->
+    <div class="row">
+    
+        <!--Grid column-->
+        <div class="col">
+    
+            <select class="mdb-select">
+                <option value="value1">Option 1</option>
+                <option value="value2" disabled>Option 2</option>
+                <option value="value3">Option 3</option>
+                <option value="value4">Option 4</option>
+                <option value="value5">Option 5</option>
+            </select>
+            <label>Basic with option disabled</label>
+                
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col">
+    
+            <label>Browser default</label>
+            <select class="browser-default">
+                <option value="value1">Option 1</option>
+                <option value="value2">Option 2</option>
+                <option value="value3">Option 3</option>
+                <option value="value4">Option 4</option>
+                <option value="value5">Option 5</option>
+            </select>
+                
+        </div>
+        <!--Grid column-->
+    
+    </div>
+    <!--Grid row-->
+
+    <!--Grid row-->
+    <div class="row">
+    
+        <!--Grid column-->
+        <div class="col">
+    
+            <select class="mdb-select" disabled>
+                <option value="value1">Option 1</option>
+                <option value="value2">Option 2</option>
+                <option value="value3">Option 3</option>
+                <option value="value4">Option 4</option>
+                <option value="value5">Option 5</option>
+            </select>
+            <label>Disabled</label>
+                
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col">
+    
+            <select class="mdb-select">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="" data-icon="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" class="rounded-circle">example 1</option>
+                <option value="" data-icon="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle">example 2</option>
+                <option value="" data-icon="https://mdbootstrap.com/img/Photos/Avatars/avatar-3.jpg" class="rounded-circle">example 1</option>
+            </select>
+            <label>With icons</label>
+                
+        </div>
+        <!--Grid column-->
+    
+    </div>
+    <!--Grid row-->
+
+    <!--Grid row-->
+    <div class="row">
+    
+        <!--Grid column-->
+        <div class="col">
+    
+            <select class="mdb-select colorful-select dropdown-primary">
+                <optgroup label="team 1">
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                </optgroup>
+                <optgroup label="team 2">
+                    <option value="3" selected>Selected</option>
+                    <option value="4" disabled>Disabled</option>
+                </optgroup>
+            </select>
+            <label>Optgroup</label>
+                
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col">
+    
+            
+            <select class="mdb-select colorful-select dropdown-primary" multiple>
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+            </select>
+            <label>Multiple</label>
+
+                
+        </div>
+        <!--Grid column-->
+    
+    </div>
+    <!--Grid row-->
+
+    <div class="row">
+        <!--Grid column-->
+        <div class="col-md-6">
+    
+            <select class="mdb-select" searchable="Search here..">
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3" selected>Option 3</option>
+                <option value="4" disabled>Disabled</option>
+            </select>
+            <label>Select with search</label>
+                
+        </div>
+        <!--Grid column-->
+    </div>
+
+
+    <h4 class="my-2">Colorful</h4>
+
+    <div class="row">
+
+        <div class="col">
+            <select class="mdb-select colorful-select dropdown-primary" searchable="Search here..">
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+            </select>
+            <label>Primary</label>
+        </div>
+
+        <div class="col">
+            <select class="mdb-select colorful-select dropdown-danger" searchable="Search here..">
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+            </select>
+            <label>Danger</label>
+        </div>
+
+        <div class="col">
+            <select class="mdb-select colorful-select dropdown-default" searchable="Search here..">
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+            </select>
+            <label>Default</label>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <select class="mdb-select colorful-select dropdown-secondary" searchable="Search here..">
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+            </select>
+            <label>Secondary</label>
+        </div>
+
+        <div class="col">
+            <select class="mdb-select colorful-select dropdown-success" searchable="Search here..">
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+            </select>
+            <label>Success</label>
+        </div>
+
+        <div class="col">
+            <select class="mdb-select colorful-select dropdown-info" searchable="Search here..">
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+            </select>
+            <label>Info</label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <select class="mdb-select colorful-select dropdown-warning" searchable="Search here..">
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+            </select>
+            <label>Warning</label>
+        </div>
+
+        <div class="col">
+            <select class="mdb-select colorful-select dropdown-ins" searchable="Search here..">
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+            </select>
+            <label>Ins</label>
+        </div>
+
+        <div class="col">
+            <select class="mdb-select colorful-select dropdown-dark" searchable="Search here..">
+                <option>Afghanistan</option>
+                <option>Albania</option>
+                <option>Algeria</option>
+                <option>Andorra</option>
+                <option>Angola</option>
+                <option>Antigua & Deps</option>
+                <option>Argentina</option>
+                <option>Armenia</option>
+                <option>Australia</option>
+                <option>Austria</option>
+                <option>Azerbaijan</option>
+                <option>Bahamas</option>
+                <option>Bahrain</option>
+                <option>Bangladesh</option>
+                <option>Barbados</option>
+                <option>Belarus</option>
+                <option>Belgium</option>
+                <option>Belize</option>
+                <option>Benin</option>
+                <option>Bhutan</option>
+                <option>Bolivia</option>
+                <option>Bosnia Herzegovina</option>
+                <option>Botswana</option>
+                <option>Brazil</option>
+                <option>Brunei</option>
+                <option>Bulgaria</option>
+                <option>Burkina</option>
+                <option>Burundi</option>
+                <option>Cambodia</option>
+                <option>Cameroon</option>
+                <option>Canada</option>
+                <option>Cape Verde</option>
+                <option>Central African Rep</option>
+                <option>Chad</option>
+                <option>Chile</option>
+                <option>China</option>
+                <option>Colombia</option>
+                <option>Comoros</option>
+                <option>Congo</option>
+                <option>Congo {Democratic Rep}</option>
+                <option>Costa Rica</option>
+                <option>Croatia</option>
+                <option>Cuba</option>
+                <option>Cyprus</option>
+                <option>Czech Republic</option>
+                <option>Denmark</option>
+                <option>Djibouti</option>
+                <option>Dominica</option>
+                <option>Dominican Republic</option>
+                <option>East Timor</option>
+                <option>Ecuador</option>
+                <option>Egypt</option>
+                <option>El Salvador</option>
+                <option>Equatorial Guinea</option>
+                <option>Eritrea</option>
+                <option>Estonia</option>
+                <option>Ethiopia</option>
+                <option>Fiji</option>
+                <option>Finland</option>
+                <option>France</option>
+                <option>Gabon</option>
+                <option>Gambia</option>
+                <option>Georgia</option>
+                <option>Germany</option>
+                <option>Ghana</option>
+                <option>Greece</option>
+                <option>Grenada</option>
+                <option>Guatemala</option>
+                <option>Guinea</option>
+                <option>Guinea-Bissau</option>
+                <option>Guyana</option>
+                <option>Haiti</option>
+                <option>Honduras</option>
+                <option>Hungary</option>
+                <option>Iceland</option>
+                <option>India</option>
+                <option>Indonesia</option>
+                <option>Iran</option>
+                <option>Iraq</option>
+                <option>Ireland {Republic}</option>
+                <option>Israel</option>
+                <option>Italy</option>
+                <option>Ivory Coast</option>
+                <option>Jamaica</option>
+                <option>Japan</option>
+                <option>Jordan</option>
+                <option>Kazakhstan</option>
+                <option>Kenya</option>
+                <option>Kiribati</option>
+                <option>Korea North</option>
+                <option>Korea South</option>
+                <option>Kosovo</option>
+                <option>Kuwait</option>
+                <option>Kyrgyzstan</option>
+                <option>Laos</option>
+                <option>Latvia</option>
+                <option>Lebanon</option>
+                <option>Lesotho</option>
+                <option>Liberia</option>
+                <option>Libya</option>
+                <option>Liechtenstein</option>
+                <option>Lithuania</option>
+                <option>Luxembourg</option>
+                <option>Macedonia</option>
+                <option>Madagascar</option>
+                <option>Malawi</option>
+                <option>Malaysia</option>
+                <option>Maldives</option>
+                <option>Mali</option>
+                <option>Malta</option>
+                <option>Marshall Islands</option>
+                <option>Mauritania</option>
+                <option>Mauritius</option>
+                <option>Mexico</option>
+                <option>Micronesia</option>
+                <option>Moldova</option>
+                <option>Monaco</option>
+                <option>Mongolia</option>
+                <option>Montenegro</option>
+                <option>Morocco</option>
+                <option>Mozambique</option>
+                <option>Myanmar, {Burma}</option>
+                <option>Namibia</option>
+                <option>Nauru</option>
+                <option>Nepal</option>
+                <option>Netherlands</option>
+                <option>New Zealand</option>
+                <option>Nicaragua</option>
+                <option>Niger</option>
+                <option>Nigeria</option>
+                <option>Norway</option>
+                <option>Oman</option>
+                <option>Pakistan</option>
+                <option>Palau</option>
+                <option>Panama</option>
+                <option>Papua New Guinea</option>
+                <option>Paraguay</option>
+                <option>Peru</option>
+                <option>Philippines</option>
+                <option>Poland</option>
+                <option>Portugal</option>
+                <option>Qatar</option>
+                <option>Romania</option>
+                <option>Russian Federation</option>
+                <option>Rwanda</option>
+                <option>St Kitts & Nevis</option>
+                <option>St Lucia</option>
+                <option>Saint Vincent & the Grenadines</option>
+                <option>Samoa</option>
+                <option>San Marino</option>
+                <option>Sao Tome & Principe</option>
+                <option>Saudi Arabia</option>
+                <option>Senegal</option>
+                <option>Serbia</option>
+                <option>Seychelles</option>
+                <option>Sierra Leone</option>
+                <option>Singapore</option>
+                <option>Slovakia</option>
+                <option>Slovenia</option>
+                <option>Solomon Islands</option>
+                <option>Somalia</option>
+                <option>South Africa</option>
+                <option>South Sudan</option>
+                <option>Spain</option>
+                <option>Sri Lanka</option>
+                <option>Sudan</option>
+                <option>Suriname</option>
+                <option>Swaziland</option>
+                <option>Sweden</option>
+                <option>Switzerland</option>
+                <option>Syria</option>
+                <option>Taiwan</option>
+                <option>Tajikistan</option>
+                <option>Tanzania</option>
+                <option>Thailand</option>
+                <option>Togo</option>
+                <option>Tonga</option>
+                <option>Trinidad & Tobago</option>
+                <option>Tunisia</option>
+                <option>Turkey</option>
+                <option>Turkmenistan</option>
+                <option>Tuvalu</option>
+                <option>Uganda</option>
+                <option>Ukraine</option>
+                <option>United Arab Emirates</option>
+                <option>United Kingdom</option>
+                <option>United States</option>
+                <option>Uruguay</option>
+                <option>Uzbekistan</option>
+                <option>Vanuatu</option>
+                <option>Vatican City</option>
+                <option>Venezuela</option>
+                <option>Vietnam</option>
+                <option>Yemen</option>
+                <option>Zambia</option>
+                <option>Zimbabwe</option>
+            </select>
+            <label>Dark</label>
+        </div>
+
+    </div>
+
+    <h4 class="my-2">Range</h4>
+    <div class="row">
+        <div class="col">
+            <form class="range-field">
+                <input type="range" min="0" max="100" />
+            </form>
+        </div>
+    </div>
+
+    <h4 class="my-2">Switch</h4>
+    <div class="row">
+        <form class="col">
+            <legend>Basic</legend>
+            <div class="switch">
+            <label>
+              Off
+              <input type="checkbox">
+              <span class="lever"></span>
+              On
+            </label>
+          </div>
+        </form>
+        <form class="col">
+            <legend>Disabled</legend>
+            <div class="switch">
+            <label>
+              Off
+              <input disabled type="checkbox">
+              <span class="lever"></span>
+              On
+            </label>
+          </div>
+        </form>
+        <form class="col">
+            <legend>Disabled checked</legend>
+            <div class="switch">
+            <label>
+              Off
+              <input checked disabled type="checkbox">
+              <span class="lever"></span>
+              On
+            </label>
+          </div>
+        </form>
+    </div>
+
+    <h4 class="my-2">File input</h4>
+    <div class="row">
+        <form class="col">
+            <legend>Basic</legend>
+            <div class="file-field">
+                <div class="btn btn-primary">
+                    <span>Choose file</span>
+                    <input type="file">
+                </div>
+                <div class="file-path-wrapper">
+                   <input class="file-path validate" type="text" placeholder="Upload your file">
+                </div>
+            </div>
+        </form>
+        <form class="col">
+            <legend>Multiple</legend>
+            <div class="file-field">
+                <div class="btn btn-primary">
+                    <span>Choose file</span>
+                    <input type="file" multiple>
+                </div>
+                <div class="file-path-wrapper">
+                   <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <h4 class="my-2">Character counter</h4>
+    <div class="row">
+        <form class="col">
+            <legend>Input</legend>
+            <div class="md-form">
+                <input id="input-char-counter" type="text" length="10">
+                <label for="input-char-counter">Input text</label>
+            </div>
+        </form>
+        <form class="col">
+            <legend>Textarea</legend>
+            <div class="md-form">
+                <textarea id="textarea-char-counter" class="md-textarea" length="120"></textarea>
+                <label for="textarea-char-counter">Type your text</label>
+            </div>
+        </form>
+    </div>
+
+    <h4 class="my-2">Input groups</h4>
+    <div class="row">
+        <div class="col">
+
+            <legend>Text</legend>
+
+            <div class="md-form input-group">
+                <span class="input-group-addon" id="basic-addon1">@</span>
+                <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+            </div>
+
+            <div class="md-form input-group">
+                <input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
+                <span class="input-group-addon" id="basic-addon2">@example.com</span>
+            </div>
+
+            <label for="basic-url">Your URL</label>
+            <div class="md-form input-group">
+                <span class="input-group-addon" id="basic-addon3">https://example.com/users/</span>
+                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+            </div>
+
+            <div class="md-form input-group">
+                <span class="input-group-addon">$</span>
+                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <span class="input-group-addon">.00</span>
+            </div>
+
+        </div>
+    </div>  
+
+    <div class="row">
+        <div class="col">
+
+            <legend>Checkbox</legend>
+
+            <div class="input-group">
+                <span class="input-group-addon">
+                   <input type="checkbox" id="checkbox65">
+                    <label for="checkbox65"></label>
+               </span>
+                <input type="text" class="form-control" aria-label="Text input with checkbox">
+            </div>
+        </div>
+
+        <div class="col">
+            <legend>Radio</legend>
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <input type="radio" id="radio61">
+                    <label for="radio61"></label>
+                </span>
+                <input type="text" class="form-control" aria-label="Text input with checkbox">
+            </div>
+
+        </div>
+    </div>  
+
+    <div class="row">
+        <div class="col">
+
+            <legend>Buttons</legend>
+
+            <div class="md-form input-group">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary btn-lg" type="button">Go!</button>
+                </span>
+                <input type="search" class="form-control" placeholder="Search for...">
+            </div>
+
+            <div class="md-form input-group">
+                <input type="search" class="form-control pl-0" placeholder="Search for...">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary btn-lg" type="button">Go!</button>
+                </span>
+            </div>
+
+            <div class="md-form input-group">
+                <span class="input-group-btn">
+                    <button class="btn btn-default btn-lg" type="button">Hate it</button>
+                </span>
+                <input type="text" class="form-control" placeholder="Product name">
+                <span class="input-group-btn">
+                    <button class="btn btn-danger btn-lg" type="button">Love it</button>
+                </span>
+            </div>
+
+        </div>
+        
+    </div>  
+
+    <h4 class="my-2">Autocomplete</h4>
+    <!--Grid row-->
+    <div class="row">
+        
+        <!--Grid column-->
+        <form class="col">
+
+            <div class="md-form">
+                <input type="search" id="form-autocomplete" class="form-control mdb-autocomplete">
+                <button class="mdb-autocomplete-clear">
+                    <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="https://www.w3.org/2000/svg">
+                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                        <path d="M0 0h24v24H0z" fill="none" />
+                    </svg>
+                </button>
+                <label for="form-autocomplete" class="active">What is your favorite US state?</label>
+            </div>
+
+        </form>
+        <!--Grid column-->
+
+    </div>
+    <!--Grid row-->
+
+    <h4 class="my-2">Input alternate</h4>
+    <div class="row">
+        <div class="col">
+            <div class="md-form">
+                <input type="text" class="input-alternate" placeholder="John Doe">
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="../../js/modules/jquery.easing.js"></script>
+<script src="../../js/modules/velocity.min.js"></script>
+<script src="../../js/modules/character-counter.js"></script>
+<script src="../../js/popper.min.js"></script>
+<script src="../../js/bootstrap.js"></script>
+<script src="../../js/modules/dropdown.js"></script>
+<script src="../../js/modules/mdb-autocomplete.js"></script>
+<script src="../../js/modules/forms-free.js"></script>
+<script src="../../js/modules/file-input.js"></script>
+<script src="../../js/modules/range-input.js"></script>
+<script src="../../js/modules/material-select.js"></script>
+<script src="../../js/modules/waves.js"></script>
+
+<!-- Indeterminate test -->
+<script>
+$(".mdb-select").material_select(); 
+["checkbox3", "checkbox4"].forEach(checkbox => { 
+    document.getElementById(checkbox).indeterminate = true;
+});
+var states = [
+    "Alabana",
+    "Alaska",
+    "Arizona",
+    "Arkansas",
+    "California",
+];
+
+$('.mdb-autocomplete').mdb_autocomplete({
+    data: states
+});
+</script>
+</body>
+
+</html>

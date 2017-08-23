@@ -1,0 +1,20 @@
+/* YOUR CUSTOM STYLES */
+
+html,
+body,
+header,
+.view {
+    height: 100%;
+}
+
+.view {
+    background: url("http://mdbootstrap.com/img/Photos/Horizontal/Work/full page/img%20(2).jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.flex-center {
+    color: #fff;
+}

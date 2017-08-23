@@ -1,0 +1,145 @@
+<!--Section: Tutorial content-->
+<section>
+
+    <div class="text-center mb-4">
+        <p>In this lesson, you will learn how to create a basic construction of your project and set up a grid layout.</p>
+        <a class="btn btn-primary" href="" role="button">Final result preview <i class="fa fa-eye ml-1"></i></a>
+    </div>
+
+    <p class="h5 mt-4">Step 1</p>
+
+    <p> Open index.html file in your project folder (the folder where you have unzipped MDB package).</p>
+
+    <p class="h5 mt-4">Step 2</p>
+
+    <p> Let's create a basic structure of our project. We'll divide the page into the 3 sections:</p>
+
+    <p><code>&lt;header&gt;</code> - for navigation</p>
+
+    <p><code>&lt;main&gt;</code> - for website content</p>
+
+    <p><code>&lt;footer&gt;</code> - for additional information and links</p>
+
+    <p class="mt-4"><strong>Paste following code below <code>&lt;body&gt;</code> tag:</strong></p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;!--Main Navigation--&gt;&#13;&#10;&lt;header&gt;&#13;&#10;&#13;&#10;&lt;/header&gt;&#13;&#10;&lt;!--Main Navigation--&gt;&#13;&#10;&#13;&#10;&lt;!--Main layout--&gt;&#13;&#10;&lt;main&gt;&#13;&#10;&#13;&#10;&lt;/main&gt;&#13;&#10;&lt;!--Main layout--&gt;&#13;&#10;&#13;&#10;&lt;!--Footer--&gt;&#13;&#10;&lt;footer&gt;&#13;&#10;&#13;&#10;&lt;/footer&gt;&#13;&#10;&lt;!--Footer--&gt;    
+            </code></pre>
+
+    <p class="h5 mt-4">Step 3</p>
+
+    <p>We will create <strong>navigation bar </strong>first. From the MDB documentation (menu on the left, components -&gt;
+        <a href="https://mdbootstrap.com/components/navbar/#basic-example">navbars</a> ) grab a Basic Navbar and paste it
+        between <code>&lt;header&gt;</code> tags:</p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;nav class=&quot;navbar navbar-expand-lg navbar-dark indigo&quot;&gt;&#13;&#10;    &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;Navbar&lt;/a&gt;&#13;&#10;    &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#navbarSupportedContent&quot; aria-controls=&quot;navbarSupportedContent&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;&#13;&#10;        &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;&#13;&#10;    &lt;/button&gt;&#13;&#10;    &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarSupportedContent&quot;&gt;&#13;&#10;        &lt;ul class=&quot;navbar-nav mr-auto&quot;&gt;&#13;&#10;            &lt;li class=&quot;nav-item active&quot;&gt;&#13;&#10;                &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Home &lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/a&gt;&#13;&#10;            &lt;/li&gt;&#13;&#10;            &lt;li class=&quot;nav-item&quot;&gt;&#13;&#10;                &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Features&lt;/a&gt;&#13;&#10;            &lt;/li&gt;&#13;&#10;            &lt;li class=&quot;nav-item&quot;&gt;&#13;&#10;                &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Pricing&lt;/a&gt;&#13;&#10;            &lt;/li&gt;&#13;&#10;            &lt;li class=&quot;nav-item dropdown&quot;&gt;&#13;&#10;                &lt;a class=&quot;nav-link dropdown-toggle&quot; id=&quot;navbarDropdownMenuLink&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Dropdown &#13;&#10;                &lt;/a&gt;&#13;&#10;                &lt;div class=&quot;dropdown-menu dropdown-primary&quot; aria-labelledby=&quot;navbarDropdownMenuLink&quot;&gt;&#13;&#10;                    &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action&lt;/a&gt;&#13;&#10;                    &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Another action&lt;/a&gt;&#13;&#10;                    &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&#13;&#10;                &lt;/div&gt;&#13;&#10;            &lt;/li&gt;&#13;&#10;        &lt;/ul&gt;&#13;&#10;        &lt;form class=&quot;form-inline&quot;&gt;&#13;&#10;            &lt;input class=&quot;form-control mr-sm-2&quot; type=&quot;text&quot; placeholder=&quot;Search&quot; aria-label=&quot;Search&quot;&gt;&#13;&#10;        &lt;/form&gt;&#13;&#10;    &lt;/div&gt;&#13;&#10;&lt;/nav&gt;              
+            </code></pre>
+
+    <p>Save the file and open it in the browser. You will see a blue navigation bar on the top of the page.</p>
+
+    <p>That was easy, wasn't it? Of course, our navigation requires a few modifications, but we'll take care of it later.</p>
+
+    <p>If you want you can play a little with Navbar. Try to modify links names and set up redirections to some already existing
+        in the Internet websites.</p>
+
+    <p>Now let's try something more exciting. Let's add a content to our website.</p>
+
+    <p class="h5 mt-4">Step 4</p>
+
+    <p>Before we do that, first we have to structure our project. We'll use a <strong>Bootstrap grid</strong> for that.</p>
+
+    <p><strong>Paste the following code between <code>&lt;main&gt;</code> tags:</strong></p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;!--Main container--&gt;&#13;&#10;&lt;div class=&quot;container&quot;&gt;&#13;&#10;&#13;&#10;    &lt;!--Grid row--&gt;&#13;&#10;    &lt;div class=&quot;row&quot;&gt;&#13;&#10;&#13;&#10;        &lt;!--Grid column--&gt;&#13;&#10;        &lt;div class=&quot;col-md-7&quot;&gt;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;        &lt;/div&gt;&#13;&#10;        &lt;!--Grid column--&gt;&#13;&#10;&#13;&#10;        &lt;!--Grid column--&gt;&#13;&#10;        &lt;div class=&quot;col-md-5&quot;&gt;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;        &lt;/div&gt;&#13;&#10;        &lt;!--Grid column--&gt;&#13;&#10;&#13;&#10;    &lt;/div&gt;&#13;&#10;    &lt;!--Grid row--&gt;&#13;&#10;&#13;&#10;    &lt;!--Grid row--&gt;&#13;&#10;    &lt;div class=&quot;row&quot;&gt;&#13;&#10;&#13;&#10;        &lt;!--Grid column--&gt;&#13;&#10;        &lt;div class=&quot;col-lg-4 col-md-12&quot;&gt;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;        &lt;/div&gt;&#13;&#10;        &lt;!--Grid column--&gt;&#13;&#10;&#13;&#10;        &lt;!--Grid column--&gt;&#13;&#10;        &lt;div class=&quot;col-lg-4 col-md-6&quot;&gt;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;        &lt;/div&gt;&#13;&#10;        &lt;!--Grid column--&gt;&#13;&#10;&#13;&#10;        &lt;!--Grid column--&gt;&#13;&#10;        &lt;div class=&quot;col-lg-4 col-md-6&quot;&gt;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;        &lt;/div&gt;&#13;&#10;        &lt;!--Grid column--&gt;&#13;&#10;&#13;&#10;    &lt;/div&gt;&#13;&#10;    &lt;!--Grid row--&gt;&#13;&#10;&#13;&#10;&lt;/div&gt;&#13;&#10;&lt;!--Main container--&gt;
+            </code></pre>
+
+    <p>Now let's have a look at elements we've used above. </p>
+
+    <p>All of them are parts of <strong>Bootstrap Grid System</strong>, which let us create responsive websites adjusted to
+        mobiles, tablets and desktops screens. By using the snippet above, you've just created a responsive layout for your
+        website, which will be displayed perfectly on all kind of devices! </p>
+
+    <p>But what these elements actually do?</p>
+
+    <p class="h5 mt-4">Container </p>
+
+    <p>Bootstrap requires a containing element to wrap site contents and house our grid system. You may choose one of two containers:</p>
+
+    <p><code>&lt;div class="container-fluid"&gt;</code> - will display your content on full available width</p>
+
+    <p><code>&lt;div class="container"&gt;</code> - will center your content and give it an appropriate side margins. In the
+        current project, we are going to use this one.</p>
+
+    <p class="h5 mt-4">Row </p>
+
+    <p>Rows create horizontal groups of columns. Therefore, if you want to split your layout horizontally, use <code>&lt;div class="row"&gt;</code>.</p>
+
+    <p class="h5 mt-4">Columns </p>
+
+    <p>Bootstrap's grid system allows up to 12 columns across the page. To create a column use a special class <code>&lt;div class="col-md-*&gt;</code>,
+        where "*" is the  number between 1 and 12.</p>
+
+    <img class="img-fluid" src="https://mdbootstrap.com/wp-content/uploads/2016/01/grid.jpg" alt="">
+
+    <p class="h5 my-4 text-center">Examples </p>
+
+    <p class="h5 my-4">2 columns grid </p>
+
+    <div class="row my-2">
+        <div class="col-md-6 indigo" style="height: 150px;"></div>
+        <div class="col-md-6 teal" style="height: 150px;"></div>
+    </div>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class="col-md-6"&gt; &lt;/div&gt;
+    &lt;div class="col-md-6"&gt; &lt;/div&gt;
+&lt;/div&gt;
+            </code></pre>
+
+    <p class="h5 my-4">3 columns grid </p>
+
+    <div class="row my-2">
+        <div class="col-md-4 indigo" style="height: 150px;"></div>
+        <div class="col-md-4 teal" style="height: 150px;"></div>
+        <div class="col-md-4 purple" style="height: 150px;"></div>
+    </div>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class="col-md-4"&gt; &lt;/div&gt; 
+    &lt;div class="col-md-4"&gt; &lt;/div&gt; 
+    &lt;div class="col-md-4"&gt; &lt;/div&gt;
+&lt;/div&gt;
+            </code></pre>
+
+    <p class="h5 my-4">4 columns grid </p>
+
+    <div class="row my-2">
+        <div class="col-md-3 indigo" style="height: 150px;"></div>
+        <div class="col-md-3 teal" style="height: 150px;"></div>
+        <div class="col-md-3 purple" style="height: 150px;"></div>
+        <div class="col-md-3 blue" style="height: 150px;"></div>
+    </div>
+
+    <pre class="code-toolbar"><code class="language-markup">
+ &lt;div class="col-md-3"&gt; &lt;/div&gt; 
+ &lt;div class="col-md-3"&gt; &lt;/div&gt; 
+ &lt;div class="col-md-3"&gt; &lt;/div&gt; 
+ &lt;div class="col-md-3"&gt; &lt;/div&gt;
+            </code></pre>
+
+    <p><strong>Important:</strong> Remember that grid columns should add up to twelve for a row.</p>
+
+    <p><strong>Important 2: </strong>If you want to use Bootstrap's grid system you always have to use a basic construction
+        with the container (or container-fluid) and row. Otherwise, your column won't work properly.</p>
+
+    <p>That's very basic info about Bootstrap Grid. Along the tutorial, you will learn more advanced tricks which let you use
+        the full power of the grid. </p>
+
+    <p>Now let's get back to our current project.<strong>Click NEXT LESSON</strong> button to proceed further.</p>
+
+</section>
+<!--Section: Tutorial content-->

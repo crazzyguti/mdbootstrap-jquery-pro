@@ -1,0 +1,143 @@
+<!--Section: Tutorial content-->
+<section>
+
+    <p>In this tutorial, you will create a Landing Page. It's very popular way of building so-called single page projects.</p>
+
+    <p>You will learn a few awesome techniques:</p>
+
+    <ul>
+        <li>
+            <p>Creating Full Page Intro</p>
+        </li>
+        <li>
+            <p>Using masks and shadows</p>
+        </li>
+        <li>
+            <p>Creating Contact Section</p>
+        </li>
+        <li>
+            <p>Using Google Maps</p>
+        </li>
+        <li>
+            <p>Using animations</p>
+        </li>
+        <li>
+            <p>Using font awesome</p>
+        </li>
+    </ul>
+
+    <div class="text-center mb-4">
+        <hr>
+        <a class="btn btn-primary" href="" role="button">Final result preview <i class="fa fa-eye ml-1"></i></a>
+        <hr>
+    </div>
+
+    <p class="h5 mt-4">Step 1</p>
+
+    <p>Similarly to the previous tutorial, at the beginning, we'll create a basic structure of our project.</p>
+
+    <p>Open index.html file in your project folder (the folder where you have unzipped MDB package) and <strong>paste the following code below <code>&lt;body&gt;</code> tag:</strong>.</p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;!--Main Navigation--&gt;&#13;&#10;&lt;header&gt;&#13;&#10;&#13;&#10;&lt;/header&gt;&#13;&#10;&lt;!--Main Navigation--&gt;&#13;&#10;&#13;&#10;&lt;!--Main layout--&gt;&#13;&#10;&lt;main&gt;&#13;&#10;&#13;&#10;&lt;/main&gt;&#13;&#10;&lt;!--Main layout--&gt;&#13;&#10;&#13;&#10;&lt;!--Footer--&gt;&#13;&#10;&lt;footer&gt;&#13;&#10;&#13;&#10;&lt;/footer&gt;&#13;&#10;&lt;!--Footer--&gt;    
+            </code></pre>
+
+    <p class="h5 mt-4">Step 2</p>
+
+    <p>Now we'll create a navigation. Go to <a target="_blank" href="https://mdbootstrap.com/components/navbar/">NAVBARS DOCUMENTATION</a>        and copy the code of Basic Navbar. Then paste it between opening <code>&lt;header&gt;</code>s tags.</p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;!--Main Navigation--&gt;&#13;&#10;&lt;header&gt;&#13;&#10;&#13;&#10;    &lt;nav class=&quot;navbar navbar-expand-lg navbar-dark indigo&quot;&gt;&#13;&#10;        &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;Navbar&lt;/a&gt;&#13;&#10;        &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#navbarSupportedContent&quot; aria-controls=&quot;navbarSupportedContent&quot;&#13;&#10;            aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;&lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;&lt;/button&gt;&#13;&#10;        &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarSupportedContent&quot;&gt;&#13;&#10;            &lt;ul class=&quot;navbar-nav mr-auto&quot;&gt;&#13;&#10;                &lt;li class=&quot;nav-item active&quot;&gt;&#13;&#10;                    &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Home &lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/a&gt;&#13;&#10;                &lt;/li&gt;&#13;&#10;                &lt;li class=&quot;nav-item&quot;&gt;&#13;&#10;                    &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Features&lt;/a&gt;&#13;&#10;                &lt;/li&gt;&#13;&#10;                &lt;li class=&quot;nav-item&quot;&gt;&#13;&#10;                    &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Pricing&lt;/a&gt;&#13;&#10;                &lt;/li&gt;&#13;&#10;                &lt;li class=&quot;nav-item dropdown&quot;&gt;&#13;&#10;                    &lt;a class=&quot;nav-link dropdown-toggle&quot; id=&quot;navbarDropdownMenuLink&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Dropdown &#13;&#10;            &lt;/a&gt;&#13;&#10;                    &lt;div class=&quot;dropdown-menu dropdown-primary&quot; aria-labelledby=&quot;navbarDropdownMenuLink&quot;&gt;&#13;&#10;                        &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action&lt;/a&gt;&#13;&#10;                        &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Another action&lt;/a&gt;&#13;&#10;                        &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&#13;&#10;                    &lt;/div&gt;&#13;&#10;                &lt;/li&gt;&#13;&#10;            &lt;/ul&gt;&#13;&#10;            &lt;form class=&quot;form-inline&quot;&gt;&#13;&#10;                &lt;input class=&quot;form-control mr-sm-2&quot; type=&quot;text&quot; placeholder=&quot;Search&quot; aria-label=&quot;Search&quot;&gt;&#13;&#10;            &lt;/form&gt;&#13;&#10;        &lt;/div&gt;&#13;&#10;    &lt;/nav&gt;&#13;&#10;&#13;&#10;&lt;/header&gt;&#13;&#10;&lt;!--Main Navigation--&gt;
+            </code></pre>
+
+    <p class="h5 mt-4">Step 3</p>
+
+    <p>We have to make one significant change in the Navbar's code.</p>
+
+    <p><strong>Add a class <code>.fixed-top</code> to the Navbar</strong>.</p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;nav class=&quot;navbar navbar-expand-lg navbar-dark indigo fixed-top&quot;&gt;
+             </code></pre>
+
+    <p>As you can expect, that makes our navbar stuck to the top of the screen. It will be visible all the time, even when you
+        scroll down your page.</p>
+
+    <p class="h5 mt-4">Step 4</p>
+
+    <p>Now it's time for something spectacular. Let's create a full page background intro for our landing page.</p>
+
+    <p><strong>Paste that code below the Navbar:</strong></p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;!--Mask--&gt;&#13;&#10;&lt;div class=&quot;view&quot;&gt;&#13;&#10;    &lt;div class=&quot;full-bg-img flex-center&quot;&gt;&#13;&#10;        &lt;ul&gt;&#13;&#10;            &lt;li&gt;&#13;&#10;                &lt;h1 class=&quot;h1-responsive&quot;&gt;New York Advertising Agency&lt;/h1&gt;&#13;&#10;            &lt;/li&gt;&#13;&#10;            &lt;li&gt;&#13;&#10;                &lt;p&gt;Digital advertising agency focused on today&apos;s consumers&lt;/p&gt;&#13;&#10;            &lt;/li&gt;&#13;&#10;            &lt;li&gt;&#13;&#10;                &lt;a href=&quot;&quot; class=&quot;btn btn-primary btn-lg&quot;&gt;Sign up!&lt;/a&gt;&#13;&#10;                &lt;a href=&quot;&quot; class=&quot;btn btn-default btn-lg&quot;&gt;Learn more&lt;/a&gt;&#13;&#10;            &lt;/li&gt;&#13;&#10;        &lt;/ul&gt;&#13;&#10;    &lt;/div&gt;&#13;&#10;&lt;/div&gt;&#13;&#10;&lt;!--/.Mask--&gt;
+             </code></pre>
+
+    <p>Let me explain how the code above works.</p>
+
+    <p><code>.view</code> is a wrapper for our background image, which let us add a mask to it. Thanks to mask we can make our
+        image darker or lighter, which helps us make your content more visible.</p>
+    <p><code>.full-bg-img</code> is an element with <code>absolute</code> position, which makes it cover our background image.
+        And because it covers the image, we can use it as a mask and manipulate the colors.</p>
+
+    <p><code>.flex-center</code> aligns our content exactly in the middle of the screen.</p>
+
+    <p>Content within <code>ul</code> is our "Call to action" element, which let users know, what action we expect from them.
+        You can place there whatever you want.</p>
+
+    <p><code>.h1-resposnive</code> makes our heading look good on all kind devices because it adjusts the font size to the screen
+        size.</p>
+
+    <p class="mt-5">When you save the file and refresh your browser, you will notice that nothing has changed. <strong>That because we need some CSS code to make it working.</strong></p>
+
+    <p>Firstly, we'll use a separate CSS file for our custom styles. <strong>Open a file style.css (in "CSS" folder) and paste that code:</strong></p>
+
+    <pre class="code-toolbar"><code class="language-css">
+html,
+body,
+header,
+.view {
+    height: 100%;
+}
+
+.view {
+    background: url("http://mdbootstrap.com/img/Photos/Horizontal/Work/full page/img%20(2).jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+            </code></pre>
+
+    <p>We set <code>height: 100%</code> to all the parents element of our background image, because only that way we can cover
+        with the image the entire screen.</p>
+
+    <p>We set to the <code>.view</code> a proper URL path for the image. You can use whatever image you want.</p>
+
+    <p>Then, we give a value <code>cover</code> to the <code>background-size</code> property. That makes the image cover all
+        the available space on the screen.</p>
+
+    <p><code>-webkit-</code>, <code>-moz-</code> and <code>-o-</code> make sure our code works properly with all the browsers.
+    </p>
+
+    <p>Save the file and open it in your browser. You will see a beautiful image covering your intro. There are a few things
+        which we should improve, but we'll take care of it in the next lesson.</p>
+
+    <p>In order change the background image you just have to change the<strong> URL path</strong>. You can provide a link to
+        the image on your server or path to the source file within your project's files, for example: url("/img/imageName.png");</p>
+
+    <br>
+
+    <p><strong>Small tip at the end:</strong></p>
+
+    <p>You can use whatever image you want, but there are a few rules which you should follow.</p>
+
+    <p>Your image should be big enough to keep the quality and as lightweight as possible to don't increase a page load time.
+        That's why I recommend you prepare your picture as follows: </p>
+
+    <p><strong>1.</strong> Resolution: 1920px / 1280px</p>
+    <p><strong>2.</strong> JPG file format</p>
+    <p><strong>3.</strong> Compress the file (you can use <a href="http://compressjpeg.com/">COMPRES JPG</a> tool)</p>
+
+</section>
+<!--Section: Tutorial content-->

@@ -1,0 +1,46 @@
+<!--Section: Tutorial content-->
+<section>
+
+    <p>Currently, our Navbar does not correspond with the rest of the project. In this lesson, we'll fix it.</p>
+
+    <p class="h5 mt-4">Step 1</p>
+
+    <p><strong>Add a <code>.container</code> to the Navbar to center the elements within.</strong></p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+  &lt;nav class=&quot;navbar navbar-expand-lg navbar-dark indigo fixed-top&quot;&gt;&#13;&#10;      &lt;div class=&quot;container&quot;&gt;&#13;&#10;          &#13;&#10;      &lt;/div&gt;&#13;&#10;  &lt;/nav&gt;
+            </code></pre>
+
+    <p class="h5 mt-4">Step 2</p>
+
+    <p>Now we'll take care of navigation links. Have you noticed that we set before to each section an ID? That's a good moment
+        to use it.</p>
+
+    <p>Firstly we'll remove all unneccessary elements from the Navbar (like search box and brand link).Then for each
+        <code>&lt;a&gt;</code> inside Navbar we'll set an ID corresponding with a proper section.</p>
+
+    <p>Finally our Navbar should look like this:</p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;nav class=&quot;navbar navbar-expand-lg navbar-dark indigo fixed-top&quot;&gt;&#13;&#10;    &lt;div class=&quot;container&quot;&gt;&#13;&#10;        &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#navbarSupportedContent&quot; aria-controls=&quot;navbarSupportedContent&quot;&#13;&#10;            aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;&lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;&lt;/button&gt;&#13;&#10;        &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarSupportedContent&quot;&gt;&#13;&#10;&#13;&#10;            &lt;!--New links--&gt;&#13;&#10;            &lt;ul class=&quot;navbar-nav mr-auto&quot;&gt;&#13;&#10;                &lt;li class=&quot;nav-item&quot;&gt;&#13;&#10;                    &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Home &lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/a&gt;&#13;&#10;                &lt;/li&gt;&#13;&#10;                &lt;li class=&quot;nav-item&quot;&gt;&#13;&#10;                    &lt;a class=&quot;nav-link&quot; href=&quot;#about&quot;&gt;About&lt;/a&gt;&#13;&#10;                &lt;/li&gt;&#13;&#10;                &lt;li class=&quot;nav-item&quot;&gt;&#13;&#10;                    &lt;a class=&quot;nav-link&quot; href=&quot;#best-features&quot;&gt;Features&lt;/a&gt;&#13;&#10;                &lt;/li&gt;&#13;&#10;                &lt;li class=&quot;nav-item&quot;&gt;&#13;&#10;                    &lt;a class=&quot;nav-link&quot; href=&quot;#contact&quot;&gt;Contact&lt;/a&gt;&#13;&#10;                &lt;/li&gt;&#13;&#10;            &lt;/ul&gt;&#13;&#10;            &lt;!--New links--&gt;&#13;&#10;            &#13;&#10;        &lt;/div&gt;&#13;&#10;    &lt;/div&gt;&#13;&#10;&lt;/nav&gt;
+            </code></pre>
+
+    <p>Now when you click on some link in the navbar you'll be moved to the linked section. </p>
+
+    <p class="h5 mt-4">Step 3</p>
+
+    <p>At the end we will add a footer to our Landing Page. Go to the <a href="https://mdbootstrap.com/components/footers/">FOOTER DOCUMENTATION</a>,
+        grab the footer's code and paste it just below <code>&lt;main&gt;</code> section.</p>
+
+    <p>Additionally, you can change a color class of th footer to <code>.indigo</code> for the Footer, to make it more consistent
+        with the rest of our project. I would also recommend to change <code>.container-fluid</code> to
+        <code>.container</code> to keep the same layout across the entire project.</p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;!--Footer--&gt;&#13;&#10;&lt;footer class=&quot;page-footer indigo center-on-small-only&quot;&gt;&#13;&#10;&#13;&#10;    &lt;!--Footer Links--&gt;&#13;&#10;    &lt;div class=&quot;container&quot;&gt;&#13;&#10;        &lt;div class=&quot;row&quot;&gt;&#13;&#10;&#13;&#10;            &lt;!--First column--&gt;&#13;&#10;            &lt;div class=&quot;col-md-6&quot;&gt;&#13;&#10;                &lt;h5 class=&quot;title&quot;&gt;Footer Content&lt;/h5&gt;&#13;&#10;                &lt;p&gt;Here you can use rows and columns here to organize your footer content.&lt;/p&gt;&#13;&#10;            &lt;/div&gt;&#13;&#10;            &lt;!--/.First column--&gt;&#13;&#10;&#13;&#10;            &lt;!--Second column--&gt;&#13;&#10;            &lt;div class=&quot;col-md-6&quot;&gt;&#13;&#10;                &lt;h5 class=&quot;title&quot;&gt;Links&lt;/h5&gt;&#13;&#10;                &lt;ul&gt;&#13;&#10;                    &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;Link 1&lt;/a&gt;&lt;/li&gt;&#13;&#10;                    &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;Link 2&lt;/a&gt;&lt;/li&gt;&#13;&#10;                    &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;Link 3&lt;/a&gt;&lt;/li&gt;&#13;&#10;                    &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;Link 4&lt;/a&gt;&lt;/li&gt;&#13;&#10;                &lt;/ul&gt;&#13;&#10;            &lt;/div&gt;&#13;&#10;            &lt;!--/.Second column--&gt;&#13;&#10;        &lt;/div&gt;&#13;&#10;    &lt;/div&gt;&#13;&#10;    &lt;!--/.Footer Links--&gt;&#13;&#10;&#13;&#10;    &lt;!--Copyright--&gt;&#13;&#10;    &lt;div class=&quot;footer-copyright&quot;&gt;&#13;&#10;        &lt;div class=&quot;container-fluid&quot;&gt;&#13;&#10;            &copy; 2015 Copyright: &lt;a href=&quot;https://www.MDBootstrap.com&quot;&gt; MDBootstrap.com &lt;/a&gt;&#13;&#10;&#13;&#10;        &lt;/div&gt;&#13;&#10;    &lt;/div&gt;&#13;&#10;    &lt;!--/.Copyright--&gt;&#13;&#10;&#13;&#10;&lt;/footer&gt;&#13;&#10;&lt;!--/.Footer--&gt;           
+              </code></pre>
+
+    <p>Now you can edit Footer's content according to your needs.</p>
+
+</section>
+<!--Section: Tutorial content-->

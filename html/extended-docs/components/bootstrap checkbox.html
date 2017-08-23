@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design Bootstrap</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../../../css/bootstrap/bootstrap.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="../../../css/mdb.css">
+    <!-- Your custom styles (optional) -->
+    <style>
+        /*Classic*/
+         .checkbox-default [type="checkbox"]:checked+label:before {
+            border-color: transparent #2BBBAD #2BBBAD transparent;
+        }
+
+        .checkbox-primary [type="checkbox"]:checked+label:before {
+            border-color: transparent #4285F4 #4285F4 transparent;
+        }
+
+        .checkbox-secondary [type="checkbox"]:checked+label:before {
+            border-color: transparent #aa66cc #aa66cc transparent;
+        }
+
+        .checkbox-warning [type="checkbox"]:checked+label:before {
+            border-color: transparent #FF8800 #FF8800 transparent;
+        }
+
+        .checkbox-danger [type="checkbox"]:checked+label:before {
+            border-color: transparent #ff4444 #ff4444 transparent;
+        }
+
+        .checkbox-success [type="checkbox"]:checked+label:before {
+            border-color: transparent #00C851 #00C851 transparent;
+        }
+
+        .checkbox-info [type="checkbox"]:checked+label:before {
+            border-color: transparent #33b5e5 #33b5e5 transparent;
+        }
+
+        .checkbox-teal [type="checkbox"]:checked+label:before {
+            border-color: transparent #009688 #009688 transparent;
+        }
+    
+  
+        /*Filled in*/
+
+        .checkbox-primary-filled [type="checkbox"][class*='filled-in']:checked+label:after {
+            border-color: #4285F4;
+            background-color: #4285F4;
+        }
+
+        .checkbox-dark-filled [type="checkbox"][class*='filled-in']:checked+label:after {
+            border-color: #424242;
+            background-color: #424242;
+        }
+
+        .checkbox-warning-filled [type="checkbox"][class*='filled-in']:checked+label:after {
+            border-color: #FF8800;
+            background-color: #FF8800;
+        }
+
+        .checkbox-danger-filled [type="checkbox"][class*='filled-in']:checked+label:after {
+            border-color: #ff4444;
+            background-color: #ff4444;
+        }
+
+        .checkbox-success-filled [type="checkbox"][class*='filled-in']:checked+label:after {
+            border-color: #00C851;
+            background-color: #00C851;
+        }
+
+        .checkbox-info-filled [type="checkbox"][class*='filled-in']:checked+label:after {
+            border-color: #33b5e5;
+            background-color: #33b5e5;
+        }
+
+        .checkbox-teal-filled [type="checkbox"][class*='filled-in']:checked+label:after {
+            border-color: #009688;
+            background-color: #009688;
+        }
+
+        .checkbox-rounded [type="checkbox"][class*='filled-in']+label:after {
+            border-radius: 50%;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="container my-5">
+
+        <!--Grid row-->
+        <div class="row">
+
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-12">
+
+                <div class="form-group">
+                    <input type="checkbox" id="checkbox">
+                    <label for="checkbox">Not checked</label>
+                </div>
+                <div class="form-group checkbox-default">
+                    <input type="checkbox" id="checkbox" checked>
+                    <label for="checkbox1">Default</label>
+                </div>
+                <div class="form-group checkbox-primary">
+                    <input type="checkbox" id="checkbox2" checked>
+                    <label for="checkbox2">Primary</label>
+                </div>
+                <div class="form-group checkbox-secondary">
+                    <input type="checkbox" id="checkbox3" checked>
+                    <label for="checkbox3">Secondary</label>
+                </div>
+                <div class="form-group checkbox-warning">
+                    <input type="checkbox" id="checkbox4" checked>
+                    <label for="checkbox4">Warning</label>
+                </div>
+                <div class="form-group checkbox-danger">
+                    <input type="checkbox" id="checkbox5" checked>
+                    <label for="checkbox5">Danger</label>
+                </div>
+                <div class="form-group checkbox-success">
+                    <input type="checkbox" id="checkbox6" checked>
+                    <label for="checkbox6">Success</label>
+                </div>
+                <div class="form-group checkbox-info">
+                    <input type="checkbox" id="checkbox7" checked>
+                    <label for="checkbox7">Info</label>
+                </div>
+                <div class="form-group checkbox-teal">
+                    <input type="checkbox" id="checkbox8" checked>
+                    <label for="checkbox8">Teal</label>
+                </div>
+
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-6">
+
+                <div class="form-group">
+                    <input type="checkbox" id="checkbox775" class="filled-in">
+                    <label for="checkbox775">Not checked</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="checkbox11" class="filled-in" checked>
+                    <label for="checkbox11">Default</label>
+                </div>
+                <div class="form-group checkbox-primary-filled">
+                    <input type="checkbox" id="checkbox12" class="filled-in" checked>
+                    <label for="checkbox12">Primary</label>
+                </div>
+                <div class="form-group checkbox-dark-filled">
+                    <input type="checkbox" id="checkbox13" class="filled-in" checked>
+                    <label for="checkbox13">Dark</label>
+                </div>
+                <div class="form-group checkbox-warning-filled">
+                    <input type="checkbox" id="checkbox14" class="filled-in" checked>
+                    <label for="checkbox14">Warning</label>
+                </div>
+                <div class="form-group checkbox-danger-filled">
+                    <input type="checkbox" id="checkbox15" class="filled-in" checked>
+                    <label for="checkbox15">Danger</label>
+                </div>
+                <div class="form-group checkbox-success-filled">
+                    <input type="checkbox" id="checkbox16" class="filled-in" checked>
+                    <label for="checkbox16">Success</label>
+                </div>
+                <div class="form-group checkbox-info-filled">
+                    <input type="checkbox" id="checkbox17" class="filled-in" checked>
+                    <label for="checkbox17">Info</label>
+                </div>
+                <div class="form-group checkbox-teal-filled">
+                    <input type="checkbox" id="checkbox18" class="filled-in" checked>
+                    <label for="checkbox18">Teal</label>
+                </div>
+
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-6">
+
+                <div class="form-group">
+                    <input type="checkbox" id="checkbox53" disabled>
+                    <label for="checkbox53" class="disabled">Classic checkbox not checked</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="checkbox" id="checkbox54" checked disabled>
+                    <label for="checkbox54" class="disabled">Classic checkbox checked</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="checkbox" class="filled-in" id="checkbox26" disabled>
+                    <label for="checkbox26" class="disabled">Filled-in checkbox not checked</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="checkbox" class="filled-in" id="checkbox27" checked disabled>
+                    <label for="checkbox27" class="disabled">Filled-in checkbox checked</label>
+                </div>
+
+                <hr>
+
+                <div class="form-group checkbox-rounded checkbox-success-filled">
+                    <input type="checkbox" id="checkbox78" class="filled-in" checked>
+                    <label for="checkbox78">Teal</label>
+                </div>
+
+                <div class="form-group checkbox-rounded success">
+                    <input type="checkbox" id="checkbox75" class="filled-in">
+                    <label for="checkbox75">Teal</label>
+                </div>
+
+                <div class="form-group checkbox-rounded">
+                    <input type="checkbox" id="checkbox78" class="filled-in" checked disabled>
+                    <label for="checkbox78" class="disabled">Teal</label>
+                </div>
+
+                <div class="form-group checkbox-rounded">
+                    <input type="checkbox" id="checkbox75" class="filled-in" disabled>
+                    <label for="checkbox75" class="disabled">Teal</label>
+                </div>
+
+            </div>
+            <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+
+        <hr class="my-5">
+
+        <!--Form inline-->
+        <form class="form-inline">
+
+            <div class="form-group">
+                <input type="checkbox" id="checkbox111" checked>
+                <label for="checkbox111">Classic checkbox</label>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" class="filled-in" id="checkbox122" checked>
+                <label for="checkbox122">Filled-in checkbox</label>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" id="checkbox113">
+                <label for="checkbox113">Classic checkbox</label>
+            </div>
+
+        </form>
+        <!--Form inline-->
+
+        <hr class="my-5">
+
+        <!--Checkbox butons-->
+        <div class="btn-group mr-4" data-toggle="buttons">
+
+            <label class="btn btn-primary active">
+                <input type="checkbox" checked autocomplete="off"> Checkbox 1 (pre-checked)
+            </label>
+
+            <label class="btn btn-primary">
+                <input type="checkbox" autocomplete="off"> Checkbox 2
+            </label>
+
+            <label class="btn btn-primary">
+                <input type="checkbox" autocomplete="off"> Checkbox 3
+            </label>
+
+        </div>
+        <!--Checkbox butons-->
+
+        <hr class="my-5">
+
+        <!--Checkbox butons-->
+        <div class="btn-group" data-toggle="buttons">
+
+            <label class="btn btn-danger btn-rounded active btn-md">
+                <input type="checkbox" checked autocomplete="off"> Checkbox 1 (pre-checked)
+            </label>
+
+            <label class="btn btn-danger btn-rounded btn-md">
+                <input type="checkbox" autocomplete="off"> Checkbox 2
+            </label>
+
+            <label class="btn btn-danger btn-rounded btn-md">
+                <input type="checkbox" autocomplete="off"> Checkbox 3
+            </label>
+
+        </div>
+        <!--Checkbox butons-->
+
+        <hr class="my-5">
+
+        <!--Checkbox butons-->
+        <div class="btn-group" data-toggle="buttons">
+
+            <label class="btn btn-warning btn-rounded active">
+                <input type="checkbox" checked autocomplete="off"> Checkbox 1 (pre-checked) <i class="fa fa-diamond ml-2"></i>
+            </label>
+
+            <label class="btn btn-warning btn-rounded">
+                <input type="checkbox" autocomplete="off"> Checkbox 2 <i class="fa fa-user ml-2"></i>
+            </label>
+
+            <label class="btn btn-warning btn-rounded">
+                <input type="checkbox" autocomplete="off"> Checkbox 3 <i class="fa fa-code ml-2"></i>
+            </label>
+
+        </div>
+        <!--Checkbox butons-->
+
+
+
+
+    </div>
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="../../../js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="../../../js/bootstrap.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="../../../js/modules/mdb.js"></script>
+    <!--Custom scripts-->
+    <script>
+
+    </script>
+</body>
+
+</html>

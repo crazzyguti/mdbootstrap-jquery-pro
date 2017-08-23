@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Material Design for Bootstrap</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../../css/mdb.css">
+</head>
+<body>
+
+	<div class="row mt-3">
+        <div class="col-md-6">
+
+            <div class="md-form">
+                <input placeholder="Selected date" type="text" id="date-picker-example" class="form-control datepicker">
+                <label for="date-picker-example">Try me...</label>
+            </div>
+
+        </div>
+    </div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.9.9/umd/popper.js"></script>
+	<script src="../../js/bootstrap.js"></script>
+    <script src="../../js/modules/forms-free.js"></script>
+    <script src="../../js/modules/picker.js"></script>
+	<script src="../../js/modules/picker-date.js"></script>
+
+    <script>
+        $( document ).ready(function() {
+           $('.datepicker').pickadate({
+            selectMonths: true,
+            closeOnSelect: false,
+            closeOnClear: false
+          });
+        });
+    </script>
+</body>
+</html>

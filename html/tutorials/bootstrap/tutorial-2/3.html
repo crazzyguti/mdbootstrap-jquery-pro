@@ -1,0 +1,139 @@
+<!--Section: Tutorial content-->
+<section>
+
+    <p class="h5">Step 1</p>
+
+    <p>Let's start from Google Map. <strong>To make it works we have to do 3 things.</strong></p>
+
+    <p>Firstly link Google Maps script to our project.</p>
+
+    <p>Just before closing <code>&lt;/body&gt;</code> tag and below <code>MDB Script</code> place <code>Google Maps script</code></p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+    &lt;!-- MDB core JavaScript --&gt;&#13;&#10;    &lt;script type=&quot;text/javascript&quot; src=&quot;js/mdb.min.js&quot;&gt;&lt;/script&gt;&#13;&#10;    &#13;&#10;    &lt;!--Google Maps--&gt;&#13;&#10;    &lt;script src=&quot;https://maps.google.com/maps/api/js&quot;&gt;&lt;/script&gt;&#13;&#10;&#13;&#10;&lt;/body&gt;
+</code></pre>
+
+    <p class="h5 mt-4">Step 2</p>
+
+    <p>Now we have to add a small piece of javascript code to set a localization and settings for our map.</p>
+
+    <p><strong>Below linked Google Maps library place a snippet with Google Maps settings.</strong></p>
+
+    <pre class="code-toolbar"><code class="language-javascript">
+ &lt;!--Google Maps--&gt;
+ &lt;script src=&quot;https://maps.google.com/maps/api/js&quot;&gt;&lt;/script&gt;   
+
+ &lt;!--Google Maps Settings--&gt;
+ &lt;script&gt;
+        function init_map() {
+            var var_location = new google.maps.LatLng(40.725118, -73.997699);
+
+            var var_mapoptions = {
+                center: var_location,
+                zoom: 14
+            };
+
+            var var_marker = new google.maps.Marker({
+                position: var_location,
+                map: var_map,
+                title: "New York"
+            });
+
+            var var_map = new google.maps.Map(document.getElementById("map-container"),
+                var_mapoptions);
+
+            var_marker.setMap(var_map);
+
+        }
+
+        google.maps.event.addDomListener(window, 'load', init_map);
+ &lt;/script&gt;
+</code></pre>
+
+    <p><strong>To set a localization:</strong></p>
+
+    <p><strong>I.</strong> Go to <a href="https://www.google.pl/maps">Google Maps</a></p>
+
+    <p><strong>II.</strong> Right click on the place where you want to set as a default place for our map</p>
+
+    <p><strong>III.</strong> Select "what's here?"</p>
+
+    <p><strong>IV.</strong> Copy the coordinates at the bottom of the card</p>
+
+    <p><strong>V.</strong> Paste it into our script into the localization variable</p>
+
+    <pre class="code-toolbar"><code class="language-javascript">var var_location = new google.maps.LatLng(40.725118, -73.997699);</code></pre>
+
+    <p>To set an appropriate zoom change the zoom's number:</p>
+
+    <pre class="code-toolbar"><code class="language-javascript">zoom: 14</code></pre>
+
+    <p class="h5 mt-4">Step 3</p>
+
+    <p>Place the map's container inside the first column of our Contact section.</p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;!--First column--&gt;&#13;&#10;&lt;div class=&quot;col-md-8&quot;&gt;&#13;&#10;&#13;&#10;    &lt;!--Map container--&gt;&#13;&#10;    &lt;div id=&quot;map-container&quot; class=&quot;z-depth-1&quot; style=&quot;height: 300px&quot;&gt;&lt;/div&gt;&#13;&#10;&#13;&#10;&lt;/div&gt;&#13;&#10;&lt;!--/First column--&gt;
+            </code></pre>
+
+    <p><code>#map-container</code> displays the map and our map's settings.</p>
+
+    <p>You can manipulate the height of the map by changing the height value: <code>style="height: 300px"</code></p>
+
+    <p>Class<code>.z-depth-1</code> is optional and just gives map's container a nice shadow</p>
+
+    <br>
+
+    <p>Save the file and refresh your browser. You will see our map is ready.</p>
+
+    <br>
+
+    <p>Now we can add a few additional contact information to make our website more trustworthy.</p>
+
+    <p><strong>In the second column of the Contact Section place a following code:</strong></p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;!--Second column--&gt;&#13;&#10;&lt;div class=&quot;col-md-4&quot;&gt;&#13;&#10;&#13;&#10;    &lt;ul&gt;&#13;&#10;        &lt;li&gt;&lt;i class=&quot;fa fa-map-marker&quot;&gt;&lt;/i&gt;&#13;&#10;            &lt;p&gt;New York, NY 10012, USA&lt;/p&gt;&#13;&#10;        &lt;/li&gt;&#13;&#10;&#13;&#10;        &lt;li&gt;&lt;i class=&quot;fa fa-phone&quot;&gt;&lt;/i&gt;&#13;&#10;            &lt;p&gt;+ 01 234 567 89&lt;/p&gt;&#13;&#10;        &lt;/li&gt;&#13;&#10;&#13;&#10;        &lt;li&gt;&lt;i class=&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;&#13;&#10;            &lt;p&gt;contact@mdbootstrap.com&lt;/p&gt;&#13;&#10;        &lt;/li&gt;&#13;&#10;    &lt;/ul&gt;&#13;&#10;&#13;&#10;&lt;/div&gt;&#13;&#10;&lt;!--/Second column--&gt;
+            </code></pre>
+
+    <p>After saving and refreshing the browser you will notice new icons in the Contact Section. But there are few things to
+        fix.</p>
+
+    <p class="h5 mt-4">Step 4</p>
+
+    <p>We don't need bullets in our unordered list (<code>&lt;ul&gt;</code>)</p>
+
+    <p>Add class <code>.list-unstyled</code> to <code>&lt;ul&gt;</code> to remove them.</p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;ul class=&quot;list-unstyled&quot;&gt;
+            </code></pre>
+
+    <p class="h5 mt-4">Step 5</p>
+
+    <p>If you want you change icons you can use one of over 600 available icons.</p>
+
+    <p>Go to <a href="https://mdbootstrap.com/css/icons-list/">ICONS DOCUMENTATION</a> and grab the icon you like. Then replace
+        the code within our project.</p>
+
+    <p class="h5 mt-4">Step 6</p>
+
+    <p>We should to make our icons a little bit bigger. To do it
+        <stron>add class <code>.fa-2x</code> to each icon.</stron>
+    </p>
+
+    <p>To learn more about manipulating icons' size read <a href="https://mdbootstrap.com/css/icons/">ICONS USAGE DOCUMENTATION</a>.</p>
+
+    <p>We'll also use bootstrap spacing utilities to add a proper margins to each icon and each <code>&lt;li&gt;</code> element.
+        </p>
+
+    <p>After all your <strong>Unordered List</strong> should look like this:</p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;ul class=&quot;list-unstyled&quot;&gt;&#13;&#10;    &lt;li class=&quot;mb-4&quot;&gt;&lt;i class=&quot;fa fa-2x mb-3 fa-map-marker&quot;&gt;&lt;/i&gt;&#13;&#10;        &lt;p&gt;New York, NY 10012, USA&lt;/p&gt;&#13;&#10;    &lt;/li&gt;&#13;&#10;&#13;&#10;    &lt;li class=&quot;mb-4&quot;&gt;&lt;i class=&quot;fa fa-2x mb-3 fa-phone&quot;&gt;&lt;/i&gt;&#13;&#10;        &lt;p&gt;+ 01 234 567 89&lt;/p&gt;&#13;&#10;    &lt;/li&gt;&#13;&#10;&#13;&#10;    &lt;li class=&quot;mb-4&quot;&gt;&lt;i class=&quot;fa fa-2x mb-3 fa-envelope&quot;&gt;&lt;/i&gt;&#13;&#10;        &lt;p&gt;contact@mdbootstrap.com&lt;/p&gt;&#13;&#10;    &lt;/li&gt;&#13;&#10;&lt;/ul&gt;
+            </code></pre>
+
+    <p>Save the file and refresh the browser. Our Contact Section is ready.</p>
+
+</section>
+<!--Section: Tutorial content-->

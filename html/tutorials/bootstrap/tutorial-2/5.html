@@ -1,0 +1,89 @@
+<!--Section: Tutorial content-->
+<section>
+
+    <p>In this lesson, we'll add animations to our Landing Page. </p>
+
+    <p class="h5 mt-4">Step 1</p>
+
+    <p>The first thing we have to do is to initialize animations. By "initialize" I mean call the proper function from MDB script.</p>
+
+    <p><strong>Place this code immediate below Google Maps script:</strong></p>
+
+    <pre class="code-toolbar"><code class="language-javascript">
+&lt;!--Animations' initialization--&gt;
+&lt;script&gt;
+new WOW().init();
+&lt;/script&gt;
+</code></pre>
+
+    <p class="h5 mt-4">Step 2</p>
+
+    <p>Add a class <code>.wow</code> to a heading in our intro.</p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;h1 class=&quot;h1-responsive wow&quot;&gt;New York Advertising Agency&lt;/h1&gt;
+</code></pre>
+
+    <p class="h5 mt-4">Step 3</p>
+
+    <p>Pick an animation style from the <a href="https://mdbootstrap.com/css/animations/#animations-classes">list of animations</a>,
+        then add it's CSS class to the HTML element.</p>
+
+    <p><strong>Note:</strong> If you want to see animations in action before using it, check <a href="https://mdbootstrap.com/css/animations/#showcase">Live Presentation of Animations</a>.</p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;h1 class=&quot;h1-responsive wow fadeInDown&quot;&gt;New York Advertising Agency&lt;/h1&gt;
+            </code></pre>
+
+    <p>Save the file and refresh the browser. You will see a nice and smoothly animated heading inside your intro.</p>
+
+    <p class="h5 mt-4">Step 4</p>
+
+    <p>Let's add more animations. Replace the code of our Intro with the following:</p>
+
+    <pre class="code-toolbar"><code class="language-markup">
+&lt;!--Mask--&gt;&#13;&#10;&lt;div class=&quot;view hm-black-strong&quot;&gt;&#13;&#10;    &lt;div class=&quot;full-bg-img flex-center&quot;&gt;&#13;&#10;        &lt;ul&gt;&#13;&#10;            &lt;li&gt;&#13;&#10;                &lt;h1 class=&quot;h1-responsive wow fadeInDown&quot;&gt;New York Advertising Agency&lt;/h1&gt;&#13;&#10;            &lt;/li&gt;&#13;&#10;            &lt;li&gt;&#13;&#10;                &lt;p class=&quot; wow fadeInDown&quot; data-wow-delay=&quot;0.2s&quot;&gt;Digital advertising agency focused on today&apos;s consumers&lt;/p&gt;&#13;&#10;            &lt;/li&gt;&#13;&#10;            &lt;li&gt;&#13;&#10;                &lt;a href=&quot;&quot; class=&quot;btn btn-primary btn-lg wow fadeInLeft&quot; data-wow-delay=&quot;0.4s&quot;&gt;Sign up!&lt;/a&gt;&#13;&#10;                &lt;a href=&quot;&quot; class=&quot;btn btn-default btn-lg wow fadeInRight&quot; data-wow-delay=&quot;0.4s&quot;&gt;Learn more&lt;/a&gt;&#13;&#10;            &lt;/li&gt;&#13;&#10;        &lt;/ul&gt;&#13;&#10;    &lt;/div&gt;&#13;&#10;&lt;/div&gt;&#13;&#10;&lt;!--/.Mask--&gt;
+            </code></pre>
+
+    <p>Notice, that we added a special attribute <code>data-wow-delay="0.2s"</code>. It gives our animation a delay, which let
+        us create more complicated composition.</p>
+
+    <p>You can also use the following attribute:</p>
+
+    <ol>
+        <li>
+            <p><code>data-wow-duration</code>: Animation duration</p>
+        </li>
+        <li>
+            <p><code>data-wow-delay</code>: Delay before the animation starts</p>
+        </li>
+        <li>
+            <p><code>data-wow-offset</code>: Distance to start the animation (related to the browser bottom)</p>
+        </li>
+        <li>
+            <p><code>data-wow-iteration</code>: Number of times the animation is repeated</p>
+        </li>
+    </ol>
+
+    <br>
+
+    <p>We've used 3 different animations: "<strong>fadeInDown</strong>" , "<strong>fadeInLeft</strong>" and "<strong>fadeInRight</strong>".
+    </p>
+
+    <p>If you want we you use any of <a href="https://mdbootstrap.com/css/animations/">74 animations</a> available for MDB.
+        </p>
+
+    <br>
+
+    <p>Save the file and refresh your browser. Now you can see we animated both headings and buttons.</p>
+
+    <p>Now you can play with the animations on your own. Or if you prefer, you can download a final file for this lesson and
+        check how I used them. </p>
+
+    <br>
+
+    <p><strong>Our Landing Page is ready.</strong> The last thing you should do is to add your own texts, data, and images to
+        it. Then upload it to your server and start making money with your own business!</p>
+
+</section>
+<!--Section: Tutorial content-->
