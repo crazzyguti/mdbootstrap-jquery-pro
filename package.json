@@ -25,6 +25,6 @@
     "url": "git+http://git.mdbootstrap.com/mdb/jquery/jq-pro.git"
   },
   "author": "MDBootstrap",
-  "license": "ISC",
+  "license": "license.txt",
   "homepage": "https://mdbootstrap.com"
 }
