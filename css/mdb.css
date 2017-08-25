@@ -1307,7 +1307,6 @@ a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):focus, a:not([href]
 .jumbotron,
 .author-box,
 .navbar-toggler,
-.navbar,
 .badge {
   border-radius: 2px; }
 
