@@ -72,13 +72,19 @@ WOW.prototype._startWow = function () {
   if (this._live) {
     this._checkForChanges();
   }
-  if (window.scrollY === 0 && this._seoFixEnabled) {
+  if (this._scrollY() === 0 && this._seoFixEnabled) {
     this._seoFix();
   }
 
   this._appearInView();
 
   this._scrollHandler();
+
+};
+
+WOW.prototype._scrollY = function () {
+
+  return window.pageYOffset || document.documentElement.scrollTop || body.scrollTop;
 
 };
 
@@ -291,9 +297,9 @@ WOW.prototype._isInView = function (box) {
 
   var triggerOffset = boxTopOffset + ~~offset;
 
-  var bottomPosition = window.innerHeight + window.scrollY;
+  var bottomPosition = window.innerHeight + this._scrollY();
 
-  return triggerOffset <= bottomPosition && (triggerOffset === 0 ? 10 : triggerOffset) >= window.scrollY;
+  return triggerOffset <= bottomPosition && (triggerOffset === 0 ? 10 : triggerOffset) >= this._scrollY();
 
 };
 
@@ -303,7 +309,7 @@ WOW.prototype._getElementOffset = function (box) {
 
   var body = document.body;
 
-  var scrollTop = window.pageYOffset || document.documentElement.scrollTop || body.scrollTop;
+  var scrollTop = this._scrollY();
   var clientTop = document.documentElement.clientTop || body.clientTop || 0;
 
   var top  = clientRect.top +  scrollTop - clientTop;
