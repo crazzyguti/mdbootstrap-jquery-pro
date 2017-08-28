@@ -16,6 +16,31 @@
     <!-- Your custom styles (optional) -->
     <style>
 
+    .light-font .breadcrumb-item + .breadcrumb-item::before {
+        color: #fff; }
+    .light-font .breadcrumb-item.active {
+        color: #cfd8dc; }
+    .dark-font .breadcrumb-item + .breadcrumb-item::before {
+        color: #000; }
+    .dark-font .breadcrumb-item.active {
+        color: #455a64; } 
+    .font-up-big .breadcrumb-item + .breadcrumb-item::before {
+        content: none; }
+    .bc-icons .breadcrumb-item + .breadcrumb-item::before {
+        content: none; }
+    .bc-icons .breadcrumb-item.active {
+        color: #eeeeee; }
+    .bc-icons-2 .breadcrumb-item + .breadcrumb-item::before {
+        content: none; } 
+    .bc-icons-2 .breadcrumb-item.active {
+        color: #455a64; } 
+    .navbar .breadcrumb-item + .breadcrumb-item::before {
+        color: #bdbdbd; }
+    .navbar .breadcrumb-item.active {
+        color: #bdbdbd; } 
+    .navbar.no-content .breadcrumb-item + .breadcrumb-item::before {
+        content: none; }
+
     </style>
 </head>
 
@@ -23,454 +48,24 @@
 
     <div class="container my-5">
 
-
-        <!-- Grid row -->
-        <div class="row">
-      
-            <!-- Grid column -->
-            <div class="col-md-12 col-lg-10 col-xl-8">
-        
-                <!--Accordion wrapper-->
-                <div class="accordion accordion-1" id="accordion" role="tablist">
-                    <div class="card">
-                        <div class="card-header blue lighten-4 z-depth-1" role="tab" id="headingOne">
-                            <h5 class="font-up mb-0 py-1">
-                                <a class="white-text font-bold" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    I am the first title of accordion
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
-                            <div class="card-body">
-                                <div class="row my-4">
-                                    <div class="col-md-8">
-                                        <h2 class="font-bold mb-3 black-text">Hi! I am the first one.</h2>
-                                        <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
-                                        <p class="mb-0">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                                    </div>
-                                    <div class="col-md-4 mt-3 pt-2">
-                                        <div class="view z-depth-1">
-                                            <img src="https://mdbootstrap.com/img/Photos/Others/nature.jpeg" alt="" class="img-fluid">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header blue lighten-4 z-depth-1" role="tab" id="headingTwo">
-                            <h5 class="font-up mb-0 py-1">
-                                <a class="collapsed font-bold white-text" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    I am the second title of accordion
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
-                            <div class="card-body">
-                                <div class="row my-4">
-                                    <div class="col-md-8">
-                                        <h2 class="font-bold mb-3 black-text">Hi! I am the second one.</h2>
-                                        <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
-                                        <p class="mb-0">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                                    </div>
-                                    <div class="col-md-4 mt-3 pt-2">
-                                        <div class="view z-depth-1">
-                                            <img src="https://mdbootstrap.com/img/Photos/Others/nature.jpeg" alt="" class="img-fluid">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header blue lighten-4 z-depth-1" role="tab" id="headingThree">
-                            <h5 class="font-up mb-0 py-1">
-                                <a class="collapsed font-bold white-text" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    I am the third title of accordion
-                                </a> 
-                            </h5>
-                        </div>
-                        <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
-                            <div class="card-body">
-                                <div class="row my-4">
-                                    <div class="col-md-8">
-                                        <h2 class="font-bold mb-3 black-text">Hi! I am the third one.</h2>
-                                        <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
-                                        <p class="mb-0">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                                    </div>
-                                    <div class="col-md-4 mt-3 pt-2">
-                                        <div class="view z-depth-1">
-                                            <img src="https://mdbootstrap.com/img/Photos/Others/nature.jpeg" alt="" class="img-fluid">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--Accordion wrapper-->
-        
-            </div>
-            <!-- Grid column -->
-
-        </div>
-        <!-- Grid row -->
-
-        <hr class="my-5">
-
-        <!-- Grid row -->
-        <div class="row gradient-background d-flex justify-content-center">
-      
-            <!-- Grid column -->
-            <div class="col-md-6 py-5">
-      
-                <!--Accordion wrapper-->
-                <div class="accordion accordion-2" id="accordionEx" role="tablist" aria-multiselectable="true">
-
-                    <!-- Accordion card -->
-                    <div class="card">
-
-                        <!-- Card header -->
-                        <div class="card-header rgba-stylish-strong z-depth-1 mb-1" role="tab" id="heading1">
-                            <a data-toggle="collapse" data-parent="#accordionEx" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                                <h5 class="mb-0 white-text font-up font-thin">
-                                    #1 <i class="fa fa-angle-down rotate-icon"></i>
-                                </h5>
-                            </a>
-                        </div>
-
-                        <!-- Card body -->
-                        <div id="collapse1" class="collapse show" role="tabpanel" aria-labelledby="heading1">
-                            <div class="card-body mb-1 rgba-grey-light white-text">
-                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
-                                3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                                shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-                                sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
-                                accusamus labore sustainable VHS.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Accordion card -->
-
-                    <!-- Accordion card -->
-                    <div class="card">
-
-                        <!-- Card header -->
-                        <div class="card-header rgba-stylish-strong z-depth-1 mb-1" role="tab" id="heading2">
-                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                <h5 class="mb-0 white-text font-up font-thin">
-                                    #2 <i class="fa fa-angle-down rotate-icon"></i>
-                                </h5>
-                            </a>
-                        </div>
-
-                        <!-- Card body -->
-                        <div id="collapse2" class="collapse" role="tabpanel" aria-labelledby="heading2">
-                            <div class="card-body mb-1 rgba-grey-light white-text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Accordion card -->
-                    
-                    <!-- Accordion card -->
-                    <div class="card">
-
-                        <!-- Card header -->
-                        <div class="card-header rgba-stylish-strong z-depth-1 mb-1" role="tab" id="heading3">
-                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                <h5 class="mb-0 white-text font-up font-thin">
-                                    #3 <i class="fa fa-angle-down rotate-icon"></i>
-                                </h5>
-                            </a>
-                        </div>
-
-                        <!-- Card body -->
-                        <div id="collapse3" class="collapse" role="tabpanel" aria-labelledby="heading3">
-                            <div class="card-body mb-1 rgba-grey-light white-text">
-                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Accordion card -->
-                </div>
-                <!--/.Accordion wrapper-->
-      
-            </div>
-            <!-- Grid column -->
-      
-        </div>
-        <!-- Grid row -->
-
-        <hr class="my-5">
-
         <!-- Grid row -->
         <div class="row">
         
             <!-- Grid column -->
-            <div class="col-md-6">
+            <div class="col-md-12">
         
-                <!--Accordion wrapper-->
-                <div class="accordion accordion-3 z-depth-1-half" id="accordionEx1" role="tablist" aria-multiselectable="true">
-
-                    <ul class="list-unstyled d-flex justify-content-center pt-5 red-text">
-                        <li><i class="fa fa-anchor mr-3 fa-2x" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-life-saver mr-3 fa-2x" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-star-o fa-2x" aria-hidden="true"></i></li>
-                    </ul>
-
-                    <h1 class="text-center font-up red-text py-4 px-3">Hello my friends, I am the nicest accordion!</h1>
-
-                    <hr class="mb-0">
-
-                    <!-- Accordion card -->
-                    <div class="card">
-
-                        <!-- Card header -->
-                        <div class="card-header" role="tab" id="heading4">
-                            <a data-toggle="collapse" data-parent="#accordionEx1" href="#collapse4" aria-expanded="true" aria-controls="collapse4">
-                                <h3 class="mb-0 mt-3 red-text">
-                                    How awesome accordion I am? <i class="fa fa-angle-down rotate-icon fa-2x"></i>
-                                </h3>
-                            </a>
-                        </div>
-
-                        <!-- Card body -->
-                        <div id="collapse4" class="collapse show" role="tabpanel" aria-labelledby="heading4">
-                            <div class="card-body pt-0">
-                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
-                                3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                                shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-                                sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
-                                accusamus labore sustainable VHS.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Accordion card -->
-
-                    <!-- Accordion card -->
-                    <div class="card">
-
-                        <!-- Card header -->
-                        <div class="card-header" role="tab" id="heading5">
-                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                                <h3 class="mb-0 mt-3 red-text">
-                                    You're the greatest accordion! <i class="fa fa-angle-down rotate-icon fa-2x"></i>
-                                </h3>
-                            </a>
-                        </div>
-
-                        <!-- Card body -->
-                        <div id="collapse5" class="collapse" role="tabpanel" aria-labelledby="heading5">
-                            <div class="card-body pt-0">
-                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
-                                3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                                shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-                                sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
-                                accusamus labore sustainable VHS.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Accordion card -->
-                    
-                     <!-- Accordion card -->
-                   <div class="card">
-
-                        <!-- Card header -->
-                        <div class="card-header" role="tab" id="heading6">
-                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapse6" aria-expanded="false" aria-controls="collapse6">
-                                <h3 class="mb-0 mt-3 red-text">
-                                    Thank you my dear! <i class="fa fa-angle-down rotate-icon fa-2x"></i>
-                                </h3>
-                            </a>
-                        </div>
-
-                        <!-- Card body -->
-                        <div id="collapse6" class="collapse" role="tabpanel" aria-labelledby="heading6">
-                            <div class="card-body pt-0">
-                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
-                                3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                                shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-                                sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
-                                accusamus labore sustainable VHS.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Accordion card -->
-                </div>
-                <!--/.Accordion wrapper-->
-        
-            </div>
-            <!-- Grid column -->
-        
-        </div>
-        <!-- Grid row -->
-
-        <hr class="my-5">
-
-        <!-- Grid row -->
-        <div class="row">
-        
-            <!-- Grid column -->
-            <div class="col-md-6">
-        
-                <!--Accordion wrapper-->
-                <div class="accordion accordion-4" id="accordionEx2" role="tablist" aria-multiselectable="true">
-
-                    <!-- Accordion card -->
-                    <div class="card">
-
-                        <!-- Card header -->
-                        <div class="card-header z-depth-1 teal lighten-4" role="tab" id="heading10">
-                            <a data-toggle="collapse" data-parent="#accordionEx2" href="#collapse10" aria-expanded="true" aria-controls="collapse10">
-                                <h4 class="mb-0 black-text text-center font-bold font-up">
-                                    First title
-                                </h4>
-                            </a>
-                        </div>
-
-                        <!-- Card body -->
-                        <div id="collapse10" class="collapse show" role="tabpanel" aria-labelledby="heading10">
-                            <div class="card-body rgba-teal-strong white-text">
-                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
-                                3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                                shoreditch et.</p>
-
-                                <p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-                                sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
-                                accusamus labore.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Accordion card -->
-
-                    <!-- Accordion card -->
-                    <div class="card">
-
-                        <!-- Card header -->
-                        <div class="card-header z-depth-1 teal lighten-3" role="tab" id="heading11">
-                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx2" href="#collapse11" aria-expanded="false" aria-controls="collapse11">
-                                <h4 class="mb-0 black-text text-center font-bold font-up">
-                                    Second title
-                                </h4>
-                            </a>
-                        </div>
-
-                        <!-- Card body -->
-                        <div id="collapse11" class="collapse" role="tabpanel" aria-labelledby="heading11">
-                            <div class="card-body rgba-teal-strong white-text">
-                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
-                                3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                                shoreditch et.</p>
-
-                                <p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-                                sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
-                                accusamus labore.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Accordion card -->
-                    
-                    <!-- Accordion card -->
-                    <div class="card">
-
-                        <!-- Card header -->
-                        <div class="card-header z-depth-1 teal lighten-2" role="tab" id="heading12">
-                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx2" href="#collapse12" aria-expanded="false" aria-controls="collapse12">
-                                <h4 class="mb-0 black-text text-center font-bold font-up">
-                                    Third title
-                                </h4>
-                            </a>
-                        </div>
-
-                        <!-- Card body -->
-                        <div id="collapse12" class="collapse" role="tabpanel" aria-labelledby="heading12">
-                            <div class="card-body rgba-teal-strong white-text">
-                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
-                                3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                                shoreditch et.</p>
-
-                                <p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-                                sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
-                                accusamus labore.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Accordion card -->
-
-                    <!-- Accordion card -->
-                    <div class="card">
-
-                        <!-- Card header -->
-                        <div class="card-header z-depth-1 teal lighten-1" role="tab" id="heading13">
-                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx2" href="#collapse13" aria-expanded="true" aria-controls="collapse13">
-                                <h4 class="mb-0 black-text text-center font-bold font-up">
-                                    Fourth title
-                                </h4>
-                            </a>
-                        </div>
-
-                        <!-- Card body -->
-                        <div id="collapse13" class="collapse" role="tabpanel" aria-labelledby="heading13">
-                            <div class="card-body rgba-teal-strong white-text">
-                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
-                                3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                                shoreditch et.</p>
-
-                                <p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-                                sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
-                                accusamus labore.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Accordion card -->
-
-                    <!-- Accordion card -->
-                    <div class="card">
-
-                        <!-- Card header -->
-                        <div class="card-header z-depth-1 teal" role="tab" id="heading14">
-                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx2" href="#collapse14" aria-expanded="false" aria-controls="collapse14">
-                                <h4 class="mb-0 black-text text-center font-bold font-up">
-                                    Fifth title
-                                </h4>
-                            </a>
-                        </div>
-
-                        <!-- Card body -->
-                        <div id="collapse14" class="collapse" role="tabpanel" aria-labelledby="heading14">
-                            <div class="card-body rgba-teal-strong white-text">
-                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
-                                3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                                shoreditch et.</p>
-
-                                <p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-                                sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
-                                accusamus labore.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Accordion card -->
-                </div>
-                <!--/.Accordion wrapper-->
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active">Home</li>
+                </ol>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">Library</li>
+                </ol>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Library</a></li>
+                    <li class="breadcrumb-item active">Data</li>
+                </ol>
         
             </div>
             <!-- Grid column -->
@@ -486,100 +81,319 @@
             <!-- Grid column -->
             <div class="col-md-12">
         
-                <!-- Card -->
-                <div class="card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);">
+                <nav class="breadcrumb">
+                    <a class="breadcrumb-item" href="#">Home</a>
+                    <a class="breadcrumb-item" href="#">Library</a>
+                    <a class="breadcrumb-item" href="#">Data</a>
+                    <span class="breadcrumb-item active">Bootstrap</span>
+                </nav>
+        
+            </div>
+            <!-- Grid column -->
+        
+        </div>
+        <!-- Grid row -->
 
-                    <!-- Content -->
-                    <div class="rgba-black-strong py-5 px-4">
-                        <div class="row d-flex justify-content-center ">
-                            <div class="col-md-10 col-lg-8">
-                                
-                                <!--Accordion wrapper-->
-                                <div class="accordion accordion-5" id="accordionEx5" role="tablist" aria-multiselectable="true">
+        <hr class="my-5">
 
-                                    <!-- Accordion card -->
-                                    <div class="card mb-4">
+        <!-- Grid row -->
+        <div class="row">
+        
+            <!-- Grid column -->
+            <div class="col-md-12 light-font">
+        
+                <ol class="breadcrumb default-color">
+                    <li class="breadcrumb-item active">Home</li>
+                </ol>
+                <ol class="breadcrumb primary-color">
+                    <li class="breadcrumb-item"><a class="white-text" href="#">Home</a></li>
+                    <li class="breadcrumb-item active">Library</li>
+                </ol>
+                <ol class="breadcrumb secondary-color">
+                    <li class="breadcrumb-item"><a class="white-text" href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a class="white-text" href="#">Library</a></li>
+                    <li class="breadcrumb-item active">Data</li>
+                </ol>
+        
+            </div>
+            <!-- Grid column -->
+        
+        </div>
+        <!-- Grid row -->
 
-                                        <!-- Card header -->
-                                        <div class="card-header p-0 z-depth-1" role="tab" id="heading30">
-                                            <a data-toggle="collapse" data-parent="#accordionEx5" href="#collapse30" aria-expanded="true" aria-controls="collapse30">
-                                                <i class="fa fa-cloud fa-2x p-3 mr-4 float-left black-text" aria-hidden="true"></i>
-                                                <h4 class="font-up white-text mb-0 py-3 mt-1">
-                                                    Item #1
-                                                </h4>
-                                            </a>
-                                        </div>
+        <hr class="my-5">
 
-                                        <!-- Card body -->
-                                        <div id="collapse30" class="collapse show" role="tabpanel" aria-labelledby="heading30">
-                                            <div class="card-body rgba-black-light white-text z-depth-1">
-                                                <p class="p-md-4 mb-0">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                                                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
-                                                3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                                                shoreditch et.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Accordion card -->
+        <!-- Grid row -->
+        <div class="row">
+        
+            <!-- Grid column -->
+            <div class="col-md-12 dark-font">
+        
+                <ol class="breadcrumb cyan lighten-4">
+                    <li class="breadcrumb-item active">Home</li>
+                </ol>
+                <ol class="breadcrumb pink lighten-4">
+                    <li class="breadcrumb-item"><a class="black-text" href="#">Home</a></li>
+                    <li class="breadcrumb-item active">Library</li>
+                </ol>
+                <ol class="breadcrumb purple lighten-4">
+                    <li class="breadcrumb-item"><a class="black-text" href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a class="black-text" href="#">Library</a></li>
+                    <li class="breadcrumb-item active">Data</li>
+                </ol>
+        
+            </div>
+            <!-- Grid column -->
+        
+        </div>
+        <!-- Grid row -->
 
-                                    <!-- Accordion card -->
-                                    <div class="card mb-4">
+        <hr class="my-5">
 
-                                        <!-- Card header -->
-                                        <div class="card-header p-0 z-depth-1" role="tab" id="heading31">
-                                            <a data-toggle="collapse" data-parent="#accordionEx5" href="#collapse31" aria-expanded="true" aria-controls="collapse31">
-                                                <i class="fa fa-commenting-o fa-2x p-3 mr-4 float-left black-text" aria-hidden="true"></i>
-                                                <h4 class="font-up white-text mb-0 py-3 mt-1">
-                                                    Item #2
-                                                </h4>
-                                            </a>
-                                        </div>
+        <!-- Grid row -->
+        <div class="row">
+        
+            <!-- Grid column -->
+            <div class="col-md-12 font-up">
+        
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active">Home</li>
+                </ol>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="" href="#">Home</a></li>
+                    <li class="breadcrumb-item active">Library</li>
+                </ol>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="" href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a class="" href="#">Library</a></li>
+                    <li class="breadcrumb-item active">Data</li>
+                </ol>
+        
+            </div>
+            <!-- Grid column -->
+        
+        </div>
+        <!-- Grid row -->
 
-                                        <!-- Card body -->
-                                        <div id="collapse31" class="collapse" role="tabpanel" aria-labelledby="heading31">
-                                            <div class="card-body rgba-black-light white-text z-depth-1">
-                                                <p class="p-md-4 mb-0">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                                                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
-                                                3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                                                shoreditch et.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Accordion card -->
-                                    
-                                    <!-- Accordion card -->
-                                    <div class="card mb-4">
+        <hr class="my-5">
 
-                                        <!-- Card header -->
-                                        <div class="card-header p-0 z-depth-1" role="tab" id="heading32">
-                                            <a data-toggle="collapse" data-parent="#accordionEx5" href="#collapse32" aria-expanded="true" aria-controls="collapse32">
-                                                <i class="fa fa-cogs fa-2x p-3 mr-4 float-left black-text" aria-hidden="true"></i>
-                                                <h4 class="font-up white-text mb-0 py-3 mt-1">
-                                                    Item #3
-                                                </h4>
-                                            </a>
-                                        </div>
+        <!-- Grid row -->
+        <div class="row">
+        
+            <!-- Grid column -->
+            <div class="col-md-12 font-up-big font-up">
+        
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active"><h3 class="mr-3 mb-0">Home</h3></li>
+                </ol>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="" href="#"><h3 class="mr-3 mb-0">Home</h3></a></li>
+                    <li class="breadcrumb-item active"><h3 class="mr-3 mb-0">Library</h3></li>
+                </ol>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="" href="#"><h3 class="mr-3 mb-0">Home</h3></a></li>
+                    <li class="breadcrumb-item"><a class="" href="#"><h3 class="mr-3 mb-0">Library</h3></a></li>
+                    <li class="breadcrumb-item active"><h3 class="mr-3 mb-0">Data</h3></li>
+                </ol>
+        
+            </div>
+            <!-- Grid column -->
+        
+        </div>
+        <!-- Grid row -->
 
-                                        <!-- Card body -->
-                                        <div id="collapse32" class="collapse" role="tabpanel" aria-labelledby="heading32">
-                                            <div class="card-body rgba-black-light white-text z-depth-1">
-                                                <p class="p-md-4 mb-0">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                                                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
-                                                3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                                                shoreditch et.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Accordion card -->
-                                </div>
-                                <!--/.Accordion wrapper-->
+        <hr class="my-5">
 
-                            </div>
-                        </div>
+        <!-- Grid row -->
+        <div class="row">
+        
+            <!-- Grid column -->
+            <div class="col-md-12 bc-icons">
+        
+                <ol class="breadcrumb pink lighten-4">
+                    <li class="breadcrumb-item active"><i class="fa fa-star-o mr-2 white-text" aria-hidden="true"></i>Home</li>
+                </ol>
+                <ol class="breadcrumb pink lighten-3">
+                    <li class="breadcrumb-item"><i class="fa fa-star-o mr-2 white-text" aria-hidden="true"></i><a class="white-text" href="#">Home</a></li>
+                    <li class="breadcrumb-item active"><i class="fa fa-star-o mx-2 white-text" aria-hidden="true"></i>Library</li>
+                </ol>
+                <ol class="breadcrumb pink lighten-2">
+                    <li class="breadcrumb-item"><i class="fa fa-star-o mr-2 white-text" aria-hidden="true"></i><a class="white-text" href="#">Home</a></li>
+                    <li class="breadcrumb-item"><i class="fa fa-star-o mx-2 white-text" aria-hidden="true"></i><a class="white-text" href="#">Library</a></li>
+                    <li class="breadcrumb-item active"><i class="fa fa-star-o mx-2 white-text" aria-hidden="true"></i>Data</li>
+                </ol>
+        
+            </div>
+            <!-- Grid column -->
+        
+        </div>
+        <!-- Grid row -->
+
+        <hr class="my-5">
+
+        <!-- Grid row -->
+        <div class="row">
+        
+            <!-- Grid column -->
+            <div class="col-md-12 bc-icons-2">
+        
+                <ol class="breadcrumb indigo lighten-4">
+                    <li class="breadcrumb-item"><a class="black-text" href="#">Home</a><i class="fa fa-caret-right mx-2" aria-hidden="true"></i></li>
+                    <li class="breadcrumb-item"><a class="black-text" href="#">Library</a><i class="fa fa-caret-right mx-2" aria-hidden="true"></i></li>
+                    <li class="breadcrumb-item active">Data</li>
+                </ol>
+                <ol class="breadcrumb blue-grey lighten-4">
+                    <li class="breadcrumb-item"><a class="black-text" href="#">Home</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
+                    <li class="breadcrumb-item"><a class="black-text" href="#">Library</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
+                    <li class="breadcrumb-item active">Data</li>
+                </ol>
+                <ol class="breadcrumb purple lighten-4">
+                    <li class="breadcrumb-item"><a class="black-text" href="#">Home</a><i class="fa fa-angle-right mx-2" aria-hidden="true"></i></li>
+                    <li class="breadcrumb-item"><a class="black-text" href="#">Library</a><i class="fa fa-angle-right mx-2" aria-hidden="true"></i></li>
+                    <li class="breadcrumb-item active">Data</li>
+                </ol>
+                <ol class="breadcrumb red lighten-4">
+                    <li class="breadcrumb-item"><a class="black-text" href="#">Home</a><i class="fa fa-angle-double-left mx-2" aria-hidden="true"></i></li>
+                    <li class="breadcrumb-item"><a class="black-text" href="#">Library</a><i class="fa fa-angle-double-left mx-2" aria-hidden="true"></i></li>
+                    <li class="breadcrumb-item active">Data</li>
+                </ol>
+                <ol class="breadcrumb cyan lighten-4">
+                    <li class="breadcrumb-item"><a class="black-text" href="#">Home</a><i class="fa fa-angle-left mx-2" aria-hidden="true"></i></li>
+                    <li class="breadcrumb-item"><a class="black-text" href="#">Library</a><i class="fa fa-angle-left mx-2" aria-hidden="true"></i></li>
+                    <li class="breadcrumb-item active">Data</li>
+                </ol>
+                <ol class="breadcrumb amber lighten-4">
+                    <li class="breadcrumb-item"><a class="black-text" href="#">Home</a><i class="fa fa-angle-left mx-2" aria-hidden="true"></i></li>
+                    <li class="breadcrumb-item"><a class="black-text" href="#">Library</a><i class="fa fa-angle-left mx-2" aria-hidden="true"></i></li>
+                    <li class="breadcrumb-item active">Data</li>
+                </ol>
+        
+            </div>
+            <!-- Grid column -->
+        
+        </div>
+        <!-- Grid row -->
+
+        <hr class="my-5">
+
+        <!-- Grid row -->
+        <div class="row">
+        
+            <!-- Grid column -->
+            <div class="col-md-12">
+        
+                <nav class="navbar navbar-expand-md navbar-dark indigo mb-5">
+                    <!-- SideNav slide-out button -->
+                    <div class="float-left">
+                        <a class="white-text" href="#!" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a>
                     </div>
-                    <!-- Content -->
+                    <!-- Breadcrumb-->
+                    <div class="mr-auto">
+                        <ol class="breadcrumb clearfix d-none d-md-inline-block">
+                            <li class="breadcrumb-item"><a class="white-text" href="#!">Home</a></li>
+                            <li class="breadcrumb-item active">Library</li>
+                        </ol>
+                    </div>
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                    </form>
+                </nav>
+        
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-12">
+        
+                <nav class="navbar navbar-expand-md navbar-dark primary-color mb-5 no-content">
+                    <!-- SideNav slide-out button -->
+                    <div class="float-left">
+                        <a class="white-text" href="#!" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a>
+                    </div>
+                    <!-- Breadcrumb-->
+                    <div class="mr-auto">
+                        <ol class="breadcrumb clearfix d-none d-md-inline-block">
+                            <li class="breadcrumb-item"><a class="white-text" href="#!">Javascript</a><i class="fa fa-angle-double-right mx-2 white-text" aria-hidden="true"></i></li>
+                            <li class="breadcrumb-item active">Date Picker</li>
+                        </ol>
+                    </div>
+                    <ul class="navbar-nav ml-auto nav-flex-icons">
+                        <li class="nav-item">
+                            <a class="nav-link"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"><i class="fa fa-google-plus"></i></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> 
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-unique" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item waves-effect waves-light" href="#">Action</a>
+                                <a class="dropdown-item waves-effect waves-light" href="#">Another action</a>
+                                <a class="dropdown-item waves-effect waves-light" href="#">Something else here</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+        
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-12">
+        
+                <nav class="navbar navbar-expand-md navbar-dark pink darken-4 mb-5 no-content">
+                    <!-- SideNav slide-out button -->
+                    <div class="float-left">
+                        <a class="amber-text" href="#!" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a>
+                    </div>
+                    <!-- Breadcrumb-->
+                    <div class="mr-auto">
+                        <ol class="breadcrumb clearfix d-none d-md-inline-block">
+                            <li class="breadcrumb-item"><a class="white-text" href="#!">Components</a><i class="fa fa-hand-o-right mx-3 amber-text" aria-hidden="true"></i></li>
+                            <li class="breadcrumb-item active">Buttons</li>
+                        </ol>
+                    </div>
+                    <ul class="navbar-nav ml-auto nav-flex-icons">
+                        <li class="nav-item">
+                            <a class="nav-link">1 <i class="fa fa-envelope amber-text"></i></a>
+                        </li>
+                    </ul>
+                </nav>
+        
+            </div>
+            <!-- Grid column -->
+        
+        </div>
+        <!-- Grid row -->
+
+        <hr class="my-5">
+
+        <!-- Grid row -->
+        <div class="row">
+        
+            <!-- Grid column -->
+            <div class="col-md-12">
+        
+                <!-- Grid column -->
+                <div class="col-md-12">
+                
+                    <nav class="navbar navbar-expand-md navbar-dark mdb-color mb-5">
+                        <!-- Just an image -->
+                        <a class="navbar-brand" href="#!">
+                            <img src="https://mdbootstrap.com/img/logo/mdb-transparent.png" height="30" alt="">
+                        </a>
+                        <!-- Breadcrumb-->
+                        <div class="mr-auto">
+                            <ol class="breadcrumb d-inline-block pl-0 pt-2">
+                                <li class="breadcrumb-item"><a class="white-text" href="#!">Layout</a></li>
+                                <li class="breadcrumb-item active">Grid Usage</li>
+                            </ol>
+                        </div>
+                    </nav>
+                
                 </div>
-                <!-- Card -->
+                <!-- Grid column -->
         
             </div>
             <!-- Grid column -->
