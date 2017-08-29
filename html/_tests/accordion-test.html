@@ -13,6 +13,16 @@
   <!-- Material Design Bootstrap -->
   <link rel="stylesheet" href="../../css/mdb.css">
   <link rel="stylesheet" href="../../css/draft/accordion-extended.css">
+  <style type="text/css">
+      .accordion-blocks .card {
+          margin-bottom: 1.2rem;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        }
+
+        .accordion-blocks .card .card-body {
+          border-top: 1px solid #eee;
+        }
+  </style>
 </head>
 
 <body>
@@ -28,10 +38,10 @@
       <div class="row">
       
         <!-- Grid column -->
-        <div class="col-md-12 col-lg-10 col-xl-8">
+        <div class="col-md-12 col-lg-10 col-xl-10">
     
           <!--Accordion wrapper-->
-          <div class="accordion accordion-1" id="accordion" role="tablist">
+          <!-- <div class="accordion accordion-1" id="accordion" role="tablist">
               <div class="card">
                   <div class="card-header blue lighten-4 z-depth-1" role="tab" id="headingOne">
                       <h5 class="font-up mb-0 py-1">
@@ -116,8 +126,677 @@
                       </div>
                   </div>
               </div>
-          </div>
+          </div> -->
           <!--Accordion wrapper-->
+
+            <!--Accordion wrapper-->
+            <div class="accordion accordion-blocks" id="accordionEx" role="tablist" aria-multiselectable="true">
+
+                <!-- Accordion card -->
+                <div class="card">
+
+                    <!-- Card header -->
+                    <div class="card-header" role="tab" id="headingUnfiled">
+
+                        <!--Options-->
+                        <div class="dropdown pull-left">
+                            <button class="btn btn-info btn-sm m-0 mr-3 p-2 dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false"><i class="fa fa-pencil"></i>
+                                                                    </button>
+                            <div class="dropdown-menu dropdown-info">
+                                <a class="dropdown-item" href="#">Add new condition</a>
+                                <a class="dropdown-item" href="#">Rename folder</a>
+                                <a class="dropdown-item" href="#">Delete folder</a>
+                            </div>
+                        </div>
+
+                        <!-- Heading -->
+                        <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseUnfiled" aria-expanded="true" aria-controls="collapseUnfiled">
+                            <h5 class="mt-1 mb-0">
+                                <span>Unfiled items</span>
+                                <i class="fa fa-angle-down rotate-icon"></i>
+                            </h5>
+                        </a>
+
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapseUnfiled" class="collapse" role="tabpanel" aria-labelledby="headingUnfiled">
+                        <div class="card-body">
+
+                            <!--Top Table UI-->
+                            <div class="table-ui p-2 mb-3 mx-3 mb-4">
+
+                                <!--Grid row-->
+                                <div class="row">
+
+                                    <!--Grid column-->
+                                    <div class="col-xl-4 col-lg-6 col-md-12">
+
+                                        <!--Name-->
+                                        <select class="mdb-select colorful-select dropdown-info mx-2">
+                                            <option value="" disabled selected>Bulk actions</option>
+                                            <option value="1">Delete</option>
+                                            <option value="2">Change folder</option>
+                                        </select>
+
+                                    </div>
+                                    <!--Grid column-->
+
+                                    <!--Grid column-->
+                                    <div class="col-xl-4 col-lg-6 col-md-6">
+
+                                        <!--Blue select-->
+                                        <select class="mdb-select colorful-select dropdown-info mx-2">
+                                            <option value="" disabled>Show only</option>
+                                            <option value="1" selected>All <span> (2000)</span></option>
+                                            <option value="2">Clicks <span> (200)</span></option>
+                                            <option value="3">Page <span> (1800)</span></option>
+                                            <option value="4">Scroll <span> (200)</span></option>
+                                            <option value="5">Forms <span> (50)</span></option>
+                                            <option value="6">Time <span> (50)</span></option>
+                                            <option value="7">UTM <span> (50)</span></option>
+                                        </select>
+                                        <!--/Blue select-->
+
+                                    </div>
+                                    <!--Grid column-->
+
+                                    <!--Grid column-->
+                                    <div class="col-xl-4 col-lg-6 col-md-6">
+
+                                        <!--Blue select-->
+                                        <select class="mdb-select colorful-select dropdown-info mx-2">
+                                            <option value="" disabled selected>Filter</option>
+                                            <option value="1">All <span> (100)</span></option>
+                                            <option value="1">Active <span> (2000)</span></option>
+                                            <option value="2">Inactive <span> (1000)</span></option>
+                                        </select>
+                                        <!--/Blue select-->
+
+                                    </div>
+                                    <!--Grid column-->
+
+                                </div>
+                                <!--Grid row-->
+
+                            </div>
+                            <!--Top Table UI-->
+
+                            <!-- Table responsive wrapper -->
+                            <div class="table-responsive mx-3">
+                                <!--Table-->
+                                <table class="table table-hover mb-0">
+
+                                    <!--Table head-->
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <input type="checkbox" id="checkbox">
+                                                <label for="checkbox" class="mr-2 label-table"></label>
+                                            </th>
+                                            <th class="th-lg"><a>Name <i class="fa fa-sort ml-1"></i></a></th>
+                                            <th class="th-lg"><a>Condition<i class="fa fa-sort ml-1"></i></a></th>
+                                            <th class="th-lg"><a>Last edited<i class="fa fa-sort ml-1"></i></a></th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <!--Table head-->
+
+                                    <!--Table body-->
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">
+                                                <input type="checkbox" id="checkbox1">
+                                                <label for="checkbox1" class="label-table"></label>
+                                            </th>
+                                            <td>Test subscription</td>
+                                            <td><code>Scroll %</code> equals or greater than <strong>80</strong></td>
+                                            <td>12.06.2017</td>
+                                            <td>
+                                                <a><i class="fa fa-info mx-1" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></i></a>
+                                                <a><i class="fa fa-pencil-square mx-1"></i></a>
+                                                <a><i class="fa fa-times mx-1"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                <input type="checkbox" id="checkbox2">
+                                                <label for="checkbox2" class="label-table"></label>
+                                            </th>
+                                            <td>Product Hunt Visitor</td>
+                                            <td><code>Scroll %</code> equals or greater than <strong>80</strong></td>
+                                            <td>13.06.2017</td>
+                                            <td>
+                                                <a><i class="fa fa-info mx-1" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></i></a>
+                                                <a><i class="fa fa-pencil-square mx-1"></i></a>
+                                                <a><i class="fa fa-times mx-1"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                <input type="checkbox" id="checkbox3">
+                                                <label for="checkbox3" class="label-table"></label>
+                                            </th>
+                                            <td>Test subscription</td>
+                                            <td><code>Scroll %</code> equals or greater than <strong>80</strong></td>
+                                            <td>12.06.2017</td>
+                                            <td>
+                                                <a><i class="fa fa-info mx-1" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></i></a>
+                                                <a><i class="fa fa-pencil-square mx-1"></i></a>
+                                                <a><i class="fa fa-times mx-1"></i></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <!--Table body-->
+                                </table>
+                                <!--Table-->
+                            </div>
+                            <!-- Table responsive wrapper -->
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Accordion card -->
+
+                <!-- Accordion card -->
+                <div class="card">
+
+                    <!-- Card header -->
+                    <div class="card-header" role="tab" id="headingOne">
+
+                        <!--Options-->
+                        <div class="dropdown pull-left">
+                            <button class="btn btn-info btn-sm m-0 mr-3 p-2 dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false"><i class="fa fa-pencil"></i>
+                                                                    </button>
+                            <div class="dropdown-menu dropdown-info">
+                                <a class="dropdown-item" href="#">Add new condition</a>
+                                <a class="dropdown-item" href="#">Rename folder</a>
+                                <a class="dropdown-item" href="#">Delete folder</a>
+                            </div>
+                        </div>
+
+                        <!-- Heading -->
+                        <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <h5 class="mt-1 mb-0">
+                                <span>Folder 1</span>
+                                <i class="fa fa-angle-down rotate-icon"></i>
+                            </h5>
+                        </a>
+
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="card-body">
+
+                            <!--Top Table UI-->
+                            <div class="table-ui p-2 mb-3 mx-3 mb-4">
+
+                                <!--Grid row-->
+                                <div class="row">
+
+                                    <!--Grid column-->
+                                    <div class="col-xl-4 col-lg-6 col-md-12">
+
+                                        <!--Name-->
+                                        <select class="mdb-select colorful-select dropdown-info mx-2">
+                                            <option value="" disabled selected>Bulk actions</option>
+                                            <option value="1">Delete</option>
+                                            <option value="2">Change folder</option>
+                                        </select>
+
+                                    </div>
+                                    <!--Grid column-->
+
+                                    <!--Grid column-->
+                                    <div class="col-xl-4 col-lg-6 col-md-6">
+
+                                        <!--Blue select-->
+                                        <select class="mdb-select colorful-select dropdown-info mx-2">
+                                            <option value="" disabled>Show only</option>
+                                            <option value="1" selected>All <span> (2000)</span></option>
+                                            <option value="2">Clicks <span> (200)</span></option>
+                                            <option value="3">Page <span> (1800)</span></option>
+                                            <option value="4">Scroll <span> (200)</span></option>
+                                            <option value="5">Forms <span> (50)</span></option>
+                                            <option value="6">Time <span> (50)</span></option>
+                                            <option value="7">UTM <span> (50)</span></option>
+                                        </select>
+                                        <!--/Blue select-->
+
+                                    </div>
+                                    <!--Grid column-->
+
+                                    <!--Grid column-->
+                                    <div class="col-xl-4 col-lg-6 col-md-6">
+
+                                        <!--Blue select-->
+                                        <select class="mdb-select colorful-select dropdown-info mx-2">
+                                            <option value="" disabled selected>Filter</option>
+                                            <option value="1">All <span> (100)</span></option>
+                                            <option value="1">Active <span> (2000)</span></option>
+                                            <option value="2">Inactive <span> (1000)</span></option>
+                                        </select>
+                                        <!--/Blue select-->
+
+                                    </div>
+                                    <!--Grid column-->
+
+                                </div>
+                                <!--Grid row-->
+
+                            </div>
+                            <!--Top Table UI-->
+
+                            <!-- Table responsive wrapper -->
+                            <div class="table-responsive mx-3">
+                                <!--Table-->
+                                <table class="table table-hover mb-0">
+
+                                    <!--Table head-->
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <input type="checkbox" id="checkbox">
+                                                <label for="checkbox" class="mr-2 label-table"></label>
+                                            </th>
+                                            <th class="th-lg"><a>Name <i class="fa fa-sort ml-1"></i></a></th>
+                                            <th class="th-lg"><a>Condition<i class="fa fa-sort ml-1"></i></a></th>
+                                            <th class="th-lg"><a>Last edited<i class="fa fa-sort ml-1"></i></a></th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <!--Table head-->
+
+                                    <!--Table body-->
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">
+                                                <input type="checkbox" id="checkbox1">
+                                                <label for="checkbox1" class="label-table"></label>
+                                            </th>
+                                            <td>Test subscription</td>
+                                            <td><code>Scroll %</code> equals or greater than <strong>80</strong></td>
+                                            <td>12.06.2017</td>
+                                            <td>
+                                                <a><i class="fa fa-info mx-1" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></i></a>
+                                                <a><i class="fa fa-pencil-square mx-1"></i></a>
+                                                <a><i class="fa fa-times mx-1"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                <input type="checkbox" id="checkbox2">
+                                                <label for="checkbox2" class="label-table"></label>
+                                            </th>
+                                            <td>Product Hunt Visitor</td>
+                                            <td><code>Scroll %</code> equals or greater than <strong>80</strong></td>
+                                            <td>13.06.2017</td>
+                                            <td>
+                                                <a><i class="fa fa-info mx-1" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></i></a>
+                                                <a><i class="fa fa-pencil-square mx-1"></i></a>
+                                                <a><i class="fa fa-times mx-1"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                <input type="checkbox" id="checkbox3">
+                                                <label for="checkbox3" class="label-table"></label>
+                                            </th>
+                                            <td>Test subscription</td>
+                                            <td><code>Scroll %</code> equals or greater than <strong>80</strong></td>
+                                            <td>12.06.2017</td>
+                                            <td>
+                                                <a><i class="fa fa-info mx-1" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></i></a>
+                                                <a><i class="fa fa-pencil-square mx-1"></i></a>
+                                                <a><i class="fa fa-times mx-1"></i></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <!--Table body-->
+                                </table>
+                                <!--Table-->
+                            </div>
+                            <!-- Table responsive wrapper -->
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Accordion card -->
+
+                <!-- Accordion card -->
+                <div class="card">
+
+                    <!-- Card header -->
+                    <div class="card-header" role="tab" id="headingTwo">
+                        <!--Options-->
+                        <div class="dropdown pull-left">
+                            <button class="btn btn-info btn-sm m-0 mr-3 p-2 dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false"><i class="fa fa-pencil"></i>
+                                                                </button>
+                            <div class="dropdown-menu dropdown-info">
+                                <a class="dropdown-item" href="#">Add new condition</a>
+                                <a class="dropdown-item" href="#">Rename folder</a>
+                                <a class="dropdown-item" href="#">Delete folder</a>
+                            </div>
+                        </div>
+
+                        <!-- Heading -->
+                        <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                            <h5 class="mt-1 mb-0">
+                                <span>Folder 2</span>
+                                <i class="fa fa-angle-down rotate-icon"></i>
+                            </h5>
+                        </a>
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="card-body">
+
+                            <!--Top Table UI-->
+                            <div class="table-ui p-2 mb-3 mx-3 mb-4">
+
+                                <!--Grid row-->
+                                <div class="row">
+
+                                    <!--Grid column-->
+                                    <div class="col-xl-4 col-lg-6 col-md-12">
+
+                                        <!--Name-->
+                                        <select class="mdb-select colorful-select dropdown-info mx-2">
+                                                                                                                <option value="" disabled selected>Bulk actions</option>
+                                                                                                                <option value="1">Delete</option>
+                                                                                                                <option value="2">Change folder</option>
+                                                                                                            </select>
+
+                                    </div>
+                                    <!--Grid column-->
+
+                                    <!--Grid column-->
+                                    <div class="col-xl-4 col-lg-6 col-md-6">
+
+                                        <!--Blue select-->
+                                        <select class="mdb-select colorful-select dropdown-info mx-2">
+                                                                                                                <option value="" disabled>Show only</option>
+                                                                                                                <option value="1" selected>All <span> (2000)</span></option>
+                                                                                                                <option value="2">Clicks <span> (200)</span></option>
+                                                                                                                <option value="3">Page <span> (1800)</span></option>
+                                                                                                                <option value="4">Scroll <span> (200)</span></option>
+                                                                                                                <option value="5">Forms <span> (50)</span></option>
+                                                                                                                <option value="6">Time <span> (50)</span></option>
+                                                                                                                <option value="7">UTM <span> (50)</span></option>
+                                                                                                            </select>
+                                        <!--/Blue select-->
+
+                                    </div>
+                                    <!--Grid column-->
+
+                                    <!--Grid column-->
+                                    <div class="col-xl-4 col-lg-6 col-md-6">
+
+                                        <!--Blue select-->
+                                        <select class="mdb-select colorful-select dropdown-info mx-2">
+                                                                                                                <option value="" disabled selected>Filter</option>
+                                                                                                                <option value="1">All <span> (100)</span></option>
+                                                                                                                <option value="1">Active <span> (2000)</span></option>
+                                                                                                                <option value="2">Inactive <span> (1000)</span></option>
+                                                                                                            </select>
+                                        <!--/Blue select-->
+
+                                    </div>
+                                    <!--Grid column-->
+
+                                </div>
+                                <!--Grid row-->
+
+                            </div>
+                            <!--Top Table UI-->
+
+                            <!-- Table responsive wrapper -->
+                            <div class="table-responsive mx-3">
+                                <!--Table-->
+                                <table class="table table-hover mb-0">
+
+                                    <!--Table head-->
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <input type="checkbox" id="checkbox">
+                                                <label for="checkbox" class="mr-2 label-table"></label>
+                                            </th>
+                                            <th class="th-lg"><a>Name <i class="fa fa-sort ml-1"></i></a></th>
+                                            <th class="th-lg"><a>Condition<i class="fa fa-sort ml-1"></i></a></th>
+                                            <th class="th-lg"><a>Last edited<i class="fa fa-sort ml-1"></i></a></th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <!--Table head-->
+
+                                    <!--Table body-->
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">
+                                                <input type="checkbox" id="checkbox1">
+                                                <label for="checkbox1" class="label-table"></label>
+                                            </th>
+                                            <td>Test subscription</td>
+                                            <td><code>Scroll %</code> equals or greater than <strong>80</strong></td>
+                                            <td>12.06.2017</td>
+                                            <td>
+                                                <a><i class="fa fa-info mx-1" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></i></a>
+                                                <a><i class="fa fa-pencil-square mx-1"></i></a>
+                                                <a><i class="fa fa-times mx-1"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                <input type="checkbox" id="checkbox2">
+                                                <label for="checkbox2" class="label-table"></label>
+                                            </th>
+                                            <td>Product Hunt Visitor</td>
+                                            <td><code>Scroll %</code> equals or greater than <strong>80</strong></td>
+                                            <td>13.06.2017</td>
+                                            <td>
+                                                <a><i class="fa fa-info mx-1" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></i></a>
+                                                <a><i class="fa fa-pencil-square mx-1"></i></a>
+                                                <a><i class="fa fa-times mx-1"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                <input type="checkbox" id="checkbox3">
+                                                <label for="checkbox3" class="label-table"></label>
+                                            </th>
+                                            <td>Test subscription</td>
+                                            <td><code>Scroll %</code> equals or greater than <strong>80</strong></td>
+                                            <td>12.06.2017</td>
+                                            <td>
+                                                <a><i class="fa fa-info mx-1" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></i></a>
+                                                <a><i class="fa fa-pencil-square mx-1"></i></a>
+                                                <a><i class="fa fa-times mx-1"></i></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <!--Table body-->
+                                </table>
+                                <!--Table-->
+                            </div>
+                            <!-- Table responsive wrapper -->
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Accordion card -->
+
+                <!-- Accordion card -->
+                <div class="card">
+
+                    <!-- Card header -->
+                    <div class="card-header" role="tab" id="headingThree">
+                        <!--Options-->
+                        <div class="dropdown pull-left">
+                            <button class="btn btn-info btn-sm m-0 mr-3 p-2 dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false"><i class="fa fa-pencil"></i>
+                                                                            </button>
+                            <div class="dropdown-menu dropdown-info">
+                                <a class="dropdown-item" href="#">Add new condition</a>
+                                <a class="dropdown-item" href="#">Rename folder</a>
+                                <a class="dropdown-item" href="#">Delete folder</a>
+                            </div>
+                        </div>
+
+                        <!-- Heading -->
+                        <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                            <h5 class="mt-1 mb-0">
+                                <span>Folder 3</span>
+                                <i class="fa fa-angle-down rotate-icon"></i>
+                            </h5>
+                        </a>
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="card-body">
+
+                            <!--Top Table UI-->
+                            <div class="table-ui p-2 mb-3 mx-3 mb-4">
+
+                                <!--Grid row-->
+                                <div class="row">
+
+                                    <!--Grid column-->
+                                    <div class="col-xl-4 col-lg-6 col-md-12">
+
+                                        <!--Name-->
+                                        <select class="mdb-select colorful-select dropdown-info mx-2">
+                                                                                                                <option value="" disabled selected>Bulk actions</option>
+                                                                                                                <option value="1">Delete</option>
+                                                                                                                <option value="2">Change folder</option>
+                                                                                                            </select>
+
+                                    </div>
+                                    <!--Grid column-->
+
+                                    <!--Grid column-->
+                                    <div class="col-xl-4 col-lg-6 col-md-6">
+
+                                        <!--Blue select-->
+                                        <select class="mdb-select colorful-select dropdown-info mx-2">
+                                                                                                                <option value="" disabled>Show only</option>
+                                                                                                                <option value="1" selected>All <span> (2000)</span></option>
+                                                                                                                <option value="2">Clicks <span> (200)</span></option>
+                                                                                                                <option value="3">Page <span> (1800)</span></option>
+                                                                                                                <option value="4">Scroll <span> (200)</span></option>
+                                                                                                                <option value="5">Forms <span> (50)</span></option>
+                                                                                                                <option value="6">Time <span> (50)</span></option>
+                                                                                                                <option value="7">UTM <span> (50)</span></option>
+                                                                                                            </select>
+                                        <!--/Blue select-->
+
+                                    </div>
+                                    <!--Grid column-->
+
+                                    <!--Grid column-->
+                                    <div class="col-xl-4 col-lg-6 col-md-6">
+
+                                        <!--Blue select-->
+                                        <select class="mdb-select colorful-select dropdown-info mx-2">
+                                                                                                                <option value="" disabled selected>Filter</option>
+                                                                                                                <option value="1">All <span> (100)</span></option>
+                                                                                                                <option value="1">Active <span> (2000)</span></option>
+                                                                                                                <option value="2">Inactive <span> (1000)</span></option>
+                                                                                                            </select>
+                                        <!--/Blue select-->
+
+                                    </div>
+                                    <!--Grid column-->
+
+                                </div>
+                                <!--Grid row-->
+
+                            </div>
+                            <!--Top Table UI-->
+
+                            <!-- Table responsive wrapper -->
+                            <div class="table-responsive mx-3">
+                                <!--Table-->
+                                <table class="table table-hover mb-0">
+
+                                    <!--Table head-->
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <input type="checkbox" id="checkbox">
+                                                <label for="checkbox" class="mr-2 label-table"></label>
+                                            </th>
+                                            <th class="th-lg"><a>Name <i class="fa fa-sort ml-1"></i></a></th>
+                                            <th class="th-lg"><a>Condition<i class="fa fa-sort ml-1"></i></a></th>
+                                            <th class="th-lg"><a>Last edited<i class="fa fa-sort ml-1"></i></a></th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <!--Table head-->
+
+                                    <!--Table body-->
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">
+                                                <input type="checkbox" id="checkbox1">
+                                                <label for="checkbox1" class="label-table"></label>
+                                            </th>
+                                            <td>Test subscription</td>
+                                            <td><code>Scroll %</code> equals or greater than <strong>80</strong></td>
+                                            <td>12.06.2017</td>
+                                            <td>
+                                                <a><i class="fa fa-info mx-1" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></i></a>
+                                                <a><i class="fa fa-pencil-square mx-1"></i></a>
+                                                <a><i class="fa fa-times mx-1"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                <input type="checkbox" id="checkbox2">
+                                                <label for="checkbox2" class="label-table"></label>
+                                            </th>
+                                            <td>Product Hunt Visitor</td>
+                                            <td><code>Scroll %</code> equals or greater than <strong>80</strong></td>
+                                            <td>13.06.2017</td>
+                                            <td>
+                                                <a><i class="fa fa-info mx-1" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></i></a>
+                                                <a><i class="fa fa-pencil-square mx-1"></i></a>
+                                                <a><i class="fa fa-times mx-1"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                <input type="checkbox" id="checkbox3">
+                                                <label for="checkbox3" class="label-table"></label>
+                                            </th>
+                                            <td>Test subscription</td>
+                                            <td><code>Scroll %</code> equals or greater than <strong>80</strong></td>
+                                            <td>12.06.2017</td>
+                                            <td>
+                                                <a><i class="fa fa-info mx-1" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></i></a>
+                                                <a><i class="fa fa-pencil-square mx-1"></i></a>
+                                                <a><i class="fa fa-times mx-1"></i></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <!--Table body-->
+                                </table>
+                                <!--Table-->
+                            </div>
+                            <!-- Table responsive wrapper -->
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Accordion card -->
+            </div>
+            <!--/.Accordion wrapper-->
     
         </div>
         <!-- Grid column -->
@@ -141,6 +820,12 @@
   <script type="text/javascript" src="../../js/bootstrap.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="../../js/mdb.js"></script>
+  <script type="text/javascript">
+       // Material Select Initialization
+ $(document).ready(function() {
+    $('.mdb-select').material_select();
+  });
+  </script>
 </body>
 
 </html>
