@@ -28,72 +28,1609 @@
     <!--Main layout-->
     <main>
         <div class="container-fluid my-5">
-            <!--Section: Doc content-->
-            <section class="documentation">
 
-                <!--Section: Intro-->
-                <section id="introduction">
+            <div class="row">
+                <div class="col-md-12 col-lg-10">
+                
+                    <!--Section: Doc content-->
+                    <section class="documentation">
 
-                    <!--Title-->
-                    <h1 class="main-title">Bootstrap Input File</h1>
+                        <style type="text/css">
+                            .file-field.big .file-path-wrapper {
+                              height: 3.2rem; }
+                              .file-field.big .file-path-wrapper .file-path {
+                                height: 3rem; }
 
-                    <!--Description-->
-                    <p class="description"></p>
+                            .file-field.medium .file-path-wrapper {
+                              height: 3rem; }
+                              .file-field.medium .file-path-wrapper .file-path {
+                                height: 2.8rem; }
 
-                    <!--Section: Live preview-->
-                    <section>
+                            .file-field.big-2 .file-path-wrapper {
+                              height: 3.7rem; }
+                              .file-field.big-2 .file-path-wrapper .file-path {
+                                height: 3.5rem; }
 
-                        
+                            .file-field .btn-floating {
+                              float: left; }
+
+                            .card.light-version .file-field input[type=text] {
+                              border-bottom: 1px solid #fff; }
+                              .card.light-version .file-field input[type=text]::-webkit-input-placeholder {
+                                color: #fff;
+                                font-weight: 300; }
+                              .card.light-version .file-field input[type=text]::-moz-placeholder {
+                                color: #fff;
+                                font-weight: 300; }
+                              .card.light-version .file-field input[type=text]:-ms-input-placeholder {
+                                color: #fff;
+                                font-weight: 300; }
+                              .card.light-version .file-field input[type=text]::placeholder {
+                                color: #fff;
+                                font-weight: 300; }
+                              .card.light-version .file-field input[type=text]:focus:not([readonly]) {
+                                -webkit-box-shadow: 0 1px 0 0 #fff;
+                                box-shadow: 0 1px 0 0 #fff; }
+                              .card.light-version .file-field input[type=text].valid {
+                                border-bottom: 1px solid #00c851;
+                                -webkit-box-shadow: 0 1px 0 0 #00c851;
+                                box-shadow: 0 1px 0 0 #00c851; }
+                              .card.light-version .file-field input[type=text]:focus.valid {
+                                border-bottom: 1px solid #00c851;
+                                -webkit-box-shadow: 0 1px 0 0 #00c851;
+                                box-shadow: 0 1px 0 0 #00c851; }
+
+                              .avatar-pic {
+                                width: 150px; }
+                        </style>
+
+                        <!--Section: Intro-->
+                        <section id="introduction">
+
+                            <!--Title-->
+                            <h1 class="main-title">Bootstrap File Input</h1>
+
+                            <!--Description-->
+                            <p class="description"></p>
+
+                            <!--Section: Live preview-->
+                            <section>
+
+                                
+
+                            </section>
+                            <!--Section: Live preview-->
+
+                        </section>
+                        <!--/Section: Intro-->
+
+                        <hr class="my-5">
+
+                        <!--Section: -->
+                        <section id="basic">
+
+                            <!--Title-->
+                            <h2 class="title"><strong>Basic examples</strong> <a href="https://mdbootstrap.com/product/material-design-for-bootstrap-pro/" target="_blank" class="btn btn-danger btn-md" role="button">MDB Pro component <i class="fa fa-diamond ml-1"></i></a></h2>
+
+                            <!--Description-->
+                            <p class="description"></p>
+
+                            <!--Section: Live preview-->
+                            <section>
+
+                                <!-- Grid row -->
+                                <div class="row">
+                                
+                                    <!-- Grid column -->
+                                    <div class="col-md-12 mb-5">
+                                
+                                        <form>
+                                            <div class="file-field">
+                                                <div class="btn btn-primary btn-sm">
+                                                    <span>Choose file</span>
+                                                    <input type="file">
+                                                </div>
+                                                <div class="file-path-wrapper">
+                                                   <input class="file-path validate" type="text" placeholder="Upload your file">
+                                                </div>
+                                            </div>
+                                        </form>
+                                
+                                    </div>
+                                    <!-- Grid column -->
+                                    
+                                    <!-- Grid column -->
+                                    <div class="col-md-12">
+                                
+                                        <form action="#">
+                                            <div class="file-field">
+                                                <div class="btn btn-primary btn-sm">
+                                                    <span>Choose files</span>
+                                                    <input type="file" multiple>
+                                                </div>
+                                                <div class="file-path-wrapper">
+                                                    <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                                                </div>
+                                            </div>
+                                        </form>
+                                
+                                    </div>
+                                    <!-- Grid column -->
+                                
+                                </div>
+                                <!-- Grid row -->
+
+                            </section>
+                            <!--Section: Live preview-->
+
+                            <!--Section: Code-->
+                            <section>
+                                <pre class="code-toolbar">
+                                    <code class="language-markup">
+                                        &lt;form&gt;
+                                            &lt;div class=&quot;file-field&quot;&gt;
+                                                &lt;div class=&quot;btn btn-primary btn-sm&quot;&gt;
+                                                    &lt;span&gt;Choose file&lt;/span&gt;
+                                                    &lt;input type=&quot;file&quot;&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class=&quot;file-path-wrapper&quot;&gt;
+                                                   &lt;input class=&quot;file-path validate&quot; type=&quot;text&quot; placeholder=&quot;Upload your file&quot;&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/form&gt;
+
+                                        &lt;form action=&quot;#&quot;&gt;
+                                            &lt;div class=&quot;file-field&quot;&gt;
+                                                &lt;div class=&quot;btn btn-primary btn-sm&quot;&gt;
+                                                    &lt;span&gt;Choose files&lt;/span&gt;
+                                                    &lt;input type=&quot;file&quot; multiple&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class=&quot;file-path-wrapper&quot;&gt;
+                                                    &lt;input class=&quot;file-path validate&quot; type=&quot;text&quot; placeholder=&quot;Upload one or more files&quot;&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/form&gt;
+                                    </code>
+                                </pre>
+                            </section>
+                            <!--Section: Code-->
+
+                        </section>
+                        <!--/Section: -->
+
+                        <hr class="my-5">
+
+                        <!--Section: -->
+                        <section id="photo">
+
+                            <!--Title-->
+                            <h2 class="title"><strong>File input with photo placeholder</strong> <a href="https://mdbootstrap.com/product/material-design-for-bootstrap-pro/" target="_blank" class="btn btn-danger btn-md" role="button">MDB Pro component <i class="fa fa-diamond ml-1"></i></a></h2>
+
+                            <!--Description-->
+                            <p class="description"></p>
+
+                            <!--Section: Live preview-->
+                            <section>
+
+                                <!-- Grid row -->
+                                <div class="row">
+                                
+                                    <!-- Grid column -->
+                                    <div class="col-md-8 col-lg-7 col-xl-5 mb-r">
+                                
+                                        <form>
+                                            <div class="file-field">
+                                                <div class="z-depth-1-half mb-4">
+                                                    <img src="https://mdbootstrap.com/img/Photos/Others/placeholder.jpg" class="img-fluid">
+                                                </div>
+                                                <div class="d-flex justify-content-center">
+                                                    <div class="btn btn-mdb-color btn-rounded">
+                                                        <span>Choose file</span>
+                                                        <input type="file">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                
+                                    </div>
+                                    <!-- Grid column -->
+                                
+                                    <!-- Grid column -->
+                                    <div class="col-md-4 col-lg-5 col-xl-5 d-flex justify-content-center">
+                                
+                                        <form>
+                                            <div class="file-field">
+                                                <div class="mb-4">
+                                                    <img src="https://mdbootstrap.com/img/Photos/Others/placeholder-avatar.jpg" class="rounded-circle z-depth-1-half avatar-pic">
+                                                </div>
+                                                <div class="d-flex justify-content-center">
+                                                    <div class="btn btn-mdb-color btn-rounded">
+                                                        <span>Add photo</span>
+                                                        <input type="file">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                
+                                    </div>
+                                    <!-- Grid column -->
+                                
+                                </div>
+                                <!-- Grid row -->
+
+                            </section>
+                            <!--Section: Live preview-->
+
+                            <!--Section: Code-->
+                            <section>
+                                <pre class="code-toolbar">
+                                    <code class="language-css">
+                                        .avatar-pic {
+                                          width: 150px; }
+                                    </code>
+                                </pre>
+                            </section>
+                            <!--Section: Code-->
+
+                            <!--Section: Code-->
+                            <section>
+                                <pre class="code-toolbar">
+                                    <code class="language-markup">
+                                        &lt;form&gt;
+                                            &lt;div class=&quot;file-field&quot;&gt;
+                                                &lt;div class=&quot;z-depth-1-half mb-4&quot;&gt;
+                                                    &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Others/placeholder.jpg&quot; class=&quot;img-fluid&quot;&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class=&quot;d-flex justify-content-center&quot;&gt;
+                                                    &lt;div class=&quot;btn btn-mdb-color btn-rounded&quot;&gt;
+                                                        &lt;span&gt;Choose file&lt;/span&gt;
+                                                        &lt;input type=&quot;file&quot;&gt;
+                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/form&gt;
+
+                                        &lt;form&gt;
+                                            &lt;div class=&quot;file-field&quot;&gt;
+                                                &lt;div class=&quot;mb-4&quot;&gt;
+                                                    &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Others/placeholder-avatar.jpg&quot; class=&quot;rounded-circle z-depth-1-half avatar-pic&quot;&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class=&quot;d-flex justify-content-center&quot;&gt;
+                                                    &lt;div class=&quot;btn btn-mdb-color btn-rounded&quot;&gt;
+                                                        &lt;span&gt;Add photo&lt;/span&gt;
+                                                        &lt;input type=&quot;file&quot;&gt;
+                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/form&gt;
+                                    </code>
+                                </pre>
+                            </section>
+                            <!--Section: Code-->
+
+                        </section>
+                        <!--/Section: -->
+
+                        <hr class="my-5">
+
+                        <!--Section: -->
+                        <section id="floating">
+
+                            <!--Title-->
+                            <h2 class="title"><strong>File input with gradient floating buttons</strong> <a href="https://mdbootstrap.com/product/material-design-for-bootstrap-pro/" target="_blank" class="btn btn-danger btn-md" role="button">MDB Pro component <i class="fa fa-diamond ml-1"></i></a></h2>
+
+                            <!--Description-->
+                            <p class="description"></p>
+
+                            <!--Section: Live preview-->
+                            <section>
+
+                                <!-- Grid row -->
+                                <div class="row">
+                                
+                                    <!-- Grid column -->
+                                    <div class="col-xl-4 col-md-12 mb-r">
+                                
+                                        <form>
+                                            <div class="file-field">
+                                                <a class="btn-floating peach-gradient mt-0">
+                                                    <i class="fa fa-paperclip" aria-hidden="true"></i>
+                                                    <input type="file">
+                                                </a>
+                                                <div class="file-path-wrapper">
+                                                   <input class="file-path validate" type="text" placeholder="Upload your file">
+                                                </div>
+                                            </div>
+                                        </form>
+                                
+                                    </div>
+                                    <!-- Grid column -->
+                                
+                                    <!-- Grid column -->
+                                    <div class="col-xl-4 col-md-6 mb-r">
+                                
+                                        <form>
+                                            <div class="file-field">
+                                                <a class="btn-floating blue-gradient mt-0">
+                                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                    <input type="file">
+                                                </a>
+                                                <div class="file-path-wrapper">
+                                                    <input class="file-path validate" type="text" placeholder="Upload your file">
+                                                </div>
+                                            </div>
+                                        </form>
+                                
+                                    </div>
+                                    <!-- Grid column -->
+                                
+                                    <!-- Grid column -->
+                                    <div class="col-xl-4 col-md-6 mb-r">
+                                
+                                        <form>
+                                            <div class="file-field">
+                                                <a class="btn-floating purple-gradient mt-0">
+                                                    <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+                                                    <input type="file">
+                                                </a>
+                                                <div class="file-path-wrapper">
+                                                   <input class="file-path validate" type="text" placeholder="Upload your file">
+                                                </div>
+                                            </div>
+                                        </form>
+                                
+                                    </div>
+                                    <!-- Grid column -->
+                                
+                                </div>
+                                <!-- Grid row -->
+
+                            </section>
+                            <!--Section: Live preview-->
+
+                            <!--Section: Code-->
+                            <section>
+                                <pre class="code-toolbar">
+                                    <code class="language-css">
+                                        .file-field .btn-floating {
+                                          float: left; }
+                                    </code>
+                                </pre>
+                            </section>
+                            <!--Section: Code-->
+
+                            <!--Section: Code-->
+                            <section>
+                                <pre class="code-toolbar">
+                                    <code class="language-markup">
+                                        &lt;form&gt;
+                                            &lt;div class=&quot;file-field&quot;&gt;
+                                                &lt;a class=&quot;btn-floating peach-gradient mt-0&quot;&gt;
+                                                    &lt;i class=&quot;fa fa-paperclip&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+                                                    &lt;input type=&quot;file&quot;&gt;
+                                                &lt;/a&gt;
+                                                &lt;div class=&quot;file-path-wrapper&quot;&gt;
+                                                   &lt;input class=&quot;file-path validate&quot; type=&quot;text&quot; placeholder=&quot;Upload your file&quot;&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/form&gt;
+                                
+                                        &lt;form&gt;
+                                            &lt;div class=&quot;file-field&quot;&gt;
+                                                &lt;a class=&quot;btn-floating blue-gradient mt-0&quot;&gt;
+                                                    &lt;i class=&quot;fa fa-heart-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+                                                    &lt;input type=&quot;file&quot;&gt;
+                                                &lt;/a&gt;
+                                                &lt;div class=&quot;file-path-wrapper&quot;&gt;
+                                                    &lt;input class=&quot;file-path validate&quot; type=&quot;text&quot; placeholder=&quot;Upload your file&quot;&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/form&gt;
+                                
+                                        &lt;form&gt;
+                                            &lt;div class=&quot;file-field&quot;&gt;
+                                                &lt;a class=&quot;btn-floating purple-gradient mt-0&quot;&gt;
+                                                    &lt;i class=&quot;fa fa-cloud-upload&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+                                                    &lt;input type=&quot;file&quot;&gt;
+                                                &lt;/a&gt;
+                                                &lt;div class=&quot;file-path-wrapper&quot;&gt;
+                                                   &lt;input class=&quot;file-path validate&quot; type=&quot;text&quot; placeholder=&quot;Upload your file&quot;&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/form&gt;
+                                    &lt;/code&gt;
+                                    </code>
+                                </pre>
+                            </section>
+                            <!--Section: Code-->
+
+                        </section>
+                        <!--/Section: -->
+
+                        <hr class="my-5">
+
+                        <!--Section: -->
+                        <section id="floating-lg">
+
+                            <!--Title-->
+                            <h2 class="title"><strong>File input with large floating buttons</strong> <a href="https://mdbootstrap.com/product/material-design-for-bootstrap-pro/" target="_blank" class="btn btn-danger btn-md" role="button">MDB Pro component <i class="fa fa-diamond ml-1"></i></a></h2>
+
+                            <!--Description-->
+                            <p class="description"></p>
+
+                            <!--Section: Live preview-->
+                            <section>
+
+                                <!-- Grid row -->
+                                <div class="row">
+                                
+                                    <!-- Grid column -->
+                                    <div class="col-xl-4 col-md-12 mb-r">
+                                
+                                        <form>
+                                            <div class="file-field big">
+                                                <a class="btn-floating btn-lg pink lighten-1 mt-0">
+                                                    <i class="fa fa-paperclip" aria-hidden="true"></i>
+                                                    <input type="file" multiple>
+                                                </a>
+                                                <div class="file-path-wrapper">
+                                                   <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                                                </div>
+                                            </div>
+                                        </form>
+                                
+                                    </div>
+                                    <!-- Grid column -->
+                                
+                                    <!-- Grid column -->
+                                    <div class="col-xl-4 col-md-6 mb-r">
+                                
+                                        <form>
+                                            <div class="file-field big">
+                                                <a class="btn-floating btn-lg cyan darken-2 mt-0">
+                                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                    <input type="file" multiple>
+                                                </a>
+                                                <div class="file-path-wrapper">
+                                                    <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                                                </div>
+                                            </div>
+                                        </form>
+                                
+                                    </div>
+                                    <!-- Grid column -->
+                                
+                                    <!-- Grid column -->
+                                    <div class="col-xl-4 col-md-6 mb-r">
+                                
+                                        <form>
+                                            <div class="file-field big">
+                                                <a class="btn-floating btn-lg amber darken-2 mt-0">
+                                                    <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+                                                    <input type="file" multiple>
+                                                </a>
+                                                <div class="file-path-wrapper">
+                                                   <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                                                </div>
+                                            </div>
+                                        </form>
+                                
+                                    </div>
+                                    <!-- Grid column -->
+                                
+                                </div>
+                                <!-- Grid row -->
+
+                            </section>
+                            <!--Section: Live preview-->
+
+                            <!--Section: Code-->
+                            <section>
+                                <pre class="code-toolbar">
+                                    <code class="language-css">
+                                        .file-field .btn-floating {
+                                          float: left; }
+                                        .file-field.big .file-path-wrapper {
+                                          height: 3.2rem; }
+                                          .file-field.big .file-path-wrapper .file-path {
+                                            height: 3rem; }
+                                    </code>
+                                </pre>
+                            </section>
+                            <!--Section: Code-->
+
+                            <!--Section: Code-->
+                            <section>
+                                <pre class="code-toolbar">
+                                    <code class="language-markup">
+                                        &lt;form&gt;
+                                            &lt;div class=&quot;file-field big&quot;&gt;
+                                                &lt;a class=&quot;btn-floating btn-lg pink lighten-1 mt-0&quot;&gt;
+                                                    &lt;i class=&quot;fa fa-paperclip&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+                                                    &lt;input type=&quot;file&quot; multiple&gt;
+                                                &lt;/a&gt;
+                                                &lt;div class=&quot;file-path-wrapper&quot;&gt;
+                                                   &lt;input class=&quot;file-path validate&quot; type=&quot;text&quot; placeholder=&quot;Upload one or more files&quot;&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/form&gt;
+
+                                        &lt;form&gt;
+                                            &lt;div class=&quot;file-field big&quot;&gt;
+                                                &lt;a class=&quot;btn-floating btn-lg cyan darken-2 mt-0&quot;&gt;
+                                                    &lt;i class=&quot;fa fa-heart-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+                                                    &lt;input type=&quot;file&quot; multiple&gt;
+                                                &lt;/a&gt;
+                                                &lt;div class=&quot;file-path-wrapper&quot;&gt;
+                                                    &lt;input class=&quot;file-path validate&quot; type=&quot;text&quot; placeholder=&quot;Upload one or more files&quot;&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/form&gt;
+
+                                        &lt;form&gt;
+                                            &lt;div class=&quot;file-field big&quot;&gt;
+                                                &lt;a class=&quot;btn-floating btn-lg amber darken-2 mt-0&quot;&gt;
+                                                    &lt;i class=&quot;fa fa-cloud-upload&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+                                                    &lt;input type=&quot;file&quot; multiple&gt;
+                                                &lt;/a&gt;
+                                                &lt;div class=&quot;file-path-wrapper&quot;&gt;
+                                                   &lt;input class=&quot;file-path validate&quot; type=&quot;text&quot; placeholder=&quot;Upload one or more files&quot;&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/form&gt;
+                                    </code>
+                                </pre>
+                            </section>
+                            <!--Section: Code-->
+
+                        </section>
+                        <!--/Section: -->
+
+                        <hr class="my-5">
+
+                        <!--Section: -->
+                        <section id="rounded-gradient">
+
+                            <!--Title-->
+                            <h2 class="title"><strong>File inputs with rounded gradient buttons</strong> <a href="https://mdbootstrap.com/product/material-design-for-bootstrap-pro/" target="_blank" class="btn btn-danger btn-md" role="button">MDB Pro component <i class="fa fa-diamond ml-1"></i></a></h2>
+
+                            <!--Description-->
+                            <p class="description"></p>
+
+                            <!--Section: Live preview-->
+                            <section>
+
+                                <!-- Grid row -->
+                                <div class="row">
+                                
+                                    <!-- Grid column -->
+                                    <div class="col-xl-6 col-lg-8">
+                                
+                                        <!-- Grid row -->
+                                        <div class="row">
+                                        
+                                            <!-- Grid column -->
+                                            <div class="col-md-12 mb-r">
+                                        
+                                                <form>
+                                                    <div class="file-field">
+                                                        <div class="btn btn-rounded purple-gradient btn-sm">
+                                                            <span>Choose file</span>
+                                                            <input type="file">
+                                                        </div>
+                                                        <div class="file-path-wrapper">
+                                                           <input class="file-path validate" type="text" placeholder="Upload your file">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                        
+                                            </div>
+                                            <!-- Grid column -->
+
+                                            <!-- Grid column -->
+                                            <div class="col-md-12 mb-r">
+                                        
+                                                <form>
+                                                    <div class="file-field medium">
+                                                        <div class="btn btn-rounded aqua-gradient">
+                                                            <span>Choose file</span>
+                                                            <input type="file">
+                                                        </div>
+                                                        <div class="file-path-wrapper">
+                                                           <input class="file-path validate" type="text" placeholder="Upload your file">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                        
+                                            </div>
+                                            <!-- Grid column -->
+
+                                            <!-- Grid column -->
+                                            <div class="col-md-12">
+                                        
+                                                <form>
+                                                    <div class="file-field big-2">
+                                                        <div class="btn btn-rounded peach-gradient btn-lg">
+                                                            <span>Choose file</span>
+                                                            <input type="file">
+                                                        </div>
+                                                        <div class="file-path-wrapper">
+                                                           <input class="file-path validate" type="text" placeholder="Upload your file">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                        
+                                            </div>
+                                            <!-- Grid column -->
+                                        
+                                        </div>
+                                        <!-- Grid row -->
+                                
+                                    </div>
+                                    <!-- Grid column -->
+                                
+                                </div>
+                                <!-- Grid row -->
+
+                            </section>
+                            <!--Section: Live preview-->
+
+                            <!--Section: Code-->
+                            <section>
+                                <pre class="code-toolbar">
+                                    <code class="language-css">
+                                        .file-field.medium .file-path-wrapper {
+                                          height: 3rem; }
+                                          .file-field.medium .file-path-wrapper .file-path {
+                                            height: 2.8rem; }
+
+                                        .file-field.big-2 .file-path-wrapper {
+                                          height: 3.7rem; }
+                                          .file-field.big-2 .file-path-wrapper .file-path {
+                                            height: 3.5rem; }
+                                    </code>
+                                </pre>
+                            </section>
+                            <!--Section: Code-->
+
+                            <!--Section: Code-->
+                            <section>
+                                <pre class="code-toolbar">
+                                    <code class="language-markup">
+                                        &lt;form&gt;
+                                            &lt;div class=&quot;file-field&quot;&gt;
+                                                &lt;div class=&quot;btn btn-rounded purple-gradient btn-sm&quot;&gt;
+                                                    &lt;span&gt;Choose file&lt;/span&gt;
+                                                    &lt;input type=&quot;file&quot;&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class=&quot;file-path-wrapper&quot;&gt;
+                                                   &lt;input class=&quot;file-path validate&quot; type=&quot;text&quot; placeholder=&quot;Upload your file&quot;&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/form&gt;
+
+                                        &lt;form&gt;
+                                            &lt;div class=&quot;file-field medium&quot;&gt;
+                                                &lt;div class=&quot;btn btn-rounded aqua-gradient&quot;&gt;
+                                                    &lt;span&gt;Choose file&lt;/span&gt;
+                                                    &lt;input type=&quot;file&quot;&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class=&quot;file-path-wrapper&quot;&gt;
+                                                   &lt;input class=&quot;file-path validate&quot; type=&quot;text&quot; placeholder=&quot;Upload your file&quot;&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/form&gt;
+                                
+                                        &lt;form&gt;
+                                            &lt;div class=&quot;file-field big-2&quot;&gt;
+                                                &lt;div class=&quot;btn btn-rounded peach-gradient btn-lg&quot;&gt;
+                                                    &lt;span&gt;Choose file&lt;/span&gt;
+                                                    &lt;input type=&quot;file&quot;&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class=&quot;file-path-wrapper&quot;&gt;
+                                                   &lt;input class=&quot;file-path validate&quot; type=&quot;text&quot; placeholder=&quot;Upload your file&quot;&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/form&gt;
+                                    </code>
+                                </pre>
+                            </section>
+                            <!--Section: Code-->
+
+                        </section>
+                        <!--/Section: -->
+
+                        <hr class="my-5">
+
+                        <!--Section: -->
+                        <section id="rounded-outline">
+
+                            <!--Title-->
+                            <h2 class="title"><strong>File inputs with rounded gradient buttons</strong> <a href="https://mdbootstrap.com/product/material-design-for-bootstrap-pro/" target="_blank" class="btn btn-danger btn-md" role="button">MDB Pro component <i class="fa fa-diamond ml-1"></i></a></h2>
+
+                            <!--Description-->
+                            <p class="description"></p>
+
+                            <!--Section: Live preview-->
+                            <section>
+
+                                <!-- Grid row -->
+                                <div class="row">
+
+                                    <!-- Grid column -->
+                                    <div class="col-xl-6 col-lg-8">
+                                
+                                        <!-- Grid row -->
+                                        <div class="row">
+                                        
+                                            <!-- Grid column -->
+                                            <div class="col-md-12 mb-r">
+                                        
+                                                <form>
+                                                    <div class="file-field">
+                                                        <div class="btn btn-outline-success btn-rounded waves-effect btn-sm">
+                                                            <span>Choose file</span>
+                                                            <input type="file">
+                                                        </div>
+                                                        <div class="file-path-wrapper">
+                                                           <input class="file-path validate" type="text" placeholder="Upload your file">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                        
+                                            </div>
+                                            <!-- Grid column -->
+
+                                            <!-- Grid column -->
+                                            <div class="col-md-12 mb-r">
+                                        
+                                                <form>
+                                                    <div class="file-field medium">
+                                                        <div class="btn btn-outline-secondary btn-rounded waves-effect">
+                                                            <span>Choose file</span>
+                                                            <input type="file">
+                                                        </div>
+                                                        <div class="file-path-wrapper">
+                                                           <input class="file-path validate" type="text" placeholder="Upload your file">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                        
+                                            </div>
+                                            <!-- Grid column -->
+
+                                            <!-- Grid column -->
+                                            <div class="col-md-12">
+                                        
+                                                <form>
+                                                    <div class="file-field big-2">
+                                                        <div class="btn btn-outline-warning btn-rounded waves-effect btn-lg">
+                                                            <span>Choose file</span>
+                                                            <input type="file">
+                                                        </div>
+                                                        <div class="file-path-wrapper">
+                                                           <input class="file-path validate" type="text" placeholder="Upload your file">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                        
+                                            </div>
+                                            <!-- Grid column -->
+                                        
+                                        </div>
+                                        <!-- Grid row -->
+                                
+                                    </div>
+                                    <!-- Grid column -->
+
+                                </div>
+                                <!-- Grid row -->
+
+                            </section>
+                            <!--Section: Live preview-->
+
+                            <!--Section: Code-->
+                            <section>
+                                <pre class="code-toolbar">
+                                    <code class="language-css">
+                                        .file-field.medium .file-path-wrapper {
+                                          height: 3rem; }
+                                          .file-field.medium .file-path-wrapper .file-path {
+                                            height: 2.8rem; }
+
+                                        .file-field.big-2 .file-path-wrapper {
+                                          height: 3.7rem; }
+                                          .file-field.big-2 .file-path-wrapper .file-path {
+                                            height: 3.5rem; }
+                                    </code>
+                                </pre>
+                            </section>
+                            <!--Section: Code-->
+
+                            <!--Section: Code-->
+                            <section>
+                                <pre class="code-toolbar">
+                                    <code class="language-markup">
+                                        &lt;form&gt;
+                                            &lt;div class=&quot;file-field&quot;&gt;
+                                                &lt;div class=&quot;btn btn-outline-success btn-rounded waves-effect btn-sm&quot;&gt;
+                                                    &lt;span&gt;Choose file&lt;/span&gt;
+                                                    &lt;input type=&quot;file&quot;&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class=&quot;file-path-wrapper&quot;&gt;
+                                                   &lt;input class=&quot;file-path validate&quot; type=&quot;text&quot; placeholder=&quot;Upload your file&quot;&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/form&gt;
+                                
+                                        &lt;form&gt;
+                                            &lt;div class=&quot;file-field medium&quot;&gt;
+                                                &lt;div class=&quot;btn btn-outline-secondary btn-rounded waves-effect&quot;&gt;
+                                                    &lt;span&gt;Choose file&lt;/span&gt;
+                                                    &lt;input type=&quot;file&quot;&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class=&quot;file-path-wrapper&quot;&gt;
+                                                   &lt;input class=&quot;file-path validate&quot; type=&quot;text&quot; placeholder=&quot;Upload your file&quot;&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/form&gt;
+                                
+                                        &lt;form&gt;
+                                            &lt;div class=&quot;file-field big-2&quot;&gt;
+                                                &lt;div class=&quot;btn btn-outline-warning btn-rounded waves-effect btn-lg&quot;&gt;
+                                                    &lt;span&gt;Choose file&lt;/span&gt;
+                                                    &lt;input type=&quot;file&quot;&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class=&quot;file-path-wrapper&quot;&gt;
+                                                   &lt;input class=&quot;file-path validate&quot; type=&quot;text&quot; placeholder=&quot;Upload your file&quot;&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/form&gt;
+                                    </code>
+                                </pre>
+                            </section>
+                            <!--Section: Code-->
+
+                        </section>
+                        <!--/Section: -->
+
+                        <hr class="my-5">
+
+                        <!--Section: -->
+                        <section id="color">
+
+                            <!--Title-->
+                            <h2 class="title"><strong>File inputs with colorful buttons</strong> <a href="https://mdbootstrap.com/product/material-design-for-bootstrap-pro/" target="_blank" class="btn btn-danger btn-md" role="button">MDB Pro component <i class="fa fa-diamond ml-1"></i></a></h2>
+
+                            <!--Description-->
+                            <p class="description"></p>
+
+                            <!--Section: Live preview-->
+                            <section>
+
+                                <!-- Grid row -->
+                                <div class="row">
+
+                                    <!-- Grid column -->
+                                    <div class="col-xl-6 col-lg-8">
+                                
+                                        <!-- Grid row -->
+                                        <div class="row">
+                                        
+                                            <!-- Grid column -->
+                                            <div class="col-md-12 mb-r">
+                                        
+                                                <form action="#">
+                                                    <div class="file-field">
+                                                        <div class="btn btn-unique btn-sm">
+                                                            <span>Choose files</span>
+                                                            <input type="file" multiple>
+                                                        </div>
+                                                        <div class="file-path-wrapper">
+                                                            <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                        
+                                            </div>
+                                            <!-- Grid column -->
+
+                                            <!-- Grid column -->
+                                            <div class="col-md-12 mb-r">
+                                        
+                                                <form action="#">
+                                                    <div class="file-field medium">
+                                                        <div class="btn btn-light-blue">
+                                                            <span>Choose files</span>
+                                                            <input type="file" multiple>
+                                                        </div>
+                                                        <div class="file-path-wrapper">
+                                                            <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                        
+                                            </div>
+                                            <!-- Grid column -->
+
+                                            <!-- Grid column -->
+                                            <div class="col-md-12">
+                                        
+                                                <form action="#">
+                                                    <div class="file-field big-2">
+                                                        <div class="btn btn-cyan btn-lg">
+                                                            <span>Choose files</span>
+                                                            <input type="file" multiple>
+                                                        </div>
+                                                        <div class="file-path-wrapper">
+                                                            <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                        
+                                            </div>
+                                            <!-- Grid column -->
+                                        
+                                        </div>
+                                        <!-- Grid row -->
+                                
+                                    </div>
+                                    <!-- Grid column -->
+
+                                </div>
+                                <!-- Grid row -->
+
+                            </section>
+                            <!--Section: Live preview-->
+
+                            <!--Section: Code-->
+                            <section>
+                                <pre class="code-toolbar">
+                                    <code class="language-css">
+                                        .file-field.medium .file-path-wrapper {
+                                          height: 3rem; }
+                                          .file-field.medium .file-path-wrapper .file-path {
+                                            height: 2.8rem; }
+
+                                        .file-field.big-2 .file-path-wrapper {
+                                          height: 3.7rem; }
+                                          .file-field.big-2 .file-path-wrapper .file-path {
+                                            height: 3.5rem; }
+                                    </code>
+                                </pre>
+                            </section>
+                            <!--Section: Code-->
+
+                            <!--Section: Code-->
+                            <section>
+                                <pre class="code-toolbar">
+                                    <code class="language-markup">
+                                        &lt;form action=&quot;#&quot;&gt;
+                                            &lt;div class=&quot;file-field&quot;&gt;
+                                                &lt;div class=&quot;btn btn-unique btn-sm&quot;&gt;
+                                                    &lt;span&gt;Choose files&lt;/span&gt;
+                                                    &lt;input type=&quot;file&quot; multiple&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class=&quot;file-path-wrapper&quot;&gt;
+                                                    &lt;input class=&quot;file-path validate&quot; type=&quot;text&quot; placeholder=&quot;Upload one or more files&quot;&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/form&gt;
+
+                                        &lt;form action=&quot;#&quot;&gt;
+                                            &lt;div class=&quot;file-field medium&quot;&gt;
+                                                &lt;div class=&quot;btn btn-light-blue&quot;&gt;
+                                                    &lt;span&gt;Choose files&lt;/span&gt;
+                                                    &lt;input type=&quot;file&quot; multiple&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class=&quot;file-path-wrapper&quot;&gt;
+                                                    &lt;input class=&quot;file-path validate&quot; type=&quot;text&quot; placeholder=&quot;Upload one or more files&quot;&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/form&gt;
+
+                                        &lt;form action=&quot;#&quot;&gt;
+                                            &lt;div class=&quot;file-field big-2&quot;&gt;
+                                                &lt;div class=&quot;btn btn-cyan btn-lg&quot;&gt;
+                                                    &lt;span&gt;Choose files&lt;/span&gt;
+                                                    &lt;input type=&quot;file&quot; multiple&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class=&quot;file-path-wrapper&quot;&gt;
+                                                    &lt;input class=&quot;file-path validate&quot; type=&quot;text&quot; placeholder=&quot;Upload one or more files&quot;&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/form&gt;
+                                    </code>
+                                </pre>
+                            </section>
+                            <!--Section: Code-->
+
+                        </section>
+                        <!--/Section: -->
+
+                        <hr class="my-5">
+
+                        <!--Section: -->
+                        <section id="outline">
+
+                            <!--Title-->
+                            <h2 class="title"><strong>File inputs with outline buttons</strong> <a href="https://mdbootstrap.com/product/material-design-for-bootstrap-pro/" target="_blank" class="btn btn-danger btn-md" role="button">MDB Pro component <i class="fa fa-diamond ml-1"></i></a></h2>
+
+                            <!--Description-->
+                            <p class="description"></p>
+
+                            <!--Section: Live preview-->
+                            <section>
+
+                                <!-- Grid row -->
+                                <div class="row">
+
+                                    <!-- Grid column -->
+                                    <div class="col-xl-6 col-lg-8">
+                                
+                                        <!-- Grid row -->
+                                        <div class="row">
+                                        
+                                            <!-- Grid column -->
+                                            <div class="col-md-12 mb-r">
+                                        
+                                                <form action="#">
+                                                    <div class="file-field">
+                                                        <div class="btn btn-outline-info waves-effect btn-sm">
+                                                            <span>Choose files</span>
+                                                            <input type="file" multiple>
+                                                        </div>
+                                                        <div class="file-path-wrapper">
+                                                            <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                        
+                                            </div>
+                                            <!-- Grid column -->
+
+                                            <!-- Grid column -->
+                                            <div class="col-md-12 mb-r">
+                                        
+                                                <form action="#">
+                                                    <div class="file-field medium">
+                                                        <div class="btn btn-outline-default waves-effect">
+                                                            <span>Choose files</span>
+                                                            <input type="file" multiple>
+                                                        </div>
+                                                        <div class="file-path-wrapper">
+                                                            <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                        
+                                            </div>
+                                            <!-- Grid column -->
+
+                                            <!-- Grid column -->
+                                            <div class="col-md-12">
+                                        
+                                                <form action="#">
+                                                    <div class="file-field big-2">
+                                                        <div class="btn btn-outline-danger waves-effect btn-lg">
+                                                            <span>Choose files</span>
+                                                            <input type="file" multiple>
+                                                        </div>
+                                                        <div class="file-path-wrapper">
+                                                            <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                        
+                                            </div>
+                                            <!-- Grid column -->
+                                        
+                                        </div>
+                                        <!-- Grid row -->
+                                
+                                    </div>
+                                    <!-- Grid column -->
+
+                                </div>
+                                <!-- Grid row -->
+
+                            </section>
+                            <!--Section: Live preview-->
+
+                            <!--Section: Code-->
+                            <section>
+                                <pre class="code-toolbar">
+                                    <code class="language-css">
+                                        .file-field.medium .file-path-wrapper {
+                                          height: 3rem; }
+                                          .file-field.medium .file-path-wrapper .file-path {
+                                            height: 2.8rem; }
+
+                                        .file-field.big-2 .file-path-wrapper {
+                                          height: 3.7rem; }
+                                          .file-field.big-2 .file-path-wrapper .file-path {
+                                            height: 3.5rem; }
+                                    </code>
+                                </pre>
+                            </section>
+                            <!--Section: Code-->
+
+                            <!--Section: Code-->
+                            <section>
+                                <pre class="code-toolbar">
+                                    <code class="language-markup">
+                                        &lt;form action=&quot;#&quot;&gt;
+                                            &lt;div class=&quot;file-field&quot;&gt;
+                                                &lt;div class=&quot;btn btn-outline-info waves-effect btn-sm&quot;&gt;
+                                                    &lt;span&gt;Choose files&lt;/span&gt;
+                                                    &lt;input type=&quot;file&quot; multiple&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class=&quot;file-path-wrapper&quot;&gt;
+                                                    &lt;input class=&quot;file-path validate&quot; type=&quot;text&quot; placeholder=&quot;Upload one or more files&quot;&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/form&gt;
+                                
+                                        &lt;form action=&quot;#&quot;&gt;
+                                            &lt;div class=&quot;file-field medium&quot;&gt;
+                                                &lt;div class=&quot;btn btn-outline-default waves-effect&quot;&gt;
+                                                    &lt;span&gt;Choose files&lt;/span&gt;
+                                                    &lt;input type=&quot;file&quot; multiple&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class=&quot;file-path-wrapper&quot;&gt;
+                                                    &lt;input class=&quot;file-path validate&quot; type=&quot;text&quot; placeholder=&quot;Upload one or more files&quot;&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/form&gt;
+                                
+                                        &lt;form action=&quot;#&quot;&gt;
+                                            &lt;div class=&quot;file-field big-2&quot;&gt;
+                                                &lt;div class=&quot;btn btn-outline-danger waves-effect btn-lg&quot;&gt;
+                                                    &lt;span&gt;Choose files&lt;/span&gt;
+                                                    &lt;input type=&quot;file&quot; multiple&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class=&quot;file-path-wrapper&quot;&gt;
+                                                    &lt;input class=&quot;file-path validate&quot; type=&quot;text&quot; placeholder=&quot;Upload one or more files&quot;&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/form&gt;
+                                    </code>
+                                </pre>
+                            </section>
+                            <!--Section: Code-->
+
+                        </section>
+                        <!--/Section: -->
+
+                        <hr class="my-5">
+
+                        <!--Section: -->
+                        <section id="icons">
+
+                            <!--Title-->
+                            <h2 class="title"><strong>File inputs with buttons with icons</strong> <a href="https://mdbootstrap.com/product/material-design-for-bootstrap-pro/" target="_blank" class="btn btn-danger btn-md" role="button">MDB Pro component <i class="fa fa-diamond ml-1"></i></a></h2>
+
+                            <!--Description-->
+                            <p class="description"></p>
+
+                            <!--Section: Live preview-->
+                            <section>
+
+                                <!-- Grid row -->
+                                <div class="row">
+                                
+                                    <!-- Grid column -->
+                                    <div class="col-xl-6 col-lg-8 mb-r">
+                                
+                                        <!-- Grid row -->
+                                        <div class="row">
+                                        
+                                            <!-- Grid column -->
+                                            <div class="col-md-12 mb-r">
+                                        
+                                                <form action="#">
+                                                    <div class="file-field">
+                                                        <div class="btn blue-gradient btn-sm">
+                                                            <span><i class="fa fa-cloud-upload mr-2" aria-hidden="true"></i>Choose files</span>
+                                                            <input type="file" multiple>
+                                                        </div>
+                                                        <div class="file-path-wrapper">
+                                                            <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                        
+                                            </div>
+                                            <!-- Grid column -->
+
+                                            <!-- Grid column -->
+                                            <div class="col-md-12">
+                                        
+                                                <form>
+                                                    <div class="file-field">
+                                                        <div class="btn btn-pink btn-rounded btn-sm">
+                                                            <span><i class="fa fa-upload mr-2" aria-hidden="true"></i>Choose file</span>
+                                                            <input type="file">
+                                                        </div>
+                                                        <div class="file-path-wrapper">
+                                                           <input class="file-path validate" type="text" placeholder="Upload your file">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                        
+                                            </div>
+                                            <!-- Grid column -->
+                                        
+                                        </div>
+                                        <!-- Grid row -->
+                                
+                                    </div>
+                                    <!-- Grid column -->
+                                
+                                    <!-- Grid column -->
+                                    <div class="col-xl-6 col-lg-8">
+                                
+                                        <!-- Grid row -->
+                                        <div class="row">
+                                        
+                                            <!-- Grid column -->
+                                            <div class="col-md-12 mb-r">
+                                        
+                                                <form action="#">
+                                                    <div class="file-field medium">
+                                                        <div class="btn btn-outline-primary waves-effect">
+                                                            <span>Choose files<i class="fa fa-cloud-upload ml-3" aria-hidden="true"></i></span>
+                                                            <input type="file" multiple>
+                                                        </div>
+                                                        <div class="file-path-wrapper">
+                                                            <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                        
+                                            </div>
+                                            <!-- Grid column -->
+
+                                            <!-- Grid column -->
+                                            <div class="col-md-12">
+                                        
+                                                <form>
+                                                    <div class="file-field big-2">
+                                                        <div class="btn btn-outline-danger btn-rounded waves-effect btn-lg">
+                                                            <span>Choose file<i class="fa fa-upload ml-3" aria-hidden="true"></i></span>
+                                                            <input type="file">
+                                                        </div>
+                                                        <div class="file-path-wrapper">
+                                                           <input class="file-path validate" type="text" placeholder="Upload your file">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                        
+                                            </div>
+                                            <!-- Grid column -->
+                                        
+                                        </div>
+                                        <!-- Grid row -->
+                                
+                                    </div>
+                                    <!-- Grid column -->
+                                
+                                </div>
+                                <!-- Grid row -->
+
+                            </section>
+                            <!--Section: Live preview-->
+
+                            <!--Section: Code-->
+                            <section>
+                                <pre class="code-toolbar">
+                                    <code class="language-css">
+                                        .file-field.medium .file-path-wrapper {
+                                          height: 3rem; }
+                                          .file-field.medium .file-path-wrapper .file-path {
+                                            height: 2.8rem; }
+
+                                        .file-field.big-2 .file-path-wrapper {
+                                          height: 3.7rem; }
+                                          .file-field.big-2 .file-path-wrapper .file-path {
+                                            height: 3.5rem; }
+                                    </code>
+                                </pre>
+                            </section>
+                            <!--Section: Code-->
+
+                            <!--Section: Code-->
+                            <section>
+                                <pre class="code-toolbar">
+                                    <code class="language-markup">
+                                        &lt;form action=&quot;#&quot;&gt;
+                                            &lt;div class=&quot;file-field medium&quot;&gt;
+                                                &lt;div class=&quot;btn btn-outline-primary waves-effect&quot;&gt;
+                                                    &lt;span&gt;Choose files&lt;i class=&quot;fa fa-cloud-upload ml-3&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                                                    &lt;input type=&quot;file&quot; multiple&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class=&quot;file-path-wrapper&quot;&gt;
+                                                    &lt;input class=&quot;file-path validate&quot; type=&quot;text&quot; placeholder=&quot;Upload one or more files&quot;&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/form&gt;
+
+                                        &lt;form&gt;
+                                            &lt;div class=&quot;file-field big-2&quot;&gt;
+                                                &lt;div class=&quot;btn btn-outline-danger btn-rounded waves-effect btn-lg&quot;&gt;
+                                                    &lt;span&gt;Choose file&lt;i class=&quot;fa fa-upload ml-3&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                                                    &lt;input type=&quot;file&quot;&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class=&quot;file-path-wrapper&quot;&gt;
+                                                   &lt;input class=&quot;file-path validate&quot; type=&quot;text&quot; placeholder=&quot;Upload your file&quot;&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/form&gt;
+
+                                        &lt;form action=&quot;#&quot;&gt;
+                                            &lt;div class=&quot;file-field&quot;&gt;
+                                                &lt;div class=&quot;btn blue-gradient btn-sm&quot;&gt;
+                                                    &lt;span&gt;&lt;i class=&quot;fa fa-cloud-upload mr-2&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Choose files&lt;/span&gt;
+                                                    &lt;input type=&quot;file&quot; multiple&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class=&quot;file-path-wrapper&quot;&gt;
+                                                    &lt;input class=&quot;file-path validate&quot; type=&quot;text&quot; placeholder=&quot;Upload one or more files&quot;&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/form&gt;
+
+                                        &lt;form&gt;
+                                            &lt;div class=&quot;file-field&quot;&gt;
+                                                &lt;div class=&quot;btn btn-pink btn-rounded btn-sm&quot;&gt;
+                                                    &lt;span&gt;&lt;i class=&quot;fa fa-upload mr-2&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Choose file&lt;/span&gt;
+                                                    &lt;input type=&quot;file&quot;&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class=&quot;file-path-wrapper&quot;&gt;
+                                                   &lt;input class=&quot;file-path validate&quot; type=&quot;text&quot; placeholder=&quot;Upload your file&quot;&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/form&gt;
+                                    </code>
+                                </pre>
+                            </section>
+                            <!--Section: Code-->
+
+                        </section>
+                        <!--/Section: -->
+
+                        <hr class="my-5">
+
+                        <!--Section: -->
+                        <section id="cards">
+
+                            <!--Title-->
+                            <h2 class="title"><strong>File inputs within cards</strong> <a href="https://mdbootstrap.com/product/material-design-for-bootstrap-pro/" target="_blank" class="btn btn-danger btn-md" role="button">MDB Pro component <i class="fa fa-diamond ml-1"></i></a></h2>
+
+                            <!--Description-->
+                            <p class="description"></p>
+
+                            <!--Section: Live preview-->
+                            <section>
+
+                                <!-- Grid row -->
+                                <div class="row">
+                                
+                                    <!-- Grid column -->
+                                    <div class="col-xl-6 col-lg-8 mb-r">
+                                
+                                        <!--Card-->
+                                        <div class="card indigo text-center z-depth-2 light-version py-4 px-5">
+
+                                            <form action="#">
+                                                <div class="file-field">
+                                                    <div class="btn btn-outline-white waves-effect btn-sm">
+                                                        <span>Choose file<i class="fa fa-cloud-upload ml-3" aria-hidden="true"></i></span>
+                                                        <input type="file">
+                                                    </div>
+                                                    <div class="file-path-wrapper">
+                                                        <input class="file-path validate text-white" type="text" placeholder="Upload your file">
+                                                    </div>
+                                                </div>
+                                            </form>
+
+                                            <hr class="w-100 my-4">
+
+                                            <form action="#">
+                                                <div class="file-field">
+                                                    <div class="btn btn-outline-white btn-rounded waves-effect btn-sm">
+                                                        <span>Choose files<i class="fa fa-cloud-upload ml-3" aria-hidden="true"></i></span>
+                                                        <input type="file" multiple>
+                                                    </div>
+                                                    <div class="file-path-wrapper">
+                                                        <input class="file-path validate text-white" type="text" placeholder="Upload one or more files">
+                                                    </div>
+                                                </div>
+                                            </form>
+
+                                        </div>
+                                        <!--/.Card-->
+                                
+                                    </div>
+                                    <!-- Grid column -->
+
+                                    <!-- Grid column -->
+                                    <div class="col-xl-5 col-lg-8 ml-xl-auto">
+                                    
+                                       <!--Card-->
+                                       <div class="card cyan text-center z-depth-2 light-version py-4 px-5">
+
+                                            <form class="mb-3">
+                                                <div class="file-field">
+                                                    <a class="btn-floating peach-gradient mt-0">
+                                                        <i class="fa fa-paperclip" aria-hidden="true"></i>
+                                                        <input type="file">
+                                                    </a>
+                                                    <div class="file-path-wrapper">
+                                                       <input class="file-path validate" type="text" placeholder="Upload your file">
+                                                    </div>
+                                                </div>
+                                            </form>
+
+                                            <form class="mb-3">
+                                                <div class="file-field">
+                                                    <a class="btn-floating peach-gradient mt-0">
+                                                        <i class="fa fa-paperclip" aria-hidden="true"></i>
+                                                        <input type="file">
+                                                    </a>
+                                                    <div class="file-path-wrapper">
+                                                       <input class="file-path validate" type="text" placeholder="Upload your file">
+                                                    </div>
+                                                </div>
+                                            </form>
+
+                                            <form>
+                                                <div class="file-field">
+                                                    <a class="btn-floating peach-gradient mt-0">
+                                                        <i class="fa fa-paperclip" aria-hidden="true"></i>
+                                                        <input type="file">
+                                                    </a>
+                                                    <div class="file-path-wrapper">
+                                                       <input class="file-path validate" type="text" placeholder="Upload your file">
+                                                    </div>
+                                                </div>
+                                            </form>
+
+                                       </div>
+                                       <!--/.Card-->
+                                    
+                                    </div>
+                                    <!-- Grid column -->
+
+                                </div>
+                                <!-- Grid row -->
+
+                            </section>
+                            <!--Section: Live preview-->
+
+                            <!--Section: Code-->
+                            <section>
+                                <pre class="code-toolbar">
+                                    <code class="language-css">
+                                        .card.light-version .file-field input[type=text] {
+                                          border-bottom: 1px solid #fff; }
+                                          .card.light-version .file-field input[type=text]::-webkit-input-placeholder {
+                                            color: #fff;
+                                            font-weight: 300; }
+                                          .card.light-version .file-field input[type=text]::-moz-placeholder {
+                                            color: #fff;
+                                            font-weight: 300; }
+                                          .card.light-version .file-field input[type=text]:-ms-input-placeholder {
+                                            color: #fff;
+                                            font-weight: 300; }
+                                          .card.light-version .file-field input[type=text]::placeholder {
+                                            color: #fff;
+                                            font-weight: 300; }
+                                          .card.light-version .file-field input[type=text]:focus:not([readonly]) {
+                                            -webkit-box-shadow: 0 1px 0 0 #fff;
+                                            box-shadow: 0 1px 0 0 #fff; }
+                                          .card.light-version .file-field input[type=text].valid {
+                                            border-bottom: 1px solid #00c851;
+                                            -webkit-box-shadow: 0 1px 0 0 #00c851;
+                                            box-shadow: 0 1px 0 0 #00c851; }
+                                          .card.light-version .file-field input[type=text]:focus.valid {
+                                            border-bottom: 1px solid #00c851;
+                                            -webkit-box-shadow: 0 1px 0 0 #00c851;
+                                            box-shadow: 0 1px 0 0 #00c851; }
+                                    </code>
+                                </pre>
+                            </section>
+                            <!--Section: Code-->
+
+                            <!--Section: Code-->
+                            <section>
+                                <pre class="code-toolbar">
+                                    <code class="language-markup">
+                                        &lt;!--Card--&gt;
+                                        &lt;div class=&quot;card indigo text-center z-depth-2 light-version py-4 px-5&quot;&gt;
+
+                                            &lt;form action=&quot;#&quot;&gt;
+                                                &lt;div class=&quot;file-field&quot;&gt;
+                                                    &lt;div class=&quot;btn btn-outline-white waves-effect btn-sm&quot;&gt;
+                                                        &lt;span&gt;Choose file&lt;i class=&quot;fa fa-cloud-upload ml-3&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                                                        &lt;input type=&quot;file&quot;&gt;
+                                                    &lt;/div&gt;
+                                                    &lt;div class=&quot;file-path-wrapper&quot;&gt;
+                                                        &lt;input class=&quot;file-path validate text-white&quot; type=&quot;text&quot; placeholder=&quot;Upload your file&quot;&gt;
+                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                            &lt;/form&gt;
+
+                                            &lt;hr class=&quot;w-100 my-4&quot;&gt;
+
+                                            &lt;form action=&quot;#&quot;&gt;
+                                                &lt;div class=&quot;file-field&quot;&gt;
+                                                    &lt;div class=&quot;btn btn-outline-white btn-rounded waves-effect btn-sm&quot;&gt;
+                                                        &lt;span&gt;Choose files&lt;i class=&quot;fa fa-cloud-upload ml-3&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                                                        &lt;input type=&quot;file&quot; multiple&gt;
+                                                    &lt;/div&gt;
+                                                    &lt;div class=&quot;file-path-wrapper&quot;&gt;
+                                                        &lt;input class=&quot;file-path validate text-white&quot; type=&quot;text&quot; placeholder=&quot;Upload one or more files&quot;&gt;
+                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                            &lt;/form&gt;
+
+                                        &lt;/div&gt;
+                                        &lt;!--/.Card--&gt;
+
+                                        &lt;!--Card--&gt;
+                                        &lt;div class=&quot;card cyan text-center z-depth-2 light-version py-4 px-5&quot;&gt;
+
+                                             &lt;form class=&quot;mb-3&quot;&gt;
+                                                 &lt;div class=&quot;file-field&quot;&gt;
+                                                     &lt;a class=&quot;btn-floating peach-gradient mt-0&quot;&gt;
+                                                         &lt;i class=&quot;fa fa-paperclip&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+                                                         &lt;input type=&quot;file&quot;&gt;
+                                                     &lt;/a&gt;
+                                                     &lt;div class=&quot;file-path-wrapper&quot;&gt;
+                                                        &lt;input class=&quot;file-path validate&quot; type=&quot;text&quot; placeholder=&quot;Upload your file&quot;&gt;
+                                                     &lt;/div&gt;
+                                                 &lt;/div&gt;
+                                             &lt;/form&gt;
+
+                                             &lt;form class=&quot;mb-3&quot;&gt;
+                                                 &lt;div class=&quot;file-field&quot;&gt;
+                                                     &lt;a class=&quot;btn-floating peach-gradient mt-0&quot;&gt;
+                                                         &lt;i class=&quot;fa fa-paperclip&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+                                                         &lt;input type=&quot;file&quot;&gt;
+                                                     &lt;/a&gt;
+                                                     &lt;div class=&quot;file-path-wrapper&quot;&gt;
+                                                        &lt;input class=&quot;file-path validate&quot; type=&quot;text&quot; placeholder=&quot;Upload your file&quot;&gt;
+                                                     &lt;/div&gt;
+                                                 &lt;/div&gt;
+                                             &lt;/form&gt;
+
+                                             &lt;form&gt;
+                                                 &lt;div class=&quot;file-field&quot;&gt;
+                                                     &lt;a class=&quot;btn-floating peach-gradient mt-0&quot;&gt;
+                                                         &lt;i class=&quot;fa fa-paperclip&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+                                                         &lt;input type=&quot;file&quot;&gt;
+                                                     &lt;/a&gt;
+                                                     &lt;div class=&quot;file-path-wrapper&quot;&gt;
+                                                        &lt;input class=&quot;file-path validate&quot; type=&quot;text&quot; placeholder=&quot;Upload your file&quot;&gt;
+                                                     &lt;/div&gt;
+                                                 &lt;/div&gt;
+                                             &lt;/form&gt;
+
+                                        &lt;/div&gt;
+                                        &lt;!--/.Card--&gt;
+                                    </code>
+                                </pre>
+                            </section>
+                            <!--Section: Code-->
+
+                        </section>
+                        <!--/Section: -->
 
                     </section>
-                    <!--Section: Live preview-->
+                    <!--Section: Doc content-->
 
-                    <!--Section: Code-->
-                    <section>
-                        <pre class="code-toolbar">
-                            <code class="language-markup">
-
-                            </code>
-                        </pre>
-                    </section>
-                    <!--Section: Code-->
-
-                </section>
-                <!--/Section: Intro-->
-
-                <hr class="my-5">
-
-                <!--Section: -->
-                <section id="">
-
-                    <!--Title-->
-                    <h2 class="title"><strong>Basic examples</strong> <a href="https://mdbootstrap.com/product/material-design-for-bootstrap-pro/" target="_blank" class="btn btn-danger btn-md" role="button">MDB Pro component <i class="fa fa-diamond ml-1"></i></a></h2>
-
-                    <!--Description-->
-                    <p class="description"></p>
-
-                    <!--Section: Live preview-->
-                    <section>
-
-
-
-                    </section>
-                    <!--Section: Live preview-->
-
-                    <!--Section: Code-->
-                    <section>
-                        <pre class="code-toolbar">
-                            <code class="language-markup">
-
-                            </code>
-                        </pre>
-                    </section>
-                    <!--Section: Code-->
-
-                </section>
-                <!--/Section: -->
-
-                <hr class="my-5">
+                </div>
+            </div>
         </div>
     </main>
     <!--Main layout-->
