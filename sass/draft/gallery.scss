@@ -1,0 +1,15 @@
+// CAROUSELS PRO
+.carousel-multi-item-2 {
+    @media (min-width: 768px) {
+        .col-md-3 {
+            float: left;
+            width: 25%;
+            max-width: 100%;
+        }
+    }
+    .card {
+    	img {
+    		border-radius: 2px;
+    	}
+    }
+}
