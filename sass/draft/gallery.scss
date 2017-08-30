@@ -13,3 +13,23 @@
     	}
     }
 }
+
+.gallery {
+    column-count: 3;
+    column-width: 33.33333333333333%;
+    .pics {
+    	transition: all 350ms ease;
+    }
+    .animation {
+      transform: scale(1);
+    }
+}
+
+.sth {
+	.img-height {
+		height: 250px;
+	}
+}
+.modal-footer {
+	
+}

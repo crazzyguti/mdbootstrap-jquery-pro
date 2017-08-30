@@ -9,9 +9,9 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="../../css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../../../css/bootstrap/bootstrap.css">
     <!-- Material Design Bootstrap -->
-    <link rel="stylesheet" href="../../css/mdb.css">
+    <link rel="stylesheet" href="../../../css/mdb.css">
     <!-- Your custom styles (optional) -->
     <style>
         
@@ -46,8 +46,12 @@
                                 color: #000; }
                             .dark-font .breadcrumb-item.active {
                                 color: #455a64; } 
-                            .font-up-big .breadcrumb-item + .breadcrumb-item::before {
+                            .font-up-bold .breadcrumb-item + .breadcrumb-item::before {
                                 content: none; }
+                            .font-up-bold .breadcrumb-item a h5::after {
+                                content: "/";
+                                margin-left: 1rem;
+                                color: #868e96; }
                             .bc-icons .breadcrumb-item + .breadcrumb-item::before {
                                 content: none; }
                             .bc-icons .breadcrumb-item.active {
@@ -437,10 +441,10 @@
                         <hr class="my-5">
 
                         <!--Section: -->
-                        <section id="font-up-big">
+                        <section id="font-up-bold">
 
                             <!--Title-->
-                            <h2 class="title"><strong>Breadcrumbs with a big font</strong></h2>
+                            <h2 class="title"><strong>Breadcrumbs with a bold font</strong></h2>
 
                             <!--Description-->
                             <p class="description"></p>
@@ -452,19 +456,19 @@
                                 <div class="row">
                                 
                                     <!-- Grid column -->
-                                    <div class="col-md-12 font-up-big font-up">
+                                    <div class="col-md-12 font-up-bold font-up">
                                 
                                         <ol class="breadcrumb">
-                                            <li class="breadcrumb-item active"><h3 class="mr-3 mb-0">Home</h3></li>
+                                            <li class="breadcrumb-item active"><h5 class="mr-3 mb-0"><strong>Home</strong></h5></li>
                                         </ol>
                                         <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a class="" href="#"><h3 class="mr-3 mb-0">Home</h3></a></li>
-                                            <li class="breadcrumb-item active"><h3 class="mr-3 mb-0">Library</h3></li>
+                                            <li class="breadcrumb-item"><a class="" href="#"><h5 class="mr-3 mb-0"><strong>Home</strong></h5></a></li>
+                                            <li class="breadcrumb-item active"><h5 class="mr-3 mb-0"><strong>Library</strong></h5></li>
                                         </ol>
                                         <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a class="" href="#"><h3 class="mr-3 mb-0">Home</h3></a></li>
-                                            <li class="breadcrumb-item"><a class="" href="#"><h3 class="mr-3 mb-0">Library</h3></a></li>
-                                            <li class="breadcrumb-item active"><h3 class="mr-3 mb-0">Data</h3></li>
+                                            <li class="breadcrumb-item"><a class="" href="#"><h5 class="mr-3 mb-0"><strong>Home</strong></h5></a></li>
+                                            <li class="breadcrumb-item"><a class="" href="#"><h5 class="mr-3 mb-0"><strong>Library</strong></h5></a></li>
+                                            <li class="breadcrumb-item active"><h5 class="mr-3 mb-0"><strong>Data</strong></h5></li>
                                         </ol>
                                 
                                     </div>
@@ -1038,11 +1042,11 @@
     <!-- JQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="../../js/popper.min.js"></script>
+    <script type="text/javascript" src="../../../js/popper.min.js"></script>
     <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="../../js/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../js/bootstrap.js"></script>
     <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="../../js/modules/mdb.js"></script>
+    <script type="text/javascript" src="../../../js/modules/mdb.js"></script>
     <!--Custom scripts-->
    
 </body>
