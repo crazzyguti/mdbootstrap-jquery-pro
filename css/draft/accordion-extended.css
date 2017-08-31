@@ -37,6 +37,28 @@
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px; }
 
+.accordion.accordion-5 p {
+  font-size: 1rem; }
+
+.accordion.accordion-5 .card {
+  border: 0;
+  background-color: transparent; }
+  .accordion.accordion-5 .card .card-header {
+    border: 0;
+    background-color: #f44336;
+    -webkit-transition: .3s;
+    transition: .3s; }
+    .accordion.accordion-5 .card .card-header:hover {
+      -webkit-transition: .3s;
+      transition: .3s;
+      background-color: #455a64; }
+    .accordion.accordion-5 .card .card-header .fa {
+      background-color: #fff;
+      border-top-left-radius: 3px; }
+  .accordion.accordion-5 .card .card-body {
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px; }
+
 .gradient-background {
   background: -webkit-linear-gradient(45deg, rgba(234, 21, 129, 0.6), rgba(10, 23, 187, 0.6) 100%);
   background: -webkit-gradient(linear, 45deg, from(rgba(234, 21, 129, 0.6)), to(rgba(10, 23, 187, 0.6)));

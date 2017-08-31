@@ -1,0 +1,26 @@
+@media (min-width: 768px) {
+  .carousel-multi-item-2 .col-md-3 {
+    float: left;
+    width: 25%;
+    max-width: 100%; } }
+
+.carousel-multi-item-2 .card img {
+  border-radius: 2px; }
+
+.gallery {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-width: 33.33333333333333%;
+  -moz-column-width: 33.33333333333333%;
+  column-width: 33.33333333333333%; }
+  .gallery .pics {
+    -webkit-transition: all 350ms ease;
+    transition: all 350ms ease; }
+  .gallery .animation {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); }
+
+.sth .img-height {
+  height: 250px; }

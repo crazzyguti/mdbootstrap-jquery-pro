@@ -52,6 +52,32 @@
 			}
 		}
 	}
+	&.accordion-5 {
+		p {
+			font-size: 1rem;
+		}
+		.card {
+			border: 0;
+			background-color: transparent;
+			.card-header {
+				border: 0;
+				background-color: #f44336;
+				transition: .3s;
+				&:hover {
+					transition: .3s;
+					background-color: #455a64;
+				}
+				.fa {
+					background-color: #fff;
+					border-top-left-radius: 3px;
+				}
+			}
+			.card-body {
+				border-bottom-right-radius: 3px;
+				border-bottom-left-radius: 3px;
+			}
+		}
+	}
 }
 .gradient-background {
 	background: -moz-linear-gradient(45deg, rgba(234, 21, 129, 0.6), rgba(10, 23, 187, 0.6) 100%);

@@ -201,7 +201,103 @@
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px; }
 
+.accordion.accordion-5 p {
+  font-size: 1rem; }
+
+.accordion.accordion-5 .card {
+  border: 0;
+  background-color: transparent; }
+  .accordion.accordion-5 .card .card-header {
+    border: 0;
+    background-color: #f44336;
+    -webkit-transition: .3s;
+    transition: .3s; }
+    .accordion.accordion-5 .card .card-header:hover {
+      -webkit-transition: .3s;
+      transition: .3s;
+      background-color: #455a64; }
+    .accordion.accordion-5 .card .card-header .fa {
+      background-color: #fff;
+      border-top-left-radius: 3px; }
+  .accordion.accordion-5 .card .card-body {
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px; }
+
 .gradient-background {
   background: -webkit-linear-gradient(45deg, rgba(234, 21, 129, 0.6), rgba(10, 23, 187, 0.6) 100%);
   background: -webkit-gradient(linear, 45deg, from(rgba(234, 21, 129, 0.6)), to(rgba(10, 23, 187, 0.6)));
   background: linear-gradient(to 45deg, rgba(234, 21, 129, 0.6), rgba(10, 23, 187, 0.6) 100%); }
+
+.file-field.big .file-path-wrapper {
+  height: 3.2rem; }
+  .file-field.big .file-path-wrapper .file-path {
+    height: 3rem; }
+
+.file-field.medium .file-path-wrapper {
+  height: 3rem; }
+  .file-field.medium .file-path-wrapper .file-path {
+    height: 2.8rem; }
+
+.file-field.big-2 .file-path-wrapper {
+  height: 3.7rem; }
+  .file-field.big-2 .file-path-wrapper .file-path {
+    height: 3.5rem; }
+
+.file-field .btn-floating {
+  float: left; }
+
+.card.light-version .file-field input[type=text] {
+  border-bottom: 1px solid #fff; }
+  .card.light-version .file-field input[type=text]::-webkit-input-placeholder {
+    color: #fff;
+    font-weight: 300; }
+  .card.light-version .file-field input[type=text]::-moz-placeholder {
+    color: #fff;
+    font-weight: 300; }
+  .card.light-version .file-field input[type=text]:-ms-input-placeholder {
+    color: #fff;
+    font-weight: 300; }
+  .card.light-version .file-field input[type=text]::placeholder {
+    color: #fff;
+    font-weight: 300; }
+  .card.light-version .file-field input[type=text]:focus:not([readonly]) {
+    -webkit-box-shadow: 0 1px 0 0 #fff;
+    box-shadow: 0 1px 0 0 #fff; }
+  .card.light-version .file-field input[type=text].valid {
+    border-bottom: 1px solid #00c851;
+    -webkit-box-shadow: 0 1px 0 0 #00c851;
+    box-shadow: 0 1px 0 0 #00c851; }
+  .card.light-version .file-field input[type=text]:focus.valid {
+    border-bottom: 1px solid #00c851;
+    -webkit-box-shadow: 0 1px 0 0 #00c851;
+    box-shadow: 0 1px 0 0 #00c851; }
+
+.avatar-pic {
+  width: 150px; }
+
+@media (min-width: 768px) {
+  .carousel-multi-item-2 .col-md-3 {
+    float: left;
+    width: 25%;
+    max-width: 100%; } }
+
+.carousel-multi-item-2 .card img {
+  border-radius: 2px; }
+
+.gallery {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-width: 33.33333333333333%;
+  -moz-column-width: 33.33333333333333%;
+  column-width: 33.33333333333333%; }
+  .gallery .pics {
+    -webkit-transition: all 350ms ease;
+    transition: all 350ms ease; }
+  .gallery .animation {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); }
+
+.sth .img-height {
+  height: 250px; }
