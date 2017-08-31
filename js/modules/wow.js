@@ -84,16 +84,22 @@ WOW.prototype._startWow = function () {
 
 WOW.prototype._scrollY = function () {
 
-  if (Number.isInteger(window.pageYOffset)) {
+  if (this._isInt(window.pageYOffset)) {
     return window.pageYOffset;
   }
-  if (Number.isInteger(document.documentElement.scrollTop)) {
+  if (this._isInt(document.documentElement.scrollTop)) {
     return document.documentElement.scrollTop;
   }
-  if (Number.isInteger(document.body.scrollTop)) {
+  if (this._isInt(document.body.scrollTop)) {
     return document.body.scrollTop;
   }
 
+};
+
+WOW.prototype._isInt = function(value) {
+  return typeof value === 'number' && 
+    isFinite(value) && 
+    Math.floor(value) === value;
 };
 
 WOW.prototype._seoFix = function () {
