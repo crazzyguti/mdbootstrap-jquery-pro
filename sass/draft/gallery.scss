@@ -16,7 +16,7 @@
 
 .gallery {
     column-count: 3;
-    column-width: 33.33333333333333%;
+    column-width: 33%;
     .pics {
     	transition: all 350ms ease;
     }
@@ -30,6 +30,4 @@
 		height: 250px;
 	}
 }
-.modal-footer {
-	
-}
+
