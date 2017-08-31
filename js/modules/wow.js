@@ -84,7 +84,15 @@ WOW.prototype._startWow = function () {
 
 WOW.prototype._scrollY = function () {
 
-  return window.pageYOffset || document.documentElement.scrollTop || body.scrollTop;
+  if (Number.isInteger(window.pageYOffset)) {
+    return window.pageYOffset
+  }
+  if (Number.isInteger(document.documentElement.scrollTop)) {
+    return document.documentElement.scrollTop
+  }
+  if (Number.isInteger(document.body.scrollTop)) {
+    return document.body.scrollTop
+  }
 
 };
 
