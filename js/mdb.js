@@ -13103,7 +13103,7 @@ WOW.prototype._startWow = function () {
   if (this._live) {
     this._checkForChanges();
   }
-  if (window.scrollY === 0 && this._seoFixEnabled) {
+  if (this._scrollY() === 0 && this._seoFixEnabled) {
     this._seoFix();
   }
 
@@ -13111,6 +13111,26 @@ WOW.prototype._startWow = function () {
 
   this._scrollHandler();
 
+};
+
+WOW.prototype._scrollY = function () {
+
+  if (this._isInt(window.pageYOffset)) {
+    return window.pageYOffset;
+  }
+  if (this._isInt(document.documentElement.scrollTop)) {
+    return document.documentElement.scrollTop;
+  }
+  if (this._isInt(document.body.scrollTop)) {
+    return document.body.scrollTop;
+  }
+
+};
+
+WOW.prototype._isInt = function(value) {
+  return typeof value === 'number' && 
+    isFinite(value) && 
+    Math.floor(value) === value;
 };
 
 WOW.prototype._seoFix = function () {
@@ -13322,9 +13342,9 @@ WOW.prototype._isInView = function (box) {
 
   var triggerOffset = boxTopOffset + ~~offset;
 
-  var bottomPosition = window.innerHeight + window.scrollY;
+  var bottomPosition = window.innerHeight + this._scrollY();
 
-  return triggerOffset <= bottomPosition && (triggerOffset === 0 ? 10 : triggerOffset) >= window.scrollY;
+  return triggerOffset <= bottomPosition && (triggerOffset === 0 ? 10 : triggerOffset) >= this._scrollY();
 
 };
 
@@ -13334,7 +13354,7 @@ WOW.prototype._getElementOffset = function (box) {
 
   var body = document.body;
 
-  var scrollTop = window.pageYOffset || document.documentElement.scrollTop || body.scrollTop;
+  var scrollTop = this._scrollY();
   var clientTop = document.documentElement.clientTop || body.clientTop || 0;
 
   var top  = clientRect.top +  scrollTop - clientTop;
