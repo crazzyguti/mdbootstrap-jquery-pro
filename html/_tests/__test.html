@@ -15,437 +15,372 @@
     <link rel="stylesheet" href="../../css/draft/gallery.css">
     <!-- Your custom styles (optional) -->
     <style type="text/css">
-        .input-group.md-form.form-sm.form-1 input{
-            border: 1px solid #bdbdbd;
-            border-top-right-radius: 0.25rem;
-            border-bottom-right-radius: 0.25rem;
+        .basic-textarea textarea {
+            height: auto;
         }
-        .input-group.md-form.form-sm.form-2 input {
-            border: 1px solid #bdbdbd;
-            border-top-left-radius: 0.25rem;
-            border-bottom-left-radius: 0.25rem;
+        .rounded-corners textarea {
+            border-radius: 0.25rem;
         }
-        .input-group.md-form.form-sm.form-2 input.red-border  {
-            border: 1px solid #ef9a9a;
+        .purple-border textarea {
+            border: 1px solid #ba68c8;
         }
-        .input-group.md-form.form-sm.form-2 input.lime-border  {
-            border: 1px solid #cddc39;
+        .green-border-focus .form-control:focus {
+            border: 1px solid #8bc34a;
         }
-        .input-group.md-form.form-sm.form-2 input.amber-border  {
-            border: 1px solid #ffca28;
+
+        .pt-1-half {
+            padding-top: 13px;
         }
-        .input-group input[type=text]:focus:not([readonly]) {
-            box-shadow: none;
-        }
-        .active-pink input[type=text]:focus:not([readonly]) {
-            border-bottom: 1px solid #f48fb1;
-            box-shadow: 0 1px 0 0 #f48fb1;
-        }
-        .active-pink input[type=text] {
-            border-bottom: 1px solid #f48fb1;
-            box-shadow: 0 1px 0 0 #f48fb1;
-        }
-        .active-purple input[type=text]:focus:not([readonly]) {
-            border-bottom: 1px solid #ce93d8;
-            box-shadow: 0 1px 0 0 #ce93d8;
-        }
-        .active-purple input[type=text] {
-            border-bottom: 1px solid #ce93d8;
-            box-shadow: 0 1px 0 0 #ce93d8;
-        }
-        .active-cyan input[type=text]:focus:not([readonly]) {
-            border-bottom: 1px solid #4dd0e1;
-            box-shadow: 0 1px 0 0 #4dd0e1;
-        }
-        .active-cyan input[type=text] {
-            border-bottom: 1px solid #4dd0e1;
-            box-shadow: 0 1px 0 0 #4dd0e1;
-        }
-        .active-cyan .fa {
-            color: #4dd0e1;
-        }
-        .active-purple .fa {
-            color: #ce93d8;
-        }
-        .active-pink .fa {
+
+        .active-pink-textarea.md-form label.active {
             color: #f48fb1;
+        }
+        .active-amber-textarea.md-form label.active {
+            color: #ffa000;
+        }
+
+        .active-pink-textarea-2 textarea.md-textarea {
+            border-bottom: 1px solid #f48fb1;
+            box-shadow: 0 1px 0 0 #f48fb1;
+        }
+        .active-pink-textarea-2.md-form label.active {
+            color: #f48fb1;
+        }
+        .active-pink-textarea-2.md-form label {
+            color: #f48fb1;
+        }
+        .active-pink-textarea-2.md-form .prefix {
+            color: #f48fb1;
+        }
+
+
+        .pink-textarea textarea.md-textarea:focus:not([readonly]) {
+            border-bottom: 1px solid #f48fb1;
+            box-shadow: 0 1px 0 0 #f48fb1;
+        }
+        .pink-textarea.md-form .prefix.active {
+            color: #f48fb1;
+        }
+
+        .amber-textarea textarea.md-textarea:focus:not([readonly]) {
+            border-bottom: 1px solid #ffa000;
+            box-shadow: 0 1px 0 0 #ffa000;
+        }
+        .amber-textarea.md-form .prefix.active {
+            color: #ffa000;
+        }
+
+        .form-gradient .header {
+          border-top-left-radius: .3rem;
+          border-top-right-radius: .3rem; }
+
+        .form-gradient input[type=text]:focus:not([readonly]) {
+          border-bottom: 1px solid #fd9267;
+          box-shadow: 0 1px 0 0 #fd9267; }
+
+        .form-gradient input[type=text]:focus:not([readonly]) + label {
+          color: #4f4f4f; }
+
+        .form-gradient textarea.md-textarea:focus:not([readonly]) {
+            border-bottom: 1px solid #fd9267;
+            box-shadow: 0 1px 0 0 #fd9267; }
+
+        
+
+        .form-dark .md-form label {
+          color: #fff; }
+
+        .form-dark input[type=text]:focus:not([readonly]) {
+          border-bottom: 1px solid #00C851;
+          -webkit-box-shadow: 0 1px 0 0 #00C851;
+          box-shadow: 0 1px 0 0 #00C851; }
+
+        .form-dark input[type=text]:focus:not([readonly]) + label {
+          color: #fff; }
+
+        .form-dark textarea.md-textarea:focus:not([readonly]) {
+            border-bottom: 1px solid #00C851;
+            box-shadow: 0 1px 0 0 #00C851;
+            color: #fff; }
+
+        .form-dark textarea.md-textarea  {
+            color: #fff;
+        }
+
+        .form-dark .form-control, .form-dark .form-control:focus {
+            color: #fff;
+        }
+
+        .media .avatar {
+            width: 64px;
+        }
+
+        .shadow-textarea textarea.form-control::placeholder {
+            font-weight: 300;
+        }
+        .shadow-textarea textarea.form-control {
+            padding-left: 0.8rem;
         }
     </style>
 </head>
 
 <body>
 
-        <!-- Search form -->
-        <form class="form-inline">
-            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-        </form>
-
     <div class="container mt-5">
         
-        <!-- Search form -->
-        <form class="form-inline">
-            <input class="form-control w-100" type="text" placeholder="Search" aria-label="Search">
-        </form>
-        <!-- Search form -->
-        <form class="form-inline active-pink">
-            <input class="form-control w-100" type="text" placeholder="Search" aria-label="Search">
-        </form>
-        <!-- Search form -->
-        <form class="form-inline active-purple">
-            <input class="form-control w-100" type="text" placeholder="Search" aria-label="Search">
-        </form>
-        <!-- Search form -->
-        <form class="form-inline active-cyan">
-            <input class="form-control w-100" type="text" placeholder="Search" aria-label="Search">
-        </form>
+<div class="form-group basic-textarea mb-5">
+    <label for="exampleFormControlTextarea1">Large textarea</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+</div>
 
-        <!-- Search form -->
-        <form class="form-inline md-form form-sm">
-            <i class="fa fa-search" aria-hidden="true"></i>
-            <input class="form-control w-25 ml-3" type="text" placeholder="Search" aria-label="Search">
-        </form>
+<div class="form-group basic-textarea mb-5">
+    <label for="exampleFormControlTextarea2">Small textarea</label>
+    <textarea class="form-control" id="exampleFormControlTextarea2" rows="3"></textarea>
+</div>
 
-        <!-- Search form -->
-        <form class="form-inline md-form form-sm active-pink">
-            <i class="fa fa-search" aria-hidden="true"></i>
-            <input class="form-control w-25 ml-3" type="text" placeholder="Search" aria-label="Search">
-        </form>
+<div class="form-group basic-textarea rounded-corners mb-5">
+    <label for="exampleFormControlTextarea3">Rounded corners</label>
+    <textarea class="form-control" id="exampleFormControlTextarea3" rows="7"></textarea>
+</div>
 
-        <!-- Search form -->
-        <form class="form-inline md-form form-sm active-purple">
-            <i class="fa fa-search" aria-hidden="true"></i>
-            <input class="form-control w-25 ml-3" type="text" placeholder="Search" aria-label="Search">
-        </form>
+<div class="form-group basic-textarea rounded-corners purple-border mb-5">
+    <label for="exampleFormControlTextarea4">Colorful border</label>
+    <textarea class="form-control" id="exampleFormControlTextarea4" rows="3"></textarea>
+</div>
 
-        <!-- Search form -->
-        <form class="form-inline md-form form-sm active-cyan">
-            <i class="fa fa-search" aria-hidden="true"></i>
-            <input class="form-control w-25 ml-3" type="text" placeholder="Search" aria-label="Search">
-        </form>
+<div class="form-group basic-textarea green-border-focus mb-5">
+    <label for="exampleFormControlTextarea5">Colorful border on <code>:focus</code> state</label>
+    <textarea class="form-control" id="exampleFormControlTextarea5" rows="3"></textarea>
+</div>
 
-        <!-- Search form -->
-        <form class="form-inline md-form form-sm">
-            <input class="form-control w-25 mr-3" type="text" placeholder="Search" aria-label="Search">
-            <i class="fa fa-search" aria-hidden="true"></i>
-        </form>
+<div class="form-group basic-textarea rounded-corners shadow-textarea mb-5">
+    <label for="exampleFormControlTextarea6">Shadow and placeholder</label>
+    <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" placeholder="Write something here..."></textarea>
+</div>
 
-        <!-- Search form -->
-        <form class="form-inline md-form form-sm active-pink">
-            <input class="form-control w-25 mr-3" type="text" placeholder="Search" aria-label="Search">
-            <i class="fa fa-search" aria-hidden="true"></i>
-        </form>
+<!-- Grid row -->
+<div class="row">
 
-        <!-- Search form -->
-        <form class="form-inline md-form form-sm active-purple">
-            <input class="form-control w-25 mr-3" type="text" placeholder="Search" aria-label="Search">
-            <i class="fa fa-search" aria-hidden="true"></i>
-        </form>
+    <!-- Grid column -->
+    <div class="col-md-6">
 
-        <!-- Search form -->
-        <form class="form-inline md-form form-sm active-cyan">
-            <input class="form-control w-25 mr-3" type="text" placeholder="Search" aria-label="Search">
-            <i class="fa fa-search" aria-hidden="true"></i>
-        </form>
-
-        <div class="input-group md-form form-sm form-1">
-            <span class="input-group-addon purple lighten-3" id="basic-addon1"><i class="fa fa-search text-white" aria-hidden="true"></i></span>
-            <input class="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search">
+        <!--Basic textarea-->
+        <div class="md-form mb-r">
+            <textarea type="text" id="form7" class="md-textarea"></textarea>
+            <label for="form7">Simple textarea</label>
         </div>
 
-        <div class="input-group md-form form-sm form-1">
-            <span class="input-group-addon cyan lighten-2" id="basic-addon1"><i class="fa fa-search text-white" aria-hidden="true"></i></span>
-            <input class="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search">
+        <!--Basic textarea-->
+        <div class="md-form mb-r pink-textarea">
+            <textarea type="text" id="form18" class="md-textarea"></textarea>
+            <label for="form18">Simple textarea</label>
         </div>
 
-        <div class="input-group md-form form-sm form-1">
-            <span class="input-group-addon pink lighten-3" id="basic-addon1"><i class="fa fa-search text-white" aria-hidden="true"></i></span>
-            <input class="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search">
+        <!--Basic textarea-->
+        <div class="md-form mb-r amber-textarea">
+            <textarea type="text" id="form19" class="md-textarea"></textarea>
+            <label for="form19">Simple textarea</label>
         </div>
 
-        <div class="input-group md-form form-sm form-2">
-            <input class="form-control my-0 py-1 amber-border" type="text" placeholder="Search" aria-label="Search">
-            <span class="input-group-addon amber lighten-3" id="basic-addon1"><i class="fa fa-search text-grey" aria-hidden="true"></i></span>
+        <!--Basic textarea-->
+        <div class="md-form mb-r pink-textarea active-pink-textarea-2">
+            <textarea type="text" id="form18" class="md-textarea"></textarea>
+            <label for="form18">Simple textarea</label>
         </div>
 
-        <div class="input-group md-form form-sm form-2">
-            <input class="form-control my-0 py-1 lime-border" type="text" placeholder="Search" aria-label="Search">
-            <span class="input-group-addon lime lighten-2" id="basic-addon1"><i class="fa fa-search text-grey" aria-hidden="true"></i></span>
+        <!--Basic textarea-->
+        <div class="md-form mb-r amber-textarea active-amber-textarea">
+            <textarea type="text" id="form19" class="md-textarea"></textarea>
+            <label for="form19">Simple textarea</label>
         </div>
 
-        <div class="input-group md-form form-sm form-2">
-            <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search" aria-label="Search">
-            <span class="input-group-addon red lighten-3" id="basic-addon1"><i class="fa fa-search text-grey" aria-hidden="true"></i></span>
+    </div>
+    <!-- Grid column -->
+
+    <!-- Grid column -->
+    <div class="col-md-6">
+
+        <!--Textarea with icon prefix-->
+        <div class="md-form pt-1-half mb-r">
+            <i class="fa fa-pencil prefix"></i>
+            <textarea type="text" id="form10" class="md-textarea"></textarea>
+            <label for="form10">Icon Prefix</label>
         </div>
 
-        <!--Navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark indigo mb-r">
+        <!--Textarea with icon prefix-->
+        <div class="md-form pt-1-half mb-r pink-textarea">
+            <i class="fa fa-angle-double-right prefix"></i>
+            <textarea type="text" id="form21" class="md-textarea"></textarea>
+            <label for="form21">Icon Prefix</label>
+        </div>
 
-            <!-- Navbar brand -->
-            <a class="navbar-brand" href="#">Navbar</a>
+        <!--Textarea with icon prefix-->
+        <div class="md-form pt-1-half mb-r amber-textarea">
+            <i class="fa fa-font prefix"></i>
+            <textarea type="text" id="form22" class="md-textarea"></textarea>
+            <label for="form22">Icon Prefix</label>
+        </div>
 
-            <!-- Collapsible content -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!--Textarea with icon prefix-->
+        <div class="md-form pt-1-half mb-r pink-textarea active-pink-textarea-2">
+            <i class="fa fa-angle-double-right prefix"></i>
+            <textarea type="text" id="form21" class="md-textarea"></textarea>
+            <label for="form21">Icon Prefix</label>
+        </div>
 
-                <form class="form-inline ml-auto">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                    <button href="#!" class="btn btn-outline-white btn-sm my-0" type="submit">Search</button>
-                </form>
+        <!--Textarea with icon prefix-->
+        <div class="md-form pt-1-half mb-r amber-textarea active-amber-textarea">
+            <i class="fa fa-font prefix"></i>
+            <textarea type="text" id="form22" class="md-textarea"></textarea>
+            <label for="form22">Icon Prefix</label>
+        </div>
+
+    </div>
+    <!-- Grid column -->
+
+</div>
+<!-- Grid row -->
+
+<section class="form-gradient mb-5">
+
+    <!--Form with header-->
+    <div class="card" style="width: 28rem;">
+
+        <!--Header-->
+        <div class="header peach-gradient">
+
+            <div class="row d-flex justify-content-center">
+                <h3 class="white-text mb-0 py-5 font-bold">Contact Us</h3>
+            </div>
+
+        </div>
+        <!--Header-->
+
+        <div class="card-body mx-4 mt-4">
+
+            <div class="md-form">
+                <i class="fa fa-user prefix grey-text"></i>
+                <input type="text" id="form104" class="form-control">
+                <label for="form104">Your name</label>
+            </div>
+
+            <div class="md-form">
+                <i class="fa fa-envelope prefix grey-text"></i>
+                <input type="text" id="form105" class="form-control">
+                <label for="form105">Your email</label>
+            </div>
+
+            <div class="md-form">
+                <i class="fa fa-tag prefix grey-text"></i>
+                <input type="text" id="form106" class="form-control">
+                <label for="form106">Subject</label>
+            </div>
+
+            <div class="md-form">
+                <i class="fa fa-pencil prefix grey-text"></i>
+                <textarea type="text" id="form107" class="md-textarea" style="height: 100px"></textarea>
+                <label for="form107">Your message</label>
+            </div>
+
+
+            <!--Grid row-->
+            <div class="row d-flex align-items-center mb-3">
+
+                <!--Grid column-->
+                <div class="col-md-12">
+                    <div class="text-center">
+                        <button type="button" class="btn btn-grey btn-rounded z-depth-1a">Send</button>
+                    </div>
+                </div>
+                <!--Grid column-->
 
             </div>
-            <!-- Collapsible content -->
+            <!--Grid row-->
+        </div>
 
-        </nav>
-        <!--/.Navbar-->
+    </div>
+    <!--/Form with header-->
 
-        <!--Navbar-->
-        <nav class="navbar navbar-expand-lg navbar-light blue-grey lighten-5 mb-r ">
+</section>
 
-            <!-- Navbar brand -->
-            <a class="navbar-brand" href="#">Navbar</a>
+<!--Section: Live preview-->
+<section class="form-dark mb-5">
 
-            <!-- Collapse button -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <!--Form without header-->
+    <div class="card card-image" style="background-image: url('https://mdbootstrap.com/img/Photo/Others/pricing-table%20(7).jpg'); width: 28rem;">
+        <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4">
 
-            <!-- Collapsible content -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                <!-- Links -->
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
-
-                    <!-- Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>
-
-                </ul>
-                <!-- Links -->
-
-                <!-- Search form -->
-                <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                </form>
+            <!--Header-->
+            <div class="text-center">
+                <h3 class="white-text mb-5 mt-4 font-bold font-up"><strong>Contact</strong> <a class="green-text font-bold"><strong> Us</strong></a></h3>
             </div>
-            <!-- Collapsible content -->
 
-        </nav>
-        <!--/.Navbar-->
-
-        <!--Navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark teal lighten-2 mb-r">
-
-            <!-- Navbar brand -->
-            <a class="navbar-brand" href="#">Navbar</a>
-
-            <!-- Collapsible content -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                <!-- Search form -->
-                <form class="form-inline ml-auto">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                </form>
+            <div class="md-form">
+                <input type="text" id="form100" class="form-control">
+                <label for="form100">Your name</label>
             </div>
-            <!-- Collapsible content -->
 
-        </nav>
-        <!--/.Navbar-->
-
-        <!--Navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark pink lighten-3 mb-r">
-
-            <!-- Navbar brand -->
-            <a class="navbar-brand" href="#">Navbar</a>
-
-            <!-- Collapsible content -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                <!-- Search form -->
-                <form class="form-inline md-form ml-auto mb-0">
-                    <input class="form-control mr-3" type="text" placeholder="Search" aria-label="Search">
-                    <i class="fa fa-search text-white" aria-hidden="true"></i>
-                </form>
-
+            <div class="md-form">
+                <input type="text" id="form101" class="form-control">
+                <label for="form101">Your email</label>
             </div>
-            <!-- Collapsible content -->
 
-        </nav>
-        <!--/.Navbar-->
-
-        <!--Navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-r">
-
-            <!-- Collapsible content -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                <form class="form-inline mr-auto">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-mdb-color btn-rounded btn-sm my-0" type="submit">Search</button>
-                </form>
-
+            <div class="md-form">
+                <input type="text" id="form102" class="form-control">
+                <label for="form102">Subject</label>
             </div>
-            <!-- Collapsible content -->
 
-            <!-- Navbar brand -->
-            <a class="navbar-brand" href="#">Navbar</a>
-
-        </nav>
-        <!--/.Navbar-->
-
-        <!--Navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary mb-r">
-
-            <!-- Collapsible content -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                <form class="form-inline mr-auto">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-white btn-rounded btn-sm my-0" type="submit">Search</button>
-                </form>
-
+            <div class="md-form">
+                <textarea type="text" id="form103" class="md-textarea" style="height: 100px;"></textarea>
+                <label for="form103">Your message</label>
             </div>
-            <!-- Collapsible content -->
 
-            <!-- Navbar brand -->
-            <a class="navbar-brand" href="#">Navbar</a>
+            <!--Grid row-->
+            <div class="row d-flex align-items-center">
 
-        </nav>
-        <!--/.Navbar-->
-
-        <!--Navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark mdb-color mb-r">
-
-            <!-- Collapsible content -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                <form class="form-inline mr-auto">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                    <button class="btn blue-gradient btn-rounded btn-sm my-0" type="submit">Search</button>
-                </form>
-
+                <!--Grid column-->
+                <div class="text-center col-md-12 mt-3 mb-2">
+                    <button type="button" class="btn btn-success btn-block btn-rounded z-depth-1">Send</button>
+                </div>
+                <!--Grid column-->
             </div>
-            <!-- Collapsible content -->
+            <!--Grid row-->
 
-            <!-- Navbar brand -->
-            <a class="navbar-brand" href="#">Navbar</a>
+        </div>
+    </div>
+    <!--/Form without header-->
 
-        </nav>
-        <!--/.Navbar-->
+</section>
+<!--Section: Live preview-->
 
-        <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn blue-gradient btn-rounded btn-sm my-0" type="submit">Search</button>
-        </form>
-           <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn aqua-gradient btn-rounded btn-sm my-0" type="submit">Search</button>
-        </form>
-           <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn purple-gradient btn-rounded btn-sm my-0" type="submit">Search</button>
-        </form>
-           <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn peach-gradient btn-rounded btn-sm my-0" type="submit">Search</button>
-        </form>
-           <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success btn-rounded btn-sm my-0" type="submit">Search</button>
-        </form>
-           <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-warning btn-rounded btn-sm my-0" type="submit">Search</button>
-        </form>
-           <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-danger btn-rounded btn-sm my-0" type="submit">Search</button>
-        </form>
-           <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-primary btn-rounded btn-sm my-0" type="submit">Search</button>
-        </form>
-        <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-unique btn-rounded btn-sm my-0" type="submit">Search</button>
-        </form>
-        <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-elegant btn-rounded btn-sm my-0" type="submit">Search</button>
-        </form>
-        <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-indigo btn-rounded btn-sm my-0" type="submit">Search</button>
-        </form>
-        <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-mdb-color btn-rounded btn-sm my-0" type="submit">Search</button>
-        </form>
+<div style="width: 50rem;">
+    <div class="media">
+        <img class="d-flex rounded-circle avatar z-depth-1-half mr-3" src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" alt="Avatar">
+        <div class="media-body">
+            <h5 class="mt-0 font-bold blue-text">Anna Smith</h5>
+            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
 
-        <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn blue-gradient btn-sm my-0" type="submit">Search</button>
-        </form>
-           <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn aqua-gradient btn-sm my-0" type="submit">Search</button>
-        </form>
-           <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn purple-gradient btn-sm my-0" type="submit">Search</button>
-        </form>
-           <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn peach-gradient btn-sm my-0" type="submit">Search</button>
-        </form>
-           <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success btn-sm my-0" type="submit">Search</button>
-        </form>
-           <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-warning btn-sm my-0" type="submit">Search</button>
-        </form>
-           <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-danger btn-sm my-0" type="submit">Search</button>
-        </form>
-           <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-primary btn-sm my-0" type="submit">Search</button>
-        </form>
-        <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-unique btn-sm my-0" type="submit">Search</button>
-        </form>
-        <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-elegant btn-sm my-0" type="submit">Search</button>
-        </form>
-        <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-indigo btn-sm my-0" type="submit">Search</button>
-        </form>
-        <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-mdb-color btn-sm my-0" type="submit">Search</button>
-        </form>
-        
-        
-           
+            <div class="media mt-3 shadow-textarea">
+                <img class="d-flex rounded-circle avatar z-depth-1-half mr-3" src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="Generic placeholder image">
+                <div class="media-body">
+                    <h5 class="mt-0 font-bold blue-text">Danny Tatuum</h5>
+                    <div class="form-group basic-textarea rounded-corners">
+                        <textarea class="form-control z-depth-1" id="exampleFormControlTextarea3" rows="3" placeholder="Write your comment..."></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="media">
+        <img class="d-flex rounded-circle avatar z-depth-1-half mr-3" src="https://mdbootstrap.com/img/Photos/Avatars/avatar-10.jpg" alt="Avatar">
+        <div class="media-body">
+            <h5 class="mt-0 font-bold blue-text">Caroline Horwitz</h5>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis odit minima eaque dignissimos recusandae officiis commodi nulla est, tempore atque voluptas non quod maxime, iusto, debitis aliquid? Iure ipsum, itaque.
+        </div>
+    </div>
+</div>
 
+<div style="height: 100px;"></div>
     </div>
 
     <!-- SCRIPTS -->
@@ -472,18 +407,7 @@
     </script>
 
     <script type="text/javascript">
-        $(function() {
-            var selectedClass = "";
-            $(".filter").click(function(){ 
-            selectedClass = $(this).attr("data-rel"); 
-            $("#gallery").fadeTo(100, 0.1);
-                $("#gallery div").not("."+selectedClass).fadeOut().removeClass('animation');
-                    setTimeout(function() {
-                    $("."+selectedClass).fadeIn().addClass('animation');
-                    $("#gallery").fadeTo(300, 1);
-                }, 300); 
-            });
-        });
+   
     </script>
 </body>
 
