@@ -1,11 +1,15 @@
-_intro-mdb-ecommerce.js
+_intro-mdb-pro.js
 jquery.easing.js
 velocity.min.js
+chart.js
 wow.js
 scrolling-navbar.js
 waves.js
 forms-free.js
+preloading.js
 cards.js
+character-counter.js
+toastr.js
 smooth-scroll.js
 dropdown.js
 buttons.js
@@ -23,4 +27,7 @@ picker-time.js
 lightbox.js
 jquery.sticky.js
 scrollbar.js
+chips.js
+jarallax.js
+jarallax-video.js
 mdb-autocomplete.js
