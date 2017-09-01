@@ -14,373 +14,373 @@
     <link rel="stylesheet" href="../../css/mdb.css">
     <link rel="stylesheet" href="../../css/draft/gallery.css">
     <!-- Your custom styles (optional) -->
-    <style type="text/css">
-        .basic-textarea textarea {
-            height: auto;
-        }
-        .rounded-corners textarea {
-            border-radius: 0.25rem;
-        }
-        .purple-border textarea {
-            border: 1px solid #ba68c8;
-        }
-        .green-border-focus .form-control:focus {
-            border: 1px solid #8bc34a;
-        }
-
-        .pt-1-half {
-            padding-top: 13px;
-        }
-
-        .active-pink-textarea.md-form label.active {
-            color: #f48fb1;
-        }
-        .active-amber-textarea.md-form label.active {
-            color: #ffa000;
-        }
-
-        .active-pink-textarea-2 textarea.md-textarea {
-            border-bottom: 1px solid #f48fb1;
-            box-shadow: 0 1px 0 0 #f48fb1;
-        }
-        .active-pink-textarea-2.md-form label.active {
-            color: #f48fb1;
-        }
-        .active-pink-textarea-2.md-form label {
-            color: #f48fb1;
-        }
-        .active-pink-textarea-2.md-form .prefix {
-            color: #f48fb1;
-        }
-
-
-        .pink-textarea textarea.md-textarea:focus:not([readonly]) {
-            border-bottom: 1px solid #f48fb1;
-            box-shadow: 0 1px 0 0 #f48fb1;
-        }
-        .pink-textarea.md-form .prefix.active {
-            color: #f48fb1;
-        }
-
-        .amber-textarea textarea.md-textarea:focus:not([readonly]) {
-            border-bottom: 1px solid #ffa000;
-            box-shadow: 0 1px 0 0 #ffa000;
-        }
-        .amber-textarea.md-form .prefix.active {
-            color: #ffa000;
-        }
-
-        .form-gradient .header {
-          border-top-left-radius: .3rem;
-          border-top-right-radius: .3rem; }
-
-        .form-gradient input[type=text]:focus:not([readonly]) {
-          border-bottom: 1px solid #fd9267;
-          box-shadow: 0 1px 0 0 #fd9267; }
-
-        .form-gradient input[type=text]:focus:not([readonly]) + label {
-          color: #4f4f4f; }
-
-        .form-gradient textarea.md-textarea:focus:not([readonly]) {
-            border-bottom: 1px solid #fd9267;
-            box-shadow: 0 1px 0 0 #fd9267; }
-
+    <style>
         
-
-        .form-dark .md-form label {
-          color: #fff; }
-
-        .form-dark input[type=text]:focus:not([readonly]) {
-          border-bottom: 1px solid #00C851;
-          -webkit-box-shadow: 0 1px 0 0 #00C851;
-          box-shadow: 0 1px 0 0 #00C851; }
-
-        .form-dark input[type=text]:focus:not([readonly]) + label {
-          color: #fff; }
-
-        .form-dark textarea.md-textarea:focus:not([readonly]) {
-            border-bottom: 1px solid #00C851;
-            box-shadow: 0 1px 0 0 #00C851;
-            color: #fff; }
-
-        .form-dark textarea.md-textarea  {
-            color: #fff;
-        }
-
-        .form-dark .form-control, .form-dark .form-control:focus {
-            color: #fff;
-        }
-
-        .media .avatar {
-            width: 64px;
-        }
-
-        .shadow-textarea textarea.form-control::placeholder {
-            font-weight: 300;
-        }
-        .shadow-textarea textarea.form-control {
-            padding-left: 0.8rem;
-        }
     </style>
 </head>
 
 <body>
 
-    <div class="container mt-5">
-        
-<div class="form-group basic-textarea mb-5">
-    <label for="exampleFormControlTextarea1">Large textarea</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
-</div>
+    <div class="container">
+            
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalContactForm">Contact</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalLRForm">Login / Register</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalSubscription">Subscription</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalLoginAvatar">Login with Avatar</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalLogin">Simple Login</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalRegister">Register</button>
 
-<div class="form-group basic-textarea mb-5">
-    <label for="exampleFormControlTextarea2">Small textarea</label>
-    <textarea class="form-control" id="exampleFormControlTextarea2" rows="3"></textarea>
-</div>
+            <!--Modal: Contact form-->
+            <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog cascading-modal" role="document">
+                    <!--Content-->
+                    <div class="modal-content">
 
-<div class="form-group basic-textarea rounded-corners mb-5">
-    <label for="exampleFormControlTextarea3">Rounded corners</label>
-    <textarea class="form-control" id="exampleFormControlTextarea3" rows="7"></textarea>
-</div>
+                        <!--Header-->
+                        <div class="modal-header light-blue darken-3 white-text">
+                            <h4 class="title"><i class="fa fa-pencil"></i> Contact form</h4>
+                            <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <!--Body-->
+                        <div class="modal-body mb-0">
+                            <div class="md-form form-sm">
+                                <i class="fa fa-envelope prefix"></i>
+                                <input type="text" id="form19" class="form-control">
+                                <label for="form19">Your name</label>
+                            </div>
 
-<div class="form-group basic-textarea rounded-corners purple-border mb-5">
-    <label for="exampleFormControlTextarea4">Colorful border</label>
-    <textarea class="form-control" id="exampleFormControlTextarea4" rows="3"></textarea>
-</div>
+                            <div class="md-form form-sm">
+                                <i class="fa fa-lock prefix"></i>
+                                <input type="password" id="form20" class="form-control">
+                                <label for="form20">Your email</label>
+                            </div>
 
-<div class="form-group basic-textarea green-border-focus mb-5">
-    <label for="exampleFormControlTextarea5">Colorful border on <code>:focus</code> state</label>
-    <textarea class="form-control" id="exampleFormControlTextarea5" rows="3"></textarea>
-</div>
+                            <div class="md-form form-sm">
+                                <i class="fa fa-tag prefix"></i>
+                                <input type="text" id="form21" class="form-control">
+                                <label for="form21">Subject</label>
+                            </div>
 
-<div class="form-group basic-textarea rounded-corners shadow-textarea mb-5">
-    <label for="exampleFormControlTextarea6">Shadow and placeholder</label>
-    <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" placeholder="Write something here..."></textarea>
-</div>
+                            <div class="md-form form-sm">
+                                <i class="fa fa-pencil prefix"></i>
+                                <textarea type="text" id="form8" class="md-textarea mb-0"></textarea>
+                                <label for="form8">Your message</label>
+                            </div>
 
-<!-- Grid row -->
-<div class="row">
+                            <div class="text-center mt-1-half">
+                                <button class="btn btn-outline-info mb-2" data-dismiss="modal">Cancel <i class="fa fa-times ml-1"></i></button>
+                                <button class="btn btn-info mb-2">Send <i class="fa fa-send ml-1"></i></button>
+                            </div>
 
-    <!-- Grid column -->
-    <div class="col-md-6">
-
-        <!--Basic textarea-->
-        <div class="md-form mb-r">
-            <textarea type="text" id="form7" class="md-textarea"></textarea>
-            <label for="form7">Simple textarea</label>
-        </div>
-
-        <!--Basic textarea-->
-        <div class="md-form mb-r pink-textarea">
-            <textarea type="text" id="form18" class="md-textarea"></textarea>
-            <label for="form18">Simple textarea</label>
-        </div>
-
-        <!--Basic textarea-->
-        <div class="md-form mb-r amber-textarea">
-            <textarea type="text" id="form19" class="md-textarea"></textarea>
-            <label for="form19">Simple textarea</label>
-        </div>
-
-        <!--Basic textarea-->
-        <div class="md-form mb-r pink-textarea active-pink-textarea-2">
-            <textarea type="text" id="form18" class="md-textarea"></textarea>
-            <label for="form18">Simple textarea</label>
-        </div>
-
-        <!--Basic textarea-->
-        <div class="md-form mb-r amber-textarea active-amber-textarea">
-            <textarea type="text" id="form19" class="md-textarea"></textarea>
-            <label for="form19">Simple textarea</label>
-        </div>
-
-    </div>
-    <!-- Grid column -->
-
-    <!-- Grid column -->
-    <div class="col-md-6">
-
-        <!--Textarea with icon prefix-->
-        <div class="md-form pt-1-half mb-r">
-            <i class="fa fa-pencil prefix"></i>
-            <textarea type="text" id="form10" class="md-textarea"></textarea>
-            <label for="form10">Icon Prefix</label>
-        </div>
-
-        <!--Textarea with icon prefix-->
-        <div class="md-form pt-1-half mb-r pink-textarea">
-            <i class="fa fa-angle-double-right prefix"></i>
-            <textarea type="text" id="form21" class="md-textarea"></textarea>
-            <label for="form21">Icon Prefix</label>
-        </div>
-
-        <!--Textarea with icon prefix-->
-        <div class="md-form pt-1-half mb-r amber-textarea">
-            <i class="fa fa-font prefix"></i>
-            <textarea type="text" id="form22" class="md-textarea"></textarea>
-            <label for="form22">Icon Prefix</label>
-        </div>
-
-        <!--Textarea with icon prefix-->
-        <div class="md-form pt-1-half mb-r pink-textarea active-pink-textarea-2">
-            <i class="fa fa-angle-double-right prefix"></i>
-            <textarea type="text" id="form21" class="md-textarea"></textarea>
-            <label for="form21">Icon Prefix</label>
-        </div>
-
-        <!--Textarea with icon prefix-->
-        <div class="md-form pt-1-half mb-r amber-textarea active-amber-textarea">
-            <i class="fa fa-font prefix"></i>
-            <textarea type="text" id="form22" class="md-textarea"></textarea>
-            <label for="form22">Icon Prefix</label>
-        </div>
-
-    </div>
-    <!-- Grid column -->
-
-</div>
-<!-- Grid row -->
-
-<section class="form-gradient mb-5">
-
-    <!--Form with header-->
-    <div class="card" style="width: 28rem;">
-
-        <!--Header-->
-        <div class="header peach-gradient">
-
-            <div class="row d-flex justify-content-center">
-                <h3 class="white-text mb-0 py-5 font-bold">Contact Us</h3>
-            </div>
-
-        </div>
-        <!--Header-->
-
-        <div class="card-body mx-4 mt-4">
-
-            <div class="md-form">
-                <i class="fa fa-user prefix grey-text"></i>
-                <input type="text" id="form104" class="form-control">
-                <label for="form104">Your name</label>
-            </div>
-
-            <div class="md-form">
-                <i class="fa fa-envelope prefix grey-text"></i>
-                <input type="text" id="form105" class="form-control">
-                <label for="form105">Your email</label>
-            </div>
-
-            <div class="md-form">
-                <i class="fa fa-tag prefix grey-text"></i>
-                <input type="text" id="form106" class="form-control">
-                <label for="form106">Subject</label>
-            </div>
-
-            <div class="md-form">
-                <i class="fa fa-pencil prefix grey-text"></i>
-                <textarea type="text" id="form107" class="md-textarea" style="height: 100px"></textarea>
-                <label for="form107">Your message</label>
-            </div>
-
-
-            <!--Grid row-->
-            <div class="row d-flex align-items-center mb-3">
-
-                <!--Grid column-->
-                <div class="col-md-12">
-                    <div class="text-center">
-                        <button type="button" class="btn btn-grey btn-rounded z-depth-1a">Send</button>
+                        </div>
                     </div>
+                    <!--/.Content-->
                 </div>
-                <!--Grid column-->
-
             </div>
-            <!--Grid row-->
-        </div>
+            <!--Modal: Contact form-->
 
-    </div>
-    <!--/Form with header-->
+            <!--Modal: Login / Register Form-->
+            <div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog cascading-modal" role="document">
+                    <!--Content-->
+                    <div class="modal-content">
 
-</section>
+                        <!--Modal cascading tabs-->
+                        <div class="modal-c-tabs">
 
-<!--Section: Live preview-->
-<section class="form-dark mb-5">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs tabs-2 light-blue darken-3" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="fa fa-user mr-1"></i> Login</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#panel8" role="tab"><i class="fa fa-user-plus mr-1"></i> Register</a>
+                                </li>
+                            </ul>
 
-    <!--Form without header-->
-    <div class="card card-image" style="background-image: url('https://mdbootstrap.com/img/Photo/Others/pricing-table%20(7).jpg'); width: 28rem;">
-        <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4">
+                            <!-- Tab panels -->
+                            <div class="tab-content">
+                                <!--Panel 7-->
+                                <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
 
-            <!--Header-->
-            <div class="text-center">
-                <h3 class="white-text mb-5 mt-4 font-bold font-up"><strong>Contact</strong> <a class="green-text font-bold"><strong> Us</strong></a></h3>
-            </div>
+                                    <!--Body-->
+                                    <div class="modal-body mb-1">
+                                        <div class="md-form form-sm">
+                                            <i class="fa fa-envelope prefix"></i>
+                                            <input type="text" id="form22" class="form-control">
+                                            <label for="form22">Your email</label>
+                                        </div>
 
-            <div class="md-form">
-                <input type="text" id="form100" class="form-control">
-                <label for="form100">Your name</label>
-            </div>
+                                        <div class="md-form form-sm">
+                                            <i class="fa fa-lock prefix"></i>
+                                            <input type="password" id="form23" class="form-control">
+                                            <label for="form23">Your password</label>
+                                        </div>
+                                        <div class="text-center mt-2">
+                                            <button class="btn btn-info">Log in <i class="fa fa-sign-in ml-1"></i></button>
+                                        </div>
+                                    </div>
+                                    <!--Footer-->
+                                    <div class="modal-footer display-footer">
+                                        <div class="options text-center text-md-right mt-1">
+                                            <p>Not a member? <a href="#" class="blue-text">Sign Up</a></p>
+                                            <p>Forgot <a href="#" class="blue-text">Password?</a></p>
+                                        </div>
+                                        <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close <i class="fa fa-times-circle ml-1"></i></button>
+                                    </div>
 
-            <div class="md-form">
-                <input type="text" id="form101" class="form-control">
-                <label for="form101">Your email</label>
-            </div>
+                                </div>
+                                <!--/.Panel 7-->
 
-            <div class="md-form">
-                <input type="text" id="form102" class="form-control">
-                <label for="form102">Subject</label>
-            </div>
+                                <!--Panel 8-->
+                                <div class="tab-pane fade" id="panel8" role="tabpanel">
 
-            <div class="md-form">
-                <textarea type="text" id="form103" class="md-textarea" style="height: 100px;"></textarea>
-                <label for="form103">Your message</label>
-            </div>
+                                    <!--Body-->
+                                    <div class="modal-body">
+                                        <div class="md-form form-sm">
+                                            <i class="fa fa-envelope prefix"></i>
+                                            <input type="text" id="form24" class="form-control">
+                                            <label for="form24">Your email</label>
+                                        </div>
 
-            <!--Grid row-->
-            <div class="row d-flex align-items-center">
+                                        <div class="md-form form-sm">
+                                            <i class="fa fa-lock prefix"></i>
+                                            <input type="password" id="form25" class="form-control">
+                                            <label for="form25">Your password</label>
+                                        </div>
 
-                <!--Grid column-->
-                <div class="text-center col-md-12 mt-3 mb-2">
-                    <button type="button" class="btn btn-success btn-block btn-rounded z-depth-1">Send</button>
-                </div>
-                <!--Grid column-->
-            </div>
-            <!--Grid row-->
+                                        <div class="md-form form-sm">
+                                            <i class="fa fa-lock prefix"></i>
+                                            <input type="password" id="form26" class="form-control">
+                                            <label for="form26">Repeat password</label>
+                                        </div>
 
-        </div>
-    </div>
-    <!--/Form without header-->
+                                        <div class="text-center form-sm mt-2">
+                                            <button class="btn btn-info">Sign up <i class="fa fa-sign-in ml-1"></i></button>
+                                        </div>
 
-</section>
-<!--Section: Live preview-->
+                                        <fieldset class="additional-option">
+                                            <input type="checkbox" id="checkbox21">
+                                            <label for="checkbox21">Subscribe me to the newsletter</label>
+                                        </fieldset>
 
-<div style="width: 50rem;">
-    <div class="media">
-        <img class="d-flex rounded-circle avatar z-depth-1-half mr-3" src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" alt="Avatar">
-        <div class="media-body">
-            <h5 class="mt-0 font-bold blue-text">Anna Smith</h5>
-            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                    </div>
+                                    <!--Footer-->
+                                    <div class="modal-footer">
+                                        <div class="options text-right">
+                                            <p class="pt-1">Already have an account? <a href="#" class="blue-text">Log In</a></p>
+                                        </div>
+                                        <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close <i class="fa fa-times-circle ml-1"></i></button>
+                                    </div>
+                                </div>
+                                <!--/.Panel 8-->
+                            </div>
 
-            <div class="media mt-3 shadow-textarea">
-                <img class="d-flex rounded-circle avatar z-depth-1-half mr-3" src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="Generic placeholder image">
-                <div class="media-body">
-                    <h5 class="mt-0 font-bold blue-text">Danny Tatuum</h5>
-                    <div class="form-group basic-textarea rounded-corners">
-                        <textarea class="form-control z-depth-1" id="exampleFormControlTextarea3" rows="3" placeholder="Write your comment..."></textarea>
+                        </div>
                     </div>
+                    <!--/.Content-->
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="media">
-        <img class="d-flex rounded-circle avatar z-depth-1-half mr-3" src="https://mdbootstrap.com/img/Photos/Avatars/avatar-10.jpg" alt="Avatar">
-        <div class="media-body">
-            <h5 class="mt-0 font-bold blue-text">Caroline Horwitz</h5>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis odit minima eaque dignissimos recusandae officiis commodi nulla est, tempore atque voluptas non quod maxime, iusto, debitis aliquid? Iure ipsum, itaque.
-        </div>
-    </div>
-</div>
+            <!--Modal: Login / Register Form-->
 
-<div style="height: 100px;"></div>
+            <!--Modal: Subscription From-->
+            <div class="modal fade" id="modalSubscription" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog cascading-modal" role="document">
+                    <!--Content-->
+                    <div class="modal-content">
+
+                        <!--Header-->
+                        <div class="modal-header light-blue darken-3 white-text">
+                            <h4 class="title"><i class="fa fa-newspaper-o"></i> Subscription form</h4>
+                            <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <!--Body-->
+                        <div class="modal-body mb-0">
+
+                            <div class="md-form form-sm">
+                                <i class="fa fa-lock prefix"></i>
+                                <input type="password" id="form27" class="form-control">
+                                <label for="form27">Your name</label>
+                            </div>
+
+                            <div class="md-form form-sm">
+                                <i class="fa fa-envelope prefix"></i>
+                                <input type="text" id="form28" class="form-control">
+                                <label for="form28">Your email</label>
+                            </div>
+
+                            <div class="text-center mt-1-half">
+                                <button class="btn btn-outline-info mb-2" data-dismiss="modal">Cancel <i class="fa fa-times ml-1"></i></button>
+                                <button class="btn btn-info mb-1">Submit <i class="fa fa-check ml-1"></i></button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--/.Content-->
+                </div>
+            </div>
+            <!--Modal: Subscription From-->
+
+            <!--Modal: Login with Avatar Form-->
+            <div class="modal fade" id="modalLoginAvatar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
+                    <!--Content-->
+                    <div class="modal-content">
+
+                        <!--Header-->
+                        <div class="modal-header">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg" class="rounded-circle img-responsive">
+                        </div>
+                        <!--Body-->
+                        <div class="modal-body text-center mb-1">
+
+                            <h5 class="mt-1 mb-2">Maria Doe</h5>
+
+                            <div class="md-form ml-0 mr-0">
+                                <input type="password" type="text" id="form29" class="form-control ml-0">
+                                <label for="form29" class="ml-0">Enter password</label>
+                            </div>
+
+                            <div class="text-center">
+                                <button class="btn btn-cyan mt-1">Login <i class="fa fa-sign-in ml-1"></i></button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--/.Content-->
+                </div>
+            </div>
+            <!--Modal: Login with Avatar Form-->
+
+            <!--Modal: Login Form-->
+            <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog cascading-modal" role="document">
+                    <!--Content-->
+                    <div class="modal-content">
+
+                        <!--Header-->
+                        <div class="modal-header light-blue darken-3 white-text">
+                            <h4 class="title"><i class="fa fa-user"></i> Log in</h4>
+                            <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <!--Body-->
+                        <div class="modal-body">
+                            <div class="md-form form-sm">
+                                <i class="fa fa-envelope prefix"></i>
+                                <input type="text" id="form30" class="form-control">
+                                <label for="form30">Your email</label>
+                            </div>
+
+                            <div class="md-form form-sm">
+                                <i class="fa fa-lock prefix"></i>
+                                <input type="password" id="form31" class="form-control">
+                                <label for="form31">Your password</label>
+                            </div>
+
+                            <div class="text-center mt-2">
+                                <button class="btn btn-info">Log in <i class="fa fa-sign-in ml-1"></i></button>
+                            </div>
+
+                        </div>
+                        <!--Footer-->
+                        <div class="modal-footer">
+                            <div class="options text-center text-md-right mt-1">
+                                <p>Not a member? <a href="#">Sign Up</a></p>
+                                <p>Forgot <a href="#">Password?</a></p>
+                            </div>
+                            <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close <i class="fa fa-times-circle ml-1"></i></button>
+                        </div>
+                    </div>
+                    <!--/.Content-->
+                </div>
+            </div>
+            <!--Modal: Login Form-->
+
+            <!--Modal: Register Form-->
+            <div class="modal fade" id="modalRegister" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog cascading-modal" role="document">
+                    <!--Content-->
+                    <div class="modal-content">
+
+                        <!--Header-->
+                        <div class="modal-header light-blue darken-3 white-text">
+                            <h4 class="title"><i class="fa fa-user-plus"></i> Register</h4>
+                            <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <!--Body-->
+                        <div class="modal-body">
+                            <div class="md-form form-sm">
+                                <i class="fa fa-envelope prefix"></i>
+                                <input type="text" id="form32" class="form-control">
+                                <label for="form32">Your email</label>
+                            </div>
+
+                            <div class="md-form form-sm">
+                                <i class="fa fa-lock prefix"></i>
+                                <input type="password" id="form33" class="form-control">
+                                <label for="form33">Your password</label>
+                            </div>
+
+                            <div class="md-form form-sm">
+                                <i class="fa fa-lock prefix"></i>
+                                <input type="password" id="form34" class="form-control">
+                                <label for="form34">Repeat password</label>
+                            </div>
+
+                            <div class="text-center mt-2">
+                                <button class="btn btn-info">Sign up <i class="fa fa-sign-in ml-1"></i></button>
+                            </div>
+
+                        </div>
+                        <!--Footer-->
+                        <div class="modal-footer">
+                            <div class="options text-center text-md-right mt-1">
+                                <p>Already have an account? <a href="#">Log In</a></p>
+                            </div>
+                            <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close <i class="fa fa-times-circle ml-1"></i></button>
+                        </div>
+                    </div>
+                    <!--/.Content-->
+                </div>
+            </div>
+            <!--Modal: Register Form-->
+
+            <!-- BS Modal -->
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                  Launch demo modal
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        ...
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            <!-- /.BS Modal -->
+
     </div>
 
     <!-- SCRIPTS -->
