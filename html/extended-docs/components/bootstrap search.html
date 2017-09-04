@@ -100,16 +100,10 @@
     <section id="introduction">
 
         <!--Title-->
-        <h1 class="main-title"></h1>
+        <h1 class="main-title">Bootstrap Search</h1>
 
         <!--Description-->
         <p class="description"></p>
-
-        <!--Section: Live preview-->
-        <section>
-
-        </section>
-        <!--Section: Live preview-->
 
     </section>
     <!--/Section: Intro-->
@@ -120,7 +114,7 @@
     <section id="basic">
 
         <!--Title-->
-        <h2 class="title"><strong></h2>
+        <h2 class="title"><strong>Basic example</strong></h2>
 
         <!--Description-->
         <p class="description"></p>
@@ -128,10 +122,22 @@
         <!--Section: Live preview-->
         <section>
 
-            <!-- Search form -->
-            <form class="form-inline">
-                <input class="form-control w-100" type="text" placeholder="Search" aria-label="Search">
-            </form>
+            <!-- Grid row -->
+            <div class="row">
+            
+                <!-- Grid column -->
+                <div class="col-md-6 col-xl-5">
+            
+                    <!-- Search form -->
+                    <form class="form-inline">
+                        <input class="form-control w-100" type="text" placeholder="Search" aria-label="Search">
+                    </form>
+            
+                </div>
+                <!-- Grid column -->
+            
+            </div>
+            <!-- Grid row -->
 
         </section>
         <!--Section: Live preview-->
@@ -987,6 +993,87 @@
     <hr class="my-5">
 
     <!--Section: -->
+    <section id="select">
+
+        <!--Title-->
+        <h2 class="title"><strong>Search within select</strong> <a href="https://mdbootstrap.com/product/material-design-for-bootstrap-pro/" target="_blank" class="btn btn-danger btn-md" role="button">MDB Pro component <i class="fa fa-diamond ml-1"></i></a></h2>
+
+        <!--Description-->
+        <p class="description"></p>
+
+        <!--Section: Live preview-->
+        <section>
+
+            <!-- Grid row -->
+            <div class="row">
+            
+                <!-- Grid column -->
+                <div class="col-md-6">
+
+                    <!--Blue select-->
+                    <select class="mdb-select colorful-select dropdown-primary" searchable="Search here..">
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                        <option value="5">Option 5</option>
+                    </select>
+                    <label>Example label</label>
+                    <!--/Blue select-->
+                
+                </div>
+                <!-- Grid column -->
+            
+                <!-- Grid column -->
+                <div class="col-md-6">
+            
+                    <select class="mdb-select" searchable="Search here..">
+                        <option value="1" disabled selected>Choose your option</option>
+                        <option value="2" data-icon="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" class="rounded-circle">example 1</option>
+                        <option value="3" data-icon="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle">example 2</option>
+                        <option value="4" data-icon="https://mdbootstrap.com/img/Photos/Avatars/avatar-3.jpg" class="rounded-circle">example 1</option>
+                    </select>
+            
+                </div>
+                <!-- Grid column -->
+            
+            </div>
+            <!-- Grid row -->
+
+        </section>
+        <!--Section: Live preview-->
+
+        <!--Section: Code-->
+        <section>
+            <pre class="code-toolbar">
+                <code class="language-markup">
+&lt;!--Blue select--&gt;
+&lt;select class=&quot;mdb-select colorful-select dropdown-primary&quot; searchable=&quot;Search here..&quot;&gt;
+    &lt;option value=&quot;1&quot;&gt;Option 1&lt;/option&gt;
+    &lt;option value=&quot;2&quot;&gt;Option 2&lt;/option&gt;
+    &lt;option value=&quot;3&quot;&gt;Option 3&lt;/option&gt;
+    &lt;option value=&quot;4&quot;&gt;Option 4&lt;/option&gt;
+    &lt;option value=&quot;5&quot;&gt;Option 5&lt;/option&gt;
+&lt;/select&gt;
+&lt;label&gt;Example label&lt;/label&gt;
+
+&lt;select class=&quot;mdb-select&quot; searchable=&quot;Search here..&quot;&gt;
+    &lt;option value=&quot;1&quot; disabled selected&gt;Choose your option&lt;/option&gt;
+    &lt;option value=&quot;2&quot; data-icon=&quot;https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg&quot; class=&quot;rounded-circle&quot;&gt;example 1&lt;/option&gt;
+    &lt;option value=&quot;3&quot; data-icon=&quot;https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg&quot; class=&quot;rounded-circle&quot;&gt;example 2&lt;/option&gt;
+    &lt;option value=&quot;4&quot; data-icon=&quot;https://mdbootstrap.com/img/Photos/Avatars/avatar-3.jpg&quot; class=&quot;rounded-circle&quot;&gt;example 1&lt;/option&gt;
+&lt;/select&gt;
+                </code>
+            </pre>
+        </section>
+        <!--Section: Code-->
+
+    </section>
+    <!--/Section: -->    
+
+    <hr class="my-5">
+
+    <!--Section: -->
     <section id="multiselect">
 
         <!--Title-->
@@ -1012,7 +1099,7 @@
                         <option value="3">Poland</option>
                         <option value="3">Japan</option>
                     </select>
-                    <label>Label example</label>
+                    <label>Example label</label>
                 
                 </div>
                 <!-- Grid column -->
