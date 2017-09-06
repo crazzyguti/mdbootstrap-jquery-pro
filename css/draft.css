@@ -301,3 +301,6 @@
 
 .sth .img-height {
   height: 250px; }
+
+input[type=range].no-border {
+  border: none; }
