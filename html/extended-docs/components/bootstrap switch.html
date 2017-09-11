@@ -14,6 +14,51 @@
     <link rel="stylesheet" href="../../../css/mdb.css">
     <!-- Your custom styles (optional) -->
     <style type="text/css">
+        .switch.primary-switch label input[type=checkbox]:checked + .lever {
+            background-color: #689DF6;
+        }
+        .switch.primary-switch label input[type=checkbox]:checked + .lever:after {
+            background-color: #4285F4;
+        }
+        .switch.default-switch label input[type=checkbox]:checked + .lever {
+            background-color: #4DCCBF;
+        }
+        .switch.default-switch label input[type=checkbox]:checked + .lever:after {
+            background-color: #2BBBAD;
+        }
+        .switch.secondary-switch label input[type=checkbox]:checked + .lever {
+            background-color: #C791E2;
+        }
+        .switch.secondary-switch label input[type=checkbox]:checked + .lever:after {
+            background-color: #a6c;
+        }
+        .switch.success-switch label input[type=checkbox]:checked + .lever {
+            background-color: #2ACC6C;
+        }
+        .switch.success-switch label input[type=checkbox]:checked + .lever:after {
+            background-color: #00C851;
+        }
+        .switch.info-switch label input[type=checkbox]:checked + .lever {
+            background-color: #59C3EB;
+        }
+        .switch.info-switch label input[type=checkbox]:checked + .lever:after {
+            background-color: #33b5e5;
+        }
+        .switch.warning-switch label input[type=checkbox]:checked + .lever {
+            background-color: #FFA339;
+        }
+        .switch.warning-switch label input[type=checkbox]:checked + .lever:after {
+            background-color: #F80;
+        }
+        .switch.danger-switch label input[type=checkbox]:checked + .lever {
+            background-color: #FF606F;
+        }
+        .switch.danger-switch label input[type=checkbox]:checked + .lever:after {
+            background-color: #ff3547;
+        }
+
+
+
         .switch.teal-switch label input[type=checkbox]:checked + .lever {
             background-color: #b2dfdb;
         }
@@ -39,10 +84,10 @@
             background-color: #ffd54f;
         }
         .switch.mdb-color-switch label input[type=checkbox]:checked + .lever {
-            background-color: #b1bace;
+            background-color: #618FB5;
         }
         .switch.mdb-color-switch label input[type=checkbox]:checked + .lever:after {
-            background-color: #929fba;
+            background-color: #3F729B;
         }
         .switch.indigo-switch label input[type=checkbox]:checked + .lever {
             background-color: #9fa8da;
@@ -50,22 +95,16 @@
         .switch.indigo-switch label input[type=checkbox]:checked + .lever:after {
             background-color: #7986cb;
         }
-        .switch.red-switch label input[type=checkbox]:checked + .lever {
-            background-color: #ef9a9a;
-        }
-        .switch.red-switch label input[type=checkbox]:checked + .lever:after {
-            background-color: #e57373;
-        }
-        .switch.primary-switch label input[type=checkbox]:checked + .lever {
+        .switch.blue-white-switch label input[type=checkbox]:checked + .lever {
             background-color: #2196f3;
         }
-        .switch.primary-switch label input[type=checkbox]:checked + .lever:after {
+        .switch.blue-white-switch label input[type=checkbox]:checked + .lever:after {
             background-color: #fff;
         }
-        .switch.primary-switch label .lever  {
+        .switch.blue-white-switch label .lever  {
             background-color: #ccc;
         }
-        .switch.primary-switch label .lever:after {
+        .switch.blue-white-switch label .lever:after {
             background-color: #fff;
         }
 
@@ -217,87 +256,181 @@
         <!--Section: Live preview-->
         <section>
 
-            <!-- Switch -->
-            <div class="switch amber-switch">
-                <label>
-                    Off
-                    <input type="checkbox" checked="checked">
-                    <span class="lever"></span>
-                    On
-                </label>
-            </div>
+            <!-- Grid row -->
+            <div class="row">
             
-            <!-- Switch -->
-            <div class="switch pink-switch">
-                <label>
-                    Off
-                    <input type="checkbox" checked="checked">
-                    <span class="lever"></span>
-                    On
-                </label>
-            </div>
+                <!-- Grid column -->
+                <div class="col-md-3">
             
-            <!-- Switch -->
-            <div class="switch indigo-switch">
-                <label>
-                    Off
-                    <input type="checkbox" checked="checked">
-                    <span class="lever"></span>
-                    On
-                </label>
-            </div>
-            
-            <!-- Switch -->
-            <div class="switch red-switch">
-                <label>
-                    Off
-                    <input type="checkbox" checked="checked">
-                    <span class="lever"></span>
-                    On
-                </label>
-            </div>
-            
-            <!-- Switch -->
-            <div class="switch blue-switch">
-                <label>
-                    Off
-                    <input type="checkbox" checked="checked">
-                    <span class="lever"></span>
-                    On
-                </label>
-            </div>
+                    <!-- Switch -->
+                    <div class="switch primary-switch">
+                        <label>
+                            Off
+                            <input type="checkbox" checked="checked">
+                            <span class="lever"></span>
+                            On
+                        </label>
+                    </div>
 
-            <!-- Switch -->
-            <div class="switch teal-switch">
-                <label>
-                    Off
-                    <input type="checkbox" checked="checked">
-                    <span class="lever"></span>
-                    On
-                </label>
-            </div>
+                    <!-- Switch -->
+                    <div class="switch default-switch">
+                        <label>
+                            Off
+                            <input type="checkbox" checked="checked">
+                            <span class="lever"></span>
+                            On
+                        </label>
+                    </div>
+
+                    <!-- Switch -->
+                    <div class="switch secondary-switch">
+                        <label>
+                            Off
+                            <input type="checkbox" checked="checked">
+                            <span class="lever"></span>
+                            On
+                        </label>
+                    </div>
+
+                    <!-- Switch -->
+                    <div class="switch success-switch">
+                        <label>
+                            Off
+                            <input type="checkbox" checked="checked">
+                            <span class="lever"></span>
+                            On
+                        </label>
+                    </div>
+
+                    <!-- Switch -->
+                    <div class="switch info-switch">
+                        <label>
+                            Off
+                            <input type="checkbox" checked="checked">
+                            <span class="lever"></span>
+                            On
+                        </label>
+                    </div>
+
+                    <!-- Switch -->
+                    <div class="switch warning-switch">
+                        <label>
+                            Off
+                            <input type="checkbox" checked="checked">
+                            <span class="lever"></span>
+                            On
+                        </label>
+                    </div>
+
+                    <!-- Switch -->
+                    <div class="switch danger-switch">
+                        <label>
+                            Off
+                            <input type="checkbox" checked="checked">
+                            <span class="lever"></span>
+                            On
+                        </label>
+                    </div>
             
-            <!-- Switch -->
-            <div class="switch mdb-color-switch">
-                <label>
-                    Off
-                    <input type="checkbox" checked="checked">
-                    <span class="lever"></span>
-                    On
-                </label>
+                </div>
+                <!-- Grid column -->
+            
+                <!-- Grid column -->
+                <div class="col-md-3">
+            
+                    <!-- Switch -->
+                    <div class="switch amber-switch">
+                        <label>
+                            Off
+                            <input type="checkbox" checked="checked">
+                            <span class="lever"></span>
+                            On
+                        </label>
+                    </div>
+                    
+                    <!-- Switch -->
+                    <div class="switch mdb-color-switch">
+                        <label>
+                            Off
+                            <input type="checkbox" checked="checked">
+                            <span class="lever"></span>
+                            On
+                        </label>
+                    </div>
+                    
+                    <!-- Switch -->
+                    <div class="switch teal-switch">
+                        <label>
+                            Off
+                            <input type="checkbox" checked="checked">
+                            <span class="lever"></span>
+                            On
+                        </label>
+                    </div>
+                    
+                    <!-- Switch -->
+                    <div class="switch indigo-switch">
+                        <label>
+                            Off
+                            <input type="checkbox" checked="checked">
+                            <span class="lever"></span>
+                            On
+                        </label>
+                    </div>
+                    
+                    <!-- Switch -->
+                    <div class="switch pink-switch">
+                        <label>
+                            Off
+                            <input type="checkbox" checked="checked">
+                            <span class="lever"></span>
+                            On
+                        </label>
+                    </div>
+
+                    <!-- Switch -->
+                    <div class="switch blue-switch">
+                        <label>
+                            Off
+                            <input type="checkbox" checked="checked">
+                            <span class="lever"></span>
+                            On
+                        </label>
+                    </div>
+                    
+                    <!-- Switch -->
+                    <div class="switch blue-white-switch">
+                        <label>
+                            Off
+                            <input type="checkbox" checked="checked">
+                            <span class="lever"></span>
+                            On
+                        </label>
+                    </div>
+            
+                </div>
+                <!-- Grid column -->
+            
             </div>
+            <!-- Grid row -->
 
             <p class="my-4"><strong>Add one of the following classes:</strong></p>
 
             <ul class="list-unstyled">
+                <li><code>.primary-switch</code></li>
+                <li><code>.secondary-switch</code></li>
+                <li><code>.default-switch</code></li>
+                <li><code>.info-switch</code></li>
+                <li><code>.warning-switch</code></li>
+                <li><code>.danger-switch</code></li>
+                <li><code>.success-switch</code></li>
+                <li><code>.blue-white-switch</code></li>
                 <li><code>.teal-switch</code></li>
                 <li><code>.pink-switch</code></li>
                 <li><code>.amber-switch</code></li>
-                <li><code>.red-switch</code></li>
                 <li><code>.blue-switch</code></li>
                 <li><code>.indigo-switch</code></li>
                 <li><code>.mdb-color-switch</code></li>
-                <li><code>.primary-switch</code></li>
             </ul>
 
         </section>
@@ -306,6 +439,48 @@
         <section>
             <pre class="code-toolbar">
                 <code class="language-css">
+.switch.primary-switch label input[type=checkbox]:checked + .lever {
+    background-color: #689DF6;
+}
+.switch.primary-switch label input[type=checkbox]:checked + .lever:after {
+    background-color: #4285F4;
+}
+.switch.default-switch label input[type=checkbox]:checked + .lever {
+    background-color: #4DCCBF;
+}
+.switch.default-switch label input[type=checkbox]:checked + .lever:after {
+    background-color: #2BBBAD;
+}
+.switch.secondary-switch label input[type=checkbox]:checked + .lever {
+    background-color: #C791E2;
+}
+.switch.secondary-switch label input[type=checkbox]:checked + .lever:after {
+    background-color: #a6c;
+}
+.switch.success-switch label input[type=checkbox]:checked + .lever {
+    background-color: #2ACC6C;
+}
+.switch.success-switch label input[type=checkbox]:checked + .lever:after {
+    background-color: #00C851;
+}
+.switch.info-switch label input[type=checkbox]:checked + .lever {
+    background-color: #59C3EB;
+}
+.switch.info-switch label input[type=checkbox]:checked + .lever:after {
+    background-color: #33b5e5;
+}
+.switch.warning-switch label input[type=checkbox]:checked + .lever {
+    background-color: #FFA339;
+}
+.switch.warning-switch label input[type=checkbox]:checked + .lever:after {
+    background-color: #F80;
+}
+.switch.danger-switch label input[type=checkbox]:checked + .lever {
+    background-color: #FF606F;
+}
+.switch.danger-switch label input[type=checkbox]:checked + .lever:after {
+    background-color: #ff3547;
+}
 .switch.teal-switch label input[type=checkbox]:checked + .lever {
     background-color: #b2dfdb;
 }
@@ -331,10 +506,10 @@
     background-color: #ffd54f;
 }
 .switch.mdb-color-switch label input[type=checkbox]:checked + .lever {
-    background-color: #b1bace;
+    background-color: #618FB5;
 }
 .switch.mdb-color-switch label input[type=checkbox]:checked + .lever:after {
-    background-color: #929fba;
+    background-color: #3F729B;
 }
 .switch.indigo-switch label input[type=checkbox]:checked + .lever {
     background-color: #9fa8da;
@@ -342,22 +517,16 @@
 .switch.indigo-switch label input[type=checkbox]:checked + .lever:after {
     background-color: #7986cb;
 }
-.switch.red-switch label input[type=checkbox]:checked + .lever {
-    background-color: #ef9a9a;
-}
-.switch.red-switch label input[type=checkbox]:checked + .lever:after {
-    background-color: #e57373;
-}
-.switch.primary-switch label input[type=checkbox]:checked + .lever {
+.switch.blue-white-switch label input[type=checkbox]:checked + .lever {
     background-color: #2196f3;
 }
-.switch.primary-switch label input[type=checkbox]:checked + .lever:after {
+.switch.blue-white-switch label input[type=checkbox]:checked + .lever:after {
     background-color: #fff;
 }
-.switch.primary-switch label .lever  {
+.switch.blue-white-switch label .lever  {
     background-color: #ccc;
 }
-.switch.primary-switch label .lever:after {
+.switch.blue-white-switch label .lever:after {
     background-color: #fff;
 }
                 </code>
@@ -407,7 +576,7 @@
                 <div class="col-md-3">
             
                     <!-- Switch -->
-                    <div class="switch square primary-switch">
+                    <div class="switch square blue-white-switch">
                         <label>
                         Off
                             <input type="checkbox">
@@ -417,7 +586,7 @@
                     </div>
 
                     <!-- Switch -->
-                    <div class="switch square primary-switch">
+                    <div class="switch square blue-white-switch">
                         <label>
                         Off
                             <input type="checkbox" checked="checked">
@@ -433,7 +602,7 @@
                 <div class="col-md-3">
             
                     <!-- Switch -->
-                    <div class="switch round primary-switch">
+                    <div class="switch round blue-white-switch">
                         <label>
                             Off
                             <input type="checkbox">
@@ -443,7 +612,7 @@
                     </div>
                     
                     <!-- Switch -->
-                    <div class="switch round primary-switch">
+                    <div class="switch round blue-white-switch">
                         <label>
                         Off
                             <input type="checkbox" checked="checked">
@@ -475,7 +644,7 @@
                     </div>
 
                     <!-- Switch -->
-                    <div class="switch square teal-switch">
+                    <div class="switch square default-switch">
                         <label>
                             <input type="checkbox" checked="checked">
                             <span class="lever"></span>
@@ -491,7 +660,7 @@
                     </div>
 
                     <!-- Switch -->
-                    <div class="switch square red-switch">
+                    <div class="switch square danger-switch">
                         <label>
                             <input type="checkbox" checked="checked">
                             <span class="lever"></span>
@@ -505,7 +674,7 @@
                 <div class="col-md-3">
             
                     <!-- Switch -->
-                    <div class="switch round indigo-switch">
+                    <div class="switch round success-switch">
                         <label>
                             <input type="checkbox" checked="checked">
                             <span class="lever"></span>
@@ -513,7 +682,7 @@
                     </div>
 
                     <!-- Switch -->
-                    <div class="switch round amber-switch">
+                    <div class="switch round warning-switch">
                         <label>
                             <input type="checkbox" checked="checked">
                             <span class="lever"></span>
@@ -521,7 +690,7 @@
                     </div>
 
                     <!-- Switch -->
-                    <div class="switch round pink-switch">
+                    <div class="switch round secondary-switch">
                         <label>
                             <input type="checkbox" checked="checked">
                             <span class="lever"></span>
@@ -529,7 +698,7 @@
                     </div>
 
                     <!-- Switch -->
-                    <div class="switch round blue-switch">
+                    <div class="switch round primary-switch">
                         <label>
                             <input type="checkbox" checked="checked">
                             <span class="lever"></span>
@@ -582,7 +751,7 @@
             <pre class="code-toolbar">
                 <code class="language-markup">
 &lt;!-- Switch --&gt;
-&lt;div class=&quot;switch square primary-switch&quot;&gt;
+&lt;div class=&quot;switch square blue-white-switch&quot;&gt;
     &lt;label&gt;
     Off
         &lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot;&gt;
@@ -592,7 +761,7 @@
 &lt;/div&gt;
 
 &lt;!-- Switch --&gt;
-&lt;div class=&quot;switch round primary-switch&quot;&gt;
+&lt;div class=&quot;switch round blue-white-switch&quot;&gt;
     &lt;label&gt;
     Off
         &lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot;&gt;
@@ -656,7 +825,7 @@
                                     <p class="font-small text-muted">Would you like to receive our newsletter?</p>
 
                                     <!-- Switch -->
-                                    <div class="switch primary-switch text-muted font-small">
+                                    <div class="switch blue-white-switch text-muted font-small">
                                         <label>
                                         No
                                             <input type="checkbox" checked="checked">
@@ -728,7 +897,7 @@
                 &lt;p class=&quot;font-small text-muted&quot;&gt;Would you like to receive our newsletter?&lt;/p&gt;
 
                 &lt;!-- Switch --&gt;
-                &lt;div class=&quot;switch primary-switch text-muted font-small&quot;&gt;
+                &lt;div class=&quot;switch blue-white-switch text-muted font-small&quot;&gt;
                     &lt;label&gt;
                     No
                         &lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot;&gt;
@@ -808,7 +977,7 @@
                                         <div class="d-flex justify-content-start pt-3">
                                             <p class="mr-4 mt-1">Notification 1</p>
                                             <!-- Switch -->
-                                            <div class="switch round primary-switch text-muted font-small">
+                                            <div class="switch round blue-white-switch text-muted font-small">
                                                 <label>
                                                 Off
                                                     <input type="checkbox">
@@ -820,7 +989,7 @@
                                         <div class="d-flex justify-content-start pb-3">
                                             <p class="mr-4 mt-1">Notification 2</p>
                                             <!-- Switch -->
-                                            <div class="switch round primary-switch text-muted font-small">
+                                            <div class="switch round blue-white-switch text-muted font-small">
                                                 <label>
                                                 Off
                                                     <input type="checkbox">
@@ -866,7 +1035,7 @@
                                     <div class="d-flex justify-content-start pt-3">
                                         <p class="mr-4 mt-1">Notification 1</p>
                                         <!-- Switch -->
-                                        <div class="switch round primary-switch text-muted font-small">
+                                        <div class="switch round blue-white-switch text-muted font-small">
                                             <label>
                                             Off
                                                 <input type="checkbox">
@@ -878,7 +1047,7 @@
                                     <div class="d-flex justify-content-start pb-3">
                                         <p class="mr-4 mt-1">Notification 2</p>
                                         <!-- Switch -->
-                                        <div class="switch round primary-switch text-muted font-small">
+                                        <div class="switch round blue-white-switch text-muted font-small">
                                             <label>
                                             Off
                                                 <input type="checkbox">
@@ -958,7 +1127,7 @@ document.getElementById("resetBtn").onclick = function () {
                     &lt;div class=&quot;d-flex justify-content-start pt-3&quot;&gt;
                         &lt;p class=&quot;mr-4 mt-1&quot;&gt;Notification 1&lt;/p&gt;
                         &lt;!-- Switch --&gt;
-                        &lt;div class=&quot;switch round primary-switch text-muted font-small&quot;&gt;
+                        &lt;div class=&quot;switch round blue-white-switch text-muted font-small&quot;&gt;
                             &lt;label&gt;
                             Off
                                 &lt;input type=&quot;checkbox&quot;&gt;
@@ -970,7 +1139,7 @@ document.getElementById("resetBtn").onclick = function () {
                     &lt;div class=&quot;d-flex justify-content-start pb-3&quot;&gt;
                         &lt;p class=&quot;mr-4 mt-1&quot;&gt;Notification 2&lt;/p&gt;
                         &lt;!-- Switch --&gt;
-                        &lt;div class=&quot;switch round primary-switch text-muted font-small&quot;&gt;
+                        &lt;div class=&quot;switch round blue-white-switch text-muted font-small&quot;&gt;
                             &lt;label&gt;
                             Off
                                 &lt;input type=&quot;checkbox&quot;&gt;
