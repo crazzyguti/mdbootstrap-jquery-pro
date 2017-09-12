@@ -89,6 +89,16 @@
 		  	&.v-2 {
 				a {
 					padding: 15px 10px 10px 35px;
+					&.news-title-2 {
+			  			font-weight: 500;
+			  			font-size: 1.1rem;
+			  			line-height: 1.5;
+			  			transition: .2s;
+			  			color: #fff!important;
+			  			&:hover {
+			  				color: #d0d6e2!important;
+			  			}
+			  		}
 				}
 			  	.sub-menu {
 			  		ul {
@@ -126,6 +136,9 @@
 			  		padding-bottom: 1rem;
 			  		margin-bottom: 1rem;
 			  		border-bottom: 1px solid;
+			  	}
+			  	.font-small {
+			  		font-size: 0.85rem;
 			  	}
 		  	}
 		}

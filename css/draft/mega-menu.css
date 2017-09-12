@@ -60,6 +60,15 @@
   border-radius: 0; }
   .navbar .dropdown-menu.mega-menu.v-2 a {
     padding: 15px 10px 10px 35px; }
+    .navbar .dropdown-menu.mega-menu.v-2 a.news-title-2 {
+      font-weight: 500;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      -webkit-transition: .2s;
+      transition: .2s;
+      color: #fff !important; }
+      .navbar .dropdown-menu.mega-menu.v-2 a.news-title-2:hover {
+        color: #d0d6e2 !important; }
   .navbar .dropdown-menu.mega-menu.v-2 .sub-menu ul {
     list-style: none; }
     .navbar .dropdown-menu.mega-menu.v-2 .sub-menu ul.caret-style li {
@@ -84,6 +93,8 @@
     padding-bottom: 1rem;
     margin-bottom: 1rem;
     border-bottom: 1px solid; }
+  .navbar .dropdown-menu.mega-menu.v-2 .font-small {
+    font-size: 0.85rem; }
 
 .navbar .mega-dropdown {
   position: static !important;
