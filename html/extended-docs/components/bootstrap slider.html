@@ -297,20 +297,20 @@ slider.on("input change", function(e) {
         <!--Section: Live preview-->
         <section>
 
-            <form class="range-field my-4">
-                <input class="w-25" type="range" min="0" max="100" />
+            <form class="range-field my-4 w-25">
+                <input type="range" min="0" max="100" />
             </form>
 
-            <form class="range-field my-4">
-                <input class="w-50" type="range" min="0" max="100" />
+            <form class="range-field my-4 w-50">
+                <input type="range" min="0" max="100" />
             </form>
 
-            <form class="range-field my-4">
-                <input class="w-75" type="range" min="0" max="100" />
+            <form class="range-field my-4 w-75">
+                <input type="range" min="0" max="100" />
             </form>
 
-            <form class="range-field my-4">
-                <input class="w-100" type="range" min="0" max="100" />
+            <form class="range-field my-4 w-100">
+                <input type="range" min="0" max="100" />
             </form>
 
         </section>
@@ -320,20 +320,20 @@ slider.on("input change", function(e) {
         <section>
             <pre class="code-toolbar">
                 <code class="language-markup">
-&lt;form class=&quot;range-field my-4&quot;&gt;
-    &lt;input class=&quot;w-25&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; /&gt;
+&lt;form class=&quot;range-field my-4 w-25&quot;&gt;
+    &lt;input type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; /&gt;
 &lt;/form&gt;
 
-&lt;form class=&quot;range-field my-4&quot;&gt;
-    &lt;input class=&quot;w-50&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; /&gt;
+&lt;form class=&quot;range-field my-4 w-50&quot;&gt;
+    &lt;input type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; /&gt;
 &lt;/form&gt;
 
-&lt;form class=&quot;range-field my-4&quot;&gt;
-    &lt;input class=&quot;w-75&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; /&gt;
+&lt;form class=&quot;range-field my-4 w-75&quot;&gt;
+    &lt;input type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; /&gt;
 &lt;/form&gt;
 
-&lt;form class=&quot;range-field my-4&quot;&gt;
-    &lt;input class=&quot;w-100&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; /&gt;
+&lt;form class=&quot;range-field my-4 w-100&quot;&gt;
+    &lt;input type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; /&gt;
 &lt;/form&gt;
                 </code>
             </pre>
@@ -366,23 +366,29 @@ slider.on("input change", function(e) {
                     <div class="card indigo lighten-5">
                         <div class="card-body">
                             
-                            <form class="range-field my-4">
-                                <span class="font-bold blue-text mr-2">0</span>
-                                <input class="w-25 no-border" type="range" min="0" max="100" />
-                                <span class="font-bold blue-text ml-2">100</span>
-                            </form>
-
-                            <form class="range-field my-4">
+                            <div class="d-flex justify-content-center my-4">
                                 <span class="font-bold indigo-text mr-2">0</span>
-                                <input class="w-50 no-border" type="range" min="0" max="100" />
+                                    <form class="range-field w-25">
+                                        <input class="no-border" type="range" min="0" max="100" />
+                                    </form>
                                 <span class="font-bold indigo-text ml-2">100</span>
-                            </form>
+                            </div>
 
-                            <form class="range-field my-4">
+                            <div class="d-flex justify-content-center my-4">
+                                <span class="font-bold blue-text mr-2">0</span>
+                                    <form class="range-field w-50">
+                                        <input class="no-border" type="range" min="0" max="100" />
+                                    </form>
+                                <span class="font-bold blue-text ml-2">100</span>
+                            </div>
+
+                            <div class="d-flex justify-content-center my-4">
                                 <span class="font-bold purple-text mr-2">0</span>
-                                <input class="w-75 no-border" type="range" min="0" max="100" />
+                                    <form class="range-field w-75">
+                                        <input class="no-border" type="range" min="0" max="100" />
+                                    </form>
                                 <span class="font-bold purple-text ml-2">100</span>
-                            </form>
+                            </div>
 
                         </div>
                     </div>
@@ -414,23 +420,29 @@ input[type=range].no-border {
 &lt;div class=&quot;card indigo lighten-5&quot;&gt;
     &lt;div class=&quot;card-body&quot;&gt;
         
-        &lt;form class=&quot;range-field my-4&quot;&gt;
-            &lt;span class=&quot;font-bold blue-text mr-2&quot;&gt;0&lt;/span&gt;
-            &lt;input class=&quot;w-25 no-border&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; /&gt;
-            &lt;span class=&quot;font-bold blue-text ml-2&quot;&gt;100&lt;/span&gt;
-        &lt;/form&gt;
-
-        &lt;form class=&quot;range-field my-4&quot;&gt;
+        &lt;div class=&quot;d-flex justify-content-center my-4&quot;&gt;
             &lt;span class=&quot;font-bold indigo-text mr-2&quot;&gt;0&lt;/span&gt;
-            &lt;input class=&quot;w-50 no-border&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; /&gt;
+                &lt;form class=&quot;range-field w-25&quot;&gt;
+                    &lt;input class=&quot;no-border&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; /&gt;
+                &lt;/form&gt;
             &lt;span class=&quot;font-bold indigo-text ml-2&quot;&gt;100&lt;/span&gt;
-        &lt;/form&gt;
+        &lt;/div&gt;
 
-        &lt;form class=&quot;range-field my-4&quot;&gt;
+        &lt;div class=&quot;d-flex justify-content-center my-4&quot;&gt;
+            &lt;span class=&quot;font-bold blue-text mr-2&quot;&gt;0&lt;/span&gt;
+                &lt;form class=&quot;range-field w-50&quot;&gt;
+                    &lt;input class=&quot;no-border&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; /&gt;
+                &lt;/form&gt;
+            &lt;span class=&quot;font-bold blue-text ml-2&quot;&gt;100&lt;/span&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;d-flex justify-content-center my-4&quot;&gt;
             &lt;span class=&quot;font-bold purple-text mr-2&quot;&gt;0&lt;/span&gt;
-            &lt;input class=&quot;w-75 no-border&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; /&gt;
+                &lt;form class=&quot;range-field w-75&quot;&gt;
+                    &lt;input class=&quot;no-border&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; /&gt;
+                &lt;/form&gt;
             &lt;span class=&quot;font-bold purple-text ml-2&quot;&gt;100&lt;/span&gt;
-        &lt;/form&gt;
+        &lt;/div&gt;
 
     &lt;/div&gt;
 &lt;/div&gt;
@@ -470,24 +482,30 @@ input[type=range].no-border {
                         <div class="card-body text-center">
 
                             <h3 class="indigo-text mt-4"><strong>Choose your slider option</strong></h3>
-                            
-                            <form class="range-field mb-4 mt-4 pt-3">
+
+                            <div class="d-flex justify-content-center mb-4 mt-4 pt-3">
                                 <span class="font-bold blue-text mr-2"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></span>
-                                <input class="w-75 no-border" type="range" min="0" max="100" />
+                                    <form class="range-field w-75">
+                                        <input class="no-border" type="range" min="0" max="100" />
+                                    </form>
                                 <span class="font-bold blue-text ml-2"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></span>
-                            </form>
+                            </div>
 
-                            <form class="range-field my-4">
+                            <div class="d-flex justify-content-center mb-4 mt-4 pt-3">
                                 <span class="font-bold indigo-text mr-2"><i class="fa fa-dollar" aria-hidden="true"></i></span>
-                                <input class="w-75 no-border" type="range" min="0" max="100" />
+                                    <form class="range-field w-75">
+                                        <input class="no-border" type="range" min="0" max="100" />
+                                    </form>
                                 <span class="font-bold indigo-text ml-2"><i class="fa fa-eur" aria-hidden="true"></i></span>
-                            </form>
+                            </div>
 
-                            <form class="range-field my-4">
+                            <div class="d-flex justify-content-center mb-4 mt-4 pt-3">
                                 <span class="font-bold purple-text mr-2"><i class="fa fa-minus" aria-hidden="true"></i></span>
-                                <input class="w-75 no-border" type="range" min="0" max="100" />
+                                    <form class="range-field w-75">
+                                        <input class="no-border" type="range" min="0" max="100" />
+                                    </form>
                                 <span class="font-bold purple-text ml-2"><i class="fa fa-plus" aria-hidden="true"></i></span>
-                            </form>
+                            </div>
 
                         </div>
                     </div>
@@ -518,33 +536,39 @@ input[type=range].no-border {
                 <code class="language-markup">
 &lt;div class=&quot;card blue-grey lighten-5&quot;&gt;
 
-    &lt;!--Card image--&gt;
-    &lt;img class=&quot;img-fluid&quot; src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%282%29.jpg&quot; alt=&quot;Card image cap&quot;&gt;
+        &lt;!--Card image--&gt;
+        &lt;img class=&quot;img-fluid&quot; src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%282%29.jpg&quot; alt=&quot;Card image cap&quot;&gt;
 
-    &lt;div class=&quot;card-body text-center&quot;&gt;
+        &lt;div class=&quot;card-body text-center&quot;&gt;
 
-        &lt;h3 class=&quot;indigo-text mt-4&quot;&gt;&lt;strong&gt;Choose your slider option&lt;/strong&gt;&lt;/h3&gt;
-        
-        &lt;form class=&quot;range-field mb-4 mt-4 pt-3&quot;&gt;
-            &lt;span class=&quot;font-bold blue-text mr-2&quot;&gt;&lt;i class=&quot;fa fa-thumbs-o-down&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
-            &lt;input class=&quot;w-75 no-border&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; /&gt;
-            &lt;span class=&quot;font-bold blue-text ml-2&quot;&gt;&lt;i class=&quot;fa fa-thumbs-o-up&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
-        &lt;/form&gt;
+            &lt;h3 class=&quot;indigo-text mt-4&quot;&gt;&lt;strong&gt;Choose your slider option&lt;/strong&gt;&lt;/h3&gt;
 
-        &lt;form class=&quot;range-field my-4&quot;&gt;
-            &lt;span class=&quot;font-bold indigo-text mr-2&quot;&gt;&lt;i class=&quot;fa fa-dollar&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
-            &lt;input class=&quot;w-75 no-border&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; /&gt;
-            &lt;span class=&quot;font-bold indigo-text ml-2&quot;&gt;&lt;i class=&quot;fa fa-eur&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
-        &lt;/form&gt;
+            &lt;div class=&quot;d-flex justify-content-center mb-4 mt-4 pt-3&quot;&gt;
+                &lt;span class=&quot;font-bold blue-text mr-2&quot;&gt;&lt;i class=&quot;fa fa-thumbs-o-down&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                    &lt;form class=&quot;range-field w-75&quot;&gt;
+                        &lt;input class=&quot;no-border&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; /&gt;
+                    &lt;/form&gt;
+                &lt;span class=&quot;font-bold blue-text ml-2&quot;&gt;&lt;i class=&quot;fa fa-thumbs-o-up&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+            &lt;/div&gt;
 
-        &lt;form class=&quot;range-field my-4&quot;&gt;
-            &lt;span class=&quot;font-bold purple-text mr-2&quot;&gt;&lt;i class=&quot;fa fa-minus&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
-            &lt;input class=&quot;w-75 no-border&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; /&gt;
-            &lt;span class=&quot;font-bold purple-text ml-2&quot;&gt;&lt;i class=&quot;fa fa-plus&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
-        &lt;/form&gt;
+            &lt;div class=&quot;d-flex justify-content-center mb-4 mt-4 pt-3&quot;&gt;
+                &lt;span class=&quot;font-bold indigo-text mr-2&quot;&gt;&lt;i class=&quot;fa fa-dollar&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                    &lt;form class=&quot;range-field w-75&quot;&gt;
+                        &lt;input class=&quot;no-border&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; /&gt;
+                    &lt;/form&gt;
+                &lt;span class=&quot;font-bold indigo-text ml-2&quot;&gt;&lt;i class=&quot;fa fa-eur&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+            &lt;/div&gt;
 
+            &lt;div class=&quot;d-flex justify-content-center mb-4 mt-4 pt-3&quot;&gt;
+                &lt;span class=&quot;font-bold purple-text mr-2&quot;&gt;&lt;i class=&quot;fa fa-minus&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                    &lt;form class=&quot;range-field w-75&quot;&gt;
+                        &lt;input class=&quot;no-border&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; /&gt;
+                    &lt;/form&gt;
+                &lt;span class=&quot;font-bold purple-text ml-2&quot;&gt;&lt;i class=&quot;fa fa-plus&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;
                 </code>
             </pre>
         </section>
