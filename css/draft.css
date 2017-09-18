@@ -306,8 +306,7 @@ input[type=range].no-border {
   border: none; }
 
 .navbar .mega-dropdown {
-  position: static !important;
-  width: 100%; }
+  position: static !important; }
 
 .navbar .dropdown-menu.mega-menu {
   width: 100%;
@@ -353,13 +352,7 @@ input[type=range].no-border {
     font-size: 0.85rem; }
 
 .navbar .mega-dropdown {
-  position: static !important;
-  width: 100%; }
-  .navbar .mega-dropdown .dropdown-toggle.no-caret:after {
-    content: none;
-    border-top: 0;
-    border-right: 0;
-    border-left: 0; }
+  position: static !important; }
 
 .navbar .dropdown-menu.mega-menu {
   width: 100%;
@@ -404,8 +397,7 @@ input[type=range].no-border {
     font-size: 0.85rem; }
 
 .navbar .mega-dropdown {
-  position: static !important;
-  width: 100%; }
+  position: static !important; }
 
 .navbar .dropdown-menu.mega-menu {
   width: 100%;
