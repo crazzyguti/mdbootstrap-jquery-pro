@@ -473,7 +473,7 @@ input[type=range].no-border {
       content: " ";
       width: 100%;
       height: 2px;
-      background-color: #455a64; }
+      background-color: #7283a7; }
     .steps-form-2 .steps-row-2 .steps-step-2 {
       display: table-cell;
       text-align: center;
@@ -486,22 +486,22 @@ input[type=range].no-border {
       .steps-form-2 .steps-row-2 .steps-step-2 .btn-circle-2 {
         width: 70px;
         height: 70px;
-        border: 2px solid #37474F;
+        border: 2px solid #59698D;
         background-color: white !important;
-        color: #37474F !important;
+        color: #59698D !important;
         border-radius: 50%;
         padding: 22px 18px 15px 18px;
         margin-top: -22px; }
         .steps-form-2 .steps-row-2 .steps-step-2 .btn-circle-2:hover {
-          border: 2px solid #0099CC;
-          color: #0099CC !important;
+          border: 2px solid #4285F4;
+          color: #4285F4 !important;
           background-color: white !important; }
         .steps-form-2 .steps-row-2 .steps-step-2 .btn-circle-2 .fa {
           font-size: 1.7rem; }
 
 .steps-form-3 {
   width: 2px;
-  height: 600px;
+  height: 470px;
   position: relative; }
   .steps-form-3 .steps-row-3 {
     display: -webkit-box;
@@ -524,9 +524,9 @@ input[type=range].no-border {
       content: "";
       width: 2px;
       height: 100%;
-      background-color: #455a64; }
+      background-color: #7283a7; }
     .steps-form-3 .steps-row-3 .steps-step-3 {
-      height: 200px;
+      height: 150px;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -541,17 +541,17 @@ input[type=range].no-border {
         opacity: 1 !important;
         filter: alpha(opacity=100) !important; }
       .steps-form-3 .steps-row-3 .steps-step-3 .btn-circle-3 {
-        width: 70px;
-        height: 70px;
-        border: 2px solid #37474F;
+        width: 60px;
+        height: 60px;
+        border: 2px solid #59698D;
         background-color: white !important;
-        color: #37474F !important;
+        color: #59698D !important;
         border-radius: 50%;
-        padding: 22px 18px 15px 18px;
+        padding: 18px 18px 15px 15px;
         margin-top: -22px; }
         .steps-form-3 .steps-row-3 .steps-step-3 .btn-circle-3:hover {
-          border: 2px solid #0099CC;
-          color: #0099CC !important;
+          border: 2px solid #4285F4;
+          color: #4285F4 !important;
           background-color: white !important; }
         .steps-form-3 .steps-row-3 .steps-step-3 .btn-circle-3 .fa {
           font-size: 1.7rem; }
