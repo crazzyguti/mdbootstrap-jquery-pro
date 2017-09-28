@@ -58,6 +58,24 @@
             -ms-transform: scale(1);
             transform: scale(1); }
 
+        @media (max-width: 450px) {
+            .gallery {
+                -webkit-column-count: 1;
+                -moz-column-count: 1;
+                column-count: 1;
+                -webkit-column-width: 100%;
+                -moz-column-width: 100%;
+                column-width: 100%;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .btn.filter {
+                padding-left: 1.1rem;
+                padding-right: 1.1rem;
+            }
+        }
+
         .sth .img-height {
           height: 250px; }
 
