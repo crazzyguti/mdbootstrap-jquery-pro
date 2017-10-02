@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design Bootstrap</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../../css/bootstrap/bootstrap.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="../../css/mdb.css">
+    <!-- Your custom styles (optional) -->
+    <style>
+        .list-panel .list-group-item {
+            border: 0;
+            border-bottom: 1px solid #e6e6e6;
+            margin-bottom: 1px;
+        }
+    </style>
+</head>
+
+<body class="fixed-sn mdb-skin bg-skin-lp">
+
+
+    <!--Double navigation-->
+    <header>
+        <!-- Sidebar navigation -->
+        <ul id="slide-out" class="side-nav fixed sn-bg-4 custom-scrollbar">
+            <!-- Logo -->
+            <li>
+                <div class="logo-wrapper waves-light">
+                    <a href="#"><img src="https://mdbootstrap.com/img/logo/mdb-transparent.png" class="img-fluid flex-center"></a>
+                </div>
+            </li>
+            <!--/. Logo -->
+            <!--Social-->
+            <li>
+                <ul class="social">
+                    <li><a class="icons-sm fb-ic"><i class="fa fa-facebook"> </i></a></li>
+                    <li><a class="icons-sm pin-ic"><i class="fa fa-pinterest"> </i></a></li>
+                    <li><a class="icons-sm gplus-ic"><i class="fa fa-google-plus"> </i></a></li>
+                    <li><a class="icons-sm tw-ic"><i class="fa fa-twitter"> </i></a></li>
+                </ul>
+            </li>
+            <!--/Social-->
+            <!--Search Form-->
+            <li>
+                <form class="search-form" role="search">
+                    <div class="form-group waves-light">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                </form>
+            </li>
+            <!--/.Search Form-->
+            <!-- Side navigation links -->
+            <li>
+                <ul class="collapsible collapsible-accordion">
+                    <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-chevron-right"></i> Submit blog<i class="fa fa-angle-down rotate-icon"></i></a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li><a href="#" class="waves-effect">Submit listing</a>
+                                </li>
+                                <li><a href="#" class="waves-effect">Registration form</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-hand-pointer-o"></i> Instruction<i class="fa fa-angle-down rotate-icon"></i></a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li><a href="#" class="waves-effect">For bloggers</a>
+                                </li>
+                                <li><a href="#" class="waves-effect">For authors</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-eye"></i> About<i class="fa fa-angle-down rotate-icon"></i></a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li><a href="#" class="waves-effect">Introduction</a>
+                                </li>
+                                <li><a href="#" class="waves-effect">Monthly meetings</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-envelope-o"></i> Contact me<i class="fa fa-angle-down rotate-icon"></i></a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li><a href="#" class="waves-effect">FAQ</a>
+                                </li>
+                                <li><a href="#" class="waves-effect">Write a message</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <!--/. Side navigation links -->
+            <div class="sidenav-bg mask-strong"></div>
+        </ul>
+        <!--/. Sidebar navigation -->
+
+        <!-- Navbar -->
+        <nav class="navbar fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav">
+            <!-- SideNav slide-out button -->
+            <div class="float-xs-left">
+                <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a>
+            </div>
+            <!-- Breadcrumb-->
+            <div class="breadcrumb-dn mr-auto">
+                <p>Material Design for Bootstrap</p>
+            </div>
+            <ul class="nav navbar-nav nav-flex-icons ml-auto">
+
+                <!-- Dynamic content wrapper -->
+                <li id="dynamicContentWrapper-mainNavbar" class="nav-item">
+                    <a id="example-navbar-dynamic" class="nav-link border border-light rounded" href="https://mdbootstrap.com/getting-started/"><i class="fa fa-download"></i> <span class="clearfix d-none d-sm-inline-block">Example</span></a>
+                </li>
+
+                <!-- Example of static link -->
+                <li class="nav-item">
+                    <a id="navbar-support" class="nav-link" href="https://mdbootstrap.com/getting-started/"><i class="fa fa-comments-o"></i> <span class="clearfix d-none d-sm-inline-block">Support</span></a>
+                </li>
+
+                <!-- MDB Free download -->
+                <li class="nav-item">
+                    <a id="navbar-download" class="nav-link" href="https://mdbootstrap.com/getting-started/"><i class="fa fa-download"></i> <span class="clearfix d-none d-sm-inline-block">Free Download</span></a>
+                </li>
+
+                <!-- Newsletter subscription -->
+                <li class="nav-item">
+                    <a id="navbar-newsletter" class="nav-link" href="https://mdbootstrap.com/newsletter/"><i class="fa fa-envelope-o"></i> <span class="clearfix d-none d-sm-inline-block">Subscribe to newsletter</span></a>
+                </li>
+
+                <!-- MDB Pro -->
+                <li class="nav-item">
+                    <a id="navbar-pro" class="nav-link" href="https://mdbootstrap.com/product/material-design-for-bootstrap-pro/"><i class="fa fa-diamond"></i> <span class="clearfix d-none d-sm-inline-block">MDB Pro</span></a>
+                </li>
+
+                <!-- BrandFlow -->
+                <li class="nav-item">
+                    <a id="navbar-brandflow" class="nav-link" href="https://mdbootstrap.com/marketing-automation/"><i class="fa fa-gears"></i> <span class="clearfix d-none d-sm-inline-block">Bootstrap Automation</span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a id="account-navbar" class="nav-link"><i class="fa fa-user"></i> <span class="clearfix d-none d-sm-inline-block">Account</span></a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.Navbar -->
+    </header>
+    <!--/.Double navigation-->
+
+    <!--Main layout-->
+    <main>
+
+        <section>
+
+            <!--First row-->
+            <div class="row mb-3">
+
+                <!--First column-->
+                <div class="col-lg-8 col-md-12">
+                    <!-- Jumbotron -->
+                    <div class="jumbotron text-center">
+                        <!-- Descirption -->
+                        <h1 class="h2-responsive">Material Design for Bootstrap 4</h1>
+                        <br>
+                        <p>Powerful and free Material Design UI KIT</p>
+
+                        <hr>
+                        <!-- CTA -->
+                        <a id="home-jumbotron-learn" href="https://mdbootstrap.com/material-design-for-bootstrap/" class="btn btn-ptc waves-effect waves-light">Learn More <i class="fa fa-book ml-1"></i></a>
+                        <a id="home-jumbotron-download" href="https://mdbootstrap.com/getting-started/" class="btn btn-dtc waves-effect waves-light">Download <i class="fa fa-download ml-1"></i></a>
+                        <a id="home-jumbotron-tutorial" href="https://mdbootstrap.com/bootstrap-tutorial/" class="btn btn-stc waves-effect waves-light">Tutorial <i class="fa fa-graduation-cap ml-1"></i></a>
+                        <a id="home-jumbotron-pro" href="https://mdbootstrap.com/product/material-design-for-bootstrap-pro/" class="btn btn-ptc waves-effect waves-light">Go Pro <i class="fa fa-diamond ml-1"></i></a>
+
+                        <hr>
+
+                        <!--Section: Logotypes-->
+                        <section class="mt-4">
+
+                            <h4 class="h4-responsive my-5">Trusted by 200 000 + developers &amp; designers</h4>
+
+                            <!-- Logo carousel -->
+                            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="1800">
+                                <div class="carousel-inner">
+                                    <!-- First slide -->
+                                    <div class="carousel-item">
+                                        <!--Grid row-->
+                                        <div class="row">
+
+                                            <!--First column-->
+                                            <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
+                                                <img src="https://mdbootstrap.com/img/logo/brands/nike.png" class="img-fluid px-4" style="max-height: 40px">
+                                            </div>
+                                            <!--/First column-->
+
+                                            <!--Second column-->
+                                            <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
+                                                <img src="https://mdbootstrap.com/img/logo/brands/amazon.png" class="img-fluid px-4" style="max-height: 40px">
+                                            </div>
+                                            <!--/Second column-->
+
+                                            <!--Third column-->
+                                            <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
+                                                <img src="https://mdbootstrap.com/img/logo/brands/sony.png" class="img-fluid px-4" style="max-height: 40px">
+                                            </div>
+                                            <!--/Third column-->
+
+                                            <!--Fourth column-->
+                                            <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
+                                                <img src="https://mdbootstrap.com/img/logo/brands/samsung.png" class="img-fluid px-4" style="max-height: 40px">
+                                            </div>
+                                            <!--/Fourth column-->
+
+                                        </div>
+                                        <!--/Grid row-->
+                                    </div>
+                                    <!-- First slide -->
+
+                                    <!-- Second slide -->
+                                    <div class="carousel-item active carousel-item-left">
+                                        <!--Grid row-->
+                                        <div class="row">
+
+                                            <!--First column-->
+                                            <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
+                                                <img src="https://mdbootstrap.com/img/logo/brands/airbus.png" class="img-fluid px-4" style="max-height: 40px">
+                                            </div>
+                                            <!--/First column-->
+
+                                            <!--Second column-->
+                                            <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
+                                                <img src="https://mdbootstrap.com/img/logo/brands/yahoo.png" class="img-fluid px-4" style="max-height: 40px">
+                                            </div>
+                                            <!--/Second column-->
+
+                                            <!--Third column-->
+                                            <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
+                                                <img src="https://mdbootstrap.com/img/logo/brands/deloitte.png" class="img-fluid px-4" style="max-height: 40px">
+                                            </div>
+                                            <!--/Third column-->
+
+                                            <!--Fourth column-->
+                                            <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
+                                                <img src="https://mdbootstrap.com/img/logo/brands/ge.png" class="img-fluid px-4" style="max-height: 40px">
+                                            </div>
+                                            <!--/Fourth column-->
+
+                                        </div>
+                                        <!--/Grid row-->
+                                    </div>
+                                    <!-- Second slide -->
+
+                                    <!-- Third slide -->
+                                    <div class="carousel-item carousel-item-next carousel-item-left">
+                                        <!--Grid row-->
+                                        <div class="row">
+
+                                            <!--First column-->
+                                            <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
+                                                <img src="https://mdbootstrap.com/img/logo/brands/kpmg.png" class="img-fluid px-4" style="max-height: 40px">
+                                            </div>
+                                            <!--/First column-->
+
+                                            <!--Second column-->
+                                            <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
+                                                <img src="https://mdbootstrap.com/img/logo/brands/unity.png" class="img-fluid px-4" style="max-height: 40px">
+                                            </div>
+                                            <!--/Second column-->
+
+                                            <!--Third column-->
+                                            <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
+                                                <img src="https://mdbootstrap.com/img/logo/brands/ikea.png" class="img-fluid px-4" style="max-height: 40px">
+                                            </div>
+                                            <!--/Third column-->
+
+                                            <!--Fourth column-->
+                                            <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
+                                                <img src="https://mdbootstrap.com/img/logo/brands/aegon.png" class="img-fluid px-4" style="max-height: 40px">
+                                            </div>
+                                            <!--/Fourth column-->
+
+                                        </div>
+                                        <!--/Grid row-->
+                                    </div>
+                                    <!-- Third slide -->
+                                </div>
+                            </div>
+                            <!-- Logo carousel -->
+
+                        </section>
+                        <!--/Section: Logotypes-->
+
+                    </div>
+                    <!-- Jumbotron -->
+                </div>
+                <!--First column-->
+
+                <!--Second column-->
+                <div id="dynamicContentWrapper-fronPage" class="col-lg-4 col-md-12">
+                    <div class="card card-cascade narrower">
+                        <div class="view overlay hm-white-slight"><img src="https://mdbootstrap.com/img/Others/mdb-about2.jpg" class="img-fluid" alt="">
+                            <a id="home-card-download-img" href="https://mdbootstrap.com/getting-started/">
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+                        <div class="card-body text-center">
+                            <h4 class="card-title">MDBootstrap</h4>
+                            <p class="card-text">Download for <strong>free</strong> the most powerful Material Design UI KIT for Bootstrap 4.</p>
+                            <a id="home-card-download" href="https://mdbootstrap.com/getting-started/" class="btn btn-primary">Free Download <i class="fa fa-download ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!--Second column-->
+            </div>
+            <!--First row-->
+
+        </section>
+
+
+        <!--Section: Main news-->
+        <section class="mb-5">
+
+            <!--Grid row-->
+            <div class="row">
+
+                <!--Grid column-->
+                <div class="col-md-8">
+
+                    <h4 class="font-bold"><strong>LATESTS NEWS</strong></h4>
+
+                    <hr class="red title-hr mb-4">
+
+                    <!--Section: Magazine v.2-->
+                    <section class="section magazine-section">
+
+                        <!--Grid row-->
+                        <div class="row text-left">
+
+                            <!--Grid column-->
+                            <div class="col-lg-6 col-md-12">
+
+                                <!--Featured news-->
+                                <div class="single-news">
+
+                                    <!--Image-->
+                                    <div class="view overlay hm-white-slight z-depth-1-half">
+                                        <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(118).jpg" class="img-fluid" alt="Wider sample post image">
+                                        <a>
+                                            <div class="mask"></div>
+                                        </a>
+                                    </div>
+
+                                    <!--Excerpt-->
+                                    <div class="news-data">
+                                        <a href="" class="deep-orange-text">
+                                            <h6><i class="fa fa-cutlery"></i><strong> Culinary</strong></h6>
+                                        </a>
+                                        <p><strong><i class="fa fa-clock-o"></i> 27/02/2016</strong></p>
+                                    </div>
+
+                                    <h3><a><strong>This is title of the news.</strong></a></h3>
+
+                                    <p align="justify">Sed ut perspiciatis unde voluptatem omnis iste natus error sit voluptatem accusantium
+                                        doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis
+                                        et quasi architecto beatae vitae explicabo. Duis aute irure dolor in reprehenderit
+                                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                    </p>
+
+                                </div>
+                                <!--/Featured news-->
+
+                            </div>
+                            <!--Grid column-->
+
+                            <!--Grid column-->
+                            <div class="col-lg-6 col-md-12">
+
+                                <!--Small news-->
+                                <div class="single-news pb-3">
+
+                                    <div class="row">
+                                        <div class="col-md-3">
+
+                                            <!--Image-->
+                                            <div class="view overlay hm-white-slight z-depth-1-half">
+                                                <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(118).jpg" class="img-fluid" alt="Minor sample post image">
+                                                <a>
+                                                    <div class="mask"></div>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <!--Excerpt-->
+                                        <div class="col-md-9">
+                                            <p class="mb-1"><strong>Checkboxes</strong></p>
+                                            <a>Duis aute irure dolor in reprehenderit in voluptate.
+                                                            <i class="fa fa-angle-right"></i>
+                                                        </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!--/Small news-->
+
+                                <!--Small news-->
+                                <div class="single-news pb-3">
+
+                                    <div class="row">
+                                        <div class="col-md-3">
+
+                                            <!--Image-->
+                                            <div class="view overlay hm-white-slight z-depth-1-half">
+                                                <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(118).jpg" class="img-fluid" alt="Minor sample post image">
+                                                <a>
+                                                    <div class="mask"></div>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <!--Excerpt-->
+                                        <div class="col-md-9">
+                                            <p class="mb-1"><strong>New tutorial</strong></p>
+                                            <a>Duis aute irure dolor in reprehenderit in voluptate.
+                                                            <i class="fa fa-angle-right"></i>
+                                                        </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!--/Small news-->
+
+                                <!--Small news-->
+                                <div class="single-news pb-3">
+
+                                    <div class="row">
+                                        <div class="col-md-3">
+
+                                            <!--Image-->
+                                            <div class="view overlay hm-white-slight z-depth-1-half">
+                                                <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(118).jpg" class="img-fluid" alt="Minor sample post image">
+                                                <a>
+                                                    <div class="mask"></div>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <!--Excerpt-->
+                                        <div class="col-md-9">
+                                            <p class="mb-1"><strong>Blog post example</strong></p>
+                                            <a>Duis aute irure dolor in reprehenderit in voluptate.
+                                                            <i class="fa fa-angle-right"></i>
+                                                        </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!--/Small news-->
+
+                                <!--Small news-->
+                                <div class="single-news pb-3">
+
+                                    <div class="row">
+                                        <div class="col-md-3">
+
+                                            <!--Image-->
+                                            <div class="view overlay hm-white-slight z-depth-1-half">
+                                                <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(118).jpg" class="img-fluid" alt="Minor sample post image">
+                                                <a>
+                                                    <div class="mask"></div>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <!--Excerpt-->
+                                        <div class="col-md-9">
+                                            <p class="mb-1"><strong>23/02/2016</strong></p>
+                                            <a>Duis aute irure dolor in reprehenderit in voluptate.
+                                                            <i class="fa fa-angle-right"></i>
+                                                        </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!--/Small news-->
+
+                            </div>
+                            <!--Grid column-->
+
+                        </div>
+                        <!--Grid row-->
+
+                    </section>
+                    <!--Section: Magazine v.2-->
+
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-4 pl-5">
+
+                    <h4 class="font-bold"><strong>LATESTS UPDATES</strong></h4>
+
+                    <hr class="red title-hr mb-4">
+
+                    <ul class="list-unstyled">
+                        <li class="media">
+                            <img class="d-flex mr-3" src="https://ngdocsdev.firebaseapp.com/resources/images/logos/angular2/angular.svg" alt="Generic placeholder image"
+                                style="height: 60px">
+                            <div class="media-body">
+                                <h5 class="mt-0 mb-1 h5">MD Bootstrap Angular 4.3.2</h5>
+                                <p class="grey-text mb-2">28.01.2017</p>
+                                <button type="button" class="btn btn-primary btn-sm m-0">Learn more</button>
+                            </div>
+                        </li>
+
+                        <hr class="my-4">
+
+                        <li class="media">
+                            <img class="d-flex mr-3" src="http://precision-software.com/wp-content/uploads/2014/04/jQurery.gif" alt="Generic placeholder image"
+                                style="height: 60px">
+                            <div class="media-body">
+                                <h5 class="mt-0 mb-1 h5">MD Bootstrap jQuery 4.3.2</h5>
+                                <p class="grey-text mb-2">28.01.2017</p>
+                                <button type="button" class="btn btn-primary btn-sm m-0">Learn more</button>
+                            </div>
+                        </li>
+
+                        <hr class="my-4">
+
+                        <li class="media">
+                            <img class="d-flex mr-3" src="https://cdn.worldvectorlogo.com/logos/react.svg" alt="Generic placeholder image" style="height: 60px">
+                            <div class="media-body">
+                                <h5 class="mt-0 mb-1 h5">MD Bootstrap React 4.3.2</h5>
+                                <p class="grey-text mb-2">28.01.2017</p>
+                                <button type="button" class="btn btn-primary btn-sm m-0">Learn more</button>
+                            </div>
+                        </li>
+
+                        <hr class="my-4">
+
+                        <li class="media">
+                            <img class="d-flex mr-3" src="https://mdbootstrap.com/img/logo/bfSquare.jpg" alt="Generic placeholder image" style="height: 60px">
+                            <div class="media-body">
+                                <h5 class="mt-0 mb-1 h5">BrandFlow 4.3.2</h5>
+                                <p class="grey-text mb-2">28.01.2017</p>
+                                <button type="button" class="btn btn-primary btn-sm m-0">Learn more</button>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <!--Grid column-->
+
+            </div>
+            <!--Grid row-->
+
+        </section>
+        <!--Section: Main news-->
+
+        <hr class="my-5">
+
+
+        <!--Section: Magazine v.3-->
+        <section class="section magazine-section multi-columns">
+
+            <!--Grid row-->
+            <div class="row text-left">
+
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-12 mb-r">
+
+                    <!--Featured news-->
+                    <div class="single-news">
+
+                        <!--Image-->
+                        <a href="" class="orange-text mb-1">
+                            <h6><i class="fa fa-coffee mr-2"></i><strong>Docs updates</strong></h6>
+                        </a>
+
+                        <div class="view overlay hm-white-slight z-depth-1-half">
+                            <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(118).jpg" class="img-fluid" alt="First sample image">
+                            <a>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+                        <a><strong>This is title of the news.</strong>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+
+                    </div>
+                    <!--/Featured news-->
+
+                    <!--Small news-->
+                    <div class="single-news">
+                        <a>24 Food Swaps That Slash Calories.
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                    <!--/Small news-->
+
+                    <!--Small news-->
+                    <div class="single-news">
+                        <a>How to Make a Beet Cocktail?
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                    <!--/Small news-->
+
+                    <!--Small news-->
+                    <div class="single-news">
+                        <a>8 Sneaky Reasons You're Always Hungry.
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                    <!--/Small news-->
+
+                    <!--Small news-->
+                    <div class="single-news">
+                        <a>5 Pressure Cooker Recipes You Need to Try.
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                    <!--/Small news-->
+
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-r">
+
+                    <!--Featured news-->
+                    <div class="single-news">
+
+                        <!--Image-->
+                        <a href="" class="green-text">
+                            <h6><i class="fa fa-diamond mr-2"></i><strong> New Tutorials</strong></h6>
+                        </a>
+
+                        <div class="view overlay hm-white-slight z-depth-1-half">
+                            <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(118).jpg" class="img-fluid" alt="Second sample image">
+                            <a>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+
+                        <a><strong>This is title of the news.</strong>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+
+                    </div>
+                    <!--/Featured news-->
+
+                    <!--Small news-->
+                    <div class="single-news">
+                        <a>Trends in the blogosphere for 2016.
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                    <!--/Small news-->
+
+                    <!--Small news-->
+                    <div class="single-news">
+                        <a>Where you eat the best lunch in Warsaw?
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                    <!--/Small news-->
+
+                    <!--Small news-->
+                    <div class="single-news">
+                        <a>What camera take for holidays?
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                    <!--/Small news-->
+
+                    <!--Small news-->
+                    <div class="single-news">
+                        <a>Why you should visit Lisbon?
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                    <!--/Small news-->
+
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-r">
+
+                    <!--Featured news-->
+                    <div class="single-news">
+
+                        <!--Image-->
+                        <a href="" class="pink-text">
+                            <h6><i class="fa fa-camera mr-2"></i><strong>MDB Inspiration</strong></h6>
+                        </a>
+
+                        <div class="view overlay hm-white-slight z-depth-1-half">
+                            <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(118).jpg" class="img-fluid" alt="Third sample image">
+                            <a>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+
+                        <a><strong>This is title of the news.</strong>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+
+                    </div>
+                    <!--/Featured news-->
+
+                    <!--Small news-->
+                    <div class="single-news">
+                        <a>Top models in Poland.
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                    <!--/Small news-->
+
+                    <!--Small news-->
+                    <div class="single-news">
+                        <a>London Fashion Week - see online.
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                    <!--/Small news-->
+
+                    <!--Small news-->
+                    <div class="single-news">
+                        <a>Best bags designers in Italy.
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                    <!--/Small news-->
+
+                    <!--Small news-->
+                    <div class="single-news">
+                        <a>Choose best swimsuit for summer.
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                    <!--/Small news-->
+
+                </div>
+                <!--Grid column-->
+
+            </div>
+            <!--Grid row-->
+
+        </section>
+        <!--Section: Magazine v.3-->
+
+
+
+    </main>
+    <!--/Main layout-->
+
+    <!--Footer-->
+    <footer class="page-footer center-on-small-only">
+
+        <!--Footer Links-->
+        <div class="container-fluid">
+            <div class="row">
+
+                <!--First column-->
+                <div class="col-md-3 offset-md-1">
+                    <h5 class="title">Footer Content</h5>
+                    <p>Here you can use rows and columns here to organize your footer content.</p>
+                </div>
+                <!--/.First column-->
+
+                <hr class="hidden-md-up">
+
+                <!--Second column-->
+                <div class="col-md-2 offset-md-1">
+                    <h5 class="title">Links</h5>
+                    <ul>
+                        <li><a href="#!">Link 1</a></li>
+                        <li><a href="#!">Link 2</a></li>
+                        <li><a href="#!">Link 3</a></li>
+                        <li><a href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+                <!--/.Second column-->
+
+                <hr class="hidden-md-up">
+
+                <!--Third column-->
+                <div class="col-md-2">
+                    <h5 class="title">Links</h5>
+                    <ul>
+                        <li><a href="#!">Link 1</a></li>
+                        <li><a href="#!">Link 2</a></li>
+                        <li><a href="#!">Link 3</a></li>
+                        <li><a href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+                <!--/.Third column-->
+
+                <hr class="hidden-md-up">
+
+                <!--Fourth column-->
+                <div class="col-md-2">
+                    <h5 class="title">Links</h5>
+                    <ul>
+                        <li><a href="#!">Link 1</a></li>
+                        <li><a href="#!">Link 2</a></li>
+                        <li><a href="#!">Link 3</a></li>
+                        <li><a href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+                <!--/.Fourth column-->
+
+            </div>
+        </div>
+        <!--/.Footer Links-->
+
+        <hr>
+
+        <!--Call to action-->
+        <div class="call-to-action">
+            <ul>
+                <li>
+                    <h5>Register for free</h5>
+                </li>
+                <li><a href="" class="btn btn-danger">Sign up!</a></li>
+            </ul>
+        </div>
+        <!--/.Call to action-->
+
+        <hr>
+
+        <!--Social buttons-->
+        <div class="social-section text-center">
+            <ul>
+                <li><a class="btn-floating btn-small btn-fb"><i class="fa fa-facebook"> </i></a></li>
+                <li><a class="btn-floating btn-small btn-tw"><i class="fa fa-twitter"> </i></a></li>
+                <li><a class="btn-floating btn-small btn-gplus"><i class="fa fa-google-plus"> </i></a></li>
+                <li><a class="btn-floating btn-small btn-li"><i class="fa fa-linkedin"> </i></a></li>
+                <li><a class="btn-floating btn-small btn-git"><i class="fa fa-github"> </i></a></li>
+            </ul>
+        </div>
+        <!--/.Social buttons-->
+
+        <!--Copyright-->
+        <div class="footer-copyright">
+            <div class="container-fluid">
+                © 2017 Copyright: <a href="http://www.MDBootstrap.com"> MDBootstrap.com </a>
+
+            </div>
+        </div>
+        <!--/.Copyright-->
+
+    </footer>
+    <!--/.Footer-->
+
+
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="../../js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="../../js/bootstrap.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="../../js/modules/mdb.js"></script>
+    <!--Custom scripts-->
+    <script>
+        $("#mdbFreeDownloadDocsPanel-remove, #newsletterSubscribeDocsPanel-remove, #mdbProLearnMoreDocsPanel-remove, #bfStartFreeAccount-remove").click(function () {
+            $("#dynamicContentWrapper-docsPanel").remove();
+        });
+    </script>
+</body>
+
+</html>
