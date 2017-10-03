@@ -1,3 +1,6 @@
 node_modules
 desktop.ini
 yarn.lock
+\.vscode/cSpell\.json
+
+\.vscode/settings\.json
