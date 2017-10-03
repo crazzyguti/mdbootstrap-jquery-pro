@@ -111,7 +111,25 @@
         .card-body {
             padding-top: 1.8rem;
         }
-    } // activator
+        &.panel-cascade {
+            .view {
+                text-align: center;
+                color: #fff;
+            }
+            .list-group {
+                .list-group-item {
+                    margin-bottom: 0px;
+                    border: 0;
+                    border-bottom: 1px solid #eee;
+                    color: #495057;
+                    &:hover { 
+                        background-color: #eee;
+                    }
+                }
+            }
+        }
+    } 
+    // activator
     .activator {
         position: absolute;
         top: 0;
