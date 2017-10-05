@@ -14,7 +14,9 @@
     <link rel="stylesheet" href="../../css/mdb.css">
     <!-- Your custom styles (optional) -->
     <style>
-       
+        .text-small {
+            font-size: 0.75rem;
+        }
     </style>
 </head>
 
@@ -36,63 +38,14 @@
 <!--Section: Doc content-->
 <section class="documentation">
 
-    <style>
-        @media (min-width: 768px) {
-            .media .avatar {
-                width: 64px;
-            }
-        }
-        @media (max-width: 767px) {
-            .media .avatar {
-                width: 160px;
-            }
-        }
-        @media (min-width: 768px) {
-            .media .media-image {
-                width: 100px;
-            }
-        }
-        @media (max-width: 767px) {
-            .media .media-image {
-                width: 250px;
-            }
-        }
-        @media (min-width: 768px) {
-            .media .avatar-2 {
-                width: 130px;
-            }
-        }
-        @media (max-width: 767px) {
-            .media .avatar-2 {
-                width: 160px;
-            }
-        }
-        .card img.rounded-circle {
-            border-radius: 50%;
-        }
-        .shadow-textarea textarea.form-control::placeholder {
-            font-weight: 300;
-        }
-        .shadow-textarea textarea.form-control {
-            padding-left: 0.8rem;
-        }
-        .basic-textarea textarea {
-            height: auto;
-        }
-        .rounded-corners textarea {
-            border-radius: 0.25rem;
-        }
-    </style>
-
     <!--Section: Intro-->
     <section id="introduction">
 
         <!--Title-->
-        <h1 class="main-title">Media object</h1>
+        <h1 class="main-title">Bootstrap Card Layout</h1>
 
         <!--Description-->
-        <p class="description">The <a href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/">media object</a> helps build complex and repetitive components where some media is positioned alongside content that doesn’t wrap around
-            said media. Plus, it does this with only two required classes thanks to flexbox.</p>
+        <p class="description"></p>
 
     </section>
     <!--/Section: Intro-->
@@ -100,486 +53,10 @@
     <hr class="my-5">
 
     <!--Section: -->
-    <section id="example">
+    <section id="basic">
 
         <!--Title-->
-        <h2 class="title"><strong>Example</strong></h2>
-
-        <!--Description-->
-        <p class="description">Below is an example of a single media object. Only two classes are required—the wrapping <code>.media</code> and the <code>.media-body</code> around your content. Optional padding and margin can be controlled through <a href="">spacing utilities</a>.</p>
-
-        <!--Section: Live preview-->
-        <section>
-
-            <div class="media">
-                <img class="d-flex mr-3" src="https://placehold.it/64x64" alt="Generic placeholder image">
-                <div class="media-body">
-                    <h5 class="mt-0">Media heading</h5>
-                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                </div>
-            </div>
-
-        </section>
-        <!--Section: Live preview-->
-
-        <!--Section: Code-->
-        <section>
-            <pre class="code-toolbar">
-                                    <code class="language-markup">
-&lt;div class=&quot;media&quot;&gt;
-    &lt;img class=&quot;d-flex mr-3&quot; src=&quot;https://placehold.it/64x64&quot; alt=&quot;Generic placeholder image&quot;&gt;
-    &lt;div class=&quot;media-body&quot;&gt;
-        &lt;h5 class=&quot;mt-0&quot;&gt;Media heading&lt;/h5&gt;
-        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-    &lt;/div&gt;
-&lt;/div&gt;
-                                    </code>
-                                </pre>
-        </section>
-        <!--Section: Code-->
-
-        <blockquote class="blockquote bq-warning">
-            <p class="bq-title">Flexbug #12: Inline elements aren’t treated as flex items</p>
-            <p>Internet Explorer 10-11 do not render inline elements like links or images (or <code>::before</code> and <code>::after</code> pseudo-elements) as flex items. The only workaround is to set a non-inline <code>display</code> value (e.g., <code>block</code>,
-                <code>inline-block</code>, or <code>flex</code>). We suggest using <code>.d-flex</code>, one of our <a href="/utilities/bootstrap-display-property/">display utilities</a>, as an easy fix.</p>
-
-            <p><strong>Source:</strong> <a href="https://github.com/philipwalton/flexbugs#12-inline-elements-are-not-treated-as-flex-items">Flexbugs on GitHub</a></p>
-        </blockquote>
-
-    </section>
-    <!--/Section: -->
-
-    <hr class="my-5">
-
-    <!--Section: -->
-    <section id="nesting">
-
-        <!--Title-->
-        <h2 class="title"><strong>Nesting</strong></h2>
-
-        <!--Description-->
-        <p class="description">Media objects can be infinitely nested, though we suggest you stop at some point. Place nested <code>.media</code> within the <code>.media-body</code> of a parent media object.</p>
-
-        <!--Section: Live preview-->
-        <section>
-
-            <div class="media">
-                <img class="d-flex mr-3" src="https://placehold.it/64x64" alt="Generic placeholder image">
-                <div class="media-body">
-                    <h5 class="mt-0">Media heading</h5>
-                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-
-                    <div class="media mt-3">
-                        <a class="d-flex pr-3" href="#">
-                            <img src="https://placehold.it/64x64" alt="Generic placeholder image">
-                        </a>
-                        <div class="media-body">
-                            <h5 class="mt-0">Media heading</h5>
-                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-        <!--Section: Live preview-->
-
-        <!--Section: Code-->
-        <section>
-            <pre class="code-toolbar">
-                                    <code class="language-markup">
-&lt;div class=&quot;media&quot;&gt;
-    &lt;img class=&quot;d-flex mr-3&quot; src=&quot;https://placehold.it/64x64&quot; alt=&quot;Generic placeholder image&quot;&gt;
-    &lt;div class=&quot;media-body&quot;&gt;
-        &lt;h5 class=&quot;mt-0&quot;&gt;Media heading&lt;/h5&gt;
-        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-
-        &lt;div class=&quot;media mt-3&quot;&gt;
-            &lt;a class=&quot;d-flex pr-3&quot; href=&quot;#&quot;&gt;
-                &lt;img src=&quot;https://placehold.it/64x64&quot; alt=&quot;Generic placeholder image&quot;&gt;
-            &lt;/a&gt;
-            &lt;div class=&quot;media-body&quot;&gt;
-                &lt;h5 class=&quot;mt-0&quot;&gt;Media heading&lt;/h5&gt;
-                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-                                    </code>
-                                </pre>
-        </section>
-        <!--Section: Code-->
-
-    </section>
-    <!--/Section: -->
-
-    <hr class="my-5">
-
-    <!--Section: -->
-    <section id="alignment">
-
-        <!--Title-->
-        <h2 class="title"><strong>Alignment</strong></h2>
-
-        <!--Description-->
-        <p class="description">Media in a media object can be aligned with flexbox utilities to the top (default), middle, or end of your <code>.media-body</code> content.</p>
-
-        <!--Section: Live preview-->
-        <section>
-
-            <div class="media">
-                <img class="d-flex align-self-start mr-3" src="https://placehold.it/64x64" alt="Generic placeholder image">
-                <div class="media-body">
-                    <h5 class="mt-0">Top-aligned media</h5>
-                    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue
-                        felis in faucibus.</p>
-                    <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                </div>
-            </div>
-
-        </section>
-        <!--Section: Live preview-->
-
-        <!--Section: Code-->
-        <section>
-            <pre class="code-toolbar">
-                                    <code class="language-markup">
-&lt;div class=&quot;media&quot;&gt;
-    &lt;img class=&quot;d-flex align-self-start mr-3&quot; src=&quot;https://placehold.it/64x64&quot; alt=&quot;Generic placeholder image&quot;&gt;
-    &lt;div class=&quot;media-body&quot;&gt;
-        &lt;h5 class=&quot;mt-0&quot;&gt;Top-aligned media&lt;/h5&gt;
-        &lt;p&gt;Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.
-            Donec lacinia congue felis in faucibus.&lt;/p&gt;
-        &lt;p&gt;Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-                                    </code>
-                                </pre>
-        </section>
-        <!--Section: Code-->
-
-        <!--Section: Live preview-->
-        <section>
-
-            <div class="media">
-                <img class="d-flex align-self-center mr-3" src="https://placehold.it/64x64" alt="Generic placeholder image">
-                <div class="media-body">
-                    <h5 class="mt-0">Center-aligned media</h5>
-                    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue
-                        felis in faucibus.</p>
-                    <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                </div>
-            </div>
-
-        </section>
-        <!--Section: Live preview-->
-
-        <!--Section: Code-->
-        <section>
-            <pre class="code-toolbar">
-                                    <code class="language-markup">
-&lt;div class=&quot;media&quot;&gt;
-    &lt;img class=&quot;d-flex align-self-center mr-3&quot; src=&quot;https://placehold.it/64x64&quot; alt=&quot;Generic placeholder image&quot;&gt;
-    &lt;div class=&quot;media-body&quot;&gt;
-        &lt;h5 class=&quot;mt-0&quot;&gt;Center-aligned media&lt;/h5&gt;
-        &lt;p&gt;Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.
-            Donec lacinia congue felis in faucibus.&lt;/p&gt;
-        &lt;p class=&quot;mb-0&quot;&gt;Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-                                    </code>
-                                </pre>
-        </section>
-        <!--Section: Code-->
-
-        <!--Section: Live preview-->
-        <section>
-
-            <div class="media">
-                <img class="d-flex align-self-end mr-3" src="https://placehold.it/64x64" alt="Generic placeholder image">
-                <div class="media-body">
-                    <h5 class="mt-0">Bottom-aligned media</h5>
-                    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue
-                        felis in faucibus.</p>
-                    <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                </div>
-            </div>
-
-        </section>
-        <!--Section: Live preview-->
-
-        <!--Section: Code-->
-        <section>
-            <pre class="code-toolbar">
-                                    <code class="language-markup">
-&lt;div class=&quot;media&quot;&gt;
-    &lt;img class=&quot;d-flex align-self-end mr-3&quot; src=&quot;https://placehold.it/64x64&quot; alt=&quot;Generic placeholder image&quot;&gt;
-    &lt;div class=&quot;media-body&quot;&gt;
-        &lt;h5 class=&quot;mt-0&quot;&gt;Bottom-aligned media&lt;/h5&gt;
-        &lt;p&gt;Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.
-            Donec lacinia congue felis in faucibus.&lt;/p&gt;
-        &lt;p class=&quot;mb-0&quot;&gt;Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-                                    </code>
-                                </pre>
-        </section>
-        <!--Section: Code-->
-
-    </section>
-    <!--/Section: -->
-
-    <hr class="my-5">
-
-    <!--Section: -->
-    <section id="order">
-
-        <!--Title-->
-        <h2 class="title"><strong>Order</strong></h2>
-
-        <!--Description-->
-        <p class="description">Change the order of content in media objects by modifying the HTML itself, or by adding some custom flexbox CSS to set the <code>order</code> property (to an integer of your choosing).</p>
-
-        <!--Section: Live preview-->
-        <section>
-
-            <div class="media">
-                <div class="media-body">
-                    <h5 class="mt-0 mb-1">Media object</h5>
-                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                </div>
-                <img class="d-flex ml-3" src="https://placehold.it/64x64" alt="Generic placeholder image">
-            </div>
-
-        </section>
-        <!--Section: Live preview-->
-
-        <!--Section: Code-->
-        <section>
-            <pre class="code-toolbar">
-                                    <code class="language-markup">
-&lt;div class=&quot;media&quot;&gt;
-  &lt;div class=&quot;media-body&quot;&gt;
-    &lt;h5 class=&quot;mt-0 mb-1&quot;&gt;Media object&lt;/h5&gt;
-    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-  &lt;/div&gt;
-  &lt;img class=&quot;d-flex ml-3&quot; src=&quot;https://placehold.it/64x64&quot; alt=&quot;Generic placeholder image&quot;&gt;
-&lt;/div&gt;
-                                    </code>
-                                </pre>
-        </section>
-        <!--Section: Code-->
-
-    </section>
-    <!--/Section: -->
-
-    <hr class="my-5">
-
-    <!--Section: -->
-    <section id="media-list">
-
-        <!--Title-->
-        <h2 class="title"><strong>Media list</strong></h2>
-
-        <!--Description-->
-        <p class="description">Because the media object has so few structural requirements, you can also use these classes on list HTML elements. On your <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code>, add the <code>.list-unstyled</code> to remove any browser default list
-            styles, and then apply <code>.media</code> to your <code>&lt;li&gt;</code>s. As always, use spacing utilities wherever needed to fine tune.</p>
-
-        <!--Section: Live preview-->
-        <section>
-
-            <ul class="list-unstyled">
-                <li class="media">
-                    <img class="d-flex mr-3" src="https://placehold.it/64x64" alt="Generic placeholder image">
-                    <div class="media-body">
-                        <h5 class="mt-0 mb-1">List-based media object</h5>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                    </div>
-                </li>
-                <li class="media my-4">
-                    <img class="d-flex mr-3" src="https://placehold.it/64x64" alt="Generic placeholder image">
-                    <div class="media-body">
-                        <h5 class="mt-0 mb-1">List-based media object</h5>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                    </div>
-                </li>
-                <li class="media">
-                    <img class="d-flex mr-3" src="https://placehold.it/64x64" alt="Generic placeholder image">
-                    <div class="media-body">
-                        <h5 class="mt-0 mb-1">List-based media object</h5>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                    </div>
-                </li>
-            </ul>
-
-        </section>
-        <!--Section: Live preview-->
-
-        <!--Section: Code-->
-        <section>
-            <pre class="code-toolbar">
-                                    <code class="language-markup">
-&lt;ul class=&quot;list-unstyled&quot;&gt;
-    &lt;li class=&quot;media&quot;&gt;
-        &lt;img class=&quot;d-flex mr-3&quot; src=&quot;https://placehold.it/64x64&quot; alt=&quot;Generic placeholder image&quot;&gt;
-        &lt;div class=&quot;media-body&quot;&gt;
-            &lt;h5 class=&quot;mt-0 mb-1&quot;&gt;List-based media object&lt;/h5&gt;
-            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-        &lt;/div&gt;
-    &lt;/li&gt;
-    &lt;li class=&quot;media my-4&quot;&gt;
-        &lt;img class=&quot;d-flex mr-3&quot; src=&quot;https://placehold.it/64x64&quot; alt=&quot;Generic placeholder image&quot;&gt;
-        &lt;div class=&quot;media-body&quot;&gt;
-            &lt;h5 class=&quot;mt-0 mb-1&quot;&gt;List-based media object&lt;/h5&gt;
-            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-        &lt;/div&gt;
-    &lt;/li&gt;
-    &lt;li class=&quot;media&quot;&gt;
-        &lt;img class=&quot;d-flex mr-3&quot; src=&quot;https://placehold.it/64x64&quot; alt=&quot;Generic placeholder image&quot;&gt;
-        &lt;div class=&quot;media-body&quot;&gt;
-            &lt;h5 class=&quot;mt-0 mb-1&quot;&gt;List-based media object&lt;/h5&gt;
-            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-        &lt;/div&gt;
-    &lt;/li&gt;
-&lt;/ul&gt;
-                                    </code>
-                                </pre>
-        </section>
-        <!--Section: Code-->
-
-    </section>
-    <!--/Section: -->
-
-    <hr class="my-5">
-
-    <!--Section: -->
-    <section id="nesting-2">
-
-        <!--Title-->
-        <h2 class="title"><strong>Another example of nesting</strong></h2>
-
-        <!--Description-->
-        <p class="description"></p>
-
-        <!--Section: Live preview-->
-        <section>
-
-            <div class="media d-block d-md-flex mt-4">
-                <img class="d-flex mb-3 mx-auto avatar" src="https://mdbootstrap.com/img/Photos/Avatars/img (20).jpg" alt="Generic placeholder image">
-                <div class="media-body text-center text-md-left ml-md-3 ml-0">
-                    <h5 class="mt-0">Miley Steward</h5>
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-                    <div class="media d-block d-md-flex mt-3">
-                        <img class="d-flex mb-3 mx-auto avatar" src="https://mdbootstrap.com/img/Photos/Avatars/img (27).jpg" alt="Generic placeholder image">
-                        <div class="media-body text-center text-md-left ml-md-3 ml-0">
-                            <h5 class="mt-0">Tommy Smith</h5>
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-
-                            <div class="media d-block d-md-flex mt-3">
-                                <img class="d-flex mb-3 mx-auto avatar" src="https://mdbootstrap.com/img/Photos/Avatars/img (31).jpg" alt="Generic placeholder image">
-                                <div class="media-body text-center text-md-left ml-md-3 ml-0">
-                                    <h5 class="mt-0">Alexandra Moon</h5>
-                                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="media d-block d-md-flex mt-3">
-                        <img class="d-flex mb-3 mx-auto avatar" src="https://mdbootstrap.com/img/Photos/Avatars/img (21).jpg" alt="Generic placeholder image">
-                        <div class="media-body text-center text-md-left ml-md-3 ml-0">
-                            <h5 class="mt-0">Sylvester the Cat</h5>
-                            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="media d-block d-md-flex mt-3">
-                <img class="d-flex mb-3 mx-auto avatar" src="https://mdbootstrap.com/img/Photos/Avatars/img (30).jpg" alt="Generic placeholder image">
-                <div class="media-body text-center text-md-left ml-md-3 ml-0">
-                    <h5 class="mt-0">Caroline Horwitz</h5>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
-                </div>
-            </div>
-
-        </section>
-        <!--Section: Live preview-->
-
-        <!--Section: Code-->
-        <section>
-            <pre class="code-toolbar">
-                <code class="language-css">
-@media (min-width: 768px) {
-    .media .avatar {
-        width: 64px;
-    }
-}
-@media (max-width: 767px) {
-    .media .avatar {
-        width: 160px;
-    }
-}
-                </code>
-            </pre>
-        </section>
-        <!--Section: Code-->
-
-        <!--Section: Code-->
-        <section>
-            <pre class="code-toolbar">
-                <code class="language-markup">
-&lt;div class=&quot;media d-block d-md-flex mt-4&quot;&gt;
-    &lt;img class=&quot;d-flex mb-3 mx-auto avatar&quot; src=&quot;https://mdbootstrap.com/img/Photos/Avatars/img (20).jpg&quot; alt=&quot;Generic placeholder image&quot;&gt;
-    &lt;div class=&quot;media-body text-center text-md-left ml-md-3 ml-0&quot;&gt;
-        &lt;h5 class=&quot;mt-0&quot;&gt;Miley Steward&lt;/h5&gt;
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-        &lt;div class=&quot;media d-block d-md-flex mt-3&quot;&gt;
-            &lt;img class=&quot;d-flex mb-3 mx-auto avatar&quot; src=&quot;https://mdbootstrap.com/img/Photos/Avatars/img (27).jpg&quot; alt=&quot;Generic placeholder image&quot;&gt;
-            &lt;div class=&quot;media-body text-center text-md-left ml-md-3 ml-0&quot;&gt;
-                &lt;h5 class=&quot;mt-0&quot;&gt;Tommy Smith&lt;/h5&gt;
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-
-                &lt;div class=&quot;media d-block d-md-flex mt-3&quot;&gt;
-                    &lt;img class=&quot;d-flex mb-3 mx-auto avatar&quot; src=&quot;https://mdbootstrap.com/img/Photos/Avatars/img (31).jpg&quot; alt=&quot;Generic placeholder image&quot;&gt;
-                    &lt;div class=&quot;media-body text-center text-md-left ml-md-3 ml-0&quot;&gt;
-                        &lt;h5 class=&quot;mt-0&quot;&gt;Alexandra Moon&lt;/h5&gt;
-                        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;media d-block d-md-flex mt-3&quot;&gt;
-            &lt;img class=&quot;d-flex mb-3 mx-auto avatar&quot; src=&quot;https://mdbootstrap.com/img/Photos/Avatars/img (21).jpg&quot; alt=&quot;Generic placeholder image&quot;&gt;
-            &lt;div class=&quot;media-body text-center text-md-left ml-md-3 ml-0&quot;&gt;
-                &lt;h5 class=&quot;mt-0&quot;&gt;Sylvester the Cat&lt;/h5&gt;
-                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;media d-block d-md-flex mt-3&quot;&gt;
-    &lt;img class=&quot;d-flex mb-3 mx-auto avatar&quot; src=&quot;https://mdbootstrap.com/img/Photos/Avatars/img (30).jpg&quot; alt=&quot;Generic placeholder image&quot;&gt;
-    &lt;div class=&quot;media-body text-center text-md-left ml-md-3 ml-0&quot;&gt;
-        &lt;h5 class=&quot;mt-0&quot;&gt;Caroline Horwitz&lt;/h5&gt;
-        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
-    &lt;/div&gt;
-&lt;/div&gt;
-                </code>
-            </pre>
-        </section>
-        <!--Section: Code-->
-
-    </section>
-    <!--/Section: -->
-
-    <hr class="my-5">
-
-    <!--Section: -->
-    <section id="comments">
-
-        <!--Title-->
-        <h2 class="title"><strong>Media object within comments list</strong> <a href="https://mdbootstrap.com/product/material-design-for-bootstrap-pro/" target="_blank" class="btn btn-danger btn-md" role="button">MDB Pro component <i class="fa fa-diamond ml-1"></i></a></h2>
+        <h2 class="title"><strong>Basic cards layout</strong></h2>
 
         <!--Description-->
         <p class="description"></p>
@@ -591,32 +68,96 @@
             <div class="row">
             
                 <!-- Grid column -->
-                <div class="col-lg-10 col-xl-8">
-            
-                    <div class="media d-block d-md-flex">
-                        <img class="d-flex rounded-circle avatar z-depth-1-half mb-3 mx-auto" src="https://mdbootstrap.com/img/Photos/Avatars/img (20).jpg" alt="Avatar">
-                        <div class="media-body text-center text-md-left ml-md-3 ml-0">
-                            <h5 class="mt-0 font-bold blue-text">Anna Smith</h5>
-                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                <div class="col-lg-4 col-md-12 mb-r">
+                    
+                    <!--Card-->
+                    <div class="card">
 
-                            <div class="media d-block d-md-flex mt-3 shadow-textarea">
-                                <img class="d-flex rounded-circle avatar z-depth-1-half mb-3 mx-auto" src="https://mdbootstrap.com/img/Photos/Avatars/img (3).jpg" alt="Generic placeholder image">
-                                <div class="media-body text-center text-md-left ml-md-3 ml-0">
-                                    <h5 class="mt-0 font-bold blue-text mb-3">Danny Tatuum</h5>
-                                    <div class="form-group basic-textarea rounded-corners mb-md-0 mb-4">
-                                        <textarea class="form-control z-depth-1" id="exampleFormControlTextarea3" rows="3" placeholder="Write your comment..."></textarea>
-                                    </div>
-                                </div>
-                            </div>
+                        <!--Card image-->
+                        <div class="view overlay hm-white-slight">
+                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Work/6-col/img%20(43).jpg" class="img-fluid" alt="photo">
+                            <a href="#">
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+
+                        <!--Card content-->
+                        <div class="card-body">
+                            <!--Title-->
+                            <h4 class="card-title">Card title</h4>
+                            <!--Text-->
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Button</a>
+                        </div>
+
+                    </div>
+                    <!--/.Card-->
+                                    
+                </div>
+                <!-- Grid column -->
+            
+                <!-- Grid column -->
+                <div class="col-lg-4 col-md-6 mb-r">
+            
+                    <!--Card-->
+                    <div class="card card-dark">
+
+                        <!--Card image-->
+                        <div class="view overlay hm-white-slight">
+                            <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(125).jpg" class="img-fluid" alt="photo">
+                            <a href="#">
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+
+                        <!--Card content-->
+                        <div class="card-body">
+                            <!--Title-->
+                            <h4 class="card-title">Title of the news</h4>
+                            <!--Text-->
+                            <p class="card-text white-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>
+                            <a href="#" class="btn btn-outline-white btn-md waves-effect">Button</a>
+                        </div>
+
+                    </div>
+                    <!--/.Card-->
+            
+                </div>
+                <!-- Grid column -->
+            
+                <!-- Grid column -->
+                <div class="col-lg-4 col-md-6">
+            
+                    <!--Panel-->
+                    <div class="card">
+                        <h3 class="card-header light-blue lighten-1 white-text font-up font-bold text-center py-5">Features List</h3>
+                        <div class="card-body">
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Cras justo odio
+                                    <span class="badge badge-primary badge-pill">14</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Dapibus ac facilisis in
+                                    <span class="badge badge-primary badge-pill">2</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Morbi leo risus
+                                    <span class="badge badge-primary badge-pill">1</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Cras justo odio
+                                    <span class="badge badge-primary badge-pill">14</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Dapibus ac facilisis in
+                                    <span class="badge badge-primary badge-pill">2</span>
+                                </li>
+                            </ul>
+                            <p class="text-small text-muted mb-0 pt-3">* At vero eos et accusamus et iusto ducimus.</p>                
                         </div>
                     </div>
-                    <div class="media d-block d-md-flex">
-                        <img class="d-flex rounded-circle avatar z-depth-1-half mb-3 mx-auto" src="https://mdbootstrap.com/img/Photos/Avatars/img (2).jpg" alt="Avatar">
-                        <div class="media-body text-center text-md-left ml-md-3 ml-0">
-                            <h5 class="mt-0 font-bold blue-text">Caroline Horwitz</h5>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis odit minima eaque dignissimos recusandae officiis commodi nulla est, tempore atque voluptas non quod maxime, iusto, debitis aliquid? Iure ipsum, itaque.
-                        </div>
-                    </div>
+                    <!--/.Panel-->
             
                 </div>
                 <!-- Grid column -->
@@ -631,20 +172,8 @@
         <section>
             <pre class="code-toolbar">
                 <code class="language-css">
-.media .avatar {
-    width: 64px;
-}
-.shadow-textarea textarea.form-control::placeholder {
-    font-weight: 300;
-}
-.shadow-textarea textarea.form-control {
-    padding-left: 0.8rem;
-}
-.basic-textarea textarea {
-    height: auto;
-}
-.rounded-corners textarea {
-    border-radius: 0.25rem;
+.text-small {
+    font-size: 0.75rem;
 }
                 </code>
             </pre>
@@ -659,32 +188,96 @@
 &lt;div class=&quot;row&quot;&gt;
 
     &lt;!-- Grid column --&gt;
-    &lt;div class=&quot;col-lg-10 col-xl-8&quot;&gt;
+    &lt;div class=&quot;col-lg-4 col-md-12&quot;&gt;
+        
+        &lt;!--Card--&gt;
+        &lt;div class=&quot;card&quot;&gt;
 
-        &lt;div class=&quot;media d-block d-md-flex&quot;&gt;
-            &lt;img class=&quot;d-flex rounded-circle avatar z-depth-1-half mb-3 mx-auto&quot; src=&quot;https://mdbootstrap.com/img/Photos/Avatars/img (20).jpg&quot; alt=&quot;Avatar&quot;&gt;
-            &lt;div class=&quot;media-body text-center text-md-left ml-md-3 ml-0&quot;&gt;
-                &lt;h5 class=&quot;mt-0 font-bold blue-text&quot;&gt;Anna Smith&lt;/h5&gt;
-                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+            &lt;!--Card image--&gt;
+            &lt;div class=&quot;view overlay hm-white-slight&quot;&gt;
+                &lt;img src=&quot;https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg&quot; class=&quot;img-fluid&quot; alt=&quot;photo&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;
+                    &lt;div class=&quot;mask&quot;&gt;&lt;/div&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
 
-                &lt;div class=&quot;media d-block d-md-flex mt-3 shadow-textarea&quot;&gt;
-                    &lt;img class=&quot;d-flex rounded-circle avatar z-depth-1-half mb-3 mx-auto&quot; src=&quot;https://mdbootstrap.com/img/Photos/Avatars/img (3).jpg&quot; alt=&quot;Generic placeholder image&quot;&gt;
-                    &lt;div class=&quot;media-body text-center text-md-left ml-md-3 ml-0&quot;&gt;
-                        &lt;h5 class=&quot;mt-0 font-bold blue-text mb-3&quot;&gt;Danny Tatuum&lt;/h5&gt;
-                        &lt;div class=&quot;form-group basic-textarea rounded-corners mb-md-0 mb-4&quot;&gt;
-                            &lt;textarea class=&quot;form-control z-depth-1&quot; id=&quot;exampleFormControlTextarea3&quot; rows=&quot;3&quot; placeholder=&quot;Write your comment...&quot;&gt;&lt;/textarea&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
+            &lt;!--Card content--&gt;
+            &lt;div class=&quot;card-body&quot;&gt;
+                &lt;!--Title--&gt;
+                &lt;h4 class=&quot;card-title&quot;&gt;Card title&lt;/h4&gt;
+                &lt;!--Text--&gt;
+                &lt;p class=&quot;card-text&quot;&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;
+                &lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&gt;Button&lt;/a&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;!--/.Card--&gt;
+                        
+    &lt;/div&gt;
+    &lt;!-- Grid column --&gt;
+
+    &lt;!-- Grid column --&gt;
+    &lt;div class=&quot;col-lg-4 col-md-6&quot;&gt;
+
+        &lt;!--Card--&gt;
+        &lt;div class=&quot;card card-dark&quot;&gt;
+
+            &lt;!--Card image--&gt;
+            &lt;div class=&quot;view overlay hm-white-slight&quot;&gt;
+                &lt;img src=&quot;https://mdbootstrap.com/img/Photos/SLides/img%20(125).jpg&quot; class=&quot;img-fluid&quot; alt=&quot;photo&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;
+                    &lt;div class=&quot;mask&quot;&gt;&lt;/div&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+
+            &lt;!--Card content--&gt;
+            &lt;div class=&quot;card-body&quot;&gt;
+                &lt;!--Title--&gt;
+                &lt;h4 class=&quot;card-title&quot;&gt;Title of the news&lt;/h4&gt;
+                &lt;!--Text--&gt;
+                &lt;p class=&quot;card-text white-text&quot;&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.&lt;/p&gt;
+                &lt;a href=&quot;#&quot; class=&quot;btn btn-outline-white btn-md waves-effect&quot;&gt;Button&lt;/a&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;!--/.Card--&gt;
+
+    &lt;/div&gt;
+    &lt;!-- Grid column --&gt;
+
+    &lt;!-- Grid column --&gt;
+    &lt;div class=&quot;col-lg-4 col-md-6&quot;&gt;
+
+        &lt;!--Panel--&gt;
+        &lt;div class=&quot;card&quot;&gt;
+            &lt;h3 class=&quot;card-header light-blue lighten-1 white-text font-up font-bold text-center py-5&quot;&gt;Features List&lt;/h3&gt;
+            &lt;div class=&quot;card-body&quot;&gt;
+                &lt;ul class=&quot;list-group&quot;&gt;
+                    &lt;li class=&quot;list-group-item d-flex justify-content-between align-items-center&quot;&gt;
+                        Cras justo odio
+                        &lt;span class=&quot;badge badge-primary badge-pill&quot;&gt;14&lt;/span&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;list-group-item d-flex justify-content-between align-items-center&quot;&gt;
+                        Dapibus ac facilisis in
+                        &lt;span class=&quot;badge badge-primary badge-pill&quot;&gt;2&lt;/span&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;list-group-item d-flex justify-content-between align-items-center&quot;&gt;
+                        Morbi leo risus
+                        &lt;span class=&quot;badge badge-primary badge-pill&quot;&gt;1&lt;/span&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;list-group-item d-flex justify-content-between align-items-center&quot;&gt;
+                        Cras justo odio
+                        &lt;span class=&quot;badge badge-primary badge-pill&quot;&gt;14&lt;/span&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;list-group-item d-flex justify-content-between align-items-center&quot;&gt;
+                        Dapibus ac facilisis in
+                        &lt;span class=&quot;badge badge-primary badge-pill&quot;&gt;2&lt;/span&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;p class=&quot;text-small text-muted mb-0 pt-3&quot;&gt;* At vero eos et accusamus et iusto ducimus.&lt;/p&gt;                
             &lt;/div&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;media d-block d-md-flex&quot;&gt;
-            &lt;img class=&quot;d-flex rounded-circle avatar z-depth-1-half mb-3 mx-auto&quot; src=&quot;https://mdbootstrap.com/img/Photos/Avatars/img (2).jpg&quot; alt=&quot;Avatar&quot;&gt;
-            &lt;div class=&quot;media-body text-center text-md-left ml-md-3 ml-0&quot;&gt;
-                &lt;h5 class=&quot;mt-0 font-bold blue-text&quot;&gt;Caroline Horwitz&lt;/h5&gt;
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis odit minima eaque dignissimos recusandae officiis commodi nulla est, tempore atque voluptas non quod maxime, iusto, debitis aliquid? Iure ipsum, itaque.
-            &lt;/div&gt;
-        &lt;/div&gt;
+        &lt;!--/.Panel--&gt;
 
     &lt;/div&gt;
     &lt;!-- Grid column --&gt;
@@ -705,7 +298,7 @@
     <section id="panels">
 
         <!--Title-->
-        <h2 class="title"><strong>Media object within panels</strong> <a href="https://mdbootstrap.com/product/material-design-for-bootstrap-pro/" target="_blank" class="btn btn-danger btn-md" role="button">MDB Pro component <i class="fa fa-diamond ml-1"></i></a></h2>
+        <h2 class="title"><strong>Basic panels layout</strong></h2>
 
         <!--Description-->
         <p class="description"></p>
@@ -717,39 +310,15 @@
             <div class="row">
             
                 <!-- Grid column -->
-                <div class="col-md-10 col-lg-9 col-xl-6 mb-r">
-                    
-                    <!--Panel-->
-                    <div class="card card-body mb-3">
-                        <div class="media d-block d-md-flex">
-                            <img class="d-flex avatar-2 mb-md-0 mb-3 mx-auto" src="https://mdbootstrap.com/img/Photos/Avatars/img (31).jpg" alt="Generic placeholder image">
-                            <div class="media-body text-center text-md-left ml-md-3 ml-0">
-                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                                <button type="button" class="btn btn-primary btn-md">Read more</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!--/.Panel-->
-
-                    <!--Panel-->
-                    <div class="card card-body mb-3">
-                        <div class="media d-block d-md-flex">
-                            <div class="media-body pr-md-3 pr-0 text-center text-md-left">
-                                <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit.</p>
-                                <button type="button" class="btn btn-primary btn-md">Read more</button>
-                            </div>
-                            <img class="d-flex mr-3 avatar-2 mt-md-0 mt-3 mx-auto" src="https://mdbootstrap.com/img/Photos/Avatars/img (27).jpg" alt="Generic placeholder image">
-                        </div>
-                    </div>
-                    <!--/.Panel-->
-
+                <div class="col-lg-4 col-md-12 mb-r">
+            
                     <!--Panel-->
                     <div class="card card-body">
-                        <div class="media d-block d-md-flex">
-                            <img class="d-flex avatar-2 mb-md-0 mb-3 mx-auto" src="https://mdbootstrap.com/img/Photos/Avatars/img (28).jpg" alt="Generic placeholder image">
-                            <div class="media-body text-center text-md-left ml-md-3 ml-0">
-                                <p> Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Itaque earum rerum hic tenetur a sapiente delectus.</p>
-                            </div>
+                        <h4 class="card-title">Panel title</h4>
+                        <p class="card-text"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+                        <div class="flex-row">
+                            <a class="card-link">Card link</a>
+                            <a class="card-link">Another link</a>
                         </div>
                     </div>
                     <!--/.Panel-->
@@ -758,31 +327,35 @@
                 <!-- Grid column -->
             
                 <!-- Grid column -->
-                <div class="col-md-10 col-lg-9 col-xl-6">
+                <div class="col-lg-4 col-md-6 mb-r">
+            
+                    <!--Card Primary-->
+                    <div class="card indigo text-center z-depth-2">
+                        <div class="card-body">
+                            <h3 class="font-up font-bold amber-text mt-2 mb-3"><strong>News title</strong><i class="fa fa-heart-o ml-3"></i></h3>
+                            <p class="white-text mb-0">Ut enim ad minima veniam, quis nostrum exercita tionem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis autem vel eum iure reprehenderit qui in ea voluptate non proident velit esse quam. </p>
+                        </div>
+                    </div>
+                    <!--/.Card Primary-->
+            
+                </div>
+                <!-- Grid column -->
+            
+                <!-- Grid column -->
+                <div class="col-lg-4 col-md-6">
             
                     <!--Panel-->
-                    <div class="card mb-3">
-                        <h3 class="card-header indigo white-text font-up text-center">Authors</h3>
+                    <div class="card text-center"">
+                        <div class="card-header success-color white-text">
+                            Featured
+                        </div>
                         <div class="card-body">
-                            <div class="media d-block d-md-flex mt-md-0 mt-4 mb-4">
-                                <img class="d-flex mb-md-0 mb-3 avatar-2 rounded-circle z-depth-1 mx-auto" src="https://mdbootstrap.com/img/Photos/Avatars/img (3).jpg" alt="Generic placeholder image">
-                                <div class="media-body ml-md-3 ml-0">
-                                    <p align="justify">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
-                                    <div class="text-center text-md-left">
-                                        <button type="button" class="btn btn-indigo btn-rounded btn-md">Read more</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="media d-block d-md-flex">
-                                <div class="media-body mr-md-3 mr-0">
-                                    <p align="justify">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis.</p>
-                                    <div class="text-center text-md-left">
-                                        <button type="button" class="btn btn-indigo btn-rounded btn-md">Read more</button>
-                                    </div>
-                                </div>
-                                <img class="d-flex mr-3 mb-md-0 mb-3 mt-md-0 mt-4 avatar-2 rounded-circle z-depth-1 mx-auto" src="https://mdbootstrap.com/img/Photos/Avatars/img (2).jpg" alt="Generic placeholder image">
-                            </div>
+                            <h4 class="card-title">Special title treatment</h4>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a class="btn btn-success btn-sm">Go somewhere</a>
+                        </div>
+                        <div class="card-footer text-muted success-color white-text">
+                            <p class="mb-0">2 days ago</p>
                         </div>
                     </div>
                     <!--/.Panel-->
@@ -799,66 +372,20 @@
         <!--Section: Code-->
         <section>
             <pre class="code-toolbar">
-                <code class="language-css">
-@media (min-width: 768px) {
-    .media .avatar-2 {
-        width: 130px;
-    }
-}
-@media (max-width: 767px) {
-    .media .avatar-2 {
-        width: 160px;
-    }
-}
-.card img.rounded-circle {
-    border-radius: 50%;
-}
-                </code>
-            </pre>
-        </section>
-        <!--Section: Code-->
-
-        <!--Section: Code-->
-        <section>
-            <pre class="code-toolbar">
                 <code class="language-markup">
 &lt;!-- Grid row --&gt;
 &lt;div class=&quot;row&quot;&gt;
 
     &lt;!-- Grid column --&gt;
-    &lt;div class=&quot;col-md-10 col-lg-9 col-xl-6 mb-r&quot;&gt;
-        
-        &lt;!--Panel--&gt;
-        &lt;div class=&quot;card card-body mb-3&quot;&gt;
-            &lt;div class=&quot;media d-block d-md-flex&quot;&gt;
-                &lt;img class=&quot;d-flex avatar-2 mb-md-0 mb-3 mx-auto&quot; src=&quot;https://mdbootstrap.com/img/Photos/Avatars/img (31).jpg&quot; alt=&quot;Generic placeholder image&quot;&gt;
-                &lt;div class=&quot;media-body text-center text-md-left ml-md-3 ml-0&quot;&gt;
-                    &lt;p&gt;Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt.&lt;/p&gt;
-                    &lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-md&quot;&gt;Read more&lt;/button&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;!--/.Panel--&gt;
-
-        &lt;!--Panel--&gt;
-        &lt;div class=&quot;card card-body mb-3&quot;&gt;
-            &lt;div class=&quot;media d-block d-md-flex&quot;&gt;
-                &lt;div class=&quot;media-body pr-md-3 pr-0 text-center text-md-left&quot;&gt;
-                    &lt;p&gt;Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit.&lt;/p&gt;
-                    &lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-md&quot;&gt;Read more&lt;/button&gt;
-                &lt;/div&gt;
-                &lt;img class=&quot;d-flex mr-3 avatar-2 mt-md-0 mt-3 mx-auto&quot; src=&quot;https://mdbootstrap.com/img/Photos/Avatars/img (27).jpg&quot; alt=&quot;Generic placeholder image&quot;&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;!--/.Panel--&gt;
+    &lt;div class=&quot;col-lg-4 col-md-12&quot;&gt;
 
         &lt;!--Panel--&gt;
         &lt;div class=&quot;card card-body&quot;&gt;
-            &lt;div class=&quot;media d-block d-md-flex&quot;&gt;
-                &lt;img class=&quot;d-flex avatar-2 mb-md-0 mb-3 mx-auto&quot; src=&quot;https://mdbootstrap.com/img/Photos/Avatars/img (28).jpg&quot; alt=&quot;Generic placeholder image&quot;&gt;
-                &lt;div class=&quot;media-body text-center text-md-left ml-md-3 ml-0&quot;&gt;
-                    &lt;p&gt; Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Itaque earum rerum hic tenetur a sapiente delectus.&lt;/p&gt;
-                &lt;/div&gt;
+            &lt;h4 class=&quot;card-title&quot;&gt;Panel title&lt;/h4&gt;
+            &lt;p class=&quot;card-text&quot;&gt; Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.&lt;/p&gt;
+            &lt;div class=&quot;flex-row&quot;&gt;
+                &lt;a class=&quot;card-link&quot;&gt;Card link&lt;/a&gt;
+                &lt;a class=&quot;card-link&quot;&gt;Another link&lt;/a&gt;
             &lt;/div&gt;
         &lt;/div&gt;
         &lt;!--/.Panel--&gt;
@@ -867,31 +394,35 @@
     &lt;!-- Grid column --&gt;
 
     &lt;!-- Grid column --&gt;
-    &lt;div class=&quot;col-md-10 col-lg-9 col-xl-6&quot;&gt;
+    &lt;div class=&quot;col-lg-4 col-md-6&quot;&gt;
+
+        &lt;!--Card Primary--&gt;
+        &lt;div class=&quot;card indigo text-center z-depth-2&quot;&gt;
+            &lt;div class=&quot;card-body&quot;&gt;
+                &lt;h3 class=&quot;font-up font-bold amber-text mt-2 mb-3&quot;&gt;&lt;strong&gt;News title&lt;/strong&gt;&lt;i class=&quot;fa fa-heart-o ml-3&quot;&gt;&lt;/i&gt;&lt;/h3&gt;
+                &lt;p class=&quot;white-text mb-0&quot;&gt;Ut enim ad minima veniam, quis nostrum exercita tionem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis autem vel eum iure reprehenderit qui in ea voluptate non proident velit esse quam. &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!--/.Card Primary--&gt;
+
+    &lt;/div&gt;
+    &lt;!-- Grid column --&gt;
+
+    &lt;!-- Grid column --&gt;
+    &lt;div class=&quot;col-lg-4 col-md-6&quot;&gt;
 
         &lt;!--Panel--&gt;
-        &lt;div class=&quot;card mb-3&quot;&gt;
-            &lt;h3 class=&quot;card-header indigo white-text font-up text-center&quot;&gt;Authors&lt;/h3&gt;
+        &lt;div class=&quot;card text-center&quot;&quot;&gt;
+            &lt;div class=&quot;card-header success-color white-text&quot;&gt;
+                Featured
+            &lt;/div&gt;
             &lt;div class=&quot;card-body&quot;&gt;
-                &lt;div class=&quot;media d-block d-md-flex mt-md-0 mt-4 mb-4&quot;&gt;
-                    &lt;img class=&quot;d-flex mb-md-0 mb-3 avatar-2 rounded-circle z-depth-1 mx-auto&quot; src=&quot;https://mdbootstrap.com/img/Photos/Avatars/img (3).jpg&quot; alt=&quot;Generic placeholder image&quot;&gt;
-                    &lt;div class=&quot;media-body ml-md-3 ml-0&quot;&gt;
-                        &lt;p align=&quot;justify&quot;&gt;At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.&lt;/p&gt;
-                        &lt;div class=&quot;text-center text-md-left&quot;&gt;
-                            &lt;button type=&quot;button&quot; class=&quot;btn btn-indigo btn-rounded btn-md&quot;&gt;Read more&lt;/button&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-
-                &lt;div class=&quot;media d-block d-md-flex&quot;&gt;
-                    &lt;div class=&quot;media-body mr-md-3 mr-0&quot;&gt;
-                        &lt;p align=&quot;justify&quot;&gt;Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis.&lt;/p&gt;
-                        &lt;div class=&quot;text-center text-md-left&quot;&gt;
-                            &lt;button type=&quot;button&quot; class=&quot;btn btn-indigo btn-rounded btn-md&quot;&gt;Read more&lt;/button&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;img class=&quot;d-flex mr-3 mb-md-0 mb-3 mt-md-0 mt-4 avatar-2 rounded-circle z-depth-1 mx-auto&quot; src=&quot;https://mdbootstrap.com/img/Photos/Avatars/img (2).jpg&quot; alt=&quot;Generic placeholder image&quot;&gt;
-                &lt;/div&gt;
+                &lt;h4 class=&quot;card-title&quot;&gt;Special title treatment&lt;/h4&gt;
+                &lt;p class=&quot;card-text&quot;&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
+                &lt;a class=&quot;btn btn-success btn-sm&quot;&gt;Go somewhere&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;card-footer text-muted success-color white-text&quot;&gt;
+                &lt;p class=&quot;mb-0&quot;&gt;2 days ago&lt;/p&gt;
             &lt;/div&gt;
         &lt;/div&gt;
         &lt;!--/.Panel--&gt;
@@ -912,10 +443,10 @@
     <hr class="my-5">
 
     <!--Section: -->
-    <section id="responsive">
+    <section id="grid">
 
         <!--Title-->
-        <h2 class="title"><strong>Responsive media object</strong></h2>
+        <h2 class="title"><strong>Grid layout options</strong></h2>
 
         <!--Description-->
         <p class="description"></p>
@@ -923,34 +454,517 @@
         <!--Section: Live preview-->
         <section>
 
-            <div class="media d-block d-md-flex mt-4">
-                <img class="d-flex mb-3 mx-auto media-image z-depth-1" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img (1).jpg" alt="Generic placeholder image">
-                <div class="media-body text-center text-md-left ml-md-3 ml-0">
-                    <h5 class="mt-0">Title of the news</h5>
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <h4 class="text-center py-4">Two equal columns layout</h4>
 
-                    <div class="media d-block d-md-flex mt-3">
-                        <img class="d-flex mb-3 mx-auto media-image z-depth-1" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img (101).jpg" alt="Generic placeholder image">
-                        <div class="media-body text-center text-md-left ml-md-3 ml-0">
-                            <h5 class="mt-0">Title of the news</h5>
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+            <!-- Grid row -->
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-md-6 mb-r">
+            
+                    <!--Card-->
+                    <div class="card default-color-dark">
+
+                        <!--Card image-->
+                        <div class="view overlay hm-white-slight">
+                            <img src="https://mdbootstrap.com/img/Photos/SLides/img%20(138).jpg" class="img-fluid" alt="photo">
+                            <a href="#">
+                                <div class="mask"></div>
+                            </a>
                         </div>
+
+                        <!--Card content-->
+                        <div class="card-body text-center">
+                            <!--Title-->
+                            <h4 class="card-title white-text">Title of the news</h4>
+                            <!--Text-->
+                            <p class="card-text white-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>
+                            <a href="#" class="btn btn-outline-white btn-md waves-effect">Button</a>
+                        </div>
+
                     </div>
+                    <!--/.Card-->
+            
                 </div>
-            </div>
-            <div class="media d-block d-md-flex mt-3">
-                <img class="d-flex mb-3 mx-auto media-image z-depth-1" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img (107).jpg" alt="Generic placeholder image">
-                <div class="media-body text-center text-md-left ml-md-3 ml-0">
-                    <h5 class="mt-0">Title of the news</h5>
-                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                <!-- Grid column -->
+            
+                <!-- Grid column -->
+                <div class="col-md-6 mb-r">
+            
+                    <!--Card-->
+                    <div class="card primary-color-dark">
 
-                    <div class="media d-block d-md-flex mt-3">
-                        <img class="d-flex mb-3 mx-auto media-image z-depth-1" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img (96).jpg" alt="Generic placeholder image">
-                        <div class="media-body text-center text-md-left ml-md-3 ml-0">
-                            <h5 class="mt-0">Title of the news</h5>
-                            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                        <!--Card image-->
+                        <div class="view overlay hm-white-slight">
+                            <img src="https://mdbootstrap.com/img/Photos/SLides/img%20(135).jpg" class="img-fluid" alt="photo">
+                            <a href="#">
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+
+                        <!--Card content-->
+                        <div class="card-body text-center">
+                            <!--Title-->
+                            <h4 class="card-title white-text">Title of the news</h4>
+                            <!--Text-->
+                            <p class="card-text white-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>
+                            <a href="#" class="btn btn-outline-white btn-md waves-effect">Button</a>
+                        </div>
+
+                    </div>
+                    <!--/.Card-->
+            
+                </div>
+                <!-- Grid column -->
+            
+            </div>
+            <!-- Grid row -->
+
+            <h4 class="text-center pb-4">Three equal columns layout</h4>
+
+            <!-- Grid row -->
+            <div class="row">
+            
+                <!-- Grid column -->
+                <div class="col-lg-4 col-md-12 mb-r">
+            
+                    <!--Card Primary-->
+                    <div class="card mdb-color text-center z-depth-2">
+                        <div class="card-body">
+                            <h3 class="font-up font-bold cyan-text mt-2 mb-3"><strong>First column</strong></h3>
+                            <p class="white-text mb-0">Ut enim ad minima veniam, quis nostrum exercita tionem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis autem vel eum iure reprehenderit qui in ea voluptate non proident velit esse quam. </p>
                         </div>
                     </div>
+                    <!--/.Card Primary-->
+            
+                </div>
+                <!-- Grid column -->
+            
+                <!-- Grid column -->
+                <div class="col-lg-4 col-md-6 mb-r">
+            
+                    <!--Card Primary-->
+                    <div class="card red darken-4 text-center z-depth-2">
+                        <div class="card-body">
+                            <h3 class="font-up font-bold light-green-text mt-2 mb-3"><strong>Second column</strong></h3>
+                            <p class="white-text mb-0">Ut enim ad minima veniam, quis nostrum exercita tionem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis autem vel eum iure reprehenderit qui in ea voluptate non proident velit esse quam. </p>
+                        </div>
+                    </div>
+                    <!--/.Card Primary-->
+            
+                </div>
+                <!-- Grid column -->
+            
+                <!-- Grid column -->
+                <div class="col-lg-4 col-md-6 mb-r">
+            
+                    <!--Card Primary-->
+                    <div class="card light-blue darken-1 text-center z-depth-2">
+                        <div class="card-body">
+                            <h3 class="font-up font-bold purple-text mt-2 mb-3"><strong>Third column</strong></h3>
+                            <p class="white-text mb-0">Ut enim ad minima veniam, quis nostrum exercita tionem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis autem vel eum iure reprehenderit qui in ea voluptate non proident velit esse quam. </p>
+                        </div>
+                    </div>
+                    <!--/.Card Primary-->
+            
+                </div>
+                <!-- Grid column -->
+            
+            </div>
+            <!-- Grid row -->
+
+            <h4 class="text-center pb-4">Two different columns layout</h4>
+
+            <!-- Grid row -->
+            <div class="row">
+            
+                <!-- Grid column -->
+                <div class="col-md-6 col-lg-7 mb-r">
+            
+                    <!--Card-->
+                    <div class="card">
+
+                        <!--Card image-->
+                        <div class="view overlay hm-white-slight">
+                            <img src="https://mdbootstrap.com/img/Photos/SLides/img%20(117).jpg" class="img-fluid" alt="photo">
+                            <a href="#">
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+
+                        <!--Card content-->
+                        <div class="card-body text-center">
+                            <!--Title-->
+                            <h4 class="card-title">Nature is beautiful!</h4>
+                            <!--Text-->
+                            <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>
+                            <a href="#" class="btn btn-dark-green">Read more</a>
+                        </div>
+
+                    </div>
+                    <!--/.Card-->
+            
+                </div>
+                <!-- Grid column -->
+            
+                <!-- Grid column -->
+                <div class="col-md-6 col-lg-5">
+            
+                    <!--Card-->
+                    <div class="card green darken-3">
+
+                        <!--Card image-->
+                        <div class="view overlay hm-white-slight">
+                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(131).jpg" class="img-fluid" alt="photo">
+                            <a href="#">
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+
+                        <!--Card content-->
+                        <div class="card-body text-center">
+                            <!--Title-->
+                            <h4 class="card-title white-text">Read about polish plants</h4>
+                            <!--Text-->
+                            <p class="card-text white-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto vitae.</p>
+                            <a href="#" class="btn btn-outline-white btn-md waves-effect">Read more</a>
+                        </div>
+
+                    </div>
+                    <!--/.Card-->
+            
+                </div>
+                <!-- Grid column -->
+            
+            </div>
+            <!-- Grid row -->
+
+        </section>
+        <!--Section: Live preview-->
+
+        <!--Section: Code-->
+        <section>
+            <pre class="code-toolbar">
+                <code class="language-markup">
+&lt;h4 class=&quot;text-center py-4&quot;&gt;Two equal columns layout&lt;/h4&gt;
+
+    &lt;!-- Grid row --&gt;
+    &lt;div class=&quot;row&quot;&gt;
+
+        &lt;!-- Grid column --&gt;
+        &lt;div class=&quot;col-md-6 mb-r&quot;&gt;
+    
+            &lt;!--Card--&gt;
+            &lt;div class=&quot;card default-color-dark&quot;&gt;
+
+                &lt;!--Card image--&gt;
+                &lt;div class=&quot;view overlay hm-white-slight&quot;&gt;
+                    &lt;img src=&quot;https://mdbootstrap.com/img/Photos/SLides/img%20(138).jpg&quot; class=&quot;img-fluid&quot; alt=&quot;photo&quot;&gt;
+                    &lt;a href=&quot;#&quot;&gt;
+                        &lt;div class=&quot;mask&quot;&gt;&lt;/div&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+
+                &lt;!--Card content--&gt;
+                &lt;div class=&quot;card-body text-center&quot;&gt;
+                    &lt;!--Title--&gt;
+                    &lt;h4 class=&quot;card-title white-text&quot;&gt;Title of the news&lt;/h4&gt;
+                    &lt;!--Text--&gt;
+                    &lt;p class=&quot;card-text white-text&quot;&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.&lt;/p&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;btn btn-outline-white btn-md waves-effect&quot;&gt;Button&lt;/a&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+            &lt;!--/.Card--&gt;
+    
+        &lt;/div&gt;
+        &lt;!-- Grid column --&gt;
+    
+        &lt;!-- Grid column --&gt;
+        &lt;div class=&quot;col-md-6 mb-r&quot;&gt;
+    
+            &lt;!--Card--&gt;
+            &lt;div class=&quot;card primary-color-dark&quot;&gt;
+
+                &lt;!--Card image--&gt;
+                &lt;div class=&quot;view overlay hm-white-slight&quot;&gt;
+                    &lt;img src=&quot;https://mdbootstrap.com/img/Photos/SLides/img%20(135).jpg&quot; class=&quot;img-fluid&quot; alt=&quot;photo&quot;&gt;
+                    &lt;a href=&quot;#&quot;&gt;
+                        &lt;div class=&quot;mask&quot;&gt;&lt;/div&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+
+                &lt;!--Card content--&gt;
+                &lt;div class=&quot;card-body text-center&quot;&gt;
+                    &lt;!--Title--&gt;
+                    &lt;h4 class=&quot;card-title white-text&quot;&gt;Title of the news&lt;/h4&gt;
+                    &lt;!--Text--&gt;
+                    &lt;p class=&quot;card-text white-text&quot;&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.&lt;/p&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;btn btn-outline-white btn-md waves-effect&quot;&gt;Button&lt;/a&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+            &lt;!--/.Card--&gt;
+    
+        &lt;/div&gt;
+        &lt;!-- Grid column --&gt;
+    
+    &lt;/div&gt;
+    &lt;!-- Grid row --&gt;
+
+    &lt;h4 class=&quot;text-center pb-4&quot;&gt;Three equal columns layout&lt;/h4&gt;
+
+    &lt;!-- Grid row --&gt;
+    &lt;div class=&quot;row&quot;&gt;
+    
+        &lt;!-- Grid column --&gt;
+        &lt;div class=&quot;col-lg-4 col-md-12 mb-r&quot;&gt;
+    
+            &lt;!--Card Primary--&gt;
+            &lt;div class=&quot;card mdb-color text-center z-depth-2&quot;&gt;
+                &lt;div class=&quot;card-body&quot;&gt;
+                    &lt;h3 class=&quot;font-up font-bold cyan-text mt-2 mb-3&quot;&gt;&lt;strong&gt;First column&lt;/strong&gt;&lt;/h3&gt;
+                    &lt;p class=&quot;white-text mb-0&quot;&gt;Ut enim ad minima veniam, quis nostrum exercita tionem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis autem vel eum iure reprehenderit qui in ea voluptate non proident velit esse quam. &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!--/.Card Primary--&gt;
+    
+        &lt;/div&gt;
+        &lt;!-- Grid column --&gt;
+    
+        &lt;!-- Grid column --&gt;
+        &lt;div class=&quot;col-lg-4 col-md-6 mb-r&quot;&gt;
+    
+            &lt;!--Card Primary--&gt;
+            &lt;div class=&quot;card red darken-4 text-center z-depth-2&quot;&gt;
+                &lt;div class=&quot;card-body&quot;&gt;
+                    &lt;h3 class=&quot;font-up font-bold light-green-text mt-2 mb-3&quot;&gt;&lt;strong&gt;Second column&lt;/strong&gt;&lt;/h3&gt;
+                    &lt;p class=&quot;white-text mb-0&quot;&gt;Ut enim ad minima veniam, quis nostrum exercita tionem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis autem vel eum iure reprehenderit qui in ea voluptate non proident velit esse quam. &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!--/.Card Primary--&gt;
+    
+        &lt;/div&gt;
+        &lt;!-- Grid column --&gt;
+    
+        &lt;!-- Grid column --&gt;
+        &lt;div class=&quot;col-lg-4 col-md-6 mb-r&quot;&gt;
+    
+            &lt;!--Card Primary--&gt;
+            &lt;div class=&quot;card light-blue darken-1 text-center z-depth-2&quot;&gt;
+                &lt;div class=&quot;card-body&quot;&gt;
+                    &lt;h3 class=&quot;font-up font-bold purple-text mt-2 mb-3&quot;&gt;&lt;strong&gt;Third column&lt;/strong&gt;&lt;/h3&gt;
+                    &lt;p class=&quot;white-text mb-0&quot;&gt;Ut enim ad minima veniam, quis nostrum exercita tionem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis autem vel eum iure reprehenderit qui in ea voluptate non proident velit esse quam. &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!--/.Card Primary--&gt;
+    
+        &lt;/div&gt;
+        &lt;!-- Grid column --&gt;
+    
+    &lt;/div&gt;
+    &lt;!-- Grid row --&gt;
+
+    &lt;h4 class=&quot;text-center pb-4&quot;&gt;Two different columns layout&lt;/h4&gt;
+
+    &lt;!-- Grid row --&gt;
+    &lt;div class=&quot;row&quot;&gt;
+    
+        &lt;!-- Grid column --&gt;
+        &lt;div class=&quot;col-md-6 col-lg-7 mb-r&quot;&gt;
+    
+            &lt;!--Card--&gt;
+            &lt;div class=&quot;card&quot;&gt;
+
+                &lt;!--Card image--&gt;
+                &lt;div class=&quot;view overlay hm-white-slight&quot;&gt;
+                    &lt;img src=&quot;https://mdbootstrap.com/img/Photos/SLides/img%20(117).jpg&quot; class=&quot;img-fluid&quot; alt=&quot;photo&quot;&gt;
+                    &lt;a href=&quot;#&quot;&gt;
+                        &lt;div class=&quot;mask&quot;&gt;&lt;/div&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+
+                &lt;!--Card content--&gt;
+                &lt;div class=&quot;card-body text-center&quot;&gt;
+                    &lt;!--Title--&gt;
+                    &lt;h4 class=&quot;card-title&quot;&gt;Nature is beautiful!&lt;/h4&gt;
+                    &lt;!--Text--&gt;
+                    &lt;p class=&quot;card-text&quot;&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.&lt;/p&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;btn btn-dark-green&quot;&gt;Read more&lt;/a&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+            &lt;!--/.Card--&gt;
+    
+        &lt;/div&gt;
+        &lt;!-- Grid column --&gt;
+    
+        &lt;!-- Grid column --&gt;
+        &lt;div class=&quot;col-md-6 col-lg-5&quot;&gt;
+    
+            &lt;!--Card--&gt;
+            &lt;div class=&quot;card green darken-3&quot;&gt;
+
+                &lt;!--Card image--&gt;
+                &lt;div class=&quot;view overlay hm-white-slight&quot;&gt;
+                    &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(131).jpg&quot; class=&quot;img-fluid&quot; alt=&quot;photo&quot;&gt;
+                    &lt;a href=&quot;#&quot;&gt;
+                        &lt;div class=&quot;mask&quot;&gt;&lt;/div&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+
+                &lt;!--Card content--&gt;
+                &lt;div class=&quot;card-body text-center&quot;&gt;
+                    &lt;!--Title--&gt;
+                    &lt;h4 class=&quot;card-title white-text&quot;&gt;Read about polish plants&lt;/h4&gt;
+                    &lt;!--Text--&gt;
+                    &lt;p class=&quot;card-text white-text&quot;&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto vitae.&lt;/p&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;btn btn-outline-white btn-md waves-effect&quot;&gt;Read more&lt;/a&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+            &lt;!--/.Card--&gt;
+    
+        &lt;/div&gt;
+        &lt;!-- Grid column --&gt;
+    
+    &lt;/div&gt;
+    &lt;!-- Grid row --&gt;
+                </code>
+            </pre>
+        </section>
+        <!--Section: Code-->
+
+    </section>
+    <!--/Section: -->
+
+    <hr class="my-5">
+
+    <!--Section: -->
+    <section id="cascading">
+
+        <!--Title-->
+        <h2 class="title"><strong>Cascading cards layout</strong> <a href="https://mdbootstrap.com/product/material-design-for-bootstrap-pro/" target="_blank" class="btn btn-danger btn-md" role="button">MDB Pro component <i class="fa fa-diamond ml-1"></i></a></h2>
+
+        <!--Description-->
+        <p class="description"></p>
+
+        <!--Section: Live preview-->
+        <section>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-12 mb-r">
+
+                    <h4 class="py-4 text-center">Wider</h4>
+
+                    <!--Card-->
+                    <div class="card card-cascade wider mb-r">
+
+                        <!--Card image-->
+                        <div class="view overlay hm-white-slight">
+                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/People/6-col/img%20%283%29.jpg" class="img-fluid">
+                            <a href="#!">
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+                        <!--/Card image-->
+
+                        <!--Card content-->
+                        <div class="card-body text-center">
+                            <!--Title-->
+                            <h4 class="card-title"><strong>Alice Mayer</strong></h4>
+                            <h5 class="indigo-text"><strong>Photographer</strong></h5>
+
+                            <p class="card-text">Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam
+                                rem aperiam.
+                            </p>
+
+
+                            <!--Linkedin-->
+                            <a class="icons-sm li-ic"><i class="fa fa-linkedin"> </i></a>
+                            <!--Twitter-->
+                            <a class="icons-sm tw-ic"><i class="fa fa-twitter"> </i></a>
+                            <!--Dribbble-->
+                            <a class="icons-sm fb-ic"><i class="fa fa-facebook"> </i></a>
+
+                        </div>
+                        <!--/.Card content-->
+
+                    </div>
+                    <!--/.Card-->
+
+                </div>
+                <div class="col-lg-4 col-md-6 mb-r">
+
+                    <h4 class="py-lg-4 pb-4 text-center">Narrower</h4>
+
+                    <!--Card-->
+                    <div class="card card-cascade narrower mb-r" style="margin-top: 28px">
+
+                        <!--Card image-->
+                        <div class="view overlay hm-white-slight">
+                            <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg" class="img-fluid" alt="">
+                            <a>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+                        <!--/.Card image-->
+
+                        <!--Card content-->
+                        <div class="card-body">
+                            <h5 class="pink-text"><i class="fa fa-cutlery"></i> Culinary</h5>
+                            <!--Title-->
+                            <h4 class="card-title">Cheat day inspirations</h4>
+                            <!--Text-->
+                            <p class="card-text">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut
+                                aliquid ex ea commodi.</p>
+                            <a class="btn btn-unique">Button</a>
+                        </div>
+                        <!--/.Card content-->
+
+                    </div>
+                    <!--/.Card-->
+
+                </div>
+                <div class="col-lg-4 col-md-6">
+
+                    <h4 class="py-lg-4 pb-4 text-center">Regular</h4>
+
+                    <!--Card-->
+                    <div class="card card-cascade">
+
+                        <!--Card image-->
+                        <div class="view overlay hm-white-slight">
+                            <img src="https://mdbootstrap.com/img/Photos/Others/men.jpg" class="img-fluid" alt="">
+                            <a>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+                        <!--/.Card image-->
+
+                        <!--Card content-->
+                        <div class="card-body text-center">
+                            <!--Title-->
+                            <h4 class="card-title"><strong>Billy Cullen</strong></h4>
+                            <h5>Web developer</h5>
+
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, ex, recusandae. Facere modi
+                                sunt, quod quibusdam.
+                            </p>
+
+                            <!--Facebook-->
+                            <a type="button" class="btn-floating btn-small btn-fb"><i class="fa fa-facebook"></i></a>
+                            <!--Twitter-->
+                            <a type="button" class="btn-floating btn-small btn-tw"><i class="fa fa-twitter"></i></a>
+                            <!--Google +-->
+                            <a type="button" class="btn-floating btn-small btn-dribbble"><i class="fa fa-dribbble"></i></a>
+
+                        </div>
+                        <!--/.Card content-->
+
+                    </div>
+                    <!--/.Card-->
+                    
                 </div>
             </div>
 
@@ -960,17 +974,154 @@
         <!--Section: Code-->
         <section>
             <pre class="code-toolbar">
+                <code class="language-markup">
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-lg-4 col-md-12 mb-r&quot;&gt;
+
+        &lt;h4 class=&quot;py-4 text-center&quot;&gt;Wider&lt;/h4&gt;
+
+        &lt;!--Card--&gt;
+        &lt;div class=&quot;card card-cascade wider mb-r&quot;&gt;
+
+            &lt;!--Card image--&gt;
+            &lt;div class=&quot;view overlay hm-white-slight&quot;&gt;
+                &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/People/6-col/img%20%283%29.jpg&quot; class=&quot;img-fluid&quot;&gt;
+                &lt;a href=&quot;#!&quot;&gt;
+                    &lt;div class=&quot;mask&quot;&gt;&lt;/div&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;!--/Card image--&gt;
+
+            &lt;!--Card content--&gt;
+            &lt;div class=&quot;card-body text-center&quot;&gt;
+                &lt;!--Title--&gt;
+                &lt;h4 class=&quot;card-title&quot;&gt;&lt;strong&gt;Alice Mayer&lt;/strong&gt;&lt;/h4&gt;
+                &lt;h5 class=&quot;indigo-text&quot;&gt;&lt;strong&gt;Photographer&lt;/strong&gt;&lt;/h5&gt;
+
+                &lt;p class=&quot;card-text&quot;&gt;Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam
+                    rem aperiam.
+                &lt;/p&gt;
+
+
+                &lt;!--Linkedin--&gt;
+                &lt;a class=&quot;icons-sm li-ic&quot;&gt;&lt;i class=&quot;fa fa-linkedin&quot;&gt; &lt;/i&gt;&lt;/a&gt;
+                &lt;!--Twitter--&gt;
+                &lt;a class=&quot;icons-sm tw-ic&quot;&gt;&lt;i class=&quot;fa fa-twitter&quot;&gt; &lt;/i&gt;&lt;/a&gt;
+                &lt;!--Dribbble--&gt;
+                &lt;a class=&quot;icons-sm fb-ic&quot;&gt;&lt;i class=&quot;fa fa-facebook&quot;&gt; &lt;/i&gt;&lt;/a&gt;
+
+            &lt;/div&gt;
+            &lt;!--/.Card content--&gt;
+
+        &lt;/div&gt;
+        &lt;!--/.Card--&gt;
+
+    &lt;/div&gt;
+    &lt;div class=&quot;col-lg-4 col-md-6 mb-r&quot;&gt;
+
+        &lt;h4 class=&quot;py-lg-4 pb-4 text-center&quot;&gt;Narrower&lt;/h4&gt;
+
+        &lt;!--Card--&gt;
+        &lt;div class=&quot;card card-cascade narrower mb-r&quot; style=&quot;margin-top: 28px&quot;&gt;
+
+            &lt;!--Card image--&gt;
+            &lt;div class=&quot;view overlay hm-white-slight&quot;&gt;
+                &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg&quot; class=&quot;img-fluid&quot; alt=&quot;&quot;&gt;
+                &lt;a&gt;
+                    &lt;div class=&quot;mask&quot;&gt;&lt;/div&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;!--/.Card image--&gt;
+
+            &lt;!--Card content--&gt;
+            &lt;div class=&quot;card-body&quot;&gt;
+                &lt;h5 class=&quot;pink-text&quot;&gt;&lt;i class=&quot;fa fa-cutlery&quot;&gt;&lt;/i&gt; Culinary&lt;/h5&gt;
+                &lt;!--Title--&gt;
+                &lt;h4 class=&quot;card-title&quot;&gt;Cheat day inspirations&lt;/h4&gt;
+                &lt;!--Text--&gt;
+                &lt;p class=&quot;card-text&quot;&gt;Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut
+                    aliquid ex ea commodi.&lt;/p&gt;
+                &lt;a class=&quot;btn btn-unique&quot;&gt;Button&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;!--/.Card content--&gt;
+
+        &lt;/div&gt;
+        &lt;!--/.Card--&gt;
+
+    &lt;/div&gt;
+    &lt;div class=&quot;col-lg-4 col-md-6&quot;&gt;
+
+        &lt;h4 class=&quot;py-lg-4 pb-4 text-center&quot;&gt;Regular&lt;/h4&gt;
+
+        &lt;!--Card--&gt;
+        &lt;div class=&quot;card card-cascade&quot;&gt;
+
+            &lt;!--Card image--&gt;
+            &lt;div class=&quot;view overlay hm-white-slight&quot;&gt;
+                &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Others/men.jpg&quot; class=&quot;img-fluid&quot; alt=&quot;&quot;&gt;
+                &lt;a&gt;
+                    &lt;div class=&quot;mask&quot;&gt;&lt;/div&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;!--/.Card image--&gt;
+
+            &lt;!--Card content--&gt;
+            &lt;div class=&quot;card-body text-center&quot;&gt;
+                &lt;!--Title--&gt;
+                &lt;h4 class=&quot;card-title&quot;&gt;&lt;strong&gt;Billy Cullen&lt;/strong&gt;&lt;/h4&gt;
+                &lt;h5&gt;Web developer&lt;/h5&gt;
+
+                &lt;p class=&quot;card-text&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, ex, recusandae. Facere modi
+                    sunt, quod quibusdam.
+                &lt;/p&gt;
+
+                &lt;!--Facebook--&gt;
+                &lt;a type=&quot;button&quot; class=&quot;btn-floating btn-small btn-fb&quot;&gt;&lt;i class=&quot;fa fa-facebook&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;!--Twitter--&gt;
+                &lt;a type=&quot;button&quot; class=&quot;btn-floating btn-small btn-tw&quot;&gt;&lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;!--Google +--&gt;
+                &lt;a type=&quot;button&quot; class=&quot;btn-floating btn-small btn-dribbble&quot;&gt;&lt;i class=&quot;fa fa-dribbble&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+
+            &lt;/div&gt;
+            &lt;!--/.Card content--&gt;
+
+        &lt;/div&gt;
+        &lt;!--/.Card--&gt;
+        
+    &lt;/div&gt;
+&lt;/div&gt;
+                </code>
+            </pre>
+        </section>
+        <!--Section: Code-->
+
+    </section>
+    <!--/Section: -->
+
+    <hr class="my-5">
+
+    <!--Section: -->
+    <section id="5">
+
+        <!--Title-->
+        <h2 class="title"><strong></strong> <a href="https://mdbootstrap.com/product/material-design-for-bootstrap-pro/" target="_blank" class="btn btn-danger btn-md" role="button">MDB Pro component <i class="fa fa-diamond ml-1"></i></a></h2>
+
+        <!--Description-->
+        <p class="description"></p>
+
+        <!--Section: Live preview-->
+        <section>
+
+
+
+        </section>
+        <!--Section: Live preview-->
+
+        <!--Section: Code-->
+        <section>
+            <pre class="code-toolbar">
                 <code class="language-css">
-@media (min-width: 768px) {
-    .media .media-image {
-        width: 100px;
-    }
-}
-@media (max-width: 767px) {
-    .media .media-image {
-        width: 250px;
-    }
-}
+
                 </code>
             </pre>
         </section>
@@ -980,36 +1131,217 @@
         <section>
             <pre class="code-toolbar">
                 <code class="language-markup">
-&lt;div class=&quot;media d-block d-md-flex mt-4&quot;&gt;
-    &lt;img class=&quot;d-flex mb-3 mx-auto media-image z-depth-1&quot; src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img (1).jpg&quot; alt=&quot;Generic placeholder image&quot;&gt;
-    &lt;div class=&quot;media-body text-center text-md-left ml-md-3 ml-0&quot;&gt;
-        &lt;h5 class=&quot;mt-0&quot;&gt;Title of the news&lt;/h5&gt;
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-        &lt;div class=&quot;media d-block d-md-flex mt-3&quot;&gt;
-            &lt;img class=&quot;d-flex mb-3 mx-auto media-image z-depth-1&quot; src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img (101).jpg&quot; alt=&quot;Generic placeholder image&quot;&gt;
-            &lt;div class=&quot;media-body text-center text-md-left ml-md-3 ml-0&quot;&gt;
-                &lt;h5 class=&quot;mt-0&quot;&gt;Title of the news&lt;/h5&gt;
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;media d-block d-md-flex mt-3&quot;&gt;
-    &lt;img class=&quot;d-flex mb-3 mx-auto media-image z-depth-1&quot; src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img (107).jpg&quot; alt=&quot;Generic placeholder image&quot;&gt;
-    &lt;div class=&quot;media-body text-center text-md-left ml-md-3 ml-0&quot;&gt;
-        &lt;h5 class=&quot;mt-0&quot;&gt;Title of the news&lt;/h5&gt;
-        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                </code>
+            </pre>
+        </section>
+        <!--Section: Code-->
 
-        &lt;div class=&quot;media d-block d-md-flex mt-3&quot;&gt;
-            &lt;img class=&quot;d-flex mb-3 mx-auto media-image z-depth-1&quot; src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img (96).jpg&quot; alt=&quot;Generic placeholder image&quot;&gt;
-            &lt;div class=&quot;media-body text-center text-md-left ml-md-3 ml-0&quot;&gt;
-                &lt;h5 class=&quot;mt-0&quot;&gt;Title of the news&lt;/h5&gt;
-                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+    </section>
+    <!--/Section: -->
+
+    <hr class="my-5">
+
+    <!--Section: -->
+    <section id="6">
+
+        <!--Title-->
+        <h2 class="title"><strong></strong> <a href="https://mdbootstrap.com/product/material-design-for-bootstrap-pro/" target="_blank" class="btn btn-danger btn-md" role="button">MDB Pro component <i class="fa fa-diamond ml-1"></i></a></h2>
+
+        <!--Description-->
+        <p class="description"></p>
+
+        <!--Section: Live preview-->
+        <section>
+
+
+
+        </section>
+        <!--Section: Live preview-->
+
+        <!--Section: Code-->
+        <section>
+            <pre class="code-toolbar">
+                <code class="language-css">
+
+                </code>
+            </pre>
+        </section>
+        <!--Section: Code-->
+
+        <!--Section: Code-->
+        <section>
+            <pre class="code-toolbar">
+                <code class="language-markup">
+
+                </code>
+            </pre>
+        </section>
+        <!--Section: Code-->
+
+    </section>
+    <!--/Section: -->
+
+    <hr class="my-5">
+
+    <!--Section: -->
+    <section id="7">
+
+        <!--Title-->
+        <h2 class="title"><strong></strong> <a href="https://mdbootstrap.com/product/material-design-for-bootstrap-pro/" target="_blank" class="btn btn-danger btn-md" role="button">MDB Pro component <i class="fa fa-diamond ml-1"></i></a></h2>
+
+        <!--Description-->
+        <p class="description"></p>
+
+        <!--Section: Live preview-->
+        <section>
+
+
+
+        </section>
+        <!--Section: Live preview-->
+
+        <!--Section: Code-->
+        <section>
+            <pre class="code-toolbar">
+                <code class="language-css">
+
+                </code>
+            </pre>
+        </section>
+        <!--Section: Code-->
+
+        <!--Section: Code-->
+        <section>
+            <pre class="code-toolbar">
+                <code class="language-markup">
+
+                </code>
+            </pre>
+        </section>
+        <!--Section: Code-->
+
+    </section>
+    <!--/Section: -->
+
+    <hr class="my-5">
+
+    <!--Section: -->
+    <section id="8">
+
+        <!--Title-->
+        <h2 class="title"><strong></strong> <a href="https://mdbootstrap.com/product/material-design-for-bootstrap-pro/" target="_blank" class="btn btn-danger btn-md" role="button">MDB Pro component <i class="fa fa-diamond ml-1"></i></a></h2>
+
+        <!--Description-->
+        <p class="description"></p>
+
+        <!--Section: Live preview-->
+        <section>
+
+
+
+        </section>
+        <!--Section: Live preview-->
+
+        <!--Section: Code-->
+        <section>
+            <pre class="code-toolbar">
+                <code class="language-css">
+
+                </code>
+            </pre>
+        </section>
+        <!--Section: Code-->
+
+        <!--Section: Code-->
+        <section>
+            <pre class="code-toolbar">
+                <code class="language-markup">
+
+                </code>
+            </pre>
+        </section>
+        <!--Section: Code-->
+
+    </section>
+    <!--/Section: -->
+
+    <hr class="my-5">
+
+    <!--Section: -->
+    <section id="9">
+
+        <!--Title-->
+        <h2 class="title"><strong></strong> <a href="https://mdbootstrap.com/product/material-design-for-bootstrap-pro/" target="_blank" class="btn btn-danger btn-md" role="button">MDB Pro component <i class="fa fa-diamond ml-1"></i></a></h2>
+
+        <!--Description-->
+        <p class="description"></p>
+
+        <!--Section: Live preview-->
+        <section>
+
+
+
+        </section>
+        <!--Section: Live preview-->
+
+        <!--Section: Code-->
+        <section>
+            <pre class="code-toolbar">
+                <code class="language-css">
+
+                </code>
+            </pre>
+        </section>
+        <!--Section: Code-->
+
+        <!--Section: Code-->
+        <section>
+            <pre class="code-toolbar">
+                <code class="language-markup">
+
+                </code>
+            </pre>
+        </section>
+        <!--Section: Code-->
+
+    </section>
+    <!--/Section: -->
+
+    <hr class="my-5">
+
+    <!--Section: -->
+    <section id="10">
+
+        <!--Title-->
+        <h2 class="title"><strong></strong> <a href="https://mdbootstrap.com/product/material-design-for-bootstrap-pro/" target="_blank" class="btn btn-danger btn-md" role="button">MDB Pro component <i class="fa fa-diamond ml-1"></i></a></h2>
+
+        <!--Description-->
+        <p class="description"></p>
+
+        <!--Section: Live preview-->
+        <section>
+
+
+
+        </section>
+        <!--Section: Live preview-->
+
+        <!--Section: Code-->
+        <section>
+            <pre class="code-toolbar">
+                <code class="language-css">
+
+                </code>
+            </pre>
+        </section>
+        <!--Section: Code-->
+
+        <!--Section: Code-->
+        <section>
+            <pre class="code-toolbar">
+                <code class="language-markup">
+
                 </code>
             </pre>
         </section>
