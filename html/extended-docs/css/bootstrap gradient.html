@@ -37,13 +37,17 @@
 <section class="documentation">
 
     <style>
-        .color-block {
-            height:auto;
+        .color-block-2 {
+            height: auto;
             padding: 40px;
             text-align: center;
             color: #fff;
         }
-
+        .color-block {
+            border-radius: 50%;
+            height: 200px;
+            width: 200px;
+        }
         .img-gradient {
           position:relative;
           display:inline-block;
@@ -76,180 +80,68 @@
     </style>
 
     <style>
-        .limeade-gradient {
-            background: #A1FFCE;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #FAFFD1, #A1FFCE);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #FAFFD1, #A1FFCE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        .juicy-peach-gradient {
+            background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
         }
-        .limeade-gradient-2 {
-            background: #A1FFCE;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to bottom, #FAFFD1, #A1FFCE);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to bottom, #FAFFD1, #A1FFCE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        .young-passion-gradient {
+            background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
         }
-        .limeade-gradient-3 {
-            background: #A1FFCE;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to left, #FAFFD1, #A1FFCE);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to left, #FAFFD1, #A1FFCE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        .lady-lips-gradient {
+            background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
         }
-
-        .dania-gradient {
-            background: #BE93C5;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #7BC6CC, #BE93C5);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #7BC6CC, #BE93C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        .sunny-morning-gradient {
+            background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
         }
-        .dania-gradient-2 {
-            background: #BE93C5;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to bottom, #7BC6CC, #BE93C5);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to bottom, #7BC6CC, #BE93C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        .rainy-ashville-gradient {
+            background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
         }
-        .dania-gradient-3 {
-            background: #BE93C5;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to left, #7BC6CC, #BE93C5);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to left, #7BC6CC, #BE93C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        .frozen-dreams-gradient {
+            background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
         }
-
-        .grey-gradient {
-            background: #bdc3c7;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        .warm-flame-gradient {
+            background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
         }
-        .grey-gradient-2 {
-            background: #bdc3c7;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to top, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to top, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        .night-fade-gradient {
+            background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
         }
-        .grey-gradient-3 {
-            background: #bdc3c7;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to left, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to left, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        .spring-warmth-gradient {
+            background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
         }
-
-        .delhi-gradient {
-            background: #808080;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to left, #3fada8, #808080);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to left, #3fada8, #808080); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        .winter-neva-gradient {
+            background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
         }
-        .delhi-gradient-2 {
-            background: #808080;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to bottom, #3fada8, #808080);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to bottom, #3fada8, #808080); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        .dusty-grass-gradient {
+            background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
         }
-        .delhi-gradient-3 {
-            background: #808080;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #3fada8, #808080);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #3fada8, #808080); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        .tempting-azure-gradient {
+            background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
         }
-
-        .sun-gradient {
-            background: #fceabb;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #f8b500, #fceabb);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #f8b500, #fceabb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        .heavy-rain-gradient {
+            background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
         }
-        .sun-gradient-2 {
-            background: #fceabb;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to top, #f8b500, #fceabb);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to top, #f8b500, #fceabb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        .amy-crisp-gradient {
+            background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
         }
-        .sun-gradient-3 {
-            background: #fceabb;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to left, #f8b500, #fceabb);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to left, #f8b500, #fceabb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        .mean-fruit-gradient {
+            background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
         }
-
-        .psychedelic-gradient {
-            background: #40E0D0;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #FF0080, #FF8C00, #40E0D0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        .deep-blue-gradient {
+            background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
         }
-        .psychedelic-gradient-2 {
-            background: #40E0D0;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to top, #FF0080, #FF8C00, #40E0D0);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to top, #FF0080, #FF8C00, #40E0D0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        .ripe-malinka-gradient {
+            background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
         }
-        .psychedelic-gradient-3 {
-            background: #40E0D0;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to left, #FF0080, #FF8C00, #40E0D0);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to left, #FF0080, #FF8C00, #40E0D0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        .cloudy-knoxville-gradient {
+            background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
         }
-
-        .sherbert-gradient {
-            background: #f79d00;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to left, #64f38c, #f79d00);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to left, #64f38c, #f79d00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        .morpheus-den-gradient {
+            background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
         }
-        .sherbert-gradient-2 {
-            background: #f79d00;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to bottom, #64f38c, #f79d00);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to bottom, #64f38c, #f79d00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        .rare-wind-gradient {
+            background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
         }
-        .sherbert-gradient-3 {
-            background: #f79d00;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #64f38c, #f79d00);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #64f38c, #f79d00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        }
-
-        .velvet-gradient {
-            background: #e1eec3;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #f05053, #e1eec3);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #f05053, #e1eec3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        }
-        .velvet-gradient-2 {
-            background: #e1eec3;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to top, #f05053, #e1eec3);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to top, #f05053, #e1eec3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        }
-        .velvet-gradient-3 {
-            background: #e1eec3;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to left, #f05053, #e1eec3);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to left, #f05053, #e1eec3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        }
-
-        .meridian-gradient {
-            background: #283c86;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to left, #45a247, #283c86);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to left, #45a247, #283c86); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        }
-        .meridian-gradient-2 {
-            background: #283c86;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to bottom, #45a247, #283c86);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to bottom, #45a247, #283c86); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        }
-        .meridian-gradient-3 {
-            background: #283c86;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #45a247, #283c86);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #45a247, #283c86); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        }
-
-        .borabora-gradient {
-            background: #2BC0E4;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to left, #EAECC6, #2BC0E4);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to left, #EAECC6, #2BC0E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        }
-        .borabora-gradient-2 {
-            background: #2BC0E4;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to bottom, #EAECC6, #2BC0E4);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to bottom, #EAECC6, #2BC0E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        }
-        .borabora-gradient-3 {
-            background: #2BC0E4;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #EAECC6, #2BC0E4);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #EAECC6, #2BC0E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        }
-
-        .quepal-gradient {
-            background: #11998e;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to left, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to left, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        }
-        .quepal-gradient-2 {
-            background: #11998e;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to left, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to left, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        }
-        .quepal-gradient-3 {
-            background: #11998e;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to left, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to left, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        .near-moon-gradient {
+            background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
         }
     </style>
 
@@ -285,7 +177,7 @@
                 <!-- Grid column -->
                 <div class="col-md-6 mb-r">
 
-                    <div class="color-block purple-gradient z-depth-2">
+                    <div class="color-block-2 purple-gradient z-depth-2">
                         <h5>purple-gradient</h5>
                     </div>
             
@@ -295,7 +187,7 @@
                 <!-- Grid column -->
                 <div class="col-md-6 mb-r">
             
-                    <div class="color-block blue-gradient z-depth-2">
+                    <div class="color-block-2 blue-gradient z-depth-2">
                         <h5>blue-gradient</h5>
                     </div>
             
@@ -305,7 +197,7 @@
                 <!-- Grid column -->
                 <div class="col-md-6 mb-r">
             
-                    <div class="color-block aqua-gradient z-depth-2">
+                    <div class="color-block-2 aqua-gradient z-depth-2">
                         <h5>aqua-gradient</h5>
                     </div>
             
@@ -315,7 +207,7 @@
                 <!-- Grid column -->
                 <div class="col-md-6">
             
-                    <div class="color-block peach-gradient z-depth-2">
+                    <div class="color-block-2 peach-gradient z-depth-2">
                         <h5>peach-gradient</h5>
                     </div>
             
@@ -672,7 +564,7 @@
     <section id="additional">
 
         <!--Title-->
-        <h2 class="title"><strong>Additional gradients</strong> <a href="https://mdbootstrap.com/product/material-design-for-bootstrap-pro/" target="_blank" class="btn btn-danger btn-md" role="button">MDB Pro component <i class="fa fa-diamond ml-1"></i></a></h2>
+        <h2 class="title"><strong>Additional gradients</strong></h2>
 
         <!--Description-->
         <p class="description"></p>
@@ -681,35 +573,26 @@
         <section>
 
             <!-- Grid row -->
-            <div class="row">
+            <div class="row text-center">
             
                 <!-- Grid column -->
-                <div class="col-lg-4 col-md-12 mb-4">
-            
-                    <div class="color-block limeade-gradient z-depth-2 black-text">
-                        <h5>limeade-gradient</h5>
-                    </div>
-            
+                <div class="col-md-4 mb-4">
+                    <h5>warm-flame-gradient</h5>
+                    <div class="color-block mx-auto mt-3 warm-flame-gradient z-depth-2"></div>
                 </div>
                 <!-- Grid column -->
             
                 <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 mb-4">
-            
-                    <div class="color-block limeade-gradient-2 z-depth-2 black-text">
-                        <h5>limeade-gradient-2</h5>
-                    </div>
-            
+                <div class="col-md-4 mb-4">
+                    <h5>night-fade-gradient</h5>
+                    <div class="color-block mx-auto mt-3 night-fade-gradient z-depth-2"></div>
                 </div>
                 <!-- Grid column -->
             
                 <!-- Grid column -->
-                <div class="col-lg-4 col-md-6">
-            
-                    <div class="color-block limeade-gradient-3 z-depth-2 black-text">
-                        <h5>limeade-gradient-3</h5>
-                    </div>
-            
+                <div class="col-md-4 mb-4">
+                    <h5>spring-warmth-gradient</h5>
+                    <div class="color-block mx-auto mt-3 spring-warmth-gradient z-depth-2"></div>
                 </div>
                 <!-- Grid column -->
             
@@ -717,35 +600,26 @@
             <!-- Grid row -->
 
             <!-- Grid row -->
-            <div class="row">
+            <div class="row text-center">
             
                 <!-- Grid column -->
-                <div class="col-lg-4 col-md-12 mb-4">
-            
-                    <div class="color-block borabora-gradient z-depth-2">
-                        <h5>borabora-gradient</h5>
-                    </div>
-            
+                <div class="col-md-4 mb-4">
+                    <h5>juicy-peach-gradient</h5>
+                    <div class="color-block mx-auto mt-3 juicy-peach-gradient z-depth-2 black-text"></div>
                 </div>
                 <!-- Grid column -->
             
                 <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 mb-4">
-            
-                    <div class="color-block borabora-gradient-2 z-depth-2">
-                        <h5>borabora-gradient-2</h5>
-                    </div>
-            
+                <div class="col-md-4 mb-4">
+                    <h5>young-passion-gradient</h5>
+                    <div class="color-block mx-auto mt-3 young-passion-gradient z-depth-2 black-text"></div>
                 </div>
                 <!-- Grid column -->
             
                 <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 mb-4">
-            
-                    <div class="color-block borabora-gradient-3 z-depth-2">
-                        <h5>borabora-gradient-3</h5>
-                    </div>
-            
+                <div class="col-md-4">
+                    <h5>lady-lips-gradient</h5>
+                    <div class="color-block mx-auto mt-3 lady-lips-gradient z-depth-2 black-text"></div>
                 </div>
                 <!-- Grid column -->
             
@@ -753,35 +627,26 @@
             <!-- Grid row -->
 
             <!-- Grid row -->
-            <div class="row">
+            <div class="row text-center">
             
                 <!-- Grid column -->
-                <div class="col-lg-4 col-md-12 mb-4">
-            
-                    <div class="color-block dania-gradient z-depth-2">
-                        <h5>dania-gradient</h5>
-                    </div>
-            
+                <div class="col-md-4 mb-4">
+                    <h5>sunny-morning-gradient</h5>
+                    <div class="color-block mx-auto mt-3 sunny-morning-gradient z-depth-2"></div>
                 </div>
                 <!-- Grid column -->
             
                 <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 mb-4">
-            
-                    <div class="color-block dania-gradient-2 z-depth-2">
-                        <h5>dania-gradient-2</h5>
-                    </div>
-            
+                <div class="col-md-4 mb-4">
+                    <h5>rainy-ashville-gradient</h5>
+                    <div class="color-block mx-auto mt-3 rainy-ashville-gradient z-depth-2"></div>
                 </div>
                 <!-- Grid column -->
             
                 <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 mb-4">
-            
-                    <div class="color-block dania-gradient-3 z-depth-2">
-                        <h5>dania-gradient-3</h5>
-                    </div>
-            
+                <div class="col-md-4 mb-4">
+                    <h5>frozen-dreams-gradient</h5>
+                    <div class="color-block mx-auto mt-3 frozen-dreams-gradient z-depth-2"></div>
                 </div>
                 <!-- Grid column -->
             
@@ -789,35 +654,26 @@
             <!-- Grid row -->
 
             <!-- Grid row -->
-            <div class="row">
+            <div class="row text-center">
             
                 <!-- Grid column -->
-                <div class="col-lg-4 col-md-12 mb-4">
-            
-                    <div class="color-block delhi-gradient z-depth-2">
-                        <h5>delhi-gradient</h5>
-                    </div>
-            
+                <div class="col-md-4 mb-4">
+                    <h5>winter-neva-gradient</h5>
+                    <div class="color-block mx-auto mt-3 winter-neva-gradient z-depth-2"></div>
                 </div>
                 <!-- Grid column -->
             
                 <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 mb-4">
-            
-                    <div class="color-block delhi-gradient-2 z-depth-2">
-                        <h5>delhi-gradient-2</h5>
-                    </div>
-            
+                <div class="col-md-4 mb-4">
+                    <h5>dusty-grass-gradient</h5>
+                    <div class="color-block mx-auto mt-3 dusty-grass-gradient z-depth-2"></div>
                 </div>
                 <!-- Grid column -->
             
                 <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 mb-4">
-            
-                    <div class="color-block delhi-gradient-3 z-depth-2">
-                        <h5>delhi-gradient-3</h5>
-                    </div>
-            
+                <div class="col-md-4 mb-4">
+                    <h5>tempting-azure-gradient</h5>
+                    <div class="color-block mx-auto mt-3 tempting-azure-gradient z-depth-2"></div>
                 </div>
                 <!-- Grid column -->
             
@@ -825,35 +681,26 @@
             <!-- Grid row -->
 
             <!-- Grid row -->
-            <div class="row">
+            <div class="row text-center">
             
                 <!-- Grid column -->
-                <div class="col-lg-4 col-md-12 mb-4">
-            
-                    <div class="color-block meridian-gradient z-depth-2">
-                        <h5>meridian-gradient</h5>
-                    </div>
-            
+                <div class="col-md-4 mb-4">
+                    <h5>heavy-rain-gradient</h5>
+                    <div class="color-block mx-auto mt-3 heavy-rain-gradient z-depth-2"></div>
                 </div>
                 <!-- Grid column -->
             
                 <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 mb-4">
-            
-                    <div class="color-block meridian-gradient-2 z-depth-2">
-                        <h5>meridian-gradient-2</h5>
-                    </div>
-            
+                <div class="col-md-4 mb-4">
+                    <h5>amy-crisp-gradient</h5>
+                    <div class="color-block mx-auto mt-3 amy-crisp-gradient z-depth-2"></div>
                 </div>
                 <!-- Grid column -->
             
                 <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 mb-4">
-            
-                    <div class="color-block meridian-gradient-3 z-depth-2">
-                        <h5>meridian-gradient-3</h5>
-                    </div>
-            
+                <div class="col-md-4 mb-4">
+                    <h5>mean-fruit-gradient</h5>
+                    <div class="color-block mx-auto mt-3 mean-fruit-gradient z-depth-2"></div>
                 </div>
                 <!-- Grid column -->
             
@@ -861,35 +708,26 @@
             <!-- Grid row -->
 
             <!-- Grid row -->
-            <div class="row">
+            <div class="row text-center">
             
                 <!-- Grid column -->
-                <div class="col-lg-4 col-md-12 mb-4">
-            
-                    <div class="color-block grey-gradient z-depth-2">
-                        <h5>grey-gradient</h5>
-                    </div>
-            
+                <div class="col-md-4 mb-4">
+                    <h5>deep-blue-gradient</h5>
+                    <div class="color-block mx-auto mt-3 deep-blue-gradient z-depth-2 black-text"></div>
                 </div>
                 <!-- Grid column -->
             
                 <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 mb-4">
-            
-                    <div class="color-block grey-gradient-2 z-depth-2">
-                        <h5>grey-gradient-2</h5>
-                    </div>
-            
+                <div class="col-md-4 mb-4">
+                    <h5>ripe-malinka-gradient</h5>
+                    <div class="color-block mx-auto mt-3 ripe-malinka-gradient z-depth-2 black-text"></div>
                 </div>
                 <!-- Grid column -->
             
                 <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 mb-4">
-            
-                    <div class="color-block grey-gradient-3 z-depth-2">
-                        <h5>grey-gradient-3</h5>
-                    </div>
-            
+                <div class="col-md-4">
+                    <h5>cloudy-knoxville-gradient</h5>
+                    <div class="color-block mx-auto mt-3 cloudy-knoxville-gradient z-depth-2 black-text"></div>
                 </div>
                 <!-- Grid column -->
             
@@ -897,143 +735,26 @@
             <!-- Grid row -->
 
             <!-- Grid row -->
-            <div class="row">
+            <div class="row text-center">
             
                 <!-- Grid column -->
-                <div class="col-lg-4 col-md-12 mb-4">
-            
-                    <div class="color-block sherbert-gradient z-depth-2">
-                        <h5>sherbert-gradient</h5>
-                    </div>
-            
+                <div class="col-md-4 mb-4">
+                    <h5>morpheus-den-gradient</h5>
+                    <div class="color-block mx-auto mt-3 morpheus-den-gradient z-depth-2"></div>
                 </div>
                 <!-- Grid column -->
             
                 <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 mb-4">
-            
-                    <div class="color-block sherbert-gradient-2 z-depth-2">
-                        <h5>sherbert-gradient-2</h5>
-                    </div>
-            
+                <div class="col-md-4 mb-4">
+                    <h5>rare-wind-gradient</h5>
+                    <div class="color-block mx-auto mt-3 rare-wind-gradient z-depth-2"></div>
                 </div>
                 <!-- Grid column -->
             
                 <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 mb-4">
-            
-                    <div class="color-block sherbert-gradient-3 z-depth-2">
-                        <h5>sherbert-gradient-3</h5>
-                    </div>
-            
-                </div>
-                <!-- Grid column -->
-            
-            </div>
-            <!-- Grid row -->
-
-            <!-- Grid row -->
-            <div class="row">
-            
-                <!-- Grid column -->
-                <div class="col-lg-4 col-md-12 mb-4">
-            
-                    <div class="color-block sun-gradient z-depth-2">
-                        <h5>sun-gradient</h5>
-                    </div>
-            
-                </div>
-                <!-- Grid column -->
-            
-                <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 mb-4">
-            
-                    <div class="color-block sun-gradient-2 z-depth-2">
-                        <h5>sun-gradient-2</h5>
-                    </div>
-            
-                </div>
-                <!-- Grid column -->
-            
-                <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 mb-4">
-            
-                    <div class="color-block sun-gradient-3 z-depth-2">
-                        <h5>sun-gradient-3</h5>
-                    </div>
-            
-                </div>
-                <!-- Grid column -->
-            
-            </div>
-            <!-- Grid row -->
-
-            <!-- Grid row -->
-            <div class="row">
-            
-                <!-- Grid column -->
-                <div class="col-lg-4 col-md-12 mb-4">
-            
-                    <div class="color-block psychedelic-gradient z-depth-2">
-                        <h5>psychedelic-gradient</h5>
-                    </div>
-            
-                </div>
-                <!-- Grid column -->
-            
-                <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 mb-4">
-            
-                    <div class="color-block psychedelic-gradient-2 z-depth-2">
-                        <h5>psychedelic-gradient-2</h5>
-                    </div>
-            
-                </div>
-                <!-- Grid column -->
-            
-                <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 mb-4">
-            
-                    <div class="color-block psychedelic-gradient-3 z-depth-2">
-                        <h5>psychedelic-gradient-3</h5>
-                    </div>
-            
-                </div>
-                <!-- Grid column -->
-            
-            </div>
-            <!-- Grid row -->
-
-            <!-- Grid row -->
-            <div class="row">
-            
-                <!-- Grid column -->
-                <div class="col-lg-4 col-md-12 mb-4">
-            
-                    <div class="color-block velvet-gradient z-depth-2">
-                        <h5>velvet-gradient</h5>
-                    </div>
-            
-                </div>
-                <!-- Grid column -->
-            
-                <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 mb-4">
-            
-                    <div class="color-block velvet-gradient-2 z-depth-2">
-                        <h5>velvet-gradient-2</h5>
-                    </div>
-            
-                </div>
-                <!-- Grid column -->
-            
-                <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 mb-4">
-            
-                    <div class="color-block velvet-gradient-3 z-depth-2">
-                        <h5>velvet-gradient-3</h5>
-                    </div>
-            
+                <div class="col-md-4 mb-4">
+                    <h5>near-moon-gradient</h5>
+                    <div class="color-block mx-auto mt-3 near-moon-gradient z-depth-2"></div>
                 </div>
                 <!-- Grid column -->
             
@@ -1047,164 +768,68 @@
         <section>
             <pre class="code-toolbar">
                 <code class="language-css">
-.limeade-gradient {
-    background: #A1FFCE;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #FAFFD1, #A1FFCE);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #FAFFD1, #A1FFCE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.juicy-peach-gradient {
+    background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
 }
-.limeade-gradient-2 {
-    background: #A1FFCE;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #FAFFD1, #A1FFCE);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #FAFFD1, #A1FFCE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.young-passion-gradient {
+    background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
 }
-.limeade-gradient-3 {
-    background: #A1FFCE;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #FAFFD1, #A1FFCE);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #FAFFD1, #A1FFCE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.lady-lips-gradient {
+    background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
 }
-
-.dania-gradient {
-    background: #BE93C5;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #7BC6CC, #BE93C5);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #7BC6CC, #BE93C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.sunny-morning-gradient {
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
 }
-.dania-gradient-2 {
-    background: #BE93C5;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #7BC6CC, #BE93C5);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #7BC6CC, #BE93C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.rainy-ashville-gradient {
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
 }
-.dania-gradient-3 {
-    background: #BE93C5;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #7BC6CC, #BE93C5);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #7BC6CC, #BE93C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.frozen-dreams-gradient {
+    background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
 }
-
-.grey-gradient {
-    background: #bdc3c7;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.warm-flame-gradient {
+    background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
 }
-.grey-gradient-2 {
-    background: #bdc3c7;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.night-fade-gradient {
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
 }
-.grey-gradient-3 {
-    background: #bdc3c7;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.spring-warmth-gradient {
+    background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
 }
-
-.delhi-gradient {
-    background: #808080;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #3fada8, #808080);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #3fada8, #808080); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.winter-neva-gradient {
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 }
-.delhi-gradient-2 {
-    background: #808080;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #3fada8, #808080);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #3fada8, #808080); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.dusty-grass-gradient {
+    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
 }
-.delhi-gradient-3 {
-    background: #808080;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #3fada8, #808080);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #3fada8, #808080); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.tempting-azure-gradient {
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
 }
-
-.sun-gradient {
-    background: #fceabb;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #f8b500, #fceabb);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #f8b500, #fceabb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.heavy-rain-gradient {
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 }
-.sun-gradient-2 {
-    background: #fceabb;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #f8b500, #fceabb);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #f8b500, #fceabb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.amy-crisp-gradient {
+    background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
 }
-.sun-gradient-3 {
-    background: #fceabb;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #f8b500, #fceabb);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #f8b500, #fceabb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.mean-fruit-gradient {
+    background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
 }
-
-.psychedelic-gradient {
-    background: #40E0D0;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #FF0080, #FF8C00, #40E0D0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.deep-blue-gradient {
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
 }
-.psychedelic-gradient-2 {
-    background: #40E0D0;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #FF0080, #FF8C00, #40E0D0);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #FF0080, #FF8C00, #40E0D0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.ripe-malinka-gradient {
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
 }
-.psychedelic-gradient-3 {
-    background: #40E0D0;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #FF0080, #FF8C00, #40E0D0);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #FF0080, #FF8C00, #40E0D0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.cloudy-knoxville-gradient {
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
-
-.sherbert-gradient {
-    background: #f79d00;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #64f38c, #f79d00);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #64f38c, #f79d00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.morpheus-den-gradient {
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
 }
-.sherbert-gradient-2 {
-    background: #f79d00;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #64f38c, #f79d00);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #64f38c, #f79d00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.rare-wind-gradient {
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
 }
-.sherbert-gradient-3 {
-    background: #f79d00;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #64f38c, #f79d00);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #64f38c, #f79d00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.velvet-gradient {
-    background: #e1eec3;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #f05053, #e1eec3);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #f05053, #e1eec3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-.velvet-gradient-2 {
-    background: #e1eec3;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #f05053, #e1eec3);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #f05053, #e1eec3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-.velvet-gradient-3 {
-    background: #e1eec3;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #f05053, #e1eec3);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #f05053, #e1eec3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.meridian-gradient {
-    background: #283c86;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #45a247, #283c86);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #45a247, #283c86); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-.meridian-gradient-2 {
-    background: #283c86;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #45a247, #283c86);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #45a247, #283c86); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-.meridian-gradient-3 {
-    background: #283c86;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #45a247, #283c86);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #45a247, #283c86); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.borabora-gradient {
-    background: #2BC0E4;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #EAECC6, #2BC0E4);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #EAECC6, #2BC0E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-.borabora-gradient-2 {
-    background: #2BC0E4;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #EAECC6, #2BC0E4);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #EAECC6, #2BC0E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-.borabora-gradient-3 {
-    background: #2BC0E4;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #EAECC6, #2BC0E4);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #EAECC6, #2BC0E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.near-moon-gradient {
+    background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
 }
                 </code>
             </pre>
@@ -1215,36 +840,27 @@
         <section class="mt-4">
             <h5>Add to an element one of the following classes:</h5>
             <ul class="list-unstyled mt-4">
-                <li><code>.limeade-gradient</code></li>
-                <li><code>.limeade-gradient-2</code></li>
-                <li><code>.limeade-gradient-3</code></li>
-                <li><code>.borabora-gradient</code></li>
-                <li><code>.borabora-gradient-2</code></li>
-                <li><code>.borabora-gradient-3</code></li>
-                <li><code>.dania-gradient</code></li>
-                <li><code>.dania-gradient-2</code></li>
-                <li><code>.dania-gradient-3</code></li>
-                <li><code>.delhi-gradient</code></li>
-                <li><code>.delhi-gradient-2</code></li>
-                <li><code>.delhi-gradient-3</code></li>
-                <li><code>.meridian-gradient</code></li>
-                <li><code>.meridian-gradient-2</code></li>
-                <li><code>.meridian-gradient-3</code></li>
-                <li><code>.grey-gradient</code></li>
-                <li><code>.grey-gradient-2</code></li>
-                <li><code>.grey-gradient-3</code></li>
-                <li><code>.sherbert-gradient</code></li>
-                <li><code>.sherbert-gradient-2</code></li>
-                <li><code>.sherbert-gradient-3</code></li>
-                <li><code>.sun-gradient</code></li>
-                <li><code>.sun-gradient-2</code></li>
-                <li><code>.sun-gradient-3</code></li>
-                <li><code>.psychedelic-gradient</code></li>
-                <li><code>.psychedelic-gradient-2</code></li>
-                <li><code>.psychedelic-gradient-3</code></li>
-                <li><code>.velvet-gradient</code></li>
-                <li><code>.velvet-gradient-2</code></li>
-                <li><code>.velvet-gradient-3</code></li>
+                <li><code>.warm-flame-gradient</code></li>
+                <li><code>.night-fade-gradient</code></li>
+                <li><code>.spring-warmth-gradient</code></li>
+                <li><code>.juicy-peach-gradient</code></li>
+                <li><code>.young-passion-gradient</code></li>
+                <li><code>.lady-lips-gradient</code></li>
+                <li><code>.sunny-morning-gradient</code></li>
+                <li><code>.rainy-ashville-gradient</code></li>
+                <li><code>.frozen-dreams-gradient</code></li>
+                <li><code>.winter-neva-gradient</code></li>
+                <li><code>.dusty-grass-gradient</code></li>
+                <li><code>.tempting-azure-gradient</code></li>
+                <li><code>.heavy-rain-gradient</code></li>
+                <li><code>.amy-crisp-gradient</code></li>
+                <li><code>.mean-fruit-gradient</code></li>
+                <li><code>.deep-blue-gradient</code></li>
+                <li><code>.ripe-malinka-gradient</code></li>
+                <li><code>.cloudy-knoxville-gradient</code></li>
+                <li><code>.morpheus-den-gradient</code></li>
+                <li><code>.rare-wind-gradient</code></li>
+                <li><code>.near-moon-gradient</code></li>
             </ul>
         </section>
         <!--Section: Code-->
@@ -1254,35 +870,26 @@
             <pre class="code-toolbar">
                 <code class="language-markup">
 &lt;!-- Grid row --&gt;
-&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;row text-center&quot;&gt;
 
     &lt;!-- Grid column --&gt;
-    &lt;div class=&quot;col-lg-4 col-md-12 mb-4&quot;&gt;
-
-        &lt;div class=&quot;color-block borabora-gradient z-depth-2&quot;&gt;
-            &lt;h5&gt;borabora-gradient&lt;/h5&gt;
-        &lt;/div&gt;
-
+    &lt;div class=&quot;col-md-4 mb-4&quot;&gt;
+        &lt;h5&gt;warm-flame-gradient&lt;/h5&gt;
+        &lt;div class=&quot;color-block mx-auto mt-3 warm-flame-gradient z-depth-2&quot;&gt;&lt;/div&gt;
     &lt;/div&gt;
     &lt;!-- Grid column --&gt;
 
     &lt;!-- Grid column --&gt;
-    &lt;div class=&quot;col-lg-4 col-md-6 mb-4&quot;&gt;
-
-        &lt;div class=&quot;color-block borabora-gradient-2 z-depth-2&quot;&gt;
-            &lt;h5&gt;borabora-gradient-2&lt;/h5&gt;
-        &lt;/div&gt;
-
+    &lt;div class=&quot;col-md-4 mb-4&quot;&gt;
+        &lt;h5&gt;night-fade-gradient&lt;/h5&gt;
+        &lt;div class=&quot;color-block mx-auto mt-3 night-fade-gradient z-depth-2&quot;&gt;&lt;/div&gt;
     &lt;/div&gt;
     &lt;!-- Grid column --&gt;
 
     &lt;!-- Grid column --&gt;
-    &lt;div class=&quot;col-lg-4 col-md-6 mb-4&quot;&gt;
-
-        &lt;div class=&quot;color-block borabora-gradient-3 z-depth-2&quot;&gt;
-            &lt;h5&gt;borabora-gradient-3&lt;/h5&gt;
-        &lt;/div&gt;
-
+    &lt;div class=&quot;col-md-4 mb-4&quot;&gt;
+        &lt;h5&gt;spring-warmth-gradient&lt;/h5&gt;
+        &lt;div class=&quot;color-block mx-auto mt-3 spring-warmth-gradient z-depth-2&quot;&gt;&lt;/div&gt;
     &lt;/div&gt;
     &lt;!-- Grid column --&gt;
 
@@ -1324,7 +931,7 @@
                     <div class="card testimonial-card">
 
                         <!--Background color-->
-                        <div class="card-up quepal-gradient">
+                        <div class="card-up sunny-morning-gradient">
                         </div>
 
                         <!--Avatar-->
@@ -1352,7 +959,7 @@
                     <div class="card testimonial-card">
 
                         <!--Background color-->
-                        <div class="card-up sun-gradient">
+                        <div class="card-up rainy-ashville-gradient">
                         </div>
 
                         <!--Avatar-->
@@ -1380,7 +987,7 @@
                     <div class="card testimonial-card">
 
                         <!--Background color-->
-                        <div class="card-up borabora-gradient"></div>
+                        <div class="card-up lady-lips-gradient"></div>
 
                         <!--Avatar-->
                         <div class="avatar"><img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(10).jpg" class="rounded-circle img-responsive">
@@ -1409,50 +1016,14 @@
         <section>
             <pre class="code-toolbar">
                 <code class="language-css">
-.quepal-gradient {
-    background: #11998e;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.lady-lips-gradient {
+    background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
 }
-.quepal-gradient-2 {
-    background: #11998e;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.sunny-morning-gradient {
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
 }
-.quepal-gradient-3 {
-    background: #11998e;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-.sun-gradient {
-    background: #fceabb;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #f8b500, #fceabb);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #f8b500, #fceabb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-.sun-gradient-2 {
-    background: #fceabb;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #f8b500, #fceabb);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #f8b500, #fceabb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-.sun-gradient-3 {
-    background: #fceabb;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #f8b500, #fceabb);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #f8b500, #fceabb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-.borabora-gradient {
-    background: #2BC0E4;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #EAECC6, #2BC0E4);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #EAECC6, #2BC0E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-.borabora-gradient-2 {
-    background: #2BC0E4;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #EAECC6, #2BC0E4);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #EAECC6, #2BC0E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-.borabora-gradient-3 {
-    background: #2BC0E4;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #EAECC6, #2BC0E4);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #EAECC6, #2BC0E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.rainy-ashville-gradient {
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
 }
                 </code>
             </pre>
@@ -1479,7 +1050,7 @@
             &lt;div class=&quot;card testimonial-card&quot;&gt;
 
                 &lt;!--Background color--&gt;
-                &lt;div class=&quot;card-up quepal-gradient&quot;&gt;
+                &lt;div class=&quot;card-up sunny-morning-gradient&quot;&gt;
                 &lt;/div&gt;
 
                 &lt;!--Avatar--&gt;
@@ -1507,7 +1078,7 @@
             &lt;div class=&quot;card testimonial-card&quot;&gt;
 
                 &lt;!--Background color--&gt;
-                &lt;div class=&quot;card-up sun-gradient&quot;&gt;
+                &lt;div class=&quot;card-up rainy-ashville-gradient&quot;&gt;
                 &lt;/div&gt;
 
                 &lt;!--Avatar--&gt;
@@ -1535,7 +1106,7 @@
             &lt;div class=&quot;card testimonial-card&quot;&gt;
 
                 &lt;!--Background color--&gt;
-                &lt;div class=&quot;card-up borabora-gradient&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;card-up lady-lips-gradient&quot;&gt;&lt;/div&gt;
 
                 &lt;!--Avatar--&gt;
                 &lt;div class=&quot;avatar&quot;&gt;&lt;img src=&quot;https://mdbootstrap.com/img/Photos/Avatars/img%20(10).jpg&quot; class=&quot;rounded-circle img-responsive&quot;&gt;
