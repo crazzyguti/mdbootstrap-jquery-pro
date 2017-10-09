@@ -2,6 +2,9 @@
 .stepper {
     &.timeline {
         li {
+            @media (max-width: 1025px) {
+                align-items: flex-end;
+            }
             a {
                 padding: 0px 24px;
                 left: 50%;
@@ -91,6 +94,7 @@
                 }
             }
             &.timeline-inverted {
+                align-items: flex-end;
                 .step-content {
                     float: right;
                     &:before {
@@ -111,7 +115,6 @@
     }
     &.stepper-vertical {
         li {
-            display: block;
             &:not(:last-child):after {
                 content:" ";
                 position:absolute;
@@ -135,6 +138,9 @@
 .stepper {
     &.colorful-timeline {
         li {
+            @media (max-width: 1025px) {
+                align-items: flex-end;
+            }
             a {
                 padding: 0px 24px;
                 left: 50%;
@@ -228,6 +234,7 @@
                 }
             }
             &.timeline-inverted {
+                align-items: flex-end;
                 .step-content {
                     float: right;
                     &:before {
@@ -249,7 +256,6 @@
     &.stepper-vertical {
         &.colorful-timeline {
             li {
-                display: block;
                 &:not(:last-child):after {
                     content:" ";
                     position:absolute;
@@ -280,6 +286,9 @@
             padding-left: 100px;
         }
         li {
+            @media (max-width: 1025px) {
+                align-items: flex-end;
+            }
             transition: all 0.7s ease-in-out;   
             a {
                 padding: 0px 24px;
@@ -370,6 +379,7 @@
                 }
             }
             &.timeline-inverted {
+                align-items: flex-end;
                 .step-content {
                     float: right;
                     &:before {
@@ -390,7 +400,6 @@
     }
     &.stepper-vertical {
         li {
-            display: block;
             &:not(:last-child):after {
                 content:" ";
                 position:absolute;
@@ -414,6 +423,9 @@
 .stepper {
     &.timeline-simple {
         li {
+            @media (max-width: 1025px) {
+                align-items: flex-end;
+            }
             a {
                 padding: 0px;
                 left: 50%;
@@ -504,6 +516,7 @@
                 }
             }
             &.timeline-inverted {
+                align-items: flex-end;
                 .step-content {
                     float: right;
                     &:before {
@@ -525,7 +538,6 @@
     &.stepper-vertical {
         &.timeline-simple {
             li {
-                display: block;
                 &:not(:last-child):after {
                     content:" ";
                     position:absolute;
@@ -551,6 +563,9 @@
 .stepper {
     &.timeline-images {
         li {
+            @media (max-width: 1025px) {
+                align-items: flex-end;
+            }
             a {
                 padding: 0px;
                 left: 50%;
@@ -595,6 +610,7 @@
                 }
             }
             &.timeline-inverted {
+                align-items: flex-end;
                 .step-content {
                     float: right;
                 }
@@ -604,7 +620,6 @@
     &.stepper-vertical {
         &.timeline-images {
             li {
-                display: block;
                 &:not(:last-child):after {
                     content:" ";
                     position:absolute;

@@ -32,12 +32,19 @@
             <div class="row">
 
                 <!-- Main column -->
-                <div class="col-md-10">
+                <div class="col-lg-10">
 
 <!--Section: Doc content-->
 <section class="documentation">
 
-    <style type="text/css">
+    <style>
+        @media (max-width: 1025px) {
+          .stepper.timeline li {
+            -webkit-box-align: end;
+            -webkit-align-items: flex-end;
+            -ms-flex-align: end;
+            align-items: flex-end; } }
+
         .stepper.timeline li a {
           padding: 0px 24px;
           left: 50%; }
@@ -119,35 +126,45 @@
                 left: -14px;
                 right: auto; } }
 
-        .stepper.timeline li.timeline-inverted .step-content {
-          float: right; }
-          .stepper.timeline li.timeline-inverted .step-content:before {
-            border-left-width: 0;
-            border-right-width: 15px;
-            left: -15px;
-            right: auto; }
-          .stepper.timeline li.timeline-inverted .step-content:after {
-            border-left-width: 0;
-            border-right-width: 14px;
-            left: -14px;
-            right: auto; }
+        .stepper.timeline li.timeline-inverted {
+          -webkit-box-align: end;
+          -webkit-align-items: flex-end;
+          -ms-flex-align: end;
+          align-items: flex-end; }
+          .stepper.timeline li.timeline-inverted .step-content {
+            float: right; }
+            .stepper.timeline li.timeline-inverted .step-content:before {
+              border-left-width: 0;
+              border-right-width: 15px;
+              left: -15px;
+              right: auto; }
+            .stepper.timeline li.timeline-inverted .step-content:after {
+              border-left-width: 0;
+              border-right-width: 14px;
+              left: -14px;
+              right: auto; }
 
-        .stepper.stepper-vertical li {
-          display: block; }
-          .stepper.stepper-vertical li:not(:last-child):after {
-            content: " ";
-            position: absolute;
-            width: 3px;
-            background-color: #e0e0e0;
-            left: 50%;
-            top: 57px;
-            margin-left: -1.5px; }
-            @media (max-width: 450px) {
-              .stepper.stepper-vertical li:not(:last-child):after {
-                left: 6%; } }
-            @media (min-width: 451px) and (max-width: 1025px) {
-              .stepper.stepper-vertical li:not(:last-child):after {
-                left: 6%; } }
+        .stepper.stepper-vertical li:not(:last-child):after {
+          content: " ";
+          position: absolute;
+          width: 3px;
+          background-color: #e0e0e0;
+          left: 50%;
+          top: 57px;
+          margin-left: -1.5px; }
+          @media (max-width: 450px) {
+            .stepper.stepper-vertical li:not(:last-child):after {
+              left: 6%; } }
+          @media (min-width: 451px) and (max-width: 1025px) {
+            .stepper.stepper-vertical li:not(:last-child):after {
+              left: 6%; } }
+
+        @media (max-width: 1025px) {
+          .stepper.colorful-timeline li {
+            -webkit-box-align: end;
+            -webkit-align-items: flex-end;
+            -ms-flex-align: end;
+            align-items: flex-end; } }
 
         .stepper.colorful-timeline li a {
           padding: 0px 24px;
@@ -233,35 +250,38 @@
             border-top-left-radius: 2px;
             border-top-right-radius: 2px; }
 
-        .stepper.colorful-timeline li.timeline-inverted .step-content {
-          float: right; }
-          .stepper.colorful-timeline li.timeline-inverted .step-content:before {
-            border-left-width: 0;
-            border-right-width: 15px;
-            left: -15px;
-            right: auto; }
-          .stepper.colorful-timeline li.timeline-inverted .step-content:after {
-            border-left-width: 0;
-            border-right-width: 14px;
-            left: -14px;
-            right: auto; }
+        .stepper.colorful-timeline li.timeline-inverted {
+          -webkit-box-align: end;
+          -webkit-align-items: flex-end;
+          -ms-flex-align: end;
+          align-items: flex-end; }
+          .stepper.colorful-timeline li.timeline-inverted .step-content {
+            float: right; }
+            .stepper.colorful-timeline li.timeline-inverted .step-content:before {
+              border-left-width: 0;
+              border-right-width: 15px;
+              left: -15px;
+              right: auto; }
+            .stepper.colorful-timeline li.timeline-inverted .step-content:after {
+              border-left-width: 0;
+              border-right-width: 14px;
+              left: -14px;
+              right: auto; }
 
-        .stepper.stepper-vertical.colorful-timeline li {
-          display: block; }
-          .stepper.stepper-vertical.colorful-timeline li:not(:last-child):after {
-            content: " ";
-            position: absolute;
-            width: 3px;
-            background-color: #D32F2F;
-            left: 50%;
-            top: 57px;
-            margin-left: -1.5px; }
-            @media (max-width: 450px) {
-              .stepper.stepper-vertical.colorful-timeline li:not(:last-child):after {
-                left: 6%; } }
-            @media (min-width: 451px) and (max-width: 1025px) {
-              .stepper.stepper-vertical.colorful-timeline li:not(:last-child):after {
-                left: 6%; } }
+        .stepper.stepper-vertical.colorful-timeline li:not(:last-child):after {
+          content: " ";
+          position: absolute;
+          width: 3px;
+          background-color: #D32F2F;
+          left: 50%;
+          top: 57px;
+          margin-left: -1.5px; }
+          @media (max-width: 450px) {
+            .stepper.stepper-vertical.colorful-timeline li:not(:last-child):after {
+              left: 6%; } }
+          @media (min-width: 451px) and (max-width: 1025px) {
+            .stepper.stepper-vertical.colorful-timeline li:not(:last-child):after {
+              left: 6%; } }
 
         .stepper.timeline-animated .more-padding {
           padding-right: 100px; }
@@ -272,6 +292,12 @@
         .stepper.timeline-animated li {
           -webkit-transition: all 0.7s ease-in-out;
           transition: all 0.7s ease-in-out; }
+          @media (max-width: 1025px) {
+            .stepper.timeline-animated li {
+              -webkit-box-align: end;
+              -webkit-align-items: flex-end;
+              -ms-flex-align: end;
+              align-items: flex-end; } }
           .stepper.timeline-animated li a {
             padding: 0px 24px;
             left: 50%; }
@@ -351,35 +377,45 @@
                   border-right-width: 14px;
                   left: -14px;
                   right: auto; } }
-          .stepper.timeline-animated li.timeline-inverted .step-content {
-            float: right; }
-            .stepper.timeline-animated li.timeline-inverted .step-content:before {
-              border-left-width: 0;
-              border-right-width: 15px;
-              left: -15px;
-              right: auto; }
-            .stepper.timeline-animated li.timeline-inverted .step-content:after {
-              border-left-width: 0;
-              border-right-width: 14px;
-              left: -14px;
-              right: auto; }
+          .stepper.timeline-animated li.timeline-inverted {
+            -webkit-box-align: end;
+            -webkit-align-items: flex-end;
+            -ms-flex-align: end;
+            align-items: flex-end; }
+            .stepper.timeline-animated li.timeline-inverted .step-content {
+              float: right; }
+              .stepper.timeline-animated li.timeline-inverted .step-content:before {
+                border-left-width: 0;
+                border-right-width: 15px;
+                left: -15px;
+                right: auto; }
+              .stepper.timeline-animated li.timeline-inverted .step-content:after {
+                border-left-width: 0;
+                border-right-width: 14px;
+                left: -14px;
+                right: auto; }
 
-        .stepper.stepper-vertical li {
-          display: block; }
-          .stepper.stepper-vertical li:not(:last-child):after {
-            content: " ";
-            position: absolute;
-            width: 3px;
-            background-color: #e0e0e0;
-            left: 50%;
-            top: 57px;
-            margin-left: -1.5px; }
-            @media (max-width: 450px) {
-              .stepper.stepper-vertical li:not(:last-child):after {
-                left: 6%; } }
-            @media (min-width: 451px) and (max-width: 1025px) {
-              .stepper.stepper-vertical li:not(:last-child):after {
-                left: 6%; } }
+        .stepper.stepper-vertical li:not(:last-child):after {
+          content: " ";
+          position: absolute;
+          width: 3px;
+          background-color: #e0e0e0;
+          left: 50%;
+          top: 57px;
+          margin-left: -1.5px; }
+          @media (max-width: 450px) {
+            .stepper.stepper-vertical li:not(:last-child):after {
+              left: 6%; } }
+          @media (min-width: 451px) and (max-width: 1025px) {
+            .stepper.stepper-vertical li:not(:last-child):after {
+              left: 6%; } }
+
+        @media (max-width: 1025px) {
+          .stepper.timeline-simple li {
+            -webkit-box-align: end;
+            -webkit-align-items: flex-end;
+            -ms-flex-align: end;
+            align-items: flex-end; } }
 
         .stepper.timeline-simple li a {
           padding: 0px;
@@ -463,36 +499,46 @@
                 left: -14px;
                 right: auto; } }
 
-        .stepper.timeline-simple li.timeline-inverted .step-content {
-          float: right; }
-          .stepper.timeline-simple li.timeline-inverted .step-content:before {
-            border-left-width: 0;
-            border-right-width: 15px;
-            left: -15px;
-            right: auto; }
-          .stepper.timeline-simple li.timeline-inverted .step-content:after {
-            border-left-width: 0;
-            border-right-width: 14px;
-            left: -14px;
-            right: auto; }
+        .stepper.timeline-simple li.timeline-inverted {
+          -webkit-box-align: end;
+          -webkit-align-items: flex-end;
+          -ms-flex-align: end;
+          align-items: flex-end; }
+          .stepper.timeline-simple li.timeline-inverted .step-content {
+            float: right; }
+            .stepper.timeline-simple li.timeline-inverted .step-content:before {
+              border-left-width: 0;
+              border-right-width: 15px;
+              left: -15px;
+              right: auto; }
+            .stepper.timeline-simple li.timeline-inverted .step-content:after {
+              border-left-width: 0;
+              border-right-width: 14px;
+              left: -14px;
+              right: auto; }
 
-        .stepper.stepper-vertical.timeline-simple li {
-          display: block; }
-          .stepper.stepper-vertical.timeline-simple li:not(:last-child):after {
-            content: " ";
-            position: absolute;
-            width: 2px;
-            background-color: #9e9e9e;
-            left: 50%;
-            top: 32px;
-            height: 100%;
-            margin-left: -1.5px; }
-            @media (max-width: 450px) {
-              .stepper.stepper-vertical.timeline-simple li:not(:last-child):after {
-                left: 6%; } }
-            @media (min-width: 451px) and (max-width: 1025px) {
-              .stepper.stepper-vertical.timeline-simple li:not(:last-child):after {
-                left: 6%; } }
+        .stepper.stepper-vertical.timeline-simple li:not(:last-child):after {
+          content: " ";
+          position: absolute;
+          width: 2px;
+          background-color: #9e9e9e;
+          left: 50%;
+          top: 32px;
+          height: 100%;
+          margin-left: -1.5px; }
+          @media (max-width: 450px) {
+            .stepper.stepper-vertical.timeline-simple li:not(:last-child):after {
+              left: 6%; } }
+          @media (min-width: 451px) and (max-width: 1025px) {
+            .stepper.stepper-vertical.timeline-simple li:not(:last-child):after {
+              left: 6%; } }
+
+        @media (max-width: 1025px) {
+          .stepper.timeline-images li {
+            -webkit-box-align: end;
+            -webkit-align-items: flex-end;
+            -ms-flex-align: end;
+            align-items: flex-end; } }
 
         .stepper.timeline-images li a {
           padding: 0px;
@@ -536,26 +582,29 @@
               margin-bottom: 2rem;
               float: right; } }
 
-        .stepper.timeline-images li.timeline-inverted .step-content {
-          float: right; }
+        .stepper.timeline-images li.timeline-inverted {
+          -webkit-box-align: end;
+          -webkit-align-items: flex-end;
+          -ms-flex-align: end;
+          align-items: flex-end; }
+          .stepper.timeline-images li.timeline-inverted .step-content {
+            float: right; }
 
-        .stepper.stepper-vertical.timeline-images li {
-          display: block; }
-          .stepper.stepper-vertical.timeline-images li:not(:last-child):after {
-            content: " ";
-            position: absolute;
-            width: 2px;
-            background-color: #26c6da;
-            left: 50%;
-            top: 32px;
-            height: 100%;
-            margin-left: -1.5px; }
-            @media (max-width: 450px) {
-              .stepper.stepper-vertical.timeline-images li:not(:last-child):after {
-                left: 6%; } }
-            @media (min-width: 451px) and (max-width: 1025px) {
-              .stepper.stepper-vertical.timeline-images li:not(:last-child):after {
-                left: 6%; } }
+        .stepper.stepper-vertical.timeline-images li:not(:last-child):after {
+          content: " ";
+          position: absolute;
+          width: 2px;
+          background-color: #26c6da;
+          left: 50%;
+          top: 32px;
+          height: 100%;
+          margin-left: -1.5px; }
+          @media (max-width: 450px) {
+            .stepper.stepper-vertical.timeline-images li:not(:last-child):after {
+              left: 6%; } }
+          @media (min-width: 451px) and (max-width: 1025px) {
+            .stepper.stepper-vertical.timeline-images li:not(:last-child):after {
+              left: 6%; } }
     </style>
 
     <!--Section: Intro-->
@@ -598,7 +647,7 @@
                             </a>
 
                             <!-- Section Description -->
-                            <div class="step-content z-depth-1 ml-0 p-4">
+                            <div class="step-content z-depth-1 ml-xl-0 p-4">
                                 <h4 class="font-bold">Ut enim ad minim veniam</h4>
                                 <p class="text-muted mt-3"><i class="fa fa-clock-o" aria-hidden="true"></i> 11 hours ago via Twitter</p>
                                 <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -611,7 +660,7 @@
                             </a>
 
                             <!-- Section Description -->
-                            <div class="step-content z-depth-1 ml-0 p-4">
+                            <div class="step-content z-depth-1 ml-xl-0 p-4">
                                 <h4 class="font-bold">Duis aute irure dolor</h4>
                                 <p class=" mt-4 mb-0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
                             </div>
@@ -623,7 +672,7 @@
                             </a>
 
                             <!-- Section Description -->
-                            <div class="step-content z-depth-1 ml-0 p-4">
+                            <div class="step-content z-depth-1 ml-xl-0 p-4">
                                 <h4 class="font-bold">Sed ut nihil unde omnis</h4>
                                 <p class="mt-4 mb-0">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
                             </div>
@@ -635,7 +684,7 @@
                             </a>
 
                             <!-- Section Description -->
-                            <div class="step-content z-depth-1 ml-0 p-4">
+                            <div class="step-content z-depth-1 ml-xl-0 p-4">
                                 <h4 class="font-bold"> Quis autem vel eum voluptate</h4>
                                 <p class="mt-4">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
                                 <p class="mb-0">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
@@ -648,7 +697,7 @@
                             </a>
 
                             <!-- Section Description -->
-                            <div class="step-content z-depth-1 ml-0 p-4">
+                            <div class="step-content z-depth-1 ml-xl-0 p-4">
                                 <h4 class="font-bold">Mussum ipsum cacilds</h4>
                                 <p class="mt-4 mb-0">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
                             </div>
@@ -667,6 +716,13 @@
         <section>
             <pre class="code-toolbar">
                 <code class="language-css">
+@media (max-width: 1025px) {
+  .stepper.timeline li {
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end; } }
+
 .stepper.timeline li a {
   padding: 0px 24px;
   left: 50%; }
@@ -748,35 +804,38 @@
         left: -14px;
         right: auto; } }
 
-.stepper.timeline li.timeline-inverted .step-content {
-  float: right; }
-  .stepper.timeline li.timeline-inverted .step-content:before {
-    border-left-width: 0;
-    border-right-width: 15px;
-    left: -15px;
-    right: auto; }
-  .stepper.timeline li.timeline-inverted .step-content:after {
-    border-left-width: 0;
-    border-right-width: 14px;
-    left: -14px;
-    right: auto; }
+.stepper.timeline li.timeline-inverted {
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end; }
+  .stepper.timeline li.timeline-inverted .step-content {
+    float: right; }
+    .stepper.timeline li.timeline-inverted .step-content:before {
+      border-left-width: 0;
+      border-right-width: 15px;
+      left: -15px;
+      right: auto; }
+    .stepper.timeline li.timeline-inverted .step-content:after {
+      border-left-width: 0;
+      border-right-width: 14px;
+      left: -14px;
+      right: auto; }
 
-.stepper.stepper-vertical li {
-  display: block; }
-  .stepper.stepper-vertical li:not(:last-child):after {
-    content: " ";
-    position: absolute;
-    width: 3px;
-    background-color: #e0e0e0;
-    left: 50%;
-    top: 57px;
-    margin-left: -1.5px; }
-    @media (max-width: 450px) {
-      .stepper.stepper-vertical li:not(:last-child):after {
-        left: 6%; } }
-    @media (min-width: 451px) and (max-width: 1025px) {
-      .stepper.stepper-vertical li:not(:last-child):after {
-        left: 6%; } }
+.stepper.stepper-vertical li:not(:last-child):after {
+  content: " ";
+  position: absolute;
+  width: 3px;
+  background-color: #e0e0e0;
+  left: 50%;
+  top: 57px;
+  margin-left: -1.5px; }
+  @media (max-width: 450px) {
+    .stepper.stepper-vertical li:not(:last-child):after {
+      left: 6%; } }
+  @media (min-width: 451px) and (max-width: 1025px) {
+    .stepper.stepper-vertical li:not(:last-child):after {
+      left: 6%; } }
                 </code>
             </pre>
         </section>
@@ -800,7 +859,7 @@
                 &lt;/a&gt;
 
                 &lt;!-- Section Description --&gt;
-                &lt;div class=&quot;step-content z-depth-1 ml-0 p-4&quot;&gt;
+                &lt;div class=&quot;step-content z-depth-1 ml-xl-0 p-4&quot;&gt;
                     &lt;h4 class=&quot;font-bold&quot;&gt;Ut enim ad minim veniam&lt;/h4&gt;
                     &lt;p class=&quot;text-muted mt-3&quot;&gt;&lt;i class=&quot;fa fa-clock-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; 11 hours ago via Twitter&lt;/p&gt;
                     &lt;p class=&quot;mb-0&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
@@ -813,7 +872,7 @@
                 &lt;/a&gt;
 
                 &lt;!-- Section Description --&gt;
-                &lt;div class=&quot;step-content z-depth-1 ml-0 p-4&quot;&gt;
+                &lt;div class=&quot;step-content z-depth-1 ml-xl-0 p-4&quot;&gt;
                     &lt;h4 class=&quot;font-bold&quot;&gt;Duis aute irure dolor&lt;/h4&gt;
                     &lt;p class=&quot; mt-4 mb-0&quot;&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.&lt;/p&gt;
                 &lt;/div&gt;
@@ -825,7 +884,7 @@
                 &lt;/a&gt;
 
                 &lt;!-- Section Description --&gt;
-                &lt;div class=&quot;step-content z-depth-1 ml-0 p-4&quot;&gt;
+                &lt;div class=&quot;step-content z-depth-1 ml-xl-0 p-4&quot;&gt;
                     &lt;h4 class=&quot;font-bold&quot;&gt;Sed ut nihil unde omnis&lt;/h4&gt;
                     &lt;p class=&quot;mt-4 mb-0&quot;&gt;Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?&lt;/p&gt;
                 &lt;/div&gt;
@@ -837,7 +896,7 @@
                 &lt;/a&gt;
 
                 &lt;!-- Section Description --&gt;
-                &lt;div class=&quot;step-content z-depth-1 ml-0 p-4&quot;&gt;
+                &lt;div class=&quot;step-content z-depth-1 ml-xl-0 p-4&quot;&gt;
                     &lt;h4 class=&quot;font-bold&quot;&gt; Quis autem vel eum voluptate&lt;/h4&gt;
                     &lt;p class=&quot;mt-4&quot;&gt;At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.&lt;/p&gt;
                     &lt;p class=&quot;mb-0&quot;&gt;Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. &lt;/p&gt;
@@ -850,7 +909,7 @@
                 &lt;/a&gt;
 
                 &lt;!-- Section Description --&gt;
-                &lt;div class=&quot;step-content z-depth-1 ml-0 p-4&quot;&gt;
+                &lt;div class=&quot;step-content z-depth-1 ml-xl-0 p-4&quot;&gt;
                     &lt;h4 class=&quot;font-bold&quot;&gt;Mussum ipsum cacilds&lt;/h4&gt;
                     &lt;p class=&quot;mt-4 mb-0&quot;&gt;Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.&lt;/p&gt;
                 &lt;/div&gt;
@@ -897,7 +956,7 @@
                             </a>
 
                             <!-- Section Description -->
-                            <div class="step-content z-depth-1 ml-0 p-0 mt-2">
+                            <div class="step-content z-depth-1 ml-xl-0 p-0 mt-2">
                                 <h4 class="font-bold timeline-header red darken-2 white-text p-3">Ut enim ad minim veniam</h4>
                                 <p class="text-muted mt-4 px-4"><i class="fa fa-clock-o" aria-hidden="true"></i> 11 hours ago via Twitter</p>
                                 <p class="mb-0 px-4 pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -910,7 +969,7 @@
                             </a>
 
                             <!-- Section Description -->
-                            <div class="step-content z-depth-1 ml-0 p-0 mt-2">
+                            <div class="step-content z-depth-1 ml-xl-0 p-0 mt-2">
                                 <h4 class="font-bold timeline-header red darken-2 white-text p-3 mb-0">Duis aute irure dolor</h4>
                                 <p class="mb-0 p-4">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
                             </div>
@@ -922,7 +981,7 @@
                             </a>
 
                             <!-- Section Description -->
-                            <div class="step-content z-depth-1 ml-0 p-0 mt-2">
+                            <div class="step-content z-depth-1 ml-xl-0 p-0 mt-2">
                                 <h4 class="font-bold timeline-header red darken-2 white-text p-3 mb-0">Sed ut nihil unde omnis</h4>
                                 <p class="mb-0 p-4">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
                             </div>
@@ -934,7 +993,7 @@
                             </a>
 
                             <!-- Section Description -->
-                            <div class="step-content z-depth-1 ml-0 p-0 mt-2">
+                            <div class="step-content z-depth-1 ml-xl-0 p-0 mt-2">
                                 <h4 class="font-bold timeline-header red darken-2 white-text p-3 mb-0"> Quis autem vel eum voluptate</h4>
                                 <p class="mt-4 px-4">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
                                 <p class="mb-0 px-4 pb-4">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
@@ -947,7 +1006,7 @@
                             </a>
 
                             <!-- Section Description -->
-                            <div class="step-content z-depth-1 ml-0 p-0 mt-2">
+                            <div class="step-content z-depth-1 ml-xl-0 p-0 mt-2">
                                 <h4 class="font-bold timeline-header red darken-2 white-text p-3 mb-0">Mussum ipsum cacilds</h4>
                                 <p class="mb-0 p-4">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
                             </div>
@@ -966,6 +1025,13 @@
         <section>
             <pre class="code-toolbar">
                 <code class="language-css">
+@media (max-width: 1025px) {
+  .stepper.colorful-timeline li {
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end; } }
+
 .stepper.colorful-timeline li a {
   padding: 0px 24px;
   left: 50%; }
@@ -1050,35 +1116,38 @@
     border-top-left-radius: 2px;
     border-top-right-radius: 2px; }
 
-.stepper.colorful-timeline li.timeline-inverted .step-content {
-  float: right; }
-  .stepper.colorful-timeline li.timeline-inverted .step-content:before {
-    border-left-width: 0;
-    border-right-width: 15px;
-    left: -15px;
-    right: auto; }
-  .stepper.colorful-timeline li.timeline-inverted .step-content:after {
-    border-left-width: 0;
-    border-right-width: 14px;
-    left: -14px;
-    right: auto; }
+.stepper.colorful-timeline li.timeline-inverted {
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end; }
+  .stepper.colorful-timeline li.timeline-inverted .step-content {
+    float: right; }
+    .stepper.colorful-timeline li.timeline-inverted .step-content:before {
+      border-left-width: 0;
+      border-right-width: 15px;
+      left: -15px;
+      right: auto; }
+    .stepper.colorful-timeline li.timeline-inverted .step-content:after {
+      border-left-width: 0;
+      border-right-width: 14px;
+      left: -14px;
+      right: auto; }
 
-.stepper.stepper-vertical.colorful-timeline li {
-  display: block; }
-  .stepper.stepper-vertical.colorful-timeline li:not(:last-child):after {
-    content: " ";
-    position: absolute;
-    width: 3px;
-    background-color: #D32F2F;
-    left: 50%;
-    top: 57px;
-    margin-left: -1.5px; }
-    @media (max-width: 450px) {
-      .stepper.stepper-vertical.colorful-timeline li:not(:last-child):after {
-        left: 6%; } }
-    @media (min-width: 451px) and (max-width: 1025px) {
-      .stepper.stepper-vertical.colorful-timeline li:not(:last-child):after {
-        left: 6%; } }
+.stepper.stepper-vertical.colorful-timeline li:not(:last-child):after {
+  content: " ";
+  position: absolute;
+  width: 3px;
+  background-color: #D32F2F;
+  left: 50%;
+  top: 57px;
+  margin-left: -1.5px; }
+  @media (max-width: 450px) {
+    .stepper.stepper-vertical.colorful-timeline li:not(:last-child):after {
+      left: 6%; } }
+  @media (min-width: 451px) and (max-width: 1025px) {
+    .stepper.stepper-vertical.colorful-timeline li:not(:last-child):after {
+      left: 6%; } }
                 </code>
             </pre>
         </section>
@@ -1093,7 +1162,7 @@
     &lt;div class=&quot;col-md-12&quot;&gt;
 
         &lt;!-- Timeline Wrapper --&gt;
-        &lt;ul class=&quot;stepper stepper-vertical timeline colorful-timeline pl-0&quot;&gt;
+        &lt;ul class=&quot;stepper stepper-vertical colorful-timeline pl-0&quot;&gt;
 
             &lt;li&gt;
                 &lt;!--Section Title --&gt;
@@ -1102,8 +1171,8 @@
                 &lt;/a&gt;
 
                 &lt;!-- Section Description --&gt;
-                &lt;div class=&quot;step-content z-depth-1 ml-0 p-0 mt-2&quot;&gt;
-                    &lt;h4 class=&quot;font-bold timeline-header&quot;&gt;Ut enim ad minim veniam&lt;/h4&gt;
+                &lt;div class=&quot;step-content z-depth-1 ml-xl-0 p-0 mt-2&quot;&gt;
+                    &lt;h4 class=&quot;font-bold timeline-header red darken-2 white-text p-3&quot;&gt;Ut enim ad minim veniam&lt;/h4&gt;
                     &lt;p class=&quot;text-muted mt-4 px-4&quot;&gt;&lt;i class=&quot;fa fa-clock-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; 11 hours ago via Twitter&lt;/p&gt;
                     &lt;p class=&quot;mb-0 px-4 pb-4&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
                 &lt;/div&gt;
@@ -1115,8 +1184,8 @@
                 &lt;/a&gt;
 
                 &lt;!-- Section Description --&gt;
-                &lt;div class=&quot;step-content z-depth-1 ml-0 p-0 mt-2&quot;&gt;
-                    &lt;h4 class=&quot;font-bold timeline-header mb-0&quot;&gt;Duis aute irure dolor&lt;/h4&gt;
+                &lt;div class=&quot;step-content z-depth-1 ml-xl-0 p-0 mt-2&quot;&gt;
+                    &lt;h4 class=&quot;font-bold timeline-header red darken-2 white-text p-3 mb-0&quot;&gt;Duis aute irure dolor&lt;/h4&gt;
                     &lt;p class=&quot;mb-0 p-4&quot;&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.&lt;/p&gt;
                 &lt;/div&gt;
             &lt;/li&gt;
@@ -1127,8 +1196,8 @@
                 &lt;/a&gt;
 
                 &lt;!-- Section Description --&gt;
-                &lt;div class=&quot;step-content z-depth-1 ml-0 p-0 mt-2&quot;&gt;
-                    &lt;h4 class=&quot;font-bold timeline-header mb-0&quot;&gt;Sed ut nihil unde omnis&lt;/h4&gt;
+                &lt;div class=&quot;step-content z-depth-1 ml-xl-0 p-0 mt-2&quot;&gt;
+                    &lt;h4 class=&quot;font-bold timeline-header red darken-2 white-text p-3 mb-0&quot;&gt;Sed ut nihil unde omnis&lt;/h4&gt;
                     &lt;p class=&quot;mb-0 p-4&quot;&gt;Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?&lt;/p&gt;
                 &lt;/div&gt;
             &lt;/li&gt;
@@ -1139,8 +1208,8 @@
                 &lt;/a&gt;
 
                 &lt;!-- Section Description --&gt;
-                &lt;div class=&quot;step-content z-depth-1 ml-0 p-0 mt-2&quot;&gt;
-                    &lt;h4 class=&quot;font-bold timeline-header mb-0&quot;&gt; Quis autem vel eum voluptate&lt;/h4&gt;
+                &lt;div class=&quot;step-content z-depth-1 ml-xl-0 p-0 mt-2&quot;&gt;
+                    &lt;h4 class=&quot;font-bold timeline-header red darken-2 white-text p-3 mb-0&quot;&gt; Quis autem vel eum voluptate&lt;/h4&gt;
                     &lt;p class=&quot;mt-4 px-4&quot;&gt;At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.&lt;/p&gt;
                     &lt;p class=&quot;mb-0 px-4 pb-4&quot;&gt;Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. &lt;/p&gt;
                 &lt;/div&gt;
@@ -1152,8 +1221,8 @@
                 &lt;/a&gt;
 
                 &lt;!-- Section Description --&gt;
-                &lt;div class=&quot;step-content z-depth-1 ml-0 p-0 mt-2&quot;&gt;
-                    &lt;h4 class=&quot;font-bold timeline-header mb-0&quot;&gt;Mussum ipsum cacilds&lt;/h4&gt;
+                &lt;div class=&quot;step-content z-depth-1 ml-xl-0 p-0 mt-2&quot;&gt;
+                    &lt;h4 class=&quot;font-bold timeline-header red darken-2 white-text p-3 mb-0&quot;&gt;Mussum ipsum cacilds&lt;/h4&gt;
                     &lt;p class=&quot;mb-0 p-4&quot;&gt;Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.&lt;/p&gt;
                 &lt;/div&gt;
             &lt;/li&gt;
@@ -1199,7 +1268,7 @@
                             </a>
 
                             <!-- Section Description -->
-                            <div class="step-content z-depth-1 ml-0 p-4">
+                            <div class="step-content z-depth-1 ml-xl-0 p-4">
                                 <h4 class="font-bold">Ut enim ad minim veniam</h4>
                                 <p class="text-muted mt-3"><i class="fa fa-clock-o" aria-hidden="true"></i> 11 hours ago via Twitter</p>
                                 <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -1212,7 +1281,7 @@
                             </a>
 
                             <!-- Section Description -->
-                            <div class="step-content z-depth-1 ml-0 p-4">
+                            <div class="step-content z-depth-1 ml-xl-0 p-4">
                                 <h4 class="font-bold">Duis aute irure dolor</h4>
                                 <p class=" mt-4 mb-0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
                             </div>
@@ -1224,7 +1293,7 @@
                             </a>
 
                             <!-- Section Description -->
-                            <div class="step-content z-depth-1 ml-0 p-4">
+                            <div class="step-content z-depth-1 ml-xl-0 p-4">
                                 <h4 class="font-bold">Sed ut nihil unde omnis</h4>
                                 <p class="mt-4 mb-0">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
                             </div>
@@ -1236,7 +1305,7 @@
                             </a>
 
                             <!-- Section Description -->
-                            <div class="step-content z-depth-1 ml-0 p-4">
+                            <div class="step-content z-depth-1 ml-xl-0 p-4">
                                 <h4 class="font-bold"> Quis autem vel eum voluptate</h4>
                                 <p class="mt-4 mb-0">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
                             </div>
@@ -1248,7 +1317,7 @@
                             </a>
 
                             <!-- Section Description -->
-                            <div class="step-content z-depth-1 ml-0 p-4">
+                            <div class="step-content z-depth-1 ml-xl-0 p-4">
                                 <h4 class="font-bold">Mussum ipsum cacilds</h4>
                                 <p class="mt-4 mb-0">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
                             </div>
@@ -1276,6 +1345,12 @@
 .stepper.timeline-animated li {
   -webkit-transition: all 0.7s ease-in-out;
   transition: all 0.7s ease-in-out; }
+  @media (max-width: 1025px) {
+    .stepper.timeline-animated li {
+      -webkit-box-align: end;
+      -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+      align-items: flex-end; } }
   .stepper.timeline-animated li a {
     padding: 0px 24px;
     left: 50%; }
@@ -1355,35 +1430,38 @@
           border-right-width: 14px;
           left: -14px;
           right: auto; } }
-  .stepper.timeline-animated li.timeline-inverted .step-content {
-    float: right; }
-    .stepper.timeline-animated li.timeline-inverted .step-content:before {
-      border-left-width: 0;
-      border-right-width: 15px;
-      left: -15px;
-      right: auto; }
-    .stepper.timeline-animated li.timeline-inverted .step-content:after {
-      border-left-width: 0;
-      border-right-width: 14px;
-      left: -14px;
-      right: auto; }
+  .stepper.timeline-animated li.timeline-inverted {
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end; }
+    .stepper.timeline-animated li.timeline-inverted .step-content {
+      float: right; }
+      .stepper.timeline-animated li.timeline-inverted .step-content:before {
+        border-left-width: 0;
+        border-right-width: 15px;
+        left: -15px;
+        right: auto; }
+      .stepper.timeline-animated li.timeline-inverted .step-content:after {
+        border-left-width: 0;
+        border-right-width: 14px;
+        left: -14px;
+        right: auto; }
 
-.stepper.stepper-vertical li {
-  display: block; }
-  .stepper.stepper-vertical li:not(:last-child):after {
-    content: " ";
-    position: absolute;
-    width: 3px;
-    background-color: #e0e0e0;
-    left: 50%;
-    top: 57px;
-    margin-left: -1.5px; }
-    @media (max-width: 450px) {
-      .stepper.stepper-vertical li:not(:last-child):after {
-        left: 6%; } }
-    @media (min-width: 451px) and (max-width: 1025px) {
-      .stepper.stepper-vertical li:not(:last-child):after {
-        left: 6%; } }
+.stepper.stepper-vertical li:not(:last-child):after {
+  content: " ";
+  position: absolute;
+  width: 3px;
+  background-color: #e0e0e0;
+  left: 50%;
+  top: 57px;
+  margin-left: -1.5px; }
+  @media (max-width: 450px) {
+    .stepper.stepper-vertical li:not(:last-child):after {
+      left: 6%; } }
+  @media (min-width: 451px) and (max-width: 1025px) {
+    .stepper.stepper-vertical li:not(:last-child):after {
+      left: 6%; } }
                 </code>
             </pre>
         </section>
@@ -1431,7 +1509,7 @@ $(window).scroll(function(){
                 &lt;/a&gt;
 
                 &lt;!-- Section Description --&gt;
-                &lt;div class=&quot;step-content z-depth-1 ml-0 p-4&quot;&gt;
+                &lt;div class=&quot;step-content z-depth-1 ml-xl-0 p-4&quot;&gt;
                     &lt;h4 class=&quot;font-bold&quot;&gt;Ut enim ad minim veniam&lt;/h4&gt;
                     &lt;p class=&quot;text-muted mt-3&quot;&gt;&lt;i class=&quot;fa fa-clock-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; 11 hours ago via Twitter&lt;/p&gt;
                     &lt;p class=&quot;mb-0&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
@@ -1444,7 +1522,7 @@ $(window).scroll(function(){
                 &lt;/a&gt;
 
                 &lt;!-- Section Description --&gt;
-                &lt;div class=&quot;step-content z-depth-1 ml-0 p-4&quot;&gt;
+                &lt;div class=&quot;step-content z-depth-1 ml-xl-0 p-4&quot;&gt;
                     &lt;h4 class=&quot;font-bold&quot;&gt;Duis aute irure dolor&lt;/h4&gt;
                     &lt;p class=&quot; mt-4 mb-0&quot;&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.&lt;/p&gt;
                 &lt;/div&gt;
@@ -1456,7 +1534,7 @@ $(window).scroll(function(){
                 &lt;/a&gt;
 
                 &lt;!-- Section Description --&gt;
-                &lt;div class=&quot;step-content z-depth-1 ml-0 p-4&quot;&gt;
+                &lt;div class=&quot;step-content z-depth-1 ml-xl-0 p-4&quot;&gt;
                     &lt;h4 class=&quot;font-bold&quot;&gt;Sed ut nihil unde omnis&lt;/h4&gt;
                     &lt;p class=&quot;mt-4 mb-0&quot;&gt;Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?&lt;/p&gt;
                 &lt;/div&gt;
@@ -1468,7 +1546,7 @@ $(window).scroll(function(){
                 &lt;/a&gt;
 
                 &lt;!-- Section Description --&gt;
-                &lt;div class=&quot;step-content z-depth-1 ml-0 p-4&quot;&gt;
+                &lt;div class=&quot;step-content z-depth-1 ml-xl-0 p-4&quot;&gt;
                     &lt;h4 class=&quot;font-bold&quot;&gt; Quis autem vel eum voluptate&lt;/h4&gt;
                     &lt;p class=&quot;mt-4 mb-0&quot;&gt;At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.&lt;/p&gt;
                 &lt;/div&gt;
@@ -1480,7 +1558,7 @@ $(window).scroll(function(){
                 &lt;/a&gt;
 
                 &lt;!-- Section Description --&gt;
-                &lt;div class=&quot;step-content z-depth-1 ml-0 p-4&quot;&gt;
+                &lt;div class=&quot;step-content z-depth-1 ml-xl-0 p-4&quot;&gt;
                     &lt;h4 class=&quot;font-bold&quot;&gt;Mussum ipsum cacilds&lt;/h4&gt;
                     &lt;p class=&quot;mt-4 mb-0&quot;&gt;Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.&lt;/p&gt;
                 &lt;/div&gt;
@@ -1527,7 +1605,7 @@ $(window).scroll(function(){
                             </a>
 
                             <!-- Section Description -->
-                            <div class="step-content z-depth-1 ml-0 p-4 hoverable">
+                            <div class="step-content z-depth-1 ml-xl-0 p-4 hoverable">
                                 <h4 class="font-bold">Ut enim ad minim veniam</h4>
                                 <p class="text-muted mt-3"><i class="fa fa-clock-o" aria-hidden="true"></i> 2017</p>
                                 <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -1540,7 +1618,7 @@ $(window).scroll(function(){
                             </a>
 
                             <!-- Section Description -->
-                            <div class="step-content z-depth-1 ml-0 p-4 hoverable">
+                            <div class="step-content z-depth-1 ml-xl-0 p-4 hoverable">
                                 <h4 class="font-bold">Duis aute irure dolor</h4>
                                 <p class="text-muted mt-3"><i class="fa fa-clock-o" aria-hidden="true"></i> 2016</p>
                                 <p class="mb-0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
@@ -1553,7 +1631,7 @@ $(window).scroll(function(){
                             </a>
 
                             <!-- Section Description -->
-                            <div class="step-content z-depth-1 ml-0 p-4 hoverable">
+                            <div class="step-content z-depth-1 ml-xl-0 p-4 hoverable">
                                 <h4 class="font-bold">Sed ut nihil unde omnis</h4>
                                 <p class="text-muted mt-3"><i class="fa fa-clock-o" aria-hidden="true"></i> 2015</p>
                                 <p class="mb-0">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
@@ -1566,7 +1644,7 @@ $(window).scroll(function(){
                             </a>
 
                             <!-- Section Description -->
-                            <div class="step-content z-depth-1 ml-0 p-4 hoverable">
+                            <div class="step-content z-depth-1 ml-xl-0 p-4 hoverable">
                                 <h4 class="font-bold"> Quis autem vel eum voluptate</h4>
                                 <p class="text-muted mt-3"><i class="fa fa-clock-o" aria-hidden="true"></i> 2014</p>
                                 <p class="mb-0">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
@@ -1579,7 +1657,7 @@ $(window).scroll(function(){
                             </a>
 
                             <!-- Section Description -->
-                            <div class="step-content z-depth-1 ml-0 p-4 hoverable">
+                            <div class="step-content z-depth-1 ml-xl-0 p-4 hoverable">
                                 <h4 class="font-bold">Mussum ipsum cacilds</h4>
                                 <p class="text-muted mt-3"><i class="fa fa-clock-o" aria-hidden="true"></i> 2013</p>
                                 <p class="mb-0">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
@@ -1599,6 +1677,13 @@ $(window).scroll(function(){
         <section>
             <pre class="code-toolbar">
                 <code class="language-css">
+@media (max-width: 1025px) {
+  .stepper.timeline-simple li {
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end; } }
+
 .stepper.timeline-simple li a {
   padding: 0px;
   left: 50%; }
@@ -1681,36 +1766,39 @@ $(window).scroll(function(){
         left: -14px;
         right: auto; } }
 
-.stepper.timeline-simple li.timeline-inverted .step-content {
-  float: right; }
-  .stepper.timeline-simple li.timeline-inverted .step-content:before {
-    border-left-width: 0;
-    border-right-width: 15px;
-    left: -15px;
-    right: auto; }
-  .stepper.timeline-simple li.timeline-inverted .step-content:after {
-    border-left-width: 0;
-    border-right-width: 14px;
-    left: -14px;
-    right: auto; }
+.stepper.timeline-simple li.timeline-inverted {
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end; }
+  .stepper.timeline-simple li.timeline-inverted .step-content {
+    float: right; }
+    .stepper.timeline-simple li.timeline-inverted .step-content:before {
+      border-left-width: 0;
+      border-right-width: 15px;
+      left: -15px;
+      right: auto; }
+    .stepper.timeline-simple li.timeline-inverted .step-content:after {
+      border-left-width: 0;
+      border-right-width: 14px;
+      left: -14px;
+      right: auto; }
 
-.stepper.stepper-vertical.timeline-simple li {
-  display: block; }
-  .stepper.stepper-vertical.timeline-simple li:not(:last-child):after {
-    content: " ";
-    position: absolute;
-    width: 2px;
-    background-color: #9e9e9e;
-    left: 50%;
-    top: 32px;
-    height: 100%;
-    margin-left: -1.5px; }
-    @media (max-width: 450px) {
-      .stepper.stepper-vertical.timeline-simple li:not(:last-child):after {
-        left: 6%; } }
-    @media (min-width: 451px) and (max-width: 1025px) {
-      .stepper.stepper-vertical.timeline-simple li:not(:last-child):after {
-        left: 6%; } }
+.stepper.stepper-vertical.timeline-simple li:not(:last-child):after {
+  content: " ";
+  position: absolute;
+  width: 2px;
+  background-color: #9e9e9e;
+  left: 50%;
+  top: 32px;
+  height: 100%;
+  margin-left: -1.5px; }
+  @media (max-width: 450px) {
+    .stepper.stepper-vertical.timeline-simple li:not(:last-child):after {
+      left: 6%; } }
+  @media (min-width: 451px) and (max-width: 1025px) {
+    .stepper.stepper-vertical.timeline-simple li:not(:last-child):after {
+      left: 6%; } }
                 </code>
             </pre>
         </section>
@@ -1734,7 +1822,7 @@ $(window).scroll(function(){
                 &lt;/a&gt;
 
                 &lt;!-- Section Description --&gt;
-                &lt;div class=&quot;step-content z-depth-1 ml-0 p-4 hoverable&quot;&gt;
+                &lt;div class=&quot;step-content z-depth-1 ml-xl-0 p-4 hoverable&quot;&gt;
                     &lt;h4 class=&quot;font-bold&quot;&gt;Ut enim ad minim veniam&lt;/h4&gt;
                     &lt;p class=&quot;text-muted mt-3&quot;&gt;&lt;i class=&quot;fa fa-clock-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; 2017&lt;/p&gt;
                     &lt;p class=&quot;mb-0&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
@@ -1747,7 +1835,7 @@ $(window).scroll(function(){
                 &lt;/a&gt;
 
                 &lt;!-- Section Description --&gt;
-                &lt;div class=&quot;step-content z-depth-1 ml-0 p-4 hoverable&quot;&gt;
+                &lt;div class=&quot;step-content z-depth-1 ml-xl-0 p-4 hoverable&quot;&gt;
                     &lt;h4 class=&quot;font-bold&quot;&gt;Duis aute irure dolor&lt;/h4&gt;
                     &lt;p class=&quot;text-muted mt-3&quot;&gt;&lt;i class=&quot;fa fa-clock-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; 2016&lt;/p&gt;
                     &lt;p class=&quot;mb-0&quot;&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.&lt;/p&gt;
@@ -1760,7 +1848,7 @@ $(window).scroll(function(){
                 &lt;/a&gt;
 
                 &lt;!-- Section Description --&gt;
-                &lt;div class=&quot;step-content z-depth-1 ml-0 p-4 hoverable&quot;&gt;
+                &lt;div class=&quot;step-content z-depth-1 ml-xl-0 p-4 hoverable&quot;&gt;
                     &lt;h4 class=&quot;font-bold&quot;&gt;Sed ut nihil unde omnis&lt;/h4&gt;
                     &lt;p class=&quot;text-muted mt-3&quot;&gt;&lt;i class=&quot;fa fa-clock-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; 2015&lt;/p&gt;
                     &lt;p class=&quot;mb-0&quot;&gt;Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?&lt;/p&gt;
@@ -1773,7 +1861,7 @@ $(window).scroll(function(){
                 &lt;/a&gt;
 
                 &lt;!-- Section Description --&gt;
-                &lt;div class=&quot;step-content z-depth-1 ml-0 p-4 hoverable&quot;&gt;
+                &lt;div class=&quot;step-content z-depth-1 ml-xl-0 p-4 hoverable&quot;&gt;
                     &lt;h4 class=&quot;font-bold&quot;&gt; Quis autem vel eum voluptate&lt;/h4&gt;
                     &lt;p class=&quot;text-muted mt-3&quot;&gt;&lt;i class=&quot;fa fa-clock-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; 2014&lt;/p&gt;
                     &lt;p class=&quot;mb-0&quot;&gt;At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.&lt;/p&gt;
@@ -1786,7 +1874,7 @@ $(window).scroll(function(){
                 &lt;/a&gt;
 
                 &lt;!-- Section Description --&gt;
-                &lt;div class=&quot;step-content z-depth-1 ml-0 p-4 hoverable&quot;&gt;
+                &lt;div class=&quot;step-content z-depth-1 ml-xl-0 p-4 hoverable&quot;&gt;
                     &lt;h4 class=&quot;font-bold&quot;&gt;Mussum ipsum cacilds&lt;/h4&gt;
                     &lt;p class=&quot;text-muted mt-3&quot;&gt;&lt;i class=&quot;fa fa-clock-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; 2013&lt;/p&gt;
                     &lt;p class=&quot;mb-0&quot;&gt;Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.&lt;/p&gt;
@@ -1834,7 +1922,7 @@ $(window).scroll(function(){
                             </a>
 
                             <!-- Section Description -->
-                            <div class="step-content z-depth-1 ml-0 p-0 hoverable">
+                            <div class="step-content z-depth-1 ml-xl-0 p-0 hoverable">
                                 <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(135).jpg" class="img-fluid" alt="Responsive image">
                                 <h4 class="font-bold p-4 mb-0">Ut enim ad minim veniam</h4>
                                 <p class="text-muted px-4 mb-0"><i class="fa fa-clock-o" aria-hidden="true"></i> 2017</p>
@@ -1848,7 +1936,7 @@ $(window).scroll(function(){
                             </a>
 
                             <!-- Section Description -->
-                            <div class="step-content z-depth-1 ml-0 p-0 hoverable">
+                            <div class="step-content z-depth-1 ml-xl-0 p-0 hoverable">
                                 <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(129).jpg" class="img-fluid" alt="Responsive image">
                                 <h4 class="font-bold p-4 mb-0">Duis aute irure dolor</h4>
                                 <p class="text-muted px-4 mb-0"><i class="fa fa-clock-o" aria-hidden="true"></i> 2016</p>
@@ -1862,7 +1950,7 @@ $(window).scroll(function(){
                             </a>
 
                             <!-- Section Description -->
-                            <div class="step-content z-depth-1 ml-0 p-0 hoverable">
+                            <div class="step-content z-depth-1 ml-xl-0 p-0 hoverable">
                                 <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(131).jpg" class="img-fluid" alt="Responsive image">
                                 <h4 class="font-bold p-4 mb-0">Sed ut nihil unde omnis</h4>
                                 <p class="text-muted px-4 mb-0"><i class="fa fa-clock-o" aria-hidden="true"></i> 2015</p>
@@ -1876,7 +1964,7 @@ $(window).scroll(function(){
                             </a>
 
                             <!-- Section Description -->
-                            <div class="step-content z-depth-1 ml-0 p-0 hoverable">
+                            <div class="step-content z-depth-1 ml-xl-0 p-0 hoverable">
                                 <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(125).jpg" class="img-fluid" alt="Responsive image">
                                 <h4 class="font-bold p-4 mb-0"> Quis autem vel eum voluptate</h4>
                                 <p class="text-muted px-4 mb-0"><i class="fa fa-clock-o" aria-hidden="true"></i> 2014</p>
@@ -1890,7 +1978,7 @@ $(window).scroll(function(){
                             </a>
 
                             <!-- Section Description -->
-                            <div class="step-content z-depth-1 ml-0 p-0 hoverable">
+                            <div class="step-content z-depth-1 ml-xl-0 p-0 hoverable">
                                 <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(144).jpg" class="img-fluid" alt="Responsive image">
                                 <h4 class="font-bold p-4 mb-0">Mussum ipsum cacilds</h4>
                                 <p class="text-muted px-4 mb-0"><i class="fa fa-clock-o" aria-hidden="true"></i> 2013</p>
@@ -1911,6 +1999,13 @@ $(window).scroll(function(){
         <section>
             <pre class="code-toolbar">
                 <code class="language-css">
+@media (max-width: 1025px) {
+  .stepper.timeline-images li {
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end; } }
+
 .stepper.timeline-images li a {
   padding: 0px;
   left: 50%; }
@@ -1953,26 +2048,29 @@ $(window).scroll(function(){
       margin-bottom: 2rem;
       float: right; } }
 
-.stepper.timeline-images li.timeline-inverted .step-content {
-  float: right; }
+.stepper.timeline-images li.timeline-inverted {
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end; }
+  .stepper.timeline-images li.timeline-inverted .step-content {
+    float: right; }
 
-.stepper.stepper-vertical.timeline-images li {
-  display: block; }
-  .stepper.stepper-vertical.timeline-images li:not(:last-child):after {
-    content: " ";
-    position: absolute;
-    width: 2px;
-    background-color: #26c6da;
-    left: 50%;
-    top: 32px;
-    height: 100%;
-    margin-left: -1.5px; }
-    @media (max-width: 450px) {
-      .stepper.stepper-vertical.timeline-images li:not(:last-child):after {
-        left: 6%; } }
-    @media (min-width: 451px) and (max-width: 1025px) {
-      .stepper.stepper-vertical.timeline-images li:not(:last-child):after {
-        left: 6%; } }
+.stepper.stepper-vertical.timeline-images li:not(:last-child):after {
+  content: " ";
+  position: absolute;
+  width: 2px;
+  background-color: #26c6da;
+  left: 50%;
+  top: 32px;
+  height: 100%;
+  margin-left: -1.5px; }
+  @media (max-width: 450px) {
+    .stepper.stepper-vertical.timeline-images li:not(:last-child):after {
+      left: 6%; } }
+  @media (min-width: 451px) and (max-width: 1025px) {
+    .stepper.stepper-vertical.timeline-images li:not(:last-child):after {
+      left: 6%; } }
                 </code>
             </pre>
         </section>
@@ -1996,7 +2094,7 @@ $(window).scroll(function(){
                 &lt;/a&gt;
 
                 &lt;!-- Section Description --&gt;
-                &lt;div class=&quot;step-content z-depth-1 ml-0 p-0 hoverable&quot;&gt;
+                &lt;div class=&quot;step-content z-depth-1 ml-xl-0 p-0 hoverable&quot;&gt;
                     &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Slides/img%20(135).jpg&quot; class=&quot;img-fluid&quot; alt=&quot;Responsive image&quot;&gt;
                     &lt;h4 class=&quot;font-bold p-4 mb-0&quot;&gt;Ut enim ad minim veniam&lt;/h4&gt;
                     &lt;p class=&quot;text-muted px-4 mb-0&quot;&gt;&lt;i class=&quot;fa fa-clock-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; 2017&lt;/p&gt;
@@ -2010,7 +2108,7 @@ $(window).scroll(function(){
                 &lt;/a&gt;
 
                 &lt;!-- Section Description --&gt;
-                &lt;div class=&quot;step-content z-depth-1 ml-0 p-0 hoverable&quot;&gt;
+                &lt;div class=&quot;step-content z-depth-1 ml-xl-0 p-0 hoverable&quot;&gt;
                     &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Slides/img%20(129).jpg&quot; class=&quot;img-fluid&quot; alt=&quot;Responsive image&quot;&gt;
                     &lt;h4 class=&quot;font-bold p-4 mb-0&quot;&gt;Duis aute irure dolor&lt;/h4&gt;
                     &lt;p class=&quot;text-muted px-4 mb-0&quot;&gt;&lt;i class=&quot;fa fa-clock-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; 2016&lt;/p&gt;
@@ -2024,7 +2122,7 @@ $(window).scroll(function(){
                 &lt;/a&gt;
 
                 &lt;!-- Section Description --&gt;
-                &lt;div class=&quot;step-content z-depth-1 ml-0 p-0 hoverable&quot;&gt;
+                &lt;div class=&quot;step-content z-depth-1 ml-xl-0 p-0 hoverable&quot;&gt;
                     &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Slides/img%20(131).jpg&quot; class=&quot;img-fluid&quot; alt=&quot;Responsive image&quot;&gt;
                     &lt;h4 class=&quot;font-bold p-4 mb-0&quot;&gt;Sed ut nihil unde omnis&lt;/h4&gt;
                     &lt;p class=&quot;text-muted px-4 mb-0&quot;&gt;&lt;i class=&quot;fa fa-clock-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; 2015&lt;/p&gt;
@@ -2038,7 +2136,7 @@ $(window).scroll(function(){
                 &lt;/a&gt;
 
                 &lt;!-- Section Description --&gt;
-                &lt;div class=&quot;step-content z-depth-1 ml-0 p-0 hoverable&quot;&gt;
+                &lt;div class=&quot;step-content z-depth-1 ml-xl-0 p-0 hoverable&quot;&gt;
                     &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Slides/img%20(125).jpg&quot; class=&quot;img-fluid&quot; alt=&quot;Responsive image&quot;&gt;
                     &lt;h4 class=&quot;font-bold p-4 mb-0&quot;&gt; Quis autem vel eum voluptate&lt;/h4&gt;
                     &lt;p class=&quot;text-muted px-4 mb-0&quot;&gt;&lt;i class=&quot;fa fa-clock-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; 2014&lt;/p&gt;
@@ -2052,7 +2150,7 @@ $(window).scroll(function(){
                 &lt;/a&gt;
 
                 &lt;!-- Section Description --&gt;
-                &lt;div class=&quot;step-content z-depth-1 ml-0 p-0 hoverable&quot;&gt;
+                &lt;div class=&quot;step-content z-depth-1 ml-xl-0 p-0 hoverable&quot;&gt;
                     &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Slides/img%20(144).jpg&quot; class=&quot;img-fluid&quot; alt=&quot;Responsive image&quot;&gt;
                     &lt;h4 class=&quot;font-bold p-4 mb-0&quot;&gt;Mussum ipsum cacilds&lt;/h4&gt;
                     &lt;p class=&quot;text-muted px-4 mb-0&quot;&gt;&lt;i class=&quot;fa fa-clock-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; 2013&lt;/p&gt;
@@ -2080,7 +2178,7 @@ $(window).scroll(function(){
                 <!-- Main column -->
 
                 <!-- Scrollspy column -->
-                <div class="col-md-2">
+                <div class="col-lg-2 clearfix d-none d-lg-block">
 
                 </div>
                 <!-- Scrollspy column -->
