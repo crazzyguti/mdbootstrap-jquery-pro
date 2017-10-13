@@ -675,3 +675,28 @@ $gradients: (
         width: 6px;
     }
 }
+
+@each $name, $color in $material-colors {
+    .#{$name}-text {
+        color: $color;
+    }
+}
+
+@each $name, $color in $material-colors {
+    .#{$name}-lighter-hover {
+        color: $color;
+        transition: .4s;
+        &:hover {
+            transition: .4s;
+            color: lighten($color, 15%);
+        }
+    }
+    .#{$name}-darker-hover {
+        color: $color;
+        transition: .4s;
+        &:hover {
+            transition: .4s;
+            color: darken($color, 15%);
+        }
+    }
+}
