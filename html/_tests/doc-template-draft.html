@@ -13,9 +13,6 @@
     <!-- Material Design Bootstrap -->
     <link rel="stylesheet" href="../../css/mdb.css">
     <!-- Your custom styles (optional) -->
-    <style>
-       
-    </style>
 </head>
 
 <body class="fixed-sn">
@@ -36,38 +33,30 @@
 <!--Section: Doc content-->
 <section class="documentation">
 
+    <style>
+
+    </style>
+
     <!--Section: Intro-->
     <section id="introduction">
 
         <!--Title-->
-        <h1 class="main-title"></h1>
+        <h1 class="main-title">Bootstrap Background Image</h1>
 
         <!--Description-->
         <p class="description"></p>
 
-        <!--Section: Live preview-->
-        <section>
-
-
-
-        </section>
-        <!--Section: Live preview-->
-
-        <!--Section: Code-->
-        <section>
-            <pre class="code-toolbar">
-                <code class="language-css">
-
-                </code>
-            </pre>
-        </section>
-        <!--Section: Code-->
+        <blockquote class="blockquote bq-primary mt-4">
+            <p class="bq-title">Enabling animations</p>
+            <p>In order to enable animations, first, you have to initialize it using following code:</p>
+        </blockquote>
 
         <!--Section: Code-->
         <section>
             <pre class="code-toolbar">
                 <code class="language-markup">
-
+&lt;!--Animations init--&gt;
+new WOW().init();
                 </code>
             </pre>
         </section>
@@ -79,10 +68,10 @@
     <hr class="my-5">
 
     <!--Section: -->
-    <section id="1">
+    <section id="v-1">
 
         <!--Title-->
-        <h2 class="title"><strong></strong> <a href="https://mdbootstrap.com/product/material-design-for-bootstrap-pro/" target="_blank" class="btn btn-danger btn-md" role="button">MDB Pro component <i class="fa fa-diamond ml-1"></i></a></h2>
+        <h2 class="title"><strong>Background image layout- first option</strong></h2>
 
         <!--Description-->
         <p class="description"></p>
@@ -90,7 +79,17 @@
         <!--Section: Live preview-->
         <section>
 
+            <!--Section: App intro-->
+            <section class="text-center">
 
+                <a href="https://mdbootstrap.com/previews/docs/latest/html/intros/intro-app.html" target="_blank" type="button" class="btn btn-outline-primary btn-rounded waves-effect mb-r">See live preview</a>
+
+                <div class="view overlay hm-black-strong z-depth-2">
+                    <img src="https://mdbootstrap.com/img/Photos/Others/Intros/intro1.jpg" alt="Display of full page app intro page." class="img-fluid">
+                </div>
+
+            </section>
+            <!--Section: App intro-->
 
         </section>
         <!--Section: Live preview-->
@@ -99,7 +98,48 @@
         <section>
             <pre class="code-toolbar">
                 <code class="language-css">
-
+.intro-2 {
+    background: url("https://mdbootstrap.com/img/Photos/Others/architecture.jpg")no-repeat center center;
+    background-size: cover;
+}
+.btn .fa {
+    margin-left: 3px;
+}
+.top-nav-collapse {
+    background-color: #424f95 !important; 
+}
+.navbar:not(.top-nav-collapse) {
+    background: transparent !important;
+}
+@media (max-width: 768px) {
+    .navbar:not(.top-nav-collapse) {
+        background: #424f95 !important;
+    } 
+}
+h6 {
+    line-height: 1.7;
+}
+.hm-gradient .full-bg-img {
+    background: -moz-linear-gradient(45deg, rgba(42, 27, 161, 0.6), rgba(29, 210, 177, 0.6) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(42, 27, 161, 0.6), rgba(29, 210, 177, 0.6) 100%);
+    background: -webkit-gradient(linear, 45deg, from(rgba(42, 27, 161, 0.6)), to(rgba(29, 210, 177, 0.6)));
+    background: -o-linear-gradient(45deg, rgba(42, 27, 161, 0.6), rgba(29, 210, 177, 0.6) 100%);
+    background: linear-gradient(to 45deg, rgba(42, 27, 161, 0.6), rgba(29, 210, 177, 0.6) 100%); 
+}
+@media (max-width: 450px) {
+    .margins {
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+}
+@media (max-width: 740px) {
+    .full-height,
+    .full-height body,
+    .full-height header,
+    .full-height header .view {
+        height: 1040px; 
+    } 
+}
                 </code>
             </pre>
         </section>
@@ -109,7 +149,89 @@
         <section>
             <pre class="code-toolbar">
                 <code class="language-markup">
+&lt;!--Main Navigation--&gt;
+&lt;header&gt;
 
+    &lt;!--Navbar--&gt;
+    &lt;nav class=&quot;navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar&quot;&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;&lt;strong&gt;MDB&lt;/strong&gt;&lt;/a&gt;
+            &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#navbarSupportedContent-7&quot; aria-controls=&quot;navbarSupportedContent-7&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;
+                &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarSupportedContent-7&quot;&gt;
+                &lt;ul class=&quot;navbar-nav mr-auto&quot;&gt;
+                    &lt;li class=&quot;nav-item active&quot;&gt;
+                        &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Home &lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;nav-item&quot;&gt;
+                        &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Link&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;nav-item&quot;&gt;
+                        &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Profile&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;form class=&quot;form-inline&quot;&gt;
+                    &lt;input class=&quot;form-control mr-sm-2&quot; type=&quot;text&quot; placeholder=&quot;Search&quot; aria-label=&quot;Search&quot;&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+
+    &lt;!--Intro Section--&gt;
+    &lt;section class=&quot;view intro-2 hm-gradient&quot;&gt;
+        &lt;div class=&quot;full-bg-img&quot;&gt;
+            &lt;div class=&quot;container flex-center&quot;&gt;
+                &lt;div class=&quot;row flex-center pt-5 mt-3&quot;&gt;
+                    &lt;div class=&quot;col-md-6 text-center text-md-left margins&quot;&gt;
+                        &lt;div class=&quot;white-text&quot;&gt;
+                            &lt;h1 class=&quot;h1-responsive wow fadeInLeft&quot; data-wow-delay=&quot;0.3s&quot;&gt;Make purchases with our app &lt;/h1&gt;
+                                &lt;hr class=&quot;hr-light wow fadeInLeft&quot; data-wow-delay=&quot;0.3s&quot;&gt;
+                                &lt;h6 class=&quot;wow fadeInLeft&quot; data-wow-delay=&quot;0.3s&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga nesciunt dolorum nulla magnam veniam sapiente, fugiat! Commodi sequi non animi ea dolor molestiae iste.&lt;/h6&gt;
+                                &lt;br&gt;
+                                &lt;a class=&quot;btn btn-outline-white wow fadeInLeft&quot; data-wow-delay=&quot;0.3s&quot;&gt;Learn more&lt;/a&gt;
+                                &lt;a class=&quot;btn btn-outline-white wow fadeInLeft&quot; data-wow-delay=&quot;0.3s&quot;&gt;Download 
+                                    &lt;i class=&quot;fa fa-android left right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+                                    &lt;i class=&quot;fa fa-apple left&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+                                    &lt;i class=&quot;fa fa-windows&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+                                &lt;/a&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    
+                    &lt;div class=&quot;col-md-6 wow fadeInRight d-flex justify-content-center&quot; data-wow-delay=&quot;0.3s&quot;&gt;
+                        &lt;img src=&quot;https://mdbootstrap.com/img/Mockups/Transparent/Small/iphone-admin.png&quot; alt=&quot;&quot; class=&quot;img-responsive&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+&lt;/header&gt;
+&lt;!--Main Navigation--&gt;
+
+&lt;!--Main Layout--&gt;
+&lt;main&gt;
+
+    &lt;div class=&quot;container&quot;&gt;
+        
+        &lt;!--Grid row--&gt;
+        &lt;div class=&quot;row py-5&quot;&gt;
+
+            &lt;!--Grid column--&gt;
+            &lt;div class=&quot;col-md-12 text-center&quot;&gt;
+
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+
+            &lt;/div&gt;
+            &lt;!--Grid column--&gt;
+
+        &lt;/div&gt;
+        &lt;!--Grid row--&gt;
+
+    &lt;/div&gt;
+
+&lt;/main&gt;
+&lt;!--Main Layout--&gt;
                 </code>
             </pre>
         </section>
@@ -121,18 +243,22 @@
     <hr class="my-5">
 
     <!--Section: -->
-    <section id="2">
+    <section id="v-2">
 
-        <!--Title-->
-        <h2 class="title"><strong></strong> <a href="https://mdbootstrap.com/product/material-design-for-bootstrap-pro/" target="_blank" class="btn btn-danger btn-md" role="button">MDB Pro component <i class="fa fa-diamond ml-1"></i></a></h2>
+        <<!--Title-->
+        <h2 class="title"><strong>Background image layout- second option</strong></h2>
 
         <!--Description-->
         <p class="description"></p>
 
         <!--Section: Live preview-->
-        <section>
+        <section class="text-center">
 
+            <a href="https://mdbootstrap.com/previews/docs/latest/html/intros/intro-register-classic-form.html" target="_blank" type="button" class="btn btn-outline-primary btn-rounded waves-effect mb-r">See live preview</a>
 
+            <div class="view overlay hm-black-strong z-depth-2">
+                <img src="https://mdbootstrap.com/img/Photos/Others/Intros/intro5.jpg" alt="Display of a page with a classic register form." class="img-fluid">
+            </div>
 
         </section>
         <!--Section: Live preview-->
@@ -141,7 +267,48 @@
         <section>
             <pre class="code-toolbar">
                 <code class="language-css">
+.intro-2 {
+    background: url("http://mdbootstrap.com/img/Photos/Others/img%20(42).jpg")no-repeat center center;
+    background-size: cover;
+}
+.top-nav-collapse {
+    background-color: #3f51b5 !important; 
+}
+.navbar:not(.top-nav-collapse) {
+    background: transparent !important;
+}
+@media (max-width: 768px) {
+    .navbar:not(.top-nav-collapse) {
+        background: #3f51b5 !important;
+    } 
+}
+.hm-gradient .full-bg-img {
+    background: -webkit-linear-gradient(45deg, rgba(83, 125, 210, 0.4), rgba(178, 30, 123, 0.4) 100%);
+    background: -webkit-gradient(linear, 45deg, from(rgba(29, 236, 197, 0.4)), to(rgba(96, 0, 136, 0.4)));
+    background: linear-gradient(to 45deg, rgba(29, 236, 197, 0.4), rgba(96, 0, 136, 0.4) 100%); 
+}       
+.card {
+    background-color: rgba(229, 228, 255, 0.2);
+}
 
+ .md-form .prefix {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+.md-form label {
+    color: #ffffff;
+}
+h6 {
+    line-height: 1.7;
+}
+@media (max-width: 740px) {
+    .full-height,
+    .full-height body,
+    .full-height header,
+    .full-height header .view {
+        height: 1040px; 
+    } 
+}
                 </code>
             </pre>
         </section>
@@ -151,7 +318,125 @@
         <section>
             <pre class="code-toolbar">
                 <code class="language-markup">
+&lt;!--Main Navigation--&gt;
+&lt;header&gt;
 
+    &lt;nav class=&quot;navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar&quot;&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;&lt;strong&gt;MDB&lt;/strong&gt;&lt;/a&gt;
+            &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#navbarSupportedContent-7&quot; aria-controls=&quot;navbarSupportedContent-7&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;
+                &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarSupportedContent-7&quot;&gt;
+                &lt;ul class=&quot;navbar-nav mr-auto&quot;&gt;
+                    &lt;li class=&quot;nav-item active&quot;&gt;
+                        &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Home &lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;nav-item&quot;&gt;
+                        &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Link&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;nav-item&quot;&gt;
+                        &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Profile&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;form class=&quot;form-inline&quot;&gt;
+                    &lt;input class=&quot;form-control mr-sm-2&quot; type=&quot;text&quot; placeholder=&quot;Search&quot; aria-label=&quot;Search&quot;&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+
+    &lt;!--Intro Section--&gt;
+    &lt;section class=&quot;view intro-2 hm-gradient&quot;&gt;
+        &lt;div class=&quot;full-bg-img&quot;&gt;
+            &lt;div class=&quot;container flex-center&quot;&gt;
+                &lt;div class=&quot;d-flex align-items-center content-height&quot;&gt;
+                    &lt;div class=&quot;row flex-center pt-5 mt-3&quot;&gt;
+                        &lt;div class=&quot;col-md-6 text-center text-md-left mb-5&quot;&gt;
+                            &lt;div class=&quot;white-text&quot;&gt;
+                                &lt;h1 class=&quot;h1-responsive font-bold wow fadeInLeft&quot; data-wow-delay=&quot;0.3s&quot;&gt;Sign up right now! &lt;/h1&gt;
+                                &lt;hr class=&quot;hr-light wow fadeInLeft&quot; data-wow-delay=&quot;0.3s&quot;&gt;
+                                &lt;h6 class=&quot;wow fadeInLeft&quot; data-wow-delay=&quot;0.3s&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga nesciunt dolorum nulla magnam veniam sapiente, fugiat! Commodi sequi non animi ea dolor molestiae, quisquam iste, maiores. Nulla.&lt;/h6&gt;
+                                &lt;br&gt;
+                                &lt;a class=&quot;btn btn-outline-white wow fadeInLeft&quot; data-wow-delay=&quot;0.3s&quot;&gt;Learn more&lt;/a&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        
+                        &lt;div class=&quot;col-md-6 col-xl-5 offset-xl-1&quot;&gt;
+                            &lt;!--Form--&gt;
+                            &lt;div class=&quot;card wow fadeInRight&quot; data-wow-delay=&quot;0.3s&quot;&gt;
+                                &lt;div class=&quot;card-body&quot;&gt;
+                                    &lt;!--Header--&gt;
+                                    &lt;div class=&quot;text-center&quot;&gt;
+                                        &lt;h3 class=&quot;white-text&quot;&gt;&lt;i class=&quot;fa fa-user white-text&quot;&gt;&lt;/i&gt; Register:&lt;/h3&gt;
+                                        &lt;hr class=&quot;hr-light&quot;&gt;
+                                    &lt;/div&gt;
+
+                                    &lt;!--Body--&gt;
+                                    &lt;div class=&quot;md-form&quot;&gt;
+                                        &lt;i class=&quot;fa fa-user prefix white-text active&quot;&gt;&lt;/i&gt;
+                                        &lt;input type=&quot;text&quot; id=&quot;form3&quot; class=&quot;form-control&quot;&gt;
+                                        &lt;label for=&quot;form3&quot; class=&quot;active&quot;&gt;Your name&lt;/label&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class=&quot;md-form&quot;&gt;
+                                        &lt;i class=&quot;fa fa-envelope prefix white-text active&quot;&gt;&lt;/i&gt;
+                                        &lt;input type=&quot;email&quot; id=&quot;form2&quot; class=&quot;form-control&quot;&gt;
+                                        &lt;label for=&quot;form2&quot; class=&quot;active&quot;&gt;Your email&lt;/label&gt;
+                                    &lt;/div&gt;
+
+                                    &lt;div class=&quot;md-form&quot;&gt;
+                                        &lt;i class=&quot;fa fa-lock prefix white-text active&quot;&gt;&lt;/i&gt;
+                                        &lt;input type=&quot;password&quot; id=&quot;form4&quot; class=&quot;form-control&quot;&gt;
+                                        &lt;label for=&quot;form4&quot; class=&quot;active&quot;&gt;Your password&lt;/label&gt;
+                                    &lt;/div&gt;
+
+                                    &lt;div class=&quot;text-center&quot;&gt;
+                                        &lt;button class=&quot;btn btn-indigo&quot;&gt;Sign up&lt;/button&gt;
+                                         &lt;hr class=&quot;hr-light mb-3 mt-4&quot;&gt;
+
+                                            &lt;div class=&quot;inline-ul text-center d-flex justify-content-center&quot;&gt;
+                                                &lt;a class=&quot;icons-sm tw-ic&quot;&gt;&lt;i class=&quot;fa fa-twitter white-text&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                                                &lt;a class=&quot;icons-sm li-ic&quot;&gt;&lt;i class=&quot;fa fa-linkedin white-text&quot;&gt; &lt;/i&gt;&lt;/a&gt;
+                                                &lt;a class=&quot;icons-sm ins-ic&quot;&gt;&lt;i class=&quot;fa fa-instagram white-text&quot;&gt; &lt;/i&gt;&lt;/a&gt;
+                                            &lt;/div&gt;
+                                    &lt;/div&gt;
+
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;!--/.Form--&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+&lt;/header&gt;
+&lt;!--Main Navigation--&gt;
+
+&lt;!--Main Layout--&gt;
+&lt;main&gt;
+
+    &lt;div class=&quot;container&quot;&gt;
+        
+        &lt;!--Grid row--&gt;
+        &lt;div class=&quot;row py-5&quot;&gt;
+
+            &lt;!--Grid column--&gt;
+            &lt;div class=&quot;col-md-12 text-center&quot;&gt;
+
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+
+            &lt;/div&gt;
+            &lt;!--Grid column--&gt;
+
+        &lt;/div&gt;
+        &lt;!--Grid row--&gt;
+
+    &lt;/div&gt;
+
+&lt;/main&gt;
+&lt;!--Main Layout--&gt;
                 </code>
             </pre>
         </section>
@@ -163,7 +448,7 @@
     <hr class="my-5">
 
     <!--Section: -->
-    <section id="3">
+    <section id="v-3">
 
         <!--Title-->
         <h2 class="title"><strong></strong> <a href="https://mdbootstrap.com/product/material-design-for-bootstrap-pro/" target="_blank" class="btn btn-danger btn-md" role="button">MDB Pro component <i class="fa fa-diamond ml-1"></i></a></h2>
