@@ -8634,10 +8634,6 @@ button, html [type="button"], [type="reset"], [type="submit"] {
       transition: all 0.1s linear;
       background-color: #4285F4; }
 
-.dropdown-menu-right {
-  right: 0;
-  left: auto !important; }
-
 .dropdown-content {
   background-color: #fff;
   margin: 0;
