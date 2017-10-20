@@ -5135,7 +5135,7 @@ button:focus {
   .btn:hover, .btn:active, .btn:focus {
     outline: 0; }
   .btn .fa {
-    font-size: 1.1rem;
+    font-size: 1rem;
     position: relative;
     vertical-align: middle;
     margin-top: -2px; }
@@ -5146,16 +5146,20 @@ button:focus {
   .btn.btn-lg {
     font-size: 0.9rem;
     padding: 1rem 2.4rem; }
+    .btn.btn-lg .fa {
+      font-size: 1.2rem; }
   .btn.btn-md {
     font-size: 0.7rem;
     padding: 0.7rem 1.6rem; }
+    .btn.btn-md .fa {
+      font-size: 0.9rem; }
   .btn.btn-sm, .btn.wishlist {
     font-size: 0.6rem;
     padding: 0.5rem 1.6rem; }
     .btn.btn-sm.btn-table, .btn.btn-table.wishlist {
       padding: 0.5rem 0.9rem; }
     .btn.btn-sm .fa, .btn.wishlist .fa {
-      font-size: 0.8rem; }
+      font-size: 0.7rem; }
   .btn.btn-tb {
     padding: 0.3rem 1rem; }
   .btn.disabled, .btn:disabled {
