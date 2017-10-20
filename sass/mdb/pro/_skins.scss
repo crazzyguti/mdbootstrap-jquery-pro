@@ -319,7 +319,7 @@ $skins: (
 				}
 	        }
 	        .collapsible {
-				li {
+	        	li {
 		            background-color: transparent;
 		            @if $skin == "white" {
 		            	a {
@@ -348,12 +348,14 @@ $skins: (
 		            	}
 		            }
 		        }
-		        a {
-		        	color: map-get($data, skin-text);
-		        	@include transition (all 0.3s linear);
-		        	&:hover {
-	            		color:map-get($data, skin-sn-child);
-	            	}
+		        @if $skin == "white" {
+			        a {
+			        	color: map-get($data, skin-text);
+			        	@include transition (all 0.3s linear);
+			        	&:hover {
+		                    background-color: map-get($data, skin-sidenav-item-hover);
+		                }
+			        }
 		        }
 	        }
 	        .fa {
