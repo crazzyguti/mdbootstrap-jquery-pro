@@ -27,6 +27,13 @@
         @include transition(all 1s);
         @include border-radius(2px);
     }
+    .nav-link.dropdown-toggle,
+    .nav-item.show .nav-link {
+        background-color: $default-color;
+        color: #fff;
+        @include transition(all 1s);
+        @include border-radius(2px);
+    }
 }
 
 .md-pills {

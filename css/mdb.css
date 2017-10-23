@@ -8009,6 +8009,14 @@ button, html [type="button"], [type="reset"], [type="submit"] {
   transition: all 1s;
   border-radius: 2px; }
 
+.nav-tabs .nav-link.dropdown-toggle,
+.nav-tabs .nav-item.show .nav-link {
+  background-color: #2BBBAD;
+  color: #fff;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  border-radius: 2px; }
+
 .md-pills {
   border: 0; }
   .md-pills li {
