@@ -318,34 +318,45 @@ $skins: (
 				    }
 				}
 	        }
-	        .collapsible li {
-	            background-color: transparent;
-	            @if $skin == "white" {
-	            	a {
-	            		font-weight: 400;
-	            	}
-	            }
-	            .collapsible-header {
-		            color: map-get($data, skin-text);
-	                @include transition (all 0.3s linear);
-	                &.active {
-	                	@if $skin == "white" {
-							color: map-get($data, skin-sidenav-item);
-							background-color: transparent;
-                		} @else {
+	        .collapsible {
+	        	li {
+		            background-color: transparent;
+		            @if $skin == "white" {
+		            	a {
+		            		font-weight: 400;
+		            	}
+		            }
+		            .collapsible-header {
+			            color: map-get($data, skin-text);
+		                @include transition (all 0.3s linear);
+		                &.active {
+		                	@if $skin == "white" {
+								color: map-get($data, skin-sidenav-item);
+								background-color: transparent;
+	                		} @else {
+			                    background-color: map-get($data, skin-sidenav-item-hover);
+	                		}
+		                }
+		                &:hover {
 		                    background-color: map-get($data, skin-sidenav-item-hover);
-                		}
-	                }
-	                &:hover {
-	                    background-color: map-get($data, skin-sidenav-item-hover);
-	                }
-	            }
-	            .collapsible-body a {
-	            	color: map-get($data, skin-text);
-	            	&:hover {
-	            		color:map-get($data, skin-sn-child);
-	            	}
-	            }
+		                }
+		            }
+		            .collapsible-body a {
+		            	color: map-get($data, skin-text);
+		            	&:hover {
+		            		color:map-get($data, skin-sn-child);
+		            	}
+		            }
+		        }
+		        @if $skin == "white" {
+			        a {
+			        	color: map-get($data, skin-text);
+			        	@include transition (all 0.3s linear);
+			        	&:hover {
+		                    background-color: map-get($data, skin-sidenav-item-hover);
+		                }
+			        }
+		        }
 	        }
 	        .fa {
 	            color: map-get($data, skin-text);
