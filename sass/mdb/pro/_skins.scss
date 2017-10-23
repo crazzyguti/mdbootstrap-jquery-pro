@@ -282,6 +282,13 @@ $skins: (
 	                }
 	            }
 	        }
+	        &.double-nav {
+            	@if $skin == "white" {
+            		a {
+            			color: map-get($data, skin-text);
+            		}
+            	}
+            }
 	    }
 	    .page-footer {
 	        background-color: map-get($data, skin-footer-color);
@@ -311,7 +318,7 @@ $skins: (
 	        }
 	        @if $skin == "white" {
 				.search-form input[type=text] {
-					color: #424242;
+					color: #424242 !important;
 				    border-bottom: 1px solid rgba(153, 153, 153, 0.3);
 				    @include placeholder {
 				    	color: rgba(map-get($data, skin-text), .5) !important;

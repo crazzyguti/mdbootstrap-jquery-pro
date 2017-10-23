@@ -11812,6 +11812,8 @@ button.toast-close-button {
       background-color: #2a75f3; }
     .white-skin .navbar .navbar-nav .nav-item a {
       color: #424242; }
+    .white-skin .navbar.double-nav a {
+      color: #424242; }
   .white-skin .page-footer {
     background-color: #6f7178; }
   .white-skin .side-nav {
@@ -11827,7 +11829,7 @@ button.toast-close-button {
       -webkit-transition: all 0.3s linear;
       transition: all 0.3s linear; }
     .white-skin .side-nav .search-form input[type=text] {
-      color: #424242;
+      color: #424242 !important;
       border-bottom: 1px solid rgba(153, 153, 153, 0.3); }
       .white-skin .side-nav .search-form input[type=text]::-webkit-input-placeholder {
         color: rgba(66, 66, 66, 0.5) !important; }
