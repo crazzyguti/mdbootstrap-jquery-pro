@@ -1,4 +1,8 @@
 //Badges
+.badge {
+	color: #fff;
+}
+
 @each $name, $color in $material-colors {
   .badge-#{$name} {
     background-color: $color;

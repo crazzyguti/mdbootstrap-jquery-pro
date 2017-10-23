@@ -6117,6 +6117,9 @@ button:focus {
 .pagination.pg-purple .active .page-link {
   background-color: #5e35b1; }
 
+.badge {
+  color: #fff; }
+
 .badge-primary {
   background-color: #4285F4; }
 
