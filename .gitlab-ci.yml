@@ -1,15 +1,7 @@
-image: node:6
+image: node:latest
 
 before_script:
   - npm install
-
-cache:
-  paths:
-    - node_modules/
-
-stages:
-  - test
-
-test:
-  stage: test
-  script: "ls -l"
+  
+test: 
+  script: "ls"
