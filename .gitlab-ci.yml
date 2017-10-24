@@ -4,4 +4,4 @@ before_script:
   - npm install
   
 test: 
-  script: "ls"
+  script: "npm run sass-lint"
