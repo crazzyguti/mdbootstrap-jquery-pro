@@ -312,6 +312,19 @@
         <label for="input_starttime">Light version, 12hours</label>
     </div>
 
+    <!-- Grid row -->
+    <div class="row">
+    
+      <!-- Grid column -->
+      <div class="col-md-4 m-5 pb-5">
+    
+        <canvas id="polarChart"></canvas>
+    
+      </div>
+      <!-- Grid column -->
+    
+    </div>
+    <!-- Grid row -->
 
     <!-- SCRIPTS -->
     <!-- JQuery -->
@@ -354,6 +367,27 @@
         $('#input_starttime').pickatime({
             twelvehour: true
         });
+
+
+        //polar
+        var ctxPA = document.getElementById("polarChart").getContext('2d');
+        var myPolarChart = new Chart(ctxPA, {
+            type: 'polarArea',
+            data: {
+                labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+                datasets: [
+                    {
+                        data: [300, 50, 100, 40, 120],
+                        backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
+                        hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
+                    }
+                ]
+            },
+            options: {
+                responsive: true
+            }    
+        });
+                    
 
     </script>
 </body>
