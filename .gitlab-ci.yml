@@ -7,6 +7,9 @@ cache:
   paths:
     - node_modules/
 
-test:lint:
-  script:
-    - stylelint "sass/**/*.scss" --config=config/.stylelintrc.json
+stages:
+  - test
+
+test:
+  stage: test
+  script: "ls -l"
