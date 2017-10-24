@@ -134,13 +134,11 @@ textarea.md-textarea {
     position: absolute;
     width: 3rem;
     font-size: 2rem;
+    padding-top: .5rem;
     ~ input, ~ textarea {
       margin-left: 3rem;
       width: 92%;
       width: calc(100% - 3rem);
-    }
-    ~ textarea {
-      padding-top: .8rem;
     }
     ~ label {
       margin-left: 3rem;

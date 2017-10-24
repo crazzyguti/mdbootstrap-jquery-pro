@@ -6102,6 +6102,9 @@ button:focus {
 .pagination.pg-purple .active .page-link {
   background-color: #5e35b1; }
 
+.badge {
+  color: #fff; }
+
 .badge-primary {
   background-color: #4285F4; }
 
@@ -7365,14 +7368,13 @@ textarea.md-textarea {
     transition: color 0.2s;
     position: absolute;
     width: 3rem;
-    font-size: 2rem; }
+    font-size: 2rem;
+    padding-top: .5rem; }
     .md-form .prefix ~ input, .md-form .prefix ~ textarea {
       margin-left: 3rem;
       width: 92%;
       width: -webkit-calc(100% - 3rem);
       width: calc(100% - 3rem); }
-    .md-form .prefix ~ textarea {
-      padding-top: .8rem; }
     .md-form .prefix ~ label {
       margin-left: 3rem; }
     .md-form .prefix.active {
@@ -7974,6 +7976,14 @@ button, html [type="button"], [type="reset"], [type="submit"] {
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.open .nav-link {
   background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  border-radius: 2px; }
+
+.nav-tabs .nav-link.dropdown-toggle,
+.nav-tabs .nav-item.show .nav-link {
+  background-color: #2BBBAD;
   color: #fff;
   -webkit-transition: all 1s;
   transition: all 1s;
@@ -11034,9 +11044,9 @@ button.toast-close-button {
   width: 300px;
   background-position: 15px center;
   background-repeat: no-repeat;
-  opacity: 0.8;
-  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-  filter: alpha(opacity=80); }
+  opacity: 0.95;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=95);
+  filter: alpha(opacity=95); }
 
 #toast-container > :hover {
   -webkit-transition: .45s;
@@ -11757,6 +11767,8 @@ button.toast-close-button {
       background-color: #2a75f3; }
     .white-skin .navbar .navbar-nav .nav-item a {
       color: #424242; }
+    .white-skin .navbar.double-nav a {
+      color: #424242; }
   .white-skin .page-footer {
     background-color: #6f7178; }
   .white-skin .side-nav {
@@ -11772,7 +11784,7 @@ button.toast-close-button {
       -webkit-transition: all 0.3s linear;
       transition: all 0.3s linear; }
     .white-skin .side-nav .search-form input[type=text] {
-      color: #424242;
+      color: #424242 !important;
       border-bottom: 1px solid rgba(153, 153, 153, 0.3); }
       .white-skin .side-nav .search-form input[type=text]::-webkit-input-placeholder {
         color: rgba(66, 66, 66, 0.5) !important; }
@@ -13616,6 +13628,8 @@ button.toast-close-button {
     /**
        * The month navigation buttons.
        */ }
+    .picker__box .picker__header select {
+      display: inline-block !important; }
     .picker__box .picker__header .picker__date-display {
       text-align: center;
       background-color: #4285F4;

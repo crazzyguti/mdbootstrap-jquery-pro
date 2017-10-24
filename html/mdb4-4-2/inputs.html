@@ -13,14 +13,93 @@
     <!-- Material Design Bootstrap -->
     <link rel="stylesheet" href="../../css/mdb.css">
     <link rel="stylesheet" href="../../css/style.css">
+    <style type="text/css">
+        .col-example {
+            background-color: #33b5e5;
+            border: 2px solid #fff;
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis libero, animi? Natus a excepturi, soluta eum corporis neque, rerum corrupti dignissimos obcaecati suscipit, sit est, magnam temporibus veritatis sint unde.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis libero, animi? Natus a excepturi, soluta eum corporis neque, rerum corrupti dignissimos obcaecati suscipit, sit est, magnam temporibus veritatis sint unde.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis libero, animi? Natus a excepturi, soluta eum corporis neque, rerum corrupti dignissimos obcaecati suscipit, sit est, magnam temporibus veritatis sint unde.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis libero, animi? Natus a excepturi, soluta eum corporis neque, rerum corrupti dignissimos obcaecati suscipit, sit est, magnam temporibus veritatis sint unde.</p>
+    <!-- Grid row -->
+    <div class="row">
+    
+        <!-- Grid column -->
+        <div class="col-md-6 my-5">
+    
+          <!-- Grid row -->
+          <form>
+              <div class="file-field">
+                  <div class="btn btn-primary btn-sm">
+                      <span>Choose file</span>
+                      <input type="file">
+                  </div>
+                  <div class="file-path-wrapper">
+                     <input class="file-path validate" type="text" placeholder="Upload your file">
+                  </div>
+              </div>
+          </form>
+    
+        </div>
+        <!-- Grid column -->
+    
+        <!-- Grid column -->
+        <div class="col-md-6">
+    
+    
+    
+        </div>
+        <!-- Grid column -->
+    
+    </div>
+    <!-- Grid row -->
+
+    <!-- Grid row -->
+    <div class="row">
+    
+        <!-- Grid column -->
+        <div class="col-md-6">
+    
+          
+          <!--Basic textarea-->
+          <div class="md-form">
+              <textarea type="text" id="form7" class="md-textarea"></textarea>
+              <label for="form7">Basic textarea</label>
+          </div>       
+    
+        </div>
+        <!-- Grid column -->
+    
+        <!-- Grid column -->
+        <div class="col-md-6">
+    
+          <!--Textarea with icon prefix-->
+          <div class="md-form">
+              <i class="fa fa-pencil prefix"></i>
+              <textarea type="text" id="form8" class="md-textarea"></textarea>
+              <label for="form8">Icon Prefix</label>
+          </div>
+    
+        </div>
+        <!-- Grid column -->
+    
+    </div>
+    <!-- Grid row -->
 
     <form class="form-inline">
      <label for="file-picker" class="control-label">CSV file</label>
      <input type="file" id="file-picker" class="form-control">
      <button type="button" id="upload-btn" class="btn btn-primary waves-effect waves-light">Upload</button> 
+     <div class="md-form">
+         <input type="text" id="form1" class="form-control">
+         <label for="form1" class="">Example label</label>
+     </div>
     </form>
 
     <div class="btn-group">
@@ -34,6 +113,13 @@
       </div>
     </div>
 
+    
+    <div class="md-form">
+        <input placeholder="Selected date" type="text" id="date-picker-example" class="form-control datepicker">
+        <label for="date-picker-example">Try me...</label>
+    </div>
+
+
     <button class="btn btn-primary btn-lg"><i class="fa fa-magic mr-1"></i> Left</button>
     <button class="btn btn-default btn-lg">Right <i class="fa fa-magic ml-1"></i></button>
     <button class="btn btn-primary"><i class="fa fa-magic mr-1"></i> Left</button>
@@ -42,6 +128,84 @@
     <button class="btn btn-default btn-md">Right <i class="fa fa-magic ml-1"></i></button>
     <button class="btn btn-primary btn-sm"><i class="fa fa-magic mr-1"></i> Left</button>
     <button class="btn btn-default btn-sm">Right <i class="fa fa-magic ml-1"></i></button>
+
+
+    <h1>This is the first heading <span class="badge red">New</span></h1>
+    <h2>This is the second heading <span class="badge cyan">New</span></h2>
+    <h3>This is the third heading <span class="badge amber darken-2">New</span></h3>
+    <h4>This is the fourth heading <span class="badge pink">New</span></h4>
+    <h5>This is the fifth heading <span class="badge purple darken-2">New</span></h5>
+    <h6>This is the sixth heading <span class="badge indigo">New</span></h6>
+
+
+    <div class="d-flex flex-nowrap">
+        <div class="col-example order-3 p-2">First but last</div>
+        <div class="col-example order-2 p-2">Second flex item</div>
+        <div class="col-example order-1 p-2">Last but first</div>
+    </div>
+
+    <div class="d-flex flex-nowrap">
+        <div class="col-example p-2">First but last</div>
+        <div class="col-example p-2">Second flex item</div>
+        <div class="col-example order-first p-2">Last but first</div>
+    </div>
+
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Active</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Separated link</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+
+    <div style="height: 50px;"></div>
+
+    <ul class="nav md-pills">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Active</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Separated link</a>
+        </div>
+      </li>
+      <li class="nav-item waves-effect">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item waves-effect">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+
+
+    <!--Info message-->
+    <a class="btn btn-info" onclick="toastr.info('Hi! I am info message.');">Info message</a>
+    <!--Warning message-->
+    <a class="btn btn-warning" onclick="toastr.warning('Hi! I am warning message.');">Warning message</a>
+    <!--Success message-->
+    <a class="btn btn-success" onclick="toastr.success('Hi! I am success message.');">Success message</a>
+    <!--Error message-->
+    <a class="btn btn-danger" onclick="toastr.error('Hi! I am error message.');">Error message</a>
+
 
     <!-- SCRIPTS -->
     <!-- JQuery -->
@@ -52,6 +216,35 @@
     <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="../../js/mdb.min.js"></script>
+    <script type="text/javascript">
+        
+        // Data Picker Initialization
+        $('.datepicker').pickadate({
+        selectMonths: true,
+        selectYears: true
+        })
+        $(document).ready(function() {
+            $('.nav-tabs .nav-item.dropdown').removeClass('waves-effect waves-light');
+        });
+        toastr.options = {
+            "closeButton": true, // true/false
+            "debug": false, // true/false
+            "newestOnTop": false, // true/false
+            "progressBar": false, // true/false
+            "positionClass": "toast-top-right", // toast-top-right / toast-top-left / toast-bottom-right / toast-bottom-left
+            "preventDuplicates": false, true/false
+            "onclick": null,
+            "showDuration": "10000", // in milliseconds
+            "hideDuration": "10000", // in milliseconds
+            "timeOut": "10000", // in milliseconds
+            "extendedTimeOut": "10000", // in milliseconds
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
+          
+    </script>
 </body>
 
 </html>
