@@ -5,6 +5,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 const concat = require('gulp-concat');
 const addsrc = require('gulp-add-src');
+const browserSync = require('browser-sync').create();
 
 gulp.task('styles', function() {
     gulp.src('sass/**/*.scss')
@@ -16,7 +17,18 @@ gulp.task('styles', function() {
         .pipe(gulp.dest('./css/'));
 });
 
-//Watch task
+gulp.task('bs', function() {
+    browserSync.init({
+        server: {
+            baseDir: "./",
+            directory: true
+        },
+        notify: false
+    });
+
+    gulp.watch("./**/*.html").on('change', browserSync.reload);
+});
+
 gulp.task('default',function() {
     gulp.watch('sass/**/*.scss',['styles']);
 });
