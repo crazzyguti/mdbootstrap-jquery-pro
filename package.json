@@ -27,7 +27,8 @@
     "stylelint-scss": "^2.1.0"
   },
   "scripts": {
-    "test": "ls -l"
+    "test": "ls -l",
+    "sass-lint": "stylelint \"sass/**/*.scss\" --config=config/.stylelintrc.json"
   },
   "repository": {
     "type": "git",
