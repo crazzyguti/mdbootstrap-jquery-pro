@@ -1,6 +1,6 @@
 //Badges
 .badge {
-	color: #fff;
+  color: #fff;
 }
 
 @each $name, $color in $material-colors {
