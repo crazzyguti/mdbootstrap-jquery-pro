@@ -28,7 +28,7 @@
   },
   "scripts": {
     "test": "ls -l",
-    "sass-lint": "stylelint \"sass/**/*.scss\" --config=config/.stylelintrc.json"
+    "sass-lint": "stylelint --config config/.stylelintrc.json --syntax scss \"sass/**/*.scss\""
   },
   "repository": {
     "type": "git",
