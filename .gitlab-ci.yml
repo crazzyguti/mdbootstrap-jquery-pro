@@ -1,2 +1,7 @@
-sudo: false
-language: node_js
+stages:
+  - lint
+
+lint:
+  stage: lint
+  script: 
+    - echo "Lint"
