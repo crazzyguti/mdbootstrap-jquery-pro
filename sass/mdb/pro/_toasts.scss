@@ -96,9 +96,9 @@ button.toast-close-button {
 	background-repeat: no-repeat;
 	@extend .z-depth-1;
 	@extend .white-text;
-	opacity: 0.8;
-	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-	filter: alpha(opacity=80);
+	opacity: 0.95;
+	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=95);
+	filter: alpha(opacity=95);
 }
 #toast-container > :hover {
 	transition: .45s;
