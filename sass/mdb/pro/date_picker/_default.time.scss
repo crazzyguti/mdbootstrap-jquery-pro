@@ -232,19 +232,19 @@
 }
 
 .clockpicker-moving {
-	cursor: move;
+  cursor: move;
 }
 .clockpicker-plate {
-	background-color: #eeeeee;
-	border-radius: 50%;
-	width: 270px;
-	height: 270px;
-	overflow: visible;
-	position: relative;
+  background-color: #eeeeee;
+  border-radius: 50%;
+  width: 270px;
+  height: 270px;
+  overflow: visible;
+  position: relative;
   margin: auto;
   margin-top: 20px;
-	/* Disable text selection highlighting. Thanks to Hermanya */
-	user-select: none;
+  /* Disable text selection highlighting. Thanks to Hermanya */
+  user-select: none;
   .clockpicker-canvas,
   .clockpicker-dial {
     width: 270px;
@@ -287,32 +287,32 @@
 }
 
 .clockpicker-canvas {
-	transition: opacity 300ms;
-    line {
+  transition: opacity 300ms;
+  line {
     stroke: rgba(0, 150, 136, 0.25);
     stroke-width: 1;
   }
 }
 .clockpicker-canvas-out {
-	opacity: 0.25;
+  opacity: 0.25;
 }
 .clockpicker-canvas-bearing {
-	stroke: none;
-	fill: rgba(0, 77, 64, 0.75);
+  stroke: none;
+  fill: rgba(0, 77, 64, 0.75);
 }
 .clockpicker-canvas-fg {
-	stroke: none;
+  stroke: none;
   fill: rgba(0, 77, 64, 0);
   &.active {
     fill: rgba(0, 77, 64, 0.5);
   }
 }
 .clockpicker-canvas-bg {
-	stroke: none;
-	fill: rgba(0, 150, 136, 0.25);
+  stroke: none;
+  fill: rgba(0, 150, 136, 0.25);
 }
 .clockpicker-canvas-bg-trans {
-	fill: rgba(0, 150, 136, 0.25);
+  fill: rgba(0, 150, 136, 0.25);
 }
 
 .clockpicker-am-pm-block{
