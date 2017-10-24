@@ -7394,14 +7394,13 @@ textarea.md-textarea {
     transition: color 0.2s;
     position: absolute;
     width: 3rem;
-    font-size: 2rem; }
+    font-size: 2rem;
+    padding-top: .5rem; }
     .md-form .prefix ~ input, .md-form .prefix ~ textarea {
       margin-left: 3rem;
       width: 92%;
       width: -webkit-calc(100% - 3rem);
       width: calc(100% - 3rem); }
-    .md-form .prefix ~ textarea {
-      padding-top: .8rem; }
     .md-form .prefix ~ label {
       margin-left: 3rem; }
     .md-form .prefix.active {
@@ -13696,6 +13695,8 @@ button.toast-close-button {
     /**
        * The month navigation buttons.
        */ }
+    .picker__box .picker__header select {
+      display: inline-block !important; }
     .picker__box .picker__header .picker__date-display {
       text-align: center;
       background-color: #4285F4;

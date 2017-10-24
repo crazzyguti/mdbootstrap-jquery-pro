@@ -23,11 +23,79 @@
 </head>
 
 <body>
+    <!-- Grid row -->
+    <div class="row">
+    
+        <!-- Grid column -->
+        <div class="col-md-6 my-5">
+    
+          <!-- Grid row -->
+          <form>
+              <div class="file-field">
+                  <div class="btn btn-primary btn-sm">
+                      <span>Choose file</span>
+                      <input type="file">
+                  </div>
+                  <div class="file-path-wrapper">
+                     <input class="file-path validate" type="text" placeholder="Upload your file">
+                  </div>
+              </div>
+          </form>
+    
+        </div>
+        <!-- Grid column -->
+    
+        <!-- Grid column -->
+        <div class="col-md-6">
+    
+    
+    
+        </div>
+        <!-- Grid column -->
+    
+    </div>
+    <!-- Grid row -->
+
+    <!-- Grid row -->
+    <div class="row">
+    
+        <!-- Grid column -->
+        <div class="col-md-6">
+    
+          
+          <!--Basic textarea-->
+          <div class="md-form">
+              <textarea type="text" id="form7" class="md-textarea"></textarea>
+              <label for="form7">Basic textarea</label>
+          </div>       
+    
+        </div>
+        <!-- Grid column -->
+    
+        <!-- Grid column -->
+        <div class="col-md-6">
+    
+          <!--Textarea with icon prefix-->
+          <div class="md-form">
+              <i class="fa fa-pencil prefix"></i>
+              <textarea type="text" id="form8" class="md-textarea"></textarea>
+              <label for="form8">Icon Prefix</label>
+          </div>
+    
+        </div>
+        <!-- Grid column -->
+    
+    </div>
+    <!-- Grid row -->
 
     <form class="form-inline">
      <label for="file-picker" class="control-label">CSV file</label>
      <input type="file" id="file-picker" class="form-control">
      <button type="button" id="upload-btn" class="btn btn-primary waves-effect waves-light">Upload</button> 
+     <div class="md-form">
+         <input type="text" id="form1" class="form-control">
+         <label for="form1" class="">Example label</label>
+     </div>
     </form>
 
     <div class="btn-group">
@@ -137,7 +205,10 @@
     <script type="text/javascript">
         
         // Data Picker Initialization
-        $('.datepicker').pickadate();
+        $('.datepicker').pickadate({
+        selectMonths: true,
+        selectYears: true
+        })
         $(document).ready(function() {
             $('.nav-tabs .nav-item.dropdown').removeClass('waves-effect waves-light');
         });

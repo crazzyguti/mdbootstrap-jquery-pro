@@ -17,6 +17,9 @@
       text-align: center;
       position: relative;
       margin-bottom: 20px;
+      select {
+        display: inline-block !important;
+      }
       .picker__date-display {
           text-align: center;
           background-color: $datepicker-date-bg;
