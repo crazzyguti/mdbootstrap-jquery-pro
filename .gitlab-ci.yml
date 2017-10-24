@@ -1,7 +1,12 @@
-stages:
-  - lint
+image: node:6
 
-lint:
-  stage: lint
-  script: 
-    - echo "Lint"
+before_script:
+  - npm install
+
+cache:
+  paths:
+    - node_modules/
+
+test:lint:
+  script:
+    - stylelint "sass/**/*.scss" --config=config/.stylelintrc.json
