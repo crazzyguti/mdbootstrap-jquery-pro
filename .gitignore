@@ -5,3 +5,5 @@ yarn.lock
 
 \.vscode/settings\.json
 mattonit
+.prepros.cfg
+.prepros-6.config
