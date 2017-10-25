@@ -29,6 +29,12 @@ gulp.task('bs', function() {
     gulp.watch("./**/*.html").on('change', browserSync.reload);
 });
 
+gulp.task('build-js', function() {
+    gulp.src(['./js/modules/_intro-mdb-free.js', './js/modules/vendor/jquery.easing.js', './js/modules/vendor/velocity.min.js', 'js/modules/vendor/chart.js', 'js/modules/scrolling-navbar.js', 'js/modules/vendor/waves.js', 'js/modules/dist/forms-free.js'])
+        .pipe(concat('mdb-experimental.js'))
+        .pipe(gulp.dest('./dist/'))
+});
+
 gulp.task('default',function() {
     gulp.watch('sass/**/*.scss',['styles']);
 });
