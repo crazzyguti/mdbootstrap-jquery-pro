@@ -1,14 +1,8 @@
 /* SideNav */
 (($) => {
 
-  const MENU_WIDTH = 240
-  const SN_BREAKPOINT = 1440
-  const MENU_WIDTH_HALF = 2
-  const MENU_LEFT_MIN_BORDER = 0.3
-  const MENU_LEFT_MAX_BORDER = -0.5
-  const MENU_RIGHT_MIN_BORDER = -0.3
-  const MENU_RIGHT_MAX_BORDER = 0.5
-  const MENU_VELOCITY_OFFSET = 10
+  const menuWidth = 240
+  const sn_breakpoint = 1440
 
   class SideNav {
 
@@ -17,7 +11,7 @@
       let menuOut = false
 
       const defaults = {
-        MENU_WIDTH,
+        menuWidth,
         edge: 'left',
         closeOnClick: false
       }
@@ -32,15 +26,15 @@
 
       // let menuOut = false;
 
-      if (options.MENU_WIDTH !== MENU_WIDTH) {
-        this.menu_id.css('width', options.MENU_WIDTH)
-        mask_id.css('width', options.MENU_WIDTH)
+      if (options.menuWidth != menuWidth) {
+        this.menu_id.css('width', options.menuWidth)
+        mask_id.css('width', options.menuWidth)
       }
 
       const dragTarget = $('<div class="drag-target"></div>')
       $('body').append(dragTarget)
 
-      if (options.edge === 'left') {
+      if (options.edge == 'left') {
         this.menu_id.css('transform', 'translateX(-100%)')
         dragTarget.css({
           left: 0
@@ -54,12 +48,12 @@
 
       if (this.menu_id.hasClass('fixed')) {
 
-        if (window.innerWidth > SN_BREAKPOINT) {
+        if (window.innerWidth > sn_breakpoint) {
           this.menu_id.css('transform', 'translateX(0)')
         }
 
         $(window).resize(() => {
-          if (window.innerWidth > SN_BREAKPOINT) {
+          if (window.innerWidth > sn_breakpoint) {
             if ($('#sidenav-overlay').length) {
               this.removeMenu(true)
             } else {
@@ -78,7 +72,7 @@
 
       if (this.options.closeOnClick === true) {
         this.menu_id.on('click', 'a:not(.collapsible-header)', () => {
-          this.removeMenu()
+          sn.removeMenu()
         })
       }
 
@@ -94,7 +88,7 @@
 
           if (this.options.edge === 'left') {
             this.menu_id.velocity({
-              translateX: [0, -1 * options.MENU_WIDTH]
+              translateX: [0, -1 * options.menuWidth]
             }, {
               duration: 300,
               queue: false,
@@ -102,7 +96,7 @@
             })
           } else {
             this.menu_id.velocity({
-              translateX: [0, options.MENU_WIDTH]
+              translateX: [0, options.menuWidth]
             }, {
               duration: 300,
               queue: false,
@@ -116,8 +110,9 @@
         }
       })
 
+
       // Touch Event
-      dragTarget.click(() => {
+      dragTarget.click((e) => {
         this.removeMenu()
       })
 
@@ -125,9 +120,12 @@
         prevent_default: false
       }).bind('pan', (e) => {
 
-        if (e.gesture.pointerType === 'touch') {
+        if (e.gesture.pointerType == 'touch') {
 
+          const direction = e.gesture.direction
           let x = e.gesture.center.x
+          const y = e.gesture.center.y
+          const velocityX = e.gesture.velocityX
 
           // Disable Scrolling
           const $body = $('body')
@@ -138,7 +136,7 @@
           // If overlay does not exist, create one and if it is clicked, close menu
           if ($('#sidenav-overlay').length === 0) {
             const overlay = $('<div id="sidenav-overlay"></div>')
-            overlay.css('opacity', 0).click(() => {
+            overlay.css('opacity', 0).click((e) => {
               this.removeMenu()
             })
             $('body').append(overlay)
@@ -146,8 +144,8 @@
 
           // Keep within boundaries
           if (options.edge === 'left') {
-            if (x > options.MENU_WIDTH) {
-              x = options.MENU_WIDTH
+            if (x > options.menuWidth) {
+              x = options.menuWidth
             } else if (x < 0) {
               x = 0
             }
@@ -155,24 +153,24 @@
 
           if (options.edge === 'left') {
             // Left Direction
-            if (x < options.MENU_WIDTH / MENU_WIDTH_HALF) {
+            if (x < options.menuWidth / 2) {
               menuOut = false
             }
             // Right Direction
-            else if (x >= options.MENU_WIDTH / MENU_WIDTH_HALF) {
+            else if (x >= options.menuWidth / 2) {
               menuOut = true
             }
-            this.menu_id.css('transform', `translateX(${x - options.MENU_WIDTH}px)`)
+            this.menu_id.css('transform', `translateX(${x - options.menuWidth}px)`)
           } else {
             // Left Direction
-            if (x < window.innerWidth - options.MENU_WIDTH / MENU_WIDTH_HALF) {
+            if (x < window.innerWidth - options.menuWidth / 2) {
               menuOut = true
             }
             // Right Direction
-            else if (x >= window.innerWidth - options.MENU_WIDTH / MENU_WIDTH_HALF) {
+            else if (x >= window.innerWidth - options.menuWidth / 2) {
               menuOut = false
             }
-            let rightPos = x - options.MENU_WIDTH / MENU_WIDTH_HALF
+            let rightPos = x - options.menuWidth / 2
             if (rightPos < 0) {
               rightPos = 0
             }
@@ -180,10 +178,11 @@
             this.menu_id.css('transform', `translateX(${rightPos}px)`)
           }
 
+
           // Percentage overlay
           let overlayPerc
           if (options.edge === 'left') {
-            overlayPerc = x / options.MENU_WIDTH
+            overlayPerc = x / options.menuWidth
             $('#sidenav-overlay').velocity({
               opacity: overlayPerc
             }, {
@@ -192,7 +191,7 @@
               easing: 'easeOutQuad'
             })
           } else {
-            overlayPerc = Math.abs((x - window.innerWidth) / options.MENU_WIDTH)
+            overlayPerc = Math.abs((x - window.innerWidth) / options.menuWidth)
             $('#sidenav-overlay').velocity({
               opacity: overlayPerc
             }, {
@@ -205,11 +204,11 @@
 
       }).bind('panend', (e) => {
 
-        if (e.gesture.pointerType === 'touch') {
+        if (e.gesture.pointerType == 'touch') {
           const velocityX = e.gesture.velocityX
           const x = e.gesture.center.x
-          let leftPos = x - options.MENU_WIDTH
-          let rightPos = x - options.MENU_WIDTH / MENU_WIDTH_HALF
+          let leftPos = x - options.menuWidth
+          let rightPos = x - options.menuWidth / 2
           if (leftPos > 0) {
             leftPos = 0
           }
@@ -220,8 +219,8 @@
 
           if (options.edge === 'left') {
             // If velocityX <= 0.3 then the user is flinging the menu closed so ignore menuOut
-            if (menuOut && velocityX <= MENU_LEFT_MIN_BORDER || velocityX < MENU_LEFT_MAX_BORDER) {
-              if (leftPos !== 0) {
+            if (menuOut && velocityX <= 0.3 || velocityX < -0.5) {
+              if (leftPos != 0) {
                 this.menu_id.velocity({
                   translateX: [0, leftPos]
                 }, {
@@ -246,7 +245,7 @@
                 left: 0
               })
 
-            } else if (!menuOut || velocityX > MENU_LEFT_MIN_BORDER) {
+            } else if (!menuOut || velocityX > 0.3) {
               // Enable Scrolling
               $('body').css({
                 overflow: '',
@@ -254,7 +253,7 @@
               })
               // Slide menu closed
               this.menu_id.velocity({
-                translateX: [-1 * options.MENU_WIDTH - MENU_VELOCITY_OFFSET, leftPos]
+                translateX: [-1 * options.menuWidth - 10, leftPos]
               }, {
                 duration: 200,
                 queue: false,
@@ -277,7 +276,7 @@
                 left: 0
               })
             }
-          } else if (menuOut && velocityX >= MENU_RIGHT_MIN_BORDER || velocityX > MENU_RIGHT_MAX_BORDER) {
+          } else if (menuOut && velocityX >= -0.3 || velocityX > 0.5) {
 
             this.menu_id.velocity({
               translateX: [0, rightPos]
@@ -298,7 +297,7 @@
               right: '',
               left: 0
             })
-          } else if (!menuOut || velocityX < MENU_RIGHT_MIN_BORDER) {
+          } else if (!menuOut || velocityX < -0.3) {
             // Enable Scrolling
             $('body').css({
               overflow: '',
@@ -307,7 +306,7 @@
 
             // Slide menu closed
             this.menu_id.velocity({
-              translateX: [options.MENU_WIDTH + MENU_VELOCITY_OFFSET, rightPos]
+              translateX: [options.menuWidth + 10, rightPos]
             }, {
               duration: 200,
               queue: false,
@@ -337,6 +336,12 @@
 
     removeMenu(restoreMenu) {
 
+      const panning = false
+      const menuOut = false
+
+      const leftPos = `-${this.options.menuWidth}`
+      const rightPos = window.innerWidth
+
       $('body').css({
         overflow: '',
         width: ''
@@ -352,7 +357,7 @@
           complete: () => {
             if (restoreMenu === true) {
               this.menu_id.removeAttr('style')
-              this.menu_id.css('width', this.options.MENU_WIDTH)
+              this.menu_id.css('width', this.options.menuWidth)
             }
           }
         })
@@ -366,7 +371,7 @@
           complete: () => {
             if (restoreMenu === true) {
               this.menu_id.removeAttr('style')
-              this.menu_id.css('width', this.options.MENU_WIDTH)
+              this.menu_id.css('width', this.options.menuWidth)
             }
           }
         })
@@ -398,6 +403,25 @@
     return this.each(function () {
       new SideNav($(this), options)
     })
+
+
+    // if ( typeof SideNav.methodOrOptions + '()' === 'function' ) {
+    //  // return methods[ methodOrOptions ].apply( this, Array.prototype.slice.call( arguments, 1 ));
+    //  console.log("I'm a funciton");
+    // } else if ( typeof methodOrOptions === 'object' || ! methodOrOptions ) {
+    //  let sn = new SideNav();
+    //  return sn.init( this, arguments );
+    // } else {
+    //  $.error( 'Method ' +  methodOrOptions + ' does not exist' );
+    // }
+
+
   }
+
+  $(document).ready(() => {
+    $('.button-collapse').sideNav({
+      // edge: 'right'
+    })
+  })
 
 })(jQuery)

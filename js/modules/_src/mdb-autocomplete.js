@@ -3,10 +3,7 @@
  * MDB Autocomplete Plugin
  */
 
-($) => {
-
-  const AUTOCOMPLETE_ENTER_KEY_CODE = 13
-
+(function ($) {
   $.fn.mdb_autocomplete = function (options) {
 
   // Default options
@@ -55,7 +52,7 @@
           }
         }
 
-        if (e.which === AUTOCOMPLETE_ENTER_KEY_CODE) {
+        if (e.which === 13) {
           $autocomplete.children(':first').trigger('click')
           $autocomplete.empty()
         }
@@ -85,4 +82,4 @@
       })
     })
   }
-}
+})

@@ -4,11 +4,9 @@
     office@mdbootstrap.com
 */
 
-$('body').on('shown.bs.modal', '.modal', function () {
-  if ($('.modal-backdrop').length) {
-  } else {
-
-    $modal_dialog = $(this).children('.modal-dialog')
+$('body').on('shown.bs.modal', '.modal', () => {
+  if (!$('.modal-backdrop').length) {
+    const $modal_dialog = $(this).children('.modal-dialog')
 
     if ($modal_dialog.hasClass('modal-side')) {
       $(this).addClass('modal-scrolling')

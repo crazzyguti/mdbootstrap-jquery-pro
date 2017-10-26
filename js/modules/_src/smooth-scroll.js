@@ -1,7 +1,7 @@
 // SMOOTH SCROLL
 const SMOOTH_SCROLL_DURATION = 700
 
-$('.smooth-scroll').on('click', 'a', (event) => {
+$('.smooth-scroll').on('click', 'a', function (event) {
   event.preventDefault()
   const elAttr = $(this).attr('href')
   const offset = $(this).attr('data-offset') ? $(this).attr('data-offset') : 0
