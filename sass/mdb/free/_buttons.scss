@@ -63,6 +63,7 @@ button:focus {
   &.disabled,
   &:disabled {
     cursor: not-allowed;
+    pointer-events: none;
   }
   &[class*="btn-outline-"] {
     padding-top:.76rem;
