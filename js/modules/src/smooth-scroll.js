@@ -1,13 +1,15 @@
-//SMOOTH SCROLL
-$(".smooth-scroll").on('click', 'a', function(event) {
-    event.preventDefault();
-    let elAttr = $(this).attr('href');
-    let offset = ($(this).attr('data-offset') ? $(this).attr('data-offset') : 0);
-    let setHash = $(this).closest('ul').attr('data-allow-hashes');
-    $('body,html').animate({
-        scrollTop: $(elAttr).offset().top - offset
-    }, 700);
-    if (typeof setHash !== typeof undefined && setHash !== false) {
-    	history.replaceState(null, null, elAttr);
-	}
-});
+// SMOOTH SCROLL
+const SMOOTH_SCROLL_DURATION = 700
+
+$('.smooth-scroll').on('click', 'a', (event) => {
+  event.preventDefault()
+  const elAttr = $(this).attr('href')
+  const offset = $(this).attr('data-offset') ? $(this).attr('data-offset') : 0
+  const setHash = $(this).closest('ul').attr('data-allow-hashes')
+  $('body,html').animate({
+    scrollTop: $(elAttr).offset().top - offset
+  }, SMOOTH_SCROLL_DURATION)
+  if (typeof setHash !== typeof undefined && setHash !== false) {
+    history.replaceState(null, null, elAttr)
+  }
+})

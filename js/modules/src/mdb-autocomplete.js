@@ -3,80 +3,86 @@
  * MDB Autocomplete Plugin
  */
 
-$.fn.mdb_autocomplete = function (options) {
+($) => {
 
-    // Default options
-    var defaults = {
-        data: {}
-    };
+  const AUTOCOMPLETE_ENTER_KEY_CODE = 13
+
+  $.fn.mdb_autocomplete = function (options) {
+
+  // Default options
+    const defaults = {
+      data: {}
+    }
 
     // Get options
-    options = $.extend(defaults, options);
+    options = $.extend(defaults, options)
 
     return this.each(function () {
 
-        // text input
-        var $input = $(this);
+    // text input
+      const $input = $(this)
+      let $autocomplete
 
-        // assign data from options
-        var data = options.data;
+      // assign data from options
+      const data = options.data
 
-        if (Object.keys(data).length) {
+      if (Object.keys(data).length) {
 
-            var $autocomplete = $('<ul class="mdb-autocomplete-wrap"></ul>');
+        $autocomplete = $('<ul class="mdb-autocomplete-wrap"></ul>')
 
-            $autocomplete.insertAfter($(this));
-        };
+        $autocomplete.insertAfter($(this))
+      }
 
-        // Listen if key was pressed
-        $input.on('keyup', function (e) {
+      // Listen if key was pressed
+      $input.on('keyup', (e) => {
 
-            // get value from input
-            var q = $input.val();
+      // get value from input
+        const q = $input.val()
 
-            $autocomplete.empty();
+        $autocomplete.empty()
 
-            // check if input isn't empty
-            if (q.length) {
+        // check if input isn't empty
+        if (q.length) {
 
-                for (var item in data) {
+          for (const item in data) {
 
-                    // check if item contains value that we're looking for
-                    if (data[item].toLowerCase().indexOf(q.toLowerCase()) !== -1) {
-                        var option = $('<li>' + data[item] + '</li>');
+          // check if item contains value that we're looking for
+            if (data[item].toLowerCase().indexOf(q.toLowerCase()) !== -1) {
+              const option = $('<li>${data[item]}</li>')
 
-                        $autocomplete.append(option);
-                    }
-                }
+              $autocomplete.append(option)
             }
+          }
+        }
 
-            if (e.which == 13) {
-                $autocomplete.children(":first").trigger('click');
-                $autocomplete.empty();
-            }
+        if (e.which === AUTOCOMPLETE_ENTER_KEY_CODE) {
+          $autocomplete.children(':first').trigger('click')
+          $autocomplete.empty()
+        }
 
-            if (q.length == 0) {
-                $('.mdb-autocomplete-clear').css('visibility', 'hidden');
-            } else {
-                $('.mdb-autocomplete-clear').css('visibility', 'visible');
-            }
-        });
+        if (q.length === 0) {
+          $('.mdb-autocomplete-clear').css('visibility', 'hidden')
+        } else {
+          $('.mdb-autocomplete-clear').css('visibility', 'visible')
+        }
+      })
 
-        $autocomplete.on('click', 'li', function () {
+      $autocomplete.on('click', 'li', function () {
 
-            // Set input value after click
-            $input.val($(this).text());
+      // Set input value after click
+        $input.val($(this).text())
 
-            // Clear autocomplete
-            $autocomplete.empty();
-        });
+        // Clear autocomplete
+        $autocomplete.empty()
+      })
 
-        $('.mdb-autocomplete-clear').on('click', function (e) {
-            e.preventDefault();
-            $input.val('');
-            $(this).css('visibility', 'hidden');
-            $autocomplete.empty();
-            $(this).parent().find('label').removeClass('active');
-        });
-    });
-};
+      $('.mdb-autocomplete-clear').on('click', function (e) {
+        e.preventDefault()
+        $input.val('')
+        $(this).css('visibility', 'hidden')
+        $autocomplete.empty()
+        $(this).parent().find('label').removeClass('active')
+      })
+    })
+  }
+}

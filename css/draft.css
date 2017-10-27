@@ -2,12 +2,10 @@
   font-size: 0.8rem; }
 
 .form-elegant .z-depth-1a {
-  -webkit-box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25);
   box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25); }
 
 .form-elegant .z-depth-1-half,
 .form-elegant .btn:hover {
-  -webkit-box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15);
   box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15); }
 
 .form-light .font-small {
@@ -64,7 +62,6 @@
 
 .form-gradient input[type=text]:focus:not([readonly]) {
   border-bottom: 1px solid #fd9267;
-  -webkit-box-shadow: 0 1px 0 0 #fd9267;
   box-shadow: 0 1px 0 0 #fd9267; }
 
 .form-gradient input[type=text]:focus:not([readonly]) + label {
@@ -72,7 +69,6 @@
 
 .form-gradient input[type=password]:focus:not([readonly]) {
   border-bottom: 1px solid #fd9267;
-  -webkit-box-shadow: 0 1px 0 0 #fd9267;
   box-shadow: 0 1px 0 0 #fd9267; }
 
 .form-gradient input[type=password]:focus:not([readonly]) + label {
@@ -87,7 +83,6 @@
 
 .form-simple input[type=text]:focus:not([readonly]) {
   border-bottom: 1px solid #ff3547;
-  -webkit-box-shadow: 0 1px 0 0 #ff3547;
   box-shadow: 0 1px 0 0 #ff3547; }
 
 .form-simple input[type=text]:focus:not([readonly]) + label {
@@ -95,7 +90,6 @@
 
 .form-simple input[type=password]:focus:not([readonly]) {
   border-bottom: 1px solid #ff3547;
-  -webkit-box-shadow: 0 1px 0 0 #ff3547;
   box-shadow: 0 1px 0 0 #ff3547; }
 
 .form-simple input[type=password]:focus:not([readonly]) + label {
@@ -118,7 +112,6 @@
 
 .form-dark input[type=text]:focus:not([readonly]) {
   border-bottom: 1px solid #00C851;
-  -webkit-box-shadow: 0 1px 0 0 #00C851;
   box-shadow: 0 1px 0 0 #00C851; }
 
 .form-dark input[type=text]:focus:not([readonly]) + label {
@@ -126,7 +119,6 @@
 
 .form-dark input[type=password]:focus:not([readonly]) {
   border-bottom: 1px solid #00C851;
-  -webkit-box-shadow: 0 1px 0 0 #00C851;
   box-shadow: 0 1px 0 0 #00C851; }
 
 .form-dark input[type=password]:focus:not([readonly]) + label {
@@ -225,7 +217,6 @@
 
 .gradient-background {
   background: -webkit-linear-gradient(45deg, rgba(234, 21, 129, 0.6), rgba(10, 23, 187, 0.6) 100%);
-  background: -webkit-gradient(linear, 45deg, from(rgba(234, 21, 129, 0.6)), to(rgba(10, 23, 187, 0.6)));
   background: linear-gradient(to 45deg, rgba(234, 21, 129, 0.6), rgba(10, 23, 187, 0.6) 100%); }
 
 .file-field.big .file-path-wrapper {
@@ -261,16 +252,13 @@
     color: #fff;
     font-weight: 300; }
   .card.light-version .file-field input[type=text]:focus:not([readonly]) {
-    -webkit-box-shadow: 0 1px 0 0 #fff;
     box-shadow: 0 1px 0 0 #fff; }
   .card.light-version .file-field input[type=text].valid {
     border-bottom: 1px solid #00c851;
-    -webkit-box-shadow: 0 1px 0 0 #00c851;
     box-shadow: 0 1px 0 0 #00c851; }
-  .card.light-version .file-field input[type=text]:focus.valid {
-    border-bottom: 1px solid #00c851;
-    -webkit-box-shadow: 0 1px 0 0 #00c851;
-    box-shadow: 0 1px 0 0 #00c851; }
+    .card.light-version .file-field input[type=text].valid:focus {
+      border-bottom: 1px solid #00c851;
+      box-shadow: 0 1px 0 0 #00c851; }
 
 .avatar-pic {
   width: 150px; }

@@ -3,7 +3,6 @@ footer {
   &.page-footer {
     margin-top: $footer-margin-top;
     padding-top: $footer-padding-top;
-    background-color: $primary-color;
     color: $white;
     .container-fluid {
       width:auto;
@@ -33,7 +32,7 @@ footer {
       }
     }
     .social-section {
-       ul li  {
+      ul li  {
         display: inline-block;
       }
       ul {
