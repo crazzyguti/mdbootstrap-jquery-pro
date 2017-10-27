@@ -326,48 +326,50 @@
     </div>
     <!-- Grid row -->
 
-    
-    <!--Footer-->
-    <footer class="page-footer blue center-on-small-only">
-
-        <!--Footer Links-->
-        <div class="container-fluid">
-            <div class="row">
-
-                <!--First column-->
-                <div class="col-md-6">
-                    <h5 class="title">Footer Content</h5>
-                    <p>Here you can use rows and columns here to organize your footer content.</p>
-                </div>
-                <!--/.First column-->
-
-                <!--Second column-->
-                <div class="col-md-6">
-                    <h5 class="title">Links</h5>
-                    <ul>
-                        <li><a href="#!">Link 1</a></li>
-                        <li><a href="#!">Link 2</a></li>
-                        <li><a href="#!">Link 3</a></li>
-                        <li><a href="#!">Link 4</a></li>
-                    </ul>
-                </div>
-                <!--/.Second column-->
+    <div class="container m-5">
+            <div class="tabs-wrapper">
+                <ul class="nav nav-tabs nav-justified">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#panel-a" role="tab">TEST A</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#panel-b" role="tab">TEST B</a>
+                    </li>
+                </ul>
             </div>
-        </div>
-        <!--/.Footer Links-->
-
-        <!--Copyright-->
-        <div class="footer-copyright">
-            <div class="container-fluid">
-                © 2015 Copyright: <a href="https://www.MDBootstrap.com"> MDBootstrap.com </a>
-
+            <div class="tab-content">
+                <div class="tab-pane fade in show active" id="panel-a" role="tabpanel">
+                    <form id="my-a">
+                        <div class="md-form">
+                            <input type="text" id="my-input-a-1" class="form-control" value="">
+                            <label for="my-input-a-1">Input A 1</label>
+                        </div>
+                        <div class="md-form">
+                            <input type="text" id="my-input-a-2" class="form-control" value="">
+                            <label for="my-input-a-2">Input A 2</label>
+                        </div>
+                        <div>
+                            <button class="btn submit">TEST A BUTTON</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="panel-b" role="tabpanel">
+                    <form id="my-b">
+                        <div class="md-form">
+                            <input type="text" id="my-input-b-1" class="form-control" value="">
+                            <label for="my-input-b-1">Input B 1</label>
+                        </div>
+                        <div class="md-form">
+                            <input type="text" id="my-input-b-2" class="form-control" value="">
+                            <label for="my-input-b-2">Input B 2</label>
+                        </div>
+                        <div>
+                            <button class="btn submit">TEST B BUTTON</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-        </div>
-        <!--/.Copyright-->
-
-    </footer>
-    <!--/.Footer-->
-                    
+        </div>                
 
     <!-- SCRIPTS -->
     <!-- JQuery -->
