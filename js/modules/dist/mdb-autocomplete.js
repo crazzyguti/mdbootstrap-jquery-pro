@@ -17,7 +17,6 @@ $.fn.mdb_autocomplete = function (options) {
 
         // text input
         var $input = $(this);
-        console.log($(this));
 
         // assign data from options
         var data = options.data;
