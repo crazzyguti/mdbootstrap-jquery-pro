@@ -5151,7 +5151,8 @@ button:focus {
   .btn.btn-tb {
     padding: 0.3rem 1rem; }
   .btn.disabled, .btn:disabled {
-    cursor: not-allowed; }
+    cursor: not-allowed;
+    pointer-events: none; }
   .btn[class*="btn-outline-"] {
     padding-top: .76rem;
     padding-bottom: .76rem; }
@@ -7031,7 +7032,7 @@ body.scrollable {
 
 .waves-input-wrapper {
   border-radius: 0.2em;
-  vertical-align: bottom;
+  vertical-align: middle;
   display: inline-block; }
   .waves-input-wrapper.waves-button {
     padding: 0; }
@@ -7478,7 +7479,6 @@ textarea {
 footer.page-footer {
   margin-top: 20px;
   padding-top: 20px;
-  background-color: #4285F4;
   color: #fff; }
   footer.page-footer .container-fluid {
     width: auto; }
