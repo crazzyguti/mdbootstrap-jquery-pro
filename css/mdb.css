@@ -7754,8 +7754,8 @@ button, html [type="button"], [type="reset"], [type="submit"] {
   border-radius: 10em; }
 
 .btn.purple-gradient {
-  background: -webkit-linear-gradient(50deg, #ff6ec4, #7873f5);
-  background: linear-gradient(40deg, #ff6ec4, #7873f5);
+  background: -webkit-linear-gradient(50deg, #ff6ec4, #7873f5) !important;
+  background: linear-gradient(40deg, #ff6ec4, #7873f5) !important;
   -webkit-transition: .5s ease;
   transition: .5s ease; }
   .btn.purple-gradient:hover, .btn.purple-gradient:focus, .btn.purple-gradient:active,
@@ -7764,8 +7764,8 @@ button, html [type="button"], [type="reset"], [type="submit"] {
     background: linear-gradient(40deg, #ff88ce, #8f8bf7); }
 
 .btn.peach-gradient {
-  background: -webkit-linear-gradient(50deg, #FFD86F, #FC6262);
-  background: linear-gradient(40deg, #FFD86F, #FC6262);
+  background: -webkit-linear-gradient(50deg, #FFD86F, #FC6262) !important;
+  background: linear-gradient(40deg, #FFD86F, #FC6262) !important;
   -webkit-transition: .5s ease;
   transition: .5s ease; }
   .btn.peach-gradient:hover, .btn.peach-gradient:focus, .btn.peach-gradient:active,
@@ -7774,8 +7774,8 @@ button, html [type="button"], [type="reset"], [type="submit"] {
     background: linear-gradient(40deg, #ffdf89, #fc7b7b); }
 
 .btn.aqua-gradient {
-  background: -webkit-linear-gradient(50deg, #2096ff, #05ffa3);
-  background: linear-gradient(40deg, #2096ff, #05ffa3);
+  background: -webkit-linear-gradient(50deg, #2096ff, #05ffa3) !important;
+  background: linear-gradient(40deg, #2096ff, #05ffa3) !important;
   -webkit-transition: .5s ease;
   transition: .5s ease; }
   .btn.aqua-gradient:hover, .btn.aqua-gradient:focus, .btn.aqua-gradient:active,
@@ -7784,8 +7784,8 @@ button, html [type="button"], [type="reset"], [type="submit"] {
     background: linear-gradient(40deg, #3aa2ff, #1fffac); }
 
 .btn.blue-gradient {
-  background: -webkit-linear-gradient(50deg, #45cafc, #303f9f);
-  background: linear-gradient(40deg, #45cafc, #303f9f);
+  background: -webkit-linear-gradient(50deg, #45cafc, #303f9f) !important;
+  background: linear-gradient(40deg, #45cafc, #303f9f) !important;
   -webkit-transition: .5s ease;
   transition: .5s ease; }
   .btn.blue-gradient:hover, .btn.blue-gradient:focus, .btn.blue-gradient:active,
