@@ -8,6 +8,9 @@
     display: block;
     background-color: transparent; 
   }
+  &.ps--active-y > .ps__scrollbar-y-rail {
+    top:0 !important;
+  }
   &.ps--in-scrolling.ps--x {
     > .ps__scrollbar-x-rail {
       background-color: #eee;

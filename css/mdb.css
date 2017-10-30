@@ -11652,6 +11652,8 @@ button.toast-close-button {
   .ps.ps--active-y > .ps__scrollbar-y-rail {
     display: block;
     background-color: transparent; }
+  .ps.ps--active-y > .ps__scrollbar-y-rail {
+    top: 0 !important; }
   .ps.ps--in-scrolling.ps--x > .ps__scrollbar-x-rail {
     background-color: #eee;
     opacity: 0.9; }
