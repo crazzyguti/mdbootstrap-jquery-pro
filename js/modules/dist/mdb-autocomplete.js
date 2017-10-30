@@ -1,89 +1,83 @@
-'use strict';
-
 /* 
  * Material Design for Bootstrap 
  * MDB Autocomplete Plugin
  */
 
-(function ($) {
-
-  var AUTOCOMPLETE_ENTER_KEY_CODE = 13;
-
-  $.fn.mdb_autocomplete = function (options) {
+$.fn.mdb_autocomplete = function (options) {
 
     // Default options
     var defaults = {
-      data: {}
+        data: {}
+    };
 
-      // Get options
-    };options = $.extend(defaults, options);
+    // Get options
+    options = $.extend(defaults, options);
 
     return this.each(function () {
 
-      // text input
-      var $input = $(this);
-      var $autocomplete = void 0;
+        // text input
+        var $input = $(this);
+        console.log($(this));
 
-      // assign data from options
-      var data = options.data;
+        // assign data from options
+        var data = options.data;
 
-      if (Object.keys(data).length) {
+        if (Object.keys(data).length) {
 
-        $autocomplete = $('<ul class="mdb-autocomplete-wrap"></ul>');
+            $('<ul class="mdb-autocomplete-wrap"></ul>').insertAfter($(this));
+            var $autocomplete = $(this).parent().find('.mdb-autocomplete-wrap');
 
-        $autocomplete.insertAfter($(this));
-      }
+        };
 
-      // Listen if key was pressed
-      $input.on('keyup', function (e) {
+        // Listen if key was pressed
+        $input.on('keyup', function (e) {
 
-        // get value from input
-        var q = $input.val();
+            // get value from input
+            var q = $input.val();
 
-        $autocomplete.empty();
+            $autocomplete.empty();
 
-        // check if input isn't empty
-        if (q.length) {
+            // check if input isn't empty
+            if (q.length) {
 
-          for (var item in data) {
+                for (var item in data) {
 
-            // check if item contains value that we're looking for
-            if (data[item].toLowerCase().indexOf(q.toLowerCase()) !== -1) {
-              var option = $('<li>${data[item]}</li>');
+                    // check if item contains value that we're looking for
+                    if (data[item].toLowerCase().indexOf(q.toLowerCase()) !== -1) {
+                        var option = $('<li>' + data[item] + '</li>');
 
-              $autocomplete.append(option);
+                        $autocomplete.append(option);
+                    }
+                }
             }
-          }
-        }
 
-        if (e.which === AUTOCOMPLETE_ENTER_KEY_CODE) {
-          $autocomplete.children(':first').trigger('click');
-          $autocomplete.empty();
-        }
+            if (e.which == 13) {
+                $autocomplete.children(":first").trigger('click');
+                $autocomplete.empty();
+            }
 
-        if (q.length === 0) {
-          $('.mdb-autocomplete-clear').css('visibility', 'hidden');
-        } else {
-          $('.mdb-autocomplete-clear').css('visibility', 'visible');
-        }
-      });
+            if (q.length == 0) {
+                $(this).parent().find('.mdb-autocomplete-clear').css('visibility', 'hidden');
+            } else {
+                $(this).parent().find('.mdb-autocomplete-clear').css('visibility', 'visible');
+            }
+        });
 
-      $autocomplete.on('click', 'li', function () {
+        $autocomplete.on('click', 'li', function () {
 
-        // Set input value after click
-        $input.val($(this).text());
+            // Set input value after click
+            $input.val($(this).text());
 
-        // Clear autocomplete
-        $autocomplete.empty();
-      });
+            // Clear autocomplete
+            $autocomplete.empty();
+        });
 
-      $('.mdb-autocomplete-clear').on('click', function (e) {
-        e.preventDefault();
-        $input.val('');
-        $(this).css('visibility', 'hidden');
-        $autocomplete.empty();
-        $(this).parent().find('label').removeClass('active');
-      });
+        $('.mdb-autocomplete-clear').on('click', function (e) {
+            e.preventDefault();
+            $(this).parent().find('input').val('');
+            $(this).css('visibility', 'hidden');
+            $(this).parent().find('.mdb-autocomplete-wrap').empty();
+            $(this).parent().find('label').removeClass('active');
+        });
     });
-  };
-});
+};
