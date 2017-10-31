@@ -9,11 +9,11 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="../../css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../../../css/bootstrap/bootstrap.css">
     <!-- Material Design Bootstrap -->
-    <link rel="stylesheet" href="../../css/mdb.css">
+    <link rel="stylesheet" href="../../../css/mdb.css">
     <!-- Your custom styles (optional) -->
-    <link rel="stylesheet" href="../../css/draft/gallery.css">
+    <link rel="stylesheet" href="../../../css/draft/gallery.css">
     <style>
         
     </style>
@@ -34,7 +34,51 @@
 <section class="documentation">
 
     <style>
-        
+        @media (min-width: 768px) {
+          .carousel-multi-item-2 .col-md-3 {
+            float: left;
+            width: 25%;
+            max-width: 100%; } }
+
+        .carousel-multi-item-2 .card img {
+          border-radius: 2px; }
+
+        .gallery {
+          -webkit-column-count: 3;
+          -moz-column-count: 3;
+          column-count: 3;
+          -webkit-column-width: 33%;
+          -moz-column-width: 33%;
+          column-width: 33%; }
+          .gallery .pics {
+            -webkit-transition: all 350ms ease;
+            transition: all 350ms ease; }
+          .gallery .animation {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1); }
+
+        @media (max-width: 450px) {
+            .gallery {
+                -webkit-column-count: 1;
+                -moz-column-count: 1;
+                column-count: 1;
+                -webkit-column-width: 100%;
+                -moz-column-width: 100%;
+                column-width: 100%;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .btn.filter {
+                padding-left: 1.1rem;
+                padding-right: 1.1rem;
+            }
+        }
+
+        .sth .img-height {
+          height: 250px; }
+
     </style>
 
     <!--Section: Intro-->
@@ -91,7 +135,7 @@
             <div class="gallery" id="gallery">
 
                 <!-- Grid column -->
-                <div class="mb-3 pics animation all 3">
+                <div class="mb-3 pics animation all 2">
                     <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg" alt="Card image cap">
                 </div>
                 <!-- Grid column -->
@@ -268,55 +312,55 @@ $(function() {
 
                         <figure class="col-md-4">
                             <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(117).jpg" data-size="1600x1067">
-                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(117).jpg" class="img-fluid">
+                                <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(117).jpg" class="img-fluid">
                             </a>
                         </figure>
 
                         <figure class="col-md-4">
                             <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(98).jpg" data-size="1600x1067">
-                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(98).jpg" class="img-fluid" />
+                                <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(98).jpg" class="img-fluid" />
                             </a>
                         </figure>
 
                         <figure class="col-md-4">
                             <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(131).jpg" data-size="1600x1067">
-                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(131).jpg" class="img-fluid" />
+                                <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(131).jpg" class="img-fluid" />
                             </a>
                         </figure>
 
                         <figure class="col-md-4">
                             <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(123).jpg" data-size="1600x1067">
-                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(123).jpg" class="img-fluid" />
+                                <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(123).jpg" class="img-fluid" />
                             </a>
                         </figure>
 
                         <figure class="col-md-4">
                             <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(118).jpg" data-size="1600x1067">
-                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(118).jpg" class="img-fluid" />
+                                <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(118).jpg" class="img-fluid" />
                             </a>
                         </figure>
 
                         <figure class="col-md-4">
                             <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(128).jpg" data-size="1600x1067">
-                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(128).jpg" class="img-fluid" />
+                                <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(128).jpg" class="img-fluid" />
                             </a>
                         </figure>
 
                         <figure class="col-md-4">
                             <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(132).jpg" data-size="1600x1067">
-                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(132).jpg" class="img-fluid" />
+                                <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(132).jpg" class="img-fluid" />
                             </a>
                         </figure>
 
                         <figure class="col-md-4">
                             <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(115).jpg" data-size="1600x1067">
-                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(115).jpg" class="img-fluid" />
+                                <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(115).jpg" class="img-fluid" />
                             </a>
                         </figure>
 
                         <figure class="col-md-4">
                             <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(133).jpg" data-size="1600x1067">
-                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(133).jpg" class="img-fluid" />
+                                <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(133).jpg" class="img-fluid" />
                             </a>
                         </figure>
 
@@ -354,55 +398,55 @@ $(function () {
 
             &lt;figure class=&quot;col-md-4&quot;&gt;
                 &lt;a href=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(117).jpg&quot; data-size=&quot;1600x1067&quot;&gt;
-                    &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(117).jpg&quot; class=&quot;img-fluid&quot;&gt;
+                    &lt;img alt=&quot;picture&quot; src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(117).jpg&quot; class=&quot;img-fluid&quot;&gt;
                 &lt;/a&gt;
             &lt;/figure&gt;
 
             &lt;figure class=&quot;col-md-4&quot;&gt;
                 &lt;a href=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(98).jpg&quot; data-size=&quot;1600x1067&quot;&gt;
-                    &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(98).jpg&quot; class=&quot;img-fluid&quot; /&gt;
+                    &lt;img alt=&quot;picture&quot; src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(98).jpg&quot; class=&quot;img-fluid&quot; /&gt;
                 &lt;/a&gt;
             &lt;/figure&gt;
 
             &lt;figure class=&quot;col-md-4&quot;&gt;
                 &lt;a href=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(131).jpg&quot; data-size=&quot;1600x1067&quot;&gt;
-                    &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(131).jpg&quot; class=&quot;img-fluid&quot; /&gt;
+                    &lt;img alt=&quot;picture&quot; src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(131).jpg&quot; class=&quot;img-fluid&quot; /&gt;
                 &lt;/a&gt;
             &lt;/figure&gt;
 
             &lt;figure class=&quot;col-md-4&quot;&gt;
                 &lt;a href=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(123).jpg&quot; data-size=&quot;1600x1067&quot;&gt;
-                    &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(123).jpg&quot; class=&quot;img-fluid&quot; /&gt;
+                    &lt;img alt=&quot;picture&quot; src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(123).jpg&quot; class=&quot;img-fluid&quot; /&gt;
                 &lt;/a&gt;
             &lt;/figure&gt;
 
             &lt;figure class=&quot;col-md-4&quot;&gt;
                 &lt;a href=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(118).jpg&quot; data-size=&quot;1600x1067&quot;&gt;
-                    &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(118).jpg&quot; class=&quot;img-fluid&quot; /&gt;
+                    &lt;img alt=&quot;picture&quot; src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(118).jpg&quot; class=&quot;img-fluid&quot; /&gt;
                 &lt;/a&gt;
             &lt;/figure&gt;
 
             &lt;figure class=&quot;col-md-4&quot;&gt;
                 &lt;a href=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(128).jpg&quot; data-size=&quot;1600x1067&quot;&gt;
-                    &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(128).jpg&quot; class=&quot;img-fluid&quot; /&gt;
+                    &lt;img alt=&quot;picture&quot; src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(128).jpg&quot; class=&quot;img-fluid&quot; /&gt;
                 &lt;/a&gt;
             &lt;/figure&gt;
 
             &lt;figure class=&quot;col-md-4&quot;&gt;
                 &lt;a href=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(132).jpg&quot; data-size=&quot;1600x1067&quot;&gt;
-                    &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(132).jpg&quot; class=&quot;img-fluid&quot; /&gt;
+                    &lt;img alt=&quot;picture&quot; src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(132).jpg&quot; class=&quot;img-fluid&quot; /&gt;
                 &lt;/a&gt;
             &lt;/figure&gt;
 
             &lt;figure class=&quot;col-md-4&quot;&gt;
                 &lt;a href=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(115).jpg&quot; data-size=&quot;1600x1067&quot;&gt;
-                    &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(115).jpg&quot; class=&quot;img-fluid&quot; /&gt;
+                    &lt;img alt=&quot;picture&quot; src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(115).jpg&quot; class=&quot;img-fluid&quot; /&gt;
                 &lt;/a&gt;
             &lt;/figure&gt;
 
             &lt;figure class=&quot;col-md-4&quot;&gt;
                 &lt;a href=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(133).jpg&quot; data-size=&quot;1600x1067&quot;&gt;
-                    &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(133).jpg&quot; class=&quot;img-fluid&quot; /&gt;
+                    &lt;img alt=&quot;picture&quot; src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(133).jpg&quot; class=&quot;img-fluid&quot; /&gt;
                 &lt;/a&gt;
             &lt;/figure&gt;
 
@@ -441,55 +485,55 @@ $(function () {
 
                         <figure class="col-md-4">
                             <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(145).jpg" data-size="1600x1067">
-                                <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(145).jpg" class="img-fluid">
+                                <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(145).jpg" class="img-fluid">
                             </a>
                         </figure>
 
                         <figure class="col-md-4">
                             <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(150).jpg" data-size="1600x1067">
-                                <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(150).jpg" class="img-fluid" />
+                                <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(150).jpg" class="img-fluid" />
                             </a>
                         </figure>
 
                         <figure class="col-md-4">
                             <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(152).jpg" data-size="1600x1067">
-                                <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(152).jpg" class="img-fluid" />
+                                <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(152).jpg" class="img-fluid" />
                             </a>
                         </figure>
 
                         <figure class="col-md-4">
                             <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(42).jpg" data-size="1600x1067">
-                                <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(42).jpg" class="img-fluid" />
+                                <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(42).jpg" class="img-fluid" />
                             </a>
                         </figure>
 
                         <figure class="col-md-4">
                             <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(151).jpg" data-size="1600x1067">
-                                <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(151).jpg" class="img-fluid" />
+                                <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(151).jpg" class="img-fluid" />
                             </a>
                         </figure>
 
                         <figure class="col-md-4">
                             <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(40).jpg" data-size="1600x1067">
-                                <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(40).jpg" class="img-fluid" />
+                                <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(40).jpg" class="img-fluid" />
                             </a>
                         </figure>
 
                         <figure class="col-md-4">
                             <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(148).jpg" data-size="1600x1067">
-                                <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(148).jpg" class="img-fluid" />
+                                <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(148).jpg" class="img-fluid" />
                             </a>
                         </figure>
 
                         <figure class="col-md-4">
                             <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(147).jpg" data-size="1600x1067">
-                                <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg" class="img-fluid" />
+                                <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg" class="img-fluid" />
                             </a>
                         </figure>
 
                         <figure class="col-md-4">
                             <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(149).jpg" data-size="1600x1067">
-                                <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(149).jpg" class="img-fluid" />
+                                <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(149).jpg" class="img-fluid" />
                             </a>
                         </figure>
 
@@ -527,55 +571,55 @@ $(function () {
 
             &lt;figure class=&quot;col-md-4&quot;&gt;
                 &lt;a href=&quot;https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(145).jpg&quot; data-size=&quot;1600x1067&quot;&gt;
-                    &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(145).jpg&quot; class=&quot;img-fluid&quot;&gt;
+                    &lt;img alt=&quot;picture&quot; src=&quot;https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(145).jpg&quot; class=&quot;img-fluid&quot;&gt;
                 &lt;/a&gt;
             &lt;/figure&gt;
 
             &lt;figure class=&quot;col-md-4&quot;&gt;
                 &lt;a href=&quot;https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(150).jpg&quot; data-size=&quot;1600x1067&quot;&gt;
-                    &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(150).jpg&quot; class=&quot;img-fluid&quot; /&gt;
+                    &lt;img alt=&quot;picture&quot; src=&quot;https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(150).jpg&quot; class=&quot;img-fluid&quot; /&gt;
                 &lt;/a&gt;
             &lt;/figure&gt;
 
             &lt;figure class=&quot;col-md-4&quot;&gt;
                 &lt;a href=&quot;https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(152).jpg&quot; data-size=&quot;1600x1067&quot;&gt;
-                    &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(152).jpg&quot; class=&quot;img-fluid&quot; /&gt;
+                    &lt;img alt=&quot;picture&quot; src=&quot;https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(152).jpg&quot; class=&quot;img-fluid&quot; /&gt;
                 &lt;/a&gt;
             &lt;/figure&gt;
 
             &lt;figure class=&quot;col-md-4&quot;&gt;
                 &lt;a href=&quot;https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(42).jpg&quot; data-size=&quot;1600x1067&quot;&gt;
-                    &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(42).jpg&quot; class=&quot;img-fluid&quot; /&gt;
+                    &lt;img alt=&quot;picture&quot; src=&quot;https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(42).jpg&quot; class=&quot;img-fluid&quot; /&gt;
                 &lt;/a&gt;
             &lt;/figure&gt;
 
             &lt;figure class=&quot;col-md-4&quot;&gt;
                 &lt;a href=&quot;https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(151).jpg&quot; data-size=&quot;1600x1067&quot;&gt;
-                    &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(151).jpg&quot; class=&quot;img-fluid&quot; /&gt;
+                    &lt;img alt=&quot;picture&quot; src=&quot;https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(151).jpg&quot; class=&quot;img-fluid&quot; /&gt;
                 &lt;/a&gt;
             &lt;/figure&gt;
 
             &lt;figure class=&quot;col-md-4&quot;&gt;
                 &lt;a href=&quot;https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(40).jpg&quot; data-size=&quot;1600x1067&quot;&gt;
-                    &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(40).jpg&quot; class=&quot;img-fluid&quot; /&gt;
+                    &lt;img alt=&quot;picture&quot; src=&quot;https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(40).jpg&quot; class=&quot;img-fluid&quot; /&gt;
                 &lt;/a&gt;
             &lt;/figure&gt;
 
             &lt;figure class=&quot;col-md-4&quot;&gt;
                 &lt;a href=&quot;https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(148).jpg&quot; data-size=&quot;1600x1067&quot;&gt;
-                    &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(148).jpg&quot; class=&quot;img-fluid&quot; /&gt;
+                    &lt;img alt=&quot;picture&quot; src=&quot;https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(148).jpg&quot; class=&quot;img-fluid&quot; /&gt;
                 &lt;/a&gt;
             &lt;/figure&gt;
 
             &lt;figure class=&quot;col-md-4&quot;&gt;
                 &lt;a href=&quot;https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(147).jpg&quot; data-size=&quot;1600x1067&quot;&gt;
-                    &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg&quot; class=&quot;img-fluid&quot; /&gt;
+                    &lt;img alt=&quot;picture&quot; src=&quot;https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg&quot; class=&quot;img-fluid&quot; /&gt;
                 &lt;/a&gt;
             &lt;/figure&gt;
 
             &lt;figure class=&quot;col-md-4&quot;&gt;
                 &lt;a href=&quot;https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(149).jpg&quot; data-size=&quot;1600x1067&quot;&gt;
-                    &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(149).jpg&quot; class=&quot;img-fluid&quot; /&gt;
+                    &lt;img alt=&quot;picture&quot; src=&quot;https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(149).jpg&quot; class=&quot;img-fluid&quot; /&gt;
                 &lt;/a&gt;
             &lt;/figure&gt;
 
@@ -911,7 +955,7 @@ $(function () {
                     </div>
                     <!--Modal: Name-->
             
-                    <a><img class="img-fluid z-depth-1" src="https://mdbootstrap.com/img/screens/yt/screen-video-1.png" alt="" data-toggle="modal" data-target="#modal1"></a>
+                    <a><img class="img-fluid z-depth-1" src="https://mdbootstrap.com/img/screens/yt/screen-video-1.jpg" alt="video" data-toggle="modal" data-target="#modal1"></a>
             
                 </div>
                 <!-- Grid column -->
@@ -957,7 +1001,7 @@ $(function () {
                     </div>
                     <!--Modal: Name-->
                     
-                    <a><img class="img-fluid z-depth-1" src="https://mdbootstrap.com/img/screens/yt/screen-video-6.png" alt="" data-toggle="modal" data-target="#modal6"></a>
+                    <a><img class="img-fluid z-depth-1" src="https://mdbootstrap.com/img/screens/yt/screen-video-2.jpg" alt="video" data-toggle="modal" data-target="#modal6"></a>
 
                 </div>
                 <!-- Grid column -->
@@ -1003,7 +1047,7 @@ $(function () {
                     </div>
                     <!--Modal: Name-->
                     
-                    <a><img class="img-fluid z-depth-1" src="https://mdbootstrap.com/img/screens/yt/screen-video-4.png" alt="" data-toggle="modal" data-target="#modal4"></a>
+                    <a><img class="img-fluid z-depth-1" src="https://mdbootstrap.com/img/screens/yt/screen-video-3.jpg" alt="video" data-toggle="modal" data-target="#modal4"></a>
             
                 </div>
                 <!-- Grid column -->
@@ -1019,52 +1063,6 @@ $(function () {
 
                     <!--Modal: Name-->
                     <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg" role="document">
-
-                            <!--Content-->
-                            <div class="modal-content">
-
-                                <!--Body-->
-                                <div class="modal-body mb-0 p-0">
-
-                                    <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-                                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/A3PDXmYoF5U" allowfullscreen></iframe>
-                                    </div>
-
-                                </div>
-
-                                <!--Footer-->
-                                <div class="modal-footer justify-content-center">
-                                    <span class="mr-4">Spread the word!</span>
-                                    <a type="button" class="btn-floating btn-sm btn-fb"><i class="fa fa-facebook"></i></a>
-                                    <!--Twitter-->
-                                    <a type="button" class="btn-floating btn-sm btn-tw"><i class="fa fa-twitter"></i></a>
-                                    <!--Google +-->
-                                    <a type="button" class="btn-floating btn-sm btn-gplus"><i class="fa fa-google-plus"></i></a>
-                                    <!--Linkedin-->
-                                    <a type="button" class="btn-floating btn-sm btn-ins"><i class="fa fa-linkedin"></i></a>
-
-                                    <button type="button" class="btn btn-outline-primary btn-rounded btn-md ml-4" data-dismiss="modal">Close</button>
-
-                                </div>
-
-                            </div>
-                            <!--/.Content-->
-
-                        </div>
-                    </div>
-                    <!--Modal: Name-->
-                    
-                    <a><img class="img-fluid z-depth-1" src="https://mdbootstrap.com/img/screens/yt/screen-video-2.png" alt="" data-toggle="modal" data-target="#modal2"></a>
-            
-                </div>
-                <!-- Grid column -->
-            
-                <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 mb-4">
-
-                    <!--Modal: Name-->
-                    <div class="modal fade" id="modal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg" role="document">
 
                             <!--Content-->
@@ -1100,8 +1098,54 @@ $(function () {
                         </div>
                     </div>
                     <!--Modal: Name-->
+                    
+                    <a><img class="img-fluid z-depth-1" src="https://mdbootstrap.com/img/screens/yt/screen-video-4.jpg" alt="video" data-toggle="modal" data-target="#modal2"></a>
             
-                    <a><img class="img-fluid z-depth-1" src="https://mdbootstrap.com/img/screens/yt/screen-video-5.png" alt="" data-toggle="modal" data-target="#modal5"></a>
+                </div>
+                <!-- Grid column -->
+            
+                <!-- Grid column -->
+                <div class="col-lg-4 col-md-6 mb-4">
+
+                    <!--Modal: Name-->
+                    <div class="modal fade" id="modal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+
+                            <!--Content-->
+                            <div class="modal-content">
+
+                                <!--Body-->
+                                <div class="modal-body mb-0 p-0">
+
+                                    <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/PjGkVCAo8Fw" allowfullscreen></iframe>
+                                    </div>
+
+                                </div>
+
+                                <!--Footer-->
+                                <div class="modal-footer justify-content-center">
+                                    <span class="mr-4">Spread the word!</span>
+                                    <a type="button" class="btn-floating btn-sm btn-fb"><i class="fa fa-facebook"></i></a>
+                                    <!--Twitter-->
+                                    <a type="button" class="btn-floating btn-sm btn-tw"><i class="fa fa-twitter"></i></a>
+                                    <!--Google +-->
+                                    <a type="button" class="btn-floating btn-sm btn-gplus"><i class="fa fa-google-plus"></i></a>
+                                    <!--Linkedin-->
+                                    <a type="button" class="btn-floating btn-sm btn-ins"><i class="fa fa-linkedin"></i></a>
+
+                                    <button type="button" class="btn btn-outline-primary btn-rounded btn-md ml-4" data-dismiss="modal">Close</button>
+
+                                </div>
+
+                            </div>
+                            <!--/.Content-->
+
+                        </div>
+                    </div>
+                    <!--Modal: Name-->
+            
+                    <a><img class="img-fluid z-depth-1" src="https://mdbootstrap.com/img/screens/yt/screen-video-5.jpg" alt="video" data-toggle="modal" data-target="#modal5"></a>
             
                 </div>
                 <!-- Grid column -->
@@ -1120,7 +1164,7 @@ $(function () {
                                 <div class="modal-body mb-0 p-0">
 
                                     <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-                                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/A3PDXmYoF5U" allowfullscreen></iframe>
+                                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/gsNY7TV4r1M" allowfullscreen></iframe>
                                     </div>
 
                                 </div>
@@ -1147,7 +1191,7 @@ $(function () {
                     </div>
                     <!--Modal: Name-->
                     
-                    <a><img class="img-fluid z-depth-1" src="https://mdbootstrap.com/img/screens/yt/screen-video-3.png" alt="" data-toggle="modal" data-target="#modal3"></a>
+                    <a><img class="img-fluid z-depth-1" src="https://mdbootstrap.com/img/screens/yt/screen-video-6.jpg" alt="video" data-toggle="modal" data-target="#modal3"></a>
             
                 </div>
                 <!-- Grid column -->
@@ -1206,7 +1250,7 @@ $(function () {
         &lt;/div&gt;
         &lt;!--Modal: Name--&gt;
 
-        &lt;a&gt;&lt;img class=&quot;img-fluid z-depth-1&quot; src=&quot;https://mdbootstrap.com/img/screens/yt/screen-video-1.png&quot; alt=&quot;&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modal1&quot;&gt;&lt;/a&gt;
+        &lt;a&gt;&lt;img class=&quot;img-fluid z-depth-1&quot; src=&quot;https://mdbootstrap.com/img/screens/yt/screen-video-1.jpg&quot; alt=&quot;video&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modal1&quot;&gt;&lt;/a&gt;
 
     &lt;/div&gt;
     &lt;!-- Grid column --&gt;
@@ -1252,7 +1296,7 @@ $(function () {
         &lt;/div&gt;
         &lt;!--Modal: Name--&gt;
         
-        &lt;a&gt;&lt;img class=&quot;img-fluid z-depth-1&quot; src=&quot;https://mdbootstrap.com/img/screens/yt/screen-video-6.png&quot; alt=&quot;&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modal6&quot;&gt;&lt;/a&gt;
+        &lt;a&gt;&lt;img class=&quot;img-fluid z-depth-1&quot; src=&quot;https://mdbootstrap.com/img/screens/yt/screen-video-2.jpg&quot; alt=&quot;video&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modal6&quot;&gt;&lt;/a&gt;
 
     &lt;/div&gt;
     &lt;!-- Grid column --&gt;
@@ -1298,7 +1342,7 @@ $(function () {
         &lt;/div&gt;
         &lt;!--Modal: Name--&gt;
         
-        &lt;a&gt;&lt;img class=&quot;img-fluid z-depth-1&quot; src=&quot;https://mdbootstrap.com/img/screens/yt/screen-video-4.png&quot; alt=&quot;&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modal4&quot;&gt;&lt;/a&gt;
+        &lt;a&gt;&lt;img class=&quot;img-fluid z-depth-1&quot; src=&quot;https://mdbootstrap.com/img/screens/yt/screen-video-3.jpg&quot; alt=&quot;video&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modal4&quot;&gt;&lt;/a&gt;
 
     &lt;/div&gt;
     &lt;!-- Grid column --&gt;
@@ -1314,52 +1358,6 @@ $(function () {
 
         &lt;!--Modal: Name--&gt;
         &lt;div class=&quot;modal fade&quot; id=&quot;modal2&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;myModalLabel&quot; aria-hidden=&quot;true&quot;&gt;
-            &lt;div class=&quot;modal-dialog modal-lg&quot; role=&quot;document&quot;&gt;
-
-                &lt;!--Content--&gt;
-                &lt;div class=&quot;modal-content&quot;&gt;
-
-                    &lt;!--Body--&gt;
-                    &lt;div class=&quot;modal-body mb-0 p-0&quot;&gt;
-
-                        &lt;div class=&quot;embed-responsive embed-responsive-16by9 z-depth-1-half&quot;&gt;
-                            &lt;iframe class=&quot;embed-responsive-item&quot; src=&quot;https://www.youtube.com/embed/A3PDXmYoF5U&quot; allowfullscreen&gt;&lt;/iframe&gt;
-                        &lt;/div&gt;
-
-                    &lt;/div&gt;
-
-                    &lt;!--Footer--&gt;
-                    &lt;div class=&quot;modal-footer justify-content-center&quot;&gt;
-                        &lt;span class=&quot;mr-4&quot;&gt;Spread the word!&lt;/span&gt;
-                        &lt;a type=&quot;button&quot; class=&quot;btn-floating btn-sm btn-fb&quot;&gt;&lt;i class=&quot;fa fa-facebook&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-                        &lt;!--Twitter--&gt;
-                        &lt;a type=&quot;button&quot; class=&quot;btn-floating btn-sm btn-tw&quot;&gt;&lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-                        &lt;!--Google +--&gt;
-                        &lt;a type=&quot;button&quot; class=&quot;btn-floating btn-sm btn-gplus&quot;&gt;&lt;i class=&quot;fa fa-google-plus&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-                        &lt;!--Linkedin--&gt;
-                        &lt;a type=&quot;button&quot; class=&quot;btn-floating btn-sm btn-ins&quot;&gt;&lt;i class=&quot;fa fa-linkedin&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-
-                        &lt;button type=&quot;button&quot; class=&quot;btn btn-outline-primary btn-rounded btn-md ml-4&quot; data-dismiss=&quot;modal&quot;&gt;Close&lt;/button&gt;
-
-                    &lt;/div&gt;
-
-                &lt;/div&gt;
-                &lt;!--/.Content--&gt;
-
-            &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;!--Modal: Name--&gt;
-        
-        &lt;a&gt;&lt;img class=&quot;img-fluid z-depth-1&quot; src=&quot;https://mdbootstrap.com/img/screens/yt/screen-video-2.png&quot; alt=&quot;&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modal2&quot;&gt;&lt;/a&gt;
-
-    &lt;/div&gt;
-    &lt;!-- Grid column --&gt;
-
-    &lt;!-- Grid column --&gt;
-    &lt;div class=&quot;col-lg-4 col-md-6 mb-4&quot;&gt;
-
-        &lt;!--Modal: Name--&gt;
-        &lt;div class=&quot;modal fade&quot; id=&quot;modal5&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;myModalLabel&quot; aria-hidden=&quot;true&quot;&gt;
             &lt;div class=&quot;modal-dialog modal-lg&quot; role=&quot;document&quot;&gt;
 
                 &lt;!--Content--&gt;
@@ -1395,8 +1393,54 @@ $(function () {
             &lt;/div&gt;
         &lt;/div&gt;
         &lt;!--Modal: Name--&gt;
+        
+        &lt;a&gt;&lt;img class=&quot;img-fluid z-depth-1&quot; src=&quot;https://mdbootstrap.com/img/screens/yt/screen-video-4.jpg&quot; alt=&quot;video&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modal2&quot;&gt;&lt;/a&gt;
 
-        &lt;a&gt;&lt;img class=&quot;img-fluid z-depth-1&quot; src=&quot;https://mdbootstrap.com/img/screens/yt/screen-video-5.png&quot; alt=&quot;&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modal5&quot;&gt;&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;!-- Grid column --&gt;
+
+    &lt;!-- Grid column --&gt;
+    &lt;div class=&quot;col-lg-4 col-md-6 mb-4&quot;&gt;
+
+        &lt;!--Modal: Name--&gt;
+        &lt;div class=&quot;modal fade&quot; id=&quot;modal5&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;myModalLabel&quot; aria-hidden=&quot;true&quot;&gt;
+            &lt;div class=&quot;modal-dialog modal-lg&quot; role=&quot;document&quot;&gt;
+
+                &lt;!--Content--&gt;
+                &lt;div class=&quot;modal-content&quot;&gt;
+
+                    &lt;!--Body--&gt;
+                    &lt;div class=&quot;modal-body mb-0 p-0&quot;&gt;
+
+                        &lt;div class=&quot;embed-responsive embed-responsive-16by9 z-depth-1-half&quot;&gt;
+                            &lt;iframe class=&quot;embed-responsive-item&quot; src=&quot;https://www.youtube.com/embed/PjGkVCAo8Fw&quot; allowfullscreen&gt;&lt;/iframe&gt;
+                        &lt;/div&gt;
+
+                    &lt;/div&gt;
+
+                    &lt;!--Footer--&gt;
+                    &lt;div class=&quot;modal-footer justify-content-center&quot;&gt;
+                        &lt;span class=&quot;mr-4&quot;&gt;Spread the word!&lt;/span&gt;
+                        &lt;a type=&quot;button&quot; class=&quot;btn-floating btn-sm btn-fb&quot;&gt;&lt;i class=&quot;fa fa-facebook&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;!--Twitter--&gt;
+                        &lt;a type=&quot;button&quot; class=&quot;btn-floating btn-sm btn-tw&quot;&gt;&lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;!--Google +--&gt;
+                        &lt;a type=&quot;button&quot; class=&quot;btn-floating btn-sm btn-gplus&quot;&gt;&lt;i class=&quot;fa fa-google-plus&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;!--Linkedin--&gt;
+                        &lt;a type=&quot;button&quot; class=&quot;btn-floating btn-sm btn-ins&quot;&gt;&lt;i class=&quot;fa fa-linkedin&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+
+                        &lt;button type=&quot;button&quot; class=&quot;btn btn-outline-primary btn-rounded btn-md ml-4&quot; data-dismiss=&quot;modal&quot;&gt;Close&lt;/button&gt;
+
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+                &lt;!--/.Content--&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!--Modal: Name--&gt;
+
+        &lt;a&gt;&lt;img class=&quot;img-fluid z-depth-1&quot; src=&quot;https://mdbootstrap.com/img/screens/yt/screen-video-5.jpg&quot; alt=&quot;video&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modal5&quot;&gt;&lt;/a&gt;
 
     &lt;/div&gt;
     &lt;!-- Grid column --&gt;
@@ -1415,7 +1459,7 @@ $(function () {
                     &lt;div class=&quot;modal-body mb-0 p-0&quot;&gt;
 
                         &lt;div class=&quot;embed-responsive embed-responsive-16by9 z-depth-1-half&quot;&gt;
-                            &lt;iframe class=&quot;embed-responsive-item&quot; src=&quot;https://www.youtube.com/embed/A3PDXmYoF5U&quot; allowfullscreen&gt;&lt;/iframe&gt;
+                            &lt;iframe class=&quot;embed-responsive-item&quot; src=&quot;https://www.youtube.com/embed/gsNY7TV4r1M&quot; allowfullscreen&gt;&lt;/iframe&gt;
                         &lt;/div&gt;
 
                     &lt;/div&gt;
@@ -1442,7 +1486,7 @@ $(function () {
         &lt;/div&gt;
         &lt;!--Modal: Name--&gt;
         
-        &lt;a&gt;&lt;img class=&quot;img-fluid z-depth-1&quot; src=&quot;https://mdbootstrap.com/img/screens/yt/screen-video-3.png&quot; alt=&quot;&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modal3&quot;&gt;&lt;/a&gt;
+        &lt;a&gt;&lt;img class=&quot;img-fluid z-depth-1&quot; src=&quot;https://mdbootstrap.com/img/screens/yt/screen-video-6.jpg&quot; alt=&quot;video&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modal3&quot;&gt;&lt;/a&gt;
 
     &lt;/div&gt;
     &lt;!-- Grid column --&gt;
@@ -1463,7 +1507,7 @@ $(function () {
     <section id="carousel-2">
 
         <!--Title-->
-        <h2 class="title"><strong>Video gallery</strong> <a href="https://mdbootstrap.com/product/material-design-for-bootstrap-pro/" target="_blank" class="btn btn-danger btn-md" role="button">MDB Pro component <i class="fa fa-diamond ml-1"></i></a></h2>
+        <h2 class="title"><strong>Video gallery</strong></h2>
 
         <!--Description-->
         <p class="description"></p>
@@ -1590,63 +1634,63 @@ $(function () {
 
                         <figure class="col-md-4">
                             <a class="black-text" href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(121).jpg" data-size="1600x1067">
-                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(121).jpg" class="img-fluid">
+                                <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(121).jpg" class="img-fluid">
                                 <h3 class="text-center my-3">Photo title</h3>
                             </a>
                         </figure>
 
                         <figure class="col-md-4">
                             <a class="black-text" href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(96).jpg" data-size="1600x1067">
-                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(96).jpg" class="img-fluid" />
+                                <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(96).jpg" class="img-fluid" />
                                 <h3 class="text-center my-3">Photo title</h3>
                             </a>
                         </figure>
 
                         <figure class="col-md-4">
                             <a class="black-text" href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(104).jpg" data-size="1600x1067">
-                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(104).jpg" class="img-fluid" />
+                                <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(104).jpg" class="img-fluid" />
                                 <h3 class="text-center my-3">Photo title</h3>
                             </a>
                         </figure>
 
                         <figure class="col-md-4">
                             <a class="black-text" href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(45).jpg" data-size="1600x1067">
-                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(45).jpg" class="img-fluid" />
+                                <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(45).jpg" class="img-fluid" />
                                 <h3 class="text-center my-3">Photo title</h3>
                             </a>
                         </figure>
 
                         <figure class="col-md-4">
                             <a class="black-text" href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(122).jpg" data-size="1600x1067">
-                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(122).jpg" class="img-fluid" />
+                                <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(122).jpg" class="img-fluid" />
                                 <h3 class="text-center my-3">Photo title</h3>
                             </a>
                         </figure>
 
                         <figure class="col-md-4">
                             <a class="black-text" href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(115).jpg" data-size="1600x1067">
-                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(115).jpg" class="img-fluid" />
+                                <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(115).jpg" class="img-fluid" />
                                 <h3 class="text-center my-3">Photo title</h3>
                             </a>
                         </figure>
 
                         <figure class="col-md-4">
                             <a class="black-text" href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(125).jpg" data-size="1600x1067">
-                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(125).jpg" class="img-fluid" />
+                                <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(125).jpg" class="img-fluid" />
                                 <h3 class="text-center my-3">Photo title</h3>
                             </a>
                         </figure>
 
                         <figure class="col-md-4">
                             <a class="black-text" href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(115).jpg" data-size="1600x1067">
-                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(115).jpg" class="img-fluid" />
+                                <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(115).jpg" class="img-fluid" />
                                 <h3 class="text-center my-3">Photo title</h3>
                             </a>
                         </figure>
 
                         <figure class="col-md-4">
                             <a class="black-text" href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(119).jpg" data-size="1600x1067">
-                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(119).jpg" class="img-fluid" />
+                                <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(119).jpg" class="img-fluid" />
                                 <h3 class="text-center my-3">Photo title</h3>
                             </a>
                         </figure>
@@ -1684,63 +1728,63 @@ $(function () {
 
             &lt;figure class=&quot;col-md-4&quot;&gt;
                 &lt;a class=&quot;black-text&quot; href=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(121).jpg&quot; data-size=&quot;1600x1067&quot;&gt;
-                    &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(121).jpg&quot; class=&quot;img-fluid&quot;&gt;
+                    &lt;img alt=&quot;picture&quot; src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(121).jpg&quot; class=&quot;img-fluid&quot;&gt;
                     &lt;h3 class=&quot;text-center my-3&quot;&gt;Photo title&lt;/h3&gt;
                 &lt;/a&gt;
             &lt;/figure&gt;
 
             &lt;figure class=&quot;col-md-4&quot;&gt;
                 &lt;a class=&quot;black-text&quot; href=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(96).jpg&quot; data-size=&quot;1600x1067&quot;&gt;
-                    &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(96).jpg&quot; class=&quot;img-fluid&quot; /&gt;
+                    &lt;img alt=&quot;picture&quot; src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(96).jpg&quot; class=&quot;img-fluid&quot; /&gt;
                     &lt;h3 class=&quot;text-center my-3&quot;&gt;Photo title&lt;/h3&gt;
                 &lt;/a&gt;
             &lt;/figure&gt;
 
             &lt;figure class=&quot;col-md-4&quot;&gt;
                 &lt;a class=&quot;black-text&quot; href=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(104).jpg&quot; data-size=&quot;1600x1067&quot;&gt;
-                    &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(104).jpg&quot; class=&quot;img-fluid&quot; /&gt;
+                    &lt;img alt=&quot;picture&quot; src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(104).jpg&quot; class=&quot;img-fluid&quot; /&gt;
                     &lt;h3 class=&quot;text-center my-3&quot;&gt;Photo title&lt;/h3&gt;
                 &lt;/a&gt;
             &lt;/figure&gt;
 
             &lt;figure class=&quot;col-md-4&quot;&gt;
                 &lt;a class=&quot;black-text&quot; href=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(45).jpg&quot; data-size=&quot;1600x1067&quot;&gt;
-                    &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(45).jpg&quot; class=&quot;img-fluid&quot; /&gt;
+                    &lt;img alt=&quot;picture&quot; src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(45).jpg&quot; class=&quot;img-fluid&quot; /&gt;
                     &lt;h3 class=&quot;text-center my-3&quot;&gt;Photo title&lt;/h3&gt;
                 &lt;/a&gt;
             &lt;/figure&gt;
 
             &lt;figure class=&quot;col-md-4&quot;&gt;
                 &lt;a class=&quot;black-text&quot; href=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(122).jpg&quot; data-size=&quot;1600x1067&quot;&gt;
-                    &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(122).jpg&quot; class=&quot;img-fluid&quot; /&gt;
+                    &lt;img alt=&quot;picture&quot; src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(122).jpg&quot; class=&quot;img-fluid&quot; /&gt;
                     &lt;h3 class=&quot;text-center my-3&quot;&gt;Photo title&lt;/h3&gt;
                 &lt;/a&gt;
             &lt;/figure&gt;
 
             &lt;figure class=&quot;col-md-4&quot;&gt;
                 &lt;a class=&quot;black-text&quot; href=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(115).jpg&quot; data-size=&quot;1600x1067&quot;&gt;
-                    &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(115).jpg&quot; class=&quot;img-fluid&quot; /&gt;
+                    &lt;img alt=&quot;picture&quot; src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(115).jpg&quot; class=&quot;img-fluid&quot; /&gt;
                     &lt;h3 class=&quot;text-center my-3&quot;&gt;Photo title&lt;/h3&gt;
                 &lt;/a&gt;
             &lt;/figure&gt;
 
             &lt;figure class=&quot;col-md-4&quot;&gt;
                 &lt;a class=&quot;black-text&quot; href=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(125).jpg&quot; data-size=&quot;1600x1067&quot;&gt;
-                    &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(125).jpg&quot; class=&quot;img-fluid&quot; /&gt;
+                    &lt;img alt=&quot;picture&quot; src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(125).jpg&quot; class=&quot;img-fluid&quot; /&gt;
                     &lt;h3 class=&quot;text-center my-3&quot;&gt;Photo title&lt;/h3&gt;
                 &lt;/a&gt;
             &lt;/figure&gt;
 
             &lt;figure class=&quot;col-md-4&quot;&gt;
                 &lt;a class=&quot;black-text&quot; href=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(115).jpg&quot; data-size=&quot;1600x1067&quot;&gt;
-                    &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(115).jpg&quot; class=&quot;img-fluid&quot; /&gt;
+                    &lt;img alt=&quot;picture&quot; src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(115).jpg&quot; class=&quot;img-fluid&quot; /&gt;
                     &lt;h3 class=&quot;text-center my-3&quot;&gt;Photo title&lt;/h3&gt;
                 &lt;/a&gt;
             &lt;/figure&gt;
 
             &lt;figure class=&quot;col-md-4&quot;&gt;
                 &lt;a class=&quot;black-text&quot; href=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(119).jpg&quot; data-size=&quot;1600x1067&quot;&gt;
-                    &lt;img src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(119).jpg&quot; class=&quot;img-fluid&quot; /&gt;
+                    &lt;img alt=&quot;picture&quot; src=&quot;https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(119).jpg&quot; class=&quot;img-fluid&quot; /&gt;
                     &lt;h3 class=&quot;text-center my-3&quot;&gt;Photo title&lt;/h3&gt;
                 &lt;/a&gt;
             &lt;/figure&gt;
@@ -1763,7 +1807,7 @@ $(function () {
     <section id="slides">
 
         <!--Title-->
-        <h2 class="title"><strong>Gallery with slides and captions</strong> <a href="https://mdbootstrap.com/product/material-design-for-bootstrap-pro/" target="_blank" class="btn btn-danger btn-md" role="button">MDB Pro component <i class="fa fa-diamond ml-1"></i></a></h2>
+        <h2 class="title"><strong>Gallery with slides and captions</strong></h2>
 
         <!--Description-->
         <p class="description"></p>
@@ -1903,8 +1947,8 @@ $(function () {
 
 </section>
 <!--/Section: Doc content-->
-            
-        </div>
+
+</div>
 
 
         <div class="container my-5">
@@ -2912,17 +2956,17 @@ $(function () {
     <!-- JQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="../../js/popper.min.js"></script>
+    <script type="text/javascript" src="../../../js/popper.min.js"></script>
     <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="../../js/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../js/bootstrap.js"></script>
     <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="../../js/modules/mdb.js"></script>
+    <script type="text/javascript" src="../../../js/modules/mdb.js"></script>
     <!--Custom scripts-->
 
     <script>
 // MDB Lightbox Init
         $(function () {
-            $("#mdb-lightbox-ui").load("../../mdb-addons/mdb-lightbox-ui.html");
+            $("#mdb-lightbox-ui").load("../../../mdb-addons/mdb-lightbox-ui.html");
         });
 
         $(function() {
@@ -2937,6 +2981,17 @@ $(function () {
                 }, 300); 
             });
         });
+    </script>
+
+    <script type="text/javascript">
+        $('#exampleModal').on('show.bs.modal', function (event) {
+          var button = $(event.relatedTarget) // Button that triggered the modal
+          var recipient = button.data('video') // Extract info from data-* attributes
+          // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+          // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+          var modal = $(this)
+          modal.find('.modal-body iframe').val(recipient)
+        })
     </script>
    
 </body>
