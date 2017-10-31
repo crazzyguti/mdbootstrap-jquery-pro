@@ -35,8 +35,12 @@ gulp.task('build-js', function() {
         .pipe(gulp.dest('./dist/'))
 });
 
+gulp.task('build-free-js', function() {
+    gulp.src(['js/modules/_intro-mdb-free.js', './js/modules/vendor/jquery.easing.js', './js/modules/vendor/velocity.min.js', './js/modules/vendor/chart.js', './js/modules/vendor/wow.js', './js/modules/dist/scrolling-navbar.js', './js/modules/vendor/waves.js', './js/modules/dist/forms-free.js',  'js/modules/vendor/enhanced-modals.js'])
+        .pipe(concat('mdb-free.js'))
+        .pipe(gulp.dest('./dist/'))
+});
+
 gulp.task('default',function() {
     gulp.watch('sass/**/*.scss',['styles']);
 });
-
-
