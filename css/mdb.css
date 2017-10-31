@@ -10302,7 +10302,7 @@ input[type=range] {
   z-index: 999;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  overflow-y: auto;
+  overflow: hidden;
   will-change: transform;
   backface-visibility: hidden;
   -webkit-transform: translateX(-105%);
@@ -10478,6 +10478,7 @@ input[type=range] {
       top: 0;
       left: 0;
       bottom: 0;
+      z-index: -1;
       margin-bottom: -99999px;
       padding-bottom: 99999px; }
   .side-nav.fixed {
