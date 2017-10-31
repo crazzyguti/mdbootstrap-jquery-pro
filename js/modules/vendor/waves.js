@@ -224,8 +224,8 @@
             var color = elementStyle.color;
             var backgroundColor = elementStyle.backgroundColor;
 
-            wrapper.setAttribute('style', 'color:' + color + ';background:' + backgroundColor);
-            element.setAttribute('style', 'background-color:rgba(0,0,0,0);');
+            // wrapper.setAttribute('style', 'color:' + color + ';background:' + backgroundColor);
+            // element.setAttribute('style', 'background-color:rgba(0,0,0,0);');
 
         },
 
