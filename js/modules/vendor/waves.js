@@ -206,14 +206,14 @@
             var parent = element.parentNode;
 
             // If input already have parent just pass through
-            if (parent.tagName.toLowerCase() === 'i' && parent.classList.contains('waves-effect')) {
+            if (parent.tagName.toLowerCase() === 'div' && parent.classList.contains('waves-effect')) {
                 return;
             }
 
             // Put element class and style to the specified parent
-            var wrapper = document.createElement('i');
-            wrapper.className = element.className + ' waves-input-wrapper';
-            element.className = 'waves-button-input';
+            var wrapper = document.createElement('div');
+            wrapper.className = 'waves-input-wrapper';
+            // element.className = element.className + ' waves-button-input';
 
             // Put element as child
             parent.replaceChild(wrapper, element);

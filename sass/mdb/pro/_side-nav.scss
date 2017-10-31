@@ -25,6 +25,9 @@
   padding:0;
   @extend .white-text;
   @extend .z-depth-1;
+  > ul {
+    max-height:100vh;
+  }
   ul {
     list-style-type:none;
     li {

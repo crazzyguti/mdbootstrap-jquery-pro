@@ -1,6 +1,6 @@
 /*!
  * Material Design for Bootstrap 4
- * Version: MDB PRO 4.4.2
+ * Version: MDB PRO 4.4.3
  *
  *
  * Copyright: Material Design for Bootstrap
@@ -10310,6 +10310,8 @@ input[type=range] {
   transform: translateX(-105%);
   list-style-type: none;
   padding: 0; }
+  .side-nav > ul {
+    max-height: 100vh; }
   .side-nav ul {
     list-style-type: none; }
     .side-nav ul li {
