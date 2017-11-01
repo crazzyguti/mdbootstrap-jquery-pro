@@ -484,219 +484,219 @@ $material-colors: (
 
 $juicy-peach: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
 .juicy-peach-gradient {
-    background-image: $juicy-peach;
+  background-image: $juicy-peach;
 }
 
 $young-passion: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
 .young-passion-gradient {
-    background-image: $young-passion;
+  background-image: $young-passion;
 }
 
 $lady-lips: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
 .lady-lips-gradient {
-    background-image: $lady-lips;
+  background-image: $lady-lips;
 }
 
 $sunny-morning: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
 .sunny-morning-gradient {
-    background-image: $sunny-morning;
+  background-image: $sunny-morning;
 }
 
 $rainy-ashville: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
 .rainy-ashville-gradient {
-    background-image: $rainy-ashville;
+  background-image: $rainy-ashville;
 }
 
 $frozen-dreams: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
 .frozen-dreams-gradient {
-    background-image: $frozen-dreams;
+  background-image: $frozen-dreams;
 }
 
 $warm-flame: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
 .warm-flame-gradient {
-    background-image: $warm-flame;
+  background-image: $warm-flame;
 }
 
 $night-fade: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
 .night-fade-gradient {
-    background-image: $night-fade;
+  background-image: $night-fade;
 }
 
 $spring-warmth: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
 .spring-warmth-gradient {
-    background-image: $spring-warmth;
+  background-image: $spring-warmth;
 }
 
 $winter-neva: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 .winter-neva-gradient {
-    background-image: $winter-neva;
+  background-image: $winter-neva;
 }
 
 $dusty-grass: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
 .dusty-grass-gradient {
-    background-image: $dusty-grass;
+  background-image: $dusty-grass;
 }
 
 $tempting-azure: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
 .tempting-azure-gradient {
-    background-image: $tempting-azure;
+  background-image: $tempting-azure;
 }
 
 $heavy-rain: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 .heavy-rain-gradient {
-    background-image: $heavy-rain;
+  background-image: $heavy-rain;
 }
 
 $amy-crisp: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
 .amy-crisp-gradient {
-    background-image: $amy-crisp;
+  background-image: $amy-crisp;
 }
 
 $mean-fruit: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
 .mean-fruit-gradient {
-    background-image: $mean-fruit;
+  background-image: $mean-fruit;
 }
 
 $deep-blue: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
 .deep-blue-gradient {
-    background-image: $deep-blue;
+  background-image: $deep-blue;
 }
 
 $ripe-malinka: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
 .ripe-malinka-gradient {
-    background-image: $ripe-malinka;
+  background-image: $ripe-malinka;
 }
 
 $cloudy-knoxville: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 .cloudy-knoxville-gradient {
-    background-image: $cloudy-knoxville;
+  background-image: $cloudy-knoxville;
 }
 
 $morpheus-den: linear-gradient(to top, #30cfd0 0%, #330867 100%);
 .morpheus-den-gradient {
-    background-image: $morpheus-den;
+  background-image: $morpheus-den;
 }
 
 $rare-wind: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
 .rare-wind-gradient {
-    background-image: $rare-wind;
+  background-image: $rare-wind;
 }
 
 $near-moon: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
 .near-moon-gradient {
-    background-image: $near-moon;
+  background-image: $near-moon;
 }
 
 $gradients: (
-    "juicy-peach": $juicy-peach,
-    "young-passion": $young-passion,
-    "lady-lips": $lady-lips,
-    "sunny-morning": $sunny-morning,
-    "rainy-ashville": $rainy-ashville,
-    "frozen-dreams": $frozen-dreams,
-    "warm-flame": $warm-flame,
-    "night-fade": $night-fade ,
-    "spring-warmth": $spring-warmth,
-    "winter-neva": $winter-neva,
-    "dusty-grass": $dusty-grass,
-    "tempting-azure": $tempting-azure,
-    "heavy-rain": $heavy-rain,
-    "amy-crisp": $amy-crisp,
-    "mean-fruit": $mean-fruit,
-    "deep-blue": $deep-blue,
-    "ripe-malinka": $ripe-malinka,
-    "cloudy-knoxville": $cloudy-knoxville,
-    "morpheus-den": $morpheus-den,
-    "rare-wind": $rare-wind,
-    "near-moon": $near-moon
+  "juicy-peach": $juicy-peach,
+  "young-passion": $young-passion,
+  "lady-lips": $lady-lips,
+  "sunny-morning": $sunny-morning,
+  "rainy-ashville": $rainy-ashville,
+  "frozen-dreams": $frozen-dreams,
+  "warm-flame": $warm-flame,
+  "night-fade": $night-fade ,
+  "spring-warmth": $spring-warmth,
+  "winter-neva": $winter-neva,
+  "dusty-grass": $dusty-grass,
+  "tempting-azure": $tempting-azure,
+  "heavy-rain": $heavy-rain,
+  "amy-crisp": $amy-crisp,
+  "mean-fruit": $mean-fruit,
+  "deep-blue": $deep-blue,
+  "ripe-malinka": $ripe-malinka,
+  "cloudy-knoxville": $cloudy-knoxville,
+  "morpheus-den": $morpheus-den,
+  "rare-wind": $rare-wind,
+  "near-moon": $near-moon
 
 );
 
 @each $name, $color in $material-colors {
-    .scrollbar-#{$name} {
-        &::-webkit-scrollbar-track  {
-            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
-            background-color: #F5F5F5;
-            border-radius: 10px;
-        }
-        &::-webkit-scrollbar {
-            width: 12px;
-            background-color: #F5F5F5;
-        }
-        &::-webkit-scrollbar-thumb {
-            border-radius: 10px;
-            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.1);
-            background-color: $color;
-        }
+  .scrollbar-#{$name} {
+    &::-webkit-scrollbar-track  {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+      background-color: #F5F5F5;
+      border-radius: 10px;
     }
+    &::-webkit-scrollbar {
+      width: 12px;
+      background-color: #F5F5F5;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.1);
+      background-color: $color;
+    }
+  }
 }
 
 @each $name, $color in $gradients {
-    .scrollbar-#{$name} {
-        &::-webkit-scrollbar-track  {
-            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
-            background-color: #F5F5F5;
-            border-radius: 10px;
-        }
-        &::-webkit-scrollbar {
-            width: 12px;
-            background-color: #F5F5F5;
-        }
-        &::-webkit-scrollbar-thumb {
-            border-radius: 10px;
-            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.1);
-            background-image: $color;
-        }
+  .scrollbar-#{$name} {
+    &::-webkit-scrollbar-track  {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+      background-color: #F5F5F5;
+      border-radius: 10px;
     }
+    &::-webkit-scrollbar {
+      width: 12px;
+      background-color: #F5F5F5;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.1);
+      background-image: $color;
+    }
+  }
 }
 
 @each $name, $color in $material-colors {
-    .bordered-#{$name} {
-        &::-webkit-scrollbar-track  {
-            -webkit-box-shadow: none;
-            border: 1px solid $color;
-        }
-        &::-webkit-scrollbar-thumb {
-            -webkit-box-shadow: none;
-        }
+  .bordered-#{$name} {
+    &::-webkit-scrollbar-track  {
+      -webkit-box-shadow: none;
+      border: 1px solid $color;
     }
+    &::-webkit-scrollbar-thumb {
+      -webkit-box-shadow: none;
+    }
+  }
 }
 
 .square {
-    &::-webkit-scrollbar-track {
-        border-radius: 0 !important;
-    }
-    &::-webkit-scrollbar-thumb {
-        border-radius: 0 !important;
-    }
+  &::-webkit-scrollbar-track {
+    border-radius: 0 !important;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 0 !important;
+  }
 }
 .thin {
-    &::-webkit-scrollbar {
-        width: 6px;
-    }
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
 }
 
 @each $name, $color in $material-colors {
-    .#{$name}-text {
-        color: $color;
-    }
+  .#{$name}-text {
+    color: $color;
+  }
 }
 
 @each $name, $color in $material-colors {
-    .#{$name}-lighter-hover {
-        color: $color;
-        transition: .4s;
-        &:hover {
-            transition: .4s;
-            color: lighten($color, 15%);
-        }
+  .#{$name}-lighter-hover {
+    color: $color;
+    transition: .4s;
+    &:hover {
+      transition: .4s;
+      color: lighten($color, 15%);
     }
-    .#{$name}-darker-hover {
-        color: $color;
-        transition: .4s;
-        &:hover {
-            transition: .4s;
-            color: darken($color, 15%);
-        }
+  }
+  .#{$name}-darker-hover {
+    color: $color;
+    transition: .4s;
+    &:hover {
+      transition: .4s;
+      color: darken($color, 15%);
     }
+  }
 }

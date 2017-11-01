@@ -1,40 +1,40 @@
 .card {
-	&.chat-room {
-		.members-panel-1,
-		.chat-1 {
-			position: relative;
- 			overflow-y: scroll;
-		}
-		.members-panel-1 {
-			height: 570px;
-		}
-		.chat-1 {
-			height: 495px;
-		}
-		.friend-list {
-			li {
-				border-bottom: 1px solid #e0e0e0;
-			    &:last-of-type {
-			      border-bottom: none;
-			    }
-			}
-		}
-		img {
-			&.rounded-circle {
-				border-radius: 50%;
-			}
-			&.avatar {
-				height: 3rem;
-				width: 3rem;
-			}
-		}
-		.text-small {
-			font-size: 0.95rem;
-		}
-		.text-smaller {
-			font-size: 0.75rem;
-		}
-	}
+  &.chat-room {
+    .members-panel-1,
+    .chat-1 {
+      position: relative;
+      overflow-y: scroll;
+    }
+    .members-panel-1 {
+      height: 570px;
+    }
+    .chat-1 {
+      height: 495px;
+    }
+    .friend-list {
+      li {
+        border-bottom: 1px solid #e0e0e0;
+        &:last-of-type {
+          border-bottom: none;
+        }
+      }
+    }
+    img {
+      &.rounded-circle {
+        border-radius: 50%;
+      }
+      &.avatar {
+        height: 3rem;
+        width: 3rem;
+      }
+    }
+    .text-small {
+      font-size: 0.95rem;
+    }
+    .text-smaller {
+      font-size: 0.75rem;
+    }
+  }
 }
 
 .scrollbar-light-blue::-webkit-scrollbar-track {

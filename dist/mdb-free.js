@@ -1,6 +1,6 @@
 /*!
  * Material Design for Bootstrap 4
- * Version: MDB FREE: 4.4.2
+ * Version: MDB FREE: 4.4.3
  *
  *
  * Copyright: Material Design for Bootstrap
@@ -13603,14 +13603,14 @@ $(window).scroll(function () {
             var parent = element.parentNode;
 
             // If input already have parent just pass through
-            if (parent.tagName.toLowerCase() === 'i' && parent.classList.contains('waves-effect')) {
+            if (parent.tagName.toLowerCase() === 'div' && parent.classList.contains('waves-effect')) {
                 return;
             }
 
             // Put element class and style to the specified parent
-            var wrapper = document.createElement('i');
-            wrapper.className = element.className + ' waves-input-wrapper';
-            element.className = 'waves-button-input';
+            var wrapper = document.createElement('div');
+            wrapper.className = 'waves-input-wrapper';
+            // element.className = element.className + ' waves-button-input';
 
             // Put element as child
             parent.replaceChild(wrapper, element);
@@ -13621,8 +13621,8 @@ $(window).scroll(function () {
             var color = elementStyle.color;
             var backgroundColor = elementStyle.backgroundColor;
 
-            wrapper.setAttribute('style', 'color:' + color + ';background:' + backgroundColor);
-            element.setAttribute('style', 'background-color:rgba(0,0,0,0);');
+            // wrapper.setAttribute('style', 'color:' + color + ';background:' + backgroundColor);
+            // element.setAttribute('style', 'background-color:rgba(0,0,0,0);');
 
         },
 
