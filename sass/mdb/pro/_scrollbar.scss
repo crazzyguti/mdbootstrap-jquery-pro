@@ -8,6 +8,9 @@
     display: block;
     background-color: transparent; 
   }
+  &.ps--active-y > .ps__scrollbar-y-rail {
+    top:0 !important;
+  }
   &.ps--in-scrolling.ps--x {
     > .ps__scrollbar-x-rail {
       background-color: #eee;
@@ -26,7 +29,7 @@
     opacity: 0;
     transition: background-color .2s linear, opacity .2s linear;
     bottom: 0px;
-      /* there must be 'bottom' for ps__scrollbar-x-rail */
+    /* there must be 'bottom' for ps__scrollbar-x-rail */
     height: 15px; 
     > .ps__scrollbar-x {
       position: absolute;

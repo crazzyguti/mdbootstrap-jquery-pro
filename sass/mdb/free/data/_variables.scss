@@ -29,11 +29,11 @@ $spacers: (
 
 // Extreme Padding
 $extreme-padding: (
-	"xs": 0,
-	"sm": 5%,
-	"md": 10%,
-	"lg": 15%,
-	"xl": 20%
+  "xs": 0,
+  "sm": 5%,
+  "md": 10%,
+  "lg": 15%,
+  "xl": 20%
 );
 
 // Navbar
@@ -194,18 +194,18 @@ $hide-sidenav: "only screen and (max-width : #{$sidenav-breakpoint})" !default;
 $link-color: #0275d8;
 
 $navbar-option: (
-    "light": (
-        "navbar-toggler-icon": $navbar-light-toggler-icon,
-        "navbar-option-color": $black,
-        "navbar-link-hover-color": $navbar-light-hover-color,
-        "navbar-active-link-bg-color": $navbar-light-bg-active-color,
-        "navbar-placeholder-color": $black !important
-    ),
-    "dark": (
-        "navbar-toggler-icon": $navbar-dark-toggler-icon,
-        "navbar-option-color": $white,
-        "navbar-link-hover-color": $navbar-dark-hover-color,
-        "navbar-active-link-bg-color": $navbar-dark-bg-active-color,
-        "navbar-placeholder-color": $white !important
-    )
+  "light": (
+    "navbar-toggler-icon": $navbar-light-toggler-icon,
+    "navbar-option-color": $black,
+    "navbar-link-hover-color": $navbar-light-hover-color,
+    "navbar-active-link-bg-color": $navbar-light-bg-active-color,
+    "navbar-placeholder-color": $black !important
+  ),
+  "dark": (
+    "navbar-toggler-icon": $navbar-dark-toggler-icon,
+    "navbar-option-color": $white,
+    "navbar-link-hover-color": $navbar-dark-hover-color,
+    "navbar-active-link-bg-color": $navbar-dark-bg-active-color,
+    "navbar-placeholder-color": $white !important
+  )
 );

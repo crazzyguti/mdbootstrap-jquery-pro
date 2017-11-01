@@ -14,438 +14,204 @@
     <link rel="stylesheet" href="../../css/mdb.css">
     <link rel="stylesheet" href="../../css/draft/gallery.css">
     <!-- Your custom styles (optional) -->
-    <style type="text/css">
-        .input-group.md-form.form-sm.form-1 input{
-            border: 1px solid #bdbdbd;
-            border-top-right-radius: 0.25rem;
-            border-bottom-right-radius: 0.25rem;
+    <style>
+        .progress .indeterminate {
+            background-color: red;
         }
-        .input-group.md-form.form-sm.form-2 input {
-            border: 1px solid #bdbdbd;
-            border-top-left-radius: 0.25rem;
-            border-bottom-left-radius: 0.25rem;
-        }
-        .input-group.md-form.form-sm.form-2 input.red-border  {
-            border: 1px solid #ef9a9a;
-        }
-        .input-group.md-form.form-sm.form-2 input.lime-border  {
-            border: 1px solid #cddc39;
-        }
-        .input-group.md-form.form-sm.form-2 input.amber-border  {
-            border: 1px solid #ffca28;
-        }
-        .input-group input[type=text]:focus:not([readonly]) {
-            box-shadow: none;
-        }
-        .active-pink input[type=text]:focus:not([readonly]) {
-            border-bottom: 1px solid #f48fb1;
-            box-shadow: 0 1px 0 0 #f48fb1;
-        }
-        .active-pink input[type=text] {
-            border-bottom: 1px solid #f48fb1;
-            box-shadow: 0 1px 0 0 #f48fb1;
-        }
-        .active-purple input[type=text]:focus:not([readonly]) {
-            border-bottom: 1px solid #ce93d8;
-            box-shadow: 0 1px 0 0 #ce93d8;
-        }
-        .active-purple input[type=text] {
-            border-bottom: 1px solid #ce93d8;
-            box-shadow: 0 1px 0 0 #ce93d8;
-        }
-        .active-cyan input[type=text]:focus:not([readonly]) {
-            border-bottom: 1px solid #4dd0e1;
-            box-shadow: 0 1px 0 0 #4dd0e1;
-        }
-        .active-cyan input[type=text] {
-            border-bottom: 1px solid #4dd0e1;
-            box-shadow: 0 1px 0 0 #4dd0e1;
-        }
-        .active-cyan .fa {
-            color: #4dd0e1;
-        }
-        .active-purple .fa {
-            color: #ce93d8;
-        }
-        .active-pink .fa {
-            color: #f48fb1;
+        .basic-textarea textarea {
+            height: auto;
         }
     </style>
 </head>
 
 <body>
 
-        <!-- Search form -->
-        <form class="form-inline">
-            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-        </form>
+    <div class="container">
 
-    <div class="container mt-5">
+        <div class="form-group basic-textarea">
+            <label for="exampleFormControlTextarea2">Small textarea</label>
+            <textarea class="form-control" id="exampleFormControlTextarea2" rows="3"></textarea>
+        </div>
         
-        <!-- Search form -->
-        <form class="form-inline">
-            <input class="form-control w-100" type="text" placeholder="Search" aria-label="Search">
-        </form>
-        <!-- Search form -->
-        <form class="form-inline active-pink">
-            <input class="form-control w-100" type="text" placeholder="Search" aria-label="Search">
-        </form>
-        <!-- Search form -->
-        <form class="form-inline active-purple">
-            <input class="form-control w-100" type="text" placeholder="Search" aria-label="Search">
-        </form>
-        <!-- Search form -->
-        <form class="form-inline active-cyan">
-            <input class="form-control w-100" type="text" placeholder="Search" aria-label="Search">
-        </form>
+<hr class="my-5">
 
-        <!-- Search form -->
-        <form class="form-inline md-form form-sm">
-            <i class="fa fa-search" aria-hidden="true"></i>
-            <input class="form-control w-25 ml-3" type="text" placeholder="Search" aria-label="Search">
-        </form>
+    <!--Section: -->
+    <section id="tabs">
 
-        <!-- Search form -->
-        <form class="form-inline md-form form-sm active-pink">
-            <i class="fa fa-search" aria-hidden="true"></i>
-            <input class="form-control w-25 ml-3" type="text" placeholder="Search" aria-label="Search">
-        </form>
+        <!--Title-->
+        <h2 class="title"><strong>Basic tabs</strong> <a href="https://mdbootstrap.com/product/material-design-for-bootstrap-pro/" target="_blank" class="btn btn-danger btn-md" role="button">MDB Pro component <i class="fa fa-diamond ml-1"></i></a></h2>
 
-        <!-- Search form -->
-        <form class="form-inline md-form form-sm active-purple">
-            <i class="fa fa-search" aria-hidden="true"></i>
-            <input class="form-control w-25 ml-3" type="text" placeholder="Search" aria-label="Search">
-        </form>
+        <!--Description-->
+        <p class="description"></p>
 
-        <!-- Search form -->
-        <form class="form-inline md-form form-sm active-cyan">
-            <i class="fa fa-search" aria-hidden="true"></i>
-            <input class="form-control w-25 ml-3" type="text" placeholder="Search" aria-label="Search">
-        </form>
+        <!--Section: Live preview-->
+        <section>
 
-        <!-- Search form -->
-        <form class="form-inline md-form form-sm">
-            <input class="form-control w-25 mr-3" type="text" placeholder="Search" aria-label="Search">
-            <i class="fa fa-search" aria-hidden="true"></i>
-        </form>
+            <div class="progress green">
+    <div class="indeterminate"></div>
+</div>
+             
 
-        <!-- Search form -->
-        <form class="form-inline md-form form-sm active-pink">
-            <input class="form-control w-25 mr-3" type="text" placeholder="Search" aria-label="Search">
-            <i class="fa fa-search" aria-hidden="true"></i>
-        </form>
+            <ul class="nav nav-tabs light-blue lighten-1">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#!">Active</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#!">Link 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#!">Link 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#!">Link 3</a>
+                </li>
+            </ul>
 
-        <!-- Search form -->
-        <form class="form-inline md-form form-sm active-purple">
-            <input class="form-control w-25 mr-3" type="text" placeholder="Search" aria-label="Search">
-            <i class="fa fa-search" aria-hidden="true"></i>
-        </form>
+        </section>
+        <!--Section: Live preview-->
 
-        <!-- Search form -->
-        <form class="form-inline md-form form-sm active-cyan">
-            <input class="form-control w-25 mr-3" type="text" placeholder="Search" aria-label="Search">
-            <i class="fa fa-search" aria-hidden="true"></i>
-        </form>
+        <!--Section: Code-->
+        <section>
+            <pre class="code-toolbar">
+                <code class="language-markup">
+&lt;ul class=&quot;nav nav-tabs light-blue lighten-1&quot;&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a class=&quot;nav-link active&quot; href=&quot;#!&quot;&gt;Active&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;&gt;Link 1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;&gt;Link 2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;&gt;Link 3&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+                </code>
+            </pre>
+        </section>
+        <!--Section: Code-->
 
-        <div class="input-group md-form form-sm form-1">
-            <span class="input-group-addon purple lighten-3" id="basic-addon1"><i class="fa fa-search text-white" aria-hidden="true"></i></span>
-            <input class="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search">
-        </div>
+    </section>
+    <!--/Section: -->
 
-        <div class="input-group md-form form-sm form-1">
-            <span class="input-group-addon cyan lighten-2" id="basic-addon1"><i class="fa fa-search text-white" aria-hidden="true"></i></span>
-            <input class="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search">
-        </div>
+    <hr class="my-5">
 
-        <div class="input-group md-form form-sm form-1">
-            <span class="input-group-addon pink lighten-3" id="basic-addon1"><i class="fa fa-search text-white" aria-hidden="true"></i></span>
-            <input class="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search">
-        </div>
+    <!--Section: -->
+    <section id="pills">
 
-        <div class="input-group md-form form-sm form-2">
-            <input class="form-control my-0 py-1 amber-border" type="text" placeholder="Search" aria-label="Search">
-            <span class="input-group-addon amber lighten-3" id="basic-addon1"><i class="fa fa-search text-grey" aria-hidden="true"></i></span>
-        </div>
+        <!--Title-->
+        <h2 class="title"><strong>Basic pills</strong> <a href="https://mdbootstrap.com/product/material-design-for-bootstrap-pro/" target="_blank" class="btn btn-danger btn-md" role="button">MDB Pro component <i class="fa fa-diamond ml-1"></i></a></h2>
 
-        <div class="input-group md-form form-sm form-2">
-            <input class="form-control my-0 py-1 lime-border" type="text" placeholder="Search" aria-label="Search">
-            <span class="input-group-addon lime lighten-2" id="basic-addon1"><i class="fa fa-search text-grey" aria-hidden="true"></i></span>
-        </div>
+        <!--Description-->
+        <p class="description"></p>
 
-        <div class="input-group md-form form-sm form-2">
-            <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search" aria-label="Search">
-            <span class="input-group-addon red lighten-3" id="basic-addon1"><i class="fa fa-search text-grey" aria-hidden="true"></i></span>
-        </div>
+        <!--Section: Live preview-->
+        <section>
 
-        <!--Navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark indigo mb-r">
+            <ul class="nav md-pills pills-unique">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#!">Active</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#!">Link 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#!">Link 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#!">Link 3</a>
+                </li>
+            </ul>
 
-            <!-- Navbar brand -->
-            <a class="navbar-brand" href="#">Navbar</a>
+        </section>
+        <!--Section: Live preview-->
 
-            <!-- Collapsible content -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!--Section: Code-->
+        <section>
+            <pre class="code-toolbar">
+                <code class="language-markup">
+&lt;ul class=&quot;nav md-pills pills-unique&quot;&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a class=&quot;nav-link active&quot; href=&quot;#!&quot;&gt;Active&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;&gt;Link 1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;&gt;Link 2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;&gt;Link 3&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+                </code>
+            </pre>
+        </section>
+        <!--Section: Code-->
 
-                <form class="form-inline ml-auto">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                    <button href="#!" class="btn btn-outline-white btn-sm my-0" type="submit">Search</button>
-                </form>
+    </section>
+    <!--/Section: -->
 
-            </div>
-            <!-- Collapsible content -->
+    <hr class="my-5">
 
-        </nav>
-        <!--/.Navbar-->
+    <!--Section: -->
+    <section id="width">
 
-        <!--Navbar-->
-        <nav class="navbar navbar-expand-lg navbar-light blue-grey lighten-5 mb-r ">
+        <!--Title-->
+        <h2 class="title"><strong>Pills filled and justified</strong> <a href="https://mdbootstrap.com/product/material-design-for-bootstrap-pro/" target="_blank" class="btn btn-danger btn-md" role="button">MDB Pro component <i class="fa fa-diamond ml-1"></i></a></h2>
 
-            <!-- Navbar brand -->
-            <a class="navbar-brand" href="#">Navbar</a>
+        <!--Description-->
+        <p class="description"></p>
 
-            <!-- Collapse button -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <!--Section: Live preview-->
+        <section>
 
-            <!-- Collapsible content -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav md-pills nav-fill">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#!">Active</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#!">Link 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#!">Link 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#!">Link 3</a>
+                </li>
+            </ul>
 
-                <!-- Links -->
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
+        </section>
+        <!--Section: Live preview-->
 
-                    <!-- Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>
+        <!--Section: Code-->
+        <section>
+            <pre class="code-toolbar">
+                <code class="language-markup">
+&lt;ul class=&quot;nav md-pills nav-fill&quot;&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a class=&quot;nav-link active&quot; href=&quot;#!&quot;&gt;Active&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;&gt;Link 1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;&gt;Link 2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;&gt;Link 3&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+                </code>
+            </pre>
+        </section>
+        <!--Section: Code-->
 
-                </ul>
-                <!-- Links -->
-
-                <!-- Search form -->
-                <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                </form>
-            </div>
-            <!-- Collapsible content -->
-
-        </nav>
-        <!--/.Navbar-->
-
-        <!--Navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark teal lighten-2 mb-r">
-
-            <!-- Navbar brand -->
-            <a class="navbar-brand" href="#">Navbar</a>
-
-            <!-- Collapsible content -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                <!-- Search form -->
-                <form class="form-inline ml-auto">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                </form>
-            </div>
-            <!-- Collapsible content -->
-
-        </nav>
-        <!--/.Navbar-->
-
-        <!--Navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark pink lighten-3 mb-r">
-
-            <!-- Navbar brand -->
-            <a class="navbar-brand" href="#">Navbar</a>
-
-            <!-- Collapsible content -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                <!-- Search form -->
-                <form class="form-inline md-form ml-auto mb-0">
-                    <input class="form-control mr-3" type="text" placeholder="Search" aria-label="Search">
-                    <i class="fa fa-search text-white" aria-hidden="true"></i>
-                </form>
-
-            </div>
-            <!-- Collapsible content -->
-
-        </nav>
-        <!--/.Navbar-->
-
-        <!--Navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-r">
-
-            <!-- Collapsible content -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                <form class="form-inline mr-auto">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-mdb-color btn-rounded btn-sm my-0" type="submit">Search</button>
-                </form>
-
-            </div>
-            <!-- Collapsible content -->
-
-            <!-- Navbar brand -->
-            <a class="navbar-brand" href="#">Navbar</a>
-
-        </nav>
-        <!--/.Navbar-->
-
-        <!--Navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary mb-r">
-
-            <!-- Collapsible content -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                <form class="form-inline mr-auto">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-white btn-rounded btn-sm my-0" type="submit">Search</button>
-                </form>
-
-            </div>
-            <!-- Collapsible content -->
-
-            <!-- Navbar brand -->
-            <a class="navbar-brand" href="#">Navbar</a>
-
-        </nav>
-        <!--/.Navbar-->
-
-        <!--Navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark mdb-color mb-r">
-
-            <!-- Collapsible content -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                <form class="form-inline mr-auto">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                    <button class="btn blue-gradient btn-rounded btn-sm my-0" type="submit">Search</button>
-                </form>
-
-            </div>
-            <!-- Collapsible content -->
-
-            <!-- Navbar brand -->
-            <a class="navbar-brand" href="#">Navbar</a>
-
-        </nav>
-        <!--/.Navbar-->
-
-        <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn blue-gradient btn-rounded btn-sm my-0" type="submit">Search</button>
-        </form>
-           <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn aqua-gradient btn-rounded btn-sm my-0" type="submit">Search</button>
-        </form>
-           <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn purple-gradient btn-rounded btn-sm my-0" type="submit">Search</button>
-        </form>
-           <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn peach-gradient btn-rounded btn-sm my-0" type="submit">Search</button>
-        </form>
-           <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success btn-rounded btn-sm my-0" type="submit">Search</button>
-        </form>
-           <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-warning btn-rounded btn-sm my-0" type="submit">Search</button>
-        </form>
-           <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-danger btn-rounded btn-sm my-0" type="submit">Search</button>
-        </form>
-           <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-primary btn-rounded btn-sm my-0" type="submit">Search</button>
-        </form>
-        <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-unique btn-rounded btn-sm my-0" type="submit">Search</button>
-        </form>
-        <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-elegant btn-rounded btn-sm my-0" type="submit">Search</button>
-        </form>
-        <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-indigo btn-rounded btn-sm my-0" type="submit">Search</button>
-        </form>
-        <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-mdb-color btn-rounded btn-sm my-0" type="submit">Search</button>
-        </form>
-
-        <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn blue-gradient btn-sm my-0" type="submit">Search</button>
-        </form>
-           <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn aqua-gradient btn-sm my-0" type="submit">Search</button>
-        </form>
-           <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn purple-gradient btn-sm my-0" type="submit">Search</button>
-        </form>
-           <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn peach-gradient btn-sm my-0" type="submit">Search</button>
-        </form>
-           <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success btn-sm my-0" type="submit">Search</button>
-        </form>
-           <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-warning btn-sm my-0" type="submit">Search</button>
-        </form>
-           <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-danger btn-sm my-0" type="submit">Search</button>
-        </form>
-           <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-primary btn-sm my-0" type="submit">Search</button>
-        </form>
-        <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-unique btn-sm my-0" type="submit">Search</button>
-        </form>
-        <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-elegant btn-sm my-0" type="submit">Search</button>
-        </form>
-        <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-indigo btn-sm my-0" type="submit">Search</button>
-        </form>
-        <form class="form-inline mr-auto">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-mdb-color btn-sm my-0" type="submit">Search</button>
-        </form>
+    </section>
+    <!--/Section: -->
         
-        
-           
-
     </div>
 
     <!-- SCRIPTS -->
@@ -473,15 +239,20 @@
 
     <script type="text/javascript">
         $(function() {
-            var selectedClass = "";
-            $(".filter").click(function(){ 
-            selectedClass = $(this).attr("data-rel"); 
-            $("#gallery").fadeTo(100, 0.1);
-                $("#gallery div").not("."+selectedClass).fadeOut().removeClass('animation');
-                    setTimeout(function() {
-                    $("."+selectedClass).fadeIn().addClass('animation');
-                    $("#gallery").fadeTo(300, 1);
-                }, 300); 
+            //  changes mouse cursor when highlighting loawer right of box
+            $(document).on('mousemove', 'textarea', function(e) {
+                var a = $(this).offset().top + $(this).outerHeight() - 16,  //  top border of bottom-right-corner-box area
+                    b = $(this).offset().left + $(this).outerWidth() - 16;  //  left border of bottom-right-corner-box area
+                $(this).css({
+                    cursor: e.pageY > a && e.pageX > b ? 'nw-resize' : ''
+                });
+            })
+            //  the following simple make the textbox "Auto-Expand" as it is typed in
+            .on('keyup', 'textarea', function(e) {
+                //  the following will help the text expand as typing takes place
+                while($(this).outerHeight() < this.scrollHeight + parseFloat($(this).css("borderTopWidth")) + parseFloat($(this).css("borderBottomWidth"))) {
+                    $(this).height($(this).height()+1);
+                };
             });
         });
     </script>

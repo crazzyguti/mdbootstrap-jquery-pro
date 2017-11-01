@@ -5,78 +5,81 @@
 
 $.fn.mdb_autocomplete = function (options) {
 
-    // Default options
-    var defaults = {
-        data: {}
+  // Default options
+  const defaults = {
+    data: {}
+  }
+
+  const ENTER_CHAR_CODE = 13
+
+  // Get options
+  options = $.extend(defaults, options)
+
+  return this.each(function () {
+
+    // text input
+    const $input = $(this)
+    let $autocomplete
+
+    // assign data from options
+    const data = options.data
+
+    if (Object.keys(data).length) {
+
+      $autocomplete = $('<ul class="mdb-autocomplete-wrap"></ul>')
+
+      $autocomplete.insertAfter($(this))
     };
 
-    // Get options
-    options = $.extend(defaults, options);
+    // Listen if key was pressed
+    $input.on('keyup', function (e) {
 
-    return this.each(function () {
+      // get value from input
+      const q = $input.val()
 
-        // text input
-        var $input = $(this);
+      $autocomplete.empty()
 
-        // assign data from options
-        var data = options.data;
+      // check if input isn't empty
+      if (q.length) {
 
-        if (Object.keys(data).length) {
+        for (let item in data) {
 
-            var $autocomplete = $('<ul class="mdb-autocomplete-wrap"></ul>');
+          // check if item contains value that we're looking for
+          if (data[item].toLowerCase().indexOf(q.toLowerCase()) !== -1) {
+            let option = $('<li>' + data[item] + '</li>');
 
-            $autocomplete.insertAfter($(this));
-        };
+            $autocomplete.append(option);
+          }
+        }
+      }
 
-        // Listen if key was pressed
-        $input.on('keyup', function (e) {
+      if (e.which === ENTER_CHAR_CODE) {
+        $autocomplete.children(":first").trigger('click');
+        $autocomplete.empty();
+      }
 
-            // get value from input
-            var q = $input.val();
-
-            $autocomplete.empty();
-
-            // check if input isn't empty
-            if (q.length) {
-
-                for (var item in data) {
-
-                    // check if item contains value that we're looking for
-                    if (data[item].toLowerCase().indexOf(q.toLowerCase()) !== -1) {
-                        var option = $('<li>' + data[item] + '</li>');
-
-                        $autocomplete.append(option);
-                    }
-                }
-            }
-
-            if (e.which == 13) {
-                $autocomplete.children(":first").trigger('click');
-                $autocomplete.empty();
-            }
-
-            if (q.length == 0) {
-                $('.mdb-autocomplete-clear').css('visibility', 'hidden');
-            } else {
-                $('.mdb-autocomplete-clear').css('visibility', 'visible');
-            }
-        });
-
-        $autocomplete.on('click', 'li', function () {
-
-            // Set input value after click
-            $input.val($(this).text());
-
-            // Clear autocomplete
-            $autocomplete.empty();
-        });
-
-        $('.mdb-autocomplete-clear').on('click', function (e) {
-            e.preventDefault();
-            $input.val('');
-            $(this).css('visibility', 'hidden');
-            $autocomplete.empty();
-            $(this).parent().find('label').removeClass('active');
-        });
+      if (q.length === 0) {
+        $('.mdb-autocomplete-clear').css('visibility', 'hidden');
+      } else {
+        $('.mdb-autocomplete-clear').css('visibility', 'visible');
+      }
     });
+
+    $autocomplete.on('click', 'li', function () {
+
+      // Set input value after click
+      $input.val($(this).text());
+
+      // Clear autocomplete
+      $autocomplete.empty();
+    });
+
+    $('.mdb-autocomplete-clear').on('click', function (e) {
+      e.preventDefault();
+      $input.val('');
+      $(this).css('visibility', 'hidden');
+      $autocomplete.empty();
+      $(this).parent().find('label').removeClass('active');
+    });
+  });
 };

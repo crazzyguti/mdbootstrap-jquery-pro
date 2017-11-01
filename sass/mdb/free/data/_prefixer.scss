@@ -18,9 +18,9 @@
 
 // Keyframes
 @mixin keyframes($animation-name) {
-@keyframes #{$animation-name} {
-  @content;
-}
+  @keyframes #{$animation-name} {
+    @content;
+  }
 }
 
 //animations

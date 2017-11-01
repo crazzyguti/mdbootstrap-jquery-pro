@@ -69,7 +69,7 @@
   }
   
   &.waves-classic.waves-light .waves-ripple {
-   background: rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.4);
   }
 }
 
@@ -113,7 +113,7 @@
 
 .waves-input-wrapper {
   border-radius: 0.2em;
-  vertical-align: bottom;
+  vertical-align: middle;
   display:inline-block;
   &.waves-button {
     padding: 0;
@@ -152,6 +152,6 @@
 a {
   &.waves-effect,
   &.waves-light {
-      display:inline-block;
+    display:inline-block;
   }
 }

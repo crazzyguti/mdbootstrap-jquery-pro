@@ -359,9 +359,9 @@ $enable_full_palette: true;
 
 @if $enable_full_palette == true {
   @each $color_name,
-  $color in $colors {
+    $color in $colors {
     @each $color_type,
-    $color_value in $color {
+      $color_value in $color {
       @if $color_type=="base" {
         .#{$color_name} {
           background-color: $color_value !important;
@@ -384,7 +384,7 @@ $enable_full_palette: true;
 
 // Shade classes
 @each $color,
-$color_value in $shades {
+  $color_value in $shades {
   .#{$color} {
     background-color: $color_value !important;
   }
@@ -978,6 +978,6 @@ $color-palette: map-merge($mdb-colors, $material-colors);
 
 @each $name, $color in $material-colors {
   .bg-#{$name} {
-  background-color: $color !important;
+    background-color: $color !important;
   }
 }
