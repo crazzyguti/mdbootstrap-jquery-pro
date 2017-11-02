@@ -17,7 +17,7 @@
   background-position: center;
   z-index: 999;
   backface-visibility: hidden;
-  overflow-y: auto;
+  overflow: hidden;
   will-change: transform;
   backface-visibility: hidden;
   transform: translateX(-105%);
@@ -25,6 +25,9 @@
   padding:0;
   @extend .white-text;
   @extend .z-depth-1;
+  > ul {
+    max-height:100vh;
+  }
   ul {
     list-style-type:none;
     li {
@@ -235,6 +238,7 @@
       top: 0;
       left: 0;
       bottom: 0;
+      z-index:-1;
       margin-bottom: -99999px;
       padding-bottom: 99999px;
     }

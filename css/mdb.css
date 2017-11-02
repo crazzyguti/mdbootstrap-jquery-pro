@@ -1,23 +1,23 @@
 /*!
  * Material Design for Bootstrap 4
- * Version: MDB PRO 4.4.1
+ * Version: MDB PRO 4.4.3
  *
  *
  * Copyright: Material Design for Bootstrap
- * http://mdbootstrap.com/
+ * https://mdbootstrap.com/
  *
- * Read the license: http://mdbootstrap.com/license/
+ * Read the license: https://mdbootstrap.com/license/
  *
  *
- * Documentation: http://mdbootstrap.com/
+ * Documentation: https://mdbootstrap.com/
  *
- * Getting started: http://mdbootstrap.com/getting-started/
+ * Getting started: https://mdbootstrap.com/getting-started/
  *
- * Tutorials: http://mdbootstrap.com/bootstrap-tutorial/
+ * Tutorials: https://mdbootstrap.com/bootstrap-tutorial/
  *
- * Templates: http://mdbootstrap.com/templates/
+ * Templates: https://mdbootstrap.com/templates/
  *
- * Support: http://mdbootstrap.com/forums/forum/support/
+ * Support: https://mdbootstrap.com/support/
  *
  * Contact: office@mdbootstrap.com 
  *
@@ -5151,7 +5151,8 @@ button:focus {
   .btn.btn-tb {
     padding: 0.3rem 1rem; }
   .btn.disabled, .btn:disabled {
-    cursor: not-allowed; }
+    cursor: not-allowed;
+    pointer-events: none; }
   .btn[class*="btn-outline-"] {
     padding-top: .76rem;
     padding-bottom: .76rem; }
@@ -7031,7 +7032,7 @@ body.scrollable {
 
 .waves-input-wrapper {
   border-radius: 0.2em;
-  vertical-align: bottom;
+  vertical-align: middle;
   display: inline-block; }
   .waves-input-wrapper.waves-button {
     padding: 0; }
@@ -7753,8 +7754,8 @@ button, html [type="button"], [type="reset"], [type="submit"] {
   border-radius: 10em; }
 
 .btn.purple-gradient {
-  background: -webkit-linear-gradient(50deg, #ff6ec4, #7873f5);
-  background: linear-gradient(40deg, #ff6ec4, #7873f5);
+  background: -webkit-linear-gradient(50deg, #ff6ec4, #7873f5) !important;
+  background: linear-gradient(40deg, #ff6ec4, #7873f5) !important;
   -webkit-transition: .5s ease;
   transition: .5s ease; }
   .btn.purple-gradient:hover, .btn.purple-gradient:focus, .btn.purple-gradient:active,
@@ -7763,8 +7764,8 @@ button, html [type="button"], [type="reset"], [type="submit"] {
     background: linear-gradient(40deg, #ff88ce, #8f8bf7); }
 
 .btn.peach-gradient {
-  background: -webkit-linear-gradient(50deg, #FFD86F, #FC6262);
-  background: linear-gradient(40deg, #FFD86F, #FC6262);
+  background: -webkit-linear-gradient(50deg, #FFD86F, #FC6262) !important;
+  background: linear-gradient(40deg, #FFD86F, #FC6262) !important;
   -webkit-transition: .5s ease;
   transition: .5s ease; }
   .btn.peach-gradient:hover, .btn.peach-gradient:focus, .btn.peach-gradient:active,
@@ -7773,8 +7774,8 @@ button, html [type="button"], [type="reset"], [type="submit"] {
     background: linear-gradient(40deg, #ffdf89, #fc7b7b); }
 
 .btn.aqua-gradient {
-  background: -webkit-linear-gradient(50deg, #2096ff, #05ffa3);
-  background: linear-gradient(40deg, #2096ff, #05ffa3);
+  background: -webkit-linear-gradient(50deg, #2096ff, #05ffa3) !important;
+  background: linear-gradient(40deg, #2096ff, #05ffa3) !important;
   -webkit-transition: .5s ease;
   transition: .5s ease; }
   .btn.aqua-gradient:hover, .btn.aqua-gradient:focus, .btn.aqua-gradient:active,
@@ -7783,8 +7784,8 @@ button, html [type="button"], [type="reset"], [type="submit"] {
     background: linear-gradient(40deg, #3aa2ff, #1fffac); }
 
 .btn.blue-gradient {
-  background: -webkit-linear-gradient(50deg, #45cafc, #303f9f);
-  background: linear-gradient(40deg, #45cafc, #303f9f);
+  background: -webkit-linear-gradient(50deg, #45cafc, #303f9f) !important;
+  background: linear-gradient(40deg, #45cafc, #303f9f) !important;
   -webkit-transition: .5s ease;
   transition: .5s ease; }
   .btn.blue-gradient:hover, .btn.blue-gradient:focus, .btn.blue-gradient:active,
@@ -10301,7 +10302,7 @@ input[type=range] {
   z-index: 999;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  overflow-y: auto;
+  overflow: hidden;
   will-change: transform;
   backface-visibility: hidden;
   -webkit-transform: translateX(-105%);
@@ -10309,6 +10310,8 @@ input[type=range] {
   transform: translateX(-105%);
   list-style-type: none;
   padding: 0; }
+  .side-nav > ul {
+    max-height: 100vh; }
   .side-nav ul {
     list-style-type: none; }
     .side-nav ul li {
@@ -10477,6 +10480,7 @@ input[type=range] {
       top: 0;
       left: 0;
       bottom: 0;
+      z-index: -1;
       margin-bottom: -99999px;
       padding-bottom: 99999px; }
   .side-nav.fixed {
@@ -11651,6 +11655,8 @@ button.toast-close-button {
   .ps.ps--active-y > .ps__scrollbar-y-rail {
     display: block;
     background-color: transparent; }
+  .ps.ps--active-y > .ps__scrollbar-y-rail {
+    top: 0 !important; }
   .ps.ps--in-scrolling.ps--x > .ps__scrollbar-x-rail {
     background-color: #eee;
     opacity: 0.9; }

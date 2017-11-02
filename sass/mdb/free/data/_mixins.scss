@@ -139,7 +139,7 @@
 
 @mixin make-gradient-button($name, $value) {
   .btn.#{$name}-gradient {
-    background: linear-gradient(40deg, map-get($value, start), map-get($value, end));
+    background: linear-gradient(40deg, map-get($value, start), map-get($value, end)) !important;
     transition:.5s ease;
     &:hover,
     &:focus,
