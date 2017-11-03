@@ -51,22 +51,25 @@
             <div class="card-body text-center">
 
               <!--Title-->
-              <h4 class="card-title"><strong>Post title something something</strong></h4>
-              <h5>by <a href="" class="indigo-text">Michal Szymanski</a>, May 8th, 2017</h5>
+              <h4 class="card-title">
+                <strong>Post title something something</strong>
+              </h4>
+              <h5>by
+                <a href="" class="indigo-text">Michal Szymanski</a>, May 8th, 2017</h5>
 
               <div class="mt-4">
                 <!--Facebook-->
                 <a class="btn btn-fb btn-md">
-                    <i class="fa fa-facebook"></i>
-                    facebook
+                  <i class="fa fa-facebook"></i>
+                  facebook
                 </a>
                 <span class="counter">22</span>
 
                 <span class="mx-2 hidden-md-down"></span>
 
                 <a class="btn btn-outline-primary btn-md">
-                    <i class="fa fa-comments-o"></i>
-                    comments
+                  <i class="fa fa-comments-o"></i>
+                  comments
                 </a>
                 <span class="counter">22</span>
               </div>
@@ -79,29 +82,111 @@
 
           <!--Tutorial content here-->
 
-          <!--Card-->
-          <div class="card card-cascade narrower">
+          <p class="h5 my-4">Step 1 - basic structure</p>
 
-            <!--Card image-->
-            <div class="view overlay hm-white-slight">
-              <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%287%29.jpg" class="img-fluid" alt="">
-              <a href="#">
-                <div class="mask"></div>
-              </a>
-            </div>
+          <p>Similarly to the previous tutorial, at the beginning, we'll create a basic structure of our project.</p>
 
-            <!--Card content-->
-            <div class="card-body">
-              <!--Title-->
-              <h4 class="card-title">Card title</h4>
-              <!--Text-->
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Button</a>
-            </div>
+          <p>Open index.html file in your project folder (the folder where you have unzipped MDB package) and
+            <strong>paste the following code below</strong>
+            <code>body</code> tag:</p>
 
-          </div>
-          <!--/.Card-->
+          <pre class="code-toolbar"><code class="language-markup">
+&lt;!--Main Navigation--&gt;&#13;&#10;&lt;header&gt;&#13;&#10;&#13;&#10;&lt;/header&gt;&#13;&#10;&lt;!--Main Navigation--&gt;&#13;&#10;&#13;&#10;&lt;!--Main layout--&gt;&#13;&#10;&lt;main&gt;&#13;&#10;&#13;&#10;&lt;/main&gt;&#13;&#10;&lt;!--Main layout--&gt;&#13;&#10;&#13;&#10;&lt;!--Footer--&gt;&#13;&#10;&lt;footer&gt;&#13;&#10;&#13;&#10;&lt;/footer&gt;&#13;&#10;&lt;!--Footer--&gt; 
+          </code></pre>
 
+          <p class="h5 my-4">Step 2 - side navigation</p>
+
+          <p>Go to the
+            <a href="https://mdbootstrap.com/javascript/sidenav/#usage">JavaScript/SideNav documentation</a>, copy the code of Basic Example and paste it between the
+            <code>header</code> tags:</p>
+
+          <pre class="code-toolbar"><code class="language-markup">
+&lt;!--Main Navigation--&gt;&#13;&#10;&lt;header&gt;&#13;&#10;&#13;&#10;  &lt;!-- SideNav slide-out button --&gt;&#13;&#10;  &lt;a href=&quot;#&quot; data-activates=&quot;slide-out&quot; class=&quot;btn btn-primary p-3 button-collapse&quot;&gt;&#13;&#10;      &lt;i class=&quot;fa fa-bars&quot;&gt;&lt;/i&gt;&#13;&#10;  &lt;/a&gt;&#13;&#10;&#13;&#10;  &lt;!-- Sidebar navigation --&gt;&#13;&#10;  &lt;div id=&quot;slide-out&quot; class=&quot;side-nav fixed&quot;&gt;&#13;&#10;      &lt;ul class=&quot;custom-scrollbar list-unstyled&quot;&gt;&#13;&#10;          &lt;!-- Logo --&gt;&#13;&#10;          &lt;li&gt;&#13;&#10;              &lt;div class=&quot;logo-wrapper waves-light&quot;&gt;&#13;&#10;                  &lt;a href=&quot;#&quot;&gt;&#13;&#10;                      &lt;img src=&quot;https://mdbootstrap.com/img/logo/mdb-transparent.png&quot; class=&quot;img-fluid flex-center&quot;&gt;&#13;&#10;                  &lt;/a&gt;&#13;&#10;              &lt;/div&gt;&#13;&#10;          &lt;/li&gt;&#13;&#10;          &lt;!--/. Logo --&gt;&#13;&#10;          &lt;!--Social--&gt;&#13;&#10;          &lt;li&gt;&#13;&#10;              &lt;ul class=&quot;social&quot;&gt;&#13;&#10;                  &lt;li&gt;&#13;&#10;                      &lt;a href=&quot;#&quot; class=&quot;icons-sm fb-ic&quot;&gt;&#13;&#10;                          &lt;i class=&quot;fa fa-facebook&quot;&gt; &lt;/i&gt;&#13;&#10;                      &lt;/a&gt;&#13;&#10;                  &lt;/li&gt;&#13;&#10;                  &lt;li&gt;&#13;&#10;                      &lt;a href=&quot;#&quot; class=&quot;icons-sm pin-ic&quot;&gt;&#13;&#10;                          &lt;i class=&quot;fa fa-pinterest&quot;&gt; &lt;/i&gt;&#13;&#10;                      &lt;/a&gt;&#13;&#10;                  &lt;/li&gt;&#13;&#10;                  &lt;li&gt;&#13;&#10;                      &lt;a href=&quot;#&quot; class=&quot;icons-sm gplus-ic&quot;&gt;&#13;&#10;                          &lt;i class=&quot;fa fa-google-plus&quot;&gt; &lt;/i&gt;&#13;&#10;                      &lt;/a&gt;&#13;&#10;                  &lt;/li&gt;&#13;&#10;                  &lt;li&gt;&#13;&#10;                      &lt;a href=&quot;#&quot; class=&quot;icons-sm tw-ic&quot;&gt;&#13;&#10;                          &lt;i class=&quot;fa fa-twitter&quot;&gt; &lt;/i&gt;&#13;&#10;                      &lt;/a&gt;&#13;&#10;                  &lt;/li&gt;&#13;&#10;              &lt;/ul&gt;&#13;&#10;          &lt;/li&gt;&#13;&#10;          &lt;!--/Social--&gt;&#13;&#10;          &lt;!--Search Form--&gt;&#13;&#10;          &lt;li&gt;&#13;&#10;              &lt;form class=&quot;search-form&quot; role=&quot;search&quot;&gt;&#13;&#10;                  &lt;div class=&quot;form-group waves-light&quot;&gt;&#13;&#10;                      &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Search&quot;&gt;&#13;&#10;                  &lt;/div&gt;&#13;&#10;              &lt;/form&gt;&#13;&#10;          &lt;/li&gt;&#13;&#10;          &lt;!--/.Search Form--&gt;&#13;&#10;          &lt;!-- Side navigation links --&gt;&#13;&#10;          &lt;li&gt;&#13;&#10;              &lt;ul class=&quot;collapsible collapsible-accordion&quot;&gt;&#13;&#10;                  &lt;li&gt;&#13;&#10;                      &lt;a class=&quot;collapsible-header waves-effect arrow-r&quot;&gt;&#13;&#10;                          &lt;i class=&quot;fa fa-chevron-right&quot;&gt;&lt;/i&gt; Submit blog&#13;&#10;                          &lt;i class=&quot;fa fa-angle-down rotate-icon&quot;&gt;&lt;/i&gt;&#13;&#10;                      &lt;/a&gt;&#13;&#10;                      &lt;div class=&quot;collapsible-body&quot;&gt;&#13;&#10;                          &lt;ul&gt;&#13;&#10;                              &lt;li&gt;&#13;&#10;                                  &lt;a href=&quot;#&quot; class=&quot;waves-effect&quot;&gt;Submit listing&lt;/a&gt;&#13;&#10;                              &lt;/li&gt;&#13;&#10;                              &lt;li&gt;&#13;&#10;                                  &lt;a href=&quot;#&quot; class=&quot;waves-effect&quot;&gt;Registration form&lt;/a&gt;&#13;&#10;                              &lt;/li&gt;&#13;&#10;                          &lt;/ul&gt;&#13;&#10;                      &lt;/div&gt;&#13;&#10;                  &lt;/li&gt;&#13;&#10;                  &lt;li&gt;&#13;&#10;                      &lt;a class=&quot;collapsible-header waves-effect arrow-r&quot;&gt;&#13;&#10;                          &lt;i class=&quot;fa fa-hand-pointer-o&quot;&gt;&lt;/i&gt; Instruction&#13;&#10;                          &lt;i class=&quot;fa fa-angle-down rotate-icon&quot;&gt;&lt;/i&gt;&#13;&#10;                      &lt;/a&gt;&#13;&#10;                      &lt;div class=&quot;collapsible-body&quot;&gt;&#13;&#10;                          &lt;ul&gt;&#13;&#10;                              &lt;li&gt;&#13;&#10;                                  &lt;a href=&quot;#&quot; class=&quot;waves-effect&quot;&gt;For bloggers&lt;/a&gt;&#13;&#10;                              &lt;/li&gt;&#13;&#10;                              &lt;li&gt;&#13;&#10;                                  &lt;a href=&quot;#&quot; class=&quot;waves-effect&quot;&gt;For authors&lt;/a&gt;&#13;&#10;                              &lt;/li&gt;&#13;&#10;                          &lt;/ul&gt;&#13;&#10;                      &lt;/div&gt;&#13;&#10;                  &lt;/li&gt;&#13;&#10;                  &lt;li&gt;&#13;&#10;                      &lt;a class=&quot;collapsible-header waves-effect arrow-r&quot;&gt;&#13;&#10;                          &lt;i class=&quot;fa fa-eye&quot;&gt;&lt;/i&gt; About&#13;&#10;                          &lt;i class=&quot;fa fa-angle-down rotate-icon&quot;&gt;&lt;/i&gt;&#13;&#10;                      &lt;/a&gt;&#13;&#10;                      &lt;div class=&quot;collapsible-body&quot;&gt;&#13;&#10;                          &lt;ul&gt;&#13;&#10;                              &lt;li&gt;&#13;&#10;                                  &lt;a href=&quot;#&quot; class=&quot;waves-effect&quot;&gt;Introduction&lt;/a&gt;&#13;&#10;                              &lt;/li&gt;&#13;&#10;                              &lt;li&gt;&#13;&#10;                                  &lt;a href=&quot;#&quot; class=&quot;waves-effect&quot;&gt;Monthly meetings&lt;/a&gt;&#13;&#10;                              &lt;/li&gt;&#13;&#10;                          &lt;/ul&gt;&#13;&#10;                      &lt;/div&gt;&#13;&#10;                  &lt;/li&gt;&#13;&#10;                  &lt;li&gt;&#13;&#10;                      &lt;a class=&quot;collapsible-header waves-effect arrow-r&quot;&gt;&#13;&#10;                          &lt;i class=&quot;fa fa-envelope-o&quot;&gt;&lt;/i&gt; Contact me&#13;&#10;                          &lt;i class=&quot;fa fa-angle-down rotate-icon&quot;&gt;&lt;/i&gt;&#13;&#10;                      &lt;/a&gt;&#13;&#10;                      &lt;div class=&quot;collapsible-body&quot;&gt;&#13;&#10;                          &lt;ul&gt;&#13;&#10;                              &lt;li&gt;&#13;&#10;                                  &lt;a href=&quot;#&quot; class=&quot;waves-effect&quot;&gt;FAQ&lt;/a&gt;&#13;&#10;                              &lt;/li&gt;&#13;&#10;                              &lt;li&gt;&#13;&#10;                                  &lt;a href=&quot;#&quot; class=&quot;waves-effect&quot;&gt;Write a message&lt;/a&gt;&#13;&#10;                              &lt;/li&gt;&#13;&#10;                              &lt;li&gt;&#13;&#10;                                  &lt;a href=&quot;#&quot; class=&quot;waves-effect&quot;&gt;FAQ&lt;/a&gt;&#13;&#10;                              &lt;/li&gt;&#13;&#10;                              &lt;li&gt;&#13;&#10;                                  &lt;a href=&quot;#&quot; class=&quot;waves-effect&quot;&gt;Write a message&lt;/a&gt;&#13;&#10;                              &lt;/li&gt;&#13;&#10;                              &lt;li&gt;&#13;&#10;                                  &lt;a href=&quot;#&quot; class=&quot;waves-effect&quot;&gt;FAQ&lt;/a&gt;&#13;&#10;                              &lt;/li&gt;&#13;&#10;                              &lt;li&gt;&#13;&#10;                                  &lt;a href=&quot;#&quot; class=&quot;waves-effect&quot;&gt;Write a message&lt;/a&gt;&#13;&#10;                              &lt;/li&gt;&#13;&#10;                              &lt;li&gt;&#13;&#10;                                  &lt;a href=&quot;#&quot; class=&quot;waves-effect&quot;&gt;FAQ&lt;/a&gt;&#13;&#10;                              &lt;/li&gt;&#13;&#10;                              &lt;li&gt;&#13;&#10;                                  &lt;a href=&quot;#&quot; class=&quot;waves-effect&quot;&gt;Write a message&lt;/a&gt;&#13;&#10;                              &lt;/li&gt;&#13;&#10;                          &lt;/ul&gt;&#13;&#10;                      &lt;/div&gt;&#13;&#10;                  &lt;/li&gt;&#13;&#10;              &lt;/ul&gt;&#13;&#10;          &lt;/li&gt;&#13;&#10;          &lt;!--/. Side navigation links --&gt;&#13;&#10;      &lt;/ul&gt;&#13;&#10;  &lt;/div&gt;&#13;&#10;  &lt;!--/. Sidebar navigation --&gt;&#13;&#10;&#13;&#10;&lt;/header&gt;&#13;&#10;&lt;!--Main Navigation--&gt;
+          </code></pre>
+
+          <p>After saving the file and refreshing the browser you will notice an impressive dark navigation on the left side.</p>
+
+          <p>Resize browser window to the mobile size and the SideNav disappears. The problem is the hamburger button which
+            should trigger SideNav and makes it visible doesn't work.</p>
+
+          <p>That's because we have to initialize it first.</p>
+
+          <p>Initialization means calling the proper javascript function.</p>
+
+          <p class="h5 my-4">Step 3 - SideNav initialization</p>
+
+          <p>In the scripts section (at the bottom of the document), below MDB files, place the following code:</p>
+
+          <pre class="code-toolbar"><code class="language-markup">
+&lt;!-- Initializations --&gt;&#13;&#10;&lt;script&gt;&#13;&#10;  // SideNav Initialization&#13;&#10;  $(&quot;.button-collapse&quot;).sideNav();&#13;&#10;&lt;/script&gt;
+          </code></pre>
+
+          <p>Save the file and refresh the browser. Now the hamburger button should work as expected.</p>
+
+          <p class="h5 my-4">Step 4 - Navbar</p>
+
+          <p>Admin dashboards are complicated constructions because they have to manage multiple functionalities and data.</p>
+
+          <p>That's why they require an advanced navigation.</p>
+
+          <p>We usually use so-called "double navigation" - the connection of SideNav and Navbar.</p>
+
+          <p>In our current project, we already have the SideNav. Now we'll take care of Navbar.</p>
+
+          <p>But first remove the code of
+            <strong>Slide-out button</strong>. We don't need it, because we'll manage the SideNav other way.</p>
+
+          <p>
+            <strong>Remove it:</strong>
+          </p>
+
+          <pre class="code-toolbar"><code class="language-markup">
+&lt;!-- SideNav slide-out button --&gt;&#13;&#10;&lt;a href=&quot;#&quot; data-activates=&quot;slide-out&quot; class=&quot;btn btn-primary p-3 button-collapse&quot;&gt;&#13;&#10;  &lt;i class=&quot;fa fa-bars&quot;&gt;&lt;/i&gt;&#13;&#10;&lt;/a&gt;
+          </code></pre>
+
+          <p>Now go to
+            <a href="https://mdbootstrap.com/components/navbar/#basic-example">Components/Navbar documentation</a> and copy the code of Basic Example.</p>
+
+          <p>Then place it above the SideNav:</p>
+
+          <pre class="code-toolbar"><code class="language-markup">
+&lt;!--Navbar--&gt;&#13;&#10;&lt;nav class=&quot;navbar navbar-expand-lg navbar-dark indigo&quot;&gt;&#13;&#10;&#13;&#10;    &lt;!-- Navbar brand --&gt;&#13;&#10;    &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;Navbar&lt;/a&gt;&#13;&#10;&#13;&#10;    &lt;!-- Collapse button --&gt;&#13;&#10;    &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#navbarSupportedContent&quot; aria-controls=&quot;navbarSupportedContent&quot;&#13;&#10;        aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;&lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;&lt;/button&gt;&#13;&#10;&#13;&#10;    &lt;!-- Collapsible content --&gt;&#13;&#10;    &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarSupportedContent&quot;&gt;&#13;&#10;&#13;&#10;        &lt;!-- Links --&gt;&#13;&#10;        &lt;ul class=&quot;navbar-nav mr-auto&quot;&gt;&#13;&#10;            &lt;li class=&quot;nav-item active&quot;&gt;&#13;&#10;                &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Home &lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/a&gt;&#13;&#10;            &lt;/li&gt;&#13;&#10;            &lt;li class=&quot;nav-item&quot;&gt;&#13;&#10;                &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Features&lt;/a&gt;&#13;&#10;            &lt;/li&gt;&#13;&#10;            &lt;li class=&quot;nav-item&quot;&gt;&#13;&#10;                &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Pricing&lt;/a&gt;&#13;&#10;            &lt;/li&gt;&#13;&#10;&#13;&#10;            &lt;!-- Dropdown --&gt;&#13;&#10;            &lt;li class=&quot;nav-item dropdown&quot;&gt;&#13;&#10;                &lt;a class=&quot;nav-link dropdown-toggle&quot; id=&quot;navbarDropdownMenuLink&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Dropdown&lt;/a&gt;&#13;&#10;                &lt;div class=&quot;dropdown-menu dropdown-primary&quot; aria-labelledby=&quot;navbarDropdownMenuLink&quot;&gt;&#13;&#10;                    &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action&lt;/a&gt;&#13;&#10;                    &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Another action&lt;/a&gt;&#13;&#10;                    &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&#13;&#10;                &lt;/div&gt;&#13;&#10;            &lt;/li&gt;&#13;&#10;&#13;&#10;        &lt;/ul&gt;&#13;&#10;        &lt;!-- Links --&gt;&#13;&#10;&#13;&#10;        &lt;!-- Search form --&gt;&#13;&#10;        &lt;form class=&quot;form-inline&quot;&gt;&#13;&#10;            &lt;input class=&quot;form-control mr-sm-2&quot; type=&quot;text&quot; placeholder=&quot;Search&quot; aria-label=&quot;Search&quot;&gt;&#13;&#10;        &lt;/form&gt;&#13;&#10;    &lt;/div&gt;&#13;&#10;    &lt;!-- Collapsible content --&gt;&#13;&#10;&#13;&#10;&lt;/nav&gt;&#13;&#10;&lt;!--/.Navbar--&gt;
+          </code></pre>
+
+          <p>Save the file and refresh the browser. You will notice the SideNav covers the left part of the Navbar.</p>
+
+          <p>SideNav has
+            <code>fixed</code> position. That means it will be always visible in the same place over any other content.</p>
+
+          <p>In order to resolve the resulting problems, we have to set a right padding to
+            <code>main</code>,
+            <code>header</code> and
+            <code>footer</code>. Thanks to that any content inside these elements will be pushed out of the scope of the SideNav.</p>
+
+          <p>The SideNav is 240 px wide, so we have to add
+            <code>padding-right: 240 px</code> to the
+            <code>main</code>,
+            <code>header</code> and
+            <code>footer</code>.</p>
+
+          <p>We could do it via CSS but thanks to MDB it's much easier. </p>
+
+          <p>Add
+            <code>.fixed-sn</code> class to the
+            <code>body</code> element and
+            <code>.double-nav</code> class to the
+            <code>.navbar</code>.</p>
+
+
+
+          <pre class="code-toolbar"><code class="language-markup">
+&lt;body class=&quot;fixed-sn&quot;&gt;
+                          </code></pre>
+
+
+          <pre class="code-toolbar"><code class="language-markup">
+&lt;nav class=&quot;navbar navbar-expand-lg navbar-dark indigo double-nav&quot;&gt;
+            </code></pre>
           <!--Tutorial content here-->
 
           <hr class="mt-5">
@@ -111,9 +196,15 @@
 
             <p>If something doesn’t work as expected, you can download a final code for this lesson here:</p>
 
-            <a role="button" href="" class="btn btn-outline-primary btn-rounded">Download<i class="fa fa-download ml-1"></i></a>
-            <a role="button" href="" class="btn btn-outline-primary">Live preview<i class="fa fa-eye ml-1"></i></a>
-            <a role="button" href="" class="btn btn-primary">Next lesson<i class="fa fa-arrow-right ml-1"></i></a>
+            <a role="button" href="" class="btn btn-outline-primary btn-rounded">Download
+              <i class="fa fa-download ml-1"></i>
+            </a>
+            <a role="button" href="" class="btn btn-outline-primary">Live preview
+              <i class="fa fa-eye ml-1"></i>
+            </a>
+            <a role="button" href="" class="btn btn-primary">Next lesson
+              <i class="fa fa-arrow-right ml-1"></i>
+            </a>
 
           </section>
           <!--Section: Tutorial UI-->
@@ -126,11 +217,14 @@
             <p>Do you want to share?</p>
 
             <!--Facebook-->
-            <a role="button" class="btn-floating btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+            <a role="button" class="btn-floating btn-fb">
+              <i class="fa fa-facebook"></i> Facebook</a>
             <!--Twitter-->
-            <a role="button" class="btn-floating btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
+            <a role="button" class="btn-floating btn-tw">
+              <i class="fa fa-twitter"></i> Twitter</a>
             <!--Google +-->
-            <a role="button" class="btn-floating btn-gplus"><i class="fa fa-google-plus left"></i> Google +</a>
+            <a role="button" class="btn-floating btn-gplus">
+              <i class="fa fa-google-plus left"></i> Google +</a>
 
           </section>
           <!--Section: Share buttons-->
