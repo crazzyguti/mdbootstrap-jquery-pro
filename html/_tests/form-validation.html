@@ -102,10 +102,8 @@
             $('#Form-email1').on('keyup', function() {
                 if($('#Form-email1').val().match(re)) {
                     $('#status').html('<span class="green-text"><i class="fa fa-check ml-2"></i> Email is valid</span>');
-                    console.log('valid')
                 } else {
                     $('#status').html('<span class="red-text"><i class="fa fa-times ml-2"></i> Email is not valid</span>');
-                    console.log('invalid')
                 }
             });
 
