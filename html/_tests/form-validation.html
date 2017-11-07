@@ -85,7 +85,7 @@
             content: function(e) {
                 return $('<span id="status"><span class="red-text"><i class="fa fa-times ml-2"></i> Email is not valid</span></span>');
             },
-            template: '<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
+            template: '<div class="popover d-none d-lg-block" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
         })
 
         $('#Form-pass1').popover({
@@ -95,7 +95,7 @@
             content: function(e) {
                 return $('<span id="pass-letters"><span class="red-text"><i class="fa fa-times ml-2"></i> At least one letter</span></span><br/><span id="pass-capitals"><span class="red-text"><i class="fa fa-times ml-2"></i> At least one capital letter</span></span><br/><span id="pass-numbers"><span class="red-text"><i class="fa fa-times ml-2"></i> At least one number</span></span><br/><span id="pass-length"><span class="red-text"><i class="fa fa-times ml-2"></i> At least 6 characters</span></span>');
             },
-            template: '<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
+            template: '<div class="popover d-none d-lg-block" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
         })
 
         $(function() {
