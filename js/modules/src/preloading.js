@@ -2,7 +2,7 @@
 
 $(document).ready(() => {
   $('#preloader-markup').load('mdb-addons/preloader.html', () => {
-    $(window).load(() => {
+    $(window).on('load', () => {
       $('#mdb-preloader').fadeOut('slow')
     })
   })
