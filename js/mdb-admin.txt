@@ -7,6 +7,7 @@ scrolling-navbar.js
 waves.js
 forms-free.js
 cards.js
+smooth-scroll.js
 toastr.js
 dropdown.js
 buttons.js
