@@ -14,6 +14,16 @@
   <link rel="stylesheet" href="../../css/mdb.css">
   <!-- Your custom styles (optional) -->
   <style>
+    .border-dark {
+      border-color: #d2d2d2 !important;
+      background: #fff;
+    }
+    .primary-text {
+      color: #4285F4;
+    }
+    body {
+      background-color: #f1f1f5;
+    }
   </style>
 </head>
 
@@ -51,7 +61,7 @@
                     <div class="modal-c-tabs">
 
                       <!-- Nav tabs -->
-                      <ul class="nav nav-tabs tabs-2 light-blue darken-3" role="tablist">
+                      <ul class="nav nav-tabs tabs-2 primary-color" role="tablist">
                         <li class="nav-item">
                           <a class="nav-link active" data-toggle="tab" href="#panel77" role="tab">
                             <i class="fa fa-user mr-1"></i> Public info</a>
@@ -296,7 +306,7 @@
                   <div class="modal-content">
 
                     <!--Header-->
-                    <div class="modal-header light-blue darken-3 white-text">
+                    <div class="modal-header primary-color white-text">
                       <h4 class="title">
                         <i class="fa fa-newspaper-o"></i> New message</h4>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -323,7 +333,7 @@
 
                       <!--Message-->
                       <div class="md-form">
-                        <textarea type="text" id="modalFeedback2" class="md-textarea" style="height: 300px;"></textarea>
+                        <textarea type="text" id="modalFeedback2" class="md-textarea" style="height: 150px;"></textarea>
                         <label for="modalFeedback2">Your message</label>
                       </div>
 
@@ -352,7 +362,7 @@
                   <div class="modal-content">
 
                     <!--Header-->
-                    <div class="modal-header light-blue darken-3 white-text">
+                    <div class="modal-header primary-color white-text">
                       <h4 class="title">
                         <i class="fa fa-newspaper-o"></i> Bootstrap Master</h4>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -392,7 +402,7 @@
                   <div class="modal-content">
 
                     <!--Header-->
-                    <div class="modal-header light-blue darken-3 white-text">
+                    <div class="modal-header primary-color white-text">
                       <h4 class="title">
                         <i class="fa fa-envelope-o"></i> New Message</h4>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -434,7 +444,7 @@
                   <div class="modal-content">
 
                     <!--Header-->
-                    <div class="modal-header light-blue darken-3 white-text">
+                    <div class="modal-header primary-color white-text">
                       <h4 class="title">
                         <i class="fa fa-newspaper-o"></i> Submit new project</h4>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -492,22 +502,8 @@
             <!--Section: Tabs-->
             <section>
 
-              <!-- Action button -->
-              <div class="text-center my-4">
-                <a class="btn btn-primary btn-lg" href="" role="button" data-toggle="modal" data-target="#modalEditProfile">Edit your profile
-                  <i class="fa fa-pencil ml-2"></i>
-                </a>
-                <a class="btn btn-outline-primary btn-lg" href="" role="button" data-toggle="modal" data-target="#modalFeedback">Send idea, feedback or bug
-                  <i class="fa fa-paper-plane ml-2"></i>
-                </a>
-                <a class="btn btn-outline-primary btn-rounded btn-lg" href="" role="button">Log out
-                  <i class="fa fa-sign-out ml-2"></i>
-                </a>
-              </div>
-              <!-- Action button -->
-
               <!-- Nav tabs -->
-              <ul class="nav nav-tabs nav-justified light-blue lighten-2" role="tablist">
+              <ul class="nav nav-tabs nav-justified mdb-color lighten-2 mb-5" role="tablist">
 
                 <li class="nav-item">
                   <a class="nav-link active" data-toggle="tab" href="#mainProfile1" role="tab">Profile
@@ -563,26 +559,32 @@
                           <h5>Web designer at
                             <a href="">MDBootstrap</a>
                           </h5>
-                          <p>Warsaw, Poland</p>
+                          <p class="grey-text mb-4">Warsaw, Poland</p>
 
                           <!-- Social -->
-                          <a type="button" class="btn-floating btn-small light-blue lighten-2">
-                            <i class="fa fa-facebook"></i>
+                          <a class="icons-sm fb-ic">
+                            <i class="fa fa-facebook primary-text"> </i>
                           </a>
-                          <a type="button" class="btn-floating btn-small light-blue lighten-2">
-                            <i class="fa fa-twitter"></i>
+                          <a class="icons-sm tw-ic">
+                            <i class="fa fa-twitter primary-text"> </i>
                           </a>
-                          <a type="button" class="btn-floating btn-small light-blue lighten-2">
-                            <i class="fa fa-linkedin"></i>
+                          <a class="icons-sm gplus-ic">
+                            <i class="fa fa-google-plus primary-text"> </i>
+                          </a>
+                          <a class="icons-sm email-ic">
+                            <i class="fa fa-envelope primary-text"> </i>
                           </a>
 
                           <!--Text-->
-                          <p class="card-text mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <p class="card-text mt-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 
-                          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalContactUser">Contact
-                            <i class="fa fa-paper-plane ml-2"></i>
-                          </button>
-                        </div>
+                          <a class="btn btn-primary btn-md" href="" role="button" data-toggle="modal" data-target="#modalEditProfile">Edit profile
+                            <i class="fa fa-pencil ml-2"></i>
+                          </a>
+                          <a class="btn btn-mdb btn-md" href="" role="button" data-toggle="modal" data-target="#modalEditProfile">Log out
+                            <i class="fa fa-sign-out ml-2"></i>
+                          </a>
+
 
                       </section>
                       <!--Section: Basic Info-->
@@ -597,16 +599,18 @@
 
                           <hr class="my-3">
 
-                          <button type="button" class="btn btn-purple btn-md px-3" data-toggle="modal" data-target="#modalAchievment">Bootstrap Master</button>
-                          <button type="button" class="btn btn-primary btn-md px-3" data-toggle="modal" data-target="#modalAchievment">WordPress Master</button>
-                          <button type="button" class="btn btn-default btn-md px-3" data-toggle="modal" data-target="#modalAchievment">Angular Master</button>
-                          <button type="button" class="btn btn-unique btn-md px-3" data-toggle="modal" data-target="#modalAchievment">MDB Expert</button>
-                          <button type="button" class="btn btn-deep-purple btn-md px-3" data-toggle="modal" data-target="#modalAchievment">Community contributor</button>
-                          <button type="button" class="btn btn-indigo btn-md px-3" data-toggle="modal" data-target="#modalAchievment">MDB Pro User</button>
-                          <button type="button" class="btn btn-cyan btn-md px-3" data-toggle="modal" data-target="#modalAchievment">MDB contributor</button>
-                          <button type="button" class="btn btn-dark-green btn-md px-3" data-toggle="modal" data-target="#modalAchievment">MDB partner</button>
-                          <button type="button" class="btn btn-deep-orange btn-md px-3" data-toggle="modal" data-target="#modalAchievment">BrandFlow expert</button>
-                          <button type="button" class="btn btn-amber btn-md px-3" data-toggle="modal" data-target="#modalAchievment">Creator</button>
+                          <button type="button" class="btn btn-purple btn-sm btn-rounded px-2" data-toggle="modal" data-target="#modalAchievment">Bootstrap Master</button>
+                          <button type="button" class="btn btn-primary btn-sm btn-rounded px-2" data-toggle="modal" data-target="#modalAchievment">WordPress Master</button>
+                          <button type="button" class="btn btn-default btn-sm btn-rounded px-2" data-toggle="modal" data-target="#modalAchievment">Angular Master</button>
+                          <button type="button" class="btn btn-unique btn-sm btn-rounded px-2" data-toggle="modal" data-target="#modalAchievment">MDB Expert</button>
+                          <button type="button" class="btn btn-light-blue btn-sm btn-rounded px-2" data-toggle="modal" data-target="#modalAchievment">Creator</button>
+                          <button type="button" class="btn btn-deep-purple btn-sm btn-rounded px-2" data-toggle="modal" data-target="#modalAchievment">Community contributor</button>
+                          <button type="button" class="btn btn-deep-orange btn-sm btn-rounded px-2" data-toggle="modal" data-target="#modalAchievment">BrandFlow expert</button>
+                          <button type="button" class="btn btn-indigo btn-sm btn-rounded px-2" data-toggle="modal" data-target="#modalAchievment">MDB Pro User</button>
+                          <button type="button" class="btn btn-cyan btn-sm btn-rounded px-2" data-toggle="modal" data-target="#modalAchievment">MDB contributor</button>
+                          <button type="button" class="btn btn-mdb btn-sm btn-rounded px-2" data-toggle="modal" data-target="#modalAchievment">MDB partner</button>
+
+
 
                         </div>
                       </section>
@@ -658,712 +662,199 @@
                       </section>
                       <!--Section: Experience-->
 
-                    </div>
-                    <!--Grid column-->
-
-                    <!--Grid column-->
-                    <div class="col-lg-8 col-md-12 text-center">
-
-                      <!-- Heading -->
-                      <div class="text-center mt-3 mb-5">
-
-                        <h4>
-                          <strong>John's projects</strong>
-                        </h4>
-
-                        <button type="button" class="btn btn-primary mt-4" data-toggle="modal" data-target="#modalSubmitProject">Submit new project
-                          <i class="fa fa-photo ml-1"></i>
-                        </button>
-
                       </div>
-                      <!-- Heading -->
+                      <!--Grid column-->
 
-                      <!-- Card row -->
-                      <div class="card-deck">
+                      <!--Grid column-->
+                      <div class="col-lg-8 col-md-12 text-center">
 
-                        <!--Card-->
-                        <div class="card card-cascade narrower mb-5">
+                        <!-- Heading -->
+                        <div class="text-center mt-3 mb-5">
 
-                          <!--Card image-->
-                          <div class="view overlay hm-white-slight">
-                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg" class="img-fluid" alt="">
-                            <a href="#">
-                              <div class="mask"></div>
-                            </a>
-                          </div>
+                          <h4>
+                            <strong>John's projects</strong>
+                          </h4>
 
-                          <!--Card content-->
-                          <div class="card-body pb-0">
-                            <!--Title-->
-                            <h4 class="card-title">Project name</h4>
-                            <!--Text-->
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-                          </div>
-
-                          <!--Card footer-->
-                          <div class="card-footer links-light">
-                            <span class="left pt-2">
-                              <a>
-                                <i class="fa fa-share-alt mr-2"></i>
-                              </a>
-                              <a>
-                                <i class="fa fa-heart-o mr-2"></i>10</a>
-                            </span>
-                            <span class="right">
-                              <a href="" class="waves-effect p-2">Live Preview
-                                <i class="fa fa-photo ml-1"></i>
-                              </a>
-                            </span>
-                          </div>
+                          <button type="button" class="btn btn-primary btn-md mt-4" data-toggle="modal" data-target="#modalSubmitProject">Submit new project
+                            <i class="fa fa-photo ml-1"></i>
+                          </button>
+                          <button type="button" class="btn btn-outline-primary btn-md font-bold mt-4" data-toggle="modal" data-target="#modalFeedback">Send idea, feedback or bug
+                            <i class="fa fa-paper-plane ml-2"></i>
+                          </button>
 
                         </div>
-                        <!--/.Card-->
+                        <!-- Heading -->
 
-                        <!--Card-->
-                        <div class="card card-cascade narrower d-flex mb-5">
+                        <!-- Card row -->
+                        <div class="card-deck">
 
-                          <!--Card image-->
-                          <div class="view overlay hm-white-slight">
-                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(75).jpg" class="img-fluid" alt="">
-                            <a href="#">
-                              <div class="mask"></div>
-                            </a>
-                          </div>
+                          <!--Card-->
+                          <div class="card card-cascade narrower mb-5">
 
-                          <!--Card content-->
-                          <div class="card-body">
-                            <!--Title-->
-                            <h4 class="card-title">Project name</h4>
-                            <!--Text-->
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          </div>
-
-                          <!--Card footer-->
-                          <div class="card-footer links-light">
-                            <span class="left pt-2">
-                              <a>
-                                <i class="fa fa-share-alt mr-2"></i>
+                            <!--Card image-->
+                            <div class="view overlay hm-white-slight">
+                              <img src="https://mdbootstrap.com/img/Photos/Others/images/72.jpg" class="img-fluid" alt="">
+                              <a href="#">
+                                <div class="mask"></div>
                               </a>
-                              <a>
-                                <i class="fa fa-heart-o mr-2"></i>10</a>
-                            </span>
-                            <span class="right">
-                              <a href="" class="waves-effect p-2">Live Preview
-                                <i class="fa fa-photo ml-1"></i>
-                              </a>
-                            </span>
-                          </div>
+                            </div>
 
-                        </div>
-                        <!--/.Card-->
-
-                      </div>
-                      <!-- Card row -->
-
-                      <!-- Card row -->
-                      <div class="card-deck">
-
-                        <!--Card-->
-                        <div class="card card-cascade narrower d-flex mb-5">
-
-                          <!--Card image-->
-                          <div class="view overlay hm-white-slight">
-                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(77).jpg" class="img-fluid" alt="">
-                            <a href="#">
-                              <div class="mask"></div>
-                            </a>
-                          </div>
-
-                          <!--Card content-->
-                          <div class="card-body">
-                            <!--Title-->
-                            <h4 class="card-title">Project name</h4>
-                            <!--Text-->
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          </div>
-
-                          <!--Card footer-->
-                          <div class="card-footer links-light">
-                            <span class="left pt-2">
-                              <a>
-                                <i class="fa fa-share-alt mr-2"></i>
-                              </a>
-                              <a>
-                                <i class="fa fa-heart-o mr-2"></i>10</a>
-                            </span>
-                            <span class="right">
-                              <a href="" class="waves-effect p-2">Live Preview
-                                <i class="fa fa-photo ml-1"></i>
-                              </a>
-                            </span>
-                          </div>
-
-                        </div>
-                        <!--/.Card-->
-
-                        <!--Card-->
-                        <div class="card card-cascade narrower d-flex mb-5">
-
-                          <!--Card image-->
-                          <div class="view overlay hm-white-slight">
-                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(71).jpg" class="img-fluid" alt="">
-                            <a href="#">
-                              <div class="mask"></div>
-                            </a>
-                          </div>
-
-                          <!--Card content-->
-                          <div class="card-body">
-                            <!--Title-->
-                            <h4 class="card-title">Project name</h4>
-                            <!--Text-->
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          </div>
-
-                          <!--Card footer-->
-                          <div class="card-footer links-light">
-                            <span class="left pt-2">
-                              <a>
-                                <i class="fa fa-share-alt mr-2"></i>
-                              </a>
-                              <a>
-                                <i class="fa fa-heart-o mr-2"></i>10</a>
-                            </span>
-                            <span class="right">
-                              <a href="" class="waves-effect p-2">Live Preview
-                                <i class="fa fa-photo ml-1"></i>
-                              </a>
-                            </span>
-                          </div>
-
-                        </div>
-                        <!--/.Card-->
-
-                      </div>
-                      <!-- Card row -->
-
-
-                      <!--Pagination -->
-                      <nav class="my-4 d-flex justify-content-center">
-                        <ul class="pagination pagination-circle pg-blue mb-0">
-
-                          <!--First-->
-                          <li class="page-item disabled">
-                            <a class="page-link">First</a>
-                          </li>
-
-                          <!--Arrow left-->
-                          <li class="page-item disabled">
-                            <a class="page-link" aria-label="Previous">
-                              <span aria-hidden="true">&laquo;</span>
-                              <span class="sr-only">Previous</span>
-                            </a>
-                          </li>
-
-                          <!--Numbers-->
-                          <li class="page-item active">
-                            <a class="page-link">1</a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link">2</a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link">3</a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link">4</a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link">5</a>
-                          </li>
-
-                          <!--Arrow right-->
-                          <li class="page-item">
-                            <a class="page-link" aria-label="Next">
-                              <span aria-hidden="true">&raquo;</span>
-                              <span class="sr-only">Next</span>
-                            </a>
-                          </li>
-
-                          <!--First-->
-                          <li class="page-item">
-                            <a class="page-link">Last</a>
-                          </li>
-
-                        </ul>
-                      </nav>
-                      <!--/Pagination -->
-
-
-                    </div>
-                    <!--Grid column-->
-
-                  </div>
-                  <!--Grid row-->
-
-                </div>
-                <!--/.Panel 1-->
-
-                <!--Panel 2-->
-                <div class="tab-pane fade" id="mainProfile2" role="tabpanel">
-
-                  <!-- Nav tabs -->
-                  <div class="row">
-                    <div class="col-md-3">
-                      <ul class="nav  md-pills pills-primary flex-column" role="tablist">
-                        <li class="nav-item">
-                          <a class="nav-link active" data-toggle="tab" href="#panel21" role="tab">Downloads
-                            <i class="fa fa-download ml-2"></i>
-                          </a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" data-toggle="tab" href="#panel22" role="tab">Orders & invoices
-                            <i class="fa fa-file-text ml-2"></i>
-                          </a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" data-toggle="tab" href="#panel23" role="tab">Billing details
-                            <i class="fa fa-address-card ml-2"></i>
-                          </a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" data-toggle="tab" href="#panel24" role="tab">Payment methods
-                            <i class="fa fa-credit-card ml-2"></i>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="col-md-9">
-                      <!-- Tab panels -->
-                      <div class="tab-content vertical">
-                        <!--Panel 1-->
-                        <div class="tab-pane fade in show active" id="panel21" role="tabpanel">
-
-                          <!-- Table -->
-                          <table class="table table-hover table-responsive">
-
-                            <!-- Table head -->
-                            <thead>
-                              <tr>
-                                <th>Product</th>
-                                <th>Latest version</th>
-                                <th>License</th>
-                                <th>File</th>
-                              </tr>
-                            </thead>
-                            <!-- Table head -->
-
-                            <!-- Table body -->
-                            <tbody>
-                              <tr>
-                                <td>MDB jQuery</td>
-                                <td>4.4.0</td>
-                                <td>10+ people & unlimited projects</td>
-                                <td>
-                                  <button type="button" class="btn btn-primary btn-table px-3">Download</button>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>MDB Angular</td>
-                                <td>4.4.0</td>
-                                <td>10+ people & unlimited projects</td>
-                                <td>
-                                  <button type="button" class="btn btn-primary btn-table px-3">Download</button>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>Big Bundle jQuery</td>
-                                <td>4.4.0</td>
-                                <td>10+ people & unlimited projects</td>
-                                <td>
-                                  <button type="button" class="btn btn-primary btn-table px-3">Download</button>
-                                </td>
-                              </tr>
-                            </tbody>
-                            <!-- Table body -->
-                          </table>
-                          <!-- Table -->
-
-                        </div>
-                        <!--/.Panel 1-->
-                        <!--Panel 2-->
-                        <div class="tab-pane fade" id="panel22" role="tabpanel">
-
-                          <!-- Table -->
-                          <table class="table table-hover table-responsive">
-
-                            <!-- Table head -->
-                            <thead>
-                              <tr>
-                                <th class="th-lg">Order</th>
-                                <th class="th-lg">Date</th>
-                                <th class="th-lg">Status</th>
-                                <th class="th-lg">Total</th>
-                                <th class="th-lg">Invoice</th>
-                              </tr>
-                            </thead>
-                            <!-- Table head -->
-
-                            <!-- Table body -->
-                            <tbody>
-                              <tr>
-                                <td>
-                                  <a href="">#9910</a>
-                                </td>
-                                <td>July 7, 2016</td>
-                                <td>Completed</td>
-                                <td>€ 49.00 for 1 item</td>
-                                <td>
-                                  <button type="button" class="btn btn-primary btn-table px-3">Download</button>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <a href="">#9930</a>
-                                </td>
-                                <td>July 7, 2016</td>
-                                <td>Completed</td>
-                                <td>€ 49.00 for 1 item</td>
-                                <td>
-                                  <button type="button" class="btn btn-indigo btn-table px-3">Submit request</button>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <a href="">#9920</a>
-                                </td>
-                                <td>July 7, 2016</td>
-                                <td>Completed</td>
-                                <td>€ 49.00 for 1 item</td>
-                                <td>
-                                  <button type="button" class="btn btn-primary btn-table px-3">Download</button>
-                                </td>
-                              </tr>
-                            </tbody>
-                            <!-- Table body -->
-                          </table>
-                          <!-- Table -->
-
-                        </div>
-                        <!--/.Panel 2-->
-                        <!--Panel 3-->
-                        <div class="tab-pane fade" id="panel23" role="tabpanel">
-
-                          <!--Grid row-->
-                          <div class="row">
-
-                            <!--Grid column-->
-                            <div class="col-md-6">
-
-                              <!--Name-->
-                              <div class="md-form form-sm mt-2">
-                                <input type="text" id="form1" class="form-control">
-                                <label for="form1" class="">Company name</label>
-                              </div>
+                            <!--Card content-->
+                            <div class="card-body pb-0">
+                              <!--Title-->
+                              <h4 class="card-title">Project name</h4>
+                              <!--Text-->
+                              <p class="card-text grey-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <p class="card-text grey-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 
                             </div>
-                            <!--Grid column-->
 
-                            <!--Grid column-->
-                            <div class="col-md-6">
-
-                              <!--Name-->
-                              <select class="mdb-select" searchable="Search here..">
-                                <option value="" disabled selected>Choose your country</option>
-                                <option value="1">USA</option>
-                                <option value="2">Germany</option>
-                                <option value="3">France</option>
-                                <option value="3">Poland</option>
-                                <option value="3">Japan</option>
-                              </select>
-
+                            <!--Card footer-->
+                            <div class="card-footer links-light">
+                              <span class="left pt-2">
+                                <a>
+                                  <i class="fa fa-share-alt mr-2"></i>
+                                </a>
+                                <a>
+                                  <i class="fa fa-heart-o mr-2"></i>10</a>
+                              </span>
+                              <span class="right">
+                                <a href="" class="waves-effect p-2">Live Preview
+                                  <i class="fa fa-photo ml-1"></i>
+                                </a>
+                              </span>
                             </div>
-                            <!--Grid column-->
-
-                            <!--Grid column-->
-                            <div class="col-md-6">
-
-
-
-                            </div>
-                            <!--Grid column-->
 
                           </div>
-                          <!--Grid row-->
+                          <!--/.Card-->
 
-                        </div>
-                        <!--/.Panel 3-->
+                          <!--Card-->
+                          <div class="card card-cascade narrower d-flex mb-5">
 
-                        <!--Panel 4-->
-                        <div class="tab-pane fade" id="panel24" role="tabpanel">
-
-                          <div class="text-center">
-                            <button type="button" class="btn btn-primary mb-4">Add new payment method
-                              <i class="fa fa-plus ml-2"></i>
-                            </button>
-                          </div>
-
-                          <!--Grid row-->
-                          <div class="row">
-
-                            <!--Grid column-->
-                            <div class="col-md-6">
-
-                              <!--Panel-->
-                              <div class="card mb-4">
-                                <h5 class="card-header primary-color white-text">Primary method</h5>
-                                <div class="card-body">
-
-                                  <div class="media">
-                                    <img class="d-flex mr-3" src="https://www.facebook.com/images/payments/icons/mc.png" style="max-width: 40px;">
-                                    <div class="media-body">
-                                      <h5 class="mt-0">MasterCard *9328</h5>
-                                      <p class="grey-text">Expires on 11/17</p>
-                                    </div>
-                                  </div>
-
-                                  <button type="button" class="btn btn-primary btn-md">Edit</button>
-
-                                </div>
-                              </div>
-                              <!--/.Panel-->
-
+                            <!--Card image-->
+                            <div class="view overlay hm-white-slight">
+                              <img src="https://mdbootstrap.com/img/Photos/Others/images/64.jpg" class="img-fluid" alt="">
+                              <a href="#">
+                                <div class="mask"></div>
+                              </a>
                             </div>
-                            <!--Grid column-->
 
-                            <!--Grid column-->
-                            <div class="col-md-6">
-
-                              <!--Panel-->
-                              <div class="card mb-4">
-                                <h3 class="card-header default-color white-text"></h3>
-                                <div class="card-body">
-
-                                  <div class="media">
-                                    <img class="d-flex mr-3" src="https://www.facebook.com/images/payments/icons/visa.png" style="max-width: 40px;">
-                                    <div class="media-body">
-                                      <h5 class="mt-0">VISA *9003</h5>
-                                      <p class="grey-text">Expires on 06/19</p>
-                                    </div>
-                                  </div>
-
-                                  <button type="button" class="btn btn-primary btn-md">Edit</button>
-                                  <button type="button" class="btn btn-default btn-md">Make Primary</button>
-                                </div>
-                              </div>
-                              <!--/.Panel-->
-
+                            <!--Card content-->
+                            <div class="card-body">
+                              <!--Title-->
+                              <h4 class="card-title">Project name</h4>
+                              <!--Text-->
+                              <p class="card-text grey-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             </div>
-                            <!--Grid column-->
 
-                            <!--Grid column-->
-                            <div class="col-md-6">
-
-                              <!--Panel-->
-                              <div class="card mb-4">
-                                <h3 class="card-header default-color white-text"></h3>
-                                <div class="card-body">
-
-                                  <div class="media">
-                                    <img class="d-flex mr-3" src="https://www.facebook.com/images/payments/icons/paypal.png" style="max-width: 40px;">
-                                    <div class="media-body">
-                                      <h5 class="mt-0">PayPal (m.szymanski@itflow.biz)</h5>
-                                      <p class="grey-text">Added on 06/19</p>
-                                    </div>
-                                  </div>
-
-                                  <button type="button" class="btn btn-primary btn-md">Edit</button>
-                                  <button type="button" class="btn btn-default btn-md">Make Primary</button>
-                                </div>
-                              </div>
-                              <!--/.Panel-->
-
+                            <!--Card footer-->
+                            <div class="card-footer links-light">
+                              <span class="left pt-2">
+                                <a>
+                                  <i class="fa fa-share-alt mr-2"></i>
+                                </a>
+                                <a>
+                                  <i class="fa fa-heart-o mr-2"></i>10</a>
+                              </span>
+                              <span class="right">
+                                <a href="" class="waves-effect p-2">Live Preview
+                                  <i class="fa fa-photo ml-1"></i>
+                                </a>
+                              </span>
                             </div>
-                            <!--Grid column-->
 
                           </div>
-                          <!--Grid row-->
+                          <!--/.Card-->
 
                         </div>
-                        <!--/.Panel 4-->
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Nav tabs -->
+                        <!-- Card row -->
 
-                </div>
-                <!--/.Panel 2-->
+                        <!-- Card row -->
+                        <div class="card-deck">
 
-                <!--Panel 3-->
-                <div class="tab-pane fade" id="mainProfile3" role="tabpanel">
+                          <!--Card-->
+                          <div class="card card-cascade narrower d-flex mb-5">
 
+                            <!--Card image-->
+                            <div class="view overlay hm-white-slight">
+                              <img src="https://mdbootstrap.com/img/Photos/Others/images/75.jpg" class="img-fluid" alt="">
+                              <a href="#">
+                                <div class="mask"></div>
+                              </a>
+                            </div>
 
-                  <!--Grid row-->
-                  <div class="row">
+                            <!--Card content-->
+                            <div class="card-body">
+                              <!--Title-->
+                              <h4 class="card-title">Project name</h4>
+                              <!--Text-->
+                              <p class="card-text grey-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
 
-                    <!--Grid column-->
-                    <div class="col-md-6 mb-4">
+                            <!--Card footer-->
+                            <div class="card-footer links-light">
+                              <span class="left pt-2">
+                                <a>
+                                  <i class="fa fa-share-alt mr-2"></i>
+                                </a>
+                                <a>
+                                  <i class="fa fa-heart-o mr-2"></i>10</a>
+                              </span>
+                              <span class="right">
+                                <a href="" class="waves-effect p-2">Live Preview
+                                  <i class="fa fa-photo ml-1"></i>
+                                </a>
+                              </span>
+                            </div>
 
-                      <div class="card">
-                        <div class="card-body">
+                          </div>
+                          <!--/.Card-->
 
-                          <h4 class="my-3 h4 text-center font-weight-bold">General statistics</h4>
+                          <!--Card-->
+                          <div class="card card-cascade narrower d-flex mb-5">
 
-                          <!-- Table  -->
-                          <table class="table">
-                            <!-- Table head -->
-                            <thead>
-                              <tr>
-                                <th>You've earned</th>
-                                <th>We've paid you</th>
-                                <th>We've owed you</th>
-                              </tr>
-                            </thead>
-                            <!-- Table head -->
+                            <!--Card image-->
+                            <div class="view overlay hm-white-slight">
+                              <img src="https://mdbootstrap.com/img/Photos/Others/images/71.jpg" class="img-fluid" alt="">
+                              <a href="#">
+                                <div class="mask"></div>
+                              </a>
+                            </div>
 
-                            <!-- Table body -->
-                            <tbody>
-                              <tr>
-                                <td>$ 1000</td>
-                                <td>$ 600</td>
-                                <td>$ 400</td>
-                              </tr>
-                            </tbody>
-                            <!-- Table body -->
-                          </table>
-                          <!-- Table  -->
+                            <!--Card content-->
+                            <div class="card-body">
+                              <!--Title-->
+                              <h4 class="card-title">Project name</h4>
+                              <!--Text-->
+                              <p class="card-text grey-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <p class="card-text grey-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+
+                            <!--Card footer-->
+                            <div class="card-footer links-light">
+                              <span class="left pt-2">
+                                <a>
+                                  <i class="fa fa-share-alt mr-2"></i>
+                                </a>
+                                <a>
+                                  <i class="fa fa-heart-o mr-2"></i>10</a>
+                              </span>
+                              <span class="right">
+                                <a href="" class="waves-effect p-2">Live Preview
+                                  <i class="fa fa-photo ml-1"></i>
+                                </a>
+                              </span>
+                            </div>
+
+                          </div>
+                          <!--/.Card-->
 
                         </div>
-                      </div>
+                        <!-- Card row -->
 
-                    </div>
-                    <!--Grid column-->
-
-                    <!--Grid column-->
-                    <div class="col-md-6 mb-4">
-
-                      <div class="card">
-                        <div class="card-body text-center">
-
-                          <h4 class="my-3 h4font-weight-bold">Your affiliate link</h4>
-
-                          <code>https://mdbootstrap.com/material-design-for-bootstrap/?utm_id=linkID</code>
-
-                          <hr>
-
-                          <h5 class="my-3 h5 text-center font-weight-bold">Useful materials</h5>
-
-                          <a class="btn btn-primary btn-md" href="" role="button">Press Pack</a>
-                          <a class="btn btn-primary btn-md" href="" role="button">Tutorial for affiliates</a>
-
-                        </div>
-                      </div>
-
-                    </div>
-                    <!--Grid column-->
-
-                  </div>
-                  <!--Grid row-->
-
-                  <div class="card">
-                    <div class="card-body">
-
-                      <h4 class="my-3 h4 text-center font-weight-bold">Detailed statistics</h4>
-
-                      <!-- Table wrapper -->
-                      <div class="table-wrapper">
-                        <!--Table-->
-                        <table class="table table-hover mb-0">
-
-                          <!--Table head-->
-                          <thead>
-                            <tr>
-                              <th class="th-lg">
-                                <a>Order ID
-                                  <i class="fa fa-sort ml-1"></i>
-                                </a>
-                              </th>
-                              <th class="th-lg">
-                                <a href="">Order status
-                                  <i class="fa fa-sort ml-1"></i>
-                                </a>
-                              </th>
-                              <th class="th-lg">
-                                <a href="">Date
-                                  <i class="fa fa-sort ml-1"></i>
-                                </a>
-                              </th>
-                              <th class="th-lg">
-                                <a href="">Discount
-                                  <i class="fa fa-sort ml-1"></i>
-                                </a>
-                              </th>
-                              <th class="th-lg">
-                                <a href="">Total paid ($)
-                                  <i class="fa fa-sort ml-1"></i>
-                                </a>
-                              </th>
-                              <th class="th-lg">
-                                <a href="">Your cash ($)
-                                  <i class="fa fa-sort ml-1"></i>
-                                </a>
-                              </th>
-                            </tr>
-                          </thead>
-                          <!--Table head-->
-
-                          <!--Table body-->
-                          <tbody>
-                            <tr>
-                              <td>#9910</td>
-                              <td>Completed</td>
-                              <td>12.11.2017</td>
-                              <td>10%</td>
-                              <td>100</td>
-                              <td>50</td>
-                            </tr>
-                            <tr>
-                              <td>#9911</td>
-                              <td>Failed</td>
-                              <td>12.11.2017</td>
-                              <td>10%</td>
-                              <td>100</td>
-                              <td>50</td>
-                            </tr>
-                            <tr>
-                              <td>#9912</td>
-                              <td>Completed</td>
-                              <td>12.11.2017</td>
-                              <td>10%</td>
-                              <td>100</td>
-                              <td>50</td>
-                            </tr>
-                          </tbody>
-                          <!--Table body-->
-                        </table>
-                        <!--Table-->
-                      </div>
-                      <!-- Table wrapper -->
-
-                      <hr class="my-0">
-
-                      <!--Bottom Table UI-->
-                      <div class="d-flex justify-content-between">
-
-                        <!--Name-->
-                        <select class="mdb-select colorful-select dropdown-primary mt-2 hidden-md-down">
-                          <option value="" disabled>Rows number</option>
-                          <option value="1" selected>10 rows</option>
-                          <option value="2">25 rows</option>
-                          <option value="3">50 rows</option>
-                          <option value="4">100 rows</option>
-                        </select>
 
                         <!--Pagination -->
-                        <nav class="my-4">
+                        <nav class="my-4 d-flex justify-content-center">
                           <ul class="pagination pagination-circle pg-blue mb-0">
 
                             <!--First-->
@@ -1414,173 +905,686 @@
                         <!--/Pagination -->
 
                       </div>
-                      <!--Bottom Table UI-->
+                      <!--Grid column-->
 
                     </div>
-                  </div>
-
-                </div>
-                <!--/.Panel 3-->
-
-                <!--Panel 4-->
-                <div class="tab-pane fade" id="mainProfile4" role="tabpanel">
-
-                  <!--Grid row-->
-                  <div class="row">
-
-                    <!--Grid column-->
-                    <div class="col-md-4">
-
-                      <!--Name-->
-                      <div class="md-form form-sm">
-                        <i class="fa fa-search prefix"></i>
-                        <input type="text" id="searchConv" class="form-control">
-                        <label for="searchConv" class="">Search Message</label>
-                      </div>
-
-
-                      <!-- Messages -->
-                      <div class="list-group">
-
-                        <!-- Single message -->
-                        <a href="#" class="list-group-item list-group-item-action media active">
-                          <!-- Avatar -->
-                          <img class="mr-3 avatar-sm float-left" src="https://mdbootstrap.com/img/Photos/Avatars/adach.jpg">
-
-                          <!-- Author -->
-                          <div class="d-flex justify-content-between mb-1 ">
-                            <hp class="mb-1">
-                              <strong>Dawid Adach</strong>
-                            </hp>
-                            <small>13 July</small>
-                          </div>
-
-                          <!-- Message -->
-                          <p class="text-truncate">
-                            <strong>You: </strong> Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus
-                            varius blandit.
-                          </p>
-                        </a>
-
-                        <!-- Single message -->
-                        <a href="#" class="list-group-item list-group-item-action media">
-                          <!-- Avatar -->
-                          <img class="mr-3 avatar-sm float-left" src="https://secure.gravatar.com/avatar/8c051fd54e4c811e02bbc78d50549280?s=150&d=mm&r=g">
-
-                          <!-- Author -->
-                          <div class="d-flex justify-content-between mb-1 ">
-                            <hp class="mb-1">
-                              <strong>Michal Szymanski</strong>
-                            </hp>
-                            <small>14 July</small>
-                          </div>
-
-                          <!-- Message -->
-                          <p class="text-truncate">
-                            <span class="badge red">MDB Team</span>
-                            <strong>Michal: </strong> Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus
-                            varius blandit.</p>
-                        </a>
-
-                        <!-- Single message -->
-                        <a href="#" class="list-group-item list-group-item-action media">
-                          <!-- Avatar -->
-                          <img class="mr-3 avatar-sm float-left" src="https://mdbootstrap.com/img/Photos/Avatars/piotr.jpg">
-
-                          <!-- Author -->
-                          <div class="d-flex justify-content-between mb-1 ">
-                            <hp class="mb-1">
-                              <strong>Piotr Bender</strong>
-                            </hp>
-                            <small>15 July</small>
-                          </div>
-
-                          <!-- Message -->
-                          <p class="text-truncate">
-                            <strong>Piotr: </strong> Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus
-                            varius blandit.</p>
-                        </a>
-
-                        <!-- Single message -->
-                        <a href="#" class="list-group-item list-group-item-action media">
-                          <!-- Avatar -->
-                          <img class="mr-3 avatar-sm float-left" src="https://mdbootstrap.com/img/Photos/Avatars/michal.jpg">
-
-                          <!-- Author -->
-                          <div class="d-flex justify-content-between mb-1 ">
-                            <hp class="mb-1">
-                              <strong>Michal Krawczyk</strong>
-                            </hp>
-                            <small>16 July</small>
-                          </div>
-
-                          <!-- Message -->
-                          <p class="text-truncate">
-                            <strong>You: </strong> Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus
-                            varius blandit.
-                          </p>
-                        </a>
-                      </div>
-                      <!-- Messages -->
-
-                    </div>
-                    <!--Grid column-->
-
-                    <!--Grid column-->
-                    <div class="col-md-8">
-
-                      <!-- Conversation -->
-                      <div class="border border-dark p-4">
-
-                        <!-- My Message -->
-                        <div class="text-center">
-                          <small>16 July, 23:54</small>
-                        </div>
-                        <div class="d-flex justify-content-end">
-                          <p class="primary-color rounded p-3 text-white w-75 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae modi exercitationem dignissimos
-                            repellat, voluptas iure quod aliquid voluptatem perspiciatis quidem sit eos, cum fugit voluptatibus
-                            quos laboriosam sed tenetur voluptate!</p>
-                        </div>
-
-                        <!-- Your Message -->
-                        <div class="text-center">
-                          <small>16 July, 23:55</small>
-                        </div>
-                        <div class="d-flex justify-content-start media">
-                          <!-- Avatar -->
-                          <img class="mr-3 avatar-sm float-left" src="https://mdbootstrap.com/img/Photos/Avatars/adach.jpg">
-
-                          <p class="grey lighten-3 rounded p-3 w-75">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae modi exercitationem dignissimos
-                            repellat, voluptas iure quod aliquid voluptatem perspiciatis quidem sit eos, cum fugit voluptatibus
-                            quos laboriosam sed tenetur voluptate!</p>
-                        </div>
-
-                        <!-- Your Message -->
-                        <div class="text-center">
-                          <small>16 July, 23:56</small>
-                        </div>
-                        <div class="d-flex justify-content-start media">
-                          <!-- Avatar -->
-                          <img class="mr-3 avatar-sm float-left" src="https://mdbootstrap.com/img/Photos/Avatars/adach.jpg">
-
-                          <p class="grey lighten-3 rounded p-3 w-75">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae modi exercitationem dignissimos
-                            repellat, voluptas iure quod aliquid voluptatem perspiciatis quidem sit eos, cum fugit voluptatibus
-                            quos laboriosam sed tenetur voluptate!</p>
-                        </div>
-
-                      </div>
-                      <!-- Conversation -->
-
-                    </div>
-                    <!--Grid column-->
+                    <!--Grid row-->
 
                   </div>
-                  <!--Grid row-->
+                  <!--/.Panel 1-->
+
+                  <!--Panel 2-->
+                  <div class="tab-pane fade" id="mainProfile2" role="tabpanel">
+
+                    <!-- Nav tabs -->
+                    <div class="row">
+                      <div class="col-md-3">
+                        <ul class="nav  md-pills pills-primary flex-column" role="tablist">
+                          <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#panel21" role="tab">Downloads
+                              <i class="fa fa-download ml-2"></i>
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#panel22" role="tab">Orders & invoices
+                              <i class="fa fa-file-text ml-2"></i>
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#panel23" role="tab">Billing details
+                              <i class="fa fa-address-card ml-2"></i>
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#panel24" role="tab">Payment methods
+                              <i class="fa fa-credit-card ml-2"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-md-9">
+                        <!-- Tab panels -->
+                        <div class="tab-content vertical">
+                          <!--Panel 1-->
+                          <div class="tab-pane fade in show active" id="panel21" role="tabpanel">
+
+                            <!-- Table -->
+                            <table class="table table-hover table-responsive">
+
+                              <!-- Table head -->
+                              <thead>
+                                <tr>
+                                  <th>Product</th>
+                                  <th>Latest version</th>
+                                  <th>License</th>
+                                  <th>File</th>
+                                </tr>
+                              </thead>
+                              <!-- Table head -->
+
+                              <!-- Table body -->
+                              <tbody>
+                                <tr>
+                                  <td>MDB jQuery</td>
+                                  <td>4.4.0</td>
+                                  <td>10+ people & unlimited projects</td>
+                                  <td>
+                                    <button type="button" class="btn btn-primary btn-table px-3">Download</button>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>MDB Angular</td>
+                                  <td>4.4.0</td>
+                                  <td>10+ people & unlimited projects</td>
+                                  <td>
+                                    <button type="button" class="btn btn-primary btn-table px-3">Download</button>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>Big Bundle jQuery</td>
+                                  <td>4.4.0</td>
+                                  <td>10+ people & unlimited projects</td>
+                                  <td>
+                                    <button type="button" class="btn btn-primary btn-table px-3">Download</button>
+                                  </td>
+                                </tr>
+                              </tbody>
+                              <!-- Table body -->
+                            </table>
+                            <!-- Table -->
+
+                          </div>
+                          <!--/.Panel 1-->
+
+                          <!--Panel 2-->
+                          <div class="tab-pane fade" id="panel22" role="tabpanel">
+
+                            <!-- Table -->
+                            <table class="table table-hover table-responsive">
+
+                              <!-- Table head -->
+                              <thead>
+                                <tr>
+                                  <th class="th-lg">Order</th>
+                                  <th class="th-lg">Date</th>
+                                  <th class="th-lg">Status</th>
+                                  <th class="th-lg">Total</th>
+                                  <th class="th-lg">Invoice</th>
+                                </tr>
+                              </thead>
+                              <!-- Table head -->
+
+                              <!-- Table body -->
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <a href="">#9910</a>
+                                  </td>
+                                  <td>July 7, 2016</td>
+                                  <td>Completed</td>
+                                  <td>€ 49.00 for 1 item</td>
+                                  <td>
+                                    <button type="button" class="btn btn-primary btn-table px-3">Download</button>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <a href="">#9930</a>
+                                  </td>
+                                  <td>July 7, 2016</td>
+                                  <td>Completed</td>
+                                  <td>€ 49.00 for 1 item</td>
+                                  <td>
+                                    <button type="button" class="btn btn-indigo btn-table px-3">Submit request</button>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <a href="">#9920</a>
+                                  </td>
+                                  <td>July 7, 2016</td>
+                                  <td>Completed</td>
+                                  <td>€ 49.00 for 1 item</td>
+                                  <td>
+                                    <button type="button" class="btn btn-primary btn-table px-3">Download</button>
+                                  </td>
+                                </tr>
+                              </tbody>
+                              <!-- Table body -->
+                            </table>
+                            <!-- Table -->
+
+                          </div>
+                          <!--/.Panel 2-->
+                          <!--Panel 3-->
+                          <div class="tab-pane fade" id="panel23" role="tabpanel">
+
+                            <!--Grid row-->
+                            <div class="row">
+
+                              <!--Grid column-->
+                              <div class="col-md-6">
+
+                                <!--Name-->
+                                <div class="md-form form-sm mt-2">
+                                  <input type="text" id="form1" class="form-control">
+                                  <label for="form1" class="">Company name</label>
+                                </div>
+
+                              </div>
+                              <!--Grid column-->
+
+                              <!--Grid column-->
+                              <div class="col-md-6">
+
+                                <!--Name-->
+                                <select class="mdb-select" searchable="Search here..">
+                                  <option value="" disabled selected>Choose your country</option>
+                                  <option value="1">USA</option>
+                                  <option value="2">Germany</option>
+                                  <option value="3">France</option>
+                                  <option value="3">Poland</option>
+                                  <option value="3">Japan</option>
+                                </select>
+
+                              </div>
+                              <!--Grid column-->
+
+                              <!--Grid column-->
+                              <div class="col-md-6">
+
+                              </div>
+                              <!--Grid column-->
+
+                            </div>
+                            <!--Grid row-->
+
+                          </div>
+                          <!--/.Panel 3-->
+
+                          <!--Panel 4-->
+                          <div class="tab-pane fade" id="panel24" role="tabpanel">
+
+                            <div class="text-center">
+                              <button type="button" class="btn btn-primary mb-4">Add new payment method
+                                <i class="fa fa-plus ml-2"></i>
+                              </button>
+                            </div>
+
+                            <!--Grid row-->
+                            <div class="row">
+
+                              <!--Grid column-->
+                              <div class="col-md-6">
+
+                                <!--Panel-->
+                                <div class="card mb-4">
+                                  <h5 class="card-header primary-color white-text">Primary method</h5>
+                                  <div class="card-body">
+
+                                    <div class="media">
+                                      <img class="d-flex mr-3" src="https://www.facebook.com/images/payments/icons/mc.png" style="max-width: 40px;">
+                                      <div class="media-body">
+                                        <h5 class="mt-0">MasterCard *9328</h5>
+                                        <p class="grey-text">Expires on 11/17</p>
+                                      </div>
+                                    </div>
+
+                                    <button type="button" class="btn btn-primary btn-md">Edit</button>
+
+                                  </div>
+                                </div>
+                                <!--/.Panel-->
+
+                              </div>
+                              <!--Grid column-->
+
+                              <!--Grid column-->
+                              <div class="col-md-6">
+
+                                <!--Panel-->
+                                <div class="card mb-4">
+                                  <h3 class="card-header default-color white-text"></h3>
+                                  <div class="card-body">
+
+                                    <div class="media">
+                                      <img class="d-flex mr-3" src="https://www.facebook.com/images/payments/icons/visa.png" style="max-width: 40px;">
+                                      <div class="media-body">
+                                        <h5 class="mt-0">VISA *9003</h5>
+                                        <p class="grey-text">Expires on 06/19</p>
+                                      </div>
+                                    </div>
+
+                                    <button type="button" class="btn btn-primary btn-md">Edit</button>
+                                    <button type="button" class="btn btn-default btn-md">Make Primary</button>
+                                  </div>
+                                </div>
+                                <!--/.Panel-->
+
+                              </div>
+                              <!--Grid column-->
+
+                              <!--Grid column-->
+                              <div class="col-md-6">
+
+                                <!--Panel-->
+                                <div class="card mb-4">
+                                  <h3 class="card-header default-color white-text"></h3>
+                                  <div class="card-body">
+
+                                    <div class="media">
+                                      <img class="d-flex mr-3" src="https://www.facebook.com/images/payments/icons/paypal.png" style="max-width: 40px;">
+                                      <div class="media-body">
+                                        <h5 class="mt-0">PayPal (m.szymanski@itflow.biz)</h5>
+                                        <p class="grey-text">Added on 06/19</p>
+                                      </div>
+                                    </div>
+
+                                    <button type="button" class="btn btn-primary btn-md">Edit</button>
+                                    <button type="button" class="btn btn-default btn-md">Make Primary</button>
+                                  </div>
+                                </div>
+                                <!--/.Panel-->
+
+                              </div>
+                              <!--Grid column-->
+
+                            </div>
+                            <!--Grid row-->
+
+                          </div>
+                          <!--/.Panel 4-->
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Nav tabs -->
+
+                  </div>
+                  <!--/.Panel 2-->
+
+                  <!--Panel 3-->
+                  <div class="tab-pane fade" id="mainProfile3" role="tabpanel">
+
+                    <!--Grid row-->
+                    <div class="row">
+
+                      <!--Grid column-->
+                      <div class="col-md-6 mb-4">
+
+                        <div class="card">
+                          <div class="card-body">
+
+                            <h4 class="my-3 h4 text-center font-weight-bold">General statistics</h4>
+
+                            <!-- Table  -->
+                            <table class="table">
+                              <!-- Table head -->
+                              <thead>
+                                <tr>
+                                  <th>You've earned</th>
+                                  <th>We've paid you</th>
+                                  <th>We've owed you</th>
+                                </tr>
+                              </thead>
+                              <!-- Table head -->
+
+                              <!-- Table body -->
+                              <tbody>
+                                <tr>
+                                  <td>$ 1000</td>
+                                  <td>$ 600</td>
+                                  <td>$ 400</td>
+                                </tr>
+                              </tbody>
+                              <!-- Table body -->
+                            </table>
+                            <!-- Table  -->
+
+                          </div>
+                        </div>
+
+                      </div>
+                      <!--Grid column-->
+
+                      <!--Grid column-->
+                      <div class="col-md-6 mb-4">
+
+                        <div class="card">
+                          <div class="card-body text-center">
+
+                            <h4 class="my-3 h4 font-weight-bold">Your affiliate link</h4>
+
+                            <code>https://mdbootstrap.com/material-design-for-bootstrap/?utm_id=linkID</code>
+
+                            <hr>
+
+                            <h5 class="my-3 h5 text-center font-weight-bold">Useful materials</h5>
+
+                            <a class="btn btn-primary btn-md" href="" role="button">Press Pack</a>
+                            <a class="btn btn-primary btn-md" href="" role="button">Tutorial for affiliates</a>
+
+                          </div>
+                        </div>
+
+                      </div>
+                      <!--Grid column-->
+
+                    </div>
+                    <!--Grid row-->
+
+                    <div class="card">
+                      <div class="card-body">
+
+                        <h4 class="my-3 h4 text-center font-weight-bold">Detailed statistics</h4>
+
+                        <!-- Table wrapper -->
+                        <div class="table-wrapper">
+                          <!--Table-->
+                          <table class="table table-hover mb-0">
+
+                            <!--Table head-->
+                            <thead>
+                              <tr>
+                                <th class="th-lg">
+                                  <a>Order ID
+                                    <i class="fa fa-sort ml-1"></i>
+                                  </a>
+                                </th>
+                                <th class="th-lg">
+                                  <a href="">Order status
+                                    <i class="fa fa-sort ml-1"></i>
+                                  </a>
+                                </th>
+                                <th class="th-lg">
+                                  <a href="">Date
+                                    <i class="fa fa-sort ml-1"></i>
+                                  </a>
+                                </th>
+                                <th class="th-lg">
+                                  <a href="">Discount
+                                    <i class="fa fa-sort ml-1"></i>
+                                  </a>
+                                </th>
+                                <th class="th-lg">
+                                  <a href="">Total paid ($)
+                                    <i class="fa fa-sort ml-1"></i>
+                                  </a>
+                                </th>
+                                <th class="th-lg">
+                                  <a href="">Your cash ($)
+                                    <i class="fa fa-sort ml-1"></i>
+                                  </a>
+                                </th>
+                              </tr>
+                            </thead>
+                            <!--Table head-->
+
+                            <!--Table body-->
+                            <tbody>
+                              <tr>
+                                <td>#9910</td>
+                                <td>Completed</td>
+                                <td>12.11.2017</td>
+                                <td>10%</td>
+                                <td>100</td>
+                                <td>50</td>
+                              </tr>
+                              <tr>
+                                <td>#9911</td>
+                                <td>Failed</td>
+                                <td>12.11.2017</td>
+                                <td>10%</td>
+                                <td>100</td>
+                                <td>50</td>
+                              </tr>
+                              <tr>
+                                <td>#9912</td>
+                                <td>Completed</td>
+                                <td>12.11.2017</td>
+                                <td>10%</td>
+                                <td>100</td>
+                                <td>50</td>
+                              </tr>
+                            </tbody>
+                            <!--Table body-->
+                          </table>
+                          <!--Table-->
+                        </div>
+                        <!-- Table wrapper -->
+
+                        <hr class="my-0">
+
+                        <!--Bottom Table UI-->
+                        <div class="d-flex justify-content-between">
+
+                          <!--Name-->
+                          <select class="mdb-select colorful-select dropdown-primary mt-2 hidden-md-down">
+                            <option value="" disabled>Rows number</option>
+                            <option value="1" selected>10 rows</option>
+                            <option value="2">25 rows</option>
+                            <option value="3">50 rows</option>
+                            <option value="4">100 rows</option>
+                          </select>
+
+                          <!--Pagination -->
+                          <nav class="my-4">
+                            <ul class="pagination pagination-circle pg-blue mb-0">
+
+                              <!--First-->
+                              <li class="page-item disabled">
+                                <a class="page-link">First</a>
+                              </li>
+
+                              <!--Arrow left-->
+                              <li class="page-item disabled">
+                                <a class="page-link" aria-label="Previous">
+                                  <span aria-hidden="true">&laquo;</span>
+                                  <span class="sr-only">Previous</span>
+                                </a>
+                              </li>
+
+                              <!--Numbers-->
+                              <li class="page-item active">
+                                <a class="page-link">1</a>
+                              </li>
+                              <li class="page-item">
+                                <a class="page-link">2</a>
+                              </li>
+                              <li class="page-item">
+                                <a class="page-link">3</a>
+                              </li>
+                              <li class="page-item">
+                                <a class="page-link">4</a>
+                              </li>
+                              <li class="page-item">
+                                <a class="page-link">5</a>
+                              </li>
+
+                              <!--Arrow right-->
+                              <li class="page-item">
+                                <a class="page-link" aria-label="Next">
+                                  <span aria-hidden="true">&raquo;</span>
+                                  <span class="sr-only">Next</span>
+                                </a>
+                              </li>
+
+                              <!--First-->
+                              <li class="page-item">
+                                <a class="page-link">Last</a>
+                              </li>
+
+                            </ul>
+                          </nav>
+                          <!--/Pagination -->
+
+                        </div>
+                        <!--Bottom Table UI-->
+
+                      </div>
+                    </div>
+
+                  </div>
+                  <!--/.Panel 3-->
+
+                  <!--Panel 4-->
+                  <div class="tab-pane fade" id="mainProfile4" role="tabpanel">
+
+                    <!--Grid row-->
+                    <div class="row">
+
+                      <!--Grid column-->
+                      <div class="col-md-4">
+
+                        <!--Name-->
+                        <div class="md-form form-sm">
+                          <i class="fa fa-search prefix"></i>
+                          <input type="text" id="searchConv" class="form-control">
+                          <label for="searchConv" class="">Search Message</label>
+                        </div>
+
+
+                        <!-- Messages -->
+                        <div class="list-group">
+
+                          <!-- Single message -->
+                          <a href="#" class="list-group-item list-group-item-action media active">
+                            <!-- Avatar -->
+                            <img class="mr-3 avatar-sm float-left" src="https://mdbootstrap.com/img/Photos/Avatars/adach.jpg">
+
+                            <!-- Author -->
+                            <div class="d-flex justify-content-between mb-1 ">
+                              <hp class="mb-1">
+                                <strong>Dawid Adach</strong>
+                              </hp>
+                              <small>13 July</small>
+                            </div>
+
+                            <!-- Message -->
+                            <p class="text-truncate">
+                              <strong>You: </strong> Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus
+                              varius blandit.
+                            </p>
+                          </a>
+
+                          <!-- Single message -->
+                          <a href="#" class="list-group-item list-group-item-action media">
+                            <!-- Avatar -->
+                            <img class="mr-3 avatar-sm float-left" src="https://secure.gravatar.com/avatar/8c051fd54e4c811e02bbc78d50549280?s=150&d=mm&r=g">
+
+                            <!-- Author -->
+                            <div class="d-flex justify-content-between mb-1 ">
+                              <hp class="mb-1">
+                                <strong>Michal Szymanski</strong>
+                              </hp>
+                              <small>14 July</small>
+                            </div>
+
+                            <!-- Message -->
+                            <p class="text-truncate">
+                              <span class="badge red">MDB Team</span>
+                              <strong>Michal: </strong> Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+                              risus varius blandit.</p>
+                          </a>
+
+                          <!-- Single message -->
+                          <a href="#" class="list-group-item list-group-item-action media">
+                            <!-- Avatar -->
+                            <img class="mr-3 avatar-sm float-left" src="https://mdbootstrap.com/img/Photos/Avatars/piotr.jpg">
+
+                            <!-- Author -->
+                            <div class="d-flex justify-content-between mb-1 ">
+                              <hp class="mb-1">
+                                <strong>Piotr Bender</strong>
+                              </hp>
+                              <small>15 July</small>
+                            </div>
+
+                            <!-- Message -->
+                            <p class="text-truncate">
+                              <strong>Piotr: </strong> Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus
+                              varius blandit.</p>
+                          </a>
+
+                          <!-- Single message -->
+                          <a href="#" class="list-group-item list-group-item-action media">
+                            <!-- Avatar -->
+                            <img class="mr-3 avatar-sm float-left" src="https://mdbootstrap.com/img/Photos/Avatars/michal.jpg">
+
+                            <!-- Author -->
+                            <div class="d-flex justify-content-between mb-1 ">
+                              <hp class="mb-1">
+                                <strong>Michal Krawczyk</strong>
+                              </hp>
+                              <small>16 July</small>
+                            </div>
+
+                            <!-- Message -->
+                            <p class="text-truncate">
+                              <strong>You: </strong> Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus
+                              varius blandit.
+                            </p>
+                          </a>
+                        </div>
+                        <!-- Messages -->
+
+                      </div>
+                      <!--Grid column-->
+
+                      <!--Grid column-->
+                      <div class="col-md-8">
+
+                        <!-- Conversation -->
+                        <div class="border border-dark p-4">
+
+                          <!-- My Message -->
+                          <div class="text-center">
+                            <small>16 July, 23:54</small>
+                          </div>
+                          <div class="d-flex justify-content-end">
+                            <p class="primary-color rounded p-3 text-white w-75 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae modi exercitationem dignissimos
+                              repellat, voluptas iure quod aliquid voluptatem perspiciatis quidem sit eos, cum fugit voluptatibus
+                              quos laboriosam sed tenetur voluptate!</p>
+                          </div>
+
+                          <!-- Your Message -->
+                          <div class="text-center">
+                            <small>16 July, 23:55</small>
+                          </div>
+                          <div class="d-flex justify-content-start media">
+                            <!-- Avatar -->
+                            <img class="mr-3 avatar-sm float-left" src="https://mdbootstrap.com/img/Photos/Avatars/adach.jpg">
+
+                            <p class="grey lighten-3 rounded p-3 w-75">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae modi exercitationem dignissimos
+                              repellat, voluptas iure quod aliquid voluptatem perspiciatis quidem sit eos, cum fugit voluptatibus
+                              quos laboriosam sed tenetur voluptate!</p>
+                          </div>
+
+                          <!-- Your Message -->
+                          <div class="text-center">
+                            <small>16 July, 23:56</small>
+                          </div>
+                          <div class="d-flex justify-content-start media">
+                            <!-- Avatar -->
+                            <img class="mr-3 avatar-sm float-left" src="https://mdbootstrap.com/img/Photos/Avatars/adach.jpg">
+
+                            <p class="grey lighten-3 rounded p-3 w-75">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae modi exercitationem dignissimos
+                              repellat, voluptas iure quod aliquid voluptatem perspiciatis quidem sit eos, cum fugit voluptatibus
+                              quos laboriosam sed tenetur voluptate!</p>
+                          </div>
+
+                        </div>
+                        <!-- Conversation -->
+
+                      </div>
+                      <!--Grid column-->
+
+                    </div>
+                    <!--Grid row-->
+
+                  </div>
+                  <!--/.Panel 4-->
 
                 </div>
-                <!--/.Panel 4-->
-
-              </div>
 
             </section>
             <!--Section: Tabs-->
@@ -1589,20 +1593,19 @@
           <!--Section: Page content-->
 
 
-
           <!-- HERE DOCS -->
 
+          </div>
+          <!-- Main column -->
+
+          <!-- Scrollspy column -->
+          <div class="col-md-2">
+
+          </div>
+          <!-- Scrollspy column -->
+
         </div>
-        <!-- Main column -->
-
-        <!-- Scrollspy column -->
-        <div class="col-md-2">
-
-        </div>
-        <!-- Scrollspy column -->
-
       </div>
-    </div>
   </main>
   <!--Main layout-->
 
