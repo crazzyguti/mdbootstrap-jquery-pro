@@ -1,0 +1,11 @@
+modal "contact" -> pole textarea jest zbyt wysokie
+link do affiliate powinien być inputem typu readonly
+wszystko jest jakieś takie za duże
+w orders & invoices tabela nie pokrywa całej dostępnej szerokości, tworzą się dziwne odstępy
+za dużo buttonów
+niebieski panel zmienić na mdb-color lighten-3
+achievments powinny wyglądać jak badge
+button logout powinien być kwadratowy, bo bardzo się wyróżnia, zmienić mu kolor na mdb-color lighten-4
+pod buttonami edit profile, send idea, logout dodać większy margin
+w modalach header w kolorze mdb-color lighten-3
+ramka chata w kolorze szarym jak lista obok

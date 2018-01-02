@@ -13,13 +13,55 @@
   <!-- Material Design Bootstrap -->
   <link rel="stylesheet" href="../../css/mdb.css">
   <link rel="stylesheet" href="../../css/style.css">
+
+  <style>
+    .md-select {
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid #bdbdbd;
+      border-radius: 0;
+      outline: 0;
+      height: 2.1rem;
+      width: 100%;
+      font-size: 1rem;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      -webkit-box-sizing: content-box;
+      box-sizing: content-box;
+      -webkit-transition: all .3s;
+      transition: all .3s;
+    }
+    .md-select:active {
+      border-bottom: 1px solid #4285F4;
+      -webkit-box-shadow: 0 1px 0 0 #4285F4;
+      box-shadow: 0 1px 0 0 #4285F4;
+    }
+  </style>
 </head>
 
 <body>
 
   <div class="container">
 
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
 
+            <div class="md-form">
+              <select name="options" id="select" class="browser-default md-select form-control">
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="4">Option 4</option>
+                <option value="5">Option 5</option>
+              </select>
+              <label class="active" for="form6">Choose your option</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
   </div>
