@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>Material Design for Bootstrap</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../css/bootstrap/bootstrap.css">
+  <link rel="stylesheet" href="../../css/mdb.css">
+</head>
+
+<style>
+  .font-small {
+    font-size: 0.8rem;
+  }
+
+  .comments-list .comment-text,
+  .reply-form .comment-text {
+    color: #646464;
+  }
+
+  .comments-list img,
+  .reply-form img {
+    max-width: 60px;
+    border-radius: 50%;
+  }
+
+  .input-group.md-form.form-sm.form-4 input {
+    border: 1px solid #bdbdbd;
+  }
+
+  .input-group.md-form.form-sm.form-4 input[type=text]:focus:not([readonly]).lime-border {
+    border: 1px solid #FFFFFF;
+    box-shadow: none;
+  }
+
+
+  .input-group.md-form.form-sm.form-3 input {
+    border: 1px solid #e0e0e0;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+  }
+
+  .input-group.md-form.form-sm.form-3 .input-group-addon {
+    /*border-left: 1px solid red;*/
+  }
+
+  .input-group.md-form.form-sm.form-3 input[type=text]:focus:not([readonly]).black-border {
+    border: 1px solid #4285F4;
+    box-shadow: none;
+  }
+
+  .shadow-textarea textarea.form-control::placeholder {
+    font-weight: 300;
+  }
+
+  .shadow-textarea textarea.form-control {
+    padding-left: 0.8rem;
+  }
+
+  .rounded-corners textarea {
+    border-radius: 0.25rem;
+  }
+
+  .basic-textarea textarea {
+    height: auto;
+  }
+
+  .form-control:focus {
+    border-color: #4285F4;
+  }
+
+  .z-depth-2,
+  .modal-dialog.cascading-modal.modal-avatar .modal-header img,
+  .btn-floating:hover,
+  .card.card-cascade .view,
+  .card-overlay,
+  .colorful-select .dropdown-content li a:hover,
+  .colorful-select .dropdown-content li span:hover,
+  .comments-list img,
+  .reply-form img,
+  .testimonial-carousel .testimonial .avatar img {
+    box-shadow: 0 6px 17px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  .img-fluid,
+  .modal-dialog.cascading-modal.modal-avatar .modal-header,
+  .comments-list img,
+  .reply-form img,
+  .section-blog-fw .view img {
+    max-width: 80%;
+    height: auto;
+  }
+</style>
+
+<body>
+  <div class="container">
+
+    <section id="author-box">
+      <h2 class="doc-title">Author Box
+        <a target="_blank" href="https://mdbootstrap.com/product/material-design-for-bootstrap-pro/"></a>
+      </h2>
+
+      <!-- Live preview-->
+
+      <!--Section: Author box-->
+      <section class="mb-4 mt-4">
+
+        <!--Author box-->
+        <div class="author-box rounded">
+          <!--Name-->
+          <h4 class="h4 text-center">About author</h4>
+          <hr>
+          <div class="row">
+            <!--Avatar-->
+            <div class="col-12 col-sm-2">
+              <img src="http://mdbootstrap.com/img/Photos/Avatars/img%20(3).jpg" class="img-fluid rounded-circle z-depth-2">
+            </div>
+            <!--Author Data-->
+            <div class="col-12 col-sm-10">
+              <h5 class="mb-4">
+                <strong>John Doe</strong>
+              </h5>
+              <div class="personal-sm">
+                <a class="fb-ic">
+                  <i class="fa fa-facebook"> </i>
+                </a>
+                <a class="tw-ic">
+                  <i class="fa fa-twitter"> </i>
+                </a>
+                <a class="gplus-ic">
+                  <i class="fa fa-google-plus"> </i>
+                </a>
+                <a class="li-ic">
+                  <i class="fa fa-linkedin"> </i>
+                </a>
+                <a class="email-ic">
+                  <i class="fa fa-home"> </i>
+                </a>
+              </div>
+              <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.</p>
+              <p class="hidden-md-down">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint esse nulla quia quam veniam commodi dicta, iusto
+                inventore. Voluptatum pariatur eveniet ea, officiis vitae praesentium beatae quas libero, esse facere.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--/.Author box-->
+
+      </section>
+      <!--/Section: Author box-->
+
+    </section>
+
+
+
+    <!-- Live preview-->
+
+    <!--Section: Comments list-->
+    <section class="mb-4 pt-5">
+
+      <!--Main wrapper-->
+      <div class="comments-list text-left">
+        <div class="section-heading">
+          <h3 class="section-heading h3 pt-3 mb-5">Comments
+            <span class="badge primary-color">3</span>
+          </h3>
+        </div>
+        <!--First row-->
+        <div class="row">
+          <!--Image column-->
+          <div class="col-sm-1 col-12">
+            <img src="https://mdbootstrap.com/img/Photos/Avatars/img (9).jpg">
+          </div>
+          <!--/.Image column-->
+
+          <!--Content column-->
+          <div class="col-sm-11 col-12">
+            <a>
+              <h5 class="user-name d-flex justify-items-start font-bold">Tom Smith</h5>
+            </a>
+            <div class="card-data">
+              <ul class="list-unstyled">
+                <li class="comment-date font-small font-bold grey-text">
+                  <i class="fa fa-clock-o"></i> 05/10/2018</li>
+              </ul>
+            </div>
+            <p class="comment-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+              aute irure dolor in reprehend in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+              occaecat cupidatat non proident dolore eu fugiat nulla.</p>
+            <h6 class="font-bold blue-text text-right font-small">
+              <i class="fa fa-mail-reply" aria-hidden="true"></i> REPLY</h6>
+          </div>
+          <!--/.Content column-->
+
+        </div>
+        <!--/.First row-->
+
+        <!--Second row-->
+        <div class="row">
+          <!--Image column-->
+          <div class="col-sm-1 col-12 ml-auto">
+            <img src="https://mdbootstrap.com/img/Photos/Avatars/img (31).jpg">
+          </div>
+          <!--/.Image column-->
+
+          <!--Content column-->
+          <div class="col-sm-9 col-12">
+            <a>
+              <h5 class="user-name d-flex justify-items-start font-bold">Marta Tev</h5>
+            </a>
+            <div class="card-data">
+              <ul class="list-unstyled">
+                <li class="comment-date font-small font-bold grey-text">
+                  <i class="fa fa-clock-o"></i> 05/10/2018</li>
+              </ul>
+            </div>
+            <p class="comment-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+              aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+              sint occaecat cupidatat non proident.</p>
+            <h6 class="font-bold blue-text text-right font-small">
+              <i class="fa fa-mail-reply" aria-hidden="true"></i> REPLY</h6>
+          </div>
+          <!--/.Content column-->
+
+        </div>
+        <!--/.Second row-->
+
+        <!--Third row-->
+        <div class="row">
+          <!--Image column-->
+          <div class="col-sm-1 col-12">
+            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg">
+          </div>
+          <!--/.Image column-->
+
+          <!--Content column-->
+          <div class="col-sm-11 col-12">
+            <a>
+              <h5 class="user-name d-flex justify-items-start font-bold">Anna Smith</h5>
+            </a>
+            <div class="card-data">
+              <ul class="list-unstyled">
+                <li class="comment-date font-small font-bold grey-text">
+                  <i class="fa fa-clock-o"></i> 05/10/2018</li>
+              </ul>
+            </div>
+            <p class="comment-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+              aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+              sint occaecat cupidatat non proident.</p>
+            <h6 class="font-bold blue-text text-right font-small">
+              <i class="fa fa-mail-reply" aria-hidden="true"></i> REPLY</h6>
+          </div>
+          <!--/.Content column-->
+
+        </div>
+        <!--/.Third row-->
+      </div>
+      <!--/.Main wrapper-->
+
+    </section>
+    <!--/Section: Comments list-->
+
+    </section>
+
+    <hr class="mb-5 mt-5">
+
+
+    <!--Section: Leave a reply (Not Logged In User)-->
+    <section class="mb-4 wow fadeIn" data-wow-delay="0.2s">
+      <h3 class="font-bold text-center my-5">Leave a reply</h3>
+
+      <!--Grid row-->
+      <div class="row">
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-12">
+
+          <div class="input-group md-form form-sm form-3 pl-0">
+
+            <span class="input-group-addon white grey-text font-small" id="basic-addon8">1</span>
+            <input type="text" class="form-control mt-0 black-border rgba-white-strong" placeholder="Name" aria-describedby="basic-addon9">
+          </div>
+
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6">
+
+          <div class="input-group md-form form-sm form-3 pl-0">
+            <span class="input-group-addon white grey-text font-small" id="basic-addon9">2</span>
+            <input type="text" class="form-control mt-0 black-border rgba-white-strong" placeholder="Email" aria-describedby="basic-addon9">
+          </div>
+
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6">
+
+          <div class="input-group md-form form-sm form-3 pl-0">
+            <span class="input-group-addon white grey-text font-small" id="basic-addon10">3</span>
+            <input type="text" class="form-control mt-0 black-border rgba-white-strong" placeholder="Website" aria-describedby="basic-addon9">
+          </div>
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
+      <!--Grid row-->
+      <div class="row">
+
+        <div class="col-12 mt-1">
+          <div class="form-group basic-textarea rounded-corners shadow-textarea">
+
+            <textarea class="form-control" id="exampleFormControlTextarea6" rows="5" placeholder="Your message..."></textarea>
+          </div>
+
+          <div class="text-right">
+            <button class="btn btn-primary btn-sm">Submit</button>
+          </div>
+
+        </div>
+
+      </div>
+      <!--Grid row-->
+
+    </section>
+    <!--/Section: Leave a reply (Not Logged In User)-->
+
+
+
+
+
+    <section id="r-f-l">
+      <h2 class="doc-title">Reply Form (logged in user)
+        <a target="_blank" href="https://mdbootstrap.com/product/material-design-for-bootstrap-pro/">
+
+        </a>
+      </h2>
+
+      <!-- Live preview-->
+
+      <!--Section: Leave a reply (Logged In User)-->
+      <section class="mb-4 mt-4">
+
+        <!--Leave a reply form-->
+        <div class="reply-form">
+          <h3 class="section-heading h3 pt-5">Leave a reply </h3>
+          <p class="text-center">(Logged In User)</p>
+
+          <!--Third row-->
+          <div class="row">
+            <!--Image column-->
+            <div class="col-sm-2 col-12">
+              <img src="https://mdbootstrap.com/img/Photos/Avatars/img (32).jpg" alt="Sample avatar image">
+            </div>
+            <!--/.Image column-->
+
+            <!--Content column-->
+            <div class="col-sm-10 col-12">
+              <!--Grid row-->
+              <div class="row">
+
+                <div class="col-12 mt-1">
+                  <div class="form-group basic-textarea rounded-corners shadow-textarea">
+
+                    <textarea class="form-control" id="exampleFormControlTextarea6" rows="5" placeholder="Your message..."></textarea>
+                  </div>
+
+                  <div class="text-right">
+                    <button class="btn btn-primary btn-sm">Submit</button>
+                  </div>
+
+                </div>
+
+              </div>
+              <!--Grid row-->
+
+            </div>
+
+          </div>
+          <!--/.Leave a reply form-->
+
+      </section>
+      <!--/Section: Leave a reply (Logged In User)-->
+
+    </section>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.9.9/umd/popper.js"></script>
+    <script src="../../js/bootstrap.js"></script>
+    <script src="../../js/modules/waves.js"></script>
+    <script src="../../js/modules/wow.js"></script>
+    <script src="../../js/modules/forms-free.js"></script>
+    <script>
+      wow = new WOW().init();
+    </script>
+</body>
+
+</html>
