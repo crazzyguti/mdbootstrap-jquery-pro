@@ -1230,6 +1230,12 @@
 .bg-blue-grey {
   background-color: #78909c !important; }
 
+.bg-dark {
+  background-color: #212121 !important; }
+
+.bg-light {
+  background-color: #e0e0e0 !important; }
+
 .bg-white {
   background-color: #fff !important; }
 
@@ -1367,7 +1373,15 @@
 .show > .btn-blue-grey.dropdown-toggle, .btn-blue-grey:not([disabled]):not(.disabled):active:focus, .btn-blue-grey.active:not([disabled]):not(.disabled):focus,
 .show > .btn-blue-grey.dropdown-toggle:focus, .btn-outline-blue-grey:not([disabled]):not(.disabled):active, .btn-outline-blue-grey.active:not([disabled]):not(.disabled),
 .show > .btn-outline-blue-grey.dropdown-toggle, .btn-outline-blue-grey:not([disabled]):not(.disabled):active:focus, .btn-outline-blue-grey.active:not([disabled]):not(.disabled):focus,
-.show > .btn-outline-blue-grey.dropdown-toggle:focus, .btn-white:focus, .btn-white.focus, .btn-white:not([disabled]):not(.disabled):active, .btn-white.active:not([disabled]):not(.disabled),
+.show > .btn-outline-blue-grey.dropdown-toggle:focus, .btn-dark:focus, .btn-dark.focus, .btn-dark:not([disabled]):not(.disabled):active, .btn-dark.active:not([disabled]):not(.disabled),
+.show > .btn-dark.dropdown-toggle, .btn-dark:not([disabled]):not(.disabled):active:focus, .btn-dark.active:not([disabled]):not(.disabled):focus,
+.show > .btn-dark.dropdown-toggle:focus, .btn-outline-dark:not([disabled]):not(.disabled):active, .btn-outline-dark.active:not([disabled]):not(.disabled),
+.show > .btn-outline-dark.dropdown-toggle, .btn-outline-dark:not([disabled]):not(.disabled):active:focus, .btn-outline-dark.active:not([disabled]):not(.disabled):focus,
+.show > .btn-outline-dark.dropdown-toggle:focus, .btn-light:focus, .btn-light.focus, .btn-light:not([disabled]):not(.disabled):active, .btn-light.active:not([disabled]):not(.disabled),
+.show > .btn-light.dropdown-toggle, .btn-light:not([disabled]):not(.disabled):active:focus, .btn-light.active:not([disabled]):not(.disabled):focus,
+.show > .btn-light.dropdown-toggle:focus, .btn-outline-light:not([disabled]):not(.disabled):active, .btn-outline-light.active:not([disabled]):not(.disabled),
+.show > .btn-outline-light.dropdown-toggle, .btn-outline-light:not([disabled]):not(.disabled):active:focus, .btn-outline-light.active:not([disabled]):not(.disabled):focus,
+.show > .btn-outline-light.dropdown-toggle:focus, .btn-white:focus, .btn-white.focus, .btn-white:not([disabled]):not(.disabled):active, .btn-white.active:not([disabled]):not(.disabled),
 .show > .btn-white.dropdown-toggle, .btn-white:not([disabled]):not(.disabled):active:focus, .btn-white.active:not([disabled]):not(.disabled):focus,
 .show > .btn-white.dropdown-toggle:focus, .btn-outline-white:not([disabled]):not(.disabled):active, .btn-outline-white.active:not([disabled]):not(.disabled),
 .show > .btn-outline-white.dropdown-toggle, .btn-outline-white:not([disabled]):not(.disabled):active:focus, .btn-outline-white.active:not([disabled]):not(.disabled):focus,
@@ -6265,6 +6279,62 @@ button:focus {
     background-color: transparent !important;
     border-color: #78909c !important; }
 
+.btn-dark {
+  background-color: #212121 !important;
+  color: #fff !important; }
+  .btn-dark:hover {
+    background-color: #2e2e2e; }
+  .btn-dark:focus, .btn-dark:active, .btn-dark.active {
+    background-color: #080808; }
+  .btn-dark.dropdown-toggle {
+    background-color: #212121 !important; }
+    .btn-dark.dropdown-toggle:hover, .btn-dark.dropdown-toggle:focus {
+      background-color: #2e2e2e !important; }
+  .btn-dark:not([disabled]):not(.disabled):active, .btn-dark:not([disabled]):not(.disabled).active,
+  .show > .btn-dark.dropdown-toggle {
+    background-color: #212121 !important; }
+
+.btn-outline-dark {
+  border: 2px solid #212121;
+  color: #212121 !important;
+  background-color: transparent; }
+  .btn-outline-dark:hover, .btn-outline-dark:focus, .btn-outline-dark:active, .btn-outline-dark:active:focus, .btn-outline-dark.active {
+    background-color: transparent;
+    color: #212121;
+    border-color: #212121; }
+  .btn-outline-dark:not([disabled]):not(.disabled):active, .btn-outline-dark:not([disabled]):not(.disabled).active,
+  .show > .btn-outline-dark.dropdown-toggle {
+    background-color: transparent !important;
+    border-color: #212121 !important; }
+
+.btn-light {
+  background-color: #e0e0e0 !important;
+  color: #000 !important; }
+  .btn-light:hover {
+    background-color: #ededed; }
+  .btn-light:focus, .btn-light:active, .btn-light.active {
+    background-color: #c7c7c7; }
+  .btn-light.dropdown-toggle {
+    background-color: #e0e0e0 !important; }
+    .btn-light.dropdown-toggle:hover, .btn-light.dropdown-toggle:focus {
+      background-color: #ededed !important; }
+  .btn-light:not([disabled]):not(.disabled):active, .btn-light:not([disabled]):not(.disabled).active,
+  .show > .btn-light.dropdown-toggle {
+    background-color: #e0e0e0 !important; }
+
+.btn-outline-light {
+  border: 2px solid #e0e0e0;
+  color: #e0e0e0 !important;
+  background-color: transparent; }
+  .btn-outline-light:hover, .btn-outline-light:focus, .btn-outline-light:active, .btn-outline-light:active:focus, .btn-outline-light.active {
+    background-color: transparent;
+    color: #e0e0e0;
+    border-color: #e0e0e0; }
+  .btn-outline-light:not([disabled]):not(.disabled):active, .btn-outline-light:not([disabled]):not(.disabled).active,
+  .show > .btn-outline-light.dropdown-toggle {
+    background-color: transparent !important;
+    border-color: #e0e0e0 !important; }
+
 .btn-white {
   background-color: #fff !important;
   color: #000 !important; }
@@ -6690,6 +6760,12 @@ button:focus {
 
 .badge-blue-grey {
   background-color: #78909c; }
+
+.badge-dark {
+  background-color: #212121; }
+
+.badge-light {
+  background-color: #e0e0e0; }
 
 .badge-white {
   background-color: #fff; }
@@ -8926,6 +9002,18 @@ button, html [type="button"], [type="reset"], [type="submit"] {
 
 .tabs-blue-grey {
   background-color: #78909c; }
+
+.pills-dark .nav-item .nav-link.active {
+  background-color: #212121; }
+
+.tabs-dark {
+  background-color: #212121; }
+
+.pills-light .nav-item .nav-link.active {
+  background-color: #e0e0e0; }
+
+.tabs-light {
+  background-color: #e0e0e0; }
 
 .pills-white .nav-item .nav-link.active {
   background-color: #fff; }
