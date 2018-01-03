@@ -1249,77 +1249,149 @@
 
 .z-depth-1-half, .btn:hover, .btn:active, .btn:focus, .btn:active:focus, .btn-primary:focus, .btn-primary.focus, .btn-primary:not([disabled]):not(.disabled):active, .btn-primary.active:not([disabled]):not(.disabled),
 .show > .btn-primary.dropdown-toggle, .btn-primary:not([disabled]):not(.disabled):active:focus, .btn-primary.active:not([disabled]):not(.disabled):focus,
-.show > .btn-primary.dropdown-toggle:focus, .btn-danger:focus, .btn-danger.focus, .btn-danger:not([disabled]):not(.disabled):active, .btn-danger.active:not([disabled]):not(.disabled),
+.show > .btn-primary.dropdown-toggle:focus, .btn-outline-primary:not([disabled]):not(.disabled):active, .btn-outline-primary.active:not([disabled]):not(.disabled),
+.show > .btn-outline-primary.dropdown-toggle, .btn-outline-primary:not([disabled]):not(.disabled):active:focus, .btn-outline-primary.active:not([disabled]):not(.disabled):focus,
+.show > .btn-outline-primary.dropdown-toggle:focus, .btn-danger:focus, .btn-danger.focus, .btn-danger:not([disabled]):not(.disabled):active, .btn-danger.active:not([disabled]):not(.disabled),
 .show > .btn-danger.dropdown-toggle, .btn-danger:not([disabled]):not(.disabled):active:focus, .btn-danger.active:not([disabled]):not(.disabled):focus,
-.show > .btn-danger.dropdown-toggle:focus, .btn-warning:focus, .btn-warning.focus, .btn-warning:not([disabled]):not(.disabled):active, .btn-warning.active:not([disabled]):not(.disabled),
+.show > .btn-danger.dropdown-toggle:focus, .btn-outline-danger:not([disabled]):not(.disabled):active, .btn-outline-danger.active:not([disabled]):not(.disabled),
+.show > .btn-outline-danger.dropdown-toggle, .btn-outline-danger:not([disabled]):not(.disabled):active:focus, .btn-outline-danger.active:not([disabled]):not(.disabled):focus,
+.show > .btn-outline-danger.dropdown-toggle:focus, .btn-warning:focus, .btn-warning.focus, .btn-warning:not([disabled]):not(.disabled):active, .btn-warning.active:not([disabled]):not(.disabled),
 .show > .btn-warning.dropdown-toggle, .btn-warning:not([disabled]):not(.disabled):active:focus, .btn-warning.active:not([disabled]):not(.disabled):focus,
-.show > .btn-warning.dropdown-toggle:focus, .btn-success:focus, .btn-success.focus, .btn-success:not([disabled]):not(.disabled):active, .btn-success.active:not([disabled]):not(.disabled),
+.show > .btn-warning.dropdown-toggle:focus, .btn-outline-warning:not([disabled]):not(.disabled):active, .btn-outline-warning.active:not([disabled]):not(.disabled),
+.show > .btn-outline-warning.dropdown-toggle, .btn-outline-warning:not([disabled]):not(.disabled):active:focus, .btn-outline-warning.active:not([disabled]):not(.disabled):focus,
+.show > .btn-outline-warning.dropdown-toggle:focus, .btn-success:focus, .btn-success.focus, .btn-success:not([disabled]):not(.disabled):active, .btn-success.active:not([disabled]):not(.disabled),
 .show > .btn-success.dropdown-toggle, .btn-success:not([disabled]):not(.disabled):active:focus, .btn-success.active:not([disabled]):not(.disabled):focus,
-.show > .btn-success.dropdown-toggle:focus, .btn-info:focus, .btn-info.focus, .btn-info:not([disabled]):not(.disabled):active, .btn-info.active:not([disabled]):not(.disabled),
+.show > .btn-success.dropdown-toggle:focus, .btn-outline-success:not([disabled]):not(.disabled):active, .btn-outline-success.active:not([disabled]):not(.disabled),
+.show > .btn-outline-success.dropdown-toggle, .btn-outline-success:not([disabled]):not(.disabled):active:focus, .btn-outline-success.active:not([disabled]):not(.disabled):focus,
+.show > .btn-outline-success.dropdown-toggle:focus, .btn-info:focus, .btn-info.focus, .btn-info:not([disabled]):not(.disabled):active, .btn-info.active:not([disabled]):not(.disabled),
 .show > .btn-info.dropdown-toggle, .btn-info:not([disabled]):not(.disabled):active:focus, .btn-info.active:not([disabled]):not(.disabled):focus,
-.show > .btn-info.dropdown-toggle:focus, .btn-default:focus, .btn-default.focus, .btn-default:not([disabled]):not(.disabled):active, .btn-default.active:not([disabled]):not(.disabled),
+.show > .btn-info.dropdown-toggle:focus, .btn-outline-info:not([disabled]):not(.disabled):active, .btn-outline-info.active:not([disabled]):not(.disabled),
+.show > .btn-outline-info.dropdown-toggle, .btn-outline-info:not([disabled]):not(.disabled):active:focus, .btn-outline-info.active:not([disabled]):not(.disabled):focus,
+.show > .btn-outline-info.dropdown-toggle:focus, .btn-default:focus, .btn-default.focus, .btn-default:not([disabled]):not(.disabled):active, .btn-default.active:not([disabled]):not(.disabled),
 .show > .btn-default.dropdown-toggle, .btn-default:not([disabled]):not(.disabled):active:focus, .btn-default.active:not([disabled]):not(.disabled):focus,
-.show > .btn-default.dropdown-toggle:focus, .btn-secondary:focus, .btn-secondary.focus, .btn-secondary:not([disabled]):not(.disabled):active, .btn-secondary.active:not([disabled]):not(.disabled),
+.show > .btn-default.dropdown-toggle:focus, .btn-outline-default:not([disabled]):not(.disabled):active, .btn-outline-default.active:not([disabled]):not(.disabled),
+.show > .btn-outline-default.dropdown-toggle, .btn-outline-default:not([disabled]):not(.disabled):active:focus, .btn-outline-default.active:not([disabled]):not(.disabled):focus,
+.show > .btn-outline-default.dropdown-toggle:focus, .btn-secondary:focus, .btn-secondary.focus, .btn-secondary:not([disabled]):not(.disabled):active, .btn-secondary.active:not([disabled]):not(.disabled),
 .show > .btn-secondary.dropdown-toggle, .btn-secondary:not([disabled]):not(.disabled):active:focus, .btn-secondary.active:not([disabled]):not(.disabled):focus,
-.show > .btn-secondary.dropdown-toggle:focus, .btn-elegant:focus, .btn-elegant.focus, .btn-elegant:not([disabled]):not(.disabled):active, .btn-elegant.active:not([disabled]):not(.disabled),
+.show > .btn-secondary.dropdown-toggle:focus, .btn-outline-secondary:not([disabled]):not(.disabled):active, .btn-outline-secondary.active:not([disabled]):not(.disabled),
+.show > .btn-outline-secondary.dropdown-toggle, .btn-outline-secondary:not([disabled]):not(.disabled):active:focus, .btn-outline-secondary.active:not([disabled]):not(.disabled):focus,
+.show > .btn-outline-secondary.dropdown-toggle:focus, .btn-elegant:focus, .btn-elegant.focus, .btn-elegant:not([disabled]):not(.disabled):active, .btn-elegant.active:not([disabled]):not(.disabled),
 .show > .btn-elegant.dropdown-toggle, .btn-elegant:not([disabled]):not(.disabled):active:focus, .btn-elegant.active:not([disabled]):not(.disabled):focus,
-.show > .btn-elegant.dropdown-toggle:focus, .btn-unique:focus, .btn-unique.focus, .btn-unique:not([disabled]):not(.disabled):active, .btn-unique.active:not([disabled]):not(.disabled),
+.show > .btn-elegant.dropdown-toggle:focus, .btn-outline-elegant:not([disabled]):not(.disabled):active, .btn-outline-elegant.active:not([disabled]):not(.disabled),
+.show > .btn-outline-elegant.dropdown-toggle, .btn-outline-elegant:not([disabled]):not(.disabled):active:focus, .btn-outline-elegant.active:not([disabled]):not(.disabled):focus,
+.show > .btn-outline-elegant.dropdown-toggle:focus, .btn-unique:focus, .btn-unique.focus, .btn-unique:not([disabled]):not(.disabled):active, .btn-unique.active:not([disabled]):not(.disabled),
 .show > .btn-unique.dropdown-toggle, .btn-unique:not([disabled]):not(.disabled):active:focus, .btn-unique.active:not([disabled]):not(.disabled):focus,
-.show > .btn-unique.dropdown-toggle:focus, .btn-dark-green:focus, .btn-dark-green.focus, .btn-dark-green:not([disabled]):not(.disabled):active, .btn-dark-green.active:not([disabled]):not(.disabled),
+.show > .btn-unique.dropdown-toggle:focus, .btn-outline-unique:not([disabled]):not(.disabled):active, .btn-outline-unique.active:not([disabled]):not(.disabled),
+.show > .btn-outline-unique.dropdown-toggle, .btn-outline-unique:not([disabled]):not(.disabled):active:focus, .btn-outline-unique.active:not([disabled]):not(.disabled):focus,
+.show > .btn-outline-unique.dropdown-toggle:focus, .btn-dark-green:focus, .btn-dark-green.focus, .btn-dark-green:not([disabled]):not(.disabled):active, .btn-dark-green.active:not([disabled]):not(.disabled),
 .show > .btn-dark-green.dropdown-toggle, .btn-dark-green:not([disabled]):not(.disabled):active:focus, .btn-dark-green.active:not([disabled]):not(.disabled):focus,
-.show > .btn-dark-green.dropdown-toggle:focus, .btn-mdb-color:focus, .btn-mdb-color.focus, .btn-mdb-color:not([disabled]):not(.disabled):active, .btn-mdb-color.active:not([disabled]):not(.disabled),
+.show > .btn-dark-green.dropdown-toggle:focus, .btn-outline-dark-green:not([disabled]):not(.disabled):active, .btn-outline-dark-green.active:not([disabled]):not(.disabled),
+.show > .btn-outline-dark-green.dropdown-toggle, .btn-outline-dark-green:not([disabled]):not(.disabled):active:focus, .btn-outline-dark-green.active:not([disabled]):not(.disabled):focus,
+.show > .btn-outline-dark-green.dropdown-toggle:focus, .btn-mdb-color:focus, .btn-mdb-color.focus, .btn-mdb-color:not([disabled]):not(.disabled):active, .btn-mdb-color.active:not([disabled]):not(.disabled),
 .show > .btn-mdb-color.dropdown-toggle, .btn-mdb-color:not([disabled]):not(.disabled):active:focus, .btn-mdb-color.active:not([disabled]):not(.disabled):focus,
-.show > .btn-mdb-color.dropdown-toggle:focus, .btn-red:focus, .btn-red.focus, .btn-red:not([disabled]):not(.disabled):active, .btn-red.active:not([disabled]):not(.disabled),
+.show > .btn-mdb-color.dropdown-toggle:focus, .btn-outline-mdb-color:not([disabled]):not(.disabled):active, .btn-outline-mdb-color.active:not([disabled]):not(.disabled),
+.show > .btn-outline-mdb-color.dropdown-toggle, .btn-outline-mdb-color:not([disabled]):not(.disabled):active:focus, .btn-outline-mdb-color.active:not([disabled]):not(.disabled):focus,
+.show > .btn-outline-mdb-color.dropdown-toggle:focus, .btn-red:focus, .btn-red.focus, .btn-red:not([disabled]):not(.disabled):active, .btn-red.active:not([disabled]):not(.disabled),
 .show > .btn-red.dropdown-toggle, .btn-red:not([disabled]):not(.disabled):active:focus, .btn-red.active:not([disabled]):not(.disabled):focus,
-.show > .btn-red.dropdown-toggle:focus, .btn-pink:focus, .btn-pink.focus, .btn-pink:not([disabled]):not(.disabled):active, .btn-pink.active:not([disabled]):not(.disabled),
+.show > .btn-red.dropdown-toggle:focus, .btn-outline-red:not([disabled]):not(.disabled):active, .btn-outline-red.active:not([disabled]):not(.disabled),
+.show > .btn-outline-red.dropdown-toggle, .btn-outline-red:not([disabled]):not(.disabled):active:focus, .btn-outline-red.active:not([disabled]):not(.disabled):focus,
+.show > .btn-outline-red.dropdown-toggle:focus, .btn-pink:focus, .btn-pink.focus, .btn-pink:not([disabled]):not(.disabled):active, .btn-pink.active:not([disabled]):not(.disabled),
 .show > .btn-pink.dropdown-toggle, .btn-pink:not([disabled]):not(.disabled):active:focus, .btn-pink.active:not([disabled]):not(.disabled):focus,
-.show > .btn-pink.dropdown-toggle:focus, .btn-purple:focus, .btn-purple.focus, .btn-purple:not([disabled]):not(.disabled):active, .btn-purple.active:not([disabled]):not(.disabled),
+.show > .btn-pink.dropdown-toggle:focus, .btn-outline-pink:not([disabled]):not(.disabled):active, .btn-outline-pink.active:not([disabled]):not(.disabled),
+.show > .btn-outline-pink.dropdown-toggle, .btn-outline-pink:not([disabled]):not(.disabled):active:focus, .btn-outline-pink.active:not([disabled]):not(.disabled):focus,
+.show > .btn-outline-pink.dropdown-toggle:focus, .btn-purple:focus, .btn-purple.focus, .btn-purple:not([disabled]):not(.disabled):active, .btn-purple.active:not([disabled]):not(.disabled),
 .show > .btn-purple.dropdown-toggle, .btn-purple:not([disabled]):not(.disabled):active:focus, .btn-purple.active:not([disabled]):not(.disabled):focus,
-.show > .btn-purple.dropdown-toggle:focus, .btn-deep-purple:focus, .btn-deep-purple.focus, .btn-deep-purple:not([disabled]):not(.disabled):active, .btn-deep-purple.active:not([disabled]):not(.disabled),
+.show > .btn-purple.dropdown-toggle:focus, .btn-outline-purple:not([disabled]):not(.disabled):active, .btn-outline-purple.active:not([disabled]):not(.disabled),
+.show > .btn-outline-purple.dropdown-toggle, .btn-outline-purple:not([disabled]):not(.disabled):active:focus, .btn-outline-purple.active:not([disabled]):not(.disabled):focus,
+.show > .btn-outline-purple.dropdown-toggle:focus, .btn-deep-purple:focus, .btn-deep-purple.focus, .btn-deep-purple:not([disabled]):not(.disabled):active, .btn-deep-purple.active:not([disabled]):not(.disabled),
 .show > .btn-deep-purple.dropdown-toggle, .btn-deep-purple:not([disabled]):not(.disabled):active:focus, .btn-deep-purple.active:not([disabled]):not(.disabled):focus,
-.show > .btn-deep-purple.dropdown-toggle:focus, .btn-indigo:focus, .btn-indigo.focus, .btn-indigo:not([disabled]):not(.disabled):active, .btn-indigo.active:not([disabled]):not(.disabled),
+.show > .btn-deep-purple.dropdown-toggle:focus, .btn-outline-deep-purple:not([disabled]):not(.disabled):active, .btn-outline-deep-purple.active:not([disabled]):not(.disabled),
+.show > .btn-outline-deep-purple.dropdown-toggle, .btn-outline-deep-purple:not([disabled]):not(.disabled):active:focus, .btn-outline-deep-purple.active:not([disabled]):not(.disabled):focus,
+.show > .btn-outline-deep-purple.dropdown-toggle:focus, .btn-indigo:focus, .btn-indigo.focus, .btn-indigo:not([disabled]):not(.disabled):active, .btn-indigo.active:not([disabled]):not(.disabled),
 .show > .btn-indigo.dropdown-toggle, .btn-indigo:not([disabled]):not(.disabled):active:focus, .btn-indigo.active:not([disabled]):not(.disabled):focus,
-.show > .btn-indigo.dropdown-toggle:focus, .btn-blue:focus, .btn-blue.focus, .btn-blue:not([disabled]):not(.disabled):active, .btn-blue.active:not([disabled]):not(.disabled),
+.show > .btn-indigo.dropdown-toggle:focus, .btn-outline-indigo:not([disabled]):not(.disabled):active, .btn-outline-indigo.active:not([disabled]):not(.disabled),
+.show > .btn-outline-indigo.dropdown-toggle, .btn-outline-indigo:not([disabled]):not(.disabled):active:focus, .btn-outline-indigo.active:not([disabled]):not(.disabled):focus,
+.show > .btn-outline-indigo.dropdown-toggle:focus, .btn-blue:focus, .btn-blue.focus, .btn-blue:not([disabled]):not(.disabled):active, .btn-blue.active:not([disabled]):not(.disabled),
 .show > .btn-blue.dropdown-toggle, .btn-blue:not([disabled]):not(.disabled):active:focus, .btn-blue.active:not([disabled]):not(.disabled):focus,
-.show > .btn-blue.dropdown-toggle:focus, .btn-light-blue:focus, .btn-light-blue.focus, .btn-light-blue:not([disabled]):not(.disabled):active, .btn-light-blue.active:not([disabled]):not(.disabled),
+.show > .btn-blue.dropdown-toggle:focus, .btn-outline-blue:not([disabled]):not(.disabled):active, .btn-outline-blue.active:not([disabled]):not(.disabled),
+.show > .btn-outline-blue.dropdown-toggle, .btn-outline-blue:not([disabled]):not(.disabled):active:focus, .btn-outline-blue.active:not([disabled]):not(.disabled):focus,
+.show > .btn-outline-blue.dropdown-toggle:focus, .btn-light-blue:focus, .btn-light-blue.focus, .btn-light-blue:not([disabled]):not(.disabled):active, .btn-light-blue.active:not([disabled]):not(.disabled),
 .show > .btn-light-blue.dropdown-toggle, .btn-light-blue:not([disabled]):not(.disabled):active:focus, .btn-light-blue.active:not([disabled]):not(.disabled):focus,
-.show > .btn-light-blue.dropdown-toggle:focus, .btn-cyan:focus, .btn-cyan.focus, .btn-cyan:not([disabled]):not(.disabled):active, .btn-cyan.active:not([disabled]):not(.disabled),
+.show > .btn-light-blue.dropdown-toggle:focus, .btn-outline-light-blue:not([disabled]):not(.disabled):active, .btn-outline-light-blue.active:not([disabled]):not(.disabled),
+.show > .btn-outline-light-blue.dropdown-toggle, .btn-outline-light-blue:not([disabled]):not(.disabled):active:focus, .btn-outline-light-blue.active:not([disabled]):not(.disabled):focus,
+.show > .btn-outline-light-blue.dropdown-toggle:focus, .btn-cyan:focus, .btn-cyan.focus, .btn-cyan:not([disabled]):not(.disabled):active, .btn-cyan.active:not([disabled]):not(.disabled),
 .show > .btn-cyan.dropdown-toggle, .btn-cyan:not([disabled]):not(.disabled):active:focus, .btn-cyan.active:not([disabled]):not(.disabled):focus,
-.show > .btn-cyan.dropdown-toggle:focus, .btn-teal:focus, .btn-teal.focus, .btn-teal:not([disabled]):not(.disabled):active, .btn-teal.active:not([disabled]):not(.disabled),
+.show > .btn-cyan.dropdown-toggle:focus, .btn-outline-cyan:not([disabled]):not(.disabled):active, .btn-outline-cyan.active:not([disabled]):not(.disabled),
+.show > .btn-outline-cyan.dropdown-toggle, .btn-outline-cyan:not([disabled]):not(.disabled):active:focus, .btn-outline-cyan.active:not([disabled]):not(.disabled):focus,
+.show > .btn-outline-cyan.dropdown-toggle:focus, .btn-teal:focus, .btn-teal.focus, .btn-teal:not([disabled]):not(.disabled):active, .btn-teal.active:not([disabled]):not(.disabled),
 .show > .btn-teal.dropdown-toggle, .btn-teal:not([disabled]):not(.disabled):active:focus, .btn-teal.active:not([disabled]):not(.disabled):focus,
-.show > .btn-teal.dropdown-toggle:focus, .btn-green:focus, .btn-green.focus, .btn-green:not([disabled]):not(.disabled):active, .btn-green.active:not([disabled]):not(.disabled),
+.show > .btn-teal.dropdown-toggle:focus, .btn-outline-teal:not([disabled]):not(.disabled):active, .btn-outline-teal.active:not([disabled]):not(.disabled),
+.show > .btn-outline-teal.dropdown-toggle, .btn-outline-teal:not([disabled]):not(.disabled):active:focus, .btn-outline-teal.active:not([disabled]):not(.disabled):focus,
+.show > .btn-outline-teal.dropdown-toggle:focus, .btn-green:focus, .btn-green.focus, .btn-green:not([disabled]):not(.disabled):active, .btn-green.active:not([disabled]):not(.disabled),
 .show > .btn-green.dropdown-toggle, .btn-green:not([disabled]):not(.disabled):active:focus, .btn-green.active:not([disabled]):not(.disabled):focus,
-.show > .btn-green.dropdown-toggle:focus, .btn-light-green:focus, .btn-light-green.focus, .btn-light-green:not([disabled]):not(.disabled):active, .btn-light-green.active:not([disabled]):not(.disabled),
+.show > .btn-green.dropdown-toggle:focus, .btn-outline-green:not([disabled]):not(.disabled):active, .btn-outline-green.active:not([disabled]):not(.disabled),
+.show > .btn-outline-green.dropdown-toggle, .btn-outline-green:not([disabled]):not(.disabled):active:focus, .btn-outline-green.active:not([disabled]):not(.disabled):focus,
+.show > .btn-outline-green.dropdown-toggle:focus, .btn-light-green:focus, .btn-light-green.focus, .btn-light-green:not([disabled]):not(.disabled):active, .btn-light-green.active:not([disabled]):not(.disabled),
 .show > .btn-light-green.dropdown-toggle, .btn-light-green:not([disabled]):not(.disabled):active:focus, .btn-light-green.active:not([disabled]):not(.disabled):focus,
-.show > .btn-light-green.dropdown-toggle:focus, .btn-lime:focus, .btn-lime.focus, .btn-lime:not([disabled]):not(.disabled):active, .btn-lime.active:not([disabled]):not(.disabled),
+.show > .btn-light-green.dropdown-toggle:focus, .btn-outline-light-green:not([disabled]):not(.disabled):active, .btn-outline-light-green.active:not([disabled]):not(.disabled),
+.show > .btn-outline-light-green.dropdown-toggle, .btn-outline-light-green:not([disabled]):not(.disabled):active:focus, .btn-outline-light-green.active:not([disabled]):not(.disabled):focus,
+.show > .btn-outline-light-green.dropdown-toggle:focus, .btn-lime:focus, .btn-lime.focus, .btn-lime:not([disabled]):not(.disabled):active, .btn-lime.active:not([disabled]):not(.disabled),
 .show > .btn-lime.dropdown-toggle, .btn-lime:not([disabled]):not(.disabled):active:focus, .btn-lime.active:not([disabled]):not(.disabled):focus,
-.show > .btn-lime.dropdown-toggle:focus, .btn-yellow:focus, .btn-yellow.focus, .btn-yellow:not([disabled]):not(.disabled):active, .btn-yellow.active:not([disabled]):not(.disabled),
+.show > .btn-lime.dropdown-toggle:focus, .btn-outline-lime:not([disabled]):not(.disabled):active, .btn-outline-lime.active:not([disabled]):not(.disabled),
+.show > .btn-outline-lime.dropdown-toggle, .btn-outline-lime:not([disabled]):not(.disabled):active:focus, .btn-outline-lime.active:not([disabled]):not(.disabled):focus,
+.show > .btn-outline-lime.dropdown-toggle:focus, .btn-yellow:focus, .btn-yellow.focus, .btn-yellow:not([disabled]):not(.disabled):active, .btn-yellow.active:not([disabled]):not(.disabled),
 .show > .btn-yellow.dropdown-toggle, .btn-yellow:not([disabled]):not(.disabled):active:focus, .btn-yellow.active:not([disabled]):not(.disabled):focus,
-.show > .btn-yellow.dropdown-toggle:focus, .btn-amber:focus, .btn-amber.focus, .btn-amber:not([disabled]):not(.disabled):active, .btn-amber.active:not([disabled]):not(.disabled),
+.show > .btn-yellow.dropdown-toggle:focus, .btn-outline-yellow:not([disabled]):not(.disabled):active, .btn-outline-yellow.active:not([disabled]):not(.disabled),
+.show > .btn-outline-yellow.dropdown-toggle, .btn-outline-yellow:not([disabled]):not(.disabled):active:focus, .btn-outline-yellow.active:not([disabled]):not(.disabled):focus,
+.show > .btn-outline-yellow.dropdown-toggle:focus, .btn-amber:focus, .btn-amber.focus, .btn-amber:not([disabled]):not(.disabled):active, .btn-amber.active:not([disabled]):not(.disabled),
 .show > .btn-amber.dropdown-toggle, .btn-amber:not([disabled]):not(.disabled):active:focus, .btn-amber.active:not([disabled]):not(.disabled):focus,
-.show > .btn-amber.dropdown-toggle:focus, .btn-orange:focus, .btn-orange.focus, .btn-orange:not([disabled]):not(.disabled):active, .btn-orange.active:not([disabled]):not(.disabled),
+.show > .btn-amber.dropdown-toggle:focus, .btn-outline-amber:not([disabled]):not(.disabled):active, .btn-outline-amber.active:not([disabled]):not(.disabled),
+.show > .btn-outline-amber.dropdown-toggle, .btn-outline-amber:not([disabled]):not(.disabled):active:focus, .btn-outline-amber.active:not([disabled]):not(.disabled):focus,
+.show > .btn-outline-amber.dropdown-toggle:focus, .btn-orange:focus, .btn-orange.focus, .btn-orange:not([disabled]):not(.disabled):active, .btn-orange.active:not([disabled]):not(.disabled),
 .show > .btn-orange.dropdown-toggle, .btn-orange:not([disabled]):not(.disabled):active:focus, .btn-orange.active:not([disabled]):not(.disabled):focus,
-.show > .btn-orange.dropdown-toggle:focus, .btn-deep-orange:focus, .btn-deep-orange.focus, .btn-deep-orange:not([disabled]):not(.disabled):active, .btn-deep-orange.active:not([disabled]):not(.disabled),
+.show > .btn-orange.dropdown-toggle:focus, .btn-outline-orange:not([disabled]):not(.disabled):active, .btn-outline-orange.active:not([disabled]):not(.disabled),
+.show > .btn-outline-orange.dropdown-toggle, .btn-outline-orange:not([disabled]):not(.disabled):active:focus, .btn-outline-orange.active:not([disabled]):not(.disabled):focus,
+.show > .btn-outline-orange.dropdown-toggle:focus, .btn-deep-orange:focus, .btn-deep-orange.focus, .btn-deep-orange:not([disabled]):not(.disabled):active, .btn-deep-orange.active:not([disabled]):not(.disabled),
 .show > .btn-deep-orange.dropdown-toggle, .btn-deep-orange:not([disabled]):not(.disabled):active:focus, .btn-deep-orange.active:not([disabled]):not(.disabled):focus,
-.show > .btn-deep-orange.dropdown-toggle:focus, .btn-brown:focus, .btn-brown.focus, .btn-brown:not([disabled]):not(.disabled):active, .btn-brown.active:not([disabled]):not(.disabled),
+.show > .btn-deep-orange.dropdown-toggle:focus, .btn-outline-deep-orange:not([disabled]):not(.disabled):active, .btn-outline-deep-orange.active:not([disabled]):not(.disabled),
+.show > .btn-outline-deep-orange.dropdown-toggle, .btn-outline-deep-orange:not([disabled]):not(.disabled):active:focus, .btn-outline-deep-orange.active:not([disabled]):not(.disabled):focus,
+.show > .btn-outline-deep-orange.dropdown-toggle:focus, .btn-brown:focus, .btn-brown.focus, .btn-brown:not([disabled]):not(.disabled):active, .btn-brown.active:not([disabled]):not(.disabled),
 .show > .btn-brown.dropdown-toggle, .btn-brown:not([disabled]):not(.disabled):active:focus, .btn-brown.active:not([disabled]):not(.disabled):focus,
-.show > .btn-brown.dropdown-toggle:focus, .btn-grey:focus, .btn-grey.focus, .btn-grey:not([disabled]):not(.disabled):active, .btn-grey.active:not([disabled]):not(.disabled),
+.show > .btn-brown.dropdown-toggle:focus, .btn-outline-brown:not([disabled]):not(.disabled):active, .btn-outline-brown.active:not([disabled]):not(.disabled),
+.show > .btn-outline-brown.dropdown-toggle, .btn-outline-brown:not([disabled]):not(.disabled):active:focus, .btn-outline-brown.active:not([disabled]):not(.disabled):focus,
+.show > .btn-outline-brown.dropdown-toggle:focus, .btn-grey:focus, .btn-grey.focus, .btn-grey:not([disabled]):not(.disabled):active, .btn-grey.active:not([disabled]):not(.disabled),
 .show > .btn-grey.dropdown-toggle, .btn-grey:not([disabled]):not(.disabled):active:focus, .btn-grey.active:not([disabled]):not(.disabled):focus,
-.show > .btn-grey.dropdown-toggle:focus, .btn-blue-grey:focus, .btn-blue-grey.focus, .btn-blue-grey:not([disabled]):not(.disabled):active, .btn-blue-grey.active:not([disabled]):not(.disabled),
+.show > .btn-grey.dropdown-toggle:focus, .btn-outline-grey:not([disabled]):not(.disabled):active, .btn-outline-grey.active:not([disabled]):not(.disabled),
+.show > .btn-outline-grey.dropdown-toggle, .btn-outline-grey:not([disabled]):not(.disabled):active:focus, .btn-outline-grey.active:not([disabled]):not(.disabled):focus,
+.show > .btn-outline-grey.dropdown-toggle:focus, .btn-blue-grey:focus, .btn-blue-grey.focus, .btn-blue-grey:not([disabled]):not(.disabled):active, .btn-blue-grey.active:not([disabled]):not(.disabled),
 .show > .btn-blue-grey.dropdown-toggle, .btn-blue-grey:not([disabled]):not(.disabled):active:focus, .btn-blue-grey.active:not([disabled]):not(.disabled):focus,
-.show > .btn-blue-grey.dropdown-toggle:focus, .btn-white:focus, .btn-white.focus, .btn-white:not([disabled]):not(.disabled):active, .btn-white.active:not([disabled]):not(.disabled),
+.show > .btn-blue-grey.dropdown-toggle:focus, .btn-outline-blue-grey:not([disabled]):not(.disabled):active, .btn-outline-blue-grey.active:not([disabled]):not(.disabled),
+.show > .btn-outline-blue-grey.dropdown-toggle, .btn-outline-blue-grey:not([disabled]):not(.disabled):active:focus, .btn-outline-blue-grey.active:not([disabled]):not(.disabled):focus,
+.show > .btn-outline-blue-grey.dropdown-toggle:focus, .btn-white:focus, .btn-white.focus, .btn-white:not([disabled]):not(.disabled):active, .btn-white.active:not([disabled]):not(.disabled),
 .show > .btn-white.dropdown-toggle, .btn-white:not([disabled]):not(.disabled):active:focus, .btn-white.active:not([disabled]):not(.disabled):focus,
-.show > .btn-white.dropdown-toggle:focus, .btn-black:focus, .btn-black.focus, .btn-black:not([disabled]):not(.disabled):active, .btn-black.active:not([disabled]):not(.disabled),
+.show > .btn-white.dropdown-toggle:focus, .btn-outline-white:not([disabled]):not(.disabled):active, .btn-outline-white.active:not([disabled]):not(.disabled),
+.show > .btn-outline-white.dropdown-toggle, .btn-outline-white:not([disabled]):not(.disabled):active:focus, .btn-outline-white.active:not([disabled]):not(.disabled):focus,
+.show > .btn-outline-white.dropdown-toggle:focus, .btn-black:focus, .btn-black.focus, .btn-black:not([disabled]):not(.disabled):active, .btn-black.active:not([disabled]):not(.disabled),
 .show > .btn-black.dropdown-toggle, .btn-black:not([disabled]):not(.disabled):active:focus, .btn-black.active:not([disabled]):not(.disabled):focus,
-.show > .btn-black.dropdown-toggle:focus, .modal-dialog .modal-content, .modal-dialog.cascading-modal .modal-header, .modal-dialog.modal-notify.modal-info .btn-primary-modal:focus, .modal-dialog.modal-notify.modal-info .btn-primary-modal.focus, .modal-dialog.modal-notify.modal-info .btn-primary-modal:not([disabled]):not(.disabled):active, .modal-dialog.modal-notify.modal-info .btn-primary-modal.active:not([disabled]):not(.disabled),
+.show > .btn-black.dropdown-toggle:focus, .btn-outline-black:not([disabled]):not(.disabled):active, .btn-outline-black.active:not([disabled]):not(.disabled),
+.show > .btn-outline-black.dropdown-toggle, .btn-outline-black:not([disabled]):not(.disabled):active:focus, .btn-outline-black.active:not([disabled]):not(.disabled):focus,
+.show > .btn-outline-black.dropdown-toggle:focus, .modal-dialog .modal-content, .modal-dialog.cascading-modal .modal-header, .modal-dialog.modal-notify.modal-info .btn-primary-modal:focus, .modal-dialog.modal-notify.modal-info .btn-primary-modal.focus, .modal-dialog.modal-notify.modal-info .btn-primary-modal:not([disabled]):not(.disabled):active, .modal-dialog.modal-notify.modal-info .btn-primary-modal.active:not([disabled]):not(.disabled),
 .show > .modal-dialog.modal-notify.modal-info .btn-primary-modal.dropdown-toggle, .modal-dialog.modal-notify.modal-info .btn-primary-modal:not([disabled]):not(.disabled):active:focus, .modal-dialog.modal-notify.modal-info .btn-primary-modal.active:not([disabled]):not(.disabled):focus,
-.show > .modal-dialog.modal-notify.modal-info .btn-primary-modal.dropdown-toggle:focus, .modal-dialog.modal-notify.modal-warning .btn-primary-modal:focus, .modal-dialog.modal-notify.modal-warning .btn-primary-modal.focus, .modal-dialog.modal-notify.modal-warning .btn-primary-modal:not([disabled]):not(.disabled):active, .modal-dialog.modal-notify.modal-warning .btn-primary-modal.active:not([disabled]):not(.disabled),
+.show > .modal-dialog.modal-notify.modal-info .btn-primary-modal.dropdown-toggle:focus, .modal-dialog.modal-notify.modal-info .btn-outline-secondary-modal:not([disabled]):not(.disabled):active, .modal-dialog.modal-notify.modal-info .btn-outline-secondary-modal.active:not([disabled]):not(.disabled),
+.show > .modal-dialog.modal-notify.modal-info .btn-outline-secondary-modal.dropdown-toggle, .modal-dialog.modal-notify.modal-info .btn-outline-secondary-modal:not([disabled]):not(.disabled):active:focus, .modal-dialog.modal-notify.modal-info .btn-outline-secondary-modal.active:not([disabled]):not(.disabled):focus,
+.show > .modal-dialog.modal-notify.modal-info .btn-outline-secondary-modal.dropdown-toggle:focus, .modal-dialog.modal-notify.modal-warning .btn-primary-modal:focus, .modal-dialog.modal-notify.modal-warning .btn-primary-modal.focus, .modal-dialog.modal-notify.modal-warning .btn-primary-modal:not([disabled]):not(.disabled):active, .modal-dialog.modal-notify.modal-warning .btn-primary-modal.active:not([disabled]):not(.disabled),
 .show > .modal-dialog.modal-notify.modal-warning .btn-primary-modal.dropdown-toggle, .modal-dialog.modal-notify.modal-warning .btn-primary-modal:not([disabled]):not(.disabled):active:focus, .modal-dialog.modal-notify.modal-warning .btn-primary-modal.active:not([disabled]):not(.disabled):focus,
-.show > .modal-dialog.modal-notify.modal-warning .btn-primary-modal.dropdown-toggle:focus, .modal-dialog.modal-notify.modal-success .btn-primary-modal:focus, .modal-dialog.modal-notify.modal-success .btn-primary-modal.focus, .modal-dialog.modal-notify.modal-success .btn-primary-modal:not([disabled]):not(.disabled):active, .modal-dialog.modal-notify.modal-success .btn-primary-modal.active:not([disabled]):not(.disabled),
+.show > .modal-dialog.modal-notify.modal-warning .btn-primary-modal.dropdown-toggle:focus, .modal-dialog.modal-notify.modal-warning .btn-outline-secondary-modal:not([disabled]):not(.disabled):active, .modal-dialog.modal-notify.modal-warning .btn-outline-secondary-modal.active:not([disabled]):not(.disabled),
+.show > .modal-dialog.modal-notify.modal-warning .btn-outline-secondary-modal.dropdown-toggle, .modal-dialog.modal-notify.modal-warning .btn-outline-secondary-modal:not([disabled]):not(.disabled):active:focus, .modal-dialog.modal-notify.modal-warning .btn-outline-secondary-modal.active:not([disabled]):not(.disabled):focus,
+.show > .modal-dialog.modal-notify.modal-warning .btn-outline-secondary-modal.dropdown-toggle:focus, .modal-dialog.modal-notify.modal-success .btn-primary-modal:focus, .modal-dialog.modal-notify.modal-success .btn-primary-modal.focus, .modal-dialog.modal-notify.modal-success .btn-primary-modal:not([disabled]):not(.disabled):active, .modal-dialog.modal-notify.modal-success .btn-primary-modal.active:not([disabled]):not(.disabled),
 .show > .modal-dialog.modal-notify.modal-success .btn-primary-modal.dropdown-toggle, .modal-dialog.modal-notify.modal-success .btn-primary-modal:not([disabled]):not(.disabled):active:focus, .modal-dialog.modal-notify.modal-success .btn-primary-modal.active:not([disabled]):not(.disabled):focus,
-.show > .modal-dialog.modal-notify.modal-success .btn-primary-modal.dropdown-toggle:focus, .modal-dialog.modal-notify.modal-danger .btn-primary-modal:focus, .modal-dialog.modal-notify.modal-danger .btn-primary-modal.focus, .modal-dialog.modal-notify.modal-danger .btn-primary-modal:not([disabled]):not(.disabled):active, .modal-dialog.modal-notify.modal-danger .btn-primary-modal.active:not([disabled]):not(.disabled),
+.show > .modal-dialog.modal-notify.modal-success .btn-primary-modal.dropdown-toggle:focus, .modal-dialog.modal-notify.modal-success .btn-outline-secondary-modal:not([disabled]):not(.disabled):active, .modal-dialog.modal-notify.modal-success .btn-outline-secondary-modal.active:not([disabled]):not(.disabled),
+.show > .modal-dialog.modal-notify.modal-success .btn-outline-secondary-modal.dropdown-toggle, .modal-dialog.modal-notify.modal-success .btn-outline-secondary-modal:not([disabled]):not(.disabled):active:focus, .modal-dialog.modal-notify.modal-success .btn-outline-secondary-modal.active:not([disabled]):not(.disabled):focus,
+.show > .modal-dialog.modal-notify.modal-success .btn-outline-secondary-modal.dropdown-toggle:focus, .modal-dialog.modal-notify.modal-danger .btn-primary-modal:focus, .modal-dialog.modal-notify.modal-danger .btn-primary-modal.focus, .modal-dialog.modal-notify.modal-danger .btn-primary-modal:not([disabled]):not(.disabled):active, .modal-dialog.modal-notify.modal-danger .btn-primary-modal.active:not([disabled]):not(.disabled),
 .show > .modal-dialog.modal-notify.modal-danger .btn-primary-modal.dropdown-toggle, .modal-dialog.modal-notify.modal-danger .btn-primary-modal:not([disabled]):not(.disabled):active:focus, .modal-dialog.modal-notify.modal-danger .btn-primary-modal.active:not([disabled]):not(.disabled):focus,
-.show > .modal-dialog.modal-notify.modal-danger .btn-primary-modal.dropdown-toggle:focus, ul.instagram-photos li img, .media .media-left img, .btn-mdb:focus, .btn-mdb.focus, .btn-mdb:not([disabled]):not(.disabled):active, .btn-mdb.active:not([disabled]):not(.disabled),
+.show > .modal-dialog.modal-notify.modal-danger .btn-primary-modal.dropdown-toggle:focus, .modal-dialog.modal-notify.modal-danger .btn-outline-secondary-modal:not([disabled]):not(.disabled):active, .modal-dialog.modal-notify.modal-danger .btn-outline-secondary-modal.active:not([disabled]):not(.disabled),
+.show > .modal-dialog.modal-notify.modal-danger .btn-outline-secondary-modal.dropdown-toggle, .modal-dialog.modal-notify.modal-danger .btn-outline-secondary-modal:not([disabled]):not(.disabled):active:focus, .modal-dialog.modal-notify.modal-danger .btn-outline-secondary-modal.active:not([disabled]):not(.disabled):focus,
+.show > .modal-dialog.modal-notify.modal-danger .btn-outline-secondary-modal.dropdown-toggle:focus, ul.instagram-photos li img, .media .media-left img, .btn-mdb:focus, .btn-mdb.focus, .btn-mdb:not([disabled]):not(.disabled):active, .btn-mdb.active:not([disabled]):not(.disabled),
 .show > .btn-mdb.dropdown-toggle, .btn-mdb:not([disabled]):not(.disabled):active:focus, .btn-mdb.active:not([disabled]):not(.disabled):focus,
 .show > .btn-mdb.dropdown-toggle:focus, .btn-floating, .nav-tabs, .md-pills .nav-link.active:hover, .card.card-cascade.wider.reverse .card-body, .card.card-cascade.card-avatar img, .dropdown .dropdown-menu .dropdown-item:hover, .dropdown .dropdown-menu .dropdown-item:active, .colorful-select .dropdown-content li.active span, .comments-list .badge,
 .reply-form .badge, .white-skin .btn-primary:focus, .white-skin .btn-primary.focus, .white-skin .btn-primary:not([disabled]):not(.disabled):active, .white-skin .btn-primary.active:not([disabled]):not(.disabled),
@@ -5343,6 +5415,9 @@ button:focus {
     background-color: transparent;
     color: #4285F4;
     border-color: #4285F4; }
+  .btn-outline-primary:not([disabled]):not(.disabled):active, .btn-outline-primary:not([disabled]):not(.disabled).active,
+  .show > .btn-outline-primary.dropdown-toggle {
+    background-color: transparent !important; }
 
 .btn-danger {
   background-color: #ff3547 !important;
@@ -5367,6 +5442,9 @@ button:focus {
     background-color: transparent;
     color: #ff3547;
     border-color: #ff3547; }
+  .btn-outline-danger:not([disabled]):not(.disabled):active, .btn-outline-danger:not([disabled]):not(.disabled).active,
+  .show > .btn-outline-danger.dropdown-toggle {
+    background-color: transparent !important; }
 
 .btn-warning {
   background-color: #FF8800 !important;
@@ -5391,6 +5469,9 @@ button:focus {
     background-color: transparent;
     color: #FF8800;
     border-color: #FF8800; }
+  .btn-outline-warning:not([disabled]):not(.disabled):active, .btn-outline-warning:not([disabled]):not(.disabled).active,
+  .show > .btn-outline-warning.dropdown-toggle {
+    background-color: transparent !important; }
 
 .btn-success {
   background-color: #00C851 !important;
@@ -5415,6 +5496,9 @@ button:focus {
     background-color: transparent;
     color: #00C851;
     border-color: #00C851; }
+  .btn-outline-success:not([disabled]):not(.disabled):active, .btn-outline-success:not([disabled]):not(.disabled).active,
+  .show > .btn-outline-success.dropdown-toggle {
+    background-color: transparent !important; }
 
 .btn-info {
   background-color: #33b5e5 !important;
@@ -5439,6 +5523,9 @@ button:focus {
     background-color: transparent;
     color: #33b5e5;
     border-color: #33b5e5; }
+  .btn-outline-info:not([disabled]):not(.disabled):active, .btn-outline-info:not([disabled]):not(.disabled).active,
+  .show > .btn-outline-info.dropdown-toggle {
+    background-color: transparent !important; }
 
 .btn-default {
   background-color: #2BBBAD !important;
@@ -5463,6 +5550,9 @@ button:focus {
     background-color: transparent;
     color: #2BBBAD;
     border-color: #2BBBAD; }
+  .btn-outline-default:not([disabled]):not(.disabled):active, .btn-outline-default:not([disabled]):not(.disabled).active,
+  .show > .btn-outline-default.dropdown-toggle {
+    background-color: transparent !important; }
 
 .btn-secondary {
   background-color: #aa66cc !important;
@@ -5487,6 +5577,9 @@ button:focus {
     background-color: transparent;
     color: #aa66cc;
     border-color: #aa66cc; }
+  .btn-outline-secondary:not([disabled]):not(.disabled):active, .btn-outline-secondary:not([disabled]):not(.disabled).active,
+  .show > .btn-outline-secondary.dropdown-toggle {
+    background-color: transparent !important; }
 
 .btn-elegant {
   background-color: #2E2E2E !important;
@@ -5511,6 +5604,9 @@ button:focus {
     background-color: transparent;
     color: #2E2E2E;
     border-color: #2E2E2E; }
+  .btn-outline-elegant:not([disabled]):not(.disabled):active, .btn-outline-elegant:not([disabled]):not(.disabled).active,
+  .show > .btn-outline-elegant.dropdown-toggle {
+    background-color: transparent !important; }
 
 .btn-unique {
   background-color: #880e4f !important;
@@ -5535,6 +5631,9 @@ button:focus {
     background-color: transparent;
     color: #880e4f;
     border-color: #880e4f; }
+  .btn-outline-unique:not([disabled]):not(.disabled):active, .btn-outline-unique:not([disabled]):not(.disabled).active,
+  .show > .btn-outline-unique.dropdown-toggle {
+    background-color: transparent !important; }
 
 .btn-dark-green {
   background-color: #388E3C !important;
@@ -5559,6 +5658,9 @@ button:focus {
     background-color: transparent;
     color: #388E3C;
     border-color: #388E3C; }
+  .btn-outline-dark-green:not([disabled]):not(.disabled):active, .btn-outline-dark-green:not([disabled]):not(.disabled).active,
+  .show > .btn-outline-dark-green.dropdown-toggle {
+    background-color: transparent !important; }
 
 .btn-mdb-color {
   background-color: #59698D !important;
@@ -5583,6 +5685,9 @@ button:focus {
     background-color: transparent;
     color: #59698D;
     border-color: #59698D; }
+  .btn-outline-mdb-color:not([disabled]):not(.disabled):active, .btn-outline-mdb-color:not([disabled]):not(.disabled).active,
+  .show > .btn-outline-mdb-color.dropdown-toggle {
+    background-color: transparent !important; }
 
 .btn-red {
   background-color: #D32F2F !important;
@@ -5607,6 +5712,9 @@ button:focus {
     background-color: transparent;
     color: #D32F2F;
     border-color: #D32F2F; }
+  .btn-outline-red:not([disabled]):not(.disabled):active, .btn-outline-red:not([disabled]):not(.disabled).active,
+  .show > .btn-outline-red.dropdown-toggle {
+    background-color: transparent !important; }
 
 .btn-pink {
   background-color: #ec407a !important;
@@ -5631,6 +5739,9 @@ button:focus {
     background-color: transparent;
     color: #ec407a;
     border-color: #ec407a; }
+  .btn-outline-pink:not([disabled]):not(.disabled):active, .btn-outline-pink:not([disabled]):not(.disabled).active,
+  .show > .btn-outline-pink.dropdown-toggle {
+    background-color: transparent !important; }
 
 .btn-purple {
   background-color: #8e24aa !important;
@@ -5655,6 +5766,9 @@ button:focus {
     background-color: transparent;
     color: #8e24aa;
     border-color: #8e24aa; }
+  .btn-outline-purple:not([disabled]):not(.disabled):active, .btn-outline-purple:not([disabled]):not(.disabled).active,
+  .show > .btn-outline-purple.dropdown-toggle {
+    background-color: transparent !important; }
 
 .btn-deep-purple {
   background-color: #512da8 !important;
@@ -5679,6 +5793,9 @@ button:focus {
     background-color: transparent;
     color: #512da8;
     border-color: #512da8; }
+  .btn-outline-deep-purple:not([disabled]):not(.disabled):active, .btn-outline-deep-purple:not([disabled]):not(.disabled).active,
+  .show > .btn-outline-deep-purple.dropdown-toggle {
+    background-color: transparent !important; }
 
 .btn-indigo {
   background-color: #3f51b5 !important;
@@ -5703,6 +5820,9 @@ button:focus {
     background-color: transparent;
     color: #3f51b5;
     border-color: #3f51b5; }
+  .btn-outline-indigo:not([disabled]):not(.disabled):active, .btn-outline-indigo:not([disabled]):not(.disabled).active,
+  .show > .btn-outline-indigo.dropdown-toggle {
+    background-color: transparent !important; }
 
 .btn-blue {
   background-color: #1976D2 !important;
@@ -5727,6 +5847,9 @@ button:focus {
     background-color: transparent;
     color: #1976D2;
     border-color: #1976D2; }
+  .btn-outline-blue:not([disabled]):not(.disabled):active, .btn-outline-blue:not([disabled]):not(.disabled).active,
+  .show > .btn-outline-blue.dropdown-toggle {
+    background-color: transparent !important; }
 
 .btn-light-blue {
   background-color: #82B1FF !important;
@@ -5751,6 +5874,9 @@ button:focus {
     background-color: transparent;
     color: #82B1FF;
     border-color: #82B1FF; }
+  .btn-outline-light-blue:not([disabled]):not(.disabled):active, .btn-outline-light-blue:not([disabled]):not(.disabled).active,
+  .show > .btn-outline-light-blue.dropdown-toggle {
+    background-color: transparent !important; }
 
 .btn-cyan {
   background-color: #00bcd4 !important;
@@ -5775,6 +5901,9 @@ button:focus {
     background-color: transparent;
     color: #00bcd4;
     border-color: #00bcd4; }
+  .btn-outline-cyan:not([disabled]):not(.disabled):active, .btn-outline-cyan:not([disabled]):not(.disabled).active,
+  .show > .btn-outline-cyan.dropdown-toggle {
+    background-color: transparent !important; }
 
 .btn-teal {
   background-color: #00796b !important;
@@ -5799,6 +5928,9 @@ button:focus {
     background-color: transparent;
     color: #00796b;
     border-color: #00796b; }
+  .btn-outline-teal:not([disabled]):not(.disabled):active, .btn-outline-teal:not([disabled]):not(.disabled).active,
+  .show > .btn-outline-teal.dropdown-toggle {
+    background-color: transparent !important; }
 
 .btn-green {
   background-color: #388E3C !important;
@@ -5823,6 +5955,9 @@ button:focus {
     background-color: transparent;
     color: #388E3C;
     border-color: #388E3C; }
+  .btn-outline-green:not([disabled]):not(.disabled):active, .btn-outline-green:not([disabled]):not(.disabled).active,
+  .show > .btn-outline-green.dropdown-toggle {
+    background-color: transparent !important; }
 
 .btn-light-green {
   background-color: #8bc34a !important;
@@ -5847,6 +5982,9 @@ button:focus {
     background-color: transparent;
     color: #8bc34a;
     border-color: #8bc34a; }
+  .btn-outline-light-green:not([disabled]):not(.disabled):active, .btn-outline-light-green:not([disabled]):not(.disabled).active,
+  .show > .btn-outline-light-green.dropdown-toggle {
+    background-color: transparent !important; }
 
 .btn-lime {
   background-color: #afb42b !important;
@@ -5871,6 +6009,9 @@ button:focus {
     background-color: transparent;
     color: #afb42b;
     border-color: #afb42b; }
+  .btn-outline-lime:not([disabled]):not(.disabled):active, .btn-outline-lime:not([disabled]):not(.disabled).active,
+  .show > .btn-outline-lime.dropdown-toggle {
+    background-color: transparent !important; }
 
 .btn-yellow {
   background-color: #fbc02d !important;
@@ -5895,6 +6036,9 @@ button:focus {
     background-color: transparent;
     color: #fbc02d;
     border-color: #fbc02d; }
+  .btn-outline-yellow:not([disabled]):not(.disabled):active, .btn-outline-yellow:not([disabled]):not(.disabled).active,
+  .show > .btn-outline-yellow.dropdown-toggle {
+    background-color: transparent !important; }
 
 .btn-amber {
   background-color: #ffa000 !important;
@@ -5919,6 +6063,9 @@ button:focus {
     background-color: transparent;
     color: #ffa000;
     border-color: #ffa000; }
+  .btn-outline-amber:not([disabled]):not(.disabled):active, .btn-outline-amber:not([disabled]):not(.disabled).active,
+  .show > .btn-outline-amber.dropdown-toggle {
+    background-color: transparent !important; }
 
 .btn-orange {
   background-color: #f57c00 !important;
@@ -5943,6 +6090,9 @@ button:focus {
     background-color: transparent;
     color: #f57c00;
     border-color: #f57c00; }
+  .btn-outline-orange:not([disabled]):not(.disabled):active, .btn-outline-orange:not([disabled]):not(.disabled).active,
+  .show > .btn-outline-orange.dropdown-toggle {
+    background-color: transparent !important; }
 
 .btn-deep-orange {
   background-color: #ff7043 !important;
@@ -5967,6 +6117,9 @@ button:focus {
     background-color: transparent;
     color: #ff7043;
     border-color: #ff7043; }
+  .btn-outline-deep-orange:not([disabled]):not(.disabled):active, .btn-outline-deep-orange:not([disabled]):not(.disabled).active,
+  .show > .btn-outline-deep-orange.dropdown-toggle {
+    background-color: transparent !important; }
 
 .btn-brown {
   background-color: #795548 !important;
@@ -5991,6 +6144,9 @@ button:focus {
     background-color: transparent;
     color: #795548;
     border-color: #795548; }
+  .btn-outline-brown:not([disabled]):not(.disabled):active, .btn-outline-brown:not([disabled]):not(.disabled).active,
+  .show > .btn-outline-brown.dropdown-toggle {
+    background-color: transparent !important; }
 
 .btn-grey {
   background-color: #616161 !important;
@@ -6015,6 +6171,9 @@ button:focus {
     background-color: transparent;
     color: #616161;
     border-color: #616161; }
+  .btn-outline-grey:not([disabled]):not(.disabled):active, .btn-outline-grey:not([disabled]):not(.disabled).active,
+  .show > .btn-outline-grey.dropdown-toggle {
+    background-color: transparent !important; }
 
 .btn-blue-grey {
   background-color: #78909c !important;
@@ -6039,6 +6198,9 @@ button:focus {
     background-color: transparent;
     color: #78909c;
     border-color: #78909c; }
+  .btn-outline-blue-grey:not([disabled]):not(.disabled):active, .btn-outline-blue-grey:not([disabled]):not(.disabled).active,
+  .show > .btn-outline-blue-grey.dropdown-toggle {
+    background-color: transparent !important; }
 
 .btn-white {
   background-color: #fff !important;
@@ -6063,6 +6225,9 @@ button:focus {
     background-color: transparent;
     color: #fff;
     border-color: #fff; }
+  .btn-outline-white:not([disabled]):not(.disabled):active, .btn-outline-white:not([disabled]):not(.disabled).active,
+  .show > .btn-outline-white.dropdown-toggle {
+    background-color: transparent !important; }
 
 .btn-black {
   background-color: #000 !important;
@@ -6087,6 +6252,9 @@ button:focus {
     background-color: transparent;
     color: #000;
     border-color: #000; }
+  .btn-outline-black:not([disabled]):not(.disabled):active, .btn-outline-black:not([disabled]):not(.disabled).active,
+  .show > .btn-outline-black.dropdown-toggle {
+    background-color: transparent !important; }
 
 .card {
   font-weight: 400;
@@ -6698,6 +6866,9 @@ body.scrollable {
     background-color: transparent;
     color: #5394ff;
     border-color: #5394ff; }
+  .modal-dialog.modal-notify.modal-info .btn-outline-secondary-modal:not([disabled]):not(.disabled):active, .modal-dialog.modal-notify.modal-info .btn-outline-secondary-modal:not([disabled]):not(.disabled).active,
+  .show > .modal-dialog.modal-notify.modal-info .btn-outline-secondary-modal.dropdown-toggle {
+    background-color: transparent !important; }
 
 .modal-dialog.modal-notify.modal-warning .modal-header {
   background-color: #ff8e38; }
@@ -6731,6 +6902,9 @@ body.scrollable {
     background-color: transparent;
     color: #ff8e38;
     border-color: #ff8e38; }
+  .modal-dialog.modal-notify.modal-warning .btn-outline-secondary-modal:not([disabled]):not(.disabled):active, .modal-dialog.modal-notify.modal-warning .btn-outline-secondary-modal:not([disabled]):not(.disabled).active,
+  .show > .modal-dialog.modal-notify.modal-warning .btn-outline-secondary-modal.dropdown-toggle {
+    background-color: transparent !important; }
 
 .modal-dialog.modal-notify.modal-success .modal-header {
   background-color: #01d36b; }
@@ -6764,6 +6938,9 @@ body.scrollable {
     background-color: transparent;
     color: #01d36b;
     border-color: #01d36b; }
+  .modal-dialog.modal-notify.modal-success .btn-outline-secondary-modal:not([disabled]):not(.disabled):active, .modal-dialog.modal-notify.modal-success .btn-outline-secondary-modal:not([disabled]):not(.disabled).active,
+  .show > .modal-dialog.modal-notify.modal-success .btn-outline-secondary-modal.dropdown-toggle {
+    background-color: transparent !important; }
 
 .modal-dialog.modal-notify.modal-danger .modal-header {
   background-color: #ff4b4b; }
@@ -6797,6 +6974,9 @@ body.scrollable {
     background-color: transparent;
     color: #ff4b4b;
     border-color: #ff4b4b; }
+  .modal-dialog.modal-notify.modal-danger .btn-outline-secondary-modal:not([disabled]):not(.disabled):active, .modal-dialog.modal-notify.modal-danger .btn-outline-secondary-modal:not([disabled]):not(.disabled).active,
+  .show > .modal-dialog.modal-notify.modal-danger .btn-outline-secondary-modal.dropdown-toggle {
+    background-color: transparent !important; }
 
 .progress {
   box-shadow: none;
