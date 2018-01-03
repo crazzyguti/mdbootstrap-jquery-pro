@@ -110,6 +110,14 @@ button:focus {
     box-shadow: none !important;
   }
 }
+.btn-flat {
+  box-shadow: none;
+  &:active,
+  &:focus,
+  &:hover {
+    box-shadow: none !important;
+  }
+}
 @each $btn-name, $color-value in $material-colors {
   @include make-button($btn-name, $color-value);
   @include make-outline-button($btn-name, $color-value);

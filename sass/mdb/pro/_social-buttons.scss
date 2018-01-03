@@ -42,7 +42,7 @@
   z-index: 2;
   border-radius: 10rem;
   @extend .z-depth-1;
-    
+
 }
 
 .social-counters {
@@ -55,4 +55,8 @@
   padding: .5rem;
   margin: .5rem;
   font-size: 1.2rem;
-}    
+}
+
+@each $medium, $color in $social-colors {
+  @include make-button($medium, $color);
+}

@@ -161,16 +161,13 @@
     &:not([disabled]):not(.disabled).active,
     .show > &.dropdown-toggle {
       @extend .z-depth-1-half;
+      background-color: transparent !important;
+      border-color: $color !important;
     }
     &:not([disabled]):not(.disabled):active:focus,
     &:not([disabled]):not(.disabled).active:focus,
     .show > &.dropdown-toggle:focus {
       @extend .z-depth-1-half;
-    }
-    &:not([disabled]):not(.disabled):active,
-    &:not([disabled]):not(.disabled).active,
-    .show > &.dropdown-toggle {
-      background-color: transparent !important;
     }
   }
 }
