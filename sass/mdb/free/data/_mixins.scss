@@ -111,12 +111,16 @@
     background-color: $color !important;
     color: set-notification-text-color($color) !important;
     &:hover {
-      background-color: lighten($color, 5%) !important;
+      background-color: lighten($color, 5%);
+    }
+    &:focus,
+    &.focus {
+      @extend .z-depth-1-half;
     }
     &:focus,
     &:active,
     &.active {
-      background-color: darken($color, 15%) !important;
+      background-color: darken($color, 10%);
     }
     &.dropdown-toggle {
       background-color: $color!important;
@@ -124,6 +128,17 @@
       &:focus {
         background-color: lighten($color, 5%) !important;
       }
+    }
+    &:not([disabled]):not(.disabled):active,
+    &:not([disabled]):not(.disabled).active,
+    .show > &.dropdown-toggle {
+      @extend .z-depth-1-half;
+      background-color: $color !important;
+    }
+    &:not([disabled]):not(.disabled):active:focus,
+    &:not([disabled]):not(.disabled).active:focus,
+    .show > &.dropdown-toggle:focus {
+      @extend .z-depth-1-half;
     }
   }
 }
