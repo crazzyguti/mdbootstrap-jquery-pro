@@ -3,6 +3,7 @@ button:focus {
   outline:0 !important;
 }
 .btn {
+  @extend .z-depth-1;
   font-size: 0.8rem;
   padding: 0.85rem 2.13rem;
   margin: 6px;
@@ -13,11 +14,10 @@ button:focus {
   white-space: normal !important;
   word-wrap: break-word;
   cursor: pointer;
-  @extend .white-text;
-  @extend .z-depth-1;
   &:hover,
   &:active,
-  &:focus {
+  &:focus,
+  &:active:focus {
     @extend .z-depth-1-half;
     outline: 0;
   }
@@ -103,16 +103,12 @@ button:focus {
 .btn-link {
   background-color: transparent;
   @extend .black-text;
-  box-shadow: none;
+  box-shadow: none !important;
   &:hover,
   &:focus {
     background-color: transparent;
-    box-shadow: none;
+    box-shadow: none !important;
   }
-}
-.btn-primary:not([disabled]):not(.disabled):active, .btn-primary:not([disabled]):not(.disabled).active,
-.show > .btn-primary.dropdown-toggle {
-  @extend .z-depth-1;
 }
 @each $btn-name, $color-value in $material-colors {
   @include make-button($btn-name, $color-value);
