@@ -258,8 +258,8 @@ const dropdownSelectors = $('.dropdown, .dropup')
 // =========================
 function dropdownEffectData(target) {
   // @todo - page level global?
-  let effectInDefault = null
-  let effectOutDefault = null
+  let effectInDefault = 'fadeIn'
+  let effectOutDefault = 'fadeOut'
   const dropdown = $(target)
   const dropdownMenu = $('.dropdown-menu', target)
   const parentUl = dropdown.parents('ul.nav')
@@ -328,8 +328,8 @@ dropdownSelectors.on({
       e.preventDefault()
       dropdownEffectStart(dropdown, dropdown.effectOut)
       dropdownEffectEnd(dropdown, () => {
-        dropdown.dropdown.removeClass('open')
         dropdown.dropdown.removeClass('show')
+        dropdown.dropdownMenu.removeClass('show')
       })
     }
   }
