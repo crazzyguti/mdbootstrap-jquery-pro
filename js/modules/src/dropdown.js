@@ -157,7 +157,8 @@
             }
           })
           .animate({
-            opacity: 1
+            opacity: 1,
+            scrollTop: 0
           }, {
             queue: false,
             duration: options.inDuration,

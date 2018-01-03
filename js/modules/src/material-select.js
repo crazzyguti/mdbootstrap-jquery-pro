@@ -70,7 +70,7 @@
       // Added to search
       const searchable = Boolean($select.attr('searchable'))
 
-      // Added to search   
+      // Added to search
       if (searchable) {
         setSearchableOption()
       }
@@ -257,7 +257,8 @@
           collection.find('li.selected').removeClass('selected')
           const option = $(newOption)
           option.addClass('selected')
-          options.scrollTo(option)
+          // commented because it causes problems in multiselect with many options
+          // options.scrollTo(option)
         }
       }
 
