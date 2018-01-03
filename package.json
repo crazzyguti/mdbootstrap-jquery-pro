@@ -4,7 +4,9 @@
   "description": "",
   "main": "js/mdb.js",
   "dependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -39,5 +41,7 @@
   "author": "MDBootstrap",
   "license": "license.txt",
   "homepage": "https://mdbootstrap.com",
-  "eslintIgnore": ["js/modules/src/charts.js"]
+  "eslintIgnore": [
+    "js/modules/src/charts.js"
+  ]
 }
