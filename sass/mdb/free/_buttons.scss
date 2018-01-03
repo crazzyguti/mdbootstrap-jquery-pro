@@ -13,7 +13,7 @@ button:focus {
   white-space: normal !important;
   word-wrap: break-word;
   cursor: pointer;
-  @extend .white-text;
+  // @extend .white-text;
   @extend .z-depth-1;
   &:hover,
   &:active,
