@@ -1,6 +1,6 @@
 /*!
  * Material Design for Bootstrap 4
- * Version: MDB PRO 4.4.3
+ * Version: MDB PRO 4.4.4-dev
  *
  *
  * Copyright: Material Design for Bootstrap
@@ -14361,7 +14361,7 @@ $(document).ready(function ($) {
 
             function getContainer(options, create) {
                 if (!options) { options = getOptions(); }
-                $container = $('#' + options.containerId);
+                $container = $('#' + options.containerId + '[position = ' + options.positionClass + ']');
                 if ($container.length) {
                     return $container;
                 }
@@ -14450,6 +14450,7 @@ $(document).ready(function ($) {
             function createContainer(options) {
                 $container = $('<div/>')
                     .attr('id', options.containerId)
+                    .attr('position', options.positionClass)
                     .addClass(options.positionClass)
                     .attr('aria-live', 'polite')
                     .attr('role', 'alert');

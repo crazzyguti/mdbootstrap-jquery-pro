@@ -1,6 +1,6 @@
 /*!
  * Material Design for Bootstrap 4
- * Version: MDB PRO 4.4.3
+ * Version: MDB PRO 4.4.4-dev
  *
  *
  * Copyright: Material Design for Bootstrap
