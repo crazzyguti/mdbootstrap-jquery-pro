@@ -10,7 +10,7 @@ const uglify = require('gulp-uglify');
 const browserSync = require('browser-sync').create();
 
 gulp.task('compile-js', function(){
-    return gulp.src(['./js/jquery-3.2.1.min.js', './js/popper.min.js', './js/bootstrap.js', './js/mdb.js'])
+    return gulp.src(['./js/jquery-3.2.1.min.js', './js/popper.min.js', './js/bootstrap.js', './js/mdb.js', 'js/prism.js', 'js/jquery-validate.js', 'js/theme_scripts.js'])
         .pipe(concat('compiled.js'))
         .pipe(rename('compiled.min.js'))
         // .pipe(uglify())
