@@ -4,15 +4,17 @@
   "description": "",
   "main": "js/mdb.js",
   "dependencies": {
+    "babel-preset-env": "^1.6.1",
     "gulp": "^3.9.1",
     "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^3.0.0"
+    "gulp-uglify": "^3.0.0",
+    "install": "^0.10.2"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-eslint": "^6.1.2",
+    "babel-eslint": "^8.1.2",
     "browser-sync": "^2.18.13",
-    "eslint": "^4.9.0",
+    "eslint": "^4.15.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
     "gulp": "^3.9.1",
@@ -32,7 +34,10 @@
   "scripts": {
     "test": "ls -l",
     "sass-lint": "stylelint --config config/.stylelintrc.json --syntax scss \"sass/**/*.scss\"",
-    "js-lint": "eslint --config .eslintrc.json js/modules/src"
+    "js-lint": "eslint --config .eslintrc.json js/modules/src",
+    "js-compile-plugins": "babel --presets env js/modules/src/ --out-dir js/modules/dist/",
+    "js-build": "gulp build-js",
+    "js-build-free": "gulp build-free-js"
   },
   "repository": {
     "type": "git",
