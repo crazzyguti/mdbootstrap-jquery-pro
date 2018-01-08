@@ -1,23 +1,23 @@
 /*!
  * Material Design for Bootstrap 4
- * Version: MDB PRO 4.4.4-dev
+ * Version: MDB PRO 4.4.4
  *
  *
  * Copyright: Material Design for Bootstrap
- * http://mdbootstrap.com/
+ * https://mdbootstrap.com/
  *
- * Read the license: http://mdbootstrap.com/license/
+ * Read the license: https://mdbootstrap.com/license/
  *
  *
- * Documentation: http://mdbootstrap.com/
+ * Documentation: https://mdbootstrap.com/
  *
- * Getting started: http://mdbootstrap.com/getting-started/
+ * Getting started: https://mdbootstrap.com/getting-started/
  *
- * Tutorials: http://mdbootstrap.com/bootstrap-tutorial/
+ * Tutorials: https://mdbootstrap.com/bootstrap-tutorial/
  *
- * Templates: http://mdbootstrap.com/templates/
+ * Templates: https://mdbootstrap.com/templates/
  *
- * Support: http://mdbootstrap.com/forums/forum/support/
+ * Support: https://mdbootstrap.com/forums/forum/support/
  *
  * Contact: office@mdbootstrap.com
  *
@@ -35,7 +35,6 @@ chart.js
 wow.js
 scrolling-nav.js
 waves.js
-
 preloading.js
 card-reveal.js
 character-counter.js
@@ -13033,380 +13032,186 @@ module.exports = function(Chart) {
 
 },{"1":1}]},{},[7])(7)
 });
-var WOW = function (properties) {
+'use strict';
 
-  var config = properties || {};
+var WOW;
 
-  this._boxClass = config.boxClass || 'wow';
-  this._animateClass = config.animateClass || 'animated',
-  this._offset = config.offset || 0,
-  this._mobile = (config.mobile === undefined) ? true : false;
-  this._live = (config.live === undefined) ? true : false;
+(function($) {
 
-  this._seoFixEnabled = (config.seoFixEnabled === undefined) ? true : false;
-  this._animationDuration = config.animationDuration || "1s";
-  this._animationDelay = config.animationDelay || "0s";
+    WOW = function WOW() {
 
-  this._initStorageVariables();
+        return {
 
-};
+            init: function init() {
 
-WOW.prototype._initStorageVariables = function () {
+                var animationName = [];
 
-  this._animation = [];
-  this._boxes = [];
-  this._cleanupBoxListener = [];
-  this._cleanupBoxVisibleListener = [];
+                var once = 1;
 
-};
+                function mdbWow() {
 
-WOW.prototype.init = function () {
+                    var windowHeight = window.innerHeight;
+                    var scroll = window.scrollY;
 
-  if (!this._mobile && this._isMobile()) {
-    return;
-  }
+                    $('.wow').each(function() {
 
-  this._eachBoxInit(this._prepareBox.bind(this));
+                        if ($(this).css('visibility') == 'visible') {
+                            return;
+                        }
 
-  this._startWow();
+                        if (windowHeight + scroll - 100 > getOffset(this) && scroll < getOffset(this) || windowHeight + scroll - 100 > getOffset(this) + $(this).height() && scroll < getOffset(this) + $(this).height() || windowHeight + scroll == $(document).height() && getOffset(this) + 100 > $(document).height()) {
 
-};
+                            var index = $(this).index('.wow');
 
-WOW.prototype._isMobile = function () {
-  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-};
+                            var delay = $(this).attr('data-wow-delay');
 
+                            if (delay) {
 
-WOW.prototype._eachBoxInit = function (each) {
+                                delay = $(this).attr('data-wow-delay').slice(0, -1
 
-  var boxes = document.getElementsByClassName(this._boxClass);
+                                );
+                                var self = this;
 
-  for (var i = 0; i < boxes.length; i++) {
+                                var timeout = parseFloat(delay) * 1000;
 
-    (function (i) {
-      each(boxes[i], i);
-    })(i);
+                                $(self).addClass('animated');
+                                $(self).css({ 'visibility': 'visible' });
+                                $(self).css({ 'animation-delay': delay });
+                                $(self).css({ 'animation-name': animationName[index] });
 
-  }
+                                var removeTime = $(this).css('animation-duration').slice(0, -1) * 1000;
 
-};
+                                if ($(this).attr('data-wow-delay')) {
 
-WOW.prototype._prepareBox = function (box) {
+                                    removeTime += $(this).attr('data-wow-delay').slice(0, -1) * 1000;
+                                }
 
-  var index = this._boxes.push(box) - 1;
-  this._animation[index] = {
-    animationName: box.style.animationName || window.getComputedStyle(box, null).animationName
-  };
-  box.style.animationName = 'none';
-  box.style.visibility = 'hidden';
+                                var self = this;
 
-};
+                                setTimeout(function() {
 
-WOW.prototype._startWow = function () {
+                                    $(self).removeClass('animated');
+                                }, removeTime);
+                            } else {
 
-  if (this._live) {
-    this._checkForChanges();
-  }
-  if (this._scrollY() === 0 && this._seoFixEnabled) {
-    this._seoFix();
-  }
+                                $(this).addClass('animated');
+                                $(this).css({ 'visibility': 'visible' });
+                                $(this).css({ 'animation-name': animationName[index] });
 
-  this._appearInView();
+                                var removeTime = $(this).css('animation-duration').slice(0, -1) * 1000;
 
-  this._scrollHandler();
+                                var self = this;
 
-};
+                                setTimeout(function() {
 
-WOW.prototype._scrollY = function () {
+                                    $(self).removeClass('animated');
+                                }, removeTime);
+                            }
+                        }
+                    });
+                }
 
-  if (this._isInt(window.pageYOffset)) {
-    return window.pageYOffset;
-  }
-  if (this._isInt(document.documentElement.scrollTop)) {
-    return document.documentElement.scrollTop;
-  }
-  if (this._isInt(document.body.scrollTop)) {
-    return document.body.scrollTop;
-  }
+                function appear() {
 
-};
+                    $('.wow').each(function() {
 
-WOW.prototype._isInt = function(value) {
-  return typeof value === 'number' && 
-    isFinite(value) && 
-    Math.floor(value) === value;
-};
+                        var index = $(this).index('.wow');
 
-WOW.prototype._seoFix = function () {
+                        var delay = $(this).attr('data-wow-delay');
 
-  this._showNotInView();
+                        if (delay) {
 
-};
+                            delay = $(this).attr('data-wow-delay').slice(0, -1);
 
+                            var timeout = parseFloat(delay) * 1000;
 
-WOW.prototype._appear = function (box, i) {
+                            $(this).addClass('animated');
+                            $(this).css({ 'visibility': 'visible' });
+                            $(this).css({ 'animation-delay': delay + 's' });
+                            $(this).css({ 'animation-name': animationName[index] });
+                        } else {
 
-  var animationState = box.style.animationPlayState || box.style.WebkitAnimationPlayState;
+                            $(this).addClass('animated');
+                            $(this).css({ 'visibility': 'visible' });
+                            $(this).css({ 'animation-name': animationName[index] });
+                        }
+                    });
+                }
 
-  if (box.className.indexOf(this._animateClass) === -1) {
+                function hide() {
 
-    delete this._boxes[i];
+                    var windowHeight = window.innerHeight;
+                    var scroll = window.scrollY;
 
-    this._onStartAnimation(box, i);
-    this._onStopAnimation(box, i);
+                    $('.wow.animated').each(function() {
 
-    this._animate(box, i, this._getAnimationConfig(box));
+                        if (windowHeight + scroll - 100 > getOffset(this) && scroll > getOffset(this) + 100 || windowHeight + scroll - 100 < getOffset(this) && scroll < getOffset(this) + 100 || getOffset(this) + $(this).height > $(document).height() - 100) {
 
-  }
+                            $(this).removeClass('animated');
+                            $(this).css({ 'animation-name': 'none' });
+                            $(this).css({ 'visibility': 'hidden' });
+                        } else {
 
-};
+                            var removeTime = $(this).css('animation-duration').slice(0, -1) * 1000;
 
-WOW.prototype._onStartAnimation = function (box, i) {
-  
-  this._cleanupBoxVisibleListener[i] = this._boxVisible.bind(this, box, i);
-    
-  box.addEventListener('animationstart', this._cleanupBoxVisibleListener[i]);
-  box.addEventListener('webkitAnimationStart', this._cleanupBoxVisibleListener[i]);
+                            if ($(this).attr('data-wow-delay')) {
 
-};
+                                removeTime += $(this).attr('data-wow-delay').slice(0, -1) * 1000;
+                            }
 
-WOW.prototype._onStopAnimation = function (box, i) {
+                            var self = this;
 
-  this._cleanupBoxListener[i] = this._cleanupBox.bind(this, box, i);
+                            setTimeout(function() {
 
-  box.addEventListener('animationend', this._cleanupBoxListener[i]);
-  box.addEventListener('webkitAnimationEnd', this._cleanupBoxListener[i]);
+                                $(self).removeClass('animated');
+                            }, removeTime);
+                        }
+                    });
 
-};
+                    mdbWow();
 
-WOW.prototype._getAnimationConfig = function (box) {
+                    once--;
+                }
 
-  return {
+                function getOffset(elem) {
 
-    delay: this._getDelay(box),
-    duration: this._getDuration(box),
-    iterations: this._getIterations(box)
-      
-  }
+                    var box = elem.getBoundingClientRect();
 
-};
+                    var body = document.body;
+                    var docEl = document.documentElement;
 
-WOW.prototype._getDelay = function (box) {
+                    var scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
 
-  return box.getAttribute('data-wow-delay') || this._animationDelay;
+                    var clientTop = docEl.clientTop || body.clientTop || 0;
 
-};
+                    var top = box.top + scrollTop - clientTop;
 
-WOW.prototype._getDuration = function (box) {
+                    return Math.round(top);
+                }
 
-  return box.getAttribute('data-wow-duration') || this._animationDuration;
+                $('.wow').each(function() {
 
-};
+                    $(this).css({ 'visibility': 'hidden' });
+                    animationName[$(this).index('.wow')] = $(this).css('animation-name');
+                    $(this).css({ 'animation-name': 'none' });
+                });
 
-WOW.prototype._getIterations = function (box) {
+                $(window).scroll(function() {
 
-  return box.getAttribute('data-wow-iteration') || 
-    box.style.animationIterationCount || 
-    window.getComputedStyle(box, null).animationIterationCount || 
-    1;
+                    if (once) {
 
-};
+                        hide();
+                    } else {
 
-WOW.prototype._animate = function (box, i, config) {
+                        mdbWow();
+                    }
+                });
 
-  box.style.animationDelay = config.delay;
-  box.style.animationDuration = config.duration;
-  box.style.animationIterationCount = config.iterations;
-  box.style.animationName = this._animation[i].animationName;
-  box.className += (' ' + this._animateClass);
-
-};
-
-WOW.prototype._boxVisible = function (box, i) {
-
-  box.style.visibility = 'visible';
-
-  box.removeEventListener('animationstart', this._cleanupBoxVisibleListener[i]);
-  box.removeEventListener('webkitAnimationStart', this._cleanupBoxVisibleListener[i]);
-
-  delete this._cleanupBoxVisibleListener[i];
-
-};
-
-WOW.prototype._cleanupBox = function (box, i) {
-
-  box.style.animationDelay = '';
-  box.style.animationDuration = '';
-  box.style.animationIterationCount = '';
-  box.style.animationName = 'none';
-
-  this._cleanupClass(box);
-
-  box.removeEventListener('animationend', this._cleanupBoxListener[i]);
-  box.removeEventListener('webkitAnimationEnd', this._cleanupBoxListener[i]);
-
-  delete this._cleanupBoxListener[i];
-
-};
-
-WOW.prototype._cleanupClass = function (box) {
-
-  var classArray = box.className.split(' ');
-  var animateIndex = classArray.indexOf(this._animateClass);
-
-  if (animateIndex !== -1) {
-
-    classArray.splice(animateIndex, 1);
-    box.className = classArray.join(' ');
-    
-  }
-
-};
-
-WOW.prototype._eachBox = function (each) {
-
-  for (var i = 0; i < this._boxes.length; i++) {
-
-    var box = this._boxes[i];
-
-    if (box) {
-
-      (function (i) {
-         each(this._boxes[i], i);
-      }.bind(this))(i);
-      
-    }
-
-  }
-
-};
-
-WOW.prototype._scrollHandler = function () {
-
-  this._hideSeoFixListener = this._hideSeoFix.bind(this);
-
-  window.addEventListener('scroll', this._hideSeoFixListener);
-  window.addEventListener('scroll', this._appearInView.bind(this));
-  window.addEventListener('resize', this._appearInView.bind(this));
-
-};
-
-WOW.prototype._hideSeoFix = function () {
-  
-  window.removeEventListener('scroll', this._hideSeoFixListener);
-  delete this._hideSeoFixListener;
-
-  this._eachBox(function (box, i) {
-
-    if (!this._isInView(box)) {
-      box.style.visibility = "hidden";
-    }
-
-  }.bind(this));
-
-};
-
-WOW.prototype._appearInView = function () {
-
-  this._eachBox(function (box, i) {
-    this._animateBox(box, i);
-  }.bind(this));
-
-};
-
-WOW.prototype._animateBox = function (box, i) {
-
-  if (this._isInView(box)) {
-    delete this._boxes[i];
-    this._appear(box, i);
-  }
-
-};
-
-WOW.prototype._showNotInView = function () {
-
-  this._eachBox(function (box, i) {
-    this._makeVisible(box, i);
-  }.bind(this));
-
-};
-
-WOW.prototype._makeVisible = function (box, i) {
-
-  if (!this._isInView(box)) {
-    this._boxes[i].style.visibility = 'visible';
-  }
-
-};
-
-WOW.prototype._isInView = function (box) {
-
-  var offset = box.getAttribute('data-wow-offset') || this._offset;
-  var boxTopOffset = this._getElementOffset(box);
-
-  var triggerOffset = boxTopOffset + ~~offset;
-
-  var bottomPosition = window.innerHeight + this._scrollY();
-
-  return triggerOffset <= bottomPosition && (triggerOffset === 0 ? 10 : triggerOffset) >= this._scrollY();
-
-};
-
-WOW.prototype._getElementOffset = function (box) {
-
-  var clientRect = box.getBoundingClientRect();
-
-  var body = document.body;
-
-  var scrollTop = this._scrollY();
-  var clientTop = document.documentElement.clientTop || body.clientTop || 0;
-
-  var top  = clientRect.top +  scrollTop - clientTop;
-
-  return Math.round(top);
-
-};
-
-WOW.prototype._checkForChanges = function () {
-
-  var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
-
-  var observer = new MutationObserver(this._mutations.bind(this));
-
-  var config = {
-    childList: true,
-    subtree: true
-  };
-
-  observer.observe(document.body, config);
-
-};
-
-WOW.prototype._mutations = function (mutations) {
-  
-  mutations.forEach(function (mutation) {
-
-    for (var i = 0; i < mutation.addedNodes.length; i++) {
-      this.doSync(mutation.addedNodes[i]);
-    }
-
-  }.bind(this));
-
-};
-
-WOW.prototype.doSync = function (node) {
-
-  if (node.className) {
-
-    var classes = node.className.split(' ');
-
-    if (classes.indexOf(this._boxClass) !== -1) {
-      this._prepareBox(node);
-    }
-
-  }
-
-};
+                appear();
+            }
+        };
+    };
+})(jQuery);
 
 'use strict';
 
@@ -13414,10 +13219,12 @@ WOW.prototype.doSync = function (node) {
 var OFFSET_TOP = 50;
 
 $(window).scroll(function () {
-  if ($('.navbar').offset().top > OFFSET_TOP) {
-    $('.scrolling-navbar').addClass('top-nav-collapse');
-  } else {
-    $('.scrolling-navbar').removeClass('top-nav-collapse');
+  if ($('.navbar').length) {
+    if ($('.navbar').offset().top > OFFSET_TOP) {
+      $('.scrolling-navbar').addClass('top-nav-collapse');
+    } else {
+      $('.scrolling-navbar').removeClass('top-nav-collapse');
+    }
   }
 });
 /*!
@@ -14177,7 +13984,7 @@ Waves.init();
 
 $(document).ready(function () {
   $('#preloader-markup').load('mdb-addons/preloader.html', function () {
-    $(window).load(function () {
+    $(window).on('load', function () {
       $('#mdb-preloader').fadeOut('slow');
     });
   });
@@ -14721,20 +14528,25 @@ $(document).ready(function ($) {
     }
 }));
 
-//SMOOTH SCROLL
-$(".smooth-scroll").on('click', 'a', function(event) {
-    event.preventDefault();
-    var elAttr = $(this).attr('href');
-    var offset = ($(this).attr('data-offset') ? $(this).attr('data-offset') : 0);
-    var setHash = $(this).closest('ul').attr('data-allow-hashes');
-    $('body,html').animate({
-        scrollTop: $(elAttr).offset().top - offset
-    }, 700);
-    if (typeof setHash !== typeof undefined && setHash !== false) {
-      history.replaceState(null, null, elAttr);
+'use strict';
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+// SMOOTH SCROLL
+var SMOOTH_SCROLL_DURATION = 700;
+
+$('.smooth-scroll').on('click', 'a', function (event) {
+  event.preventDefault();
+  var elAttr = $(undefined).attr('href');
+  var offset = $(undefined).attr('data-offset') ? $(undefined).attr('data-offset') : 0;
+  var setHash = $(undefined).closest('ul').attr('data-allow-hashes');
+  $('body,html').animate({
+    scrollTop: $(elAttr).offset().top - offset
+  }, SMOOTH_SCROLL_DURATION);
+  if ((typeof setHash === 'undefined' ? 'undefined' : _typeof(setHash)) !== (typeof undefined === 'undefined' ? 'undefined' : _typeof(undefined)) && setHash !== false) {
+    history.replaceState(null, null, elAttr);
   }
 });
-
 'use strict';
 
 /* DROPDOWN */
@@ -14890,7 +14702,8 @@ $(".smooth-scroll").on('click', 'a', function(event) {
             $(this).css('height', '');
           }
         }).animate({
-          opacity: 1
+          opacity: 1,
+          scrollTop: 0
         }, {
           queue: false,
           duration: options.inDuration,
@@ -14988,8 +14801,8 @@ var dropdownSelectors = $('.dropdown, .dropup');
 // =========================
 function dropdownEffectData(target) {
   // @todo - page level global?
-  var effectInDefault = null;
-  var effectOutDefault = null;
+  var effectInDefault = 'fadeIn';
+  var effectOutDefault = 'fadeOut';
   var dropdown = $(target);
   var dropdownMenu = $('.dropdown-menu', target);
   var parentUl = dropdown.parents('ul.nav');
@@ -15058,8 +14871,8 @@ dropdownSelectors.on({
       e.preventDefault();
       dropdownEffectStart(dropdown, dropdown.effectOut);
       dropdownEffectEnd(dropdown, function () {
-        dropdown.dropdown.removeClass('open');
         dropdown.dropdown.removeClass('show');
+        dropdown.dropdownMenu.removeClass('show');
       });
     }
   }
@@ -19063,7 +18876,7 @@ $.fn.easyPieChart = function(options) {
       // Added to search
       var searchable = Boolean($select.attr('searchable'));
 
-      // Added to search   
+      // Added to search
       if (searchable) {
         setSearchableOption();
       }
@@ -19249,7 +19062,8 @@ $.fn.easyPieChart = function(options) {
           collection.find('li.selected').removeClass('selected');
           var option = $(newOption);
           option.addClass('selected');
-          options.scrollTo(option);
+          // commented because it causes problems in multiselect with many options
+          // options.scrollTo(option)
         }
       };
 
@@ -26142,6 +25956,8 @@ initPhotoSwipeFromDOM('.mdb-lightbox');
     };
 }());
 
+'use strict';
+
 /* 
  * Material Design for Bootstrap 
  * MDB Autocomplete Plugin
@@ -26149,80 +25965,83 @@ initPhotoSwipeFromDOM('.mdb-lightbox');
 
 $.fn.mdb_autocomplete = function (options) {
 
-    // Default options
-    var defaults = {
-        data: {}
+  // Default options
+  var defaults = {
+    data: {}
+  };
+
+  var ENTER_CHAR_CODE = 13;
+
+  // Get options
+  options = $.extend(defaults, options);
+
+  return this.each(function () {
+
+    // text input
+    var $input = $(this);
+    var $autocomplete = void 0;
+
+    // assign data from options
+    var data = options.data;
+
+    if (Object.keys(data).length) {
+
+      $autocomplete = $('<ul class="mdb-autocomplete-wrap"></ul>');
+
+      $autocomplete.insertAfter($(this));
     };
 
-    // Get options
-    options = $.extend(defaults, options);
+    // Listen if key was pressed
+    $input.on('keyup', function (e) {
 
-    return this.each(function () {
+      // get value from input
+      var q = $input.val();
 
-        // text input
-        var $input = $(this);
+      $autocomplete.empty();
 
-        // assign data from options
-        var data = options.data;
+      // check if input isn't empty
+      if (q.length) {
 
-        if (Object.keys(data).length) {
+        for (var item in data) {
 
-            $('<ul class="mdb-autocomplete-wrap"></ul>').insertAfter($(this));
-            var $autocomplete = $(this).parent().find('.mdb-autocomplete-wrap');
+          // check if item contains value that we're looking for
+          if (data[item].toLowerCase().indexOf(q.toLowerCase()) !== -1) {
+            var option = $('<li>' + data[item] + '</li>');
 
-        };
+            $autocomplete.append(option);
+          }
+        }
+      }
 
-        // Listen if key was pressed
-        $input.on('keyup', function (e) {
+      if (e.which === ENTER_CHAR_CODE) {
+        $autocomplete.children(":first").trigger('click');
+        $autocomplete.empty();
+      }
 
-            // get value from input
-            var q = $input.val();
-
-            $autocomplete.empty();
-
-            // check if input isn't empty
-            if (q.length) {
-
-                for (var item in data) {
-
-                    // check if item contains value that we're looking for
-                    if (data[item].toLowerCase().indexOf(q.toLowerCase()) !== -1) {
-                        var option = $('<li>' + data[item] + '</li>');
-
-                        $autocomplete.append(option);
-                    }
-                }
-            }
-
-            if (e.which == 13) {
-                $autocomplete.children(":first").trigger('click');
-                $autocomplete.empty();
-            }
-
-            if (q.length == 0) {
-                $(this).parent().find('.mdb-autocomplete-clear').css('visibility', 'hidden');
-            } else {
-                $(this).parent().find('.mdb-autocomplete-clear').css('visibility', 'visible');
-            }
-        });
-
-        $autocomplete.on('click', 'li', function () {
-
-            // Set input value after click
-            $input.val($(this).text());
-
-            // Clear autocomplete
-            $autocomplete.empty();
-        });
-
-        $('.mdb-autocomplete-clear').on('click', function (e) {
-            e.preventDefault();
-            $(this).parent().find('input').val('');
-            $(this).css('visibility', 'hidden');
-            $(this).parent().find('.mdb-autocomplete-wrap').empty();
-            $(this).parent().find('label').removeClass('active');
-        });
+      if (q.length === 0) {
+        $('.mdb-autocomplete-clear').css('visibility', 'hidden');
+      } else {
+        $('.mdb-autocomplete-clear').css('visibility', 'visible');
+      }
     });
+
+    $autocomplete.on('click', 'li', function () {
+
+      // Set input value after click
+      $input.val($(this).text());
+
+      // Clear autocomplete
+      $autocomplete.empty();
+    });
+
+    $('.mdb-autocomplete-clear').on('click', function (e) {
+      e.preventDefault();
+      $input.val('');
+      $(this).css('visibility', 'hidden');
+      $autocomplete.empty();
+      $(this).parent().find('label').removeClass('active');
+    });
+  });
 };
 /*
     Enhanced Bootstrap Modals
