@@ -4,7 +4,7 @@
 
 $(document).ready(function () {
   $('#preloader-markup').load('mdb-addons/preloader.html', function () {
-    $(window).load(function () {
+    $(window).on('load', function () {
       $('#mdb-preloader').fadeOut('slow');
     });
   });

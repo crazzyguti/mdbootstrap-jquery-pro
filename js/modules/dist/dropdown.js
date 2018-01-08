@@ -153,7 +153,8 @@
             $(this).css('height', '');
           }
         }).animate({
-          opacity: 1
+          opacity: 1,
+          scrollTop: 0
         }, {
           queue: false,
           duration: options.inDuration,
@@ -251,8 +252,8 @@ var dropdownSelectors = $('.dropdown, .dropup');
 // =========================
 function dropdownEffectData(target) {
   // @todo - page level global?
-  var effectInDefault = null;
-  var effectOutDefault = null;
+  var effectInDefault = 'fadeIn';
+  var effectOutDefault = 'fadeOut';
   var dropdown = $(target);
   var dropdownMenu = $('.dropdown-menu', target);
   var parentUl = dropdown.parents('ul.nav');
@@ -321,8 +322,8 @@ dropdownSelectors.on({
       e.preventDefault();
       dropdownEffectStart(dropdown, dropdown.effectOut);
       dropdownEffectEnd(dropdown, function () {
-        dropdown.dropdown.removeClass('open');
         dropdown.dropdown.removeClass('show');
+        dropdown.dropdownMenu.removeClass('show');
       });
     }
   }
