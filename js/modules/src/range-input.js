@@ -11,19 +11,19 @@
 
   const add_thumb = () => {
     const $thumb = $(thumb_html)
-    $(this).after($thumb)
+    $(range_type).after($thumb)
   }
 
   // Add thumbs;
   $(range_type).each(add_thumb)
 
-  $(document).on('change', range_type, () => {
+  $(document).on('change', range_type, function() {
     const $thumb       = $(this)
     const $thumb_value = $thumb.siblings('.thumb').find('.value')
     $thumb_value.html($thumb.val())
   })
 
-  $(document).on('input mousedown touchstart', range_type, (e) => {
+  $(document).on('input mousedown touchstart', range_type, function(e) {
     const $this        = $(this)
     const $thumb       = $this.siblings('.thumb')
     const width        = $this.outerWidth()
@@ -74,7 +74,7 @@
 
   })
 
-  $(document).on('mouseup touchend', range_wrapper, () => {
+  $(document).on('mouseup touchend', range_wrapper, function() {
     range_mousedown = false
     $(this).removeClass('active')
   })
@@ -116,7 +116,7 @@
     }
   })
 
-  $(document).on('mouseout touchleave', range_wrapper, () => {
+  $(document).on('mouseout touchleave', range_wrapper, function() {
     if (!range_mousedown) {
       const $thumb = $(this).children('.thumb')
 

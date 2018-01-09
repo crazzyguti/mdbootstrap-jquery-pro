@@ -18654,7 +18654,6 @@ $.fn.easyPieChart = function(options) {
 *  Range Input  *
 ****************/
 (function ($) {
-  var _this = this;
 
   var range_wrapper = '.range-field';
   var range_type = 'input[type=range]';
@@ -18664,20 +18663,20 @@ $.fn.easyPieChart = function(options) {
 
   var add_thumb = function add_thumb() {
     var $thumb = $(thumb_html);
-    $(_this).after($thumb);
+    $(range_type).after($thumb);
   };
 
   // Add thumbs;
   $(range_type).each(add_thumb);
 
   $(document).on('change', range_type, function () {
-    var $thumb = $(_this);
+    var $thumb = $(this);
     var $thumb_value = $thumb.siblings('.thumb').find('.value');
     $thumb_value.html($thumb.val());
   });
 
   $(document).on('input mousedown touchstart', range_type, function (e) {
-    var $this = $(_this);
+    var $this = $(this);
     var $thumb = $this.siblings('.thumb');
     var width = $this.outerWidth();
     var noThumb = !$thumb.length;
@@ -18707,9 +18706,9 @@ $.fn.easyPieChart = function(options) {
     if (e.type !== 'input') {
       var isMobile = e.pageX === undefined || e.pageX === null;
       if (isMobile) {
-        left = e.originalEvent.touches[0].pageX - $(_this).offset().left;
+        left = e.originalEvent.touches[0].pageX - $(this).offset().left;
       } else {
-        left = e.pageX - $(_this).offset().left;
+        left = e.pageX - $(this).offset().left;
       }
 
       if (left < 0) {
@@ -18725,7 +18724,7 @@ $.fn.easyPieChart = function(options) {
 
   $(document).on('mouseup touchend', range_wrapper, function () {
     range_mousedown = false;
-    $(_this).removeClass('active');
+    $(this).removeClass('active');
   });
 
   $(document).on('mousemove touchmove', range_wrapper, function (e) {
@@ -18765,7 +18764,7 @@ $.fn.easyPieChart = function(options) {
 
   $(document).on('mouseout touchleave', range_wrapper, function () {
     if (!range_mousedown) {
-      var $thumb = $(_this).children('.thumb');
+      var $thumb = $(this).children('.thumb');
 
       if ($thumb.hasClass('active')) {
         $thumb.velocity({
