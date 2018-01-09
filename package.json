@@ -6,7 +6,11 @@
   "dependencies": {
     "babel-preset-env": "^1.6.1",
     "gulp": "^3.9.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-minify": "^2.1.0",
     "gulp-rename": "^1.2.2",
+    "gulp-strip-comments": "^2.5.2",
+    "gulp-strip-css-comments": "^2.0.0",
     "gulp-uglify": "^3.0.0",
     "install": "^0.10.2"
   },
@@ -32,12 +36,18 @@
     "stylelint-scss": "^2.1.0"
   },
   "scripts": {
-    "test": "ls -l",
     "sass-lint": "stylelint --config config/.stylelintrc.json --syntax scss \"sass/**/*.scss\"",
+    "css-compile": "gulp css-compile",
+    "css-minify": "gulp css-minify",
+    "css-compile-docs": "gulp css-compile-docs",
     "js-lint": "eslint --config .eslintrc.json js/modules/src",
     "js-compile-plugins": "babel --presets env js/modules/src/ --out-dir js/modules/dist/",
     "js-build": "gulp build-js",
-    "js-build-free": "gulp build-free-js"
+    "js-build-free": "gulp build-free-js",
+    "js-compile-docs": "gulp js-compile-docs",
+    "js-minify": "gulp js-minify",
+    "js-minify-free": "gulp js-minify-free",
+    "js-minify-docs": "gulp js-minify-docs"
   },
   "repository": {
     "type": "git",

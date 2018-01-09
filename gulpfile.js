@@ -7,17 +7,18 @@ const concat = require('gulp-concat');
 const addsrc = require('gulp-add-src');
 const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
+const cssmin = require('gulp-cssmin');
+const minify = require('gulp-minify')
+const strip = require('gulp-strip-comments');
 const browserSync = require('browser-sync').create();
 
-gulp.task('compile-js', function(){
-    return gulp.src(['./js/jquery-3.1.1.min.js', './js/popper.min.js', './js/bootstrap.js', './js/mdb.js', 'js/prism.js', 'js/jquery-validate.js', 'js/theme_scripts.js'])
+gulp.task('js-compile-docs', function(){
+    return gulp.src(['./js/jquery-3.2.1.min.js', './js/popper.min.js', './js/bootstrap.js', './js/mdb.js', 'js/prism.js', 'js/jquery-validate.js', 'js/theme_scripts.js'])
         .pipe(concat('compiled.js'))
-        .pipe(rename('compiled.min.js'))
-        // .pipe(uglify())
         .pipe(gulp.dest('./js'));
 });
 
-gulp.task('styles', function() {
+gulp.task('css-compile', function() {
     gulp.src('sass/**/*.scss')
         .pipe(sass({outputStyle: 'nested'}).on('error', sass.logError))
         .pipe(autoprefixer({
@@ -25,6 +26,29 @@ gulp.task('styles', function() {
             cascade: false
         }))
         .pipe(gulp.dest('./css/'));
+});
+
+gulp.task('css-compile-docs', function() {
+  gulp.src(['./css/bootstrap.css', './css/mdb.css', './css/docs/prism.css', './css/docs/style.css', './css/docs/fa.css', './css/docs/dwqa.css'])
+    .pipe(concat('compiled.css'))
+    .pipe(gulp.dest('./css'));
+});
+
+gulp.task('css-minify', function() {
+    gulp.src('css/mdb.css')
+      .pipe(cssmin())
+      .pipe(rename({suffix: '.min'}))
+      .pipe(gulp.dest('css'))
+});
+
+gulp.task('css-minify-docs', function() {
+    gulp.src('css/compiled.css')
+      .pipe(cleanCSS({level: {1: {specialComments: 0}}}, (details) => {
+        console.log(`${details.name}: ${details.stats.originalSize}`);
+        console.log(`${details.name}: ${details.stats.minifiedSize}`);
+      }))
+      .pipe(rename({suffix: '.min'}))
+      .pipe(gulp.dest('css'))
 });
 
 gulp.task('bs', function() {
@@ -51,6 +75,28 @@ gulp.task('build-free-js', function() {
         .pipe(gulp.dest('./dist/'))
 });
 
+gulp.task('js-minify', function() {
+  gulp.src('js/mdb.js')
+    .pipe(minify({
+        ext:{
+            src:'.js',
+            min:'.min.js'
+        },
+    }))
+    .pipe(gulp.dest('js'))
+});
+
+gulp.task('js-minify-docs', function() {
+  gulp.src('js/compiled.js')
+    .pipe(minify({
+        ext:{
+            src:'.js',
+            min:'.min.js'
+        },
+    }))
+    .pipe(gulp.dest('js'))
+});
+
 gulp.task('default',function() {
-    gulp.watch('sass/**/*.scss',['styles']);
+    gulp.watch('sass/**/*.scss',['css-compile']);
 });
