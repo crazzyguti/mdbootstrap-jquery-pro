@@ -1,0 +1,46 @@
+.dwqa-search {
+    margin-right: 1.8rem;
+    margin-bottom: 3rem;
+}
+.dwqa-sort-by {
+    margin-top: -20px;
+}
+.wp-editor-area {
+    height: 300px;
+}
+.btn-submit-dwqa, .dwqa-btn-primary {
+    font-size: 1rem;
+   padding: 0.2rem 1rem;
+    margin-bottom: 3rem;
+}
+
+.dwqa-leaderboard {
+    list-style: none;
+}
+
+.dwqa-user-block {
+    margin-bottom: 3rem;
+}
+.dwqa-leaderboard img {
+-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+border-radius: 50%;
+ box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+ float: left;
+ margin-right: 20px;
+}
+.dwqa-user-header {
+    font-size: 1.1rem;
+}
+
+.dwqa-container .rounded {
+    margin-bottom: 2rem;
+    font-weight: 500;
+    font-size: 1.25rem;
+    text-align: center;
+}
+.dwqa-container label{
+    font-weight: 500;
+    font-size: 1.25rem;
+    text-align: center;
+}
