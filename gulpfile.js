@@ -28,6 +28,17 @@ gulp.task('css-compile', function() {
         .pipe(gulp.dest('./css/'));
 });
 
+gulp.task('css-compile-free', function() {
+    gulp.src('sass/mdb-free.scss')
+        .pipe(sass({outputStyle: 'nested'}).on('error', sass.logError))
+        .pipe(autoprefixer({
+            browsers: ['last 10 versions'],
+            cascade: false
+        }))
+        .pipe(rename('mdb.css'))
+        .pipe(gulp.dest('./free/css/'));
+});
+
 gulp.task('css-compile-docs', function() {
   gulp.src(['./css/bootstrap.css', './css/mdb.css', './css/docs/prism.css', './css/docs/style.css', './css/docs/fa.css', './css/docs/dwqa.css'])
     .pipe(concat('compiled.css'))
@@ -39,6 +50,13 @@ gulp.task('css-minify', function() {
       .pipe(cssmin())
       .pipe(rename({suffix: '.min'}))
       .pipe(gulp.dest('css'))
+});
+
+gulp.task('css-minify-free', function() {
+    gulp.src('free/css/mdb.css')
+      .pipe(cssmin())
+      .pipe(rename({suffix: '.min'}))
+      .pipe(gulp.dest('free/css'))
 });
 
 gulp.task('css-minify-docs', function() {
@@ -71,8 +89,8 @@ gulp.task('build-js', function() {
 
 gulp.task('build-free-js', function() {
     gulp.src(['js/modules/_intro-mdb-free.js', './js/modules/vendor/jquery.easing.js', './js/modules/vendor/velocity.min.js', './js/modules/vendor/chart.js', './js/modules/vendor/wow.js', './js/modules/dist/scrolling-navbar.js', './js/modules/vendor/waves.js', './js/modules/dist/forms-free.js',  'js/modules/vendor/enhanced-modals.js'])
-        .pipe(concat('mdb-free.js'))
-        .pipe(gulp.dest('./dist/'))
+        .pipe(concat('mdb.js'))
+        .pipe(gulp.dest('./free/js'))
 });
 
 gulp.task('js-minify', function() {
@@ -84,6 +102,17 @@ gulp.task('js-minify', function() {
         },
     }))
     .pipe(gulp.dest('js'))
+});
+
+gulp.task('js-minify-free', function() {
+  gulp.src('free/js/mdb.js')
+    .pipe(minify({
+        ext:{
+            src:'.js',
+            min:'.min.js'
+        },
+    }))
+    .pipe(gulp.dest('free/js'))
 });
 
 gulp.task('js-minify-docs', function() {

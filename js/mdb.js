@@ -14537,9 +14537,9 @@ var SMOOTH_SCROLL_DURATION = 700;
 
 $('.smooth-scroll').on('click', 'a', function (event) {
   event.preventDefault();
-  var elAttr = $(undefined).attr('href');
-  var offset = $(undefined).attr('data-offset') ? $(undefined).attr('data-offset') : 0;
-  var setHash = $(undefined).closest('ul').attr('data-allow-hashes');
+  var elAttr = $(this).attr('href');
+  var offset = $(this).attr('data-offset') ? $(this).attr('data-offset') : 0;
+  var setHash = $(this).closest('ul').attr('data-allow-hashes');
   $('body,html').animate({
     scrollTop: $(elAttr).offset().top - offset
   }, SMOOTH_SCROLL_DURATION);
