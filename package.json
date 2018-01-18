@@ -41,6 +41,7 @@
     "css-compile-free": "gulp css-compile-free",
     "css-minify": "gulp css-minify",
     "css-minify-free": "gulp css-minify-free",
+    "css-minify-docs": "gulp css-minify-docs",
     "css-compile-docs": "gulp css-compile-docs",
     "js-lint": "eslint --config .eslintrc.json js/modules/src",
     "js-compile-plugins": "babel --presets env js/modules/src/ --out-dir js/modules/dist/",

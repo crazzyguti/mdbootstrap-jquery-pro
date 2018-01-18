@@ -13,7 +13,7 @@ const strip = require('gulp-strip-comments');
 const browserSync = require('browser-sync').create();
 
 gulp.task('js-compile-docs', function(){
-    return gulp.src(['./js/jquery-3.2.1.min.js', './js/popper.min.js', './js/bootstrap.js', './js/mdb.js', 'js/prism.js', 'js/jquery-validate.js', 'js/theme_scripts.js'])
+    return gulp.src(['./js/jquery-3.2.1.min.js', './js/popper.min.js', './js/bootstrap.js', './js/mdb.js', 'js/docs/prism.js', 'js/docs/jquery-validate.js', 'js/docs/theme_scripts.js'])
         .pipe(concat('compiled.js'))
         .pipe(gulp.dest('./js'));
 });

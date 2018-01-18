@@ -1,1 +1,0 @@
-powershell .\merge.ps1 
