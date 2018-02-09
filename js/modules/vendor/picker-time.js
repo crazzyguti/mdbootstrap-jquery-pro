@@ -112,7 +112,8 @@
 				minutesView = popover.find('.clockpicker-minutes'),
 				amPmBlock = popover.find('.clockpicker-am-pm-block'),
 				isInput = element.prop('tagName') === 'INPUT',
-				input = isInput ? element : element.find('input'),
+        input = isInput ? element : element.find('input'),
+        isHTML5 = input.prop('type') === 'time',
 				label = $("label[for=" + input.attr("id") + "]"),
 				self = this,
 				timer;
@@ -136,7 +137,7 @@
 		this.spanMinutes = popover.find('.clockpicker-span-minutes');
 		this.spanAmPm = popover.find('.clockpicker-span-am-pm');
 		this.footer = popover.find('.picker__footer');
-		this.amOrPm = "PM";
+		this.amOrPm = "";
 
 		// Setup for for 12 hour clock if option is selected
 		if (options.twelvehour) {
@@ -199,51 +200,55 @@
 				i, tick, radian, radius;
 
 		// Hours view
-		if (options.twelvehour) {
-			for (i = 1; i < 13; i += 1) {
-				tick = tickTpl.clone();
-				radian = i / 6 * Math.PI;
-				radius = outerRadius;
-				tick.css('font-size', '140%');
-				tick.css({
-					left: dialRadius + Math.sin(radian) * radius - tickRadius,
-					top: dialRadius - Math.cos(radian) * radius - tickRadius
-				});
-				tick.html(i === 0 ? '00' : i);
-				hoursView.append(tick);
-				tick.on(mousedownEvent, mousedown);
-			}
+    if (options.twelvehour) {
+      for (i = 0; i < 12; i += options.hourstep) {
+          tick = tickTpl.clone();
+          radian = i / 6 * Math.PI;
+          radius = outerRadius;
+          tick.css('font-size', '140%');
+          tick.css({
+              left: dialRadius + Math.sin(radian) * radius - tickRadius,
+              top: dialRadius - Math.cos(radian) * radius - tickRadius
+          });
+          tick.html(i === 0 ? 12 : i);
+          hoursView.append(tick);
+          tick.on(mousedownEvent, mousedown);
+      }
 		} else {
-			for (i = 0; i < 24; i += 1) {
-				tick = tickTpl.clone();
-				radian = i / 6 * Math.PI;
-				var inner = i > 0 && i < 13;
-				radius = inner ? innerRadius : outerRadius;
-				tick.css({
-					left: dialRadius + Math.sin(radian) * radius - tickRadius,
-					top: dialRadius - Math.cos(radian) * radius - tickRadius
-				});
-				if (inner)
-					tick.css('font-size', '120%');
-				tick.html(i === 0 ? '00' : i);
-				hoursView.append(tick);
-				tick.on(mousedownEvent, mousedown);
+      for (i = 0; i < 24; i += options.hourstep) {
+        tick = tickTpl.clone();
+        radian = i / 6 * Math.PI;
+        var inner = i > 0 && i < 13;
+        radius = inner ? innerRadius : outerRadius;
+        tick.css({
+            left: dialRadius + Math.sin(radian) * radius - tickRadius,
+            top: dialRadius - Math.cos(radian) * radius - tickRadius
+        });
+        if (inner) {
+            tick.css('font-size', '120%');
+        }
+        tick.html(i === 0 ? '00' : i);
+        hoursView.append(tick);
+        tick.on(mousedownEvent, mousedown);
 			}
 		}
 
-		// Minutes view
-		for (i = 0; i < 60; i += 5) {
-			tick = tickTpl.clone();
-			radian = i / 30 * Math.PI;
-			tick.css({
-				left: dialRadius + Math.sin(radian) * outerRadius - tickRadius,
-				top: dialRadius - Math.cos(radian) * outerRadius - tickRadius
-			});
-			tick.css('font-size', '140%');
-			tick.html(leadingZero(i));
-			minutesView.append(tick);
-			tick.on(mousedownEvent, mousedown);
-		}
+    // Minutes view
+    var incrementValue = Math.max(options.minutestep, 5);
+    for (i = 0; i < 60; i += incrementValue) {
+      for (i = 0; i < 60; i += 5) {
+        tick = tickTpl.clone();
+        radian = i / 30 * Math.PI;
+        tick.css({
+          left: dialRadius + Math.sin(radian) * outerRadius - tickRadius,
+          top: dialRadius - Math.cos(radian) * outerRadius - tickRadius
+        });
+        tick.css('font-size', '140%');
+        tick.html(leadingZero(i));
+        minutesView.append(tick);
+        tick.on(mousedownEvent, mousedown);
+      }
+    }
 
 		// Clicking on minutes view space
 		plate.on(mousedownEvent, function(e) {
@@ -375,8 +380,11 @@
 		autoclose: false,      // auto close when minute is selected
 		ampmclickable: false,  // set am/pm button on itself
 		darktheme: false,			 // set to dark theme
-		twelvehour: true,      // change to 12 hour AM/PM clock from 24 hour
-		vibrate: true          // vibrate the device when dragging clock hand
+		twelvehour: false,     // change to 12 hour AM/PM clock from 24 hour
+    vibrate: true,         // vibrate the device when dragging clock hand
+    hourstep: 1,           // allow to multi increment the hour
+    minutestep: 1,         // allow to multi increment the minute
+    ampmSubmit: false,     // allow submit with AM and PM buttons instead of the minute selection/picker
 	};
 
 	// Show or hide popover
@@ -395,7 +403,34 @@
 				self = this;
 
 		popover.show();
-	};
+  };
+
+    // The input can be changed by the user
+    // So before we can use this.hours/this.minutes we must update it
+ClockPicker.prototype.parseInputValue = function(){
+  var value = this.input.prop('value') || this.options['default'] || '';
+
+  if (value === 'now') {
+      value = new Date(+ new Date() + this.options.fromnow);
+  }
+  if (value instanceof Date) {
+      value = value.getHours() + ':' + value.getMinutes();
+  }
+
+  value = value.split(':');
+
+  // Minutes can have AM/PM that needs to be removed
+  this.hours = + value[0] || 0;
+  this.minutes = + (value[1] + '').replace(/\D/g, '') || 0;
+
+  this.hours = Math.round(this.hours / this.options.hourstep) * this.options.hourstep;
+  this.minutes = Math.round(this.minutes / this.options.minutestep) * this.options.minutestep;
+
+  if (this.options.twelvehour) {
+      var period = (value[1] + '').replace(/\d+/g, '').toLowerCase();
+      this.amOrPm = this.hours > 12 || period === 'pm' ? 'PM' : 'AM';
+  }
+};
 
 	// Show popover
 	ClockPicker.prototype.show = function(e){
@@ -437,21 +472,14 @@
 			this.isAppended = true;
 		}
 		// Get the time
-		var value = ((this.input.prop('value') || this.options['default'] || '') + '').split(':');
-		if(this.options.twelvehour && !(typeof value[1] === 'undefined')) {
-			value[1] = value[1].replace("AM", "").replace("PM", "");
-		}
-		if (value[0] === 'now') {
-			var now = new Date(+ new Date() + this.options.fromnow);
-			value = [
-				now.getHours(),
-				now.getMinutes()
-			];
-		}
-		this.hours = + value[0] || 0;
-		this.minutes = + value[1] || 0;
+		this.parseInputValue();
 		this.spanHours.html(leadingZero(this.hours));
-		this.spanMinutes.html(leadingZero(this.minutes));
+    this.spanMinutes.html(leadingZero(this.minutes));
+
+    if (this.options.twelvehour) {
+      this.spanAmPm.empty().append(this.amOrPm);
+    }
+
 		// Toggle to hours view
 		this.toggleView('hours');
 		// Set position
@@ -544,12 +572,19 @@
 	ClockPicker.prototype.setHand = function(x, y, roundBy5, dragging) {
 		var radian = Math.atan2(x, - y),
 				isHours = this.currentView === 'hours',
-				unit = Math.PI / (isHours || roundBy5? 6 : 30),
 				z = Math.sqrt(x * x + y * y),
 				options = this.options,
 				inner = isHours && z < (outerRadius + innerRadius) / 2,
 				radius = inner ? innerRadius : outerRadius,
-				value;
+				unit,
+        value;
+
+        // Calculate the unit
+        if (isHours) {
+            unit = options.hourstep / 6 * Math.PI
+        } else {
+            unit = options.minutestep / 30 * Math.PI
+        }
 
 		if (options.twelvehour)
 			radius = outerRadius;
@@ -565,28 +600,23 @@
 		radian = value * unit;
 
 		// Correct the hours or minutes
-		if(options.twelvehour) {
-			if(isHours) {
-				if(value === 0)
-					value = 12;
-			} else {
-				if(roundBy5)
-					value *= 5;
-				if(value === 60)
-					value = 0;
-			}
-		} else {
-			if(isHours) {
-				if(value === 12)
-					value = 0;
-				value = inner ? (value === 0 ? 12 : value) : value === 0 ? 0 : value + 12;
-			} else {
-				if(roundBy5)
-					value *= 5;
-				if(value === 60)
-					value = 0;
-			}
-		}
+    if (isHours) {
+      value *= options.hourstep;
+      if (! options.twelvehour && (!inner)==(value>0)) {
+          value += 12;
+      }
+      if (options.twelvehour && value === 0) {
+          value = 12;
+      }
+      if (value === 24) {
+          value = 0;
+      }
+    } else {
+      value *= options.minutestep;
+      if (value === 60) {
+          value = 0;
+      }
+    }
 		if (isHours)
 			this.fg.setAttribute('class', 'clockpicker-canvas-fg');
 		else {
@@ -632,17 +662,32 @@
 		}
 
 		// Set clock hand and others' position
-		var cx1 = Math.sin(radian) * (radius - tickRadius),
-			  cy1 = - Math.cos(radian) * (radius - tickRadius),
-		    cx2 = Math.sin(radian) * radius,
-			  cy2 = - Math.cos(radian) * radius;
-		this.hand.setAttribute('x2', cx1);
-		this.hand.setAttribute('y2', cy1);
-		this.bg.setAttribute('cx', cx2);
-		this.bg.setAttribute('cy', cy2);
-		this.fg.setAttribute('cx', cx2);
-		this.fg.setAttribute('cy', cy2);
+    var cx = Math.sin(radian) * radius,
+      cy = - Math.cos(radian) * radius;
+    this.hand.setAttribute('x2', cx);
+    this.hand.setAttribute('y2', cy);
+    this.bg.setAttribute('cx', cx);
+    this.bg.setAttribute('cy', cy);
+    this.fg.setAttribute('cx', cx);
+    this.fg.setAttribute('cy', cy);
 	};
+
+    // Allow user to get time as Date object
+    ClockPicker.prototype.getTime = function(callback) {
+      this.parseInputValue();
+
+      var hours = this.hours;
+      if (this.options.twelvehour && hours < 12 && this.amOrPm === 'PM') {
+          hours += 12;
+      }
+
+      var selectedTime = new Date();
+      selectedTime.setMinutes(this.minutes)
+      selectedTime.setHours(hours);
+      selectedTime.setSeconds(0);
+
+      return callback && callback.apply(this.element, selectedTime) || selectedTime;
+  }
 
 	// Hours and minutes are selected
 	ClockPicker.prototype.done = function() {
@@ -651,13 +696,27 @@
 		this.label.addClass('active');
 
 		var last = this.input.prop('value'),
-				value = leadingZero(this.hours) + ':' + leadingZero(this.minutes);
-		if (this.options.twelvehour)
-			value = value + this.amOrPm;
+      outHours = this.hours,
+      value = ':' + leadingZero(this.minutes);
+
+    if (this.isHTML5 && this.options.twelvehour) {
+        if (this.hours < 12 && this.amOrPm === 'PM') {
+            outHours += 12;
+        }
+        if (this.hours === 12 && this.amOrPm === 'AM') {
+            outHours = 0;
+        }
+    }
+
+    value = leadingZero(outHours) + value;
+
+    if (!this.isHTML5 && this.options.twelvehour) {
+          value = value + this.amOrPm;
+    }
 
 		this.input.prop('value', value);
 		if(value !== last) {
-			this.input.triggerHandler('change');
+			this.input.trigger('change');
 			if(!this.isInput)
 				this.element.trigger('change');
 		}
@@ -683,17 +742,28 @@
 	// Extends $.fn.clockpicker
 	$.fn.pickatime = function(option){
 		var args = Array.prototype.slice.call(arguments, 1);
-		return this.each(function(){
+		function handleClockPickerRequest(){
 			var $this = $(this),
 					data = $this.data('clockpicker');
 			if (!data) {
 				var options = $.extend({}, ClockPicker.DEFAULTS, $this.data(), typeof option == 'object' && option);
 				$this.data('clockpicker', new ClockPicker($this, options));
 			} else {
-				// Manual operatsions. show, hide, remove, e.g.
+				// Manual operations. show, hide, remove, e.g.
 				if (typeof data[option] === 'function')
 					data[option].apply(data, args);
 			}
-		});
-	};
+    }
+    // If we explicitly do a call on a single element then we can return the value (if needed)
+    // This allows us, for example, to return the value of getTime
+    if (this.length == 1) {
+      var returnValue = handleClockPickerRequest.apply(this[0]);
+
+      // If we do not have any return value then return the object itself so you can chain
+      return returnValue !== undefined ? returnValue : this;
+    }
+
+    // If we do have a list then we do not care about return values
+    return this.each(handleClockPickerRequest);
+    };
 }());
