@@ -19,7 +19,7 @@ gulp.task('js-compile-docs', function(){
 });
 
 gulp.task('css-compile', function() {
-    gulp.src('sass/**/*.scss')
+    gulp.src('scss/**/*.scss')
         .pipe(sass({outputStyle: 'nested'}).on('error', sass.logError))
         .pipe(autoprefixer({
             browsers: ['last 10 versions'],
@@ -29,7 +29,7 @@ gulp.task('css-compile', function() {
 });
 
 gulp.task('css-compile-free', function() {
-    gulp.src('sass/mdb-free.scss')
+    gulp.src('scss/mdb-free.scss')
         .pipe(sass({outputStyle: 'nested'}).on('error', sass.logError))
         .pipe(autoprefixer({
             browsers: ['last 10 versions'],
@@ -127,5 +127,5 @@ gulp.task('js-minify-docs', function() {
 });
 
 gulp.task('default',function() {
-    gulp.watch('sass/**/*.scss',['css-compile']);
+    gulp.watch('scss/**/*.scss',['css-compile']);
 });

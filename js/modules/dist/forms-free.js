@@ -78,7 +78,7 @@
       var $this = $(input);
       var $labelAndIcon = $this.siblings('label, i');
       update_text_fields($this);
-      var isValid = input.validity.badInput; // pure js 
+      var isValid = input.validity.badInput; // pure js
       if (isValid) {
         $labelAndIcon.addClass('active');
       }
@@ -89,7 +89,7 @@
       $(e.target).siblings('label, i').addClass('active');
     });
 
-    // Remove active on blur when not needed or invalid 
+    // Remove active on blur when not needed or invalid
     $(document).on('blur', input_selector, function (e) {
       var $this = $(e.target);
       var noValue = !$this.val();
@@ -140,6 +140,43 @@
         });
       }
     });
+
+    // Textarea auto extend
+    if ($('.md-textarea-auto').length) {
+      var init = function init() {
+        var text = $('.md-textarea-auto');
+        text.each(function () {
+          var _this = this;
+          function resize() {
+            _this.style.height = 'auto';
+            _this.style.height = _this.scrollHeight + 'px';
+          }
+          /* 0-timeout to get the already changed text */
+          function delayedResize() {
+            window.setTimeout(resize, 0);
+          }
+          observe(_this, 'change', resize);
+          observe(_this, 'cut', delayedResize);
+          observe(_this, 'paste', delayedResize);
+          observe(_this, 'drop', delayedResize);
+          observe(_this, 'keydown', delayedResize);
+          resize();
+        });
+      };
+
+      var observe;
+      if (window.attachEvent) {
+        observe = function observe(element, event, handler) {
+          element.attachEvent('on' + event, handler);
+        };
+      } else {
+        observe = function observe(element, event, handler) {
+          element.addEventListener(event, handler, false);
+        };
+      }
+
+      init();
+    }
 
     // Textarea Auto Resize
     if (!$('.hiddendiv').first().length) {

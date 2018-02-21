@@ -1,6 +1,6 @@
 {
   "name": "mdb-dev",
-  "version": "4.4.4",
+  "version": "4.5.0",
   "description": "",
   "main": "js/mdb.js",
   "dependencies": {
@@ -36,7 +36,7 @@
     "stylelint-scss": "^2.1.0"
   },
   "scripts": {
-    "sass-lint": "stylelint --config config/.stylelintrc.json --syntax scss \"sass/**/*.scss\"",
+    "sass-lint": "stylelint --config config/.stylelintrc.json --syntax scss \"scss/**/*.scss\"",
     "css-compile": "gulp css-compile",
     "css-compile-free": "gulp css-compile-free",
     "css-minify": "gulp css-minify",

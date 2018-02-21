@@ -17,7 +17,7 @@
   };
 
   // Add thumbs;
-  $(range_type).each(add_thumb);
+  // $(range_type).each(add_thumb)
 
   $(document).on('change', range_type, function () {
     var $thumb = $(this);

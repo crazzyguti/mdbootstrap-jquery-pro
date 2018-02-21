@@ -46,8 +46,8 @@
         var options = ul.find('li').find('span.filtrable');
 
         options.each(function () {
-          if (typeof this.outerText === 'string') {
-            var liValue = this.outerText.toLowerCase();
+          if (typeof this.outerHTML === 'string') {
+            var liValue = this.textContent.toLowerCase();
 
             if (liValue.indexOf(searchValue.toLowerCase()) === -1) {
               $(this).hide();
@@ -63,7 +63,7 @@
       // Added to search
       var setSearchableOption = function setSearchableOption() {
         var placeholder = $select.attr('searchable');
-        var element = $('<span class="search-wrap"><input type="text" class="search" placeholder="' + placeholder + '"></span>');
+        var element = $('<span class="search-wrap ml-2"><div class="md-form mt-0"><input type="text" class="search form-control" placeholder="' + placeholder + '"></div></span>');
         options.append(element);
         element.find('.search').keyup(applySeachInList);
       };
@@ -131,6 +131,26 @@
         });
       }
 
+      // Check for optgroups
+      var optgroup = false;
+      if ($select.find('optgroup').length) {
+        optgroup = true;
+      }
+
+      // Added to save
+      var saveSelect = $select.parent().find('button.btn-save');
+      var setSaveOption = function setSaveOption() {
+        options.append(saveSelect);
+      };
+
+      // Save click trigger
+      if (saveSelect.length) {
+        setSaveOption();
+        saveSelect.on('click', function () {
+          $('input.select-dropdown').trigger('close');
+        });
+      }
+
       options.find('li:not(.optgroup)').each(function (i) {
         $(this).click(function (e) {
           // Check if option element is disabled
@@ -141,7 +161,17 @@
               $('input[type="checkbox"]', this).prop('checked', function (i, v) {
                 return !v;
               });
-              selected = toggleEntryFromArray(valuesSelected, $(this).index() - 1, $select);
+              if (searchable) {
+                if (optgroup) {
+                  selected = toggleEntryFromArray(valuesSelected, $(this).index() - $(this).prevAll('.optgroup').length - 1, $select);
+                } else {
+                  selected = toggleEntryFromArray(valuesSelected, $(this).index() - 1, $select);
+                }
+              } else if (optgroup) {
+                selected = toggleEntryFromArray(valuesSelected, $(this).index() - $(this).prevAll('.optgroup').length, $select);
+              } else {
+                selected = toggleEntryFromArray(valuesSelected, $(this).index(), $select);
+              }
               $newSelect.trigger('focus');
             } else {
               options.find('li').removeClass('active');
@@ -232,6 +262,15 @@
         optionsHover = true;
       }, function () {
         optionsHover = false;
+      });
+
+      // if select is wrapped in modal prevent hiding
+      options.on('mousedown', function (e) {
+        if ($('.modal-content').find(options).length) {
+          if (this.scrollHeight > this.offsetHeight) {
+            e.preventDefault();
+          }
+        }
       });
 
       // Changed to search to treat search
@@ -354,7 +393,7 @@
         entriesArray.splice(index, 1);
       }
 
-      select.siblings('ul.dropdown-content').find('li').eq(entryIndex).toggleClass('active');
+      select.siblings('ul.dropdown-content').find('li:not(.optgroup)').eq(entryIndex).toggleClass('active');
 
       // use notAdded instead of true (to detect if the option is selected or not)
       select.find('option').eq(entryIndex).prop('selected', notAdded);

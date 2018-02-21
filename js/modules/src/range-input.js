@@ -9,13 +9,13 @@
   let range_mousedown = false
   let left
 
-  const add_thumb = () => {
+  const add_thumb = function() {
     const $thumb = $(thumb_html)
     $(range_type).after($thumb)
   }
 
   // Add thumbs;
-  $(range_type).each(add_thumb)
+  // $(range_type).each(add_thumb)
 
   $(document).on('change', range_type, function() {
     const $thumb       = $(this)
