@@ -15,18 +15,15 @@
       border-radius: $md-card-border-radius;
       &.gradient-card-header {
         @extend .white-text;
-        padding: 1.6rem 1rem;
+        padding: $card-cascade-header-gradient-py $card-cascade-header-gradient-px;
         text-align: center;
-        h2 {
-          font-weight: 400;
+        .card-header-title {
+          font-weight: 500;
         }
         .btn-floating {
-          background-color: rgba(255, 255, 255, .2);
+          background-color: $card-cascade-header-gradient-btn-floating-bgc;
         }
       }
-    }
-    .card-body {
-      padding-top: 1.8rem;
     }
     &.wider {
       @extend .z-depth-0;
@@ -35,60 +32,56 @@
         z-index: 2;
       }
       .card-body {
-        margin-left: 4%;
-        margin-right: 4%;
         @extend .z-depth-1;
-        background: $white;
+        margin-left: $card-cascade-wider-card-body-mx;
+        margin-right: $card-cascade-wider-card-body-mx;
+        background: $card-cascade-wider-card-body-bg;
         z-index: 1;
         border-radius: 0 0 $md-card-border-radius $md-card-border-radius;
       }
       &.reverse {
-        .view {
-          //@extend .z-depth-1;
-        }
         .card-body {
           z-index: 3;
-          margin-top: -1rem;
-          border-radius: 4px;
+          margin-top: $card-cascade-reverse-mt;
+          border-radius: $md-card-border-radius;
           @extend .z-depth-1-half;
         }
       }
     }
     &.narrower {
-      margin-top: 20px;
+      margin-top: $card-cascade-narrower-mt;
       .view {
-        margin-left: 4%;
-        margin-right: 4%;
-        margin-top: -20px;
+        margin-left: $card-cascade-narrowe-view-mx;
+        margin-right: $card-cascade-narrowe-view-mx;
+        margin-top: $card-cascade-narrower-view-mt;
       }
     }
     &.panel-cascade {
       .view {
         text-align: center;
-        color: #fff;
+        color: $panel-cascade-view-color;
       }
       .list-group {
         .list-group-item {
-          margin-bottom: 0px;
+          margin-bottom: 0;
           border: 0;
-          border-bottom: 1px solid #eee;
-          color: #495057;
+          border-bottom: 1px solid $panel-cascade-list-group-item-border-bottom;
+          color: $panel-cascade-list-group-item-color;
           &:hover {
-            background-color: #eee;
+            background-color: $panel-cascade-list-group-item-bgc;
           }
         }
       }
     }
   }
   .btn-action {
-    margin-top: -23px;
-    margin-bottom: -23px;
+    margin-top: $card-btn-action-my;
+    margin-bottom: $card-btn-action-my;
   }
   .activator {
     position: absolute;
-    top: 0;
     right: 0;
-    font-size: 1.2rem;
+    font-size: $card-activator-font-size;
   }
   .card-reveal {
     position: absolute;
@@ -98,23 +91,8 @@
     height: 100%;
     z-index: 1;
     display: none;
-    .card-title {
-      cursor: pointer;
-      i {
-        color: #9e9e9e;
-        position: absolute;
-        right: 10px;
-      }
-    }
     .content {
       position: relative;
-      h4 {
-        margin-top: 20px;
-        margin-bottom: 15px;
-      }
-      h5 {
-        margin-top: 30px;
-      }
     }
   }
   &.ovf-hidden {
@@ -124,22 +102,34 @@
     position: relative;
     .social-reveal {
       position: absolute;
-      top: -23px;
-      right: 30px;
+      top: $card-share-social-reveal-top;
+      right: $card-share-social-reveal-right;
       visibility: hidden;
       width: auto;
       transform: translateZ(0);
-      transform: translateX(0px);
-      transition: transform 0.35s ease;
+      transform: translateX(0);
+      transition: $card-share-social-reveal-transition;
     }
     .social-reveal-active {
       z-index: 11;
       visibility: visible;
       transform: translateZ(0);
       transform: translateX(-48px);
-      transition: transform 0.35s ease;
+      transition: $card-share-social-reveal-transition;
     }
   }
+}
+
+// Title and close button
+.card .card-reveal .card-title,
+.card-wrapper .card-rotating .card-title {
+  cursor: pointer;
+}
+.card .card-reveal .card-title i,
+.card-wrapper .card-rotating .card-title i {
+  color: $card-reveal-title-i-color;
+  position: absolute;
+  right: $card-reveal-title-i-right;
 }
 
 // Rotating card
@@ -148,9 +138,6 @@
   min-height: $card-wrapper-min-height;
   position: relative;
   perspective: $card-wrapper-perspective;
-  img {
-    max-width: 100%;
-  }
   .face {
     position: absolute;
     width: 100%;
@@ -158,13 +145,7 @@
   }
   /* Front side */
   .card-up {
-    border-top-left-radius: $md-card-border-radius;
-    border-top-right-radius: $md-card-border-radius;
     overflow: hidden;
-    height: 50%;
-    img {
-      min-width: 400px;
-    }
   }
   .avatar {
     display: block;

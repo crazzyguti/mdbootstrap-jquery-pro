@@ -534,8 +534,8 @@ a.pswp__share--download {
 }
 
 .pswp__caption__center {
-  text-align: left;
-  max-width: 420px;
+  text-align: center;
+  max-width: 500px;
   margin: 0 auto;
   font-size: 13px;
   padding: 10px;
@@ -783,17 +783,20 @@ a.pswp__share--download {
 .mdb-lightbox {
   figure {
     margin: 0;
-    float:left;
+    float: left;
     .img-fluid {
       display: inline
     }
     img {
       cursor: zoom-in;
-      transition: opacity .4s;
+      transition: $mdb-lightbox-figure-img-transition;
       border-radius: 0;
       &:hover {
-        opacity: 0.8;
+        opacity: $mdb-lightbox-figure-img-hover-opacity;
       }
+    }
+    figcaption {
+      display: none;
     }
   }
   &.no-margin {
@@ -802,6 +805,6 @@ a.pswp__share--download {
     }
   }
   [class*="col-"] {
-    padding: 0.5rem;
+    padding: $mdb-lightbox-no-margin-padding;
   }
 }

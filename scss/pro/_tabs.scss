@@ -6,40 +6,47 @@
   margin-left: $tabs-margin-x;
   margin-right: $tabs-margin-x;
   margin-bottom: $tabs-margin-y;
-  background-color: $default-color;
+  background-color: $nav-tabs-pills-bgc;
   z-index: 2;
   position: relative;
-  border-radius: 2px;
+  border-radius: $nav-tabs-border-radius;
   .nav-item + .nav-item {
     margin-left: 0;
   }
+  .nav-item {
+    &.disabled {
+      pointer-events: none !important;
+      .nav-link {
+        color: $nav-item-disabled-link-color;
+      }
+    }
+  }
   .nav-link {
-    transition: all 0.4s;
+    transition: $nav-link-transition;
     border: 0;
     color: $white;
   }
   .nav-link.active,
   .nav-item.open .nav-link {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: $nav-link-active-bgc;
     color: $white;
-    transition: all 1s;
-    border-radius: 2px;
+    transition: $nav-link-active-transition;
+    border-radius: $nav-tabs-border-radius;
   }
   .nav-item.show .nav-link {
-    background-color: $default-color;
+    background-color: $nav-tabs-pills-bgc;
     color: $white;
-    transition: all 1s;
-    border-radius: 2px;
+    transition: $nav-link-active-transition;
+    border-radius: $nav-tabs-border-radius;
   }
   .nav-item.show .nav-link.dropdown-toggle {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: $nav-link-active-bgc;
   }
 }
 .tab-content {
-  padding: 1rem;
-  padding-top: 2rem;
+  padding: $tab-content-padding;
+  padding-top: $tab-content-pt;
   z-index: 1;
-  border-radius: 0 0 0.3rem 0.3rem;
   &.vertical {
     padding-top: 0;
   }
@@ -53,12 +60,12 @@
   .show > .nav-link {
     @extend .z-depth-1;
     color: $white;
-    background-color: $default-color;
+    background-color: $nav-tabs-pills-bgc;
   }
   .nav-link {
-    transition: all 0.4s;
-    border-radius: 2px;
-    color: #666;
+    transition: $nav-link-transition;
+    border-radius: $md-pills-nav-link-border-radius;
+    color: $md-pills-nav-link-color;
     text-align: center;
     &:hover {
       @extend .rgba-grey-light;
@@ -66,7 +73,7 @@
     &.active {
       @extend .z-depth-1;
       color: $white;
-      background-color: $default-color;
+      background-color: $nav-tabs-pills-bgc;
     }
     &.active:hover {
       @extend .z-depth-1-half;
@@ -93,7 +100,7 @@
 .classic-tabs {
   white-space: nowrap;
   overflow-x: auto;
-  border-radius: 0.3rem 0.3rem 0 0;
+  border-radius: $classic-tabs-border-radius $classic-tabs-border-radius 0 0;
   @media (min-width: 62rem) {
     overflow-x: hidden;
   }
@@ -110,7 +117,7 @@
       text-align: center;
       border-radius: 0;
       &.active {
-        border-bottom: 3px solid;
+        border-bottom: $classic-tabs-li-a-active-border-bottom;
         color: $white;
       }
     }
