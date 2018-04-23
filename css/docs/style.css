@@ -646,3 +646,7 @@ img[alt="amex"] {
 
 .navbar .notifications-nav .dropdown-menu {
   width: 23rem; }
+
+.screen-reader-text active {
+  width:auto;
+}
