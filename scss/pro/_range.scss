@@ -36,7 +36,7 @@ input[type=range] {
     &.active {
       border-radius: $border-radius-circle $border-radius-circle $border-radius-circle 0;
       .value {
-        color: $white;
+        color: $white-base;
         margin-left: $input-range-active-value-ml;
         margin-top: $input-range-active-value-mt;
         font-size: $input-range-active-value-font-size;
@@ -65,7 +65,7 @@ input[type=range] {
     background: $slider-runnable-track-focus-bg;
   }
   // Firefox
-  border: 1px solid $white; /* fix for FF unable to apply focus style bug  */
+  border: 1px solid $white-base; /* fix for FF unable to apply focus style bug  */
   &::-moz-range-track { /*required for proper track sizing in FF*/
     height: $slider-runnable-track-height;
     background: $slider-runnable-track-bg;
@@ -80,7 +80,7 @@ input[type=range] {
     margin-top: $slider-thumb-mt;
   }
   &:-moz-focusring { /*hide the outline behind the border*/
-    outline: 1px solid $white;
+    outline: 1px solid $white-base;
     outline-offset: -1px;
   }
   &:focus::-moz-range-track {

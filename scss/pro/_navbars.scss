@@ -21,7 +21,7 @@
 
 .double-nav {
   // z-index: 100;
-  color: $white;
+  color: $white-base;
   @media (max-width: $medium-screen) {
     padding-top: $navbar-double-small-padding;
     padding-bottom: $navbar-double-small-padding;
@@ -34,7 +34,7 @@
   }
   a {
     font-size: $navbar-double-font-size;
-    color: $white;
+    color: $white-base;
   }
   .breadcrumb-dn {
     p {

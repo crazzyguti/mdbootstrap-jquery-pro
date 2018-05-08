@@ -1,6 +1,6 @@
 // Navs, Tabs and Pills
 .nav-tabs {
-  @extend .z-depth-1-half;
+  box-shadow: $z-depth-1-half;
   border: 0;
   padding: $tabs-padding;
   margin-left: $tabs-margin-x;
@@ -24,18 +24,18 @@
   .nav-link {
     transition: $nav-link-transition;
     border: 0;
-    color: $white;
+    color: $white-base;
   }
   .nav-link.active,
   .nav-item.open .nav-link {
     background-color: $nav-link-active-bgc;
-    color: $white;
+    color: $white-base;
     transition: $nav-link-active-transition;
     border-radius: $nav-tabs-border-radius;
   }
   .nav-item.show .nav-link {
     background-color: $nav-tabs-pills-bgc;
-    color: $white;
+    color: $white-base;
     transition: $nav-link-active-transition;
     border-radius: $nav-tabs-border-radius;
   }
@@ -58,8 +58,8 @@
     padding: $pills-padding;
   }
   .show > .nav-link {
-    @extend .z-depth-1;
-    color: $white;
+    box-shadow: $z-depth-1;
+    color: $white-base;
     background-color: $nav-tabs-pills-bgc;
   }
   .nav-link {
@@ -71,12 +71,12 @@
       @extend .rgba-grey-light;
     }
     &.active {
-      @extend .z-depth-1;
-      color: $white;
+      box-shadow: $z-depth-1;
+      color: $white-base;
       background-color: $nav-tabs-pills-bgc;
     }
     &.active:hover {
-      @extend .z-depth-1-half;
+      box-shadow: $z-depth-1-half;
     }
   }
 }
@@ -118,7 +118,7 @@
       border-radius: 0;
       &.active {
         border-bottom: $classic-tabs-li-a-active-border-bottom;
-        color: $white;
+        color: $white-base;
       }
     }
     @media (min-width: 62em) {

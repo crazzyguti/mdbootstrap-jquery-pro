@@ -1,6 +1,6 @@
-// Social feed
+// Social section
+// Feed
 .mdb-feed {
-  margin: 1rem 0 1rem 0;
   .news {
     display: flex;
     .label {
@@ -35,7 +35,7 @@
           padding-left: 0.7rem;
           font-weight: 300;
           font-size: 0.86rem;
-          color: map-get($grey, "base");
+          color: $grey-base;
         }
       }
       .added-images {
@@ -54,14 +54,14 @@
         .like {
           font-weight: 300;
           font-size: 0.86rem;
-          color: map-get($grey, "base");
+          color: $grey-base;
           &:hover {
             .fa {
-              color: map-get($red, "base");
+              color: $red-base;
               transition: 0.4s;
             }
             span {
-              color: $black;
+              color: $black-base;
               transition: 0.4s;
             }
           }
@@ -76,10 +76,10 @@
         }
         .thumbs {
           .fa {
-            color: map-get($grey, "base");
+            color: $grey-base;
             transition: 0.4s;
             &:hover {
-              color: map-get($grey, "darken-1");
+              color: $grey-darken-1;
             }
           }
           .fa-thumbs-up {
@@ -87,14 +87,14 @@
           }
         }
         .comment {
-          color: map-get($grey, "base");
+          color: $grey-base;
         }
       }
     }
   }
 }
 
-//Card
+// Personal card
 .card-personal {
   .card-body {
     .card-title {
@@ -112,7 +112,7 @@
     .card-meta {
       font-weight: 300;
       font-size: 0.86rem;
-      color: map-get($grey, "darken-1");
+      color: $grey-darken-1;
       .fa {
         padding-right: 0.5rem;
       }
@@ -126,13 +126,13 @@
   }
 }
 
-//News card
+// News card
 .news-card {
   .content {
     .right-side-meta {
       float: right;
       font-weight: 300;
-      color: map-get($grey, "base");
+      color: $grey-base;
       margin-top: 0.3rem;
     }
     .avatar-img {
@@ -152,10 +152,10 @@
     }
     .fa-heart-o {
       cursor: pointer;
-      color: rgba($black, .4);
+      color: rgba($black-base, .4);
       transition: 0.53s;
       &:hover {
-        color: map-get($red, "base");
+        color: $red-base;
       }
     }
     span {
@@ -168,14 +168,14 @@
     .prefix {
       font-size: 1.5rem;
       margin-left: 0.2rem;
-      color: rgba($black, .4);
+      color: rgba($black-base, .4);
       ~input,
       .md-form .prefix~textarea {
         width: calc(100% - 4rem);
       }
     }
     .prefix.active {
-      color: rgba($black, .4);
+      color: rgba($black-base, .4);
     }
     .form-control {
       padding-top: 0;
@@ -183,11 +183,7 @@
       margin-left: 3rem;
       margin-bottom: 0;
       height: 1.3rem;
-      border-bottom: 1px solid rgba($black, .1);
+      border-bottom: 1px solid rgba($black-base, .1);
     }
   }
-}
-
-.no-radius {
-  border-radius: 0!important;
 }

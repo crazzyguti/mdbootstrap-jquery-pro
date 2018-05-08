@@ -143,8 +143,8 @@
 
   &.filled-in-danger {
     &:checked + label:after {
-      background-color: map-get($red, "base");
-      border-color: map-get($red, "base");
+      background-color: $red-base;
+      border-color: $red-base;
     }
   }
 }

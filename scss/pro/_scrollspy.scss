@@ -8,21 +8,21 @@
         border-radius:0;
         &:hover {
           background-color: transparent;
-          color: map-get($mdb-color, "base");
+          color: $mdb-color-base;
           font-weight: 500;
-          border-left: 1px solid map-get($mdb-color, "base");
+          border-left: 1px solid $mdb-color-base;
         }
         &.active {
           background-color: transparent;
-          color: map-get($mdb-color, "base");
-          border-left: 2px solid map-get($mdb-color, "base");
+          color: $mdb-color-base;
+          border-left: 2px solid $mdb-color-base;
           font-weight: 500;
           box-shadow:none;
           &:hover,
           &:active,
           &:focus {
             background-color: transparent;
-            color: map-get($mdb-color, "base");
+            color: $mdb-color-base;
             font-weight: 500;
           }
         }

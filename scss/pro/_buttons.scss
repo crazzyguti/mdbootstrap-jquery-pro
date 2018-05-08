@@ -12,7 +12,7 @@
 
 // Floating button
 .btn-floating {
-  @extend .z-depth-1-half;
+  box-shadow: $z-depth-1-half;
   @include make-btn-floating($btn-floating-width, $btn-floating-height, $btn-floating-icon-size, $btn-floating-line-height);
   position: relative;
   z-index: 1;
@@ -28,10 +28,10 @@
     display: inline-block;
     width: inherit;
     text-align: center;
-    color: $white;
+    color: $white-base;
   }
   &:hover {
-    @extend .z-depth-2;
+    box-shadow: $z-depth-2;
   }
   &:before {
     border-radius: 0;

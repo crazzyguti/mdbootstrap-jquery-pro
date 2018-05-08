@@ -169,8 +169,8 @@
     input[type=checkbox].filled-in:checked {
       &+label {
         &:before {
-          border-right: 2px solid $white;
-          border-bottom: 2px solid $white;
+          border-right: 2px solid $white-base;
+          border-bottom: 2px solid $white-base;
         }
         &:after {
           background-color: map-get($data, skin-accent);
@@ -216,7 +216,7 @@
       .page-item.active .page-link,
       .page-item.active .page-link:focus,
       .page-item.active .page-link:hover {
-        color: $white;
+        color: $white-base;
         background-color: map-get($data, skin-primary-color);
       }
       .page-link {

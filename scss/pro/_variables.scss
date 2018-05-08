@@ -96,7 +96,8 @@ $personal-sm-hover-transform:          scale(1.2) !default;
 
 // Cards
 $card-up-size:                         120px !default;
-$card-avatar-margin-top:               -65px !default;
+$card-up-img-size:                     200px !default;
+$card-avatar-margin-top:               -60px !default;
 $card-wrapper-min-height:              500px !default;
 $card-wrapper-perspective:             800px !default;
 $card-rotating-transform-style:        preserve-3d !default;
@@ -179,11 +180,11 @@ $slider-border-width:                 6px !default;
 $chip-height:                         32px !default;
 $chip-font-size:                      13px !default;
 $chip-font-weight:                    500 !default;
-$chip-font-color:                     rgba($black, .6) !default;
+$chip-font-color:                     rgba($black-base, .6) !default;
 $chip-line-height:                    32px !default;
 $chip-padding-right:                  12px !default;
 $chip-br:                             16px !default;
-$chip-background-color:               map-get($blue-grey, "lighten-5") !default;
+$chip-background-color:               $blue-grey-lighten-5 !default;
 $chip-margin-bottom:                  1rem !default;
 $chip-margin-right:                   1rem !default;
 $chip-img-margin-right:               8px !default;
@@ -197,7 +198,7 @@ $chip-close-padding-left:             8px !default;
 $chips-margin-bottom:                 30px !default;
 $chips-min-height:                    45px !default;
 $chips-padding-bottom:                1rem !default;
-$chips-input-font-color:              rgba($black, .6) !default;
+$chips-input-font-color:              rgba($black-base, .6) !default;
 $chips-input-font-size:               13px !default;
 $chips-input-font-weight:             500 !default;
 $chips-input-height:                  32px !default;
@@ -240,7 +241,7 @@ $skins: map-merge((
     "skin-accent":             #4285F4,
     "skin-flat":               #F9F9F9,
     "skin-sidenav-item":       #4285F4,
-    "skin-sidenav-item-hover": rgba($black, 0.05),
+    "skin-sidenav-item-hover": rgba($black-base, 0.05),
     "skin-gradient-start":     #ababab,
     "skin-gradient-end":       $white,
     "skin-mask-slight":        rgba($white, 0.5),
@@ -540,12 +541,12 @@ $sidenav-search-form-input-padding-left: 1.88rem !default;
 $sidenav-light-bgc:                              #e5e5e5                 !default;
 $sidenav-light-color:                            #555                    !default;
 $sidenav-light-border-bottom-color:              rgba(153, 153, 153, .3) !default;
-$sidenav-light-collapsible-body-a-bgc:           rgba($black,.1)         !default;
-$sidenav-light-collapsible-header-hover-bgc:     rgba($black, 0.05)      !default;
+$sidenav-light-collapsible-body-a-bgc:           rgba($black-base, .1)         !default;
+$sidenav-light-collapsible-header-hover-bgc:     rgba($black-base, 0.05)      !default;
 $sidenav-light-collapsible-header-active-color:  #4285F4                 !default;
 
 $drag-target-width:                              10px                    !default;
-$sidenav-overlay:                                rgba($black, .5)        !default;
+$sidenav-overlay:                                rgba($black-base, .5)        !default;
 
 // LIGHT BOX
 $pswp__show-hide-transition-duration: 333ms !default;
@@ -618,9 +619,9 @@ $stepper-vertical-li-after-bgc: $stepper-horizontal-li-after-bgc !default;
 $collection-card-stripe-bottom: 3rem !default;
 $collection-card-stripe-padding: 1.2rem !default;
 $collection-card-stripe-dark-bgc: $material-select-dropdown-li-optgroup-selected-span !default;
-$collection-card-stripe-dark-a-p-color: map-get($grey, "lighten-3") !default;
+$collection-card-stripe-dark-a-p-color: $grey-lighten-3 !default;
 $collection-card-stripe-light-bgc: rgba(255, 255, 255, .7) !default;
-$collection-card-stripe-light-a-p-color: map-get($grey, "darken-3") !default;
+$collection-card-stripe-light-a-p-color: $grey-darken-3 !default;
 $collection-card-stripe-letter-spacing: .25rem !default;
 
 $ecommerce-rating-color: #ffa000 !default;
@@ -658,3 +659,63 @@ $toast-bgc:                         #030303 !default;
 $toast-progress-height:             4px !default;
 $toast-progress-opacity:            $toast-close-button-hover-opacity !default;
 $toast-progress-filter:             $toast-close-button-hover-filter !default;
+
+// Magazine section
+$magazine-single-news-border-bottom: #e0e0e0 !default;
+
+// Pricing section
+$pricing-card-option-padding: 2.5rem !default;
+$pricing-card-price-padding-top: 3.94rem !default;
+$pricing-card-number-font-size: 5rem !default;
+$pricing-card-number-padding: 1.5rem !default;
+$pricing-card-number-before-font-size: 1.88rem !default;
+$pricing-card-number-before-margin-left: -1.2rem !default;
+$pricing-card-number-before-margin-top: .7rem !default;
+$pricing-card-number-after-font-size: $pricing-card-number-before-font-size !default;
+$pricing-card-number-after-margin-top: 3rem !default;
+$pricing-card-version-padding: 1rem !default;
+$pricing-card-version-bgc: $material-select-wrapper-input-dropdown-disabled-color !default;
+$pricing-card-striped-padding: 1rem !default;
+$pricing-card-striped-li-border-bottom-color: rgba(153, 153, 153, 0.298039) !default;
+$pricing-card-striped-li-margin-bottom: 1rem !default;
+$pricing-card-green-striped-li-border-color: #33c28a !default;
+$pricing-card-orange-striped-li-border-color: #e97d63 !default;
+$pricing-card-purple-striped-li-border-color: #963c94 !default;
+$pricing-card-dark-bgc: #28283f !default;
+$pricing-card-circle-border-color: #e0e0e0 !default;
+$pricing-card-circle-height: 7.5rem !default;
+$pricing-card-circle-width: $pricing-card-circle-height !default;
+$pricing-card-circle-border-radius: $border-radius-circle !default;
+$pricing-card-circle-icon-font-size: 4rem !default;
+
+// Team section
+$team-section-avatar-max-width: 200px !default;
+$team-section-avatar-circle-max-width: 150px !default;
+
+// Testimonials section
+$testimonial-carousel-control-top: 50% !default;
+$testimonial-carousel-control-transform: translateY(-35%) !default;
+$testimonial-carousel-control-font-size: 5rem !default;
+$testimonial-carousel-control-color: rgba($black-base,.6) !default;
+$testimonial-carousel-control-hover-transition: .4s !default;
+$testimonial-carousel-control-hover-color: $black-base !default;
+$testimonial-carousel-control-mx: 6% !default;
+$testimonial-carousel-avatar-max-width: 170px !default;
+$testimonial-carousel-mx: 15% !default;
+
+// Contact section
+$contact-section-form-btn-floating-bottom: 3rem !default;
+$contact-section-bgc: #103f6d !default;
+$contact-section-fa-color: #6b89a5 !default;
+
+// Templates section
+$fixed-sn-double-nav-main-footer-pl: 240px !default;
+$fixed-sn-double-nav-main-pt: 5.5rem !default;
+$fixed-sn-double-nav-main-small-mx: 2% !default;
+$fixed-sn-double-nav-main-medium-mx: 5% !default;
+$fixed-sn-double-nav-main-large-mx: 6% !default;
+
+$hidden-sn-main-pt: $fixed-sn-double-nav-main-pt !default;
+$hidden-sn-main-btn-collapse-font-size: 1.4rem !default;
+$hidden-sn-main-btn-collapse-mr: .625rem !default;
+$hidden-sn-main-btn-collapse-ml: -.375rem !default;

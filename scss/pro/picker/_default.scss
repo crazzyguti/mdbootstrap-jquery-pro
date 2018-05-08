@@ -143,5 +143,5 @@
 
 .datepicker.picker__input.picker__input--active,
 .timepicker.picker__input.picker__input--active {
-  border-bottom: 1px solid map-get($blue, "lighten-5");
+  border-bottom: 1px solid $blue-lighten-5;
 }

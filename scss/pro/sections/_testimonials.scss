@@ -1,54 +1,41 @@
-// Testimonials
+// Testimonials section
 .testimonial-carousel {
   .carousel-control {
     background-image: none;
-    top:50%;
-    transform: translateY(-35%);
+    top: $testimonial-carousel-control-top;
+    transform: $testimonial-carousel-control-transform;
     &:before {
-      font-size: 5rem;
-      color: rgba($black,.6);
+      font-size: $testimonial-carousel-control-font-size;
+      color: $testimonial-carousel-control-color;
+      transition: $testimonial-carousel-control-hover-transition;
     }
     &:hover {
       &:before {
-        color: $black;
-        transition: 0.4s;
+        color: $testimonial-carousel-control-hover-color;
+        transition: $testimonial-carousel-control-hover-transition;
       }
     }
     &.left {
-      left:6%;
+      left: $testimonial-carousel-control-mx;
       &:before {
         content: "\2039";
       }
     }
     &.right {
-      right:6%;
+      right: $testimonial-carousel-control-mx;
       &:before {
         content: "\203a";
       }
     }
   }
   .testimonial {
-    margin-right: 15%;
-    margin-left: 15%;
+    margin-right: $testimonial-carousel-mx;
+    margin-left: $testimonial-carousel-mx;
     .avatar {
-      margin-bottom: 2rem;
-      @extend .flex-center;
       img {
-        max-width: 170px;
-        @extend .z-depth-2;
+        box-shadow: $z-depth-1-half;
+        max-width: $testimonial-carousel-avatar-max-width;
       }
-    }
-    h4 {
-      margin-bottom: 1.3rem;
-      font-weight: 500;
-    }
-    h5 {
-      margin-bottom: 0.9rem;
-      color: map-get($grey, "darken-3");
-      font-weight: 400;
-    }
-    p {
-      color: #666;
     }
   }
 }

@@ -1,6 +1,6 @@
 // Social buttons
 .counter {
-  @extend .z-depth-1;
+  box-shadow: $z-depth-1;
   position: absolute;
   z-index: 2;
   margin-top: $btn-counter-margin-top;
@@ -9,7 +9,7 @@
   padding: $btn-counter-padding-y $btn-counter-padding-x;
   background-color: $btn-counter-bgc;
   font-size: $btn-counter-font-size;
-  color: $white;
+  color: $white-base;
   &.counter-lg {
     margin-top: $btn-lg-counter-margin-top;
   }

@@ -1,6 +1,6 @@
 /*!
  * Material Design for Bootstrap 4
- * Version: MDB PRO 4.5.1
+ * Version: MDB PRO 4.5.2
  *
  *
  * Copyright: Material Design for Bootstrap
@@ -33,6 +33,8 @@
 
 // CORE
 @import "core/mixins";
+// Your custom variables
+@import "custom-variables";
 @import "core/colors";
 @import "core/variables";
 @import "core/global";
@@ -93,6 +95,8 @@
 @import "pro/charts";
 @import "pro/progress";
 @import "pro/scrollbar";
+// Your custom skin
+@import "custom-skin";
 @import "pro/skins";
 @import "pro/depreciated";
 
@@ -104,13 +108,11 @@
 // Sections
 @import "pro/sections/templates";
 @import "pro/sections/social";
-@import "pro/sections/blog";
 @import "pro/sections/team";
 @import "pro/sections/testimonials";
-@import "pro/sections/projects";
 @import "pro/sections/magazine";
 @import "pro/sections/pricing";
 @import "pro/sections/contacts";
 
 // Your custom styles
-@import "custom";
+@import "custom-styles";

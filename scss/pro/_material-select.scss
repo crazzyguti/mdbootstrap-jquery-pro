@@ -119,7 +119,7 @@ select {
 }
 
 .dropdown-content {
-  @extend .z-depth-1;
+  box-shadow: $z-depth-1;
   background-color: $dropdown-bg-color;
   margin: 0;
   display: none;
@@ -164,18 +164,18 @@ select {
     li {
       &.active span {
         color: $material-select-colorful-dropdown-content-li-active-color !important;
-        @extend .z-depth-1-half;
+        box-shadow: $z-depth-1-half;
         [type="checkbox"]:checked + label:before {
           border-color: transparent $white $white transparent;
         }
       }
       a:hover, span:hover {
-        @extend .z-depth-2;
+        box-shadow: $z-depth-2;
         color: $material-select-colorful-dropdown-content-li-active-color !important;
         transition: $material-select-colorful-dropdown-content-li-hover-transition;
         border-radius: $material-select-colorful-dropdown-content-li-hover-border-radius;
         [type="checkbox"] + label:before {
-          border-color: $white;
+          border-color: $white-base;
         }
         [type="checkbox"]:checked + label:before {
           border-color: transparent $white $white transparent;
@@ -187,13 +187,13 @@ select {
       &:disabled,
       &.optgroup {
         &.active span {
-          @extend .z-depth-0;
+          box-shadow: none;
           color: $material-select-wrapper-input-dropdown-disabled-color !important;
           border-bottom-color: $material-select-wrapper-input-dropdown-disabled-color;
           cursor: default;
         }
         a:hover, span:hover {
-          @extend .z-depth-0;
+          box-shadow: none;
           color: $material-select-wrapper-input-dropdown-disabled-color !important;
           border-bottom-color: $material-select-wrapper-input-dropdown-disabled-color;
           cursor: default;

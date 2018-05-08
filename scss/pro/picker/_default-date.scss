@@ -224,7 +224,7 @@
         background-color: $datepicker-selected-outfocus;
       }
       @extend .white-text;
-      @extend .z-depth-1-half;
+      box-shadow: $z-depth-1-half;
     }
     .picker__day--disabled,
     .picker__day--disabled:hover,

@@ -11,7 +11,7 @@
   // Cascading cards
   &.card-cascade {
     .view {
-      @extend .z-depth-1-half;
+      box-shadow: $z-depth-1-half;
       border-radius: $md-card-border-radius;
       &.gradient-card-header {
         @extend .white-text;
@@ -26,13 +26,13 @@
       }
     }
     &.wider {
-      @extend .z-depth-0;
+      box-shadow: none;
       background-color: transparent;
       .view {
         z-index: 2;
       }
       .card-body {
-        @extend .z-depth-1;
+        box-shadow: $z-depth-1;
         margin-left: $card-cascade-wider-card-body-mx;
         margin-right: $card-cascade-wider-card-body-mx;
         background: $card-cascade-wider-card-body-bg;
@@ -44,7 +44,7 @@
           z-index: 3;
           margin-top: $card-cascade-reverse-mt;
           border-radius: $md-card-border-radius;
-          @extend .z-depth-1-half;
+          box-shadow: $z-depth-1-half;
         }
       }
     }
@@ -145,7 +145,11 @@
   }
   /* Front side */
   .card-up {
+    height: $card-up-img-size;
     overflow: hidden;
+    img {
+      vertical-align: middle;
+    }
   }
   .avatar {
     display: block;
@@ -155,8 +159,8 @@
   }
   .avatar {
     img {
-      border: 5px solid $white;
-      background: none repeat scroll 0 0 $white;
+      border: 5px solid $white-base;
+      background: none repeat scroll 0 0 $white-base;
       width: 100%;
     }
   }
@@ -180,7 +184,7 @@
   }
   .front,
   .back {
-    @extend .z-depth-1;
+    box-shadow: $z-depth-1;
     border-radius: $md-card-border-radius;
     backface-visibility: hidden;
     transition: $card-front-back-transition;
@@ -203,7 +207,7 @@
     width: $card-up-size;
     margin-top: $card-avatar-margin-top;
     overflow: hidden;
-    border: 5px solid $white;
+    border: 5px solid $white-base;
   }
   .avatar img {
     width: 100%;

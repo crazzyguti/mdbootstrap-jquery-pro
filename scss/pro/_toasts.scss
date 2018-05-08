@@ -21,7 +21,7 @@
   float: right;
   font-size: $toast-close-button-font-size;
   font-weight: 400;
-  text-shadow: $toast-close-button-text-shadow $white;
+  text-shadow: $toast-close-button-text-shadow $white-base;
   opacity: $toast-close-button-opacity;
   filter: $toast-close-button-filter;
 }
@@ -84,7 +84,7 @@ button.toast-close-button {
   box-sizing: border-box;
 }
 #toast-container > div {
-  @extend .z-depth-1;
+  box-shadow: $z-depth-1;
   @extend .white-text;
   position: relative;
   overflow: hidden;
@@ -97,7 +97,7 @@ button.toast-close-button {
   filter: $toast-container-filter;
 }
 #toast-container > :hover {
-  @extend .z-depth-2;
+  box-shadow: $z-depth-2;
   transition: $toast-container-hover-transition;
   opacity: $toast-container-hover-opacity;
   filter: $toast-container-hover-filter;
@@ -138,7 +138,7 @@ button.toast-close-button {
   left: 0;
   bottom: 0;
   height: $toast-progress-height;
-  background-color: $black;
+  background-color: $black-base;
   opacity: $toast-progress-opacity;
   filter: $toast-progress-filter;
 }

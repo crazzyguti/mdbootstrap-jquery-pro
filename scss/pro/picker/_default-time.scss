@@ -334,7 +334,7 @@
 }
 
 .btn-floating.btn-flat {
-  color: $white;
+  color: $white-base;
   padding: 0;
   background: $primary-color;
   &:hover {
@@ -342,11 +342,11 @@
   }
   &:hover,
   &:focus {
-    background-color: lighten( $primary-color, 5%)!important;
+    background-color: lighten($primary-color, 5%)!important;
   }
   &.active {
-    background-color: darken( $primary-color, 20%)!important;
-    @extend .z-depth-1-half;
+    background-color: darken($primary-color, 20%)!important;
+    box-shadow: $z-depth-1-half;
   }
 }
 
@@ -392,7 +392,7 @@
           stroke: rgba(255, 64, 129, 0.25);
         }
         .clockpicker-canvas-bearing {
-          fill: $white;
+          fill: $white-base;
         }
         .clockpicker-canvas-fg {
           fill: rgba(255, 64, 129, 0);

@@ -4,10 +4,10 @@
   .double-nav,
   main,
   footer {
-    padding-left: 240px;
+    padding-left: $fixed-sn-double-nav-main-footer-pl;
   }
   main {
-    padding-top: 5.5rem;
+    padding-top: $fixed-sn-double-nav-main-pt;
   }
   @media (max-width: $sidenav-breakpoint) {
     .double-nav,
@@ -19,22 +19,22 @@
   @media (min-width: $small-screen) {
     main,
     .page-footer .container-fluid {
-      margin-left: 2%;
-      margin-right: 2%;
+      margin-left: $fixed-sn-double-nav-main-small-mx;
+      margin-right: $fixed-sn-double-nav-main-small-mx;
     }
   }
   @media (min-width: $medium-screen) {
     main,
     .page-footer .container-fluid {
-      margin-left: 5%;
-      margin-right: 5%;
+      margin-left: $fixed-sn-double-nav-main-medium-mx;
+      margin-right: $fixed-sn-double-nav-main-medium-mx;
     }
   }
   @media (min-width: $large-screen) {
     main,
     .page-footer .container-fluid {
-      margin-left: 6%;
-      margin-right: 6%;
+      margin-left: $fixed-sn-double-nav-main-large-mx;
+      margin-right: $fixed-sn-double-nav-main-large-mx;
     }
   }
 }
@@ -42,14 +42,14 @@
 // Hidden SideNav
 .hidden-sn {
   main {
-    padding-top: 5.5rem;
+    padding-top: $hidden-sn-main-pt;
   }
   .button-collapse {
     display: block;
     position: relative;
-    font-size: 1.4rem;
-    margin-right: 10px;
-    margin-left: -6px;
+    font-size: $hidden-sn-main-btn-collapse-font-size;
+    margin-right: $hidden-sn-main-btn-collapse-mr;
+    margin-left: $hidden-sn-main-btn-collapse-ml;
     padding-left: 0;
   }
 }

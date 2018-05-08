@@ -21,7 +21,7 @@ button {
 }
 
 .mdb-autocomplete-wrap {
-  @extend .z-depth-1;
+  box-shadow: $z-depth-1;
   position: absolute;
   z-index: 100;
   left: 0;
@@ -30,7 +30,7 @@ button {
   overflow-y: auto;
   max-height: $autocomplete-wrap-max-height;
   padding-left: 0;
-  background: $white;
+  background: $white-base;
   li {
     padding: $autocomplete-wrap-li-padding-y $autocomplete-wrap-li-padding-x;
     cursor: pointer;

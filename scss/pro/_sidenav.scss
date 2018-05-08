@@ -20,7 +20,7 @@
   list-style-type: none;
   padding: 0;
   @extend .white-text;
-  @extend .z-depth-1;
+  box-shadow: $z-depth-1;
   >ul {
     max-height: 100vh;
   }
@@ -134,7 +134,7 @@
       list-style-type: none;
     }
     a {
-      color: $white;
+      color: $white-base;
       font-weight: 300;
       font-size: $sidenav-collapsible-a-font-size;
       height: $sidenav-collapsible-a-height;
@@ -226,7 +226,7 @@
       padding-top: $sidenav-sn-avatar-wrapper-py;
       padding-bottom: $sidenav-sn-avatar-wrapper-py;
       img {
-        @extend .z-depth-1;
+        box-shadow: $z-depth-1;
         margin: 0;
         padding: 0;
         max-width: $sidenav-sn-avatar-wrapper-max-width;

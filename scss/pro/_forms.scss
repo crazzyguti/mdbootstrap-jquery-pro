@@ -17,7 +17,7 @@
 }
 
 .form-header {
-  @extend .z-depth-1-half;
+  box-shadow: $z-depth-1-half;
   color: $form-header-color;
   text-align: center;
   margin-top: $form-header-mt;

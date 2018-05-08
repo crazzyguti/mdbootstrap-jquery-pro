@@ -1,137 +1,86 @@
-// Pricing
-//Pricing Card
+// Pricing section
 .pricing-card {
   text-align: center;
-  p {
-    font-size: 1rem;
-  }
   ul {
-    list-style-type:none;
-    padding:0;
+    list-style-type: none;
+    padding: 0;
   }
   .header {
-    border-radius:6px 6px 0 0;
-    color: $white;
-    @extend .z-depth-1-half;
-    h4{
-      padding: 2.5rem;
-      font-weight: 500;
-    }
+    box-shadow: $z-depth-1-half;
+  }
+  .option {
+    padding: $pricing-card-option-padding;
+    margin-bottom: 0;
+    font-weight: 500;
   }
   .price {
     position: relative;
-    padding-top: 3rem;
-    h1, h2 {
-      font-size: 5rem;
-      padding: 1.5rem;
-      font-weight:300;
+    padding-top: $pricing-card-price-padding-top;
+    .number {
+      font-size: $pricing-card-number-font-size;
+      padding: $pricing-card-number-padding;
+      font-weight: 300;
       &:before {
         content: "$";
-        font-size: 30px;
         position: absolute;
-        margin-left: -1.2rem;
-        margin-top: 0.7rem;
+        font-size: $pricing-card-number-before-font-size;
+        margin-left: $pricing-card-number-before-margin-left;
+        margin-top: $pricing-card-number-before-margin-top;
       }
       &:after {
         content: "/mo";
-        font-size: 30px;
         position: absolute;
-        margin-top: 3rem;
+        font-size: $pricing-card-number-after-font-size;
+        margin-top: $pricing-card-number-after-margin-top;
       }
     }
     .version {
+      box-shadow: $z-depth-1;
+      border-radius: $md-card-border-radius $md-card-border-radius 0 0;
       position: absolute;
       top: 0;
       width: 100%;
-      background-color: rgba(0, 0, 0, 0.3);
-      padding: 1rem;
-      @extend .z-depth-1;
-      h5 {
-        padding: 0;
-        margin: 0;
-      }
-    }
-  }
-  .heading {
-    h1 {
-      font-size: 4rem;
-      font-weight:400;
+      padding: $pricing-card-version-padding;
+      background-color: $pricing-card-version-bgc;
     }
   }
   .striped {
-    padding: 0.6rem;
-    .fa {
-      margin-right: 5px;
-    }
-    .fa-check {
-      color: map-get($green, "base");
-    }
-    .fa-times {
-      color: map-get($red, "base");
-    }
+    padding: $pricing-card-striped-padding;
     li {
-      border-bottom: 1px solid rgba(153, 153, 153, 0.298039);
-      margin-bottom: 1rem;
+      border-bottom: 1px solid $pricing-card-striped-li-border-bottom-color;
+      margin-bottom: $pricing-card-striped-li-margin-bottom;
     }
-  }
-  // Card overlay
-  &.card-overlay {
-    display: block;
-    color: $white;
-    p {
-      color: $white;
+    &.green-striped {
+      li {
+        border-color: $pricing-card-green-striped-li-border-color;
+      }
     }
-    .price {
-      padding-top: 0;
+    &.orange-striped {
+      li {
+        border-color: $pricing-card-orange-striped-li-border-color;
+      }
     }
-  }
-  .green-striped {
-    li {
-      border-color: #33c28a ;
-    }
-  }
-  .orange-striped {
-    li {
-      border-color: #e97d63 ;
-    }
-  }
-  .purple-striped {
-    li {
-      border-color: #963c94 ;
+    &.purple-striped {
+      li {
+        border-color: $pricing-card-purple-striped-li-border-color;
+      }
     }
   }
   .card-background {
-    background-color: #28283f;
-    border-radius: 0 0 6px 6px;
+    background-color: $pricing-card-dark-bgc;
+    border-radius: 0 0 $md-card-border-radius $md-card-border-radius;
   }
 }
 
 // Additional pricing cards
 .card {
   .card-circle {
-    border: 2px solid #e0e0e0;
-    height: 120px;
-    width: 120px;
-    margin-bottom: 2rem;
-    @extend .flex-center;
-    border-radius: 50%;
+    border: 2px solid $pricing-card-circle-border-color;
+    height: $pricing-card-circle-height;
+    width: $pricing-card-circle-width;
+    border-radius: $pricing-card-circle-border-radius;
     .fa {
-      font-size: 4rem;
-    }
-  }
-}
-
-.naked-card {
-  h5 {
-    margin-top: 1.2rem;
-  }
-  .price {
-    padding-top: 0rem;
-  }
-  li p {
-    color: map-get($grey, "darken-1");
-    strong {
-      color: map-get($grey, "darken-2");
+      font-size: $pricing-card-circle-icon-font-size;
     }
   }
 }

@@ -29,7 +29,7 @@
       }
       &:hover,
       &:active {
-        @extend .z-depth-1-half;
+        box-shadow: $z-depth-1-half;
         @extend .white-text;
         background-color: $primary-color;
         border-radius: $border-radius-base;
