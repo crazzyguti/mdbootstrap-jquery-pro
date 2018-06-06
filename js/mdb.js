@@ -1,6 +1,6 @@
 /*!
  * Material Design for Bootstrap 4
- * Version: MDB PRO 4.5.2
+ * Version: MDB PRO 4.5.4
  *
  *
  * Copyright: Material Design for Bootstrap
@@ -15207,9 +15207,10 @@ $(window).scroll(function () {
 //Initialization
 Waves.attach('.btn:not(.btn-flat), .btn-floating', ['waves-light']);
 Waves.attach('.btn-flat', ['waves-effect']);
+Waves.attach('.chip', ['waves-effect']);
 Waves.attach('.view a .mask', ['waves-light']);
 Waves.attach('.waves-light', ['waves-light']);
-Waves.attach('.navbar-nav a:not(.navbar-brand), .nav-icons li a, .navbar input, .nav-tabs .nav-item:not(.dropdown)', ['waves-light']);
+Waves.attach('.navbar-nav a:not(.navbar-brand), .nav-icons li a, .nav-tabs .nav-item:not(.dropdown)', ['waves-light']);
 Waves.attach('.pager li a', ['waves-light']);
 Waves.attach('.pagination .page-item .page-link', ['waves-effect']);
 Waves.init();
@@ -20326,7 +20327,7 @@ $.fn.easyPieChart = function(options) {
 
           // Check for multiple type.
           if (type === 'multiple') {
-            options.append($('<li class="' + disabledClass + '"><img alt="" src="' + icon_url + '"' + classString + '><span class="filtrable"><input type="checkbox"' + disabledClass + '/><label></label>' + option.html() + '</span></li>'));
+            options.append($('<li class="' + disabledClass + '"><img alt="" src="' + icon_url + '"' + classString + '><span class="filtrable"><input class="form-check-input" type="checkbox"' + disabledClass + '/><label></label>' + option.html() + '</span></li>'));
           } else {
             options.append($('<li class="' + disabledClass + optgroupClass + '"><img alt="" src="' + icon_url + '"' + classString + '><span class="filtrable">' + option.html() + '</span></li>'));
           }
@@ -20335,7 +20336,7 @@ $.fn.easyPieChart = function(options) {
 
         // Check for multiple type.
         if (type === 'multiple') {
-          options.append($('<li class="' + disabledClass + '"><span class="filtrable"><input type="checkbox"' + disabledClass + '/><label></label>' + option.html() + '</span></li>'));
+          options.append($('<li class="' + disabledClass + '"><span class="filtrable"><input class="form-check-input" type="checkbox"' + disabledClass + '/><label></label>' + option.html() + '</span></li>'));
         } else {
           options.append($('<li class="' + disabledClass + optgroupClass + '"><span class="filtrable">' + option.html() + '</span></li>'));
         }

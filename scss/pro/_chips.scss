@@ -11,6 +11,12 @@
   background-color: $chip-background-color;
   margin-bottom: $chip-margin-bottom;
   margin-right: $chip-margin-right;
+  cursor: pointer;
+  transition: $pagination-page-link-transition;
+  &:hover {
+    transition: $pagination-page-link-transition;
+    background-color: $grey-lighten-2;
+  }
   img {
     float: left;
     margin: 0 $chip-img-margin-right 0 $chip-img-margin-left;

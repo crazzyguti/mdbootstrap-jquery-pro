@@ -146,3 +146,71 @@
     display: block;
   }
 }
+
+// Author box
+.personal-sm {
+  a {
+    .fa {
+      transition-duration: $personal-sm-transition-duration;
+      &:hover {
+        transform: $personal-sm-hover-transform;
+      }
+    }
+  }
+}
+// Comments list
+.comments-list,
+.reply-form {
+  .avatar {
+    max-width: $avatar-img-max-width;
+  }
+  .comment-date {
+    color: $blog-comment-date-text-color;
+  }
+}
+
+// .classic-tabs {
+//   white-space: nowrap;
+//   overflow-x: auto;
+//   z-index: 2;
+//   position: relative;
+//   margin-bottom: -5px;
+//   border-radius: $classic-tabs-border-radius $classic-tabs-border-radius 0 0;
+//   @media (min-width: 62rem) {
+//     overflow-x: hidden;
+//   }
+//   li {
+//     @media (min-width: 62em) {
+//       flex: inherit;
+//     }
+//     a {
+//       display: block;
+//       padding: $classic-tabs-padding-y $classic-tabs-padding-x;
+//       font-size: $classic-tabs-font-size;
+//       text-transform: uppercase;
+//       color: $classic-tabs-color;
+//       text-align: center;
+//       border-radius: 0;
+//       &.active {
+//         border-bottom: $classic-tabs-li-a-active-border-bottom;
+//         color: $white-base;
+//       }
+//     }
+//     @media (min-width: 62em) {
+//       &:first-child {
+//         margin-left: $classic-tabs-margin-left;
+//       }
+//     }
+//   }
+//   @each $name, $color in $ctbc {
+    // &.#{$name} {
+//       li {
+//         a {
+//           &.active {
+//             border-color: $color;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }

@@ -2,12 +2,16 @@
 // Advanced tables
 .table {
   a {
-    margin-left: 1rem;
+    margin-right: $advanced-table-a-mr !important;
   }
   fieldset {
-    margin-bottom: 0;
+    &.form-check {
+      margin-bottom: 0;
+    }
     label {
-      height: 8px;
+      &.form-check-label {
+        height: $advanced-table-fieldset-label-height;
+      }
     }
   }
 }
@@ -32,12 +36,12 @@
 
 %base-radio-checkbox-label {
   position: relative;
-  padding-left: 35px;
+  padding-left: $base-radio-checkbox-label-pl;
   cursor: pointer;
   display: inline-block;
-  height: 25px;
-  line-height: 25px;
-  font-size: 1rem;
+  height: $base-radio-checkbox-label-height;
+  line-height: $base-radio-checkbox-label-line-height;
+  font-size: $base-radio-checkbox-label-font-size;
 }
 
 .streak {

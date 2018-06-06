@@ -1,6 +1,9 @@
 // Dropdown pro
 // Dropdowns menu's colors
-.dropdown {
+.dropdown,
+.dropup,
+.dropleft,
+.dropright {
   .dropdown-menu {
     padding: $dropdown-menu-padding;
     @each $name, $color in $dropdown-colors {

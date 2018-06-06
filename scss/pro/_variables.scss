@@ -152,8 +152,9 @@ $file-input-filter:                    alpha(opacity=0) !default;
 
 // Input group
 $input-group-text-checkbox-pl:        18px !default;
-$input-group-text-height:             13px !default;
+$input-group-text-checkbox-height:    20px !default;
 $input-group-text-radio-pl:           24px !default;
+$input-group-text-radio-height:       24px !default;
 
 // Range input
 $input-range-my:                      15px !default;
@@ -561,6 +562,9 @@ $pswp__include-minimal-style: true !default;
 $mdb-lightbox-figure-img-transition: opacity .4s !default;
 $mdb-lightbox-figure-img-hover-opacity: .8 !default;
 $mdb-lightbox-no-margin-padding: .5rem !default;
+$pswp__button-background: url(#{$image-path}/lightbox/default-skin.png) !default;
+$pswp__button-background-image: url(#{$image-path}/lightbox/default-skin.svg) !default;
+$pswp__preloader__icn-background: url(#{$image-path}/lightbox/preloader.gif) !default;
 
 // Date Picker
 $datepicker-weekday-bg: darken($primary-color, 7%) !default;
@@ -719,3 +723,37 @@ $hidden-sn-main-pt: $fixed-sn-double-nav-main-pt !default;
 $hidden-sn-main-btn-collapse-font-size: 1.4rem !default;
 $hidden-sn-main-btn-collapse-mr: .625rem !default;
 $hidden-sn-main-btn-collapse-ml: -.375rem !default;
+
+// Carousel
+$carousel-thumbnails-mb: 5rem !default;
+$carousel-thumbnails-indicators-mb: -4.69rem !default;
+$carousel-thumbnails-sm-mb: 3.75rem !default;
+$carousel-thumbnails-indicators-sm-mb: -3.44rem !default;
+$carousel-thumbnails-indicators-li-width: 6.25rem !default;
+$carousel-thumbnails-indicators-li-max-width: $carousel-thumbnails-indicators-li-width !default;
+$carousel-thumbnails-indicators-active-opacity: .5 !default;
+
+$carousel-multi-item-mb: 5rem !default;
+$carousel-multi-item-indicators-mb: -2em !default;
+$carousel-multi-item-indicators-li-height: 1.25rem !default;
+$carousel-multi-item-indicators-li-width: $carousel-multi-item-indicators-li-height !default;
+$carousel-multi-item-indicators-li-max-width: $carousel-multi-item-indicators-li-width !default;
+$carousel-multi-item-indicators-li-mb: -3.75rem !default;
+$carousel-multi-item-indicators-active-height: 1.56rem !default;
+$carousel-multi-item-indicators-active-width: $carousel-multi-item-indicators-active-height !default;
+$carousel-multi-item-indicators-active-max-width: $carousel-multi-item-indicators-active-width !default;
+$carousel-multi-item-indicators-active-border-radius: $border-radius-circle !default;
+$carousel-multi-item-controls-top-mb: 1.88rem !default;
+$carousel-multi-item-card-cascade-narrower-mt: 1.25rem !default;
+$carousel-multi-item-card-cascade-narrower-mb: .3rem !default;
+$carousel-multi-item-medium-screen-mb: -1.88rem !default;
+
+// Advanced table with checkboxes
+$advanced-table-a-mr: 1rem !default;
+$advanced-table-fieldset-label-height: .94rem !default;
+
+// Checkbox
+$base-radio-checkbox-label-pl: 2.19rem !default;
+$base-radio-checkbox-label-height: 1.57rem !default;
+$base-radio-checkbox-label-line-height: $base-radio-checkbox-label-height !default;
+$base-radio-checkbox-label-font-size: 1rem !default;
