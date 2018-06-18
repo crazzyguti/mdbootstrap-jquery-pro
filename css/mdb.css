@@ -1,6 +1,6 @@
 /*!
  * Material Design for Bootstrap 4
- * Version: MDB PRO 4.5.4
+ * Version: MDB PRO 4.5.5
  *
  *
  * Copyright: Material Design for Bootstrap
@@ -1662,12 +1662,15 @@ h1, h2, h3, h4, h5, h6 {
 .blockquote {
   padding: 0.5rem 1rem;
   border-left: .25rem solid #eceeef; }
+  .blockquote.text-right {
+    border-left: none;
+    border-right: .25rem solid #eceeef; }
   .blockquote .bq-title {
     margin-bottom: 0;
     font-size: 1.5rem;
     font-weight: 400; }
   .blockquote p {
-    padding: 1rem 0 1rem 2rem;
+    padding: 1rem 0;
     font-size: 1.1rem; }
 
 .bq-primary {
@@ -9504,23 +9507,6 @@ a.pswp__share--download:hover {
 .product-table td {
   vertical-align: middle; }
 
-<<<<<<< HEAD
-.form-check-input[type="radio"], .form-check-input[type="checkbox"] {
-  position: absolute;
-  left: -9999px;
-  visibility: hidden; }
-
-.form-check-input[type="radio"] + label, .form-check-input[type="checkbox"] + label {
-  position: relative;
-  padding-left: 2.19rem;
-  cursor: pointer;
-  display: inline-block;
-  height: 1.57rem;
-  line-height: 1.57rem;
-  font-size: 1rem; }
-
-=======
->>>>>>> ef6acf7f2dfd159117adb95f4c1c8ebf0586b2e4
 .streak {
   display: block;
   position: relative;
@@ -10138,6 +10124,8 @@ select {
   .file-field input.file-path {
     width: 100%;
     height: 2.1rem; }
+  .file-field .btn {
+    float: left; }
   .file-field span {
     cursor: pointer; }
   .file-field input[type=file] {
@@ -10152,6 +10140,8 @@ select {
     cursor: pointer;
     opacity: 0;
     filter: alpha(opacity=0); }
+    .file-field input[type=file]::-webkit-file-upload-button {
+      display: none; }
 
 .range-field {
   position: relative; }
@@ -10287,7 +10277,7 @@ button:focus {
 button.mdb-autocomplete-clear {
   position: absolute;
   z-index: 2;
-  top: 0.85rem;
+  top: 0.5rem;
   right: 0;
   visibility: hidden;
   border: none;
@@ -10314,12 +10304,17 @@ button.mdb-autocomplete-clear {
     .mdb-autocomplete-wrap li:hover {
       background: #eeeeee; }
 
+.form-inline .md-form .form-control.mdb-autocomplete {
+  width: 15rem; }
+
 .accordion .card {
   -webkit-box-shadow: none;
   box-shadow: none;
-  border-bottom: 1px solid #e0e0e0 !important;
+  border-bottom: 1px solid #e0e0e0;
   -webkit-border-radius: 0;
   border-radius: 0; }
+  .accordion .card:first-of-type, .accordion .card:not(:first-of-type):not(:last-of-type) {
+    border-bottom: 1px solid #e0e0e0; }
   .accordion .card .card-header {
     border-bottom: 0;
     padding: 1rem 1.5rem;
@@ -10341,6 +10336,23 @@ button.mdb-autocomplete-clear {
     line-height: 1.7;
     font-weight: 300;
     color: #626262; }
+
+.jarallax-keep-img {
+  position: relative;
+  z-index: 0; }
+
+.jarallax-keep-img > .jarallax-img {
+  position: relative;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  z-index: -100; }
+
+span[data-jarallax-element] {
+  display: inline-block; }
+
+.jarallax {
+  min-height: 600px; }
 
 .sn-bg-1 {
   background-image: url(https://mdbootstrap.com/img/Photos/Others/sidenav1.jpg); }
@@ -11923,6 +11935,7 @@ button.toast-close-button {
 .test-skin input[type="email"]:focus:not([readonly]),
 .test-skin input[type="text"]:focus:not([readonly]),
 .test-skin input[type="password"]:focus:not([readonly]),
+.test-skin input[type="number"]:focus:not([readonly]),
 .test-skin textarea.md-textarea:focus:not([readonly]) {
   border-color: #fff;
   -webkit-box-shadow: 0 1px 0 0 #fff;
@@ -11930,6 +11943,7 @@ button.toast-close-button {
   .test-skin input[type="email"]:focus:not([readonly]) + label,
   .test-skin input[type="text"]:focus:not([readonly]) + label,
   .test-skin input[type="password"]:focus:not([readonly]) + label,
+  .test-skin input[type="number"]:focus:not([readonly]) + label,
   .test-skin textarea.md-textarea:focus:not([readonly]) + label {
     color: #fff; }
 
@@ -12210,6 +12224,7 @@ button.toast-close-button {
 .white-skin input[type="email"]:focus:not([readonly]),
 .white-skin input[type="text"]:focus:not([readonly]),
 .white-skin input[type="password"]:focus:not([readonly]),
+.white-skin input[type="number"]:focus:not([readonly]),
 .white-skin textarea.md-textarea:focus:not([readonly]) {
   border-color: #4285F4;
   -webkit-box-shadow: 0 1px 0 0 #4285F4;
@@ -12217,6 +12232,7 @@ button.toast-close-button {
   .white-skin input[type="email"]:focus:not([readonly]) + label,
   .white-skin input[type="text"]:focus:not([readonly]) + label,
   .white-skin input[type="password"]:focus:not([readonly]) + label,
+  .white-skin input[type="number"]:focus:not([readonly]) + label,
   .white-skin textarea.md-textarea:focus:not([readonly]) + label {
     color: #4285F4; }
 
@@ -12477,6 +12493,7 @@ button.toast-close-button {
 .black-skin input[type="email"]:focus:not([readonly]),
 .black-skin input[type="text"]:focus:not([readonly]),
 .black-skin input[type="password"]:focus:not([readonly]),
+.black-skin input[type="number"]:focus:not([readonly]),
 .black-skin textarea.md-textarea:focus:not([readonly]) {
   border-color: #2AD1A3;
   -webkit-box-shadow: 0 1px 0 0 #2AD1A3;
@@ -12484,6 +12501,7 @@ button.toast-close-button {
   .black-skin input[type="email"]:focus:not([readonly]) + label,
   .black-skin input[type="text"]:focus:not([readonly]) + label,
   .black-skin input[type="password"]:focus:not([readonly]) + label,
+  .black-skin input[type="number"]:focus:not([readonly]) + label,
   .black-skin textarea.md-textarea:focus:not([readonly]) + label {
     color: #2AD1A3; }
 
@@ -12744,6 +12762,7 @@ button.toast-close-button {
 .cyan-skin input[type="email"]:focus:not([readonly]),
 .cyan-skin input[type="text"]:focus:not([readonly]),
 .cyan-skin input[type="password"]:focus:not([readonly]),
+.cyan-skin input[type="number"]:focus:not([readonly]),
 .cyan-skin textarea.md-textarea:focus:not([readonly]) {
   border-color: #f0b247;
   -webkit-box-shadow: 0 1px 0 0 #f0b247;
@@ -12751,6 +12770,7 @@ button.toast-close-button {
   .cyan-skin input[type="email"]:focus:not([readonly]) + label,
   .cyan-skin input[type="text"]:focus:not([readonly]) + label,
   .cyan-skin input[type="password"]:focus:not([readonly]) + label,
+  .cyan-skin input[type="number"]:focus:not([readonly]) + label,
   .cyan-skin textarea.md-textarea:focus:not([readonly]) + label {
     color: #f0b247; }
 
@@ -13011,6 +13031,7 @@ button.toast-close-button {
 .mdb-skin input[type="email"]:focus:not([readonly]),
 .mdb-skin input[type="text"]:focus:not([readonly]),
 .mdb-skin input[type="password"]:focus:not([readonly]),
+.mdb-skin input[type="number"]:focus:not([readonly]),
 .mdb-skin textarea.md-textarea:focus:not([readonly]) {
   border-color: #33b5e5;
   -webkit-box-shadow: 0 1px 0 0 #33b5e5;
@@ -13018,6 +13039,7 @@ button.toast-close-button {
   .mdb-skin input[type="email"]:focus:not([readonly]) + label,
   .mdb-skin input[type="text"]:focus:not([readonly]) + label,
   .mdb-skin input[type="password"]:focus:not([readonly]) + label,
+  .mdb-skin input[type="number"]:focus:not([readonly]) + label,
   .mdb-skin textarea.md-textarea:focus:not([readonly]) + label {
     color: #33b5e5; }
 
@@ -13278,6 +13300,7 @@ button.toast-close-button {
 .deep-purple-skin input[type="email"]:focus:not([readonly]),
 .deep-purple-skin input[type="text"]:focus:not([readonly]),
 .deep-purple-skin input[type="password"]:focus:not([readonly]),
+.deep-purple-skin input[type="number"]:focus:not([readonly]),
 .deep-purple-skin textarea.md-textarea:focus:not([readonly]) {
   border-color: #ac85f0;
   -webkit-box-shadow: 0 1px 0 0 #ac85f0;
@@ -13285,6 +13308,7 @@ button.toast-close-button {
   .deep-purple-skin input[type="email"]:focus:not([readonly]) + label,
   .deep-purple-skin input[type="text"]:focus:not([readonly]) + label,
   .deep-purple-skin input[type="password"]:focus:not([readonly]) + label,
+  .deep-purple-skin input[type="number"]:focus:not([readonly]) + label,
   .deep-purple-skin textarea.md-textarea:focus:not([readonly]) + label {
     color: #ac85f0; }
 
@@ -13545,6 +13569,7 @@ button.toast-close-button {
 .navy-blue-skin input[type="email"]:focus:not([readonly]),
 .navy-blue-skin input[type="text"]:focus:not([readonly]),
 .navy-blue-skin input[type="password"]:focus:not([readonly]),
+.navy-blue-skin input[type="number"]:focus:not([readonly]),
 .navy-blue-skin textarea.md-textarea:focus:not([readonly]) {
   border-color: #40c6c6;
   -webkit-box-shadow: 0 1px 0 0 #40c6c6;
@@ -13552,6 +13577,7 @@ button.toast-close-button {
   .navy-blue-skin input[type="email"]:focus:not([readonly]) + label,
   .navy-blue-skin input[type="text"]:focus:not([readonly]) + label,
   .navy-blue-skin input[type="password"]:focus:not([readonly]) + label,
+  .navy-blue-skin input[type="number"]:focus:not([readonly]) + label,
   .navy-blue-skin textarea.md-textarea:focus:not([readonly]) + label {
     color: #40c6c6; }
 
@@ -13812,6 +13838,7 @@ button.toast-close-button {
 .pink-skin input[type="email"]:focus:not([readonly]),
 .pink-skin input[type="text"]:focus:not([readonly]),
 .pink-skin input[type="password"]:focus:not([readonly]),
+.pink-skin input[type="number"]:focus:not([readonly]),
 .pink-skin textarea.md-textarea:focus:not([readonly]) {
   border-color: #9fa0ae;
   -webkit-box-shadow: 0 1px 0 0 #9fa0ae;
@@ -13819,6 +13846,7 @@ button.toast-close-button {
   .pink-skin input[type="email"]:focus:not([readonly]) + label,
   .pink-skin input[type="text"]:focus:not([readonly]) + label,
   .pink-skin input[type="password"]:focus:not([readonly]) + label,
+  .pink-skin input[type="number"]:focus:not([readonly]) + label,
   .pink-skin textarea.md-textarea:focus:not([readonly]) + label {
     color: #9fa0ae; }
 
@@ -14079,6 +14107,7 @@ button.toast-close-button {
 .indigo-skin input[type="email"]:focus:not([readonly]),
 .indigo-skin input[type="text"]:focus:not([readonly]),
 .indigo-skin input[type="password"]:focus:not([readonly]),
+.indigo-skin input[type="number"]:focus:not([readonly]),
 .indigo-skin textarea.md-textarea:focus:not([readonly]) {
   border-color: #fd668c;
   -webkit-box-shadow: 0 1px 0 0 #fd668c;
@@ -14086,6 +14115,7 @@ button.toast-close-button {
   .indigo-skin input[type="email"]:focus:not([readonly]) + label,
   .indigo-skin input[type="text"]:focus:not([readonly]) + label,
   .indigo-skin input[type="password"]:focus:not([readonly]) + label,
+  .indigo-skin input[type="number"]:focus:not([readonly]) + label,
   .indigo-skin textarea.md-textarea:focus:not([readonly]) + label {
     color: #fd668c; }
 
@@ -14346,6 +14376,7 @@ button.toast-close-button {
 .light-blue-skin input[type="email"]:focus:not([readonly]),
 .light-blue-skin input[type="text"]:focus:not([readonly]),
 .light-blue-skin input[type="password"]:focus:not([readonly]),
+.light-blue-skin input[type="number"]:focus:not([readonly]),
 .light-blue-skin textarea.md-textarea:focus:not([readonly]) {
   border-color: #b4c2c9;
   -webkit-box-shadow: 0 1px 0 0 #b4c2c9;
@@ -14353,6 +14384,7 @@ button.toast-close-button {
   .light-blue-skin input[type="email"]:focus:not([readonly]) + label,
   .light-blue-skin input[type="text"]:focus:not([readonly]) + label,
   .light-blue-skin input[type="password"]:focus:not([readonly]) + label,
+  .light-blue-skin input[type="number"]:focus:not([readonly]) + label,
   .light-blue-skin textarea.md-textarea:focus:not([readonly]) + label {
     color: #b4c2c9; }
 
@@ -14613,6 +14645,7 @@ button.toast-close-button {
 .grey-skin input[type="email"]:focus:not([readonly]),
 .grey-skin input[type="text"]:focus:not([readonly]),
 .grey-skin input[type="password"]:focus:not([readonly]),
+.grey-skin input[type="number"]:focus:not([readonly]),
 .grey-skin textarea.md-textarea:focus:not([readonly]) {
   border-color: #75c1f0;
   -webkit-box-shadow: 0 1px 0 0 #75c1f0;
@@ -14620,6 +14653,7 @@ button.toast-close-button {
   .grey-skin input[type="email"]:focus:not([readonly]) + label,
   .grey-skin input[type="text"]:focus:not([readonly]) + label,
   .grey-skin input[type="password"]:focus:not([readonly]) + label,
+  .grey-skin input[type="number"]:focus:not([readonly]) + label,
   .grey-skin textarea.md-textarea:focus:not([readonly]) + label {
     color: #75c1f0; }
 

@@ -138,6 +138,7 @@
     input[type="email"]:focus:not([readonly]),
     input[type="text"]:focus:not([readonly]),
     input[type="password"]:focus:not([readonly]),
+    input[type="number"]:focus:not([readonly]),
     textarea.md-textarea:focus:not([readonly]) {
       border-color: map-get($data, skin-accent);
       box-shadow: 0 1px 0 0 map-get($data, skin-accent);

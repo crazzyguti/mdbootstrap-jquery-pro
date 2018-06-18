@@ -37,13 +37,14 @@ $animations-pro-transition:            all 150ms ease-in 0s !default;
 
 // Autocomplete
 $autocomplete-margin-bottom:           1px !default;
-$autocomplete-clear-top:               0.85rem !default;
+$autocomplete-clear-top:               .5rem !default;
 $autocomplete-clear-color:             #a6a6a6 !default;
 $autocomplete-wrap-max-height:         210px !default;
 $autocomplete-wrap-li-padding-y:       12px !default;
 $autocomplete-wrap-li-padding-x:       15px !default;
 $autocomplete-wrap-li-font-size:       .875rem !default;
 $autocomplete-wrap-li-hover-bg:        rgb(238, 238, 238) !default;
+$form-inline-autocomplete-width:       15rem !default;
 
 // Buttons
 $btn-floating-width:                   47px !default;
