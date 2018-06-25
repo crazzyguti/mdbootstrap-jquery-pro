@@ -13,13 +13,13 @@
 
       const $this = $(this)
 
-      let $panel_headers = $(this).find('> li > .collapsible-header')
+      let $panelHeaders = $(this).find('> li > .collapsible-header')
 
-      const collapsible_type = $this.data('collapsible')
+      const collapsibleType = $this.data('collapsible')
 
       // Turn off any existing event handlers
       $this.off('click.collapse', '.collapsible-header')
-      $panel_headers.off('click.collapse')
+      $panelHeaders.off('click.collapse')
 
 
       /** **************
@@ -28,7 +28,7 @@
 
       // Accordion Open
       function accordionOpen(object) {
-        $panel_headers = $this.find('> li > .collapsible-header')
+        $panelHeaders = $this.find('> li > .collapsible-header')
         if (object.hasClass('active')) {
           object.parent().addClass('active')
         } else {
@@ -54,8 +54,8 @@
           })
         }
 
-        $panel_headers.not(object).removeClass('active').parent().removeClass('active')
-        $panel_headers.not(object).parent().children('.collapsible-body').stop(true, false).slideUp({
+        $panelHeaders.not(object).removeClass('active').parent().removeClass('active')
+        $panelHeaders.not(object).parent().children('.collapsible-body').stop(true, false).slideUp({
           duration: 350,
           easing: 'easeOutQuart',
           queue: false,
@@ -118,10 +118,10 @@
       /** ***  End Helper Functions  *****/
 
 
-      if (options.accordion || collapsible_type === 'accordion' || collapsible_type === undefined) { // Handle Accordion
+      if (options.accordion || collapsibleType === 'accordion' || collapsibleType === undefined) { // Handle Accordion
         // Add click handler to only direct collapsible header children
-        $panel_headers = $this.find('> li > .collapsible-header')
-        $panel_headers.on('click.collapse', (e) => {
+        $panelHeaders = $this.find('> li > .collapsible-header')
+        $panelHeaders.on('click.collapse', (e) => {
           let element = $(e.target)
 
           if (isChildrenOfPanelHeader(element)) {
@@ -132,9 +132,9 @@
           accordionOpen(element)
         })
         // Open first active
-        accordionOpen($panel_headers.filter('.active').first())
+        accordionOpen($panelHeaders.filter('.active').first())
       } else { // Handle Expandables
-        $panel_headers.each(function () {
+        $panelHeaders.each(function () {
           // Add click handler to only direct collapsible header children
           $(this).on('click.collapse', (e) => {
             let element = $(e.target)
