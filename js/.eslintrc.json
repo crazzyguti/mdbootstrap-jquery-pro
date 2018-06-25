@@ -193,7 +193,7 @@
     "quote-props": ["error", "as-needed"],
     "quotes": ["error", "single"],
     "require-jsdoc": "off",
-    "semi": ["error", "never"],
+    "semi": ["error", "always"],
     "semi-spacing": "error",
     "sort-keys": "off",
     "sort-vars": "error",
