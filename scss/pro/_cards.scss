@@ -100,7 +100,10 @@
     top: 100%;
     height: 100%;
     z-index: 1;
-    display: none;
+    transition: transform .3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    &.show {
+      transform:translateY(-100%);
+    }
     .content {
       position: relative;
     }
