@@ -155,7 +155,6 @@
     })
   }
 
-  $(document).ready(() => {
-    $('.collapsible').collapsible()
-  })
+  $('.collapsible').collapsible();
+
 }(jQuery))
