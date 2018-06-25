@@ -17,8 +17,6 @@
 
   $.fn.materialChip = function (options) {
 
-    const self = this;
-
     this.$el = $(this);
     this.$document = $(document);
 
@@ -56,9 +54,10 @@
 
     this.$el.data('options', $.extend({}, this.defaultOptions, options));
 
-    this.init = function () {
+    const self = this;
+    this.init = () => {
 
-      self.$el.each(function (index) {
+      this.$el.each(function (index) {
 
         const $this = $(this);
         if ($this.data('initialized')) {
@@ -79,7 +78,6 @@
         }
 
         self.renderChips($this);
-
       });
     };
 
@@ -92,7 +90,7 @@
 
       this.$document.on('click', this.selectors.chip, (e) => {
 
-        $(self.selectors.chip).removeClass('selected');
+        $(this.selectors.chip).removeClass('selected');
         $(e.target).addClass('selected');
       });
 
@@ -102,7 +100,7 @@
           return;
         }
 
-        const $selectedChip  = self.$document.find(this.selectors.chip + this.selectors.selectedChip);
+        const $selectedChip  = this.$document.find(this.selectors.chip + this.selectors.selectedChip);
         const $chipsWrapper = $selectedChip.closest(this.selectors.chips);
         const siblingsLength = $selectedChip.siblings(this.selectors.chip).length;
 
@@ -233,7 +231,7 @@
 
       $(this.selectors.chip).removeClass('selected');
 
-      self.selectChip($chipsWrapper.data('index'), chipIndex, $chipsWrapper);
+      this.selectChip($chipsWrapper.data('index'), chipIndex, $chipsWrapper);
     };
 
     this.selectRightChip = ($chipsWrapper, $selectedChip, siblingsLength) => {
@@ -246,7 +244,7 @@
         return;
       }
 
-      self.selectChip($chipsWrapper.data('index'), chipIndex, $chipsWrapper);
+      this.selectChip($chipsWrapper.data('index'), chipIndex, $chipsWrapper);
     };
 
     this.renderChips = ($chipsWrapper) => {
@@ -255,7 +253,7 @@
 
       $chipsWrapper.data('chips').forEach((elem) => {
 
-        html += self.getSingleChipHtml(elem);
+        html += this.getSingleChipHtml(elem);
       });
 
       html += '<input class="input" placeholder="">';
