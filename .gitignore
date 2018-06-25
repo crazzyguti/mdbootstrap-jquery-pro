@@ -7,3 +7,5 @@ yarn.lock
 mattonit
 .prepros.cfg
 .prepros-6.config
+
+.idea
