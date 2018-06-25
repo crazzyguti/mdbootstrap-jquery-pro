@@ -6,6 +6,7 @@
   "rules": {
     "indent": ["error", 2],
     "camelcase": "off",
-    "brace-style": 2
+    "brace-style": 2,
+    "semi": 0
   }
 }
