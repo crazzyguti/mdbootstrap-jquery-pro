@@ -2,7 +2,7 @@
 
 (($) => {
 
-  const SCROLLING_NAVBAR_OFFSET_TOP = 50
+  const SCROLLING_NAVBAR_OFFSET_TOP = 50;
 
   $(window).on('scroll', () => {
     if ($('.navbar').length) {
@@ -12,5 +12,5 @@
         $('.scrolling-navbar').removeClass('top-nav-collapse');
       }
     }
-  })
+  });
 })(jQuery);
