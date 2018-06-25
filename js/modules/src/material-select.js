@@ -39,21 +39,24 @@
       // Added to search
       const applySeachInList = function () {
 
-        const ul = $(this).closest('ul')
-        const searchValue = $(this).val()
+        var $this = $(this);
+        const ul = $this.closest('ul')
+        const searchValue = $this.val()
         const options = ul.find('li')
           .find('span.filtrable')
 
         options.each(function () {
+
+          var $option = $(this);
           if (typeof(this.outerHTML) === 'string') {
             var liValue = this.textContent.toLowerCase()
 
             if (liValue.indexOf(searchValue.toLowerCase()) === -1) {
-              $(this).hide()
-              $(this).parent().hide()
+              $option.hide()
+              $option.parent().hide()
             } else {
-              $(this).show()
-              $(this).parent().show()
+              $option.show()
+              $option.parent().show()
             }
           }
         })
@@ -111,18 +114,19 @@
       /* Create dropdown structure. */
       if (selectChildren.length) {
         selectChildren.each(function () {
-          if ($(this).is('option')) {
+          var $this = $(this);
+          if ($this.is('option')) {
             // Direct descendant option.
             if (multiple) {
-              appendOptionWithIcon($select, $(this), 'multiple')
+              appendOptionWithIcon($select, $this, 'multiple')
 
             } else {
-              appendOptionWithIcon($select, $(this))
+              appendOptionWithIcon($select, $this)
             }
-          } else if ($(this).is('optgroup')) {
+          } else if ($this.is('optgroup')) {
             // Optgroup.
-            const selectOptions = $(this).children('option')
-            options.append($(`<li class="optgroup"><span>${$(this).attr('label')}</span></li>`))
+            const selectOptions = $this.children('option')
+            options.append($(`<li class="optgroup"><span>${$this.attr('label')}</span></li>`))
 
             selectOptions.each(function () {
               appendOptionWithIcon($select, $(this), 'optgroup-option')
@@ -153,8 +157,9 @@
 
       options.find('li:not(.optgroup)').each(function (i) {
         $(this).click(function (e) {
+          var $this = $(this);
           // Check if option element is disabled
-          if (!$(this).hasClass('disabled') && !$(this).hasClass('optgroup')) {
+          if (!$this.hasClass('disabled') && !$this.hasClass('optgroup')) {
             let selected = true
 
             if (multiple) {
@@ -163,23 +168,23 @@
               })
               if(searchable) {
                 if(optgroup) {
-                  selected = toggleEntryFromArray(valuesSelected, $(this).index() - $(this).prevAll('.optgroup').length - 1, $select)
+                  selected = toggleEntryFromArray(valuesSelected, $this.index() - $this.prevAll('.optgroup').length - 1, $select)
                 } else {
-                  selected = toggleEntryFromArray(valuesSelected, $(this).index() - 1, $select)
+                  selected = toggleEntryFromArray(valuesSelected, $this.index() - 1, $select)
                 }
               } else if(optgroup) {
-                selected = toggleEntryFromArray(valuesSelected, $(this).index() - $(this).prevAll('.optgroup').length, $select)
+                selected = toggleEntryFromArray(valuesSelected, $this.index() - $this.prevAll('.optgroup').length, $select)
               } else {
-                selected = toggleEntryFromArray(valuesSelected, $(this).index(), $select)
+                selected = toggleEntryFromArray(valuesSelected, $this.index(), $select)
               }
               $newSelect.trigger('focus')
             } else {
               options.find('li').removeClass('active')
-              $(this).toggleClass('active')
-              $newSelect.val($(this).text())
+              $this.toggleClass('active')
+              $newSelect.val($this.text())
             }
 
-            activateOption(options, $(this))
+            activateOption(options, $this)
             $select.find('option').eq(i).prop('selected', selected)
             // Trigger onchange() event
             $select.trigger('change')
@@ -225,12 +230,13 @@
 
       $newSelect.on({
         focus() {
+          var $this = $(this);
           if ($('ul.select-dropdown').not(options[0]).is(':visible')) {
             $('input.select-dropdown').trigger('close')
           }
           if (!options.is(':visible')) {
-            $(this).trigger('open', ['focus'])
-            const label = $(this).val()
+            $this.trigger('open', ['focus'])
+            const label = $this.val()
             const selectedOption = options.find('li').filter(function () {
               return $(this).text().toLowerCase() === label.toLowerCase()
             })[0]
