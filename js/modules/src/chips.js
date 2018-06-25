@@ -1,297 +1,371 @@
 (function ($) {
 
-  let chipsHandleEvents     = false
-  const materialChipsDefaults = {
-    data                : [],
-    placeholder         : '',
-    secondaryPlaceholder: ''
-  }
-
   $(document).ready(() => {
-    // Handle removal of static chips.
+
     $(document).on('click', '.chip .close', function () {
 
-      const $this  = $(this)
-      const $chips = $this.closest('.chips')
+      const $this = $(this);
 
-      if ($chips.data('initialized')) {
-        return
+      if ($this.closest('.chips').data('initialized')) {
+        return;
       }
 
-      $this.closest('.chip').remove()
+      $this.closest('.chip').remove();
 
-    })
-  })
+    });
+  });
 
-  $.fn.material_chip = function (options) {
-    const self     = this
-    this.$el       = $(this)
-    this.$document = $(document)
-    this.SELS      = {
-      CHIPS        : '.chips',
-      CHIP         : '.chip',
-      INPUT        : 'input',
-      DELETE       : '.fa',
-      SELECTED_CHIP: '.selected'
-    }
+  $.fn.materialChip = function (options) {
+
+    const self = this;
+
+    this.$el = $(this);
+    this.$document = $(document);
+
+    this.eventsHandled = false;
+
+    this.defaultOptions = {
+      data: [],
+      placeholder: '',
+      secondaryPlaceholder: ''
+    };
+
+    this.selectors = {
+      chips: '.chips',
+      chip: '.chip',
+      input: 'input',
+      delete: '.fa',
+      selectedChip: '.selected'
+    };
+
+    this.keyCodes = {
+      enter: 13,
+      backspace: 8,
+      delete: 46,
+      arrowLeft: 37,
+      arrowRight: 39
+    };
 
     if (options === 'data') {
-      return this.$el.data('chips')
+      return this.$el.data('chips');
     }
 
     if (options === 'options') {
-      return this.$el.data('options')
+      return this.$el.data('options');
     }
 
-    this.$el.data('options', $.extend({}, materialChipsDefaults, options))
+    this.$el.data('options', $.extend({}, this.defaultOptions, options));
 
-    // Initialize
     this.init = function () {
-      let i = 0
-      self.$el.each(function () {
 
-        const $chips = $(this)
-        if ($chips.data('initialized')) {
-          return
-        } // Prevent double initialization.
+      self.$el.each(function (index) {
 
-        const options = $chips.data('options')
-        if (!options.data || !(options.data instanceof Array)) {
-          options.data = []
+        const $this = $(this);
+        if ($this.data('initialized')) {
+          return;
         }
 
-        $chips.data('chips', options.data)
-        $chips.data('index', i)
-        $chips.data('initialized', true)
-
-        if (!$chips.hasClass(self.SELS.CHIPS)) {
-          $chips.addClass('chips')
+        const options = $this.data('options');
+        if (!options.data || !Array.isArray(options.data)) {
+          options.data = [];
         }
 
-        self.chips($chips)
-        i++
+        $this.data('chips', options.data);
+        $this.data('index', index);
+        $this.data('initialized', true);
 
-      })
-    }
+        if (!$this.hasClass(self.selectors.chips)) {
+          $this.addClass('chips');
+        }
+
+        self.renderChips($this);
+
+      });
+    };
 
     this.handleEvents = function () {
-      const SELS = self.SELS
 
-      self.$document.on('click', SELS.CHIPS, (e) => {
-        $(e.target).find(SELS.INPUT).focus()
-      })
+      this.$document.on('click', this.selectors.chips, (e) => {
 
-      self.$document.on('click', SELS.CHIP, function () {
-        $(SELS.CHIP).removeClass('selected')
-        $(this).toggleClass('selected')
-      })
+        $(e.target).find(this.selectors.input).focus();
+      });
 
-      self.$document.on('keydown', (e) => {
+      this.$document.on('click', this.selectors.chip, (e) => {
+
+        $(self.selectors.chip).removeClass('selected');
+        $(e.target).addClass('selected');
+      });
+
+      this.$document.on('keydown', (e) => {
+
         if ($(e.target).is('input, textarea')) {
-          return
+          return;
         }
 
-        // delete
-        const $chip  = self.$document.find(SELS.CHIP + SELS.SELECTED_CHIP)
-        const $chips = $chip.closest(SELS.CHIPS)
-        const length = $chip.siblings(SELS.CHIP).length
-        let index
+        const $selectedChip  = self.$document.find(this.selectors.chip + this.selectors.selectedChip);
+        const $chipsWrapper = $selectedChip.closest(this.selectors.chips);
+        const siblingsLength = $selectedChip.siblings(this.selectors.chip).length;
 
-        if (!$chip.length) {
-          return
+        if (!$selectedChip.length) {
+          return;
         }
 
-        const isBackspaceOrDelete = e.which === 8 || e.which === 46
-        const isLeftArrow         = e.which === 37
-        const isRightArrow        = e.which === 39
+        const backspacePressed = e.which === this.keyCodes.backspace;
+        const deletePressed = e.which === this.keyCodes.delete;
+        const leftArrowPressed = e.which === this.keyCodes.arrowLeft;
+        const rightArrowPressed = e.which === this.keyCodes.arrowRight;
 
-        if (isBackspaceOrDelete) {
-          e.preventDefault()
-          const chipsIndex = $chips.data('index')
-          index          = $chip.index()
-          self.deleteChip(chipsIndex, index, $chips)
-          let selectIndex = null
+        if (backspacePressed || deletePressed) {
 
-          if (index + 1 < length) {
-            selectIndex = index
-          } else if (index === length || index + 1 === length) {
-            selectIndex = length - 1
-          }
+          e.preventDefault();
 
-          if (selectIndex < 0) {
-            selectIndex = null
-          }
+          this.deleteSelectedChip($chipsWrapper, $selectedChip, siblingsLength);
 
-          if (selectIndex !== null) {
-            self.selectChip(chipsIndex, selectIndex, $chips)
-          }
-          if (!length) {
-            $chips.find('input').focus()
-          }
+        } else if (leftArrowPressed) {
 
-        } else if (isLeftArrow) {
+          this.selectLeftChip($chipsWrapper, $selectedChip);
 
-          index = $chip.index() - 1
-          if (index < 0) {
-            return
-          }
-          $(SELS.CHIP).removeClass('selected')
-          self.selectChip($chips.data('index'), index, $chips)
+        } else if (rightArrowPressed) {
 
-        } else if (isRightArrow) {
-
-          index = $chip.index() + 1
-          $(SELS.CHIP).removeClass('selected')
-          if (index > length) {
-            $chips.find('input').focus()
-            return
-          }
-          self.selectChip($chips.data('index'), index, $chips)
-
+          this.selectRightChip($chipsWrapper, $selectedChip, siblingsLength);
         }
-      })
+      });
 
-      self.$document.on('focusin', `${SELS.CHIPS} ${SELS.INPUT}`, (e) => {
-        $(e.target).closest(SELS.CHIPS).addClass('focus')
-        $(SELS.CHIP).removeClass('selected')
-      })
+      this.$document.on('focusin', `${this.selectors.chips} ${this.selectors.input}`, (e) => {
 
-      self.$document.on('focusout', `${SELS.CHIPS} ${SELS.INPUT}`, (e) => {
-        $(e.target).closest(SELS.CHIPS).removeClass('focus')
-      })
+        $(e.target).closest(this.selectors.chips).addClass('focus');
+        $(this.selectors.chip).removeClass('selected');
+      });
 
-      self.$document.on('keydown', `${SELS.CHIPS} ${SELS.INPUT}`, (e) => {
-        const $target = $(e.target)
-        const $chips = $target.closest(SELS.CHIPS)
-        const chipsIndex = $chips.data('index')
-        const chipsLength = $chips.children(SELS.CHIP).length
+      this.$document.on('focusout', `${this.selectors.chips} ${this.selectors.input}`, (e) => {
 
-        const isEnter = e.which === 13
+        $(e.target).closest(this.selectors.chips).removeClass('focus');
+      });
 
-        if (isEnter) {
-          e.preventDefault()
-          self.addChip(
+      this.$document.on('keydown', `${this.selectors.chips} ${this.selectors.input}`, (e) => {
+
+        const $target = $(e.target);
+        const $chipsWrapper = $target.closest(this.selectors.chips);
+        const chipsIndex = $chipsWrapper.data('index');
+        const chipsLength = $chipsWrapper.children(this.selectors.chip).length;
+
+        const enterPressed = e.which === this.keyCodes.enter;
+
+        if (enterPressed) {
+
+          e.preventDefault();
+
+          this.addChip(
             chipsIndex,
             {
               tag: $target.val()
             },
-            $chips
-          )
-          $target.val('')
-          return
+            $chipsWrapper
+          );
+
+          $target.val('');
+
+          return;
         }
 
-        const isLeftArrowOrDelete = e.keyCode === 8 || e.keyCode === 37
-        const isValueEmpty = $target.val() === ''
+        const leftArrowOrDeletePressed = e.keyCode === this.keyCodes.arrowLeft || e.keyCode === this.keyCodes.delete;
+        const isValueEmpty = $target.val() === '';
 
-        if (isLeftArrowOrDelete && isValueEmpty && chipsLength) {
-          self.selectChip(chipsIndex, chipsLength - 1, $chips)
-          $target.blur()
-          return
+        if (leftArrowOrDeletePressed && isValueEmpty && chipsLength) {
+
+          this.selectChip(chipsIndex, chipsLength - 1, $chipsWrapper);
+
+          $target.blur();
         }
-      })
+      });
 
-      self.$document.on('click', `${SELS.CHIPS} ${SELS.DELETE}`, (e) => {
-        const $target = $(e.target)
-        const $chips = $target.closest(SELS.CHIPS)
-        const $chip = $target.closest(SELS.CHIP)
-        e.stopPropagation()
-        self.deleteChip(
-          $chips.data('index'),
+      this.$document.on('click', `${this.selectors.chips} ${this.selectors.delete}`, (e) => {
+
+        const $target = $(e.target);
+        const $chipsWrapper = $target.closest(this.selectors.chips);
+        const $chip = $target.closest(this.selectors.chip);
+
+        e.stopPropagation();
+
+        this.deleteChip(
+          $chipsWrapper.data('index'),
           $chip.index(),
-          $chips
-        )
-        $chips.find('input').focus()
-      })
+          $chipsWrapper
+        );
 
-    }
+        $chipsWrapper.find('input').focus();
+      });
+    };
 
-    this.chips = function ($chips) {
-      let html    = ''
-      $chips.data('chips').forEach((elem) => {
-        html += self.renderChip(elem)
-      })
-      html += '<input class="input" placeholder="">'
-      $chips.html(html)
-      self.setPlaceholder($chips)
-    }
+    this.deleteSelectedChip = ($chipsWrapper, $selectedChip, siblingsLength) => {
 
-    this.renderChip = function (elem) {
-      if (!elem.tag) {
-        return
+      const chipsIndex = $chipsWrapper.data('index');
+      const chipIndex = $selectedChip.index();
+      this.deleteChip(chipsIndex, chipIndex, $chipsWrapper);
+
+      let selectIndex = null;
+
+      if (chipIndex < siblingsLength - 1) {
+        selectIndex = chipIndex;
+      } else if (chipIndex === siblingsLength || chipIndex === siblingsLength - 1) {
+        selectIndex = siblingsLength - 1;
       }
 
-      let html = `<div class="chip">${elem.tag}`
+      if (selectIndex < 0) {
+        selectIndex = null;
+      }
+
+      if (selectIndex !== null) {
+        this.selectChip(chipsIndex, selectIndex, $chipsWrapper);
+      }
+
+      if (!siblingsLength) {
+        $chipsWrapper.find('input').focus();
+      }
+    };
+
+    this.selectLeftChip = ($chipsWrapper, $selectedChip) => {
+
+      const chipIndex = $selectedChip.index() - 1;
+      if (chipIndex < 0) {
+        return;
+      }
+
+      $(this.selectors.chip).removeClass('selected');
+
+      self.selectChip($chipsWrapper.data('index'), chipIndex, $chipsWrapper);
+    };
+
+    this.selectRightChip = ($chipsWrapper, $selectedChip, siblingsLength) => {
+
+      const chipIndex = $selectedChip.index() + 1;
+      $(this.selectors.chip).removeClass('selected');
+      if (chipIndex > siblingsLength) {
+
+        $chipsWrapper.find('input').focus();
+        return;
+      }
+
+      self.selectChip($chipsWrapper.data('index'), chipIndex, $chipsWrapper);
+    };
+
+    this.renderChips = ($chipsWrapper) => {
+
+      let html    = '';
+
+      $chipsWrapper.data('chips').forEach((elem) => {
+
+        html += self.getSingleChipHtml(elem);
+      });
+
+      html += '<input class="input" placeholder="">';
+
+      $chipsWrapper.html(html);
+
+      this.setPlaceholder($chipsWrapper);
+    };
+
+    this.getSingleChipHtml = function (elem) {
+
+      if (!elem.tag) {
+        return '';
+      }
+
+      let html = `<div class="chip">${elem.tag}`;
 
       if (elem.image) {
-        html += ` <img src="${elem.image}"> `
+        html += ` <img src="${elem.image}"> `;
       }
 
-      html += '<i class="close fa fa-times"></i>'
-      html += '</div>'
-      return html
+      html += '<i class="close fa fa-times"></i>';
+      html += '</div>';
 
-    }
+      return html;
+    };
 
     this.setPlaceholder = function ($chips) {
-      const options = $chips.data('options')
-      if ($chips.data('chips').length && options.placeholder) {
-        $chips.find('input').prop('placeholder', options.placeholder)
-      } else if (!$chips.data('chips').length && options.secondaryPlaceholder) {
-        $chips.find('input').prop('placeholder', options.secondaryPlaceholder)
-      }
-    }
 
-    this.isValid = function ($chips, elem) {
-      const chips = $chips.data('chips')
-      let exists = false
+      const options = $chips.data('options');
+
+      if ($chips.data('chips').length && options.placeholder) {
+
+        $chips.find('input').prop('placeholder', options.placeholder);
+
+      } else if (!$chips.data('chips').length && options.secondaryPlaceholder) {
+
+        $chips.find('input').prop('placeholder', options.secondaryPlaceholder);
+      }
+    };
+
+    this.isValid = function ($chipsWrapper, elem) {
+
+      const chips = $chipsWrapper.data('chips');
+
       for (let i = 0; i < chips.length; i++) {
+
         if (chips[i].tag === elem.tag) {
-          exists = true
-          return
+
+          return false;
         }
       }
-      return elem.tag !== '' && !exists
-    }
 
-    this.addChip = function (chipsIndex, elem, $chips) {
-      if (!self.isValid($chips, elem)) {
-        return
+      return elem.tag !== '';
+    };
+
+    this.addChip = (chipsIndex, elem, $chipsWrapper) => {
+
+      if (!this.isValid($chipsWrapper, elem)) {
+        return;
       }
 
-      const chipHtml = self.renderChip(elem)
-      $chips.data('chips').push(elem)
-      $(chipHtml).insertBefore($chips.find('input'))
-      $chips.trigger('chip.add', elem)
-      self.setPlaceholder($chips)
-    }
+      const chipHtml = this.getSingleChipHtml(elem);
 
-    this.deleteChip = function (chipsIndex, chipIndex, $chips) {
-      const chip = $chips.data('chips')[chipIndex]
-      $chips.find('.chip').eq(chipIndex).remove()
-      $chips.data('chips').splice(chipIndex, 1)
-      $chips.trigger('chip.delete', chip)
-      self.setPlaceholder($chips)
-    }
+      $chipsWrapper.data('chips').push(elem);
 
-    this.selectChip = function (chipsIndex, chipIndex, $chips) {
-      const $chip = $chips.find('.chip').eq(chipIndex)
+      $(chipHtml).insertBefore($chipsWrapper.find('input'));
+
+      $chipsWrapper.trigger('chip.add', elem);
+
+      this.setPlaceholder($chipsWrapper);
+    };
+
+    this.deleteChip = (chipsIndex, chipIndex, $chipsWrapper) => {
+
+      const chip = $chipsWrapper.data('chips')[chipIndex];
+
+      $chipsWrapper.find('.chip').eq(chipIndex).remove();
+      $chipsWrapper.data('chips').splice(chipIndex, 1);
+      $chipsWrapper.trigger('chip.delete', chip);
+
+      this.setPlaceholder($chipsWrapper);
+    };
+
+    this.selectChip = (chipsIndex, chipIndex, $chipsWrapper) => {
+
+      const $chip = $chipsWrapper.find('.chip').eq(chipIndex);
+
       if ($chip && $chip.hasClass('selected') === false) {
-        $chip.addClass('selected')
-        $chips.trigger('chip.select', $chips.data('chips')[chipIndex])
+
+        $chip.addClass('selected');
+        $chipsWrapper.trigger('chip.select', $chipsWrapper.data('chips')[chipIndex]);
       }
+    };
+
+    this.getChipsElement = (index, $chipsWrapper) => {
+      return $chipsWrapper.eq(index);
+    };
+
+    this.init();
+
+    if (!this.eventsHandled) {
+
+      this.handleEvents();
+      this.eventsHandled = true;
     }
 
-    this.getChipsElement = function (index, $chips) {
-      return $chips.eq(index)
-    }
+    return this;
+  };
 
-    // init
-    this.init()
-
-    if (!chipsHandleEvents) {
-      this.handleEvents()
-      chipsHandleEvents = true
-    }
-  }
-}(jQuery))
+  // Deprecated. To be deleted in future releases
+  $.fn.material_chip = $.fn.materialChip;
+}(jQuery));
