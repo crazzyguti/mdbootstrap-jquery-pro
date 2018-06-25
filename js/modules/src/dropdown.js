@@ -284,8 +284,7 @@ function dropdownEffectData(target) {
 function dropdownEffectStart(data, effectToStart) {
   if (effectToStart) {
     data.dropdown.addClass('dropdown-animating')
-    data.dropdownMenu.addClass('animated')
-    data.dropdownMenu.addClass(effectToStart)
+    data.dropdownMenu.addClass(['animated', effectToStart].join(' '));
   }
 }
 
@@ -295,9 +294,7 @@ function dropdownEffectEnd(data, callbackFunc) {
   const animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
   data.dropdown.one(animationEnd, () => {
     data.dropdown.removeClass('dropdown-animating')
-    data.dropdownMenu.removeClass('animated')
-    data.dropdownMenu.removeClass(data.effectIn)
-    data.dropdownMenu.removeClass(data.effectOut)
+    data.dropdownMenu.removeClass(['animated', data.effectIn, data.effectOut].join(' '))
 
     // Custom callback option, used to remove open class in out effect
     if (typeof callbackFunc === 'function') {
