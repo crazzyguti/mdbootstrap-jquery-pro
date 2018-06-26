@@ -46,11 +46,11 @@
   }
 
   const appendOptionWithIcon = function (options, option, type) {
-    // Add disabled attr if disabled
+
     const disabledClass = option.is(':disabled') ? 'disabled ' : '';
     const optgroupClass = type === 'optgroup-option' ? 'optgroup-option ' : '';
 
-    // add icons
+
     const icon_url = option.data('icon');
     const classes = option.attr('class');
     if (icon_url) {
@@ -59,7 +59,6 @@
         classString = ` class="${classes}"`;
       }
 
-      // Check for multiple type.
       if (type === 'multiple') {
         options.append($(`<li class="${disabledClass}"><img alt="" src="${icon_url}"${classString}><span class="filtrable"><input type="checkbox"${disabledClass}/><label></label>${option.html()}</span></li>`));
       } else {
@@ -68,7 +67,6 @@
       return true;
     }
 
-    // Check for multiple type.
     if (type === 'multiple') {
       options.append($(`<li class="${disabledClass}"><span class="filtrable"><input type="checkbox"${disabledClass}/><label></label>${option.html()}</span></li>`));
     } else {
@@ -108,14 +106,14 @@
 
   $.fn.material_select = function (callback) {
     $(this).each(function () {
-      const $select = $(this)
+      const $select = $(this);
 
       if ($select.hasClass('browser-default')) {
-        return // Continue to next (return false breaks out of entire loop)
+        return;
       }
 
       let multiple = Boolean($select.attr('multiple')),
-        lastID = $select.data('select-id') // Tear down structure if Select needs to be rebuilt
+        lastID = $select.data('select-id');
 
       if (lastID) {
         $select.parent().find('span.caret').remove()
@@ -125,46 +123,40 @@
         $(`ul#select-options-${lastID}`).remove()
       }
 
-      // If destroying the select, remove the selelct-id and reset it to it's uninitialized state.
       if (callback === 'destroy') {
         $select.data('select-id', null).removeClass('initialized')
         return
       }
 
-      const uniqueID = guid() // Materialize.guid();
-      $select.data('select-id', uniqueID)
-      const wrapper = $('<div class="select-wrapper"></div>')
-      wrapper.addClass($select.attr('class'))
+      const uniqueID = guid();
+      $select.data('select-id', uniqueID);
+      const wrapper = $('<div class="select-wrapper"></div>');
+      wrapper.addClass($select.attr('class'));
       let options = $(`<ul id="select-options-${uniqueID}" class="dropdown-content select-dropdown ${multiple ? 'multiple-select-dropdown' : ''}"></ul>`),
         selectChildren = $select.children('option, optgroup'),
         valuesSelected = [],
-        optionsHover = false
+        optionsHover = false;
 
-      const label = $select.find('option:selected').html() || $select.find('option:first').html() || ''
-      const searchable = Boolean($select.attr('searchable'))
+      const label = $select.find('option:selected').html() || $select.find('option:first').html() || '';
+      const searchable = Boolean($select.attr('searchable'));
 
-      // Added to search
       if (searchable) {
-        setSearchableOption($select, options)
+        setSearchableOption($select, options);
       }
 
-      // Function that renders and appends the option taking into
-      // account type and possible image icon.
       const appendOptionWithIcon = function (options, option, type) {
-        // Add disabled attr if disabled
-        const disabledClass = option.is(':disabled') ? 'disabled ' : ''
-        const optgroupClass = type === 'optgroup-option' ? 'optgroup-option ' : ''
 
-        // add icons
-        const icon_url = option.data('icon')
-        const classes = option.attr('class')
+        const disabledClass = option.is(':disabled') ? 'disabled ' : '';
+        const optgroupClass = type === 'optgroup-option' ? 'optgroup-option ' : '';
+
+        const icon_url = option.data('icon');
+        const classes = option.attr('class');
         if (icon_url) {
           let classString = ''
           if (classes) {
             classString = ` class="${classes}"`
           }
 
-          // Check for multiple type.
           if (type === 'multiple') {
             options.append($(`<li class="${disabledClass}"><img alt="" src="${icon_url}"${classString}><span class="filtrable"><input type="checkbox"${disabledClass}/><label></label>${option.html()}</span></li>`))
           } else {
@@ -173,7 +165,6 @@
           return true
         }
 
-        // Check for multiple type.
         if (type === 'multiple') {
           options.append($(`<li class="${disabledClass}"><span class="filtrable"><input type="checkbox"${disabledClass}/><label></label>${option.html()}</span></li>`))
         } else {
@@ -181,54 +172,41 @@
         }
       }
 
-      /* Create dropdown structure. */
       if (selectChildren.length) {
         selectChildren.each(function () {
           let $this = $(this);
           if ($this.is('option')) {
-            // Direct descendant option.
             if (multiple) {
-              appendOptionWithIcon(options, $this, 'multiple')
+              appendOptionWithIcon(options, $this, 'multiple');
 
             } else {
-              appendOptionWithIcon(options, $this)
+              appendOptionWithIcon(options, $this);
             }
           } else if ($this.is('optgroup')) {
-            // Optgroup.
-            const selectOptions = $this.children('option')
-            options.append($(`<li class="optgroup"><span>${$this.attr('label')}</span></li>`))
+            const selectOptions = $this.children('option');
+            options.append($(`<li class="optgroup"><span>${$this.attr('label')}</span></li>`));
 
             selectOptions.each(function () {
-              appendOptionWithIcon(options, $(this), 'optgroup-option')
-            })
+              appendOptionWithIcon(options, $(this), 'optgroup-option');
+            });
           }
-        })
+        });
       }
 
-      // Check for optgroups
-      let optgroup = false
-      if($select.find('optgroup').length) {
-        optgroup =true
-      }
+      let hasOptgroup = !!$select.find('optgroup').length;
 
-      // Added to save
       let saveSelect = $select.parent().find('button.btn-save');
-      let setSaveOption = function setSaveOption() {
-        options.append(saveSelect);
-      }
-
-      // Save click trigger
       if (saveSelect.length) {
-        setSaveOption();
+
         saveSelect.on('click', function() {
           $('input.select-dropdown').trigger('close');
-        })
+        });
       }
 
       options.find('li:not(.optgroup)').each(function (i) {
         $(this).click(function (e) {
           let $this = $(this);
-          // Check if option element is disabled
+
           if (!$this.hasClass('disabled') && !$this.hasClass('optgroup')) {
             let selected = true
 
@@ -237,53 +215,49 @@
                 return !v
               })
               if(searchable) {
-                if(optgroup) {
-                  selected = toggleEntryFromArray(valuesSelected, $this.index() - $this.prevAll('.optgroup').length - 1, $select)
+                if(hasOptgroup) {
+                  selected = toggleEntryFromArray(valuesSelected, $this.index() - $this.prevAll('.optgroup').length - 1, $select);
                 } else {
-                  selected = toggleEntryFromArray(valuesSelected, $this.index() - 1, $select)
+                  selected = toggleEntryFromArray(valuesSelected, $this.index() - 1, $select);
                 }
-              } else if(optgroup) {
-                selected = toggleEntryFromArray(valuesSelected, $this.index() - $this.prevAll('.optgroup').length, $select)
+              } else if(hasOptgroup) {
+                selected = toggleEntryFromArray(valuesSelected, $this.index() - $this.prevAll('.optgroup').length, $select);
               } else {
-                selected = toggleEntryFromArray(valuesSelected, $this.index(), $select)
+                selected = toggleEntryFromArray(valuesSelected, $this.index(), $select);
               }
-              $newSelect.trigger('focus')
+              $newSelect.trigger('focus');
             } else {
-              options.find('li').removeClass('active')
-              $this.toggleClass('active')
-              $newSelect.val($this.text())
+              options.find('li').removeClass('active');
+              $this.toggleClass('active');
+              $newSelect.val($this.text());
             }
 
-            activateOption(options, $this)
-            $select.find('option').eq(i).prop('selected', selected)
-            // Trigger onchange() event
-            $select.trigger('change')
+            activateOption(options, $this);
+            $select.find('option').eq(i).prop('selected', selected);
+
+            $select.trigger('change');
             if (typeof callback !== 'undefined') {
-              callback()
+              callback();
             }
           }
 
-          e.stopPropagation()
+          e.stopPropagation();
         })
       })
 
-      // Wrap Elements
-      $select.wrap(wrapper)
-      // Add Select Display Element
-      const dropdownIcon = $('<span class="caret">&#9660;</span>')
+      $select.wrap(wrapper);
+      const dropdownIcon = $('<span class="caret">&#9660;</span>');
       if ($select.is(':disabled')) {
-        dropdownIcon.addClass('disabled')
+        dropdownIcon.addClass('disabled');
       }
 
-      // escape double quotes
-      const sanitizedLabelHtml = label.replace(/"/g, '&quot;')
+      const sanitizedLabelHtml = label.replace(/"/g, '&quot;');
 
-      let $newSelect = $(`<input type="text" class="select-dropdown" readonly="true" ${$select.is(':disabled') ? 'disabled' : ''} data-activates="select-options-${uniqueID}" value="${sanitizedLabelHtml}"/>`)
-      $select.before($newSelect)
-      $newSelect.before(dropdownIcon)
+      let $newSelect = $(`<input type="text" class="select-dropdown" readonly="true" ${$select.is(':disabled') ? 'disabled' : ''} data-activates="select-options-${uniqueID}" value="${sanitizedLabelHtml}"/>`);
+      $select.before($newSelect);
+      $newSelect.before(dropdownIcon);
 
-      $newSelect.after(options)
-      // Check if section element is disabled
+      $newSelect.after(options);
       if (!$select.is(':disabled')) {
         $newSelect.dropdown({
           hover: false,
@@ -291,94 +265,83 @@
         })
       }
 
-      // Copy tabindex
       if ($select.attr('tabindex')) {
-        $($newSelect[0]).attr('tabindex', $select.attr('tabindex'))
+        $($newSelect[0]).attr('tabindex', $select.attr('tabindex'));
       }
 
-      $select.addClass('initialized')
+      $select.addClass('initialized');
 
       $newSelect.on({
         focus() {
           let $this = $(this);
           if ($('ul.select-dropdown').not(options[0]).is(':visible')) {
-            $('input.select-dropdown').trigger('close')
+            $('input.select-dropdown').trigger('close');
           }
           if (!options.is(':visible')) {
-            $this.trigger('open', ['focus'])
-            const label = $this.val()
+            $this.trigger('open', ['focus']);
+            const label = $this.val();
             const selectedOption = options.find('li').filter(function () {
-              return $(this).text().toLowerCase() === label.toLowerCase()
-            })[0]
-            activateOption(options, selectedOption)
+              return $(this).text().toLowerCase() === label.toLowerCase();
+            })[0];
+            activateOption(options, selectedOption);
           }
         },
         click(e) {
-          e.stopPropagation()
+          e.stopPropagation();
         }
       })
 
-      // Changed to search to treat search
       $newSelect.on('blur', function () {
 
         if (!multiple && !searchable) {
-          $(this).trigger('close')
+          $(this).trigger('close');
         }
-        options.find('li.selected').removeClass('selected')
-      })
+        options.find('li.selected').removeClass('selected');
+      });
 
-      // Added to search
       if (!multiple && searchable) {
         options.find('li').on('click', () => {
-          $newSelect.trigger('close')
+          $newSelect.trigger('close');
         })
       }
 
       options.hover(() => {
-        optionsHover = true
+        optionsHover = true;
       }, () => {
-        optionsHover = false
+        optionsHover = false;
       })
 
-      // if select is wrapped in modal prevent hiding
       options.on('mousedown', function(e) {
         if ($('.modal-content').find(options).length) {
           if(this.scrollHeight > this.offsetHeight) {
             e.preventDefault();
           }
         }
-      })
+      });
 
-      // Changed to search to treat search
       $(window).on({
         click() {
-          (multiple || searchable) && (optionsHover || $newSelect.trigger('close'))
+          (multiple || searchable) && (optionsHover || $newSelect.trigger('close'));
         }
       })
 
-      // Add initial multiple selections.
       if (multiple) {
         $select.find('option:selected:not(:disabled)').each(function () {
-          const index = $(this).index()
+          const index = $(this).index();
 
-          toggleEntryFromArray(valuesSelected, index, $select)
-          options.find('li').eq(index).find(':checkbox').prop('checked', true)
+          toggleEntryFromArray(valuesSelected, index, $select);
+          options.find('li').eq(index).find(':checkbox').prop('checked', true);
         })
       }
 
-      // Make option as selected and scroll to selected position
       let activateOption = function (collection, newOption) {
         if (newOption) {
-          collection.find('li.selected').removeClass('selected')
-          const option = $(newOption)
-          option.addClass('selected')
-          // commented because it causes problems in multiselect with many options
-          // options.scrollTo(option)
+          collection.find('li.selected').removeClass('selected');
+          const option = $(newOption);
+          option.addClass('selected');
         }
       }
 
-      // Allow user to search by typing
-      // this array is cleared after 1 second
       let filterQuery = [],
         onKeyDown = function (e) {
 
@@ -442,12 +405,10 @@
             activateOption(options, newOption);
           }
 
-          // ESC - close options
           if (isEsc) {
             $newSelect.trigger('close');
           }
 
-          // ARROW UP - move to previous not disabled option
           if (isArrowUp) {
             newOption = options.find('li.selected').prev('li:not(.disabled)')[0];
             if (newOption) {
@@ -455,7 +416,6 @@
             }
           }
 
-          // Automaticaly clean filter query so user can search again by starting letters
           setTimeout(() => {
             filterQuery = [];
           }, 1000)
