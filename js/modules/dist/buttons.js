@@ -1,6 +1,9 @@
 'use strict';
 
+/* Buttons */
+
 (function ($) {
+
   $(document).ready(function () {
 
     // jQuery reverse
@@ -38,120 +41,41 @@
   });
 
   var openFABMenu = function openFABMenu(btn) {
-    var $this = btn;
-    if ($this.hasClass('active') === false) {
+    var fab = btn;
+    if (!fab.hasClass('active')) {
 
-      // Get direction option
-      var horizontal = $this.hasClass('horizontal');
-      var offsetY = void 0,
-          offsetX = void 0;
-
-      if (horizontal === true) {
-        offsetX = 40;
-      } else {
-        offsetY = 40;
-      }
-
-      $this.addClass('active');
-      $this.find('ul .btn-floating').velocity({
-        scaleY: '.4',
-        scaleX: '.4',
-        translateY: offsetY + 'px',
-        translateX: offsetX + 'px'
-      }, {
-        duration: 0
-      });
-
-      var time = 0;
-      $this.find('ul .btn-floating').reverse().each(function () {
-        $(this).velocity({
-          opacity: '1',
-          scaleX: '1',
-          scaleY: '1',
-          translateY: '0',
-          translateX: '0'
-        }, {
-          duration: 80,
-          delay: time
-        });
-        time += 40;
+      fab.addClass('active');
+      var btnList = document.querySelectorAll('ul .btn-floating');
+      btnList.forEach(function (el) {
+        el.classList.add('shown');
       });
     }
   };
 
   var closeFABMenu = function closeFABMenu(btn) {
-    $this = btn;
-    // Get direction option
-    var horizontal = $this.hasClass('horizontal');
-    var offsetY = void 0,
-        offsetX = void 0;
+    var fab = btn;
 
-    if (horizontal === true) {
-      offsetX = 40;
-    } else {
-      offsetY = 40;
-    }
-
-    $this.removeClass('active');
-    var time = 0;
-    $this.find('ul .btn-floating').velocity('stop', true);
-    $this.find('ul .btn-floating').velocity({
-      opacity: '0',
-      scaleX: '.4',
-      scaleY: '.4',
-      translateY: offsetY + 'px',
-      translateX: offsetX + 'px'
-    }, {
-      duration: 80
+    fab.removeClass('active');
+    var btnList = document.querySelectorAll('ul .btn-floating');
+    btnList.forEach(function (el) {
+      el.classList.remove('shown');
     });
   };
 
-  $('.fixed-action-btn').on({
-    click: function click(e) {
-      e.preventDefault();
-      toggleFABMenu($('.fixed-action-btn'));
-      return false;
-    }
+  $('.fixed-action-btn').on('click', function (e) {
+    e.preventDefault();
+    toggleFABMenu($('.fixed-action-btn'));
+    return false;
   });
 
   function toggleFABMenu(btn) {
 
-    $this = btn;
-    if ($this.hasClass('active') === false) {
-      $this.addClass('active');
-      $this.find('ul .btn-floating').velocity({
-        scaleY: '.4',
-        scaleX: '.4',
-        translateY: '40px'
-      }, {
-        duration: 0
-      });
+    var elem = btn;
 
-      var time = 0;
-      $this.find('ul .btn-floating').reverse().each(function () {
-        $(this).velocity({
-          opacity: '1',
-          scaleX: '1',
-          scaleY: '1',
-          translateY: '0'
-        }, {
-          duration: 80,
-          delay: time
-        });
-        time += 40;
-      });
+    if (elem.hasClass('active')) {
+      closeFABMenu(elem);
     } else {
-      $this.removeClass('active');
-      var _time = 0;
-      $this.find('ul .btn-floating').velocity('stop', true);
-      $this.find('ul .btn-floating').velocity({
-        opacity: '0',
-        scaleX: '.4',
-        scaleY: '.4',
-        translateY: '40px'
-      }, {
-        duration: 80
-      });
+      openFABMenu(elem);
     }
   }
 })(jQuery);
