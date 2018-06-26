@@ -137,7 +137,7 @@ $(document).on('reset', (e) => {
 });
 
 if($('.md-textarea-auto').length) {
-  var observe;
+  let observe;
   if (window.attachEvent) {
     observe = function (element, event, handler) {
       element.attachEvent('on'+event, handler);
@@ -150,21 +150,21 @@ if($('.md-textarea-auto').length) {
   }
 
   function init() {
-    var text = $('.md-textarea-auto');
+    let text = $('.md-textarea-auto');
     text.each(function() {
-      let _this = this;
+      let self = this;
       function resize () {
-        _this.style.height = 'auto';
-        _this.style.height = _this.scrollHeight+'px';
+        self.style.height = 'auto';
+        self.style.height = self.scrollHeight+'px';
       }
       function delayedResize () {
         window.setTimeout(resize, 0);
       }
-      observe(_this, 'change',  resize);
-      observe(_this, 'cut',     delayedResize);
-      observe(_this, 'paste',   delayedResize);
-      observe(_this, 'drop',    delayedResize);
-      observe(_this, 'keydown', delayedResize);
+      observe(self, 'change',  resize);
+      observe(self, 'cut',     delayedResize);
+      observe(self, 'paste',   delayedResize);
+      observe(self, 'drop',    delayedResize);
+      observe(self, 'keydown', delayedResize);
       resize();
     })
   }
