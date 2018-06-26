@@ -312,19 +312,19 @@
       let filterQuery = [],
         onKeyDown = function (e) {
           // TAB - switch to another input
-          if (e.which == 9) {
+          if (e.which === 9) {
             $newSelect.trigger('close')
             return
           }
 
           // ARROW DOWN WHEN SELECT IS CLOSED - open select options
-          if (e.which == 40 && !options.is(':visible')) {
+          if (e.which === 40 && !options.is(':visible')) {
             $newSelect.trigger('open')
             return
           }
 
           // ENTER WHEN SELECT IS CLOSED - submit form
-          if (e.which == 13 && !options.is(':visible')) {
+          if (e.which === 13 && !options.is(':visible')) {
             return
           }
 
@@ -347,7 +347,7 @@
           }
 
           // ENTER - select option and close when select options are opened
-          if (e.which == 13) {
+          if (e.which === 13) {
             const activeOption = options.find('li.selected:not(.disabled)')[0]
             if (activeOption) {
               $(activeOption).trigger('click')
@@ -358,7 +358,7 @@
           }
 
           // ARROW DOWN - move to next not disabled option
-          if (e.which == 40) {
+          if (e.which === 40) {
             if (options.find('li.selected').length) {
               newOption = options.find('li.selected').next('li:not(.disabled)')[0]
             } else {
@@ -368,12 +368,12 @@
           }
 
           // ESC - close options
-          if (e.which == 27) {
+          if (e.which === 27) {
             $newSelect.trigger('close')
           }
 
           // ARROW UP - move to previous not disabled option
-          if (e.which == 38) {
+          if (e.which === 38) {
             newOption = options.find('li.selected').prev('li:not(.disabled)')[0]
             if (newOption) {
               activateOption(options, newOption)
@@ -430,7 +430,7 @@
       const uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
         const r = (d + Math.random() * 16) % 16 | 0
         d = Math.floor(d / 16)
-        return (c == 'x' ? r : r & 0x3 | 0x8).toString(16)
+        return (c === 'x' ? r : r & 0x3 | 0x8).toString(16)
       })
       return uuid
     }
