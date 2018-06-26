@@ -1,4 +1,110 @@
+
 (function ($) {
+
+  const toggleEntryFromArray = function (entriesArray, entryIndex, select) {
+    let index = entriesArray.indexOf(entryIndex),
+      notAdded = index === -1;
+
+    if (notAdded) {
+      entriesArray.push(entryIndex);
+    } else {
+      entriesArray.splice(index, 1);
+    }
+
+    select.siblings('ul.dropdown-content').find('li:not(.optgroup)').eq(entryIndex).toggleClass('active');
+
+    select.find('option').eq(entryIndex).prop('selected', notAdded);
+    setValueToInput(entriesArray, select);
+
+    return notAdded;
+  }
+
+  const setValueToInput = function (entriesArray, select) {
+    let value = '';
+
+    for (let i = 0, count = entriesArray.length; i < count; i++) {
+      const text = select.find('option').eq(entriesArray[i]).text();
+
+      i === 0 ? value += text : value += `, ${text}`;
+    }
+
+    if (value === '') {
+      value = select.find('option:disabled').eq(0).text();
+    }
+
+    select.siblings('input.select-dropdown').val(value);
+  }
+
+  const guid = function () {
+    let d = new Date().getTime();
+    const uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
+      const r = (d + Math.random() * 16) % 16 | 0;
+      d = Math.floor(d / 16);
+      return (c === 'x' ? r : r & 0x3 | 0x8).toString(16);
+    })
+    return uuid;
+  }
+
+  const appendOptionWithIcon = function (options, option, type) {
+    // Add disabled attr if disabled
+    const disabledClass = option.is(':disabled') ? 'disabled ' : '';
+    const optgroupClass = type === 'optgroup-option' ? 'optgroup-option ' : '';
+
+    // add icons
+    const icon_url = option.data('icon');
+    const classes = option.attr('class');
+    if (icon_url) {
+      let classString = '';
+      if (classes) {
+        classString = ` class="${classes}"`;
+      }
+
+      // Check for multiple type.
+      if (type === 'multiple') {
+        options.append($(`<li class="${disabledClass}"><img alt="" src="${icon_url}"${classString}><span class="filtrable"><input type="checkbox"${disabledClass}/><label></label>${option.html()}</span></li>`));
+      } else {
+        options.append($(`<li class="${disabledClass}${optgroupClass}"><img alt="" src="${icon_url}"${classString}><span class="filtrable">${option.html()}</span></li>`));
+      }
+      return true;
+    }
+
+    // Check for multiple type.
+    if (type === 'multiple') {
+      options.append($(`<li class="${disabledClass}"><span class="filtrable"><input type="checkbox"${disabledClass}/><label></label>${option.html()}</span></li>`));
+    } else {
+      options.append($(`<li class="${disabledClass}${optgroupClass}"><span class="filtrable">${option.html()}</span></li>`));
+    }
+  }
+
+
+  const applySeachInList = function () {
+
+    let $this = $(this);
+    const ul = $this.closest('ul');
+    const searchValue = $this.val();
+    const opts = ul.find('li span.filtrable');
+
+    opts.each(function () {
+
+      let $option = $(this);
+      if (typeof this.outerHTML === 'string') {
+        let liValue = this.textContent.toLowerCase();
+
+        if (liValue.indexOf(searchValue.toLowerCase()) === -1) {
+          $option.hide().parent().hide();
+        } else {
+          $option.show().parent().show();
+        }
+      }
+    })
+  }
+
+  const setSearchableOption = function ($select, options) {
+    const placeholder = $select.attr('searchable');
+    const element = $(`<span class="search-wrap ml-2"><div class="md-form mt-0"><input type="text" class="search form-control" placeholder="${placeholder}"></div></span>`);
+    options.append(element);
+    element.find('.search').keyup(applySeachInList);
+  }
 
   $.fn.material_select = function (callback) {
     $(this).each(function () {
@@ -35,52 +141,16 @@
         optionsHover = false
 
       const label = $select.find('option:selected').html() || $select.find('option:first').html() || ''
-
-      // Added to search
-      const applySeachInList = function () {
-
-        var $this = $(this);
-        const ul = $this.closest('ul')
-        const searchValue = $this.val()
-        const options = ul.find('li')
-          .find('span.filtrable')
-
-        options.each(function () {
-
-          var $option = $(this);
-          if (typeof(this.outerHTML) === 'string') {
-            var liValue = this.textContent.toLowerCase()
-
-            if (liValue.indexOf(searchValue.toLowerCase()) === -1) {
-              $option.hide()
-              $option.parent().hide()
-            } else {
-              $option.show()
-              $option.parent().show()
-            }
-          }
-        })
-      }
-
-      // Added to search
-      const setSearchableOption = function () {
-        const placeholder = $select.attr('searchable')
-        const element = $(`<span class="search-wrap ml-2"><div class="md-form mt-0"><input type="text" class="search form-control" placeholder="${placeholder}"></div></span>`)
-        options.append(element)
-        element.find('.search').keyup(applySeachInList)
-      }
-
-      // Added to search
       const searchable = Boolean($select.attr('searchable'))
 
       // Added to search
       if (searchable) {
-        setSearchableOption()
+        setSearchableOption($select, options)
       }
 
       // Function that renders and appends the option taking into
       // account type and possible image icon.
-      const appendOptionWithIcon = function (select, option, type) {
+      const appendOptionWithIcon = function (options, option, type) {
         // Add disabled attr if disabled
         const disabledClass = option.is(':disabled') ? 'disabled ' : ''
         const optgroupClass = type === 'optgroup-option' ? 'optgroup-option ' : ''
@@ -114,14 +184,14 @@
       /* Create dropdown structure. */
       if (selectChildren.length) {
         selectChildren.each(function () {
-          var $this = $(this);
+          let $this = $(this);
           if ($this.is('option')) {
             // Direct descendant option.
             if (multiple) {
-              appendOptionWithIcon($select, $this, 'multiple')
+              appendOptionWithIcon(options, $this, 'multiple')
 
             } else {
-              appendOptionWithIcon($select, $this)
+              appendOptionWithIcon(options, $this)
             }
           } else if ($this.is('optgroup')) {
             // Optgroup.
@@ -129,14 +199,14 @@
             options.append($(`<li class="optgroup"><span>${$this.attr('label')}</span></li>`))
 
             selectOptions.each(function () {
-              appendOptionWithIcon($select, $(this), 'optgroup-option')
+              appendOptionWithIcon(options, $(this), 'optgroup-option')
             })
           }
         })
       }
 
       // Check for optgroups
-      var optgroup = false
+      let optgroup = false
       if($select.find('optgroup').length) {
         optgroup =true
       }
@@ -157,7 +227,7 @@
 
       options.find('li:not(.optgroup)').each(function (i) {
         $(this).click(function (e) {
-          var $this = $(this);
+          let $this = $(this);
           // Check if option element is disabled
           if (!$this.hasClass('disabled') && !$this.hasClass('optgroup')) {
             let selected = true
@@ -208,7 +278,7 @@
       // escape double quotes
       const sanitizedLabelHtml = label.replace(/"/g, '&quot;')
 
-      var $newSelect = $(`<input type="text" class="select-dropdown" readonly="true" ${$select.is(':disabled') ? 'disabled' : ''} data-activates="select-options-${uniqueID}" value="${sanitizedLabelHtml}"/>`)
+      let $newSelect = $(`<input type="text" class="select-dropdown" readonly="true" ${$select.is(':disabled') ? 'disabled' : ''} data-activates="select-options-${uniqueID}" value="${sanitizedLabelHtml}"/>`)
       $select.before($newSelect)
       $newSelect.before(dropdownIcon)
 
@@ -230,7 +300,7 @@
 
       $newSelect.on({
         focus() {
-          var $this = $(this);
+          let $this = $(this);
           if ($('ul.select-dropdown').not(options[0]).is(':visible')) {
             $('input.select-dropdown').trigger('close')
           }
@@ -297,7 +367,7 @@
       }
 
       // Make option as selected and scroll to selected position
-      var activateOption = function (collection, newOption) {
+      let activateOption = function (collection, newOption) {
         if (newOption) {
           collection.find('li.selected').removeClass('selected')
           const option = $(newOption)
@@ -311,139 +381,99 @@
       // this array is cleared after 1 second
       let filterQuery = [],
         onKeyDown = function (e) {
-          // TAB - switch to another input
-          if (e.which === 9) {
-            $newSelect.trigger('close')
-            return
+
+          const isTab = e.which === 9;
+          const isEsc = e.which === 27;
+          const isEnter = e.which === 13;
+          const isArrowUp = e.which === 38;
+          const isArrowDown = e.which === 40;
+
+          if (isTab) {
+            $newSelect.trigger('close');
+            return;
           }
 
-          // ARROW DOWN WHEN SELECT IS CLOSED - open select options
-          if (e.which === 40 && !options.is(':visible')) {
+          if (isArrowDown && !options.is(':visible')) {
             $newSelect.trigger('open')
-            return
+            return;
           }
 
-          // ENTER WHEN SELECT IS CLOSED - submit form
-          if (e.which === 13 && !options.is(':visible')) {
-            return
+          if (isEnter && !options.is(':visible')) {
+            return;
           }
 
-          e.preventDefault()
+          e.preventDefault();
 
           // CASE WHEN USER TYPE LETTERS
           let letter = String.fromCharCode(e.which).toLowerCase(),
-            nonLetters = [9, 13, 27, 38, 40]
-          if (letter && nonLetters.indexOf(e.which) === -1) {
-            filterQuery.push(letter)
+            nonLetters = [9, 13, 27, 38, 40];
 
-            var string = filterQuery.join(''),
-              newOption = options.find('li').filter(function () {
-                return $(this).text().toLowerCase().indexOf(string) === 0
-              })[0]
+          let isLetterSearchable = letter && nonLetters.indexOf(e.which) === -1;
+
+          if (isLetterSearchable) {
+            filterQuery.push(letter);
+
+            let string = filterQuery.join('');
+            let newOption = options.find('li').filter(function () {
+                return $(this).text().toLowerCase().indexOf(string) === 0;
+              })[0];
 
             if (newOption) {
-              activateOption(options, newOption)
+              activateOption(options, newOption);
             }
           }
 
-          // ENTER - select option and close when select options are opened
-          if (e.which === 13) {
-            const activeOption = options.find('li.selected:not(.disabled)')[0]
+          if (isEnter) {
+            const activeOption = options.find('li.selected:not(.disabled)')[0];
             if (activeOption) {
-              $(activeOption).trigger('click')
+              $(activeOption).trigger('click');
               if (!multiple) {
-                $newSelect.trigger('close')
+                $newSelect.trigger('close');
               }
             }
           }
 
-          // ARROW DOWN - move to next not disabled option
-          if (e.which === 40) {
+          if (isArrowDown) {
             if (options.find('li.selected').length) {
-              newOption = options.find('li.selected').next('li:not(.disabled)')[0]
+              newOption = options.find('li.selected').next('li:not(.disabled)')[0];
             } else {
-              newOption = options.find('li:not(.disabled)')[0]
+              newOption = options.find('li:not(.disabled)')[0];
             }
-            activateOption(options, newOption)
+            activateOption(options, newOption);
           }
 
           // ESC - close options
-          if (e.which === 27) {
-            $newSelect.trigger('close')
+          if (isEsc) {
+            $newSelect.trigger('close');
           }
 
           // ARROW UP - move to previous not disabled option
-          if (e.which === 38) {
-            newOption = options.find('li.selected').prev('li:not(.disabled)')[0]
+          if (isArrowUp) {
+            newOption = options.find('li.selected').prev('li:not(.disabled)')[0];
             if (newOption) {
-              activateOption(options, newOption)
+              activateOption(options, newOption);
             }
           }
 
           // Automaticaly clean filter query so user can search again by starting letters
           setTimeout(() => {
-            filterQuery = []
+            filterQuery = [];
           }, 1000)
         }
 
-      $newSelect.on('keydown', onKeyDown)
-    })
+      $newSelect.on('keydown', onKeyDown);
 
-    function toggleEntryFromArray(entriesArray, entryIndex, select) {
-      let index = entriesArray.indexOf(entryIndex),
-        notAdded = index === -1
-
-      if (notAdded) {
-        entriesArray.push(entryIndex)
-      } else {
-        entriesArray.splice(index, 1)
-      }
-
-      select.siblings('ul.dropdown-content').find('li:not(.optgroup)').eq(entryIndex).toggleClass('active')
-
-      // use notAdded instead of true (to detect if the option is selected or not)
-      select.find('option').eq(entryIndex).prop('selected', notAdded)
-      setValueToInput(entriesArray, select)
-
-      return notAdded
-    }
-
-    function setValueToInput(entriesArray, select) {
-      let value = ''
-
-      for (let i = 0, count = entriesArray.length; i < count; i++) {
-        const text = select.find('option').eq(entriesArray[i]).text()
-
-        i === 0 ? value += text : value += `, ${text}`
-      }
-
-      if (value === '') {
-        value = select.find('option:disabled').eq(0).text()
-      }
-
-      select.siblings('input.select-dropdown').val(value)
-    }
-    // };
-
-    function guid() {
-      let d = new Date().getTime()
-      const uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
-        const r = (d + Math.random() * 16) % 16 | 0
-        d = Math.floor(d / 16)
-        return (c === 'x' ? r : r & 0x3 | 0x8).toString(16)
-      })
-      return uuid
-    }
+    });
 
   }
 
 
-}(jQuery))
+}(jQuery));
 
 jQuery('select').siblings('input.select-dropdown').on('mousedown', (e) => {
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     if (e.clientX >= e.target.clientWidth || e.clientY >= e.target.clientHeight) {
-      e.preventDefault()
+      e.preventDefault();
     }
   }
-})
+});
