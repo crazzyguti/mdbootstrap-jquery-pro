@@ -139,7 +139,8 @@ select {
     text-align: left;
     text-transform: none;
     &:hover,
-    &.active {
+    &.active,
+    $.selected {
       background-color: $dropdown-hover-bg-color;
     }
     & > a,
