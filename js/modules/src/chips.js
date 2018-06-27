@@ -54,12 +54,11 @@
 
     this.$el.data('options', $.extend({}, this.defaultOptions, options));
 
-    const self = this;
     this.init = () => {
 
-      this.$el.each(function (index) {
+      this.$el.each((index, element) => {
 
-        const $this = $(this);
+        const $this = $(element);
         if ($this.data('initialized')) {
           return;
         }
@@ -73,11 +72,11 @@
         $this.data('index', index);
         $this.data('initialized', true);
 
-        if (!$this.hasClass(self.selectors.chips)) {
+        if (!$this.hasClass(this.selectors.chips)) {
           $this.addClass('chips');
         }
 
-        self.renderChips($this);
+        this.renderChips($this);
       });
     };
 
