@@ -30,6 +30,10 @@
       this.$dragTarget = $('<div class="drag-target"></div>');
       this.$body.append(this.$dragTarget);
 
+      this.init();
+    }
+
+    init() {
 
       this.setMenuWidth();
       this.setMenuTranslation();
@@ -175,23 +179,18 @@
 
           this.showSidenavOverlay();
 
-          this.$dragTarget.css({
-            width: '10px',
-            right: '',
-            left: 0
-          });
         } else if (!this.menuOut || velocityX > MENU_LEFT_MIN_BORDER) {
 
           this.enableScrolling();
           this.translateMenuX([-1 * this.options.MENU_WIDTH - MENU_VELOCITY_OFFSET, leftPos], '200');
           this.hideSidenavOverlay();
-
-          this.$dragTarget.css({
-            width: '10px',
-            right: '',
-            left: 0
-          });
         }
+
+        this.$dragTarget.css({
+          width: '10px',
+          right: '',
+          left: 0
+        });
       } else if (this.menuOut && velocityX >= MENU_RIGHT_MIN_BORDER || velocityX > MENU_RIGHT_MAX_BORDER) {
 
         this.translateMenuX([0, rightPos], '300');
@@ -278,25 +277,22 @@
           this.$sidenavOverlay = $('<div id="sidenav-overlay"></div>');
           this.$body.append(this.$sidenavOverlay);
 
+          let translateX = [];
           if (this.options.edge === 'left') {
 
-            this.$menu.velocity({
-              translateX: [0, -1 * this.options.MENU_WIDTH]
-            }, {
-              duration: 300,
-              queue: false,
-              easing: 'easeOutQuad'
-            });
+            translateX = [0, -1 * this.options.MENU_WIDTH];
           } else {
 
-            this.$menu.velocity({
-              translateX: [0, this.options.MENU_WIDTH]
-            }, {
-              duration: 300,
-              queue: false,
-              easing: 'easeOutQuad'
-            });
+            translateX = [0, this.options.MENU_WIDTH];
           }
+
+          this.$menu.velocity({
+            translateX
+          }, {
+            duration: 300,
+            queue: false,
+            easing: 'easeOutQuad'
+          });
 
           this.$sidenavOverlay.on('click', () => {
 
@@ -327,8 +323,7 @@
         });
       } else {
 
-        this.$menu.addClass('right-aligned')
-          .css('transform', 'translateX(100%)');
+        this.$menu.addClass('right-aligned').css('transform', 'translateX(100%)');
         this.$dragTarget.css({
           right: 0
         });
@@ -341,40 +336,34 @@
           this.$menu.css('transform', 'translateX(0)');
         }
 
-        $(window)
-          .resize(() => {
+        $(window).resize(() => {
 
-            if (window.innerWidth > SN_BREAKPOINT) {
+          if (window.innerWidth > SN_BREAKPOINT) {
 
-              if (this.$sidenavOverlay.length) {
+            if (this.$sidenavOverlay.length) {
 
-                this.removeMenu(true);
-              } else {
+              this.removeMenu(true);
+            } else {
 
-                this.$menu.css('transform', 'translateX(0%)');
-              }
-            } else if (this.menuOut === false) {
-
-              if (this.options.edge === 'left') {
-
-                this.$menu.css('transform', 'translateX(-100%)');
-              } else {
-
-                this.$menu.css('transform', 'translateX(100%)');
-              }
+              this.$menu.css('transform', 'translateX(0%)');
             }
-          });
+          } else if (this.menuOut === false) {
+
+            const xValue = this.options.edge === 'left' ? '-100' : '100';
+            this.$menu.css('transform', `translateX(${xValue}%)`);
+          }
+        });
       }
     }
 
     setMenuWidth() {
 
-      const maskId = $(`#${this.$menu.attr('id')}`).find('> .sidenav-bg');
+      const $sidenavBg = $(`#${this.$menu.attr('id')}`).find('> .sidenav-bg');
 
       if (this.options.MENU_WIDTH !== MENU_WIDTH) {
 
         this.$menu.css('width', this.options.MENU_WIDTH);
-        maskId.css('width', this.options.MENU_WIDTH);
+        $sidenavBg.css('width', this.options.MENU_WIDTH);
       }
     }
 
@@ -390,35 +379,19 @@
         width: ''
       });
 
-      if (this.options.edge === 'left') {
-        this.$menu.velocity({
-          translateX: '-100%'
-        }, {
-          duration: 200,
-          queue: false,
-          easing: 'easeOutCubic',
-          complete: () => {
-            if (restoreMenu === true) {
-              this.$menu.removeAttr('style');
-              this.$menu.css('width', this.options.MENU_WIDTH);
-            }
+      this.$menu.velocity({
+        translateX: this.options.edge === 'left' ? '-100%' : '100%'
+      }, {
+        duration: 200,
+        queue: false,
+        easing: 'easeOutCubic',
+        complete: () => {
+          if (restoreMenu === true) {
+            this.$menu.removeAttr('style');
+            this.$menu.css('width', this.options.MENU_WIDTH);
           }
-        });
-      } else {
-        this.$menu.velocity({
-          translateX: '100%'
-        }, {
-          duration: 200,
-          queue: false,
-          easing: 'easeOutCubic',
-          complete: () => {
-            if (restoreMenu === true) {
-              this.$menu.removeAttr('style');
-              this.$menu.css('width', this.options.MENU_WIDTH);
-            }
-          }
-        });
-      }
+        }
+      });
 
       this.hideSidenavOverlay();
     }
