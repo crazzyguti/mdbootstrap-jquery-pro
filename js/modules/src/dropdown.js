@@ -18,6 +18,7 @@
       const activates = $(`#${origin.attr('data-activates')}`);
 
       function updateOptions() {
+
         if (origin.data('induration') !== undefined) {
           options.inDuration = origin.data('inDuration');
         }
