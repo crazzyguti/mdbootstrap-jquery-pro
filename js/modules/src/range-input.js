@@ -12,9 +12,6 @@
     $(rangeType).after($thumb);
   };
 
-  // Add thumbs;
-  // $(rangeType).each(addThumb)
-
   $(document).on('change', rangeType, function () {
 
     const $thumb       = $(this);
