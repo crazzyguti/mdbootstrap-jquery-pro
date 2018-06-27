@@ -22,7 +22,7 @@ $.fn.mdb_autocomplete = function (options) {
     if (Object.keys(data).length) {
 
       $autocomplete = $('<ul class="mdb-autocomplete-wrap"></ul>');
-      $autocomplete.insertAfter($(this));
+      $autocomplete.insertAfter($input);
     }
 
     // Listen if key was pressed
@@ -76,10 +76,12 @@ $.fn.mdb_autocomplete = function (options) {
 
       e.preventDefault();
 
+      const $this = $(this);
+
       $input.val('');
-      $(this).css('visibility', 'hidden');
+      $this.css('visibility', 'hidden');
       $autocomplete.empty();
-      $(this).parent().find('label').removeClass('active');
+      $this.parent().find('label').removeClass('active');
     });
   });
 };

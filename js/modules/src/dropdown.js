@@ -2,7 +2,8 @@
 
   $.fn.scrollTo = function (elem) {
 
-    $(this).scrollTop($(this).scrollTop() - $(this).offset().top + $(elem).offset().top);
+    const $this = $(this);
+    $this.scrollTop($this.scrollTop() - $this.offset().top + $(elem).offset().top);
     return this;
   };
 

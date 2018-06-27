@@ -105,7 +105,7 @@
 
       const $this = $(this);
 
-      let $panelHeaders = $(this).find('> li > .collapsible-header');
+      let $panelHeaders = $this.find('> li > .collapsible-header');
 
       const collapsibleType = $this.data('collapsible');
 
@@ -135,7 +135,8 @@
 
         $panelHeaders.each(function () {
 
-          $(this).on('click.collapse', (e) => {
+          const $this = $(this);
+          $this.on('click.collapse', (e) => {
 
             let element = $(e.target);
             if (isChildrenOfPanelHeader(element)) {
@@ -146,9 +147,9 @@
             expandableOpen(element);
           });
 
-          if ($(this).hasClass('active')) {
+          if ($this.hasClass('active')) {
 
-            expandableOpen($(this));
+            expandableOpen($this);
           }
 
         });

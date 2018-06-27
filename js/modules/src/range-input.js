@@ -14,7 +14,7 @@
 
   $(document).on('change', rangeType, function () {
 
-    const $thumb       = $(this);
+    const $thumb = $(this);
     const $thumbValue = $thumb.siblings('.thumb').find('.value');
     $thumbValue.html($thumb.val());
   });
@@ -55,10 +55,10 @@
       const isMobile = e.pageX === undefined || e.pageX === null;
       if (isMobile) {
 
-        left = e.originalEvent.touches[0].pageX - $(this).offset().left;
+        left = e.originalEvent.touches[0].pageX - $this.offset().left;
       } else {
 
-        left = e.pageX - $(this).offset().left;
+        left = e.pageX - $this.offset().left;
       }
 
       if (left < 0) {
@@ -83,7 +83,8 @@
 
   $(document).on('mousemove touchmove', rangeWrapper, function (e) {
 
-    const $thumb = $(this).children('.thumb');
+    const $this = $(this);
+    const $thumb = $this.children('.thumb');
     let left;
 
     if (rangeMousedown) {
@@ -104,13 +105,13 @@
       const isMobile = e.pageX === undefined || e.pageX === null;
       if (isMobile) {
 
-        left = e.originalEvent.touches[0].pageX - $(this).offset().left;
+        left = e.originalEvent.touches[0].pageX - $this.offset().left;
       } else {
 
-        left = e.pageX - $(this).offset().left;
+        left = e.pageX - $this.offset().left;
       }
 
-      const width = $(this).outerWidth();
+      const width = $this.outerWidth();
       if (left < 0) {
 
         left = 0;

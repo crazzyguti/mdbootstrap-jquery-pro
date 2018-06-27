@@ -4,29 +4,31 @@
 
     return this.each(function () {
 
-      const itHasLengthAttribute = $(this).attr('length') !== undefined;
+      const $this = $(this);
+      const itHasLengthAttribute = $this.attr('length') !== undefined;
 
       if (itHasLengthAttribute) {
 
-        $(this).on('input', updateCounter);
-        $(this).on('focus', updateCounter);
-        $(this).on('blur', removeCounterElement);
+        $this.on('input', updateCounter);
+        $this.on('focus', updateCounter);
+        $this.on('blur', removeCounterElement);
 
-        addCounterElement($(this));
+        addCounterElement($this);
       }
     });
   };
 
   function updateCounter() {
 
-    const maxLength = Number($(this).attr('length'));
-    const actualLength = Number($(this).val().length);
+    const $this = $(this);
+    const maxLength = Number($this.attr('length'));
+    const actualLength = Number($this.val().length);
     const isValidLength = actualLength <= maxLength;
 
-    $(this).parent().find('span[class="character-counter"]')
+    $this.parent().find('span[class="character-counter"]')
       .html(`${actualLength}/${maxLength}`);
 
-    addInputStyle(isValidLength, $(this));
+    addInputStyle(isValidLength, $this);
   }
 
   function addCounterElement($input) {
