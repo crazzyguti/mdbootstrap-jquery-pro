@@ -1,5 +1,3 @@
-/* DROPDOWN */
-
 (function ($) {
 
   // Add posibility to scroll to selected option
@@ -10,19 +8,10 @@
   }
 
   $.fn.dropdown = function (option) {
-    const defaults = {
-      inDuration: 300,
-      outDuration: 225,
-      constrain_width: true, // Constrains width of dropdown to the activator
-      hover: false,
-      gutter: 0, // Spacing from edge
-      belowOrigin: false,
-      alignment: 'left'
-    }
 
     this.each(function () {
       const origin = $(this)
-      const options = $.extend({}, defaults, option)
+      const options = $.extend({}, $.fn.dropdown.defaults, option)
       let isFocused = false
 
       // Dropdown menu
@@ -234,9 +223,8 @@
           }
         })
 
-      } // End else
+      }
 
-      // Listen to open and close event - useful for select component
       origin.on('open', (e, eventType) => {
         placeDropdown(eventType)
       })
@@ -244,11 +232,20 @@
 
 
     })
-  } // End dropdown plugin
+  }
 
-  $(document).ready(() => {
-    $('.dropdown-button').dropdown()
-  })
+  $.fn.dropdown.defaults = {
+    inDuration: 300,
+    outDuration: 225,
+    constrain_width: true,
+    hover: false,
+    gutter: 0,
+    belowOrigin: false,
+    alignment: 'left'
+  }
+
+  $('.dropdown-button').dropdown()
+
 }(jQuery))
 
 
@@ -284,8 +281,7 @@ function dropdownEffectData(target) {
 function dropdownEffectStart(data, effectToStart) {
   if (effectToStart) {
     data.dropdown.addClass('dropdown-animating')
-    data.dropdownMenu.addClass('animated')
-    data.dropdownMenu.addClass(effectToStart)
+    data.dropdownMenu.addClass(['animated', effectToStart].join(' '));
   }
 }
 
@@ -295,9 +291,7 @@ function dropdownEffectEnd(data, callbackFunc) {
   const animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
   data.dropdown.one(animationEnd, () => {
     data.dropdown.removeClass('dropdown-animating')
-    data.dropdownMenu.removeClass('animated')
-    data.dropdownMenu.removeClass(data.effectIn)
-    data.dropdownMenu.removeClass(data.effectOut)
+    data.dropdownMenu.removeClass(['animated', data.effectIn, data.effectOut].join(' '))
 
     // Custom callback option, used to remove open class in out effect
     if (typeof callbackFunc === 'function') {
