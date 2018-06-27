@@ -9,7 +9,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="../../css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../../css/bootstrap.css">
     <!-- Material Design Bootstrap -->
     <link rel="stylesheet" href="../../css/mdb.css">
     <link rel="stylesheet" href="../../css/style.css">
@@ -27,6 +27,19 @@
             <p class="animated fadeIn text-muted">MDB Team</p>
         </div>
     </div>
+
+    <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+    <a class="btn-floating btn-lg red">
+        <i class="fa fa-pencil"></i>
+    </a>
+
+    <ul class="list-unstyled">
+        <li><a class="btn-floating red"><i class="fa fa-star"></i></a></li>
+        <li><a class="btn-floating yellow darken-1"><i class="fa fa-user"></i></a></li>
+        <li><a class="btn-floating green"><i class="fa fa-envelope"></i></a></li>
+        <li><a class="btn-floating blue"><i class="fa fa-shopping-cart"></i></a></li>
+    </ul>
+</div>
     <!-- /Start your project here-->
 
     <!-- SCRIPTS -->
@@ -37,7 +50,117 @@
     <!-- Bootstrap core JavaScript -->
     <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="../../js/mdb.js"></script>
+    <!-- <script type="text/javascript" src="../../js/mdb.js"></script> -->
+
+    <script type="text/javascript" src="../../js/modules/vendor/velocity.min.js"></script>
+
+    <style>
+      .fixed-action-btn ul a.btn-floating {
+        transition-duration: 0.4s;
+        transform: scale(0.4) translate(0);
+        opacity: 0;
+      }
+      .fixed-action-btn ul a.btn-floating.shown {
+        transform: scale(1) translate(0);
+        opacity: 1;
+      }
+      .fixed-action-btn ul {
+        display: flex;
+        flex-direction: column;
+        transition: 400ms height;
+        height:61.1px;
+        bottom:61.1px;
+      }
+      .fixed-action-btn.active ul {
+        transition: 400ms height;
+        height:300px;
+      }
+    </style>
+
+    <script>
+
+/* Buttons */
+
+(function ($) {
+
+  $(document).ready(function () {
+
+    // jQuery reverse
+    $.fn.reverse = [].reverse;
+
+    // Hover behaviour: make sure this doesn't work on .click-to-toggle FABs!
+    $(document).on('mouseenter.fixedActionBtn', '.fixed-action-btn:not(.click-to-toggle)', function () {
+      var $this = $(this);
+      openFABMenu($this);
+    });
+    $(document).on('mouseleave.fixedActionBtn', '.fixed-action-btn:not(.click-to-toggle)', function () {
+      var $this = $(this);
+      closeFABMenu($this);
+    });
+
+    // Toggle-on-click behaviour.
+    $(document).on('click.fixedActionBtn', '.fixed-action-btn.click-to-toggle > a', function () {
+      var $this = $(this);
+      var $menu = $this.parent();
+      if ($menu.hasClass('active')) {
+        closeFABMenu($menu);
+      } else {
+        openFABMenu($menu);
+      }
+    });
+  });
+
+  $.fn.extend({
+    openFAB: function openFAB() {
+      openFABMenu($(this));
+    },
+    closeFAB: function closeFAB() {
+      closeFABMenu($(this));
+    }
+  });
+
+  var openFABMenu = function openFABMenu(btn) {
+    var fab = btn;
+    if (!fab.hasClass('active')) {
+
+      fab.addClass('active');
+      var btnList = document.querySelectorAll('ul .btn-floating');
+      btnList.forEach(function (el) {
+        el.classList.add('shown');
+      });
+    }
+  };
+
+  var closeFABMenu = function closeFABMenu(btn) {
+    var fab = btn;
+
+    fab.removeClass('active');
+    var btnList = document.querySelectorAll('ul .btn-floating');
+    btnList.forEach(function (el) {
+      el.classList.remove('shown');
+    });
+  };
+
+  $('.fixed-action-btn').on('click', function (e) {
+    e.preventDefault();
+    toggleFABMenu($('.fixed-action-btn'));
+    return false;
+  });
+
+  function toggleFABMenu(btn) {
+
+    var elem = btn;
+
+    if (elem.hasClass('active')) {
+      closeFABMenu(elem);
+    } else {
+      openFABMenu(elem);
+    }
+  }
+})(jQuery);
+
+
+    </script>
 </body>
 
 </html>

@@ -12,10 +12,9 @@
     var $path_input = $file_field.find('input.file-path');
     var files = $this[0].files;
     var file_names = [];
-    for (var i = 0; i < files.length; i++) {
-      var file_name = files[i].name;
-      file_names.push(file_name);
-    }
+    files.forEach(function (file) {
+      return file_names.push(file.name);
+    });
     $path_input.val(file_names.join(', '));
     $path_input.trigger('change');
   });
