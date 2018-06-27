@@ -5,9 +5,8 @@
 */
 
 $('body').on('shown.bs.modal', '.modal', function() {
-    if($('.modal-backdrop').length) {
-    } else {
-
+    if(!$('.modal-backdrop').length) {
+        $(document).off('focusin.modal');
         $modal_dialog = $(this).children('.modal-dialog')
 
         if($modal_dialog.hasClass('modal-side')) {
