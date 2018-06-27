@@ -1,141 +1,152 @@
-/** **************
-*  Range Input  *
-****************/
 (function ($) {
 
-  const range_wrapper = '.range-field'
-  const range_type    = 'input[type=range]'
-  const thumb_html    = '<span class="thumb"><span class="value"></span></span>'
-  let range_mousedown = false
-  let left
+  const rangeWrapper = '.range-field';
+  const rangeType    = 'input[type=range]';
+  const thumbHtml    = '<span class="thumb"><span class="value"></span></span>';
+  let rangeMousedown = false;
+  let left;
 
-  const add_thumb = function() {
-    const $thumb = $(thumb_html)
-    $(range_type).after($thumb)
-  }
+  const addThumb = function () {
+
+    const $thumb = $(thumbHtml);
+    $(rangeType).after($thumb);
+  };
 
   // Add thumbs;
-  // $(range_type).each(add_thumb)
+  // $(rangeType).each(addThumb)
 
-  $(document).on('change', range_type, function() {
-    const $thumb       = $(this)
-    const $thumb_value = $thumb.siblings('.thumb').find('.value')
-    $thumb_value.html($thumb.val())
-  })
+  $(document).on('change', rangeType, function () {
 
-  $(document).on('input mousedown touchstart', range_type, function(e) {
-    const $this        = $(this)
-    const $thumb       = $this.siblings('.thumb')
-    const width        = $this.outerWidth()
-    const noThumb      = !$thumb.length
-    // If thumb indicator does not exist yet, create it
+    const $thumb       = $(this);
+    const $thumbValue = $thumb.siblings('.thumb').find('.value');
+    $thumbValue.html($thumb.val());
+  });
+
+  $(document).on('input mousedown touchstart', rangeType, function (e) {
+
+    const $this = $(this);
+    const $thumb = $this.siblings('.thumb');
+    const width = $this.outerWidth();
+    const noThumb = !$thumb.length;
+
     if (noThumb) {
-      add_thumb()
+
+      addThumb();
     }
 
     // Set indicator value
-    $thumb.find('.value').html($this.val())
+    $thumb.find('.value').html($this.val());
 
-    range_mousedown = true
-    $this.addClass('active')
+    rangeMousedown = true;
+    $this.addClass('active');
 
     if (!$thumb.hasClass('active')) {
-      $thumb.velocity(
-        {
+
+      $thumb.velocity({
+        height: '30px',
+        width: '30px',
+        top: '-20px',
+        marginLeft: '-15px'
+      }, {
+        duration: 300,
+        easing: 'easeOutExpo'
+      });
+    }
+
+    if (e.type !== 'input') {
+
+      const isMobile = e.pageX === undefined || e.pageX === null;
+      if (isMobile) {
+
+        left = e.originalEvent.touches[0].pageX - $(this).offset().left;
+      } else {
+
+        left = e.pageX - $(this).offset().left;
+      }
+
+      if (left < 0) {
+
+        left = 0;
+      } else if (left > width) {
+
+        left = width;
+      }
+
+      $thumb.addClass('active').css('left', left);
+    }
+
+    $thumb.find('.value').html($this.val());
+  });
+
+  $(document).on('mouseup touchend', rangeWrapper, function () {
+
+    rangeMousedown = false;
+    $(this).removeClass('active');
+  });
+
+  $(document).on('mousemove touchmove', rangeWrapper, function (e) {
+
+    const $thumb = $(this).children('.thumb');
+    let left;
+
+    if (rangeMousedown) {
+
+      if (!$thumb.hasClass('active')) {
+
+        $thumb.velocity({
           height: '30px',
           width: '30px',
           top: '-20px',
           marginLeft: '-15px'
-        },
-        {
+        }, {
           duration: 300,
           easing: 'easeOutExpo'
-        }
-      )
-    }
+        });
+      }
 
-    if (e.type !== 'input') {
-      const isMobile = e.pageX === undefined || e.pageX === null
+      const isMobile = e.pageX === undefined || e.pageX === null;
       if (isMobile) {
-        left = e.originalEvent.touches[0].pageX - $(this).offset().left
+
+        left = e.originalEvent.touches[0].pageX - $(this).offset().left;
       } else {
-        left = e.pageX - $(this).offset().left
+
+        left = e.pageX - $(this).offset().left;
       }
 
+      const width = $(this).outerWidth();
       if (left < 0) {
-        left = 0
+
+        left = 0;
       } else if (left > width) {
-        left = width
+
+        left = width;
       }
-      $thumb.addClass('active').css('left', left)
+
+      $thumb.addClass('active').css('left', left);
+      $thumb.find('.value').html($thumb.siblings(rangeType).val());
     }
+  });
 
-    $thumb.find('.value').html($this.val())
+  $(document).on('mouseout touchleave', rangeWrapper, function () {
 
-  })
+    if (!rangeMousedown) {
 
-  $(document).on('mouseup touchend', range_wrapper, function() {
-    range_mousedown = false
-    $(this).removeClass('active')
-  })
-
-  $(document).on('mousemove touchmove', range_wrapper, function (e) {
-    const $thumb = $(this).children('.thumb')
-    let left
-
-    if (range_mousedown) {
-      if (!$thumb.hasClass('active')) {
-        $thumb.velocity(
-          {
-            height: '30px',
-            width: '30px',
-            top: '-20px',
-            marginLeft: '-15px'
-          },
-          {
-            duration: 300,
-            easing: 'easeOutExpo'
-          })
-      }
-      const isMobile = e.pageX === undefined || e.pageX === null
-      if (isMobile) {
-        left = e.originalEvent.touches[0].pageX - $(this).offset().left
-      } else {
-        left = e.pageX - $(this).offset().left
-      }
-
-      const width = $(this).outerWidth()
-      if (left < 0) {
-        left = 0
-      } else if (left > width) {
-        left = width
-      }
-
-      $thumb.addClass('active').css('left', left)
-      $thumb.find('.value').html($thumb.siblings(range_type).val())
-    }
-  })
-
-  $(document).on('mouseout touchleave', range_wrapper, function() {
-    if (!range_mousedown) {
-      const $thumb = $(this).children('.thumb')
+      const $thumb = $(this).children('.thumb');
 
       if ($thumb.hasClass('active')) {
-        $thumb.velocity(
-          {
-            height: '0',
-            width: '0',
-            top: '10px',
-            marginLeft: '-6px'
-          },
-          {
-            duration: 100
-          }
-        )
+
+        $thumb.velocity({
+          height: '0',
+          width: '0',
+          top: '10px',
+          marginLeft: '-6px'
+        }, {
+          duration: 100
+        });
       }
-      $thumb.removeClass('active')
+
+      $thumb.removeClass('active');
     }
-  })
+  });
 
-
-}(jQuery))
+}(jQuery));
